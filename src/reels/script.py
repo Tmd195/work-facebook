@@ -65,7 +65,14 @@ LỜI ĐỌC PHẢI LÀ MỘT MẠCH KỂ LIỀN, như Thái đang nói một h�
 - Viết số và ký hiệu như văn nói: "1 phần trăm" (không viết 1%), "1 ăn 2" (không viết 1:2).
 
 Thumbnail (ảnh bìa, thiết kế riêng): line1 (tối đa 4 từ), line2 (tối đa 4 từ, phần được tô nổi bật), tag (tối đa 3 từ).
-caption: 3-5 câu tóm tắt lại các quy tắc trong video (để người xem lưu lại), cuối caption mời anh em comment điều muốn biết.
+caption: bản tóm tắt để người xem LƯU LẠI, trình bày thoáng, dễ đọc lướt trên điện thoại (KHÔNG viết thành 1 đoạn liền):
+  - Dòng 1: tiêu đề VIẾT HOA có 1 emoji đầu dòng + lợi ích/con số (ví dụ "🔨 HỆ THỐNG NẾN BÚA NGƯỢC – 3 BƯỚC VÀO LỆNH VÀNG").
+    Dòng 2: 1 câu gợi tò mò để người xem bấm "Xem thêm".
+  - Sau đó 2-4 nhóm, mỗi nhóm: 1 dòng tiêu đề nhóm có emoji (📌 Nhận diện / ✅ Điều kiện vào lệnh / 🎯 Quản lý lệnh / ⚠️ Lưu ý...),
+    rồi 2-3 dòng gạch đầu dòng "• " ngắn gọn (tối đa ~12 từ/dòng). Giữa các nhóm cách 1 dòng trống.
+  - Viết tắt chuẩn trader được dùng (SL, TP1, R:R, H4, Entry) và ký hiệu ngắn (1R, 50%, ≥, →) cho gọn.
+  - Dòng cuối: "💬 " + câu hỏi mời anh em comment điều muốn Thái mổ xẻ tiếp.
+  - Không in đậm, không markdown (#, **). Không ghi hashtag trong caption (hệ thống tự thêm).
 hashtags: 3-5 thẻ liên quan (không cần #DuyThaiDang).
 """
 
