@@ -24,6 +24,7 @@ from src.publish import telegram
 
 SESSION = timedelta(hours=5, minutes=20)
 LEAD = timedelta(minutes=25)               # bắt đầu tạo bài trước giờ đăng
+LEAD_REEL = timedelta(minutes=55)          # video dựng lâu hơn (AI + giọng + dựng hình)
 ATTEMPTS = ROOT / "state" / "attempts.json"
 DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
@@ -45,7 +46,7 @@ def save_state(msg: str):
     if "GITHUB_ACTIONS" not in os.environ:
         return
     sh("git add state/posted.json state/series_progress.json state/followups.json state/metrics.json "
-       "state/attempts.json 2>/dev/null; git diff --cached --quiet || "
+       "state/attempts.json state/reels_progress.json 2>/dev/null; git diff --cached --quiet || "
        f"(git commit -qm '{msg}' && (git push -q || (git pull --rebase -q && git push -q)))", 180)
 
 
@@ -67,7 +68,8 @@ def due_jobs(now: datetime) -> list[tuple[str, datetime]]:
             targets.append(target_time(job, now))
         for t in targets:
             slot = _slot(job, t)
-            if t - LEAD <= now <= t + timedelta(hours=2) and not already_posted(job, t) \
+            lead = LEAD_REEL if job == "reel" else LEAD
+            if t - lead <= now <= t + timedelta(hours=2) and not already_posted(job, t) \
                     and _attempts().get(slot, 0) < 2:
                 out.append((job, t))
     return sorted(out, key=lambda x: x[1])

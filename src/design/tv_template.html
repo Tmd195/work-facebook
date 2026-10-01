@@ -155,6 +155,10 @@ document.getElementById('legend').innerHTML =
    <span style="color:${col}">${chg >= 0 ? '+' : ''}${fmt(chg)}</span></span></div>` +
   (SPEC.legendLines || []).map(l => `<div class="ind"><span style="color:${l.color}">${l.text}</span></div>`).join('');
 
+if (SPEC.hideLegend) {  // sơ đồ minh họa: bỏ dòng giá OHLC, giữ tên chỉ báo (nếu có)
+  const first = document.querySelector('#legend > div');
+  if (first) first.style.display = 'none';
+}
 requestAnimationFrame(() => requestAnimationFrame(() => { window.__ready = true; }));
 </script>
 </body></html>

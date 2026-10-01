@@ -60,8 +60,10 @@ class TVChart:
             lo, hi = min(lo, self.spec["extraRange"][0]), max(hi, self.spec["extraRange"][1])
         self.spec["extraRange"] = [lo, hi]
 
-    def line(self, values: list, color: str, legend: str = "", width: int = 2, style: int = 0):
-        data = [{"time": t, "value": v} for t, v in zip(self.times, values) if v is not None]
+    def line(self, values: list, color: str, legend: str = "", width: int = 2, style: int = 0, gaps: bool = False):
+        """gaps=True: chỗ None để trống (đứt nét) thay vì nối liền - dùng cho SuperTrend 2 màu."""
+        data = [{"time": t, "value": v} if v is not None else {"time": t}
+                for t, v in zip(self.times, values) if v is not None or gaps]
         self.spec["lines"].append({"data": data, "color": color, "width": width, "style": style})
         if legend:
             self.spec["legendLines"].append({"text": legend, "color": color})
@@ -113,6 +115,11 @@ class TVChart:
 
     # ------------------------------------------------------------- chụp ảnh
     def render(self, width: int = 960, height: int = 520, scale: int = 2) -> Image.Image:
+        return self.render_probe(width, height, scale)[0]
+
+    def render_probe(self, width: int = 960, height: int = 520, scale: int = 2,
+                     probe: list[tuple[float, float]] | None = None) -> tuple[Image.Image, list]:
+        """Chụp ảnh + toạ độ pixel (trên ảnh) của các điểm (chỉ số nến, giá) để vẽ hiệu ứng lên đúng chỗ."""
         from playwright.sync_api import sync_playwright
 
         spec = {**self.spec, "width": width, "height": height}
@@ -126,8 +133,14 @@ class TVChart:
             page.set_content(html)
             page.wait_for_function("window.__ready === true", timeout=20000)
             png = page.locator("#wrap").screenshot()
+            coords = []
+            if probe:
+                coords = page.evaluate("""pts => pts.map(([i, p]) => [
+                    chart.timeScale().logicalToCoordinate(i), candles.priceToCoordinate(p)])""", probe)
+                coords = [(x * scale if x is not None else None, y * scale if y is not None else None)
+                          for x, y in coords]
             browser.close()
-        return Image.open(io.BytesIO(png)).convert("RGBA")
+        return Image.open(io.BytesIO(png)).convert("RGBA"), coords
 
 
 def _launch(p):

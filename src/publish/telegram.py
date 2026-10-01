@@ -52,6 +52,27 @@ def send_preview(title: str, caption: str, images: list) -> bool:
     return ok
 
 
+def send_video(text: str, video, thumbnail=None) -> bool:
+    """Gửi video (Reels) + thumbnail kèm chú thích ngắn. Telegram bot giới hạn 50 MB/file."""
+    token, chat = env("TELEGRAM_BOT_TOKEN"), env("TELEGRAM_CHAT_ID")
+    if not token or not chat:
+        print(f"[Telegram chưa cấu hình] {text}")
+        return False
+    try:
+        if thumbnail:
+            with open(thumbnail, "rb") as f:
+                requests.post(f"https://api.telegram.org/bot{token}/sendPhoto", data={"chat_id": chat},
+                              files={"photo": f}, timeout=120)
+        with open(video, "rb") as f:
+            r = requests.post(f"https://api.telegram.org/bot{token}/sendVideo",
+                              data={"chat_id": chat, "caption": text[:1000], "supports_streaming": "true"},
+                              files={"video": f}, timeout=600)
+        return r.ok
+    except requests.RequestException as exc:
+        print(f"[Telegram lỗi gửi video] {exc}")
+        return send(text)
+
+
 def find_chat_id() -> str | None:
     """Lấy chat id từ tin nhắn gần nhất anh gửi cho bot."""
     r = requests.get(f"https://api.telegram.org/bot{env('TELEGRAM_BOT_TOKEN')}/getUpdates", timeout=30).json()

@@ -9,7 +9,7 @@ on:
       job:
         description: "Bài cần chạy"
         type: choice
-        options: [morning, strategy_ae, knowledge, strategy_us, weekly]
+        options: [morning, strategy_ae, knowledge, strategy_us, weekly, reel]
       dry_run:
         description: "Chạy thử (không đăng Facebook)"
         type: boolean
@@ -39,6 +39,7 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      ASSETS_KEY: ${{ secrets.ASSETS_KEY }}
       PYTHONIOENCODING: utf-8
     steps:
       - name: Chọn bài theo lịch
@@ -76,6 +77,8 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
           npm install -g @anthropic-ai/claude-code
+          ffmpeg -version >/dev/null 2>&1 || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          python -m src.reels.assets_bundle unpack || echo "⚠️ Không giải mã được gói Reels"
 
       - name: Tạo & đăng bài
         run: python -m src.runner ${{ steps.pick.outputs.job }} ${{ steps.pick.outputs.flags }}
@@ -85,7 +88,7 @@ jobs:
         run: |
           git config user.name "autopost-bot"
           git config user.email "autopost-bot@users.noreply.github.com"
-          git add state/series_progress.json state/posted.json state/metrics.json 2>/dev/null || true
+          git add state/series_progress.json state/posted.json state/metrics.json state/reels_progress.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Cập nhật tiến độ đăng bài"
             for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

@@ -4,3 +4,12 @@ __pycache__/
 output/
 state/calendar_week.json
 state/errors.json
+
+# Tệp xem thử cục bộ (giọng nói, video nháp) - không đẩy lên GitHub
+_preview/
+
+# Ảnh + giọng của Thái: chỉ đẩy bản mã hoá (assets/private.tar.gz.enc)
+assets/private/
+
+# Nhạc nền Reels: chỉ đẩy bản mã hoá (giấy phép không cho phát tán file gốc)
+assets/music/

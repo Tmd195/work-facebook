@@ -24,7 +24,7 @@ from src.publish import facebook, telegram
 STATE = ROOT / "state"
 EXPECTED_PER_WEEK = 30          # 5 ngày × 5 bài + 2 ngày × 2 bài + 1 bài tổng quan tuần
 TYPE_NAME = {"morning": "Bản tin sáng", "strategy_ae": "Chiến lược Á–Âu", "strategy_us": "Chiến lược Mỹ",
-             "knowledge": "Kiến thức", "weekly": "Tổng quan tuần"}
+             "knowledge": "Kiến thức", "weekly": "Tổng quan tuần", "reel": "Reels"}
 
 
 def _load(name: str) -> dict:
@@ -62,7 +62,12 @@ def collect(now: datetime) -> dict:
     posts = []
     for slot, e in sorted(posted.items()):
         try:
-            st = facebook.post_stats(e["post_id"])
+            if e["job"] == "reel":
+                r = facebook.reel_stats(e["post_id"])
+                st = {"reactions": r.get("likes") or 0, "comments": r.get("comments") or 0, "shares": 0,
+                      "views": r.get("plays"), "avg_watch": r.get("avg_watch"), "reach": r.get("reach")}
+            else:
+                st = facebook.post_stats(e["post_id"])
         except Exception as exc:
             st = {"error": str(exc)[:100]}
         score = st.get("reactions", 0) + 2 * st.get("comments", 0) + 3 * st.get("shares", 0)
@@ -70,7 +75,9 @@ def collect(now: datetime) -> dict:
         meta = e.get("meta") or {}
         posts.append({"slot": slot, "type": e["job"], "type_name": TYPE_NAME.get(e["job"], e["job"]),
                       "weekday": when.strftime("%a"), "time": slot[-5:], "link": e["link"],
-                      "series": meta.get("series"), "part": meta.get("part"), **st, "score": score})
+                      "series": meta.get("series"), "part": meta.get("part"), "topic": meta.get("topic"),
+                      "pillar": meta.get("pillar"), "duration": meta.get("duration"), "music": meta.get("music"),
+                      **st, "score": score})
 
     # Người theo dõi
     metrics = _load("metrics.json")
@@ -134,7 +141,26 @@ def collect(now: datetime) -> dict:
         "bài_yếu": sorted(posts, key=lambda p: p["score"])[:3],
         "kịch_bản": {"số_kịch_bản": len(trades), "đã_khớp": len(filled), "tốt": len(good), "tổng_pips": pips},
         "tiến_độ_series": _load("series_progress.json").get("done", {}),
+        "reels": _reels(posts),
     }
+
+
+def _reels(posts: list) -> dict:
+    """Hiệu quả video Reels: lượt phát, thời gian xem TB, % thời lượng được xem, theo nhóm chủ đề."""
+    rs = [p for p in posts if p["type"] == "reel"]
+    rows = []
+    for p in rs:
+        ratio = round(p["avg_watch"] / p["duration"] * 100) if p.get("avg_watch") and p.get("duration") else None
+        rows.append({"chủ_đề": p.get("topic"), "nhóm": p.get("pillar"), "dài_s": p.get("duration"),
+                     "lượt_phát": p.get("views"), "xem_TB_s": p.get("avg_watch"), "xem_hết_%": ratio,
+                     "thích": p.get("reactions"), "bình_luận": p.get("comments"), "nhạc": p.get("music"),
+                     "link": p["link"]})
+    by = defaultdict(list)
+    for r in rows:
+        if r["lượt_phát"] is not None:
+            by[r["nhóm"]].append(r["lượt_phát"])
+    return {"số_video": len(rows), "video": rows,
+            "lượt_phát_TB_theo_nhóm": {k: round(sum(v) / len(v)) for k, v in by.items()}}
 
 
 REPORT_PROMPT = """Bạn là trợ lý phát triển Facebook Page "Duy Thái Đặng" (forex/vàng, đăng tự động bằng hệ thống AI).
@@ -147,7 +173,10 @@ Không markdown (Telegram hiển thị chữ thường), dùng emoji làm đầu
 5. 🛠 ĐỀ XUẤT SỬA ĐỔI: 3-5 đề xuất cụ thể, mỗi đề xuất: [Ưu tiên cao/vừa/thấp] việc gì – vì sao (dẫn số liệu) –
    ai làm (hệ thống tự sửa được / anh Thái làm, ví dụ trả lời comment, quay Reels, livestream).
    Ví dụ loại đề xuất: đổi giờ đăng, giảm/tăng số bài, đổi dạng ảnh, chỉnh giọng văn, đổi thứ tự series, thêm Reels, bài tương tác.
-6. ❓ Câu hỏi để anh quyết định tuần tới (1-2 câu).
+6. 🎬 REELS: lượt phát, thời gian xem TB và % thời lượng được xem (giữ chân), video tốt nhất/kém nhất, nhóm chủ đề
+   nào hiệu quả (hệ thống / quản lý vốn / SL-TP / setup) → đề xuất chỉnh: độ dài, câu hook, nhóm chủ đề, giờ đăng,
+   số video mỗi ngày (chỉ đề xuất tăng lên 2 video/ngày khi lượt phát TB tăng đều).
+7. ❓ Câu hỏi để anh quyết định tuần tới (1-2 câu).
 Quan trọng: tuần đầu dữ liệu còn ít → nói rõ, không kết luận vội. Không bịa số; chỉ dùng số trong DỮ LIỆU.
 Trả về JSON {"report": "..."}."""
 

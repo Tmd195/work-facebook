@@ -23,6 +23,7 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      ASSETS_KEY: ${{ secrets.ASSETS_KEY }}
       GH_TOKEN: ${{ github.token }}
       PYTHONIOENCODING: utf-8
     steps:
@@ -57,8 +58,13 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
           npm install -g @anthropic-ai/claude-code
+          ffmpeg -version >/dev/null 2>&1 || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
           git config user.name "autopost-bot"
           git config user.email "autopost-bot@users.noreply.github.com"
+
+      - name: Giải mã ảnh, giọng, nhạc cho Reels
+        if: steps.single.outputs.go == 'true'
+        run: python -m src.reels.assets_bundle unpack || echo "⚠️ Không giải mã được gói Reels"
 
       - name: Chạy bộ điều phối
         if: steps.single.outputs.go == 'true'

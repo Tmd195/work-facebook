@@ -15,7 +15,7 @@ from src.config import CONFIG, OUTPUT, TZ
 from src.publish import facebook, telegram
 
 NY = ZoneInfo("America/New_York")
-MAX_EARLY = timedelta(minutes=45)       # chạy sớm hơn giờ đăng quá mức này thì bỏ (cron mùa hè/đông trùng nhau)
+MAX_EARLY = timedelta(minutes=60)      # chạy sớm hơn giờ đăng quá mức này thì bỏ (cron mùa hè/đông trùng nhau)
 
 
 # ===================================================================== giờ đăng
@@ -65,6 +65,9 @@ def post_meta(job: str, out_dir) -> dict:
         return {"events": ctx["calendar"]}
     if job == "weekly":
         return {}
+    if job == "reel":
+        from src.reels import job as reel
+        return reel.meta(out_dir)
     if job == "knowledge":
         meta = json.loads((out_dir / "knowledge.json").read_text(encoding="utf-8"))
         return {"series": meta["series"], "part": meta["part"]}
@@ -107,6 +110,10 @@ def _files(job: str, out_dir):
         return out_dir / "knowledge.txt", sorted(out_dir.glob("knowledge_[0-9][0-9].png"))
     if job == "weekly":
         return out_dir / "weekly.txt", sorted(out_dir.glob("weekly_[0-9][0-9].png"))
+    if job == "reel":
+        from src.reels import job as reel
+        cap, video, thumb = reel.files(out_dir)
+        return cap, [video, thumb]
     s = job.split("_")[1]
     return out_dir / f"strategy_{s}.txt", sorted(out_dir.glob(f"strategy_{s}_[0-9][0-9].png"))
 
@@ -119,6 +126,9 @@ def generate(job: str):
         return run.run_knowledge()
     if job == "weekly":
         return run.run_weekly()
+    if job == "reel":
+        from src.reels import job as reel
+        return reel.generate(OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
     return run.run_strategy(job.split("_")[1])
 
 
@@ -127,7 +137,7 @@ def label(job: str) -> str:
         from src.content import knowledge
         nxt = knowledge.next_lesson()
         return f"Kiến thức: {nxt[0]['name']} – Phần {nxt[1]['part']}/{len(nxt[0]['lessons'])}" if nxt else "Kiến thức"
-    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
+    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "reel": "Video Reels", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
             "strategy_us": "Chiến lược XAUUSD phiên Mỹ"}[job]
 
 
@@ -183,6 +193,14 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     if not no_wait and not dry_run:
         wait_until(target)
     meta = post_meta(job, out_dir)
+    if job == "reel":
+        name = f"Video Reels: {meta.get('topic', '')}"
+    if dry_run and job == "reel":
+        telegram.send(f"🧪 [XEM TRƯỚC - chưa đăng] {name} {day} ({meta.get('duration')}s)\n"
+                      f"Video đã dựng xong (chế độ chạy thử, không gửi file cho nhẹ).\n\n{caption}")
+        if not already_posted(job, target):
+            mark_posted(job, target, "preview", None, meta, preview=True)
+        return True
     if dry_run:
         telegram.send_preview(f"🧪 [XEM TRƯỚC - chưa đăng] {name} {day}\n{len(images)} ảnh · bài đầy đủ bên dưới. "
                               f"Anh duyệt, nếu ổn nhắn em bật đăng thật.", caption, images)
@@ -190,7 +208,10 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
             mark_posted(job, target, "preview", None, meta, preview=True)
         return True
     try:
-        link, post_id = facebook.publish(caption, images)
+        if job == "reel":
+            link, post_id = facebook.publish_reel(images[0], caption, images[1])
+        else:
+            link, post_id = facebook.publish(caption, images)
     except facebook.FacebookError as exc:
         hint = ("\n👉 Token Facebook hết hạn hoặc thiếu quyền - cần anh lấy lại token theo hướng dẫn."
                 if exc.needs_user else "")
@@ -205,6 +226,9 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         meta = json.loads((out_dir / "knowledge.json").read_text(encoding="utf-8"))
         series = next(s for s in knowledge.load_series() if s["id"] == meta["series"])
         knowledge.mark_done(series, series["lessons"][meta["part"] - 1])
+    if job == "reel":
+        from src.reels import script as reel_script
+        reel_script.mark_done(meta)
 
     telegram.send(f"✅ Đã hoàn thành: {name} {day}\n🔗 Link bài viết: {link}\nAnh kiểm tra nếu cần sửa đổi.")
     return True
@@ -212,7 +236,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=["morning", "strategy_ae", "knowledge", "strategy_us", "weekly"])
+    ap.add_argument("job", choices=["morning", "strategy_ae", "knowledge", "strategy_us", "weekly", "reel"])
     ap.add_argument("--dry-run", action="store_true", help="tạo bài + báo Telegram, không đăng")
     ap.add_argument("--now", action="store_true", help="không chờ đúng giờ đăng")
     ap.add_argument("--at", help="đăng vào giờ chỉ định HH:MM (giờ VN), dùng cho bài đăng bổ sung")

@@ -141,3 +141,78 @@ def post_stats(post_id: str) -> dict:
     except FacebookError:
         pass
     return out
+
+
+# ------------------------------------------------------------------ Reels
+
+def publish_reel(video: Path, description: str, thumbnail: Path | None = None, retries: int = 2,
+                 state: str = "PUBLISHED") -> tuple[str, str]:
+    """Đăng Reels lên Page: khởi tạo → tải video lên → phát hành → đặt thumbnail. Trả về (link, video_id)."""
+    page = env("FB_PAGE_ID")
+    last_exc = None
+    for attempt in range(retries):
+        try:
+            start = _call("POST", f"{page}/video_reels", data={"upload_phase": "start"})
+            vid = start["video_id"]
+            url = start.get("upload_url") or f"https://rupload.facebook.com/video-upload/v21.0/{vid}"
+            size = video.stat().st_size
+            with open(video, "rb") as f:
+                r = requests.post(url, data=f, timeout=600, headers={
+                    "Authorization": f"OAuth {env('FB_PAGE_TOKEN')}", "offset": "0", "file_size": str(size)})
+            if not r.ok or not r.json().get("success", True):
+                raise FacebookError(f"Tải video lên lỗi: {r.text[:200]}")
+            _call("POST", f"{page}/video_reels", data={"upload_phase": "finish", "video_id": vid,
+                                                       "video_state": state, "description": description})
+            for _ in range(40):                            # chờ Facebook xử lý xong (tối đa ~10 phút)
+                st = _call("GET", vid, params={"fields": "status"}).get("status", {})
+                if st.get("video_status") == "ready" or (st.get("publishing_phase") or {}).get("status") == "complete":
+                    break
+                if st.get("video_status") == "error":
+                    raise FacebookError(f"Facebook xử lý video lỗi: {st}")
+                time.sleep(15)
+            if thumbnail:
+                try:
+                    with open(thumbnail, "rb") as f:
+                        _call("POST", f"{vid}/thumbnails", data={"is_preferred": "true"}, files={"source": f})
+                except FacebookError as exc:
+                    print(f"  ! đặt thumbnail lỗi: {exc}", flush=True)
+            return reel_link(vid), vid
+        except FacebookError as exc:
+            if exc.needs_user:
+                raise
+            last_exc = exc
+        except requests.RequestException as exc:
+            last_exc = exc
+        time.sleep(30)
+    raise FacebookError(f"Đăng Reels thất bại sau {retries} lần: {last_exc}")
+
+
+def reel_link(video_id: str) -> str:
+    try:
+        link = _call("GET", video_id, params={"fields": "permalink_url"})["permalink_url"]
+        return link if link.startswith("http") else "https://www.facebook.com" + link
+    except Exception:
+        return f"https://www.facebook.com/reel/{video_id}"
+
+
+def reel_stats(video_id: str) -> dict:
+    """Số liệu Reels: lượt phát, thời gian xem trung bình (giây), người tiếp cận, cảm xúc/bình luận/chia sẻ."""
+    out = {"plays": None, "avg_watch": None, "reach": None}
+    try:
+        ins = _call("GET", f"{video_id}/video_insights", params={
+            "metric": "blue_reels_play_count,fb_reels_total_plays,post_video_avg_time_watched,post_impressions_unique"})
+        vals = {m["name"]: (m.get("values") or [{}])[0].get("value") for m in ins.get("data", [])}
+        out["plays"] = vals.get("blue_reels_play_count") or vals.get("fb_reels_total_plays")
+        avg = vals.get("post_video_avg_time_watched")
+        out["avg_watch"] = round(avg / 1000, 1) if avg else None
+        out["reach"] = vals.get("post_impressions_unique")
+    except FacebookError:
+        pass
+    try:
+        d = _call("GET", video_id, params={"fields": "likes.summary(true).limit(0),comments.summary(true).limit(0),length"})
+        out["likes"] = d.get("likes", {}).get("summary", {}).get("total_count", 0)
+        out["comments"] = d.get("comments", {}).get("summary", {}).get("total_count", 0)
+        out["length"] = d.get("length")
+    except FacebookError:
+        pass
+    return out

@@ -71,3 +71,4 @@ schedule:
   strategy_ae: { time: "10:00", days: [mon, tue, wed, thu, fri] }   # Chiến lược XAUUSD phiên Á - Âu
   strategy_us: { time: "18:30", days: [mon, tue, wed, thu, fri] }   # Chiến lược XAUUSD phiên Mỹ (mùa đông: 19:30)
   weekly:      { time: "22:00", days: [sun] }                       # Tổng quan tuần mới
+  reel:        { time: "19:15", days: [mon, tue, wed, thu, fri, sat, sun] }   # Video Reels: lên trước giờ cao điểm 20:00-21:30
