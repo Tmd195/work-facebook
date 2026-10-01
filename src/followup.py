@@ -443,7 +443,7 @@ def auto(check: bool = False) -> bool:
             ok = fn(False) and ok
         except Exception as exc:
             traceback.print_exc()
-            telegram.send(f"❌ Lỗi khi chạy comment theo dõi '{fn.__name__}': {type(exc).__name__}: {exc}")
+            telegram.need_fix(f"❌ Lỗi khi chạy comment theo dõi '{fn.__name__}': {type(exc).__name__}: {exc}")
             ok = False
     return ok
 
@@ -460,5 +460,5 @@ if __name__ == "__main__":
     except Exception as exc:
         traceback.print_exc()
         if not a.check:
-            telegram.send(f"❌ Lỗi khi chạy comment theo dõi '{a.job}': {type(exc).__name__}: {exc}")
+            telegram.need_fix(f"❌ Lỗi khi chạy comment theo dõi '{a.job}': {type(exc).__name__}: {exc}")
         sys.exit(1)

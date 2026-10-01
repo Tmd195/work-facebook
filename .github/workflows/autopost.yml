@@ -100,4 +100,4 @@ jobs:
         run: |
           curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -d chat_id="${TELEGRAM_CHAT_ID}" \
-            --data-urlencode text="❌ Lỗi hệ thống khi chạy '${{ steps.pick.outputs.job }}'. Xem chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            --data-urlencode text="❌ Lỗi hệ thống khi chạy '${{ steps.pick.outputs.job }}'. Xem chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 🖥 Bật Máy để sửa đổi"

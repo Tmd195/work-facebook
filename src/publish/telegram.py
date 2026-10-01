@@ -18,6 +18,11 @@ def send(text: str) -> bool:
         return False
 
 
+def need_fix(text: str) -> bool:
+    """Lỗi hệ thống không tự sửa được - cần anh mở máy để em xử lý."""
+    return send(f"{text}\n\n🖥 Bật Máy để sửa đổi")
+
+
 def send_preview(title: str, caption: str, images: list) -> bool:
     """Gửi bản xem trước đầy đủ: album ảnh (tối đa 10) + toàn bộ caption (tách nhiều tin nếu dài)."""
     import json
