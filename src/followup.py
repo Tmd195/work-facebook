@@ -448,14 +448,59 @@ def auto(check: bool = False) -> bool:
     return ok
 
 
+def chain(kind: str) -> bool:
+    """Chạy nối tiếp ngay sau bài đăng, không phụ thuộc lịch cron của GitHub:
+    - knowledge:   chờ 30 phút → comment ví dụ
+    - strategy_ae: canh tin đỏ 5 phút/lần tới 16:00
+    - strategy_us: canh tin đỏ 5 phút/lần tới 00:30, 22:00 comment cập nhật lệnh
+    """
+    import time
+    now = datetime.now(TZ)
+    if kind == "knowledge":
+        time.sleep(max(0, 1700))
+        return examples(False)
+    end = now.replace(hour=15, minute=45) if kind == "strategy_ae" else \
+        (now + timedelta(days=1)).replace(hour=0, minute=15)
+    tracked = False
+    while datetime.now(TZ) < end:
+        for fn in (news,) + ((track,) if kind == "strategy_us" and not tracked and datetime.now(TZ).hour >= 22 else ()):
+            try:
+                fn(False)
+                if fn is track:
+                    tracked = True
+            except Exception as exc:
+                traceback.print_exc()
+                telegram.send(f"⚠️ Comment theo dõi '{fn.__name__}' lỗi, sẽ thử lại sau 5 phút: {exc}")
+        _commit_state()
+        time.sleep(300)
+    if kind == "strategy_us" and not tracked:
+        track(False)
+        _commit_state()
+    return True
+
+
+def _commit_state():
+    """Lưu trạng thái comment lên repo ngay (để lớp dự phòng cron không comment trùng)."""
+    import subprocess
+    if not (ROOT / ".git").exists() or "GITHUB_ACTIONS" not in __import__("os").environ:
+        return
+    cmds = ["git add state/followups.json", "git diff --cached --quiet || (git commit -qm 'Cập nhật trạng thái comment' "
+            "&& (git pull --rebase -q && git push -q || (sleep 5 && git pull --rebase -q && git push -q)))"]
+    for c in cmds:
+        subprocess.run(c, shell=True, cwd=ROOT)
+
+
 JOBS = {"auto": auto, "examples": examples, "news": news, "track": track}
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=list(JOBS))
+    ap.add_argument("job", choices=list(JOBS) + ["chain"])
     ap.add_argument("--check", action="store_true")
+    ap.add_argument("--kind", help="cho job chain: knowledge | strategy_ae | strategy_us")
     a = ap.parse_args()
     try:
+        if a.job == "chain":
+            sys.exit(0 if chain(a.kind) else 1)
         sys.exit(0 if JOBS[a.job](a.check) else 1)
     except Exception as exc:
         traceback.print_exc()

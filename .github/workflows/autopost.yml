@@ -30,14 +30,16 @@ on:
 permissions:
   contents: write          # lưu tiến độ series / bài đã đăng vào repo
 
-concurrency:
-  group: autopost
-  cancel-in-progress: false
-
 jobs:
   post:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    concurrency:
+      group: autopost
+      cancel-in-progress: false
+    outputs:
+      job: ${{ steps.pick.outputs.job }}
+      flags: ${{ steps.pick.outputs.flags }}
     env:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
@@ -103,3 +105,58 @@ jobs:
           curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -d chat_id="${TELEGRAM_CHAT_ID}" \
             --data-urlencode text="❌ Lỗi hệ thống khi chạy '${{ steps.pick.outputs.job }}'. Xem chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 🖥 Bật Máy để sửa đổi"
+
+  # Comment nối tiếp ngay sau bài đăng (không phụ thuộc lịch 15 phút của GitHub):
+  # - Kiến thức: chờ 30 phút → 2-3 ví dụ biểu đồ thật
+  # - Chiến lược Á-Âu: canh tin đỏ 5 phút/lần tới 16:00
+  # - Chiến lược phiên Mỹ: canh tin đỏ 5 phút/lần tới 00:30, 22:00 cập nhật lệnh
+  chain:
+    needs: post
+    if: ${{ (needs.post.outputs.job == 'knowledge' || needs.post.outputs.job == 'strategy_ae' || needs.post.outputs.job == 'strategy_us') && !contains(needs.post.outputs.flags, '--dry-run') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    concurrency:
+      group: chain-${{ needs.post.outputs.job }}
+      cancel-in-progress: false
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      PYTHONIOENCODING: utf-8
+      TZ: Asia/Ho_Chi_Minh
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Cài thư viện
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          npm install -g @anthropic-ai/claude-code
+      - name: Comment nối tiếp (chờ / canh tin đỏ / cập nhật lệnh)
+        run: |
+          git config user.name "autopost-bot"
+          git config user.email "autopost-bot@users.noreply.github.com"
+          python -m src.followup chain --kind ${{ needs.post.outputs.job }}
+      - name: Lưu trạng thái
+        if: always()
+        run: |
+          git config user.name "autopost-bot"
+          git config user.email "autopost-bot@users.noreply.github.com"
+          git add state/followups.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Cập nhật trạng thái comment"
+            for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+          fi
+      - name: Báo lỗi hệ thống
+        if: failure()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"             -d chat_id="${TELEGRAM_CHAT_ID}"             --data-urlencode text="❌ Lỗi khi comment nối tiếp sau bài '${{ needs.post.outputs.job }}'. Xem: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 🖥 Bật Máy để sửa đổi"
