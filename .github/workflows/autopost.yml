@@ -1,0 +1,95 @@
+# Tự động tạo & đăng bài lên Facebook Page, báo cáo về Telegram.
+# Giờ cron là UTC (giờ VN = UTC + 7). Mỗi lịch chạy sớm ~15-20 phút để kịp tạo bài,
+# bộ điều phối (src/runner.py) tự chờ đến đúng giờ đăng.
+name: Auto post
+
+on:
+  schedule:
+    - cron: "12 0 * * 1-5"    # 07:12 VN → Bản tin sáng 07:30
+    - cron: "40 2 * * 1-5"    # 09:40 VN → Chiến lược phiên Á-Âu 10:00
+    - cron: "38 4 * * *"      # 11:38 VN → Kiến thức 12:00
+    - cron: "8 11 * * 1-5"    # 18:08 VN → Chiến lược phiên Mỹ 18:30 (mùa hè Mỹ)
+    - cron: "8 12 * * 1-5"    # 19:08 VN → Chiến lược phiên Mỹ 19:30 (mùa đông Mỹ)
+    - cron: "38 13 * * *"     # 20:38 VN → Kiến thức 21:00
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Bài cần chạy"
+        type: choice
+        options: [morning, strategy_ae, knowledge, strategy_us]
+      dry_run:
+        description: "Chạy thử (không đăng Facebook)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write          # lưu tiến độ series / bài đã đăng vào repo
+
+concurrency:
+  group: autopost
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Chọn bài theo lịch
+        id: pick
+        run: |
+          case "${{ github.event.schedule }}" in
+            "12 0 * * 1-5")  JOB=morning ;;
+            "40 2 * * 1-5")  JOB=strategy_ae ;;
+            "38 4 * * *")    JOB=knowledge ;;
+            "8 11 * * 1-5")  JOB=strategy_us ;;
+            "8 12 * * 1-5")  JOB=strategy_us ;;
+            "38 13 * * *")   JOB=knowledge ;;
+            *)               JOB="${{ inputs.job }}" ;;
+          esac
+          FLAGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then FLAGS="--dry-run --now"; fi
+          echo "job=$JOB" >> "$GITHUB_OUTPUT"
+          echo "flags=$FLAGS" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Cài thư viện
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Tạo & đăng bài
+        run: python -m src.runner ${{ steps.pick.outputs.job }} ${{ steps.pick.outputs.flags }}
+
+      - name: Lưu tiến độ
+        if: always()
+        run: |
+          git config user.name "autopost-bot"
+          git config user.email "autopost-bot@users.noreply.github.com"
+          git add state/series_progress.json state/posted.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Cập nhật tiến độ đăng bài" && git push)
+
+      - name: Báo lỗi hệ thống
+        if: failure()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode text="❌ Lỗi hệ thống khi chạy '${{ steps.pick.outputs.job }}'. Xem chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

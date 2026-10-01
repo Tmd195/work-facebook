@@ -1,0 +1,161 @@
+id: vwap
+name: "VWAP & Anchored VWAP"
+level: "Trung cấp"
+description: "Giúp trader hiểu VWAP (giá trung bình gia quyền theo khối lượng), dùng VWAP phiên, dải độ lệch chuẩn và Anchored VWAP để xác định giá trị hợp lý, xu hướng trong ngày và điểm vào lệnh trên vàng và các cặp tiền chính."
+lessons:
+  - part: 1
+    title: "VWAP là gì và vì sao tổ chức quan tâm"
+    objective: "Hiểu định nghĩa VWAP và ý nghĩa 'giá trung bình mà thị trường đã trả' trong ngày."
+    key_points:
+      - "VWAP (Volume Weighted Average Price) = tổng (Giá điển hình × Khối lượng) / tổng Khối lượng, tính lũy kế từ đầu phiên."
+      - "Giá điển hình (typical price) thường là (High + Low + Close) / 3."
+      - "Nhiều tổ chức dùng VWAP làm chuẩn đánh giá chất lượng khớp lệnh: mua dưới VWAP được coi là mua 'tốt'."
+      - "Giá trên VWAP cho thấy bên mua đang kiểm soát trong phiên, dưới VWAP cho thấy bên bán kiểm soát."
+    example: "Ví dụ giả định: 3 nến có giá điển hình 2.400, 2.404, 2.410 với khối lượng 100, 300, 100 → VWAP = (240.000 + 721.200 + 241.000) / 500 = 2.404,4."
+    mistakes:
+      - "Nhầm VWAP với đường trung bình động thông thường; VWAP lũy kế và cho trọng số lớn hơn cho nến có khối lượng lớn."
+      - "Dùng VWAP như một tín hiệu mua bán độc lập."
+    visual:
+      type: formula
+      idea: "Bảng công thức 'VWAP = Σ(Giá điển hình × KL) / Σ KL' và 'Giá điển hình = (H + L + C) / 3'. Bảng nhỏ 3 dòng: nến 1 (2.400, KL 100), nến 2 (2.404, KL 300), nến 3 (2.410, KL 100), kết quả VWAP = 2.404,4 tô đậm."
+  - part: 2
+    title: "VWAP trong forex: khối lượng tick và điểm reset"
+    objective: "Hiểu giới hạn dữ liệu khối lượng trong forex/CFD và cách VWAP reset mỗi phiên."
+    key_points:
+      - "Forex giao ngay không có sàn tập trung, nên khối lượng trên MT4/MT5 và nhiều nguồn CFD là khối lượng tick (số lần giá thay đổi), không phải khối lượng giao dịch thật."
+      - "Khối lượng tick thường tương quan khá với hoạt động thật nhưng khác nhau giữa các nhà cung cấp dữ liệu, nên VWAP có thể lệch nhẹ giữa các sàn."
+      - "Có thể tham khảo VWAP trên hợp đồng tương lai (ví dụ vàng GC trên COMEX, euro 6E trên CME) vì có khối lượng thật."
+      - "VWAP phiên mặc định reset mỗi ngày; cần biết sàn hoặc nền tảng của bạn chọn giờ nào làm mốc bắt đầu ngày."
+    example: "Ví dụ giả định: VWAP ngày của XAUUSD trên hai nhà cung cấp dữ liệu khác nhau là 2.404,4 và 2.405,1; chênh lệch nhỏ này không làm thay đổi nhận định 'giá đang trên VWAP' khi giá ở 2.415."
+    mistakes:
+      - "Cho rằng VWAP forex chính xác tuyệt đối như cổ phiếu niêm yết."
+      - "So sánh VWAP từ hai nền tảng có giờ reset khác nhau."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Cổ phiếu / Hợp đồng tương lai' (khối lượng thật từ sàn tập trung, VWAP chuẩn) và 'Forex giao ngay / CFD' (khối lượng tick, VWAP gần đúng, khác nhau giữa sàn). Dưới cùng biểu tượng đồng hồ ghi 'VWAP reset mỗi ngày'."
+  - part: 3
+    title: "Đọc xu hướng trong ngày bằng VWAP"
+    objective: "Dùng vị trí giá và độ dốc của VWAP để xác định thiên hướng trong phiên."
+    key_points:
+      - "Giá giữ trên VWAP và VWAP dốc lên: thiên hướng tăng trong ngày, ưu tiên tìm điểm mua."
+      - "Giá giữ dưới VWAP và VWAP dốc xuống: thiên hướng giảm, ưu tiên tìm điểm bán."
+      - "Giá cắt qua lại VWAP nhiều lần và VWAP nằm ngang: thị trường cân bằng, đi ngang."
+      - "Càng về cuối phiên, VWAP càng ít thay đổi vì đã tích lũy nhiều khối lượng."
+    example: "Ví dụ giả định: EURUSD M15 mở phiên London tại 1,0850, giá tăng lên 1,0880 và ba lần hồi về VWAP quanh 1,0862-1,0866 đều bật lên → thiên hướng tăng rõ trong ngày."
+    mistakes:
+      - "Bán chỉ vì giá 'đã lên cao' trong khi giá vẫn giữ trên VWAP dốc lên."
+      - "Đọc VWAP trên khung D1 hoặc W1, nơi VWAP phiên không còn ý nghĩa."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD M15 một ngày: đường VWAP màu tím dốc lên, giá nằm trên VWAP, ba nhịp hồi chạm VWAP và bật lên được khoanh tròn với nhãn 'Hồi về VWAP'. Góc trên: 'Giá > VWAP + VWAP dốc lên = thiên hướng tăng'."
+  - part: 4
+    title: "Dải độ lệch chuẩn quanh VWAP"
+    objective: "Dùng các dải ±1, ±2 độ lệch chuẩn của VWAP để đánh giá giá đang 'kéo dãn' bao xa."
+    key_points:
+      - "Dải VWAP tính bằng độ lệch chuẩn có trọng số khối lượng tính từ cùng điểm reset với VWAP."
+      - "Các mức thường dùng: ±1σ, ±2σ, đôi khi ±2,5σ hoặc ±3σ."
+      - "Trong ngày có xu hướng, giá thường dao động giữa VWAP và dải +1σ/+2σ (hoặc −1σ/−2σ)."
+      - "Trong ngày đi ngang, chạm ±2σ thường là vùng giá bị kéo dãn và có xu hướng quay về VWAP."
+    example: "Ví dụ giả định: XAUUSD có VWAP 2.404, 1σ = 5 USD → dải +1σ = 2.409, +2σ = 2.414, −1σ = 2.399, −2σ = 2.394."
+    mistakes:
+      - "Bán mỗi lần chạm +2σ trong ngày xu hướng mạnh."
+      - "Dùng dải tính theo độ lệch chuẩn cuộn (rolling) rồi tưởng là dải VWAP chuẩn."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD M15 với VWAP (đường giữa tím) và 4 dải: +1σ, +2σ, −1σ, −2σ (nét đứt). Giá trong nửa đầu dao động giữa VWAP và +2σ (nhãn 'Ngày xu hướng'). Ghi giá trị 2.414/2.409/2.404/2.399/2.394 bên phải."
+  - part: 5
+    title: "Anchored VWAP: neo VWAP vào sự kiện quan trọng"
+    objective: "Biết cách đặt Anchored VWAP từ một điểm có ý nghĩa và đọc nó."
+    key_points:
+      - "Anchored VWAP (AVWAP) bắt đầu tính từ một điểm do trader chọn thay vì từ đầu phiên."
+      - "Điểm neo hợp lý: đỉnh hoặc đáy quan trọng, nến tin lớn (NFP, CPI, FOMC), điểm phá vỡ, đầu tuần hoặc đầu tháng."
+      - "AVWAP từ một đáy lớn thể hiện giá vốn trung bình của những người mua từ đáy đó; giá quay về đây thường gặp phản ứng."
+      - "TradingView có công cụ Anchored VWAP tích hợp: chọn công cụ và nhấp vào nến làm điểm neo."
+    example: "Ví dụ giả định: XAUUSD tạo đáy 2.300 sau tin CPI rồi tăng lên 2.420. AVWAP neo từ nến đáy đang ở 2.365; nhịp điều chỉnh về 2.367 bật lên mạnh."
+    mistakes:
+      - "Neo AVWAP vào điểm ngẫu nhiên không có ý nghĩa."
+      - "Vẽ quá nhiều AVWAP đến mức biểu đồ rối và mức nào cũng có vẻ quan trọng."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD H1: đáy rõ tại 2.300 có nhãn 'Neo AVWAP (nến tin CPI)', đường AVWAP màu cam bắt đầu từ đáy đó đi lên chậm hơn giá. Giá tăng lên 2.420 rồi điều chỉnh chạm AVWAP ở 2.367 và bật lên (mũi tên xanh)."
+  - part: 6
+    title: "Thiết lập 1: mua/bán khi giá hồi về VWAP"
+    objective: "Áp dụng thiết lập theo xu hướng: vào lệnh ở nhịp hồi về VWAP."
+    key_points:
+      - "Điều kiện: giá giữ một phía VWAP ít nhất 1-2 giờ và VWAP dốc theo hướng đó."
+      - "Chờ giá hồi về chạm hoặc đâm nhẹ qua VWAP, sau đó có nến xác nhận (ví dụ nến nhấn chìm hoặc nến đóng cửa đi lại theo xu hướng)."
+      - "Dừng lỗ: bên kia VWAP thêm một khoảng đệm, hoặc dưới đáy (trên đỉnh) của nhịp hồi."
+      - "Mục tiêu: đỉnh/đáy của phiên hoặc dải ±1σ/±2σ theo hướng xu hướng."
+    example: "Ví dụ giả định: EURUSD M15 trên VWAP từ đầu phiên London; giá hồi về 1,0864 (VWAP 1,0862), nến tăng đóng cửa 1,0868 → mua, SL 1,0856, TP dải +2σ ở 1,0890."
+    mistakes:
+      - "Mua ngay lần đầu giá cắt lên VWAP khi chưa có xu hướng rõ."
+      - "Đặt SL đúng tại VWAP, bị quét bởi biến động nhỏ."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD M15: VWAP dốc lên, giá hồi về chạm VWAP, nến tăng xác nhận có mũi tên 'Mua'. Đường SL đỏ dưới đáy nhịp hồi, đường TP xanh ở dải +2σ. Nhãn số 1,0856 / 1,0868 / 1,0890."
+  - part: 7
+    title: "Thiết lập 2: quay về VWAP từ dải ±2σ"
+    objective: "Áp dụng thiết lập quay về trung bình trong ngày đi ngang."
+    key_points:
+      - "Chỉ dùng khi VWAP gần như nằm ngang và giá đã cắt qua VWAP vài lần trong phiên."
+      - "Giá chạm hoặc vượt dải ±2σ rồi có nến từ chối (râu dài, đóng cửa quay vào trong dải)."
+      - "Vào lệnh hướng về VWAP; mục tiêu là VWAP hoặc ±1σ, không kỳ vọng đi sang dải đối diện."
+      - "Dừng lỗ ngoài đỉnh/đáy của nến từ chối; hủy thiết lập nếu VWAP bắt đầu dốc mạnh."
+    example: "Ví dụ giả định: XAUUSD phiên Á đi ngang, VWAP phẳng 2.404; giá vọt lên 2.415 (trên +2σ 2.414), nến râu trên dài đóng cửa 2.411 → bán, SL 2.417, TP VWAP 2.404."
+    mistakes:
+      - "Dùng thiết lập này trong ngày có tin lớn hoặc khi giá đang phá vỡ mạnh."
+      - "Giữ lệnh khi giá đóng cửa tiếp tục ngoài dải."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD M15: VWAP nằm ngang, dải ±2σ. Giá vọt lên trên +2σ, nến râu trên dài đóng cửa quay vào trong (mũi tên 'Bán'), mũi tên cong chỉ về VWAP ghi 'TP', SL trên râu nến."
+  - part: 8
+    title: "Kết hợp VWAP ngày, tuần và AVWAP"
+    objective: "Dùng nhiều lớp VWAP để tìm vùng giá có nhiều xác nhận."
+    key_points:
+      - "VWAP tuần (reset đầu tuần) và VWAP tháng cho bức tranh rộng hơn VWAP ngày."
+      - "Vùng mà VWAP ngày, VWAP tuần và một AVWAP quan trọng gần nhau tạo thành vùng phản ứng mạnh hơn."
+      - "Khi giá ở trên cả VWAP ngày và VWAP tuần, thiên hướng tăng được củng cố."
+      - "Giới hạn ở 2-3 đường để biểu đồ dễ đọc."
+    example: "Ví dụ giả định: EURUSD có VWAP ngày 1,0862, VWAP tuần 1,0858, AVWAP từ đáy tin NFP 1,0860 → vùng 1,0858-1,0862 là vùng hợp lưu để tìm điểm mua khi giá hồi."
+    mistakes:
+      - "Coi mỗi đường VWAP là một tín hiệu riêng thay vì nhìn vùng hợp lưu."
+      - "Dùng VWAP ngày trên khung H4 trở lên."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD M30 với 3 đường: VWAP ngày (tím), VWAP tuần (xanh dương), AVWAP từ đáy NFP (cam) hội tụ quanh 1,0858-1,0862, vùng này tô vàng nhạt với nhãn 'Vùng hợp lưu'. Giá hồi về vùng và bật lên."
+  - part: 9
+    title: "Kế hoạch giao dịch VWAP trong ngày"
+    objective: "Ghép các quy tắc thành một kế hoạch giao dịch trong ngày có thể kiểm tra lại."
+    key_points:
+      - "Khung: M15 cho XAUUSD hoặc EURUSD; giao dịch chủ yếu phiên London và New York, đóng hết lệnh trước cuối ngày."
+      - "Xác định chế độ trong 1-2 giờ đầu: xu hướng (giá một phía VWAP, VWAP dốc) hay đi ngang (VWAP phẳng)."
+      - "Xu hướng: dùng thiết lập hồi về VWAP; đi ngang: dùng thiết lập quay về từ ±2σ; không trộn hai thiết lập trong cùng phiên."
+      - "Rủi ro 0,5-1% mỗi lệnh, tối đa 2 lệnh thua mỗi ngày, tránh 15 phút quanh tin lớn."
+    example: "Ví dụ giả định: phiên London, XAUUSD ở trên VWAP dốc lên từ 9h đến 11h giờ London → chế độ xu hướng; trader chỉ tìm lệnh mua khi giá hồi về VWAP, SL dưới đáy nhịp hồi, TP ở +2σ hoặc đỉnh phiên."
+    mistakes:
+      - "Giữ lệnh trong ngày qua đêm khi VWAP đã reset và bối cảnh thay đổi."
+      - "Đổi từ xu hướng sang đi ngang giữa chừng sau một lệnh thua."
+    visual:
+      type: checklist
+      idea: "Sơ đồ quyết định dạng checklist: 'Bước 1: 1-2 giờ đầu → VWAP dốc hay phẳng?'; nhánh 'Dốc → Thiết lập hồi về VWAP'; nhánh 'Phẳng → Thiết lập ±2σ về VWAP'; 'Rủi ro 0,5-1%/lệnh', 'Tối đa 2 lệnh thua/ngày', 'Không giao dịch quanh tin lớn', 'Đóng lệnh cuối ngày'."
+  - part: 10
+    title: "Giới hạn của VWAP"
+    objective: "Nhận biết khi nào VWAP mất tác dụng để tránh tin tưởng mù quáng."
+    key_points:
+      - "VWAP là chỉ báo trễ, mô tả giá trung bình đã qua, không dự báo được hướng tương lai."
+      - "Trong forex, khối lượng tick là gần đúng nên các mức VWAP chỉ nên xem là vùng, không phải giá chính xác."
+      - "Ngày có tin lớn hoặc cú sốc địa chính trị, giá có thể bỏ xa VWAP và không quay lại trong cả phiên."
+      - "Đầu phiên VWAP thay đổi nhanh và ít tin cậy vì chưa tích lũy đủ dữ liệu."
+    example: "Ví dụ giả định: ngày công bố NFP, XAUUSD tăng 40 USD trong một giờ và đóng cửa ngày trên +3σ; mọi lệnh bán 'quay về VWAP' đều bị dừng lỗ."
+    mistakes:
+      - "Dùng thiết lập quay về VWAP trong ngày tin lớn."
+      - "Giao dịch theo VWAP ngay 15 phút đầu ngày khi đường còn biến động mạnh."
+    visual:
+      type: compare
+      idea: "Hai cột: 'VWAP hữu ích' (phiên bình thường, thanh khoản tốt, giá dao động quanh VWAP) và 'VWAP kém tin cậy' (ngày tin lớn giá bỏ xa VWAP, đầu phiên, khối lượng tick khác nhau giữa sàn). Biểu đồ nhỏ minh họa giá chạy thẳng xa VWAP trong cột phải."
+sources:
+  - "https://www.tradingview.com/scripts/vwap/"
+  - "https://in.tradingview.com/scripts/anchoredvwap/"
+  - "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/volume-weighted-average-price-vwap"
+  - "https://pineify.app/resources/blog/anchored-vwap-pine-script-a-powerful-addition-to-your-tradingview-charts"
+  - "https://es.tradingview.com/scripts/vwapbands/"

@@ -1,0 +1,166 @@
+id: giao-dich-theo-phien
+name: "Giao dịch theo phiên: Á – Âu – Mỹ"
+level: "Trung cấp"
+description: "Giúp trader Việt Nam nắm chính xác giờ các phiên theo giờ Việt Nam (kể cả khi đổi giờ mùa hè), hiểu tính cách giá của từng phiên và áp dụng các chiến lược Asian range, London breakout và opening range phiên Mỹ."
+lessons:
+  - part: 1
+    title: "Thị trường 24 giờ và bốn phiên giao dịch"
+    objective: "Hiểu vì sao forex và vàng giao dịch gần 24 giờ/ngày, 5 ngày/tuần và được chia thành các phiên (trading session)."
+    key_points:
+      - "Forex và vàng giao ngay là thị trường phi tập trung (OTC), thanh khoản luân chuyển theo giờ làm việc của các trung tâm tài chính lớn: Sydney, Tokyo, London, New York."
+      - "Thông lệ phổ biến chia thành ba phiên chính: Á (Sydney + Tokyo), Âu (London) và Mỹ (New York)."
+      - "Ngày giao dịch của đa số sàn kết thúc lúc 17:00 giờ New York, tương ứng 04:00 (mùa hè Mỹ) hoặc 05:00 (mùa đông Mỹ) sáng giờ Việt Nam."
+      - "Mỗi phiên có thanh khoản, biên độ và nhóm tiền tệ sôi động khác nhau, nên cùng một chiến lược có thể hiệu quả ở phiên này nhưng kém ở phiên khác."
+    example: "Ví dụ: một trader ở Hà Nội đi làm giờ hành chính chỉ có thể giao dịch buổi tối; khi đó họ chủ yếu tiếp xúc với phiên Mỹ và giai đoạn giao thoa Âu – Mỹ, nên nên chọn chiến lược phù hợp với giờ này."
+    mistakes:
+      - "Nghĩ rằng giá chạy như nhau ở mọi giờ trong ngày."
+      - "Nhầm giờ đóng cửa ngày giao dịch nên bị tính phí qua đêm (swap) ngoài ý muốn."
+    visual:
+      type: chart
+      idea: "Vòng tròn đồng hồ 24 giờ theo giờ Việt Nam, chia các cung màu: phiên Á (xanh lá), phiên Âu (xanh dương), phiên Mỹ (cam), vùng giao thoa Âu – Mỹ tô đậm hơn. Mốc 04:00/05:00 có nhãn 'Đóng ngày giao dịch'."
+  - part: 2
+    title: "Giờ các phiên theo giờ Việt Nam và đổi giờ"
+    objective: "Quy đổi chính xác giờ mở/đóng các phiên sang giờ Việt Nam (UTC+7) trong cả mùa hè và mùa đông."
+    key_points:
+      - "Việt Nam không đổi giờ; Anh và Mỹ áp dụng giờ mùa hè (Daylight Saving Time – DST), nên giờ phiên Âu, Mỹ theo giờ Việt Nam sớm hơn 1 tiếng vào mùa hè."
+      - "Phiên Tokyo khoảng 07:00–16:00 giờ VN quanh năm (Nhật không đổi giờ). Phiên London khoảng 14:00–23:00 (mùa hè) hoặc 15:00–24:00 (mùa đông)."
+      - "Phiên New York khoảng 19:00–04:00 (mùa hè) hoặc 20:00–05:00 (mùa đông); giao thoa London – New York khoảng 19:00–23:00 (hè) hoặc 20:00–24:00 (đông)."
+      - "Mỹ đổi giờ vào Chủ nhật thứ hai tháng 3 và Chủ nhật đầu tháng 11; châu Âu đổi vào Chủ nhật cuối tháng 3 và Chủ nhật cuối tháng 10, nên có 2–3 tuần mỗi năm hai bên lệch nhau."
+    example: "Ví dụ: tin việc làm Mỹ (NFP) công bố lúc 08:30 giờ New York. Tháng 7 (mùa hè) là 19:30 giờ VN; tháng 12 (mùa đông) là 20:30 giờ VN. Trong tuần lệch giờ cuối tháng 3, Mỹ đã sang giờ hè nhưng London chưa, nên khoảng giao thoa ngắn lại."
+    mistakes:
+      - "Dùng một bảng giờ cố định cả năm mà không điều chỉnh khi đổi giờ."
+      - "Nhầm thời điểm tin lớn đúng tuần đổi giờ và bị bất ngờ bởi biến động."
+    visual:
+      type: formula
+      idea: "Bảng 3 cột 'Phiên | Mùa hè (giờ VN) | Mùa đông (giờ VN)': Tokyo 07:00–16:00 | 07:00–16:00; London 14:00–23:00 | 15:00–24:00; New York 19:00–04:00 | 20:00–05:00; Giao thoa Âu–Mỹ 19:00–23:00 | 20:00–24:00; Tin Mỹ 8:30 ET 19:30 | 20:30. Chú thích: Mỹ đổi giờ T3/T11, châu Âu đổi giờ cuối T3/cuối T10."
+  - part: 3
+    title: "Tính cách của từng phiên"
+    objective: "Nhận biết đặc điểm biến động điển hình của phiên Á, Âu và Mỹ đối với XAUUSD, EURUSD, GBPUSD."
+    key_points:
+      - "Phiên Á thường biên độ hẹp với EURUSD, GBPUSD; JPY, AUD, NZD sôi động hơn; vàng có thể chịu ảnh hưởng nhu cầu từ Trung Quốc, Ấn Độ nhưng nhìn chung ít biến động mạnh."
+      - "Phiên Âu (London) thường có thanh khoản lớn nhất trong ngày, hay tạo đỉnh hoặc đáy của ngày và mở ra hướng đi rõ ràng cho EUR, GBP."
+      - "Phiên Mỹ mang theo dữ liệu kinh tế Mỹ và quyết định của Fed, khiến vàng và các cặp USD có thể biến động mạnh, đặc biệt trong giờ giao thoa với London."
+      - "Đây là xu hướng thống kê thường gặp chứ không phải quy luật cố định; ngày có tin lớn có thể đảo ngược hoàn toàn tính cách phiên."
+    example: "Ví dụ giả định: một ngày bình thường, EURUSD dao động 20 pip trong phiên Á, mở rộng thêm 50 pip trong phiên London và 40 pip trong phiên Mỹ khi có tin CPI."
+    mistakes:
+      - "Giao dịch breakout EURUSD giữa phiên Á khi thanh khoản thấp và nhiều tín hiệu giả."
+      - "Áp cùng một mức cắt lỗ cho vàng trong phiên Á và giờ ra tin phiên Mỹ."
+    visual:
+      type: compare
+      idea: "Ba cột 'Phiên Á | Phiên Âu | Phiên Mỹ' với các dòng: Thanh khoản (thấp / cao nhất / cao); Biên độ EURUSD (hẹp / rộng / rộng); Cặp sôi động (JPY, AUD / EUR, GBP, vàng / USD, vàng); Đặc điểm (tích lũy / tạo hướng / tin tức Mỹ)."
+  - part: 4
+    title: "Vùng giá phiên Á (Asian range)"
+    objective: "Biết cách xác định và đánh dấu biên độ phiên Á làm nền cho các chiến lược phiên sau."
+    key_points:
+      - "Asian range là vùng giữa giá cao nhất và thấp nhất trong một khung giờ phiên Á cố định, thường được vẽ trên M15 hoặc M30."
+      - "Khung giờ phổ biến là 00:00–07:00 GMT, tương ứng 07:00–14:00 giờ VN; có người dùng từ lúc mở phiên Tokyo hoặc từ 05:00 giờ VN – miễn là nhất quán."
+      - "Range hẹp so với trung bình thường báo hiệu năng lượng dồn nén, dễ có cú bứt phá khi London mở."
+      - "Range quá rộng (ví dụ do tin bất ngờ trong phiên Á) thường làm chiến lược breakout kém hiệu quả vì đã tiêu hao biên độ ngày."
+    example: "Ví dụ giả định EURUSD: từ 07:00 đến 14:00 giờ VN, cao nhất 1,0872, thấp nhất 1,0848 → Asian range 24 pip. So với biên độ ngày trung bình 70 pip, range này được coi là hẹp."
+    mistakes:
+      - "Mỗi ngày dùng một khung giờ khác nhau để vẽ range."
+      - "Không so sánh độ rộng range với biên độ trung bình nên không lọc được ngày xấu."
+    visual:
+      type: chart
+      idea: "Biểu đồ M15 EURUSD: một hộp chữ nhật bao trọn giá từ 07:00 đến 14:00 giờ VN, cạnh trên 1,0872, cạnh dưới 1,0848, nhãn 'Asian range = 24 pip'. Bên phải là đường thẳng đứng nét đứt tại giờ mở London."
+  - part: 5
+    title: "Chiến lược phá vỡ phiên London"
+    objective: "Nắm quy tắc cơ bản của chiến lược London breakout dựa trên Asian range."
+    key_points:
+      - "Trước giờ mở London (14:00 hè / 15:00 đông giờ VN), đặt lệnh chờ mua (buy stop) trên đỉnh range và bán (sell stop) dưới đáy range, cộng một khoảng đệm vài pip."
+      - "Khi một lệnh khớp, hủy lệnh còn lại hoặc dùng nó làm cắt lỗ đảo chiều tùy biến thể; cắt lỗ phổ biến là cạnh đối diện hoặc giữa range."
+      - "Mục tiêu thường dùng là 1–1,5 lần độ rộng range hoặc theo R:R cố định; đóng lệnh trước phiên Mỹ nếu chưa đạt."
+      - "Có thể lọc thêm bằng xu hướng khung H4/D1 và chỉ giao dịch khi range nằm trong giới hạn hẹp hợp lý."
+    example: "Ví dụ giả định GBPUSD: Asian range 1,2700–1,2730 (30 pip). Buy stop 1,2735, sell stop 1,2695. Giá phá lên khớp 1,2735, cắt lỗ giữa range 1,2715 (20 pip), mục tiêu 1,2775 (40 pip) → R:R 1:2."
+    mistakes:
+      - "Giữ cả hai lệnh chờ sau khi một bên khớp, dẫn đến bị quét hai đầu."
+      - "Áp dụng vào ngày range quá rộng hoặc có tin lớn ngay giờ mở London."
+    visual:
+      type: chart
+      idea: "Biểu đồ M15 GBPUSD: hộp Asian range 1,2700–1,2730; đường buy stop 1,2735 (xanh) và sell stop 1,2695 (đỏ); giá bứt lên tại giờ mở London với mũi tên; đường SL 1,2715 và TP 1,2775 có nhãn."
+  - part: 6
+    title: "Phá vỡ giả và cú quét đầu phiên London"
+    objective: "Nhận biết phá vỡ giả (false breakout) quanh giờ mở London và cách giao dịch hoặc né tránh."
+    key_points:
+      - "Thường gặp trường hợp giá phá một cạnh của Asian range, quét các lệnh dừng rồi quay ngược và chạy về phía cạnh còn lại."
+      - "Dấu hiệu phá vỡ giả: nến phá có râu dài, đóng cửa quay lại trong range, không có tin hỗ trợ."
+      - "Một số trader chủ động giao dịch ngược sau cú quét: chờ giá đóng cửa trở lại trong range rồi vào lệnh theo hướng ngược lại, cắt lỗ trên đỉnh cú quét."
+      - "Giảm rủi ro phá vỡ giả bằng cách yêu cầu nến M15 đóng cửa ngoài range hoặc chờ giá kiểm tra lại cạnh range (retest)."
+    example: "Ví dụ giả định XAUUSD: Asian range 2.395–2.405. Đầu phiên London giá vọt lên 2.409 rồi nến M15 đóng cửa tại 2.402 trong range; sau đó giá giảm xuống 2.390. Người vào breakout mua bị cắt lỗ, người chờ xác nhận đóng cửa thì tránh được."
+    mistakes:
+      - "Vào lệnh ngay khi râu nến chạm qua cạnh range."
+      - "Liên tục đảo lệnh mua – bán theo mỗi lần giá chạm hai cạnh."
+    visual:
+      type: pattern
+      idea: "Cận cảnh 5 nến M15 quanh cạnh trên của hộp range: một nến có râu trên dài vượt cạnh trên nhưng thân đóng cửa bên trong (nhãn 'Quét – phá vỡ giả'), tiếp theo là các nến đỏ giảm về cạnh dưới. Mũi tên bán sau nến đóng cửa trong range."
+  - part: 7
+    title: "Phiên Mỹ: tin tức và opening range"
+    objective: "Hiểu các mốc giờ quan trọng của phiên Mỹ và chiến lược phá vỡ vùng mở cửa (opening range breakout)."
+    key_points:
+      - "Các mốc chính theo giờ VN: tin kinh tế Mỹ 19:30 (hè) / 20:30 (đông); mở cửa chứng khoán Mỹ 20:30 (hè) / 21:30 (đông); quyết định Fed 01:00 (hè) / 02:00 (đông) sáng hôm sau."
+      - "Opening range là biên độ của 15–60 phút đầu sau một mốc mở (ví dụ sau giờ tin hoặc giờ mở cửa chứng khoán Mỹ); giao dịch khi giá phá vỡ biên độ này."
+      - "Sau tin lớn, nên để giá chạy 15–30 phút cho spread thu hẹp và biến động ổn định rồi mới đánh dấu range."
+      - "Phiên Mỹ thường tiếp nối hoặc đảo chiều xu hướng phiên London; quan sát giá có giữ được hướng London không để chọn hướng giao dịch."
+    example: "Ví dụ giả định XAUUSD mùa hè: tin CPI lúc 19:30 giờ VN, vàng dao động mạnh. Trader đánh dấu range 30 phút từ 19:30 đến 20:00 là 2.388–2.402, sau đó mua khi nến M5 đóng cửa trên 2.402, cắt lỗ 2.395, mục tiêu 2.416."
+    mistakes:
+      - "Vào lệnh ngay giây công bố tin khi spread giãn rộng và trượt giá lớn."
+      - "Quên rằng giờ tin Mỹ đổi theo mùa nên đặt lịch sai 1 tiếng."
+    visual:
+      type: chart
+      idea: "Biểu đồ M5 XAUUSD: đường thẳng đứng tại 19:30 nhãn 'Tin CPI', hộp chữ nhật 19:30–20:00 từ 2.388 đến 2.402 nhãn 'Opening range 30 phút', nến đóng cửa vượt cạnh trên với mũi tên mua, SL 2.395 và TP 2.416."
+  - part: 8
+    title: "Giờ giao thoa Âu – Mỹ và nhịp cuối ngày"
+    objective: "Biết cách tận dụng giờ giao thoa London – New York và nhận biết các hành vi giá cuối ngày."
+    key_points:
+      - "Giờ giao thoa (19:00–23:00 hè, 20:00–24:00 đông, giờ VN) thường có thanh khoản cao nhất, phù hợp chiến lược theo động lượng."
+      - "Quanh mốc định giá vàng LBMA buổi chiều (15:00 giờ London, tức 21:00 hè / 22:00 đông giờ VN) và mốc định giá tỷ giá 16:00 London (22:00 hè / 23:00 đông giờ VN) đôi khi có biến động do dòng lệnh lớn."
+      - "Sau khi London đóng cửa, thanh khoản giảm dần; giá thường đi ngang hoặc điều chỉnh nhẹ trừ khi có tin Fed."
+      - "Thời điểm quanh đóng ngày giao dịch (04:00–05:00 giờ VN) spread thường giãn, không nên vào lệnh mới."
+    example: "Ví dụ giả định EURUSD: phiên London tăng 50 pip, đầu phiên Mỹ tiếp tục tăng 20 pip, sau 22:00 giờ VN (mùa hè, sau mốc định giá tỷ giá) giá điều chỉnh giảm 25 pip khi các quỹ chốt vị thế."
+    mistakes:
+      - "Vào lệnh mới lúc 04:30 giờ VN khi spread vàng có thể giãn gấp nhiều lần."
+      - "Kỳ vọng giá giữ nguyên tốc độ buổi tối sau khi London đã đóng."
+    visual:
+      type: chart
+      idea: "Biểu đồ đường biên độ trung bình theo giờ trong ngày (giờ VN) của EURUSD: thấp trong 07:00–14:00, tăng vọt từ 14:00, đỉnh cao nhất 19:00–23:00 (tô vùng 'Giao thoa'), giảm dần sau 23:00, thấp nhất quanh 04:00. Các mốc LBMA 21:00 và định giá tỷ giá 22:00 đánh dấu bằng chấm."
+  - part: 9
+    title: "Chọn phiên phù hợp với lịch sinh hoạt"
+    objective: "Chọn phiên và chiến lược phù hợp với thời gian rảnh, cặp tiền và mức chịu đựng biến động của bản thân."
+    key_points:
+      - "Người rảnh buổi chiều: phù hợp với London breakout và giao dịch EURUSD, GBPUSD, vàng trong phiên Âu."
+      - "Người chỉ rảnh buổi tối: phù hợp với giờ giao thoa và opening range phiên Mỹ, nhưng cần quản lý tin tức chặt chẽ."
+      - "Người bận cả ngày: cân nhắc giao dịch khung H4/D1 với lệnh chờ, tránh thức khuya theo phiên Mỹ ảnh hưởng sức khỏe."
+      - "Tập trung vào 1–2 phiên và 1–2 cặp giúp hiểu sâu tính cách giá thay vì giao dịch dàn trải."
+    example: "Ví dụ: nhân viên văn phòng ở TP.HCM rảnh từ 19:00 đến 22:30, chọn giao dịch XAUUSD trong giờ giao thoa với opening range sau tin Mỹ, và chỉ giao dịch những ngày có lịch tin rõ ràng."
+    mistakes:
+      - "Cố bám cả ba phiên dẫn đến thiếu ngủ và quyết định kém."
+      - "Chọn phiên Á cho EURUSD chỉ vì giờ thuận tiện, rồi chán vì giá ít chạy."
+    visual:
+      type: compare
+      idea: "Bảng 3 hàng 'Lịch sinh hoạt → Phiên phù hợp → Chiến lược': Rảnh chiều → Âu → London breakout EURUSD/GBPUSD; Rảnh tối → giao thoa Âu–Mỹ → Opening range XAUUSD; Bận cả ngày → không bám phiên → lệnh chờ khung H4/D1."
+  - part: 10
+    title: "Kế hoạch giao dịch theo phiên hoàn chỉnh"
+    objective: "Ghép các bài trước thành một kế hoạch ngày giao dịch theo phiên có mốc giờ cụ thể theo giờ Việt Nam."
+    key_points:
+      - "Sáng: kiểm tra lịch kinh tế và mùa đổi giờ, ghi các mốc giờ tin theo giờ VN, xác định xu hướng H4/D1."
+      - "Trước giờ mở London: đánh dấu Asian range, đánh giá độ rộng so với trung bình, đặt hoặc bỏ qua lệnh chờ breakout."
+      - "Buổi tối: quản lý lệnh từ phiên London, chờ opening range sau tin Mỹ nếu có thiết lập; không giữ lệnh qua tin Fed nếu không có trong kế hoạch."
+      - "Cuối ngày: đóng lệnh trong ngày trước 23:00–24:00 giờ VN theo quy tắc, ghi nhật ký kết quả theo từng phiên để thống kê phiên nào hiệu quả nhất."
+    example: "Ví dụ kế hoạch giả định cho một ngày tháng 7: 13:45 vẽ Asian range EURUSD (07:00–14:00) = 22 pip → đặt lệnh chờ ±3 pip; 17:30 dời cắt lỗ về hòa vốn nếu đã lãi 1R; 19:30 tin Mỹ → chờ đến 20:00 rồi xét opening range XAUUSD; 23:00 đóng mọi lệnh trong ngày, ghi nhật ký."
+    mistakes:
+      - "Có chiến lược theo phiên nhưng không ghi giờ cụ thể nên vào lệnh tùy hứng."
+      - "Không thống kê kết quả theo phiên nên không biết mình mạnh ở phiên nào."
+    visual:
+      type: checklist
+      idea: "Dòng thời gian ngang theo giờ VN (mùa hè) với các mốc: 07:00 phiên Á bắt đầu tính range → 13:45 vẽ range, đặt lệnh chờ → 14:00 London mở → 19:30 tin Mỹ → 20:00 opening range → 23:00 đóng lệnh, ghi nhật ký. Dưới cùng ghi chú: 'Mùa đông: cộng 1 giờ cho các mốc Âu – Mỹ'."
+sources:
+  - "https://www.babypips.com/learn/forex/forex-trading-sessions"
+  - "https://www.babypips.com/tools/forex-market-hours"
+  - "https://www.babypips.com/z/learn/forex/london-session"
+  - "https://www.youtube.com/watch?v=H5TTkJj3sGg"
+  - "https://newyorkcityservers.com/blog/london-breakout-strategy"
+  - "https://newyorkcityservers.com/blog/asian-session-forex-strategy"
+  - "https://www.breakoutalerts.io/blog/asian-range-breakout-strategy"
+  - "https://www.dailyforex.com/forex-articles/london-breakout-strategy/210474"
+  - "https://priceactionninja.com/stop-guessing-trade-the-opening-range-like-a-pro/"
+  - "https://www.tradingwithrayner.com/course/3-when-is-the-best-time-to-trade-forex/"

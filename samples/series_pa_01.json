@@ -1,0 +1,32 @@
+{
+  "title": "Price Action là gì và vì sao trader dùng nó?",
+  "slides": [
+    {
+      "heading": "Price Action = đọc giá trực tiếp",
+      "body": "Đây là biểu đồ trần của vàng khung H4: không chỉ báo, chỉ có nến. Price Action là đọc chính hình dạng nến, các đỉnh đáy và vùng giá mà thị trường từng phản ứng để ra quyết định.",
+      "chart": {"mode": "real", "symbol": "XAUUSD", "tf": "H4", "tools": [], "scenario": null},
+      "diagram": null
+    },
+    {
+      "heading": "Chỉ báo luôn đi sau giá",
+      "body": "Cùng đoạn giá đó, thêm EMA 20, EMA 50 và RSI. Để ý: giá đã giảm mạnh rồi các đường EMA mới bắt đầu bẻ xuống. Mọi chỉ báo đều tính từ giá, nên đọc giá trực tiếp giúp anh em thấy tín hiệu sớm hơn.",
+      "chart": {"mode": "real", "symbol": "XAUUSD", "tf": "H4", "tools": ["ema20", "ema50", "rsi"], "scenario": null},
+      "diagram": null
+    },
+    {
+      "heading": "3 trụ cột của Price Action",
+      "body": "1. Cấu trúc: các đỉnh đáy LH, LL cho biết xu hướng đang giảm.\n2. Vùng giá: các vùng đỏ là nơi giá đã nhiều lần bị chặn lại.\n3. Tín hiệu nến: chỉ xét khi nến xuất hiện đúng tại các vùng này.",
+      "chart": {"mode": "real", "symbol": "XAUUSD", "tf": "H4", "tools": ["structure", "sr_zones"], "scenario": null},
+      "diagram": null
+    },
+    {
+      "heading": "Sai lầm hay gặp",
+      "body": "Price Action không đoán đúng 100%. Nó giúp tìm điểm vào có xác suất tốt hơn và biết rõ lúc nào mình sai – vì vậy luôn cần cắt lỗ.",
+      "chart": null,
+      "diagram": {"type": "compare",
+        "left": {"title": "Sai", "tone": "bad", "items": ["Thấy nến đẹp ở đâu cũng vào lệnh", "Bỏ qua xu hướng và vùng giá", "Tin đọc giá là đúng 100%, bỏ cắt lỗ"]},
+        "right": {"title": "Đúng", "tone": "good", "items": ["Xác định xu hướng trước", "Chỉ chờ tín hiệu tại vùng giá", "Luôn đặt cắt lỗ cho mỗi lệnh"]}}
+    }
+  ],
+  "post": "📘 PRICE ACTION NHẬP MÔN – PHẦN 1/15 | Price Action là gì?\nMở đầu series mới: 15 bài giúp anh em đọc biểu đồ trần – không cần chục chỉ báo – mà vẫn biết thị trường đang làm gì và nên chờ ở đâu. Lướt album ảnh để xem ví dụ trên biểu đồ vàng thật 👉\n\n1️⃣ Price Action (hành động giá) là cách ra quyết định dựa trên chính chuyển động của giá: hình dạng cây nến, các đỉnh đáy và những vùng giá mà thị trường từng phản ứng mạnh.\n\n2️⃣ Mọi chỉ báo như MA, RSI đều được tính từ giá, nên luôn đi sau giá. Ảnh 02 cho thấy giá vàng đã giảm mạnh trước khi các đường EMA kịp bẻ xuống.\n\n3️⃣ Price Action dựa trên 3 trụ cột: cấu trúc thị trường (xu hướng), vùng giá quan trọng (hỗ trợ/kháng cự) và tín hiệu nến xuất hiện tại vùng đó.\n\n⚠️ Sai lầm hay gặp: coi Price Action là học thuộc mô hình nến, thấy nến đẹp ở đâu cũng vào lệnh; hoặc nghĩ đọc giá là đúng 100% nên bỏ cắt lỗ.\n\nAnh em đang giao dịch bằng chỉ báo hay đọc giá trần? Comment cho mình biết nhé 👇\nPhần tiếp theo: Giải phẫu cây nến Nhật và tâm lý phía sau."
+}

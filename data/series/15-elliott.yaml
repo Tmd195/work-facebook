@@ -1,0 +1,225 @@
+id: elliott
+name: "Sóng Elliott"
+level: "Chuyên sâu"
+description: "Giúp trader đếm sóng Elliott đúng quy tắc, kết hợp tỉ lệ Fibonacci để xác định vị trí trong xu hướng, mục tiêu giá và mức vô hiệu hóa khi giao dịch vàng và ngoại hối."
+lessons:
+  - part: 1
+    title: "Lý thuyết sóng Elliott: nhịp 5-3"
+    objective: "Hiểu ý tưởng cốt lõi của lý thuyết sóng Elliott và cấu trúc chu kỳ 5-3."
+    key_points:
+      - "Ralph Nelson Elliott (thập niên 1930) cho rằng giá vận động theo các mẫu lặp lại phản ánh tâm lý đám đông."
+      - "Một chu kỳ hoàn chỉnh gồm 5 sóng theo xu hướng chính (sóng đẩy – motive) và 3 sóng điều chỉnh (corrective) ngược xu hướng."
+      - "Sóng đẩy được đánh số 1-2-3-4-5, sóng điều chỉnh được đánh chữ A-B-C."
+      - "Cấu trúc này lặp lại ở mọi khung thời gian (tính phân dạng – fractal)."
+    example: "Ví dụ giả định: EURUSD tăng từ 1,0500 lên 1,1200 qua 5 nhịp rõ rệt, sau đó điều chỉnh về 1,0850 theo 3 nhịp A-B-C. Đó là một chu kỳ 5-3 hoàn chỉnh."
+    mistakes:
+      - "Nghĩ sóng Elliott dự báo chính xác tương lai, trong khi nó là khung xác suất cần cập nhật liên tục."
+    visual:
+      type: chart
+      idea: "Đường zigzag gồm 5 nhịp đi lên đánh số 1, 2, 3, 4, 5 rồi 3 nhịp đi xuống đánh A, B, C. Ghi nhãn 'Sóng đẩy' trên đoạn 1-5 và 'Sóng điều chỉnh' trên đoạn A-C."
+  - part: 2
+    title: "Tâm lý đằng sau từng sóng"
+    objective: "Hiểu đặc điểm tâm lý và hành vi giá điển hình của từng sóng 1-5 và A-B-C."
+    key_points:
+      - "Sóng 1 thường bị xem là hồi phục bình thường; sóng 2 điều chỉnh sâu khiến nhiều người tin xu hướng cũ quay lại."
+      - "Sóng 3 thường mạnh và dài nhất, volume cao, khi đám đông nhận ra xu hướng mới."
+      - "Sóng 4 thường đi ngang, phức tạp; sóng 5 tăng tiếp nhưng động lượng yếu hơn, hay xuất hiện phân kỳ RSI."
+      - "Sóng A thường bị coi là điều chỉnh nhỏ, sóng B là bẫy hồi phục, sóng C mạnh và lan rộng."
+    example: "Ví dụ giả định: XAUUSD ở sóng 5, giá tạo đỉnh mới 2.480 nhưng RSI D1 tạo đỉnh thấp hơn đỉnh sóng 3: dấu hiệu sóng 5 đang cạn lực."
+    mistakes:
+      - "Mua đuổi mạnh ở sóng 5 với kỳ vọng như sóng 3."
+    visual:
+      type: chart
+      idea: "Chu kỳ 5-3 có chú thích ngắn cạnh từng sóng (ví dụ: sóng 3 'mạnh nhất, volume cao'); dưới biểu đồ là đường RSI với phân kỳ giữa đỉnh sóng 3 và sóng 5 được nối bằng đường đứt nét."
+  - part: 3
+    title: "3 quy tắc bất biến của sóng đẩy"
+    objective: "Nắm vững 3 quy tắc tuyệt đối mà mọi sóng đẩy (impulse) phải tuân thủ."
+    key_points:
+      - "Quy tắc 1: sóng 2 không bao giờ điều chỉnh quá 100% sóng 1 (không vượt qua điểm bắt đầu sóng 1)."
+      - "Quy tắc 2: sóng 3 không bao giờ là sóng ngắn nhất trong ba sóng 1, 3, 5 (đo theo giá)."
+      - "Quy tắc 3: trong sóng đẩy, sóng 4 không đi vào vùng giá của sóng 1 (không chồng lấn)."
+      - "Vi phạm bất kỳ quy tắc nào thì cách đếm phải bị loại bỏ, không có ngoại lệ."
+    example: "Ví dụ giả định: sóng 1 của GBPUSD đi từ 1,2500 lên 1,2700. Nếu nhịp điều chỉnh sau đó xuống 1,2480 thì không thể là sóng 2; cách đếm phải thay đổi."
+    mistakes:
+      - "Cố giữ cách đếm yêu thích dù sóng 4 đã chồng lên sóng 1."
+    visual:
+      type: checklist
+      idea: "Ba quy tắc đánh số, mỗi quy tắc kèm sơ đồ nhỏ: (1) sóng 2 không xuống dưới gốc sóng 1 – đường ngang đỏ tại gốc; (2) sóng 3 không ngắn nhất – ba thanh đo độ dài 1, 3, 5; (3) sóng 4 không chạm vùng sóng 1 – vùng tô đỏ cấm."
+  - part: 4
+    title: "Quy tắc và hướng dẫn: biết phân biệt"
+    objective: "Phân biệt quy tắc (bắt buộc) với hướng dẫn (guidelines – thường xảy ra) để đếm sóng linh hoạt."
+    key_points:
+      - "Hướng dẫn là đặc điểm thường gặp nhưng có thể không xảy ra, ví dụ sóng 3 thường dài nhất, sóng 4 thường dừng gần đáy sóng 4 nhỏ hơn bên trong sóng 3."
+      - "Một trong ba sóng đẩy 1, 3, 5 thường kéo dài (extension), phổ biến nhất là sóng 3 trên forex."
+      - "Kênh giá (channeling): nối đỉnh sóng 2 và 4, kẻ song song qua đỉnh sóng 3 để ước lượng điểm kết thúc sóng 5."
+      - "Sau một sóng đẩy hoàn tất, điều chỉnh thường về vùng sóng 4 của cấp nhỏ hơn."
+    example: "Ví dụ giả định: EURUSD đã xong sóng 4 tại 1,0880. Kẻ kênh qua đáy sóng 2 (1,0750) và sóng 4, đường song song qua đỉnh sóng 3 gợi ý vùng kết thúc sóng 5 quanh 1,1050."
+    mistakes:
+      - "Loại bỏ một cách đếm hợp lệ chỉ vì nó không khớp một hướng dẫn."
+    visual:
+      type: chart
+      idea: "Sóng đẩy 1-5 với kênh giá: đường nối đáy sóng 2 và sóng 4, đường song song qua đỉnh sóng 3 kéo dài sang phải; vòng tròn nơi sóng 5 chạm cạnh trên kênh, nhãn 'vùng mục tiêu sóng 5'."
+  - part: 5
+    title: "Sóng kéo dài, sóng cụt và tam giác chéo"
+    objective: "Nhận diện các biến thể của sóng đẩy: sóng kéo dài, sóng 5 cụt và tam giác chéo (diagonal)."
+    key_points:
+      - "Sóng kéo dài (extension) là sóng đẩy có các sóng con chia rõ ràng, dài hơn nhiều so với hai sóng đẩy còn lại."
+      - "Sóng 5 cụt (truncation) là khi sóng 5 không vượt được đỉnh sóng 3, thường báo hiệu lực yếu nghiêm trọng."
+      - "Tam giác chéo mở đầu (leading diagonal) xuất hiện ở sóng 1 hoặc A; tam giác chéo kết thúc (ending diagonal) xuất hiện ở sóng 5 hoặc C."
+      - "Trong tam giác chéo, sóng 4 được phép chồng lấn vùng sóng 1 – ngoại lệ duy nhất của quy tắc 3."
+    example: "Ví dụ giả định: sóng 5 của XAUUSD có dạng nêm thu hẹp từ 2.440 đến 2.480, sóng 4 chồng lên sóng 1 trong nêm: ending diagonal, khả năng đảo chiều mạnh sau khi phá cạnh dưới."
+    mistakes:
+      - "Gọi mọi cấu trúc chồng lấn là tam giác chéo để cứu cách đếm."
+    visual:
+      type: compare
+      idea: "Hai cột: trái 'Sóng 3 kéo dài' – sóng 3 chia thành 5 sóng con rõ, dài gấp nhiều lần sóng 1 và 5; phải 'Ending diagonal' – nêm thu hẹp ở sóng 5 với hai đường hội tụ, sóng 4 chồng sóng 1 tô màu, mũi tên đảo chiều xuống."
+  - part: 6
+    title: "Sóng điều chỉnh Zigzag 5-3-5"
+    objective: "Nhận diện cấu trúc điều chỉnh Zigzag và đặc điểm các sóng A, B, C."
+    key_points:
+      - "Zigzag là điều chỉnh sắc nét gồm sóng A (5 sóng con), B (3 sóng con), C (5 sóng con)."
+      - "Sóng B thường điều chỉnh 38,2%–78,6% sóng A và không vượt qua điểm bắt đầu sóng A."
+      - "Sóng C thường dài bằng sóng A, hoặc 1,618 lần sóng A, vượt quá đáy (đỉnh) sóng A."
+      - "Zigzag kép (W-X-Y) là hai zigzag nối với nhau bằng sóng X khi điều chỉnh chưa đủ sâu."
+    example: "Ví dụ giả định: sau đỉnh 1,1200, EURUSD giảm sóng A xuống 1,1050 (150 pip), hồi B lên 1,1130, sóng C bằng A sẽ kết thúc quanh 1,0980."
+    mistakes:
+      - "Vào lệnh ngược xu hướng ở cuối sóng A vì nghĩ điều chỉnh đã xong."
+    visual:
+      type: chart
+      idea: "Zigzag giảm: sóng A chia 5 nhịp nhỏ, sóng B hồi 3 nhịp, sóng C chia 5 nhịp xuống thấp hơn A; mũi tên đo độ dài A và C bằng nhau, ghi '5-3-5'."
+  - part: 7
+    title: "Sóng điều chỉnh Flat 3-3-5"
+    objective: "Nhận diện Flat và các biến thể regular, expanded, running."
+    key_points:
+      - "Flat là điều chỉnh đi ngang gồm A (3 sóng), B (3 sóng), C (5 sóng)."
+      - "Trong flat, sóng B điều chỉnh ít nhất khoảng 90% sóng A; regular flat có B gần bằng điểm đầu A và C kết thúc gần cuối A."
+      - "Expanded flat: B vượt điểm đầu A (thường 1,236–1,382 lần A) và C vượt cuối A (thường 1,618 lần A); đây là dạng phổ biến."
+      - "Running flat: B vượt điểm đầu A nhưng C không tới được cuối A, cho thấy xu hướng chính rất mạnh."
+    example: "Ví dụ giả định: trong xu hướng tăng của XAUUSD, sóng A giảm 2.400 → 2.370, B tăng vượt đỉnh lên 2.408, C giảm xuống 2.360: expanded flat, khiến nhiều người mua phá đỉnh ở B bị dừng lỗ."
+    mistakes:
+      - "Coi sóng B vượt đỉnh là sóng tăng mới và mua đuổi."
+    visual:
+      type: compare
+      idea: "Ba sơ đồ nhỏ cạnh nhau: 'Regular flat' (A, B ngang đỉnh, C ngang đáy A), 'Expanded flat' (B vượt đỉnh, C thấp hơn A), 'Running flat' (B vượt đỉnh, C cao hơn đáy A). Kẻ đường ngang tham chiếu đầu và cuối sóng A."
+  - part: 8
+    title: "Tam giác và điều chỉnh kết hợp"
+    objective: "Nhận diện tam giác (triangle) A-B-C-D-E và các điều chỉnh kết hợp W-X-Y."
+    key_points:
+      - "Tam giác gồm 5 sóng A-B-C-D-E, mỗi sóng có cấu trúc 3 sóng con (3-3-3-3-3), hai đường biên hội tụ hoặc mở rộng."
+      - "Tam giác thường xuất hiện ở sóng 4, sóng B hoặc sóng X, hiếm khi ở sóng 2."
+      - "Sau tam giác giá thường bứt ra mạnh theo hướng xu hướng trước đó (thrust), quãng đường gần bằng chiều rộng phần mở nhất của tam giác."
+      - "Điều chỉnh kết hợp W-X-Y (hoặc W-X-Y-X-Z) ghép các mẫu zigzag, flat, tam giác, thường làm điều chỉnh kéo dài theo thời gian."
+    example: "Ví dụ giả định: sóng 4 của GBPUSD đi ngang dạng tam giác thu hẹp từ 1,2850–1,2950 xuống 1,2890–1,2915. Phá lên khỏi cạnh trên, mục tiêu thrust khoảng 1,2915 + 100 pip."
+    mistakes:
+      - "Dự đoán tam giác ở sóng 2, nơi cấu trúc này hầu như không xuất hiện."
+    visual:
+      type: chart
+      idea: "Tam giác thu hẹp đánh nhãn A, B, C, D, E với hai đường biên hội tụ, mỗi sóng có 3 nhịp nhỏ; sau E là mũi tên thrust bật mạnh theo hướng xu hướng trước, chiều dài bằng chiều rộng miệng tam giác."
+  - part: 9
+    title: "Cấp độ sóng: từ Grand Supercycle tới Subminuette"
+    objective: "Hiểu hệ thống cấp độ sóng (wave degrees) để đếm sóng nhất quán giữa các khung thời gian."
+    key_points:
+      - "Các cấp độ từ lớn đến nhỏ: Grand Supercycle, Supercycle, Cycle, Primary, Intermediate, Minor, Minute, Minuette, Subminuette."
+      - "Mỗi sóng đẩy của cấp lớn gồm 5 sóng của cấp nhỏ hơn; mỗi sóng điều chỉnh gồm 3 (hoặc 5 trong tam giác) sóng cấp nhỏ hơn."
+      - "Mỗi cấp có ký hiệu riêng (ví dụ số trong vòng tròn, số trong ngoặc, số thường) để tránh nhầm lẫn."
+      - "Trader thường phân tích từ khung lớn xuống: W1/D1 xác định cấp lớn, H4/H1 đếm cấp nhỏ để vào lệnh."
+    example: "Ví dụ giả định: trên W1, XAUUSD ở sóng 3 cấp Primary. Trên H4, sóng 3 đó đang chia nhỏ thành sóng (iii) cấp Minute của sóng 3 cấp Minor: giai đoạn tăng mạnh nhất."
+    mistakes:
+      - "Trộn lẫn cấp độ, đánh số 1-5 trên H1 rồi dùng chung với số 1-5 trên D1."
+    visual:
+      type: chart
+      idea: "Sơ đồ phân dạng: một chu kỳ lớn 1-5, A-B-C ký hiệu số trong vòng tròn; phóng to sóng 3 cho thấy nó chia thành (1)-(5) nhỏ hơn, và sóng (3) lại chia tiếp thành 1-5 nhỏ nhất. Kính lúp nối các cấp."
+  - part: 10
+    title: "Fibonacci trong sóng đẩy"
+    objective: "Áp dụng các tỉ lệ Fibonacci thường gặp để ước lượng điểm kết thúc sóng 2, 3, 4, 5."
+    key_points:
+      - "Sóng 2 thường điều chỉnh 50%–61,8% sóng 1 (có thể sâu tới 78,6%)."
+      - "Sóng 3 thường dài 1,618 lần sóng 1 (có thể 2,618 khi kéo dài), tính từ đáy sóng 2."
+      - "Sóng 4 thường điều chỉnh 23,6%–38,2% sóng 3, nông hơn sóng 2."
+      - "Sóng 5 thường bằng sóng 1, hoặc bằng 0,618 lần tổng độ dài sóng 1 đến sóng 3, khi sóng 3 kéo dài."
+    example: "Ví dụ giả định: sóng 1 EURUSD từ 1,0600 lên 1,0700 (100 pip), sóng 2 về 1,0640 (60%). Sóng 3 = 1,618 × 100 = 162 pip, mục tiêu 1,0802."
+    mistakes:
+      - "Coi tỉ lệ Fibonacci là quy tắc bắt buộc; thực tế chúng chỉ là hướng dẫn xác suất."
+    visual:
+      type: formula
+      idea: "Bảng tỉ lệ: Sóng 2 = 50–61,8% sóng 1; Sóng 3 = 1,618 (2,618) × sóng 1; Sóng 4 = 23,6–38,2% sóng 3; Sóng 5 = sóng 1 hoặc 0,618 × (1→3). Bên cạnh là sóng đẩy có các mức Fibonacci kẻ ngang."
+  - part: 11
+    title: "Fibonacci trong sóng điều chỉnh"
+    objective: "Áp dụng tỉ lệ Fibonacci để ước lượng điểm kết thúc sóng B, C và toàn bộ điều chỉnh."
+    key_points:
+      - "Trong zigzag, sóng C thường bằng A, 1,618 lần A, hoặc 0,618 lần A."
+      - "Trong expanded flat, sóng B thường 1,236–1,382 lần A và sóng C thường 1,618 lần A."
+      - "Trong tam giác, mỗi sóng thường xấp xỉ 0,618 lần sóng trước đó."
+      - "Tổng điều chỉnh thường dừng ở vùng 38,2%–61,8% của sóng đẩy trước, đặc biệt khi trùng vùng sóng 4 cấp nhỏ hơn."
+    example: "Ví dụ giả định: GBPUSD điều chỉnh zigzag, sóng A giảm 80 pip từ 1,2900. B hồi về 1,2860. Mục tiêu C: bằng A → 1,2780; 1,618 × A → 1,2731."
+    mistakes:
+      - "Dùng một mức Fibonacci duy nhất thay vì tìm vùng hợp lưu nhiều tỉ lệ."
+    visual:
+      type: formula
+      idea: "Bảng tỉ lệ cho Zigzag (C = 0,618/1/1,618 × A), Expanded flat (B = 1,236–1,382 × A; C = 1,618 × A), Tam giác (mỗi sóng ≈ 0,618 sóng trước). Bên cạnh là sơ đồ zigzag có các đường mục tiêu C kẻ ngang."
+  - part: 12
+    title: "Nguyên tắc luân phiên và tương đương"
+    objective: "Áp dụng nguyên tắc luân phiên (alternation) và tương đương để dự đoán hình dạng sóng tiếp theo."
+    key_points:
+      - "Luân phiên: nếu sóng 2 điều chỉnh sắc nét (zigzag) thì sóng 4 thường đi ngang (flat, tam giác) và ngược lại."
+      - "Luân phiên cũng áp dụng cho độ sâu và thời gian: sóng 2 sâu thường đi với sóng 4 nông."
+      - "Tương đương: khi sóng 3 kéo dài, sóng 1 và 5 thường xấp xỉ bằng nhau về độ dài hoặc thời gian."
+      - "Đây là hướng dẫn, giúp chuẩn bị kịch bản chứ không phải quy tắc vô hiệu hóa."
+    example: "Ví dụ giả định: sóng 2 của XAUUSD là zigzag sâu 61,8% trong 3 ngày. Khi sóng 4 bắt đầu, trader chuẩn bị cho kịch bản đi ngang dạng flat/tam giác kéo dài, không vội mua ở nhịp giảm đầu tiên."
+    mistakes:
+      - "Vào lệnh ngay sóng A của sóng 4, bỏ qua khả năng sóng 4 kéo dài nhiều nhịp."
+    visual:
+      type: chart
+      idea: "Sóng đẩy 1-5 trong đó sóng 2 là zigzag nhọn (vòng tròn nhãn 'Sắc nét') và sóng 4 là tam giác đi ngang (vòng tròn nhãn 'Đi ngang'), mũi tên hai chiều giữa chúng ghi 'Luân phiên'."
+  - part: 13
+    title: "Mức vô hiệu hóa và đếm sóng thay thế"
+    objective: "Biết xác định mức vô hiệu hóa (invalidation) và luôn có cách đếm thay thế."
+    key_points:
+      - "Mức vô hiệu hóa là mức giá mà nếu bị vượt qua thì cách đếm hiện tại vi phạm quy tắc, ví dụ gốc sóng 1 khi đang ở sóng 2."
+      - "Luôn chuẩn bị cách đếm chính (preferred count) và cách đếm thay thế (alternate count) với mức vô hiệu hóa riêng."
+      - "Mức vô hiệu hóa là căn cứ tự nhiên để đặt dừng lỗ, giúp kỷ luật khi sai."
+      - "Khi giá đi theo cách đếm thay thế, chuyển kịch bản ngay thay vì cố bảo vệ ý kiến ban đầu."
+    example: "Ví dụ giả định: đếm chính EURUSD đang ở sóng 4, vô hiệu hóa nếu xuống dưới đỉnh sóng 1 là 1,0720. Đếm thay thế: đỉnh sóng 3 thực ra là đỉnh sóng 5 và đang bắt đầu ABC giảm."
+    mistakes:
+      - "Liên tục đánh số lại sau khi giá đã đi, khiến phân tích không có giá trị dự báo."
+    visual:
+      type: compare
+      idea: "Hai cột cùng một biểu đồ giá: trái 'Đếm chính' với nhãn 1-2-3-4 và đường ngang đỏ 'Vô hiệu hóa' tại đỉnh sóng 1; phải 'Đếm thay thế' với nhãn 1-5 rồi A đang bắt đầu, mũi tên xuống."
+  - part: 14
+    title: "Điểm vào lệnh tốt nhất: sóng 3 và sóng 5"
+    objective: "Xác định các thiết lập giao dịch phổ biến dựa trên sóng Elliott."
+    key_points:
+      - "Thiết lập sóng 3: mua cuối sóng 2 tại vùng 50%–61,8% sóng 1, dừng lỗ dưới gốc sóng 1 (mức vô hiệu hóa)."
+      - "Thiết lập sóng 5: mua cuối sóng 4 tại 23,6%–38,2% sóng 3, dừng lỗ dưới đỉnh sóng 1."
+      - "Thiết lập sóng C: giao dịch theo hướng sóng C sau khi sóng B hoàn tất, mục tiêu C = A."
+      - "Chờ xác nhận ở khung nhỏ (ví dụ 5 sóng nhỏ theo hướng mới hoặc phá đường xu hướng) trước khi vào lệnh."
+    example: "Ví dụ giả định: sóng 1 XAUUSD từ 2.300 lên 2.360; sóng 2 về 2.325 (58%) và trên H1 xuất hiện 5 sóng nhỏ đi lên. Mua 2.330, dừng lỗ 2.298, mục tiêu sóng 3 = 2.325 + 1,618 × 60 ≈ 2.422."
+    mistakes:
+      - "Cố bắt đỉnh sóng 5 bằng lệnh ngược xu hướng khi chưa có xác nhận đảo chiều."
+    visual:
+      type: chart
+      idea: "Sóng 1 và sóng 2 với vùng Fibonacci 50–61,8% tô màu; điểm Entry ở cuối sóng 2, đường SL dưới gốc sóng 1, đường TP tại 1,618 sóng 1; mũi tên chỉ sóng 3 dự kiến bằng nét đứt."
+  - part: 15
+    title: "Kế hoạch giao dịch Elliott và quản lý rủi ro"
+    objective: "Xây dựng kế hoạch giao dịch hoàn chỉnh theo sóng Elliott với quản lý rủi ro rõ ràng."
+    key_points:
+      - "Quy trình: đếm khung lớn → xác định sóng hiện tại và cách đếm thay thế → tìm vùng Fibonacci hợp lưu → chờ xác nhận khung nhỏ."
+      - "Dừng lỗ luôn đặt tại hoặc sau mức vô hiệu hóa; nếu khoảng cách quá xa, giảm khối lượng hoặc bỏ qua lệnh."
+      - "Rủi ro mỗi lệnh 0,5–1% tài khoản; chốt lời một phần tại mục tiêu Fibonacci đầu tiên, dời dừng lỗ theo cấu trúc sóng."
+      - "Sóng Elliott mang tính chủ quan; nên kết hợp với hỗ trợ/kháng cự, động lượng và ghi nhật ký các cách đếm."
+    example: "Ví dụ giả định: tài khoản 10.000 USD, rủi ro 1% = 100 USD. Mua EURUSD cuối sóng 4 tại 1,0880, vô hiệu hóa 1,0840 (40 pip), khối lượng 0,25 lot. Chốt 50% khi sóng 5 = sóng 1 tại 1,0980."
+    mistakes:
+      - "Đặt dừng lỗ gần hơn mức vô hiệu hóa để vào khối lượng lớn, bị quét khi cách đếm vẫn đúng."
+      - "Không có cách đếm thay thế nên bị bất ngờ khi thị trường đi ngược."
+    visual:
+      type: checklist
+      idea: "Checklist: Đếm khung lớn ✓, Cách đếm thay thế ✓, Mức vô hiệu hóa ✓, Vùng Fibonacci hợp lưu ✓, Xác nhận khung nhỏ ✓, Rủi ro ≤1% ✓, Chốt lời từng phần ✓. Bên cạnh là sơ đồ sóng 4 với Entry, SL tại vô hiệu hóa, TP tại sóng 5."
+sources:
+  - "https://chartschool.stockcharts.com/table-of-contents/market-analysis/elliott-wave-analysis-articles/guidelines-for-applying-elliott-wave-theory"
+  - "https://www.elliottwave.com/waveopedia/alternation/"
+  - "https://stocata.org/ta_en/elliott2.html"
+  - "https://elliottwave-forecast.com/trading/elliott-wave-impulse-waves/"
+  - "https://www.youtube.com/watch?v=MmYVof2ac38"
+  - "https://www.youtube.com/watch?v=e2qY-VtBVvo"
+  - "https://www.youtube.com/playlist?list=PLs0Yee8gs8W1u60eWEhdE0YVHOhPjB2jl"
+  - "https://tintrading.net/bai-1-tong-quan-ve-song-elliott/"

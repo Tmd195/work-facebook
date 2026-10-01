@@ -1,0 +1,207 @@
+id: bollinger-keltner-squeeze
+name: "Bollinger Bands, Keltner & Squeeze"
+level: "Trung cấp"
+description: "Giúp trader dùng Bollinger Bands đúng theo quy tắc của tác giả, nhận diện giai đoạn nén biến động (squeeze) bằng Keltner Channel và giao dịch cú bung giá có kế hoạch rõ ràng."
+lessons:
+  - part: 1
+    title: "Bollinger Bands gồm những gì"
+    objective: "Hiểu cấu tạo và tham số mặc định của Bollinger Bands."
+    key_points:
+      - "Dải giữa (middle band) là SMA 20; dải trên và dải dưới cách dải giữa 2 độ lệch chuẩn (standard deviation) của 20 giá đóng cửa."
+      - "Độ lệch chuẩn tăng khi giá biến động mạnh nên dải nở ra, giảm khi thị trường yên ắng nên dải co lại."
+      - "Tác giả John Bollinger gợi ý chỉnh độ lệch chuẩn theo chu kỳ: khoảng 1,9 cho chu kỳ 10 và khoảng 2,1 cho chu kỳ 50."
+      - "Bollinger Bands định nghĩa giá 'cao' hay 'thấp' một cách tương đối: gần dải trên là cao so với 20 nến gần nhất, không phải là đắt hay rẻ tuyệt đối."
+    example: "Ví dụ giả định: SMA 20 của EURUSD là 1,0850, độ lệch chuẩn 0,0015 → dải trên 1,0880, dải dưới 1,0820."
+    mistakes:
+      - "Nghĩ Bollinger Bands là kháng cự và hỗ trợ cố định."
+      - "Đổi tham số tùy tiện mà không hiểu dải sẽ chứa nhiều hay ít giá hơn."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD H1 với 3 đường Bollinger: dải giữa SMA 20 (nét đứt), dải trên/dưới (±2 độ lệch chuẩn). Đoạn đầu dải hẹp (thị trường yên), đoạn sau dải nở rộng (nhịp giá mạnh). Nhãn 'SMA 20', '+2σ', '−2σ', 'Dải co', 'Dải nở'."
+  - part: 2
+    title: "%b và BandWidth: đo vị trí và độ rộng dải"
+    objective: "Tính và đọc hai chỉ báo phụ %b và BandWidth."
+    key_points:
+      - "%b = (Giá − Dải dưới) / (Dải trên − Dải dưới); %b = 1 khi giá ở dải trên, 0 khi ở dải dưới, có thể lớn hơn 1 hoặc nhỏ hơn 0."
+      - "BandWidth = (Dải trên − Dải dưới) / Dải giữa; cho biết độ rộng tương đối của dải."
+      - "BandWidth xuống gần mức thấp nhất khoảng 6 tháng là dấu hiệu nén biến động (squeeze) theo định nghĩa cổ điển."
+      - "%b giúp viết quy tắc chính xác, ví dụ 'giá đóng cửa với %b > 1' thay cho 'giá chạm dải trên'."
+    example: "Ví dụ giả định: dải trên 2.420, dải dưới 2.380, giá vàng 2.410 → %b = 30 / 40 = 0,75. Dải giữa 2.400 → BandWidth = 40 / 2.400 ≈ 1,67%."
+    mistakes:
+      - "Xem %b > 1 là tín hiệu bán ngay lập tức."
+      - "So BandWidth giữa các thị trường khác nhau thay vì so với lịch sử của chính thị trường đó."
+    visual:
+      type: formula
+      idea: "Bảng hai công thức: '%b = (Giá − Dải dưới) / (Dải trên − Dải dưới)' và 'BandWidth = (Dải trên − Dải dưới) / Dải giữa'. Bên dưới là ví dụ XAUUSD với số 2.420 / 2.380 / 2.410 và kết quả 0,75 và 1,67%. Hình nhỏ thang đo %b từ 0 đến 1."
+  - part: 3
+    title: "Chạm dải không phải là tín hiệu"
+    objective: "Tránh sai lầm phổ biến nhất: bán khi chạm dải trên, mua khi chạm dải dưới."
+    key_points:
+      - "Theo quy tắc của tác giả, giá chạm dải chỉ là 'chạm', không tự nó là tín hiệu mua hay bán."
+      - "Trong xu hướng mạnh, giá có thể bám dải trên hoặc dải dưới nhiều nến liên tiếp (walking the bands)."
+      - "Đóng cửa ngoài dải trong một thị trường đang tăng thường là dấu hiệu tiếp diễn sức mạnh hơn là đảo chiều."
+      - "Cần thêm bối cảnh: xu hướng, mô hình giá, hoặc một chỉ báo khác loại (ví dụ dựa trên khối lượng) để ra quyết định."
+    example: "Ví dụ giả định: XAUUSD H4 tăng từ 2.350 lên 2.450, giá chạm và đóng cửa trên dải trên 6 lần; ai bán khống mỗi lần chạm dải đều bị dừng lỗ."
+    mistakes:
+      - "Bán ngược xu hướng chỉ vì giá chạm dải trên."
+      - "Kết hợp Bollinger với RSI và Stochastic rồi tưởng có 3 xác nhận, trong khi chúng cùng loại thông tin động lượng từ giá."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD H4 xu hướng tăng mạnh, giá bám dải trên Bollinger nhiều nến liên tiếp. Đánh dấu 6 điểm chạm dải với dấu X đỏ và nhãn 'Bán ở đây = lỗ'. Chú thích lớn: 'Walking the bands - chạm dải không phải tín hiệu'."
+  - part: 4
+    title: "Mô hình W đáy và M đỉnh với Bollinger"
+    objective: "Nhận diện mô hình đảo chiều W/M dựa trên vị trí giá so với dải."
+    key_points:
+      - "W đáy: đáy 1 chạm hoặc thủng dải dưới, giá hồi về gần dải giữa, đáy 2 có thể thấp hơn về giá nhưng nằm trong dải dưới (%b > 0)."
+      - "Xác nhận W khi giá đóng cửa vượt đỉnh hồi giữa hai đáy, thường kèm theo vượt dải giữa."
+      - "M đỉnh ngược lại: đỉnh 1 chạm hoặc vượt dải trên, đỉnh 2 không chạm tới dải trên (%b < 1) dù giá có thể cao hơn."
+      - "Sự khác biệt giữa giá và %b ở hai đáy/đỉnh cho thấy lực bán (hoặc mua) đang yếu đi."
+    example: "Ví dụ giả định trên EURUSD H1: đáy 1 tại 1,0800 thủng dải dưới (%b = −0,1); đáy 2 tại 1,0795 nhưng %b = 0,15. Giá đóng cửa vượt đỉnh giữa 1,0830 → xác nhận W."
+    mistakes:
+      - "Mua ngay ở đáy thứ hai trước khi có xác nhận vượt đỉnh giữa."
+      - "Gọi mọi hai đáy là W mà không kiểm tra vị trí so với dải."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD H1 có Bollinger: đáy 1 xuyên dưới dải dưới (nhãn '%b < 0'), nhịp hồi lên dải giữa, đáy 2 thấp hơn chút nhưng nằm trong dải (nhãn '%b > 0'), rồi nến tăng vượt đường ngang đỉnh giữa (nhãn 'Xác nhận W'). Vẽ chữ W mờ nối các điểm."
+  - part: 5
+    title: "Keltner Channel: dải dựa trên ATR"
+    objective: "Hiểu Keltner Channel và khác biệt so với Bollinger Bands."
+    key_points:
+      - "Phiên bản hiện đại phổ biến: đường giữa EMA 20, dải trên/dưới = EMA 20 ± 2 × ATR (ATR 10 hoặc 20)."
+      - "Keltner dùng ATR nên dải thay đổi mượt hơn; Bollinger dùng độ lệch chuẩn nên phản ứng mạnh hơn với cú giật giá."
+      - "Giá đóng cửa ngoài Keltner thường cho thấy động lượng mạnh theo hướng đó."
+      - "Trong xu hướng, nhịp hồi về đường EMA giữa của Keltner thường được dùng làm vùng tìm điểm vào."
+    example: "Ví dụ giả định: XAUUSD H1 có EMA 20 = 2.400, ATR = 5 → Keltner trên 2.410, dưới 2.390."
+    mistakes:
+      - "Dùng Keltner như vùng bán quá mua/quá bán cố định trong xu hướng mạnh."
+      - "Không thống nhất tham số khi so sánh với Bollinger, dẫn đến nhận diện squeeze sai."
+    visual:
+      type: compare
+      idea: "Hai cột cùng một đoạn giá XAUUSD H1. Trái 'Bollinger (SMA 20, 2σ)': dải phình to đột ngột khi có nến dài. Phải 'Keltner (EMA 20, 2 ATR)': dải mượt, thay đổi từ từ. Dòng dưới ghi công thức từng loại."
+  - part: 6
+    title: "Squeeze: khi Bollinger nằm trong Keltner"
+    objective: "Nhận diện giai đoạn nén biến động bằng sự kết hợp Bollinger và Keltner."
+    key_points:
+      - "Squeeze theo cách của TTM Squeeze: Bollinger (20, 2) nằm hoàn toàn bên trong Keltner (20, 1,5 ATR)."
+      - "Ý tưởng cốt lõi: biến động có tính chu kỳ, giai đoạn biến động thấp thường được theo sau bởi giai đoạn biến động cao."
+      - "Squeeze chỉ cho biết 'sắp có chuyển động mạnh', không cho biết hướng đi."
+      - "Squeeze trên khung lớn (H4, D1) thường dẫn đến nhịp đi dài hơn squeeze trên M5-M15."
+    example: "Ví dụ giả định: EURUSD H1 đi ngang trong biên 25 pip suốt phiên Á, Bollinger co lọt vào trong Keltner 14 nến liên tiếp; đầu phiên London giá bung 45 pip."
+    mistakes:
+      - "Đoán trước hướng bung và vào lệnh khi squeeze còn đang diễn ra."
+      - "Nghĩ squeeze càng dài thì lực bung càng chắc chắn thắng."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD H1: Bollinger (xanh dương) và Keltner (cam). Vùng giữa biểu đồ tô xám nơi Bollinger lọt vào trong Keltner, nhãn 'SQUEEZE - nén biến động'. Bên phải giá bung mạnh, Bollinger nở ra khỏi Keltner, nhãn 'Bung (release)'."
+  - part: 7
+    title: "Squeeze Momentum: đọc chấm và histogram"
+    objective: "Đọc được chỉ báo Squeeze Momentum phổ biến trên TradingView."
+    key_points:
+      - "Chỉ báo Squeeze Momentum (phiên bản cộng đồng nổi tiếng trên TradingView, dựa trên TTM Squeeze) dùng mặc định Bollinger 20/2 và Keltner 20/1,5."
+      - "Chấm trên đường 0: màu đen (hoặc đỏ tùy phiên bản) = đang squeeze; màu xám (hoặc xanh) = squeeze đã giải phóng."
+      - "Histogram động lượng tính bằng hồi quy tuyến tính (linear regression) của độ lệch giá so với trung bình của vùng giá gần đây; trên 0 nghiêng tăng, dưới 0 nghiêng giảm."
+      - "Màu đậm nghĩa là động lượng đang tăng, màu nhạt nghĩa là động lượng đang yếu dần."
+    example: "Ví dụ giả định: XAUUSD H1 có 10 chấm đen liên tiếp, sau đó chấm xám đầu tiên xuất hiện khi histogram lên trên 0 với màu xanh đậm → động lượng tăng sau khi giải phóng squeeze."
+    mistakes:
+      - "Vào lệnh chỉ vì histogram đổi màu nhạt sang đậm mà không có squeeze trước đó."
+      - "Không biết mỗi phiên bản chỉ báo dùng màu khác nhau."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến XAUUSD H1 phía trên, khung chỉ báo Squeeze Momentum phía dưới: hàng chấm trên đường 0 gồm chuỗi chấm đen rồi chuyển chấm xám; histogram từ đỏ nhạt chuyển sang xanh đậm cao dần. Mũi tên chỉ 'Chấm xám đầu tiên + histogram > 0 = động lượng tăng'."
+  - part: 8
+    title: "Giao dịch cú bung squeeze"
+    objective: "Áp dụng quy tắc vào lệnh khi squeeze được giải phóng."
+    key_points:
+      - "Điều kiện: có ít nhất khoảng 6 nến squeeze liên tiếp, sau đó xuất hiện nến đầu tiên giải phóng."
+      - "Hướng giao dịch theo dấu của histogram động lượng: trên 0 thì mua, dưới 0 thì bán, ưu tiên khi màu đang đậm dần."
+      - "Xác nhận thêm bằng giá: đóng cửa phá đỉnh hoặc đáy của vùng tích lũy, và cùng hướng xu hướng khung lớn."
+      - "Thoát khi histogram đổi sang màu nhạt hai nến liên tiếp hoặc khi giá đóng cửa ngược qua dải giữa."
+    example: "Ví dụ giả định: EURUSD M15 squeeze 9 nến trong vùng 1,0840-1,0858; chấm giải phóng xuất hiện cùng nến đóng cửa 1,0862 và histogram dương đậm → mua, SL 1,0838 dưới vùng tích lũy."
+    mistakes:
+      - "Vào lệnh khi squeeze chỉ kéo dài 1-2 nến."
+      - "Giữ lệnh khi động lượng đã yếu rõ chỉ vì hy vọng giá đi tiếp."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD M15: hộp tích lũy 1,0840-1,0858 tô xám, nến phá lên đóng cửa 1,0862 có mũi tên 'Mua'. Đường SL đỏ dưới hộp 1,0838, TP xanh phía trên. Khung dưới: chấm đen 9 cái rồi chấm xám, histogram xanh đậm dần rồi nhạt (nhãn 'Thoát')."
+  - part: 9
+    title: "Head-fake: cú bung giả"
+    objective: "Nhận diện và phòng tránh cú phá vỡ giả sau squeeze."
+    key_points:
+      - "Head-fake là khi giá thoát khỏi squeeze theo một hướng rồi nhanh chóng quay đầu và chạy mạnh theo hướng ngược lại."
+      - "Thường xảy ra quanh tin tức hoặc khi giá quét qua vùng đỉnh/đáy để kích hoạt lệnh dừng lỗ."
+      - "Cách phòng tránh: chờ nến đóng cửa ngoài vùng tích lũy, đặt dừng lỗ ở phía bên kia vùng, giảm khối lượng trước tin lớn."
+      - "Một số trader chủ động giao dịch head-fake: nếu giá phá lên rồi đóng cửa quay lại trong vùng, chờ phá hướng ngược lại."
+    example: "Ví dụ giả định: XAUUSD squeeze trước tin CPI, giá phá lên 2.412 rồi rơi ngay về 2.396 và đóng cửa dưới vùng tích lũy 2.400 → lệnh mua sớm bị dừng lỗ, nhịp giảm thật xảy ra sau đó."
+    mistakes:
+      - "Vào lệnh bằng lệnh chờ (stop order) ngay sát biên vùng tích lũy trước giờ tin."
+      - "Sau một head-fake liền đảo lệnh với khối lượng gấp đôi để gỡ."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD M15: vùng squeeze 2.400-2.408, một nến râu dài phá lên 2.412 rồi đóng cửa trở lại (nhãn 'Head-fake'), sau đó nến giảm mạnh phá xuống dưới 2.400 (nhãn 'Chuyển động thật'). Biểu tượng lịch ghi 'Tin CPI'."
+  - part: 10
+    title: "Đảo chiều về giá trị trung bình với Bollinger"
+    objective: "Biết khi nào có thể giao dịch quay về dải giữa (mean reversion) và khi nào không."
+    key_points:
+      - "Chiến lược quay về trung bình (mean reversion) chỉ phù hợp khi thị trường đi ngang: dải phẳng, BandWidth ổn định, không có xu hướng rõ."
+      - "Cách làm phổ biến: chờ giá đóng cửa ngoài dải rồi có nến đóng cửa quay lại trong dải, vào lệnh hướng về dải giữa."
+      - "Mục tiêu hợp lý là dải giữa (SMA 20), không phải dải đối diện; dừng lỗ ngoài đỉnh/đáy vừa tạo."
+      - "Khi dải bắt đầu nở rộng và dốc, dừng ngay chiến lược quay về trung bình."
+    example: "Ví dụ giả định: EURUSD H1 đi ngang 1,0820-1,0870, dải phẳng. Nến đóng cửa 1,0816 dưới dải dưới, nến sau đóng cửa 1,0828 trong dải → mua, TP dải giữa 1,0845, SL 1,0808."
+    mistakes:
+      - "Áp dụng mean reversion trong xu hướng mạnh, liên tục bắt đáy khi giá đi xuống."
+      - "Đặt mục tiêu ở dải đối diện khiến tỷ lệ chạm TP rất thấp."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD H1 đi ngang với Bollinger phẳng. Một nến đóng cửa dưới dải dưới, nến kế tiếp đóng cửa trở lại trong dải (mũi tên 'Mua'), mũi tên chỉ về dải giữa ghi 'TP = SMA 20', đường SL dưới đáy. Góc trên chú thích 'Chỉ dùng khi dải phẳng'."
+  - part: 11
+    title: "Chọn chế độ: bung theo xu hướng hay quay về trung bình"
+    objective: "Phân biệt trạng thái thị trường để chọn đúng cách dùng Bollinger."
+    key_points:
+      - "Dải hẹp và đang co tiếp: chuẩn bị cho chiến lược squeeze, không giao dịch quay về trung bình."
+      - "Dải nở rộng và dốc, giá bám dải: thị trường đang có xu hướng, chỉ giao dịch theo hướng đó, vào ở nhịp hồi về dải giữa."
+      - "Dải phẳng, độ rộng ổn định: thị trường đi ngang, có thể dùng mean reversion."
+      - "Với vàng, giai đoạn trước tin Mỹ và phiên Á thường hẹp; đầu phiên London và New York thường bung."
+    example: "Ví dụ giả định: một ngày giao dịch XAUUSD: phiên Á dải hẹp (chờ), London giá phá và dải nở (theo xu hướng), cuối phiên Mỹ dải phẳng lại (mean reversion thận trọng)."
+    mistakes:
+      - "Dùng một chiến lược duy nhất cho mọi trạng thái thị trường."
+      - "Đổi chế độ liên tục theo từng cây nến."
+    visual:
+      type: compare
+      idea: "Ba ô hình nhỏ cạnh nhau: 'Dải hẹp → chờ squeeze', 'Dải nở & dốc → theo xu hướng', 'Dải phẳng → quay về trung bình'. Mỗi ô có một biểu đồ thu nhỏ Bollinger tương ứng và biểu tượng hành động."
+  - part: 12
+    title: "Kế hoạch giao dịch squeeze hoàn chỉnh"
+    objective: "Có một kế hoạch chi tiết từ điều kiện đến quản lý lệnh cho hệ thống squeeze."
+    key_points:
+      - "Thiết lập: XAUUSD/EURUSD khung H1, Bollinger 20/2, Keltner 20/1,5 ATR, EMA 200 làm bộ lọc xu hướng."
+      - "Vào lệnh: ít nhất 6 nến squeeze, nến giải phóng đóng cửa ngoài vùng tích lũy, histogram cùng hướng, cùng phía EMA 200."
+      - "Dừng lỗ: phía bên kia vùng tích lũy (hoặc 1,5 ATR); chốt 50% ở 2R, phần còn lại thoát khi động lượng nhạt màu hoặc giá đóng cửa qua dải giữa."
+      - "Rủi ro 0,5-1% mỗi lệnh; không vào lệnh 15 phút trước và sau tin lớn."
+    example: "Ví dụ giả định: XAUUSD H1 squeeze 8 nến trong 2.395-2.405, giá trên EMA 200; nến đóng cửa 2.408, histogram dương → mua, SL 2.393 (rủi ro 15 USD), TP1 2.438 (2R)."
+    mistakes:
+      - "Bỏ qua bộ lọc xu hướng và đánh mọi cú bung."
+      - "Không ghi nhật ký nên không biết head-fake chiếm bao nhiêu phần trăm số lệnh."
+    visual:
+      type: checklist
+      idea: "Checklist 6 dòng: 'Squeeze ≥ 6 nến', 'Nến giải phóng đóng cửa ngoài vùng', 'Histogram cùng hướng', 'Cùng phía EMA 200', 'SL bên kia vùng / 1,5 ATR', 'TP1 2R, phần còn lại theo động lượng'. Bên cạnh là biểu đồ XAUUSD nhỏ với Entry/SL/TP."
+  - part: 13
+    title: "Giới hạn của Bollinger và squeeze"
+    objective: "Biết rõ các tình huống hệ thống không hiệu quả để giữ kỳ vọng thực tế."
+    key_points:
+      - "Squeeze không cho biết hướng; một phần đáng kể các cú bung là bung giả hoặc chỉ đi rất ngắn."
+      - "Thị trường có thể squeeze rất lâu (ví dụ các ngày lễ, trước quyết định lãi suất) gây mất thời gian và tín hiệu nhiễu."
+      - "Tin tức lớn có thể làm giá nhảy qua dừng lỗ (trượt giá - slippage), khiến lỗ thực tế lớn hơn kế hoạch."
+      - "Bollinger và các chỉ báo xây trên giá đều trễ; chúng mô tả biến động đã xảy ra, không dự đoán chắc chắn tương lai."
+    example: "Ví dụ giả định: trong 30 lần squeeze trên EURUSD H1 được ghi nhật ký, 12 lần bung đúng hướng và đạt 2R, 10 lần head-fake, 8 lần đi ngắn rồi hòa vốn; kết quả dương nhờ lệnh thắng lớn hơn lệnh thua, không phải nhờ tỷ lệ thắng cao."
+    mistakes:
+      - "Tin rằng chỉ báo phổ biến nhất trên TradingView thì chắc chắn sinh lời."
+      - "Không tính spread và trượt giá khi đánh giá kết quả trên khung nhỏ."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Squeeze hiệu quả' (bung cùng xu hướng khung lớn, sau tích lũy dài, đầu phiên London/NY) và 'Squeeze thất bại' (head-fake quanh tin, ngày lễ thanh khoản mỏng, squeeze kéo dài vô tận). Biểu đồ minh họa nhỏ dưới mỗi cột."
+sources:
+  - "https://chartschool.stockcharts.com/table-of-contents/trading-strategies-and-models/trading-strategies/bollinger-band-squeeze"
+  - "http://investpost.org/options/john-bollinger-s-22-rules-for-using-bollinger/"
+  - "https://www.tradingview.com/script/nqQ1DT5a-Squeeze-Momentum-Indicator-LazyBear/"
+  - "https://www.quantum-algo.com/blog/guides/squeeze-momentum-indicator-complete-guide/"
+  - "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/keltner-channels"
+  - "https://daviddtech.medium.com/the-best-indicator-on-tradingview-squeeze-momentum-indicator-strategy-lazybear-8595777423d0"

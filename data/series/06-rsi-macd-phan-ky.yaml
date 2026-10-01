@@ -1,0 +1,197 @@
+id: rsi-macd-phan-ky
+name: "RSI, MACD & phân kỳ"
+level: "Trung cấp"
+description: "Giúp người đọc hiểu đúng hai chỉ báo động lượng RSI và MACD, nhận diện phân kỳ thường và phân kỳ ẩn, rồi lọc tín hiệu bằng cấu trúc giá để giao dịch có kỷ luật trên vàng và các cặp tiền chính."
+lessons:
+  - part: 1
+    title: "Động lượng là gì? Vì sao cần chỉ báo dao động"
+    objective: "Hiểu khái niệm động lượng (momentum) và vai trò của các chỉ báo dao động (oscillator)."
+    key_points:
+      - "Động lượng (momentum) đo tốc độ và sức mạnh của chuyển động giá, không chỉ hướng đi."
+      - "Chỉ báo dao động (oscillator) như RSI, MACD, Stochastic chuyển động lên xuống quanh một mức hoặc trong một biên độ, giúp nhìn thấy lực đẩy đang mạnh lên hay yếu đi."
+      - "Một xu hướng có thể vẫn đi lên trong khi động lượng giảm dần; đây là nền tảng của khái niệm phân kỳ sẽ học sau."
+      - "Chỉ báo dao động được tính từ giá nên không tự tạo thông tin mới; nó là công cụ hỗ trợ đọc giá, không thay thế cấu trúc thị trường."
+    example: "Ví dụ giả định: XAUUSD tăng 40 USD trong nhịp đầu, nhịp sau chỉ tăng thêm 15 USD với nến nhỏ dần. Giá vẫn tạo đỉnh mới nhưng động lượng yếu đi; chỉ báo dao động sẽ phản ánh điều này bằng đỉnh thấp hơn."
+    mistakes:
+      - "Dùng chỉ báo dao động như công cụ dự đoán đỉnh đáy chắc chắn."
+      - "Bật cùng lúc RSI, Stochastic, CCI, MACD vốn đo cùng một thứ, tạo cảm giác 'nhiều xác nhận' giả."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến hai nhịp tăng: nhịp 1 dài với nến lớn (nhãn '+40'), nhịp 2 ngắn với nến nhỏ (nhãn '+15'). Ô chỉ báo bên dưới là một đường dao động tạo đỉnh 1 cao, đỉnh 2 thấp hơn. Mũi tên chú thích 'Giá lên tiếp – động lượng yếu đi'."
+  - part: 2
+    title: "RSI: cách tính và cách đọc cơ bản"
+    objective: "Hiểu chỉ báo RSI được tính thế nào và đọc được các mức cơ bản."
+    key_points:
+      - "RSI (Relative Strength Index – chỉ số sức mạnh tương đối) do J. Welles Wilder giới thiệu năm 1978, dao động từ 0 đến 100."
+      - "Công thức: RSI = 100 − 100 ÷ (1 + RS), trong đó RS = trung bình mức tăng ÷ trung bình mức giảm trong N kỳ (mặc định 14), làm mượt theo phương pháp của Wilder."
+      - "Các mức truyền thống: trên 70 là quá mua (overbought), dưới 30 là quá bán (oversold); mức 50 là đường cân bằng giữa lực mua và bán."
+      - "Chu kỳ ngắn hơn (ví dụ 7–9) làm RSI nhạy và chạm 70/30 nhiều hơn; chu kỳ dài hơn (21) làm RSI mượt hơn."
+    example: "Ví dụ giả định: trong 14 nến gần nhất của EURUSD, mức tăng trung bình là 12 pip, mức giảm trung bình là 8 pip. RS = 12 ÷ 8 = 1,5; RSI = 100 − 100 ÷ 2,5 = 60, nghiêng về bên mua nhưng chưa quá mua."
+    mistakes:
+      - "Đổi chu kỳ RSI liên tục để tìm tín hiệu khớp ý muốn."
+      - "Không biết RSI trên nền tảng của mình tính theo giá đóng cửa của khung nào."
+    visual:
+      type: formula
+      idea: "Phía trên: công thức 'RSI = 100 − 100 / (1 + RS)' và 'RS = Trung bình tăng / Trung bình giảm (14 kỳ)'. Phía dưới: ô chỉ báo RSI với thang 0–100, đường ngang đỏ nét đứt tại 70 nhãn 'Quá mua', đường xanh nét đứt tại 30 nhãn 'Quá bán', đường xám tại 50 nhãn 'Cân bằng'. Đường RSI dao động, một điểm ghi 'RSI = 60'."
+  - part: 3
+    title: "Quá mua không có nghĩa là phải bán"
+    objective: "Tránh hiểu sai vùng quá mua/quá bán và biết vùng dao động RSI thay đổi theo xu hướng."
+    key_points:
+      - "Trong xu hướng tăng mạnh, RSI có thể nằm trên 70 rất lâu trong khi giá tiếp tục tăng; bán chỉ vì RSI > 70 là đi ngược sức mạnh thị trường."
+      - "Một quan sát phổ biến (thường gắn với các tác giả như Andrew Cardwell và Constance Brown): trong xu hướng tăng, RSI hay dao động khoảng 40–80 và vùng 40–50 làm hỗ trợ; trong xu hướng giảm, RSI hay dao động khoảng 20–60 và vùng 50–60 làm kháng cự."
+      - "Với tài sản biến động mạnh như vàng, một số trader dùng ngưỡng 80/20 thay vì 70/30 để giảm tín hiệu sớm."
+      - "Quá mua/quá bán phù hợp hơn khi thị trường đi ngang; khi có xu hướng, nên dùng RSI để tìm điểm hồi thuận xu hướng."
+    example: "Ví dụ giả định: XAUUSD tăng mạnh trên H4, RSI ở trên 70 suốt 10 nến trong khi giá đi từ 3920 lên 3990. Người bán ở lần RSI chạm 70 đầu tiên sẽ phải chịu lỗ khoảng 60 USD giá."
+    mistakes:
+      - "Đặt lệnh bán mỗi khi RSI vượt 70 trong xu hướng tăng."
+      - "Áp dụng ngưỡng 70/30 cứng nhắc cho mọi tài sản và mọi khung thời gian."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột. Trái 'Xu hướng tăng': giá tăng dốc, ô RSI bên dưới dao động giữa 40 và 80, vùng 40–50 tô xanh nhạt nhãn 'Hỗ trợ RSI', RSI nằm trên 70 lâu. Phải 'Xu hướng giảm': giá giảm, RSI dao động giữa 20 và 60, vùng 50–60 tô đỏ nhạt nhãn 'Kháng cự RSI'."
+  - part: 4
+    title: "RSI mức 50 và failure swing"
+    objective: "Biết hai cách dùng RSI ít được nói tới: đường 50 và mô hình failure swing."
+    key_points:
+      - "RSI trên 50 cho thấy trung bình mức tăng lớn hơn mức giảm; nhiều trader dùng RSI vượt 50 như bộ lọc thuận chiều cho lệnh mua và dưới 50 cho lệnh bán."
+      - "Failure swing tăng (theo Wilder): RSI xuống dưới 30, bật lên, hồi lại nhưng không xuống dưới 30, rồi vượt đỉnh RSI vừa tạo; đó là tín hiệu tăng."
+      - "Failure swing giảm: RSI lên trên 70, giảm xuống, hồi lên nhưng không vượt 70, rồi thủng đáy RSI vừa tạo."
+      - "Failure swing xét hoàn toàn trên đường RSI, không cần so với giá; vì vậy nên kết hợp với vùng giá quan trọng để lọc."
+    example: "Ví dụ giả định: EURUSD H1, RSI rơi xuống 25, bật lên 42, hồi về 33 (không dưới 30), rồi vượt 42. Cùng lúc giá đang ở vùng hỗ trợ 1.0850; đây là failure swing tăng có hợp lưu."
+    mistakes:
+      - "Nhầm failure swing với phân kỳ; hai khái niệm khác nhau."
+      - "Dùng giao cắt mức 50 của RSI làm tín hiệu vào lệnh duy nhất trong thị trường đi ngang."
+    visual:
+      type: chart
+      idea: "Ô chỉ báo RSI lớn với đường 30 xanh và 50 xám. Đường RSI rơi xuống 25 (điểm A), bật lên 42 (điểm B, có đường ngang nét đứt), hồi về 33 (điểm C, trên 30), rồi vượt mức 42 (nhãn 'Tín hiệu'). Phía trên là biểu đồ giá nhỏ tại vùng hỗ trợ xanh. Tiêu đề 'Bullish failure swing'."
+  - part: 5
+    title: "MACD: cấu tạo 3 thành phần"
+    objective: "Hiểu chỉ báo MACD được tạo nên từ những gì và mỗi thành phần cho biết điều gì."
+    key_points:
+      - "MACD (Moving Average Convergence Divergence – trung bình động hội tụ phân kỳ) do Gerald Appel phát triển; tham số mặc định 12, 26, 9."
+      - "Đường MACD = EMA 12 − EMA 26 của giá đóng cửa; đường tín hiệu (signal) = EMA 9 của đường MACD."
+      - "Histogram = MACD − signal, thể hiện khoảng cách giữa hai đường; cột lớn dần là động lượng đang tăng, cột nhỏ dần là động lượng chậm lại."
+      - "Khác RSI, MACD không có giới hạn trên dưới cố định, nên không dùng để xác định quá mua/quá bán theo mức cố định."
+    example: "Ví dụ giả định: trên XAUUSD H4, EMA 12 = 4010 và EMA 26 = 4000, vậy MACD = 10. Đường signal = 8, histogram = 10 − 8 = 2 (cột dương nhỏ), cho thấy động lượng tăng vẫn còn nhưng không mạnh."
+    mistakes:
+      - "Tưởng MACD có ngưỡng quá mua cố định giống RSI."
+      - "So sánh giá trị MACD của vàng với EURUSD; độ lớn MACD phụ thuộc mức giá của từng tài sản."
+    visual:
+      type: formula
+      idea: "Sơ đồ khối: 'EMA 12' trừ 'EMA 26' → 'Đường MACD (xanh dương)'; 'EMA 9 của MACD' → 'Đường Signal (cam)'; 'MACD − Signal' → 'Histogram (cột)'. Bên dưới là ô chỉ báo MACD mẫu với đường zero, hai đường xanh dương và cam, cột histogram xanh lá phía trên và đỏ phía dưới zero."
+  - part: 6
+    title: "Các tín hiệu cơ bản của MACD"
+    objective: "Đọc được ba nhóm tín hiệu MACD: giao cắt signal, giao cắt zero và histogram."
+    key_points:
+      - "Giao cắt signal: MACD cắt lên signal là tín hiệu động lượng tăng, cắt xuống là động lượng giảm; tín hiệu nhanh nhưng nhiều nhiễu."
+      - "Giao cắt zero: MACD vượt lên trên 0 nghĩa là EMA 12 đã nằm trên EMA 26, xác nhận xu hướng tăng ngắn hạn; xuống dưới 0 ngược lại."
+      - "Giao cắt signal xảy ra phía dưới 0 trong xu hướng tăng lớn (hoặc phía trên 0 trong xu hướng giảm lớn) thường được coi là tín hiệu kết thúc sóng hồi tốt hơn."
+      - "Histogram co lại về 0 thường báo trước giao cắt signal, giúp nhận biết động lượng yếu đi sớm hơn một chút."
+    example: "Ví dụ giả định: EURUSD H4 đang tăng (giá trên EMA 200). Sau một nhịp hồi, MACD xuống dưới 0 rồi cắt lên signal tại −0,0005, histogram chuyển dương. Đây là gợi ý sóng hồi có thể kết thúc, cần đối chiếu với vùng hỗ trợ."
+    mistakes:
+      - "Giao dịch mọi giao cắt signal trên khung M5 trong thị trường đi ngang."
+      - "Bỏ qua vị trí giao cắt so với đường 0."
+    visual:
+      type: chart
+      idea: "Biểu đồ giá xu hướng tăng có một sóng hồi ở giữa. Ô MACD bên dưới: đường MACD xanh dương và signal cam xuống dưới đường 0 trong sóng hồi, rồi MACD cắt lên signal dưới 0 (khoanh tròn 'Cắt signal dưới 0'), sau đó vượt lên 0 (khoanh tròn 'Cắt zero'). Histogram chuyển từ đỏ sang xanh."
+  - part: 7
+    title: "Phân kỳ là gì? Cách so đỉnh đáy cho đúng"
+    objective: "Hiểu khái niệm phân kỳ và quy tắc nối đỉnh đáy giữa giá và chỉ báo."
+    key_points:
+      - "Phân kỳ (divergence) xảy ra khi giá và chỉ báo động lượng đi khác hướng nhau, ví dụ giá tạo đỉnh cao hơn nhưng RSI tạo đỉnh thấp hơn."
+      - "Quy tắc nối: đỉnh giá so với đỉnh chỉ báo, đáy giá so với đáy chỉ báo; hai điểm trên chỉ báo phải nằm thẳng hàng theo thời gian với hai điểm trên giá."
+      - "Chỉ so hai đỉnh (hoặc hai đáy) liền kề, rõ ràng; đừng nối các đỉnh cách nhau quá xa hoặc bỏ qua đỉnh ở giữa."
+      - "Phân kỳ chỉ là cảnh báo động lượng thay đổi, không phải lệnh vào; nó có thể kéo dài nhiều lần trước khi giá thực sự đảo chiều."
+    example: "Ví dụ giả định: XAUUSD tạo đỉnh 3990 rồi đỉnh 4005. Tại hai đỉnh đó, RSI lần lượt là 74 và 66. Giá cao hơn nhưng RSI thấp hơn: đây là phân kỳ, cho thấy lực mua ở đỉnh thứ hai yếu hơn."
+    mistakes:
+      - "Nối đỉnh giá với đáy chỉ báo hoặc nối hai điểm không cùng thời điểm."
+      - "Thấy phân kỳ là vào lệnh đảo chiều ngay, không chờ xác nhận."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến hai đỉnh, đỉnh 2 cao hơn đỉnh 1, đường đỏ nối hai đỉnh dốc lên, nhãn '3990 → 4005'. Ô RSI bên dưới có hai đỉnh tương ứng 74 và 66, đường đỏ nối dốc xuống. Hai đường thẳng đứng nét đứt nối mỗi đỉnh giá với đỉnh RSI cùng thời điểm. Nhãn 'Phân kỳ'."
+  - part: 8
+    title: "Phân kỳ thường: tín hiệu đảo chiều"
+    objective: "Nhận diện phân kỳ thường tăng và giảm cùng ý nghĩa của chúng."
+    key_points:
+      - "Phân kỳ thường giảm (regular bearish divergence): giá tạo đỉnh cao hơn (HH), chỉ báo tạo đỉnh thấp hơn; cảnh báo xu hướng tăng có thể suy yếu hoặc đảo chiều."
+      - "Phân kỳ thường tăng (regular bullish divergence): giá tạo đáy thấp hơn (LL), chỉ báo tạo đáy cao hơn; cảnh báo xu hướng giảm có thể suy yếu."
+      - "Phân kỳ thường đáng chú ý hơn khi xuất hiện tại vùng hỗ trợ – kháng cự lớn, trên khung từ H1 trở lên, và RSI ở vùng quá mua/quá bán."
+      - "Kết quả của phân kỳ thường có thể chỉ là một sóng điều chỉnh chứ không phải đảo chiều hoàn toàn."
+    example: "Ví dụ giả định: EURUSD giảm, đáy 1.0820 rồi đáy 1.0800 (LL) tại vùng hỗ trợ D1; MACD có đáy −0,0025 rồi −0,0015 (đáy cao hơn). Đây là phân kỳ thường tăng tại hỗ trợ, đáng theo dõi tín hiệu mua."
+    mistakes:
+      - "Bán ngược xu hướng tăng mạnh mỗi khi thấy phân kỳ giảm trên khung nhỏ."
+      - "Kỳ vọng giá đảo chiều hoàn toàn và đặt mục tiêu quá xa."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột. Trái 'Phân kỳ thường GIẢM': giá hai đỉnh dốc lên (HH) với đường đỏ, ô RSI bên dưới hai đỉnh dốc xuống, mũi tên đỏ đi xuống. Phải 'Phân kỳ thường TĂNG': giá hai đáy dốc xuống (LL) với đường xanh, ô MACD bên dưới hai đáy dốc lên, mũi tên xanh đi lên."
+  - part: 9
+    title: "Phân kỳ ẩn: tín hiệu tiếp diễn xu hướng"
+    objective: "Nhận diện phân kỳ ẩn và dùng nó để tìm điểm vào thuận xu hướng."
+    key_points:
+      - "Phân kỳ ẩn tăng (hidden bullish divergence): giá tạo đáy cao hơn (HL), chỉ báo tạo đáy thấp hơn; thường xuất hiện ở cuối sóng hồi của xu hướng tăng."
+      - "Phân kỳ ẩn giảm (hidden bearish divergence): giá tạo đỉnh thấp hơn (LH), chỉ báo tạo đỉnh cao hơn; thường xuất hiện ở cuối sóng hồi của xu hướng giảm."
+      - "Vì đi cùng xu hướng chính, nhiều tài liệu đánh giá phân kỳ ẩn phù hợp hơn với người mới so với việc bắt đảo chiều bằng phân kỳ thường."
+      - "Mẹo ghi nhớ: phân kỳ thường so đỉnh-đỉnh của nhịp đẩy (HH hoặc LL); phân kỳ ẩn so đáy-đáy hoặc đỉnh-đỉnh của nhịp hồi (HL hoặc LH)."
+    example: "Ví dụ giả định: XAUUSD đang tăng, đáy hồi trước 3930, đáy hồi mới 3945 (HL). RSI tại hai đáy lần lượt 42 và 35 (đáy thấp hơn). Đây là phân kỳ ẩn tăng, gợi ý sóng hồi có thể kết thúc và xu hướng tăng tiếp diễn."
+    mistakes:
+      - "Nhầm phân kỳ ẩn với phân kỳ thường, dẫn đến vào lệnh ngược hướng."
+      - "Tìm phân kỳ ẩn khi thị trường không có xu hướng rõ ràng."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến xu hướng tăng với hai đáy hồi: đáy 1 tại 3930, đáy 2 tại 3945 cao hơn, đường xanh nối dốc lên nhãn 'HL'. Ô RSI bên dưới: hai đáy tương ứng 42 và 35, đường xanh nối dốc xuống. Đường đứt đứng nối từng cặp. Mũi tên xanh lớn đi lên sau đáy 2, nhãn 'Phân kỳ ẩn tăng – tiếp diễn'."
+  - part: 10
+    title: "Lọc phân kỳ: khi nào đáng tin, khi nào bỏ qua"
+    objective: "Áp dụng các bộ lọc để giảm tín hiệu phân kỳ giả."
+    key_points:
+      - "Ưu tiên phân kỳ trên khung lớn (H4, D1) và tại vùng giá quan trọng; phân kỳ trên M1–M5 xuất hiện liên tục và kém tin cậy."
+      - "Chờ giá xác nhận: ví dụ phân kỳ giảm cần giá phá đáy gần nhất (CHoCH) hoặc xuất hiện nến đảo chiều mạnh trước khi bán."
+      - "Phân kỳ có thể nối tiếp hai, ba lần (double/triple divergence) trong khi giá vẫn đi tiếp; đây là lý do không vào lệnh chỉ vì thấy phân kỳ."
+      - "Trong xu hướng rất mạnh, phân kỳ thường dễ thất bại; nhiều trader chỉ dùng phân kỳ thường khi cấu trúc giá cũng có dấu hiệu yếu đi."
+    example: "Ví dụ giả định: XAUUSD H1 xuất hiện phân kỳ giảm tại 4005 nhưng giá vẫn đi lên 4020 và tạo phân kỳ lần hai. Chỉ khi nến H1 đóng dưới đáy gần nhất 3995 (CHoCH), trader mới cân nhắc bán."
+    mistakes:
+      - "Bán ở lần phân kỳ đầu tiên và tiếp tục bán thêm ở mỗi lần phân kỳ sau."
+      - "Nhìn phân kỳ trên đường RSI chưa đóng nến, rồi phân kỳ 'biến mất' khi nến đóng."
+    visual:
+      type: chart
+      idea: "Biểu đồ H1 với ba đỉnh giá tăng dần (4005, 4012, 4020), RSI bên dưới có ba đỉnh giảm dần, nhãn 'Phân kỳ 1', 'Phân kỳ 2'. Sau đỉnh thứ ba, giá giảm thủng đường ngang tại đáy gần nhất 3995, nhãn 'CHoCH – xác nhận', mũi tên bán đỏ chỉ đặt ở đây. Hai dấu X nhỏ tại các đỉnh trước ghi 'Chưa vào'."
+  - part: 11
+    title: "Kết hợp RSI, MACD và cấu trúc giá"
+    objective: "Xây một quy trình phân tích kết hợp hai chỉ báo với Price Action mà không bị trùng lặp tín hiệu."
+    key_points:
+      - "RSI và MACD đều đo động lượng; dùng cả hai không tạo ra 'hai xác nhận độc lập', nhưng có thể phân vai: MACD xem xu hướng động lượng, RSI xem phân kỳ và vùng dao động."
+      - "Thứ tự ưu tiên gợi ý: cấu trúc giá và vùng giá trước, chỉ báo sau; chỉ báo dùng để lọc, không dùng để tạo ý tưởng giao dịch từ đầu."
+      - "Thiết lập tham khảo: xu hướng tăng H4 (HH/HL), giá hồi về vùng hỗ trợ, RSI H1 về vùng 40–50 hoặc có phân kỳ ẩn tăng, MACD H1 cắt lên signal."
+      - "Khi chỉ báo và cấu trúc giá mâu thuẫn, ưu tiên cấu trúc giá hoặc đứng ngoài."
+    example: "Ví dụ giả định: EURUSD H4 tăng; trên H1 giá hồi về hỗ trợ 1.0880, RSI tạo đáy 41 thấp hơn đáy trước trong khi giá tạo HL (phân kỳ ẩn tăng), sau đó MACD cắt lên signal. Trader mua ở 1.0888, SL dưới đáy hồi 1.0868."
+    mistakes:
+      - "Thêm chỉ báo thứ ba, thứ tư cùng loại chỉ để có thêm 'xác nhận'."
+      - "Vào lệnh khi chỉ báo đẹp nhưng giá đang ở giữa biên độ, không có vùng giá hỗ trợ."
+    visual:
+      type: chart
+      idea: "Biểu đồ ba tầng. Tầng trên: giá H1 với vùng hỗ trợ xanh 1.0880, đáy HL nối đường xanh, mũi tên mua 'Entry 1.0888', đường SL đỏ. Tầng giữa: RSI với đáy thấp hơn (phân kỳ ẩn) nằm trong dải 40–50 tô xanh nhạt. Tầng dưới: MACD cắt lên signal, khoanh tròn. Ba nhãn bên phải: 'Cấu trúc', 'RSI', 'MACD'."
+  - part: 12
+    title: "Kế hoạch giao dịch với RSI, MACD và quản lý rủi ro"
+    objective: "Tổng hợp thành một kế hoạch giao dịch cụ thể, có quy tắc vào, thoát và giới hạn rủi ro."
+    key_points:
+      - "Quy tắc 1: xác định xu hướng khung lớn; ưu tiên phân kỳ ẩn và tín hiệu thuận xu hướng, chỉ dùng phân kỳ thường tại vùng giá lớn và có CHoCH xác nhận."
+      - "Quy tắc 2: SL đặt ngoài đỉnh/đáy tạo phân kỳ cộng khoảng đệm; TP tại vùng giá đối diện hoặc R:R tối thiểu khoảng 1:2."
+      - "Quy tắc 3: rủi ro 0,5–1% tài khoản mỗi lệnh, khối lượng tính theo khoảng cách SL; không mở thêm lệnh cùng hướng khi lệnh đầu chưa an toàn."
+      - "Quy tắc 4: ghi nhật ký từng tín hiệu (khung, loại phân kỳ, có xác nhận hay không, kết quả) để biết bộ lọc nào hiệu quả; không có chỉ báo nào đảm bảo lợi nhuận."
+    example: "Ví dụ giả định: tài khoản 1.000 USD, rủi ro 1% = 10 USD. Bán XAUUSD sau phân kỳ giảm tại kháng cự và CHoCH, vào 3990, SL trên đỉnh 4022 cộng đệm tại 4025 (35 USD giá). Với 0,01 lot lỗ 35 USD, vượt mức 10 USD, nên bỏ lệnh hoặc tìm điểm vào gần hơn ở khung nhỏ."
+    mistakes:
+      - "Giữ nguyên khối lượng quen thuộc dù SL rộng gấp ba bình thường."
+      - "Vào lệnh khi chưa có xác nhận vì sợ lỡ cơ hội (FOMO)."
+    visual:
+      type: checklist
+      idea: "Checklist 4 quy tắc trên thẻ: '1. Xu hướng khung lớn → ưu tiên phân kỳ ẩn', '2. Phân kỳ thường: chỉ tại vùng lớn + có CHoCH', '3. SL ngoài đỉnh/đáy phân kỳ, R:R ≥ 1:2', '4. Rủi ro ≤ 1%, khối lượng theo SL'. Góc dưới có ví dụ nhỏ: 'SL 35 USD giá > 10 USD rủi ro → BỎ LỆNH' với biểu tượng dấu X đỏ."
+sources:
+  - "https://www.babypips.com/learn/forex/regular-divergence"
+  - "https://www.babypips.com/learn/forex/hidden-divergence"
+  - "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/relative-strength-index-rsi"
+  - "https://en.wikipedia.org/wiki/Relative_strength_index"
+  - "https://www.tradingview.com/support/solutions/43000502338-relative-strength-index-rsi/"
+  - "https://www.investopedia.com/terms/m/macd.asp"
+  - "https://www.tradingsim.com/blog/divergence"
+  - "https://www.youtube.com/watch?v=YuI2iWYpSJI"
+  - "https://www.youtube.com/watch?v=0ejAWV1GovY"
+  - "https://kienthucforex.com/macd-la-gi/"
+  - "https://phemex.com/academy/hidden-bullish-bearish-divergence"

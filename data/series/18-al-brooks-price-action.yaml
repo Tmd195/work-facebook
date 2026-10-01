@@ -1,0 +1,226 @@
+id: al-brooks-price-action
+name: "Price Action chuyên sâu theo Al Brooks"
+level: "Chuyên sâu"
+description: "Giúp người đọc đọc biểu đồ từng thanh nến theo phương pháp Al Brooks: phân biệt xu hướng và vùng đi ngang, đếm H1/H2/L1/L2, chọn signal bar, nhận diện wedge, measured move, breakout mode và cân nhắc lệnh bằng phương trình trader."
+lessons:
+  - part: 1
+    title: "Đọc từng thanh nến: trend bar và doji"
+    objective: "Phân loại thanh nến theo sức mạnh và hiểu vì sao bối cảnh quan trọng hơn hình dạng một cây nến."
+    key_points:
+      - "Trend bar (nến xu hướng) có thân lớn so với cả cây nến: bull trend bar đóng gần đỉnh, bear trend bar đóng gần đáy – cho thấy một bên kiểm soát."
+      - "Doji (theo nghĩa rộng của Al Brooks) là nến thân nhỏ hoặc râu dài hai đầu – hai bên cân bằng, thường là một vùng đi ngang thu nhỏ."
+      - "Chuỗi nhiều trend bar liên tiếp cùng màu, ít chồng lấn, là dấu hiệu xu hướng mạnh; nhiều nến chồng lấn, râu dài là dấu hiệu đi ngang."
+      - "Một cây nến chỉ có ý nghĩa khi đặt trong bối cảnh: cùng một nến tăng mạnh có thể là tín hiệu mua ở đáy range nhưng là cú cạn kiệt (climax) ở cuối xu hướng dài."
+    example: "Ví dụ giả định trên EURUSD M15: 5 nến xanh liên tiếp, mỗi nến thân chiếm ~80% biên độ và đóng gần đỉnh → phe mua đang kiểm soát mạnh."
+    mistakes:
+      - "Học thuộc tên mẫu nến (búa, sao băng…) mà không xét vị trí và các nến trước đó."
+    visual:
+      type: pattern
+      idea: "Hàng nến cận cảnh: một bull trend bar (thân to, đóng sát đỉnh), một bear trend bar, một doji thân nhỏ râu dài hai đầu. Dưới mỗi nến ghi nhãn và tỷ lệ thân/biên độ. Bên phải: chuỗi 5 nến xanh ít chồng lấn nhãn 'xu hướng mạnh' cạnh chuỗi nến chồng lấn nhãn 'đi ngang'."
+  - part: 2
+    title: "Xu hướng hay vùng đi ngang?"
+    objective: "Phân biệt thị trường xu hướng (trend) và vùng đi ngang (trading range) – quyết định quan trọng nhất trước mọi lệnh."
+    key_points:
+      - "Al Brooks cho rằng phần lớn thời gian thị trường nằm trong trạng thái đi ngang hoặc gần đi ngang; xu hướng mạnh chiếm tỷ lệ nhỏ hơn."
+      - "Xu hướng: đỉnh/đáy theo một hướng, các pullback nông và ngắn; vùng đi ngang: giá quay lại giữa range nhiều lần, các nhịp hai chiều."
+      - "Kênh xu hướng (channel) là trạng thái trung gian: vẫn có hướng nhưng nến chồng lấn nhiều, pullback sâu hơn – hành xử gần giống range nghiêng."
+      - "Trong xu hướng nên giao dịch theo hướng chính; trong range ưu tiên 'mua thấp, bán cao' và cẩn trọng với breakout."
+    example: "Ví dụ giả định: XAUUSD H1 dao động 2.330–2.350 suốt 3 ngày, giá chạm mép trên 3 lần và mép dưới 3 lần → trading range; mua breakout ở 2.351 có xác suất thấp."
+    mistakes:
+      - "Áp chiến lược theo xu hướng (mua breakout đỉnh) vào thị trường đang đi ngang."
+    visual:
+      type: compare
+      idea: "Hai cột. Trái 'Trend': đường giá đi lên dốc, pullback nông, nhãn HH/HL. Giữa nhỏ 'Channel' nghiêng với nến chồng lấn. Phải 'Trading range': giá dao động giữa hai đường ngang, mũi tên hai chiều, nhãn 'mua thấp – bán cao'."
+  - part: 3
+    title: "Always-in: nếu buộc phải chọn, bạn mua hay bán?"
+    objective: "Hiểu khái niệm always-in để luôn biết phe nào đang kiểm soát."
+    key_points:
+      - "Always-in là câu hỏi: nếu bắt buộc phải có vị thế mua hoặc bán ngay lúc này, đâu là lựa chọn hợp lý hơn."
+      - "Thị trường đổi trạng thái always-in khi có cú breakout mạnh: một hoặc hai trend bar lớn kèm follow-through (nến sau tiếp diễn)."
+      - "Khi always-in long rõ ràng, ưu tiên tìm điểm mua ở pullback; chỉ bán ngược khi có lý do mạnh."
+      - "Trong vùng đi ngang chặt, câu trả lời always-in thường không rõ – đó là tín hiệu nên giao dịch ít hoặc chỉ scalp."
+    example: "Ví dụ giả định: GBPUSD đang giảm, rồi xuất hiện 2 nến xanh lớn phá đỉnh gần nhất 1,2700 và nến thứ 3 tiếp tục đóng ở 1,2725 → nhiều trader coi thị trường chuyển sang always-in long."
+    mistakes:
+      - "Đổi phe always-in chỉ vì một cây nến ngược màu nhỏ."
+    visual:
+      type: chart
+      idea: "Đường giá giảm, sau đó hai nến xanh thân rất lớn phá đường đỉnh gần nhất và nến thứ ba tiếp diễn. Thanh màu dưới trục thời gian: đỏ 'Always-in short' chuyển sang xanh 'Always-in long' tại vị trí breakout."
+  - part: 4
+    title: "Signal bar và entry bar"
+    objective: "Đánh giá chất lượng signal bar và vào lệnh bằng lệnh stop."
+    key_points:
+      - "Signal bar là nến ngay trước nến vào lệnh; entry bar là nến khớp lệnh khi giá vượt đỉnh (lệnh mua) hoặc đáy (lệnh bán) của signal bar."
+      - "Signal bar mua tốt: thân xanh, đóng gần đỉnh, râu dưới tương đối dài, râu trên ngắn, kích thước vừa phải, ít chồng lấn với nến trước."
+      - "Phương pháp kinh điển: đặt lệnh buy stop cao hơn đỉnh signal bar một chút, dừng lỗ dưới đáy signal bar (hoặc dưới swing low)."
+      - "Signal bar quá lớn ở cuối xu hướng có thể là climax, khiến người vào lệnh mua ở mức đắt với dừng lỗ xa."
+    example: "Ví dụ giả định: EURUSD pullback trong uptrend, signal bar có đỉnh 1,0852, đáy 1,0840, đóng 1,0850. Buy stop 1,0853, SL 1,0839, rủi ro 14 pip."
+    mistakes:
+      - "Vào lệnh khi signal bar chưa đóng cửa – nến có thể đổi hình dạng hoàn toàn."
+    visual:
+      type: pattern
+      idea: "Cận cảnh: vài nến pullback đỏ, rồi signal bar xanh đóng gần đỉnh có râu dưới dài (nhãn 'Signal bar'), nến tiếp theo vượt đỉnh (nhãn 'Entry bar'). Đường nét đứt 'Buy stop' trên đỉnh signal bar, đường đỏ 'SL' dưới đáy."
+  - part: 5
+    title: "Đếm nến H1, H2 trong xu hướng tăng"
+    objective: "Đếm đúng H1/H2 để tìm điểm mua trong pullback của uptrend."
+    key_points:
+      - "Trong nhịp điều chỉnh của uptrend, H1 (high 1) là nến đầu tiên có đỉnh vượt đỉnh nến trước nó – nỗ lực đầu tiên tăng trở lại."
+      - "Nếu H1 thất bại và giá tiếp tục điều chỉnh, lần tiếp theo một nến vượt đỉnh nến trước gọi là H2 – thường tạo pullback hai nhịp (ABC)."
+      - "H2 trong uptrend, nhất là gần EMA 20 với signal bar tốt, là một trong những setup mua được Al Brooks dùng nhiều nhất."
+      - "Nếu tiếp tục thất bại thì có H3 (thường thành wedge bull flag) và H4; khi pullback quá sâu hoặc quá dài, thị trường có thể đã chuyển sang trading range."
+    example: "Ví dụ giả định: XAUUSD M5 tăng lên 2.380, điều chỉnh. Nến vượt đỉnh nến trước lần đầu ở 2.374 (H1) rồi lại giảm về 2.370; lần thứ hai vượt đỉnh nến trước ở 2.372 là H2 – đặt buy stop trên đỉnh signal bar."
+    mistakes:
+      - "Đếm H1/H2 trong thị trường đang giảm hoặc đi ngang chặt, nơi setup mất ý nghĩa."
+    visual:
+      type: chart
+      idea: "Uptrend, sau đỉnh là pullback hai nhịp. Đánh nhãn trên nến: 'H1' tại nến đầu tiên vượt đỉnh nến trước, chân sóng thứ hai, 'H2' tại lần vượt thứ hai. Đường EMA 20 màu xanh gần chân H2, mũi tên mua đi lên vượt đỉnh cũ."
+  - part: 6
+    title: "L1, L2 trong xu hướng giảm và khi nào đếm lại"
+    objective: "Áp dụng đếm nến cho xu hướng giảm và biết quy tắc đặt lại bộ đếm."
+    key_points:
+      - "Trong nhịp hồi của downtrend, L1 là nến đầu tiên có đáy thấp hơn đáy nến trước; L2 là lần thứ hai – setup bán tương ứng với H2."
+      - "Bộ đếm bắt đầu lại khi giá tạo đáy mới của xu hướng (với L) hoặc đỉnh mới (với H)."
+      - "Nhiều người cũng đặt lại bộ đếm khi nhịp hồi vượt đỉnh swing gần nhất, vì cấu trúc đã thay đổi."
+      - "Đếm theo nhịp (leg) quan trọng hơn đếm máy móc từng nến: một L2 cần nhìn ra hai nhịp hồi rõ ràng."
+    example: "Ví dụ giả định: GBPUSD giảm về 1,2600, hồi lên 1,2630 với hai nhịp. Lần thứ hai một nến phá đáy nến trước tại 1,2625 là L2 – sell stop dưới đáy signal bar, SL trên đỉnh hồi 1,2633."
+    mistakes:
+      - "Tiếp tục đếm L3, L4… sau khi giá đã tạo đáy mới, thay vì bắt đầu lại từ đầu."
+    visual:
+      type: chart
+      idea: "Downtrend với một nhịp hồi lên hai nhịp, nhãn 'L1' và 'L2' tại các nến phá đáy nến trước. Đánh dấu ngôi sao tại đáy mới của xu hướng với chú thích 'Reset bộ đếm'. Mũi tên bán từ L2."
+  - part: 7
+    title: "Second entry và trader bị kẹt"
+    objective: "Hiểu vì sao lần vào lệnh thứ hai (second entry) thường đáng tin hơn lần thứ nhất."
+    key_points:
+      - "Second entry là lần thứ hai trong vài nến xuất hiện tín hiệu vào lệnh cùng logic với lần đầu – ví dụ H2 sau H1 thất bại."
+      - "Khi lần đầu thất bại, những người đánh ngược (bán ở H1) bị khuyến khích; khi lần hai thành công, họ bị kẹt và phải đóng lệnh, tiếp lực cho giá."
+      - "Ngược lại, lần đầu cố đảo chiều một xu hướng mạnh thường thất bại; người đánh ngược nên chờ ít nhất lần thứ hai."
+      - "Second entry không bảo đảm thắng; nó chỉ cải thiện xác suất khi bối cảnh phù hợp."
+    example: "Ví dụ giả định: EURUSD uptrend mạnh. Nến đỏ lớn đầu tiên ở 1,0920 khiến nhiều người bán, nhưng giá không giảm tiếp; H2 xuất hiện ở 1,0912 và giá tăng lại lên 1,0935 – người bán bị kẹt phải mua lại."
+    mistakes:
+      - "Bán ngược ngay ở nỗ lực đảo chiều đầu tiên của xu hướng mạnh."
+    visual:
+      type: chart
+      idea: "Uptrend; nến đỏ lớn nhãn '1st attempt – thất bại' với biểu tượng người bán; pullback nhỏ, nhãn 'H2 – 2nd entry', giá tăng vượt đỉnh, khung chú thích 'Người bán bị kẹt → mua lại → thêm lực tăng'."
+  - part: 8
+    title: "EMA 20 và các pullback"
+    objective: "Dùng EMA 20 làm thước đo sức mạnh xu hướng và vùng tìm pullback."
+    key_points:
+      - "Al Brooks dùng một đường EMA 20 (trung bình động hàm mũ 20 nến) làm tham chiếu duy nhất trên biểu đồ."
+      - "Xu hướng mạnh: giá ở hẳn một phía EMA nhiều nến liên tục; lần đầu chạm lại EMA thường là cơ hội theo xu hướng."
+      - "Khi giá không chạm EMA trong khoảng 20 nến trở lên, lần chạm đầu tiên (thường gọi là '20 gap bar') hay được canh mua/bán theo xu hướng."
+      - "Giá cắt qua lại EMA liên tục là dấu hiệu đi ngang – giảm kỳ vọng và khối lượng."
+    example: "Ví dụ giả định: XAUUSD M15 tăng, đóng trên EMA 20 suốt 25 nến. Lần đầu giá hồi chạm EMA ở 2.395 và tạo H2 – setup mua theo xu hướng."
+    mistakes:
+      - "Mua mọi lần chạm EMA, kể cả khi giá đã cắt qua lại EMA nhiều lần."
+    visual:
+      type: chart
+      idea: "Uptrend với đường EMA 20 xanh dương; giá ở trên EMA lâu (đếm '25 nến'), lần chạm EMA đầu tiên được khoanh tròn nhãn 'First pullback to EMA'. Bên cạnh ô nhỏ minh họa giá cắt qua lại EMA nhãn 'Đi ngang'."
+  - part: 9
+    title: "Breakout, follow-through và breakout pullback"
+    objective: "Đánh giá một cú breakout và cách tham gia qua breakout pullback."
+    key_points:
+      - "Breakout mạnh: trend bar lớn, đóng gần cực trị, vượt rõ mức cản; quan trọng nhất là nến kế tiếp có follow-through (tiếp diễn cùng hướng)."
+      - "Breakout không có follow-through, nến sau là doji hoặc ngược màu, dễ trở thành failed breakout."
+      - "Breakout pullback: giá hồi nhẹ sau breakout, thường test lại vùng vừa phá, tạo H1/H2 (hoặc L1/L2) – điểm vào an toàn hơn đuổi theo."
+      - "Breakout gap: khoảng cách giữa mức vừa phá và pullback chưa lấp lại thể hiện xu hướng mạnh."
+    example: "Ví dụ giả định: GBPUSD phá đỉnh range 1,2750 bằng nến đóng 1,2768, nến sau đóng 1,2775 (follow-through). Giá hồi về 1,2758 nhưng không chạm 1,2750, tạo H1 → breakout pullback để mua."
+    mistakes:
+      - "Mua tại đỉnh nến breakout lớn mà không chờ xem có follow-through."
+    visual:
+      type: chart
+      idea: "Range ngang, nến breakout thân lớn vượt đường trên, nến follow-through tiếp tục; pullback nhỏ không chạm lại đường (khoảng trống tô nhạt nhãn 'Breakout gap'), nhãn 'H1' tại điểm vào, mũi tên đi lên."
+  - part: 10
+    title: "Giao dịch trong trading range"
+    objective: "Áp dụng nguyên tắc mua thấp – bán cao và nhận diện breakout thất bại trong vùng đi ngang."
+    key_points:
+      - "Al Brooks nhấn mạnh phần lớn nỗ lực breakout khỏi trading range thất bại (ông thường nêu con số khoảng 80%)."
+      - "Trong range: tìm bán ở nửa trên, mua ở nửa dưới, ưu tiên setup ở mép range sau một breakout thất bại."
+      - "Giữa range là vùng 'nam châm' – giá thường quay về, xác suất thấp cho cả lệnh mua lẫn bán."
+      - "Mục tiêu nên khiêm tốn (giữa range hoặc mép đối diện); range thường kéo dài hơn mọi người nghĩ."
+    example: "Ví dụ giả định: EURUSD đi ngang 1,0850–1,0900. Giá vượt lên 1,0905 rồi nến tiếp theo đóng 1,0893 (breakout thất bại) → bán dưới đáy nến này, mục tiêu 1,0875 (giữa range)."
+    mistakes:
+      - "Mua ở đỉnh range vì nghĩ breakout sắp xảy ra."
+    visual:
+      type: chart
+      idea: "Trading range với hai đường ngang và đường giữa nét đứt 'Magnet'; nửa trên tô đỏ nhạt 'Bán', nửa dưới xanh nhạt 'Mua'. Một cú vượt đỉnh nhỏ rồi quay lại (nhãn 'Failed breakout'), mũi tên bán về đường giữa."
+  - part: 11
+    title: "Wedge: mô hình ba nhịp"
+    objective: "Nhận diện wedge (ba lần đẩy) và hai cách dùng: đảo chiều và tiếp diễn."
+    key_points:
+      - "Wedge theo Al Brooks là cấu trúc có ba lần đẩy (three pushes) theo một hướng, mỗi lần thường yếu dần; không nhất thiết phải là hình nêm hoàn hảo."
+      - "Wedge ở cuối xu hướng có thể dẫn đến đảo chiều, thường ít nhất là điều chỉnh hai nhịp (two-legged correction)."
+      - "Wedge bull flag / bear flag: ba nhịp điều chỉnh ngược xu hướng (tương đương H3/L3) – setup tiếp diễn xu hướng."
+      - "Mục tiêu tham chiếu khi wedge đảo chiều: điểm bắt đầu của wedge."
+    example: "Ví dụ giả định: XAUUSD tăng với ba đỉnh 2.400, 2.408, 2.412, mỗi nhịp ngắn hơn và nến yếu dần. Sau đỉnh 3 có L2 bán tại 2.405, mục tiêu điểm bắt đầu wedge 2.385."
+    mistakes:
+      - "Bán ngay đỉnh thứ ba khi chưa có signal bar giảm hợp lệ."
+    visual:
+      type: pattern
+      idea: "Đường giá đi lên với ba đỉnh đánh số 1-2-3, hai đường xu hướng hội tụ; sau đỉnh 3 là hai nhịp giảm (nhãn 'Two-legged correction'), mũi tên mục tiêu về điểm bắt đầu wedge. Ô nhỏ bên cạnh: wedge bull flag ba nhịp điều chỉnh trong uptrend."
+  - part: 12
+    title: "Measured move: ước lượng mục tiêu"
+    objective: "Dùng measured move để đặt mục tiêu chốt lời có căn cứ."
+    key_points:
+      - "Measured move dựa trên giả định nhịp thứ hai thường đi xa xấp xỉ nhịp thứ nhất (leg 1 = leg 2, tương tự AB=CD)."
+      - "Measured move từ breakout range: chiều cao range cộng vào điểm breakout."
+      - "Measured move từ breakout gap: khoảng giữa điểm bắt đầu nhịp và điểm giữa gap được chiếu ra tương ứng."
+      - "Đây là vùng mục tiêu hợp lý, không phải điểm chắc chắn đạt tới; giá có thể dừng trước hoặc vượt qua."
+    example: "Ví dụ giả định: EURUSD nhịp 1 tăng từ 1,0800 lên 1,0880 (80 pip), điều chỉnh về 1,0840. Mục tiêu measured move nhịp 2 ≈ 1,0840 + 0,0080 = 1,0920."
+    mistakes:
+      - "Giữ lệnh vô hạn chờ measured move trong khi giá đã chuyển sang đi ngang."
+    visual:
+      type: formula
+      idea: "Hình hai nhịp tăng A→B, điều chỉnh về C, nhịp C→D; ngoặc đo bằng nhau 'Leg 1 = Leg 2'. Công thức: D = C + (B − A). Ví dụ số: 1,0840 + 0,0080 = 1,0920. Hình phụ: range cao 50 pip, breakout chiếu thêm 50 pip."
+  - part: 13
+    title: "Breakout mode: khi cả hai hướng đều có thể"
+    objective: "Nhận diện trạng thái breakout mode và cách giao dịch khi xác suất hai chiều gần ngang nhau."
+    key_points:
+      - "Breakout mode là bối cảnh mà breakout theo hướng nào cũng có khả năng có follow-through – xác suất hai chiều xấp xỉ nhau."
+      - "Các dạng thường gặp: ii (hai inside bar liên tiếp), tam giác (triangle), vùng đi ngang chặt sau xu hướng, nến lớn bị nhiều nến nhỏ bao trong."
+      - "Một cách tiếp cận: đặt lệnh chờ hai phía (buy stop trên, sell stop dưới) với khối lượng nhỏ, hoặc chờ breakout đóng cửa có follow-through."
+      - "Breakout giả hai đầu (tăng rồi đảo xuống) rất phổ biến; nên giảm khối lượng và chấp nhận nhiều lệnh thua nhỏ."
+    example: "Ví dụ giả định: XAUUSD M15 có hai inside bar liên tiếp trong 2.350–2.356 trước phiên Mỹ. Breakout lên 2.357 với nến đóng 2.362 và nến sau tiếp diễn → theo hướng tăng; nếu breakout thất bại, đảo sang bán."
+    mistakes:
+      - "Đoán trước hướng breakout và vào lệnh lớn khi giá còn nằm trong vùng nén."
+    visual:
+      type: pattern
+      idea: "Cận cảnh: một nến lớn, theo sau là hai nến nhỏ nằm gọn trong (nhãn 'ii'). Đường nét đứt trên và dưới: 'Buy stop' và 'Sell stop'. Hai mũi tên kịch bản lên và xuống bằng nhau, nhãn 'Breakout mode ~50/50'."
+  - part: 14
+    title: "Đảo chiều xu hướng lớn và final flag"
+    objective: "Nhận diện điều kiện của major trend reversal (MTR) và final flag thay vì bắt đỉnh/đáy cảm tính."
+    key_points:
+      - "Major trend reversal thường cần hai bước: trước tiên là phá đường xu hướng (trendline break) mạnh, sau đó giá quay lại test cực trị (tạo higher high/lower high hoặc double top)."
+      - "Ngay cả khi có đủ điều kiện, xác suất đảo chiều thành xu hướng mới thường chỉ khoảng một nửa hoặc thấp hơn – xu hướng cũ vẫn hay tiếp diễn."
+      - "Final flag là cờ cuối cùng của xu hướng: breakout khỏi cờ thất bại nhanh và giá quay lại xuyên qua cờ, mở đầu đảo chiều."
+      - "Climax (chuỗi nến rất lớn ở cuối xu hướng dài) thường được theo sau bởi điều chỉnh hai nhịp hoặc đi ngang."
+    example: "Ví dụ giả định: GBPUSD uptrend, giá phá mạnh đường xu hướng xuống 1,2700, hồi lên tạo đỉnh 1,2790 thấp hơn đỉnh 1,2800 (lower high) với L2 → setup MTR bán, SL trên 1,2800."
+    mistakes:
+      - "Bán ở đỉnh mới đầu tiên của uptrend mạnh chỉ vì 'đã tăng quá nhiều'."
+    visual:
+      type: chart
+      idea: "Uptrend với đường xu hướng tăng; giá giảm mạnh phá đường (nhãn '1. Trendline break'), hồi lên tạo đỉnh thấp hơn (nhãn '2. Test – Lower High', 'L2'), mũi tên bán đi xuống. Ô phụ: cờ nhỏ cuối xu hướng, breakout thất bại, nhãn 'Final flag'."
+  - part: 15
+    title: "Phương trình trader và checklist hoàn chỉnh"
+    objective: "Ra quyết định bằng phương trình trader (traders' equation) và một checklist kết hợp toàn bộ series, kèm quản lý rủi ro."
+    key_points:
+      - "Traders' equation: chỉ vào lệnh khi Xác suất × Lợi nhuận kỳ vọng lớn hơn (1 − Xác suất) × Rủi ro."
+      - "Setup xác suất cao (khoảng 60% trở lên) có thể chấp nhận R:R khoảng 1:1; setup xác suất thấp (khoảng 40%) cần R:R từ 1:2 trở lên – các con số là ước lượng chủ quan."
+      - "Checklist: 1) Trend hay range? 2) Always-in hướng nào? 3) Setup: H2/L2, wedge flag, breakout pullback, failed breakout… 4) Signal bar tốt? 5) Mục tiêu (measured move/mép range) và traders' equation dương?"
+      - "Rủi ro cố định 0,5–1%/lệnh; dừng lỗ đặt theo cấu trúc (dưới signal bar hoặc swing), khối lượng tính từ khoảng dừng lỗ; ghi nhật ký có ảnh từng setup."
+    example: "Ví dụ giả định: H2 trong uptrend mạnh, ước lượng xác suất 60%, rủi ro 10 pip, mục tiêu 15 pip: 0,6 × 15 = 9 > 0,4 × 10 = 4 → phương trình dương, lệnh hợp lệ."
+    mistakes:
+      - "Đánh giá xác suất quá lạc quan để biện minh cho lệnh muốn vào."
+    visual:
+      type: formula
+      idea: "Công thức lớn: P × Reward > (1 − P) × Risk. Bảng ví dụ hai dòng: (P=60%, R:R 1:1,5 → dương) và (P=40%, R:R 1:1 → âm). Bên dưới là checklist 5 câu hỏi đánh số với ô tích."
+sources:
+  - "https://www.brookstradingcourse.com/price-action-trading-terms-glossary/"
+  - "https://www.brookspriceaction.com/acronyms.php"
+  - "https://www.brookstradingcourse.com/support-forum/09-pullbacks-and-bar-counting/bar-counting-vs-patterns/"
+  - "https://www.brookstradingcourse.com/support-forum/how-to-learn-price-action/bar-counting-vs-leg-counting/"
+  - "https://trasignal.com/blog/learn/al-brooks-2nd-entry-setup/"
+  - "https://trasignal.com/blog/forex/price-action-trends-by-al-brooks/"
+  - "https://arongroups.co/technical-analyze/al-brooks-trading-ranges/"
+  - "https://www.tradingview.com/script/x9uZSmBM-Al-Brooks-H2-L2-Strategy-v2-1/"
+  - "https://www.youtube.com/results?search_query=al+brooks+bar+counting+H2"
+  - "Sách: Al Brooks – Trading Price Action Trends / Trading Ranges / Reversals (Wiley, 2012)"

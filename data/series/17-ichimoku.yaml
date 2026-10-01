@@ -1,0 +1,183 @@
+id: ichimoku
+name: "Ichimoku Kinko Hyo"
+level: "Chuyên sâu"
+description: "Giúp trader hiểu đúng 5 thành phần của Ichimoku, đọc xu hướng, động lượng, hỗ trợ/kháng cự trong một cái nhìn và xây dựng hệ thống giao dịch hoàn chỉnh trên vàng và ngoại hối."
+lessons:
+  - part: 1
+    title: "Ichimoku Kinko Hyo: cân bằng trong một cái nhìn"
+    objective: "Hiểu nguồn gốc, triết lý và cấu trúc tổng thể của hệ thống Ichimoku."
+    key_points:
+      - "Ichimoku Kinko Hyo được nhà báo Nhật Goichi Hosoda phát triển nhiều thập kỷ và công bố cuối thập niên 1960; tên gọi có nghĩa là 'biểu đồ cân bằng trong một cái nhìn'."
+      - "Hệ thống gồm 5 đường: Tenkan-sen, Kijun-sen, Senkou Span A, Senkou Span B và Chikou Span; hai đường Senkou tạo thành mây Kumo."
+      - "Ichimoku không chỉ là chỉ báo mà còn có ba lý thuyết đi kèm: thời gian, sóng và mục tiêu giá."
+      - "Các đường dựa trên điểm giữa của đỉnh cao nhất và đáy thấp nhất, không phải giá đóng cửa trung bình như MA."
+    example: "Ví dụ giả định: nhìn biểu đồ D1 EURUSD với Ichimoku, trader thấy ngay giá trên mây, mây xanh, Tenkan trên Kijun: xu hướng tăng rõ ràng mà không cần thêm chỉ báo khác."
+    mistakes:
+      - "Nghĩ Ichimoku chỉ là 'cái mây' và bỏ qua các thành phần còn lại."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến với đầy đủ Ichimoku: đường Tenkan (đỏ), Kijun (xanh dương), mây Kumo tô xanh/đỏ dịch về phía trước, Chikou (xanh lá) dịch về phía sau. Mỗi thành phần có nhãn tên tiếng Nhật."
+  - part: 2
+    title: "Tenkan-sen và Kijun-sen"
+    objective: "Hiểu cách tính và ý nghĩa của đường chuyển đổi Tenkan và đường cơ sở Kijun."
+    key_points:
+      - "Tenkan-sen (đường chuyển đổi) = (đỉnh cao nhất + đáy thấp nhất của 9 kỳ) / 2, phản ánh cân bằng ngắn hạn."
+      - "Kijun-sen (đường cơ sở) = (đỉnh cao nhất + đáy thấp nhất của 26 kỳ) / 2, phản ánh cân bằng trung hạn."
+      - "Đường nằm ngang (phẳng) nghĩa là giá đang đi ngang trong phạm vi đó; Kijun phẳng thường hút giá quay lại như nam châm."
+      - "Giá xa Kijun quá mức thường có xu hướng quay về gần Kijun."
+    example: "Ví dụ giả định: 9 nến H4 gần nhất của XAUUSD có đỉnh 2.380, đáy 2.340, Tenkan = 2.360. 26 nến có đỉnh 2.380, đáy 2.300, Kijun = 2.340."
+    mistakes:
+      - "Coi Tenkan, Kijun như đường trung bình động giá đóng cửa và diễn giải độ dốc theo kiểu MA."
+    visual:
+      type: formula
+      idea: "Hai công thức: Tenkan = (Cao nhất 9 + Thấp nhất 9) / 2; Kijun = (Cao nhất 26 + Thấp nhất 26) / 2. Bên cạnh là biểu đồ nến với hộp 9 nến và hộp 26 nến, đánh dấu đỉnh/đáy và điểm giữa."
+  - part: 3
+    title: "Senkou Span A, B và mây Kumo"
+    objective: "Hiểu cách hình thành mây Kumo và ý nghĩa vị trí giá so với mây."
+    key_points:
+      - "Senkou Span A = (Tenkan + Kijun) / 2, vẽ dịch về phía trước 26 kỳ."
+      - "Senkou Span B = (đỉnh cao nhất + đáy thấp nhất của 52 kỳ) / 2, vẽ dịch về phía trước 26 kỳ."
+      - "Vùng giữa hai đường là mây Kumo: Span A trên Span B là mây tăng, Span A dưới Span B là mây giảm."
+      - "Giá trên mây là xu hướng tăng, dưới mây là xu hướng giảm, trong mây là vùng giằng co/không rõ xu hướng."
+    example: "Ví dụ giả định: EURUSD D1 ở 1,0920, mây hiện tại nằm từ 1,0820 đến 1,0870. Giá trên mây và cách mây 50 pip: xu hướng tăng, mây là vùng hỗ trợ khi điều chỉnh."
+    mistakes:
+      - "Giao dịch theo tín hiệu khác khi giá đang nằm trong mây, nơi xu hướng không rõ ràng."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến với mây Kumo: phần mây xanh (Span A trên) và mây đỏ (Span A dưới), mũi tên chỉ mây được dịch 26 kỳ về phía trước. Ba vùng nhãn: 'Giá trên mây – tăng', 'Trong mây – giằng co', 'Dưới mây – giảm'."
+  - part: 4
+    title: "Chikou Span: đường trễ xác nhận"
+    objective: "Hiểu Chikou Span và cách dùng nó để xác nhận xu hướng."
+    key_points:
+      - "Chikou Span là giá đóng cửa hiện tại được vẽ lùi về sau 26 kỳ."
+      - "Chikou trên giá của 26 kỳ trước cho thấy phe mua chiếm ưu thế; dưới giá cho thấy phe bán chiếm ưu thế."
+      - "Chikou va vào nến quá khứ hoặc mây quá khứ có thể gặp cản, giúp phát hiện hỗ trợ/kháng cự ẩn."
+      - "Chikou 'thoáng' (không bị nến cản phía trước) là điều kiện xác nhận quan trọng trước khi vào lệnh."
+    example: "Ví dụ giả định: GBPUSD hiện 1,2950; 26 nến trước giá ở 1,2850. Chikou nằm trên giá quá khứ 100 pip, không có nến nào cản phía trên: xác nhận tăng."
+    mistakes:
+      - "Hiểu nhầm Chikou là chỉ báo dự báo, trong khi đó chỉ là giá đóng cửa vẽ lùi lại."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến với đường Chikou nằm lùi 26 nến; mũi tên ngang từ nến hiện tại tới điểm Chikou ghi '26 kỳ'. Khoanh tròn vùng Chikou nằm trên các nến quá khứ, nhãn 'Chikou thoáng'."
+  - part: 5
+    title: "Giao cắt Tenkan/Kijun (TK cross)"
+    objective: "Biết đọc tín hiệu giao cắt Tenkan/Kijun và phân loại mạnh, trung bình, yếu theo vị trí mây."
+    key_points:
+      - "Tenkan cắt lên Kijun là tín hiệu tăng; Tenkan cắt xuống Kijun là tín hiệu giảm."
+      - "Tín hiệu mạnh khi giao cắt tăng xảy ra trên mây; trung bình khi trong mây; yếu khi dưới mây (ngược lại với tín hiệu giảm)."
+      - "Giao cắt xảy ra khi hai đường đều phẳng thường thiếu động lượng."
+      - "Cần kết hợp Chikou và mây tương lai để lọc giao cắt giả."
+    example: "Ví dụ giả định: XAUUSD H4 trên mây, Tenkan cắt lên Kijun tại 2.355, Chikou thoáng: tín hiệu tăng mạnh. Cùng giao cắt đó nếu xảy ra dưới mây thì chỉ là tín hiệu yếu."
+    mistakes:
+      - "Vào lệnh theo mọi TK cross bất kể vị trí so với mây."
+    visual:
+      type: compare
+      idea: "Ba ô nhỏ: 'Mạnh' – TK cross tăng phía trên mây; 'Trung bình' – TK cross trong mây; 'Yếu' – TK cross dưới mây. Mỗi ô khoanh điểm giao cắt và ghi mức độ."
+  - part: 6
+    title: "Đọc mây tương lai: dày, mỏng, xoắn"
+    objective: "Biết đọc hình dạng mây Kumo phía trước để đánh giá hỗ trợ/kháng cự và khả năng đổi xu hướng."
+    key_points:
+      - "Mây dày thể hiện vùng hỗ trợ/kháng cự mạnh, giá khó xuyên qua; mây mỏng dễ bị phá vỡ."
+      - "Kumo twist (mây xoắn) là điểm Span A cắt Span B, cảnh báo khả năng thay đổi xu hướng hoặc biến động trong tương lai."
+      - "Senkou Span B phẳng thường là mức cân bằng dài hạn, giá hay phản ứng tại đó."
+      - "Màu và độ dốc của mây phía trước 26 kỳ cho biết xu hướng cân bằng sắp tới."
+    example: "Ví dụ giả định: EURUSD đang dưới mây, mây phía trước mỏng dần và có kumo twist trong 5 nến tới. Đây là cảnh báo áp lực giảm đang yếu, không phải tín hiệu mua ngay."
+    mistakes:
+      - "Coi kumo twist là tín hiệu đảo chiều tự thân và vào lệnh ngay."
+    visual:
+      type: chart
+      idea: "Mây Kumo kéo dài phía trước giá: đoạn mây dày (nhãn 'Kháng cự mạnh'), đoạn mỏng (nhãn 'Dễ phá'), điểm Span A cắt Span B (nhãn 'Kumo twist'), đoạn Span B nằm ngang (nhãn 'Span B phẳng')."
+  - part: 7
+    title: "Kumo breakout: phá vỡ mây"
+    objective: "Nắm thiết lập phá vỡ mây và điều kiện xác nhận đầy đủ."
+    key_points:
+      - "Kumo breakout tăng: giá đóng cửa trên cạnh trên của mây sau thời gian ở trong hoặc dưới mây."
+      - "Xác nhận: Tenkan trên Kijun, Chikou trên giá và không bị cản, mây phía trước chuyển xanh."
+      - "Phá vỡ mây mỏng dễ thất bại hơn phá vỡ mây dày; phá vỡ mây dày thường mang ý nghĩa thay đổi xu hướng lớn hơn."
+      - "Điểm vào an toàn hơn là khi giá quay lại kiểm tra cạnh mây hoặc Kijun sau khi phá vỡ."
+    example: "Ví dụ giả định: GBPUSD D1 đóng cửa 1,2780 trên cạnh trên mây 1,2760, Tenkan > Kijun, Chikou thoáng. Giá quay về 1,2765 rồi bật lên, vào lệnh mua với dừng lỗ dưới Kijun 1,2710."
+    mistakes:
+      - "Vào lệnh khi nến chỉ xuyên mây trong phiên nhưng chưa đóng cửa trên mây."
+    visual:
+      type: chart
+      idea: "Giá đi ngang trong mây rồi đóng cửa vượt cạnh trên mây (nhãn 'Breakout'), quay lại chạm cạnh mây (nhãn 'Retest') và tăng tiếp. Đánh dấu Tenkan > Kijun, Chikou thoáng bằng dấu tích."
+  - part: 8
+    title: "Giao dịch theo Kijun: pullback và bounce"
+    objective: "Áp dụng thiết lập vào lệnh khi giá điều chỉnh về Kijun-sen trong xu hướng."
+    key_points:
+      - "Trong xu hướng tăng rõ (giá trên mây, mây xanh), Kijun là hỗ trợ động đầu tiên khi giá điều chỉnh."
+      - "Chờ nến từ chối tại Kijun hoặc giá đóng cửa trở lại trên Tenkan để vào lệnh."
+      - "Kijun cũng là dừng lỗ dời (trailing stop) phổ biến trong hệ thống Ichimoku."
+      - "Nếu giá đóng cửa dưới Kijun và Chikou rơi vào nến quá khứ, xu hướng ngắn hạn đã suy yếu."
+    example: "Ví dụ giả định: XAUUSD H4 tăng trên mây, chỉnh về Kijun 2.348, nến pin bar tăng. Mua 2.352, dừng lỗ dưới cạnh mây 2.335, dời dừng lỗ theo Kijun khi giá đi lên."
+    mistakes:
+      - "Mua tại Kijun khi Kijun đã chuyển dốc xuống và giá vào trong mây."
+    visual:
+      type: chart
+      idea: "Xu hướng tăng trên mây; giá chỉnh về chạm đường Kijun, nến pin bar tại điểm chạm (nhãn 'Entry'), đường SL dưới cạnh mây, các bậc thang dừng lỗ dời theo Kijun về sau."
+  - part: 9
+    title: "Lý thuyết thời gian: các con số cơ bản"
+    objective: "Hiểu cơ bản lý thuyết thời gian của Ichimoku và cách đếm số nến từ các điểm xoay chiều."
+    key_points:
+      - "Hosoda dùng các con số cơ bản (kihon suchi) 9, 17, 26 và các tổ hợp như 33, 42, 65, 76, 129, 172, 200–257."
+      - "Đếm số nến từ một đỉnh/đáy quan trọng; khi đến các mốc này thị trường dễ xuất hiện điểm xoay chiều hoặc tăng tốc."
+      - "Taito suchi (số cân bằng): một chu kỳ thời gian trong quá khứ có xu hướng lặp lại độ dài tương tự."
+      - "Lý thuyết thời gian dùng để cảnh báo thời điểm, không thay thế tín hiệu giá."
+    example: "Ví dụ giả định: EURUSD tạo đáy quan trọng; đếm 26 nến D1 tới hôm nay, giá đang chững lại tại kháng cự. Mốc thời gian trùng kháng cự tăng độ chú ý cho khả năng điều chỉnh."
+    mistakes:
+      - "Vào lệnh chỉ vì đến ngày thứ 26 mà không có xác nhận từ giá."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến từ một đáy lớn, các đường dọc đứt nét đánh dấu nến thứ 9, 17, 26, 33, 42 với nhãn số; khoanh tròn điểm xoay chiều trùng một đường dọc."
+  - part: 10
+    title: "Lý thuyết sóng và mục tiêu giá N, V, E, NT"
+    objective: "Biết nhận diện sóng I, V, N và tính các mục tiêu giá cơ bản của Ichimoku."
+    key_points:
+      - "Sóng I là một nhịp đơn, V là hai nhịp, N là ba nhịp (lên – điều chỉnh – lên) – dạng cơ bản của xu hướng."
+      - "Với nhịp A → B → C (A đáy, B đỉnh, C đáy điều chỉnh): N = C + (B − A); E = B + (B − A); V = B + (B − C); NT = C + (C − A)."
+      - "Mục tiêu N thường được dùng nhiều nhất; E là mục tiêu tham vọng hơn."
+      - "Mục tiêu giá nên kết hợp với kháng cự và mây để chọn điểm chốt lời thực tế."
+    example: "Ví dụ giả định XAUUSD: A = 2.300, B = 2.380, C = 2.340. N = 2.340 + 80 = 2.420; V = 2.380 + 40 = 2.420; E = 2.380 + 80 = 2.460; NT = 2.340 + 40 = 2.380."
+    mistakes:
+      - "Đánh dấu A, B, C trên các nhịp nhỏ không quan trọng khiến mục tiêu không có ý nghĩa."
+    visual:
+      type: formula
+      idea: "Sơ đồ sóng N với điểm A (đáy), B (đỉnh), C (đáy cao hơn); bảng công thức N, V, E, NT bên cạnh; các đường ngang mục tiêu kéo dài sang phải có nhãn tương ứng."
+  - part: 11
+    title: "Đa khung thời gian và áp dụng cho forex"
+    objective: "Biết kết hợp nhiều khung thời gian và điều chỉnh Ichimoku cho thị trường vàng, ngoại hối."
+    key_points:
+      - "Dùng khung lớn (D1/W1) xác định xu hướng theo mây; khung nhỏ (H4/H1) tìm điểm vào bằng TK cross hoặc pullback Kijun."
+      - "Chỉ giao dịch khi khung lớn và khung nhỏ cùng chiều; nếu khung lớn trong mây, giảm khối lượng hoặc đứng ngoài."
+      - "Thông số gốc 9-26-52 phù hợp cho forex và vàng; thay đổi thông số làm mất tính so sánh với số đông."
+      - "Ichimoku hoạt động tốt khi có xu hướng, kém hiệu quả khi thị trường đi ngang hẹp."
+    example: "Ví dụ giả định: EURUSD D1 trên mây xanh; H1 vừa điều chỉnh về Kijun và có TK cross tăng trên mây H1. Hai khung đồng thuận, ưu tiên lệnh mua."
+    mistakes:
+      - "Mua theo tín hiệu H1 khi D1 đang dưới mây dày."
+    visual:
+      type: compare
+      idea: "Hai cột: trái 'D1 – xu hướng' giá trên mây xanh; phải 'H1 – điểm vào' giá chỉnh về Kijun và TK cross tăng. Mũi tên nối hai khung ghi 'Đồng thuận'."
+  - part: 12
+    title: "Kế hoạch giao dịch Ichimoku và quản lý rủi ro"
+    objective: "Xây dựng hệ thống giao dịch Ichimoku hoàn chỉnh với quy tắc vào, ra lệnh và quản lý vốn."
+    key_points:
+      - "Điều kiện mua đầy đủ: giá trên mây, mây phía trước xanh, Tenkan trên Kijun, Chikou trên giá và thoáng; điều kiện bán ngược lại."
+      - "Dừng lỗ dưới Kijun hoặc dưới cạnh mây (cộng vùng đệm ATR); rủi ro mỗi lệnh 0,5–1% tài khoản."
+      - "Chốt một phần tại mục tiêu N hoặc kháng cự lớn, phần còn lại dời dừng lỗ theo Kijun."
+      - "Thoát lệnh khi giá đóng cửa dưới Kijun kèm Chikou rơi vào nến, hoặc giá vào lại trong mây."
+    example: "Ví dụ giả định: tài khoản 10.000 USD, rủi ro 1% = 100 USD. Mua XAUUSD 2.352, dừng lỗ 2.335 (17 giá), khối lượng khoảng 0,06 lot. Chốt 50% tại mục tiêu N 2.420, phần còn lại dời dừng lỗ theo Kijun."
+    mistakes:
+      - "Bỏ qua một điều kiện (ví dụ Chikou bị cản) vì muốn vào lệnh sớm."
+      - "Giao dịch Ichimoku trong giai đoạn giá đi ngang trong mây và liên tục bị dừng lỗ."
+    visual:
+      type: checklist
+      idea: "Checklist 5 điều kiện mua: Giá trên mây ✓, Mây trước xanh ✓, Tenkan > Kijun ✓, Chikou thoáng ✓, Khung lớn đồng thuận ✓; thêm phần quản lý: SL dưới Kijun, Rủi ro ≤1%, TP mục tiêu N, Trailing theo Kijun. Bên cạnh là biểu đồ Ichimoku nhỏ có Entry/SL/TP."
+sources:
+  - "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/ichimoku-cloud"
+  - "https://www.youtube.com/playlist?list=PLpvBGeY_RgFDSxHbjmyRPmo4eizhAUsRF"
+  - "https://www.youtube.com/watch?v=lZ13a8XbR-s"
+  - "https://www.youtube.com/watch?v=tK28-mboOXM"
+  - "https://www.youtube.com/watch?v=CqtFkuTpoMA"
+  - "https://www.luxalgo.com/library/concept/ichimoku-theories/"
+  - "https://www.tradingview.com/chart/DJI/BAKwQj2h-Ichimoku-Target-Price-Theory-V-N-E-and-NT-Calculations/"
+  - "https://2ndskiestrading.com/ichimoku-number-theory-an-introduction/"

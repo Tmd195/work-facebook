@@ -1,0 +1,19 @@
+{
+  "title": "Nến Pin Bar: khi nào mới thật sự có giá trị?",
+  "points": [
+    "Râu nến dài ít nhất gấp 2 lần thân, thân nằm ở một đầu nến.",
+    "Chỉ có giá trị khi xuất hiện tại vùng hỗ trợ/kháng cự rõ ràng.",
+    "Vào lệnh khi giá phá đỉnh Pin Bar, dừng lỗ ngay sau râu nến."
+  ],
+  "diagram": {
+    "candles": [
+      [108, 109, 106.5, 107], [107, 107.8, 105.2, 105.6], [105.6, 106.2, 104, 104.4],
+      [104.4, 105, 102.6, 103], [103, 103.6, 101.4, 101.8], [101.8, 102.4, 100.6, 101],
+      [101, 101.5, 96.6, 101.2], [101.2, 103.4, 100.8, 103], [103, 104.6, 102.6, 104.3],
+      [104.3, 105.6, 103.8, 105.2], [105.2, 106.4, 104.6, 106], [106, 107.2, 105.5, 106.9]
+    ],
+    "lines": [{"price": 99.2, "label": "Hỗ trợ"}],
+    "highlight": {"from": 6, "to": 6, "label": "Pin Bar"}
+  },
+  "post": "📘 KIẾN THỨC #01 | Nến Pin Bar\nNhiều anh em thấy râu nến dài là vào lệnh ngay, rồi bị quét dừng lỗ liên tục. Vấn đề không nằm ở cây nến, mà ở chỗ nó xuất hiện.\n\n🔎 Pin Bar là gì?\nLà cây nến có râu dài, thân nhỏ nằm ở một đầu. Râu dài cho thấy giá từng bị đẩy đi rất xa nhưng bị phe còn lại kéo ngược về – một dấu hiệu từ chối giá rõ ràng.\n\nCách dùng Pin Bar hiệu quả:\n1️⃣ Râu dài ít nhất gấp 2 lần thân, thân nằm ở 1/3 trên (Pin Bar tăng) hoặc 1/3 dưới (Pin Bar giảm).\n2️⃣ Chỉ xét Pin Bar tại vùng hỗ trợ/kháng cự, đỉnh đáy ngày trước hoặc vùng số tròn.\n3️⃣ Ưu tiên Pin Bar cùng chiều xu hướng khung lớn hơn.\n4️⃣ Vào lệnh khi giá phá đỉnh (hoặc đáy) cây Pin Bar, dừng lỗ đặt ngay sau râu.\n\n⚠️ Sai lầm hay gặp: giao dịch mọi Pin Bar giữa vùng giá lưng chừng. Ở đó râu nến thường chỉ là nhiễu, không phải tín hiệu.\n\n💡 Ví dụ (số giả định): giá giảm về vùng hỗ trợ 99.2, xuất hiện Pin Bar có râu chạm 96.6 nhưng đóng cửa ở 101.2. Lệnh mua đặt khi giá vượt 101.5, dừng lỗ dưới 96.6. Nếu mục tiêu là vùng 106, tỷ lệ lời/lỗ khoảng 1:1 – chưa đủ hấp dẫn, nên chờ thêm xác nhận hoặc bỏ qua.\n\nAnh em hay dùng Pin Bar ở khung nào? Lưu bài lại để xem khi cần nhé 🔖"
+}

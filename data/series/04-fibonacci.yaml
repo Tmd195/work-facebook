@@ -1,0 +1,166 @@
+id: fibonacci
+name: "Fibonacci trong giao dịch"
+level: "Trung cấp"
+description: "Giúp người đọc vẽ đúng Fibonacci thoái lui và mở rộng, chọn vùng vào lệnh có hợp lưu và đặt cắt lỗ, chốt lời bằng Fibonacci trên XAUUSD và EURUSD."
+lessons:
+  - part: 1
+    title: "Dãy Fibonacci và các tỷ lệ trong trading"
+    objective: "Hiểu các tỷ lệ Fibonacci dùng trong giao dịch đến từ đâu và tỷ lệ nào thực sự thuộc dãy Fibonacci."
+    key_points:
+      - "Dãy Fibonacci là 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...; mỗi số bằng tổng hai số liền trước."
+      - "Chia một số cho số liền sau tiến dần tới 0,618; chia cho số cách hai vị trí tiến tới 0,382; cách ba vị trí tiến tới 0,236. Nghịch đảo của 0,618 là 1,618 (tỷ lệ vàng)."
+      - "Mức 50% không phải tỷ lệ Fibonacci nhưng luôn có trong công cụ vì giá thường hồi khoảng một nửa nhịp trước; mức 78,6% là căn bậc hai của 0,618."
+      - "Fibonacci không có cơ sở 'thần bí' trong thị trường; nó hữu ích chủ yếu vì rất nhiều trader cùng theo dõi các mức này."
+    example: "Ví dụ: 55 ÷ 89 ≈ 0,618; 34 ÷ 89 ≈ 0,382; 21 ÷ 89 ≈ 0,236; 89 ÷ 55 ≈ 1,618. Đây là nguồn gốc của các mức 61,8%, 38,2%, 23,6% và 161,8% trên công cụ Fibonacci."
+    mistakes:
+      - "Tin rằng giá 'bắt buộc' phải dừng tại mức Fibonacci."
+      - "Nghĩ mức 50% là tỷ lệ Fibonacci."
+    visual:
+      type: formula
+      idea: "Hàng số Fibonacci 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 trên cùng. Bên dưới là 4 phép tính có mũi tên ra kết quả: 55/89 = 0.618, 34/89 = 0.382, 21/89 = 0.236, 89/55 = 1.618. Góc phải ghi chú: '50% – không phải Fibo, nhưng được dùng nhiều', '78.6% = √0.618'."
+  - part: 2
+    title: "Fibonacci thoái lui: các mức cần nhớ"
+    objective: "Hiểu Fibonacci thoái lui (retracement) đo gì và ý nghĩa của từng mức."
+    key_points:
+      - "Fibonacci thoái lui đo mức độ hồi của giá so với nhịp di chuyển trước đó, dùng để tìm vùng giá có thể kết thúc sóng hồi."
+      - "Các mức thông dụng: 23,6%, 38,2%, 50%, 61,8%, 78,6%."
+      - "Hồi nông (23,6–38,2%) thường gặp trong xu hướng rất mạnh; hồi sâu tới 61,8–78,6% thường gặp khi xu hướng yếu hơn hoặc thị trường giằng co."
+      - "Khi giá hồi vượt quá 100% nhịp trước, cấu trúc xu hướng ban đầu đã bị phá."
+    example: "Ví dụ giả định: XAUUSD tăng từ 3900 lên 4000 (nhịp 100 USD). Mức 38,2% = 3961,8; 50% = 3950; 61,8% = 3938,2; 78,6% = 3921,4. Nếu giá giảm thủng 3900, nhịp tăng đã bị phủ định hoàn toàn."
+    mistakes:
+      - "Coi mọi mức đều quan trọng như nhau rồi vào lệnh ở mức đầu tiên giá chạm."
+      - "Tiếp tục kỳ vọng sóng hồi khi giá đã thủng mức 100%."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến: nhịp tăng từ 3900 (nhãn 0% ở dưới – điểm 'Swing Low') lên 4000 (đỉnh 'Swing High'), sau đó giá hồi xuống. Các đường ngang màu khác nhau: 23.6% (3976.4), 38.2% (3961.8), 50% (3950), 61.8% (3938.2), 78.6% (3921.4). Giá hồi chạm khoảng 61.8% rồi bật lên."
+  - part: 3
+    title: "Cách vẽ Fibonacci đúng: chọn sóng và điểm neo"
+    objective: "Vẽ Fibonacci thoái lui đúng hướng, đúng điểm và nhất quán."
+    key_points:
+      - "Chỉ vẽ trên một nhịp sóng rõ ràng, có điểm bắt đầu và kết thúc là swing low và swing high rõ ràng."
+      - "Xu hướng tăng: kéo từ đáy lên đỉnh; xu hướng giảm: kéo từ đỉnh xuống đáy. Trên đa số nền tảng, mức 0% sẽ nằm ở điểm cuối nhịp."
+      - "Phần lớn trader neo vào đầu bóng nến; một số neo vào giá đóng cửa. Hai cách cho kết quả hơi khác nhau, cần chọn một và giữ nhất quán."
+      - "Nên vẽ trên nhịp sóng của khung thời gian bạn đang dùng để xác định xu hướng (ví dụ H4), không lấy nhịp quá nhỏ."
+    example: "Ví dụ giả định: EURUSD giảm từ đỉnh 1.0950 xuống đáy 1.0850. Kéo công cụ từ 1.0950 xuống 1.0850; mức 61,8% sẽ nằm ở 1.0850 + 0,618 × 0,0100 ≈ 1.0912."
+    mistakes:
+      - "Vẽ ngược hướng (từ đỉnh xuống trong xu hướng tăng), làm các mức bị đảo vị trí."
+      - "Vẽ lại Fibonacci nhiều lần cho đến khi thấy một mức 'khớp' với ý mình."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột. Trái 'Xu hướng tăng': mũi tên kéo từ Swing Low lên Swing High, các mức Fibo nằm giữa, nhãn 0% ở đỉnh và 100% ở đáy. Phải 'Xu hướng giảm': mũi tên kéo từ Swing High xuống Swing Low, nhãn 0% ở đáy và 100% ở đỉnh. Dưới mỗi cột ghi 'Neo vào đầu bóng nến'."
+  - part: 4
+    title: "Vùng vàng 50–61,8% và golden pocket"
+    objective: "Hiểu vì sao vùng 50–61,8% được nhiều trader ưu tiên và các khái niệm liên quan."
+    key_points:
+      - "Nhiều trader coi vùng 50–61,8% là vùng hồi 'lý tưởng' trong xu hướng: đủ sâu để giá rẻ hơn, nhưng chưa phá vỡ xu hướng."
+      - "Golden pocket là dải hẹp khoảng 61,8–65% (một số người dùng 61,8–66%), được ưa chuộng trong cộng đồng crypto và forex gần đây."
+      - "Đây là vùng chờ phản ứng, không phải điểm đặt lệnh tự động; giá có thể xuyên qua để về 78,6% hoặc phá hẳn."
+      - "Trong xu hướng rất mạnh, giá có thể chỉ hồi 23,6–38,2% rồi đi tiếp; chỉ chờ 61,8% có thể khiến bạn lỡ nhịp."
+    example: "Ví dụ giả định: XAUUSD tăng 3900 → 4000. Vùng 50–61,8% là 3938,2–3950, golden pocket khoảng 3935–3938,2. Trader đánh dấu vùng 3935–3950 và chờ tín hiệu nến tăng ở đó."
+    mistakes:
+      - "Đặt lệnh mua giới hạn đúng 61,8% trong khi xu hướng khung lớn đang giảm."
+      - "Thất vọng và đuổi theo giá khi giá không hồi về vùng vàng."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến xu hướng tăng với Fibonacci kẻ từ đáy 3900 lên đỉnh 4000. Dải 50%–61.8% tô vàng nhạt nhãn 'Vùng vàng', bên trong có dải hẹp 61.8%–65% tô vàng đậm nhãn 'Golden pocket'. Giá hồi vào dải này, xuất hiện nến tăng rồi đi lên vượt đỉnh 4000."
+  - part: 5
+    title: "Hợp lưu: Fibonacci gặp hỗ trợ – kháng cự"
+    objective: "Tăng độ tin cậy của mức Fibonacci bằng cách tìm các yếu tố trùng khớp."
+    key_points:
+      - "Hợp lưu (confluence) là khi mức Fibonacci trùng với yếu tố khác: hỗ trợ/kháng cự cũ, vùng cung cầu, đường xu hướng, EMA, pivot hoặc số tròn."
+      - "Một mức Fibonacci đứng một mình chỉ là đường kẻ; một mức có 2–3 yếu tố hợp lưu là vùng đáng chú ý hơn."
+      - "Trường hợp điển hình: mức 38,2% hoặc 50% trùng với kháng cự cũ đã bị phá (nay thành hỗ trợ)."
+      - "Không nên ép hợp lưu bằng cách vẽ quá nhiều công cụ; chỉ chọn vài yếu tố bạn hiểu rõ."
+    example: "Ví dụ giả định: EURUSD tăng 1.0800 → 1.0950. Mức 50% là 1.0875, trùng với đỉnh cũ 1.0870–1.0880 vừa bị phá vỡ và EMA 50 trên H4. Vùng 1.0870–1.0880 là điểm hợp lưu ba yếu tố."
+    mistakes:
+      - "Dùng 6–7 công cụ để tìm hợp lưu, đến mức chỗ nào cũng 'hợp lưu'."
+      - "Bỏ qua cấu trúc xu hướng chỉ vì thấy hợp lưu đẹp."
+    visual:
+      type: chart
+      idea: "Biểu đồ H4 EURUSD: nhịp tăng 1.0800 → 1.0950 với các mức Fibo. Một hộp đỏ-xanh 'Kháng cự cũ thành hỗ trợ' tại 1.0870–1.0880, đường EMA 50 màu cam đi qua cùng vùng, đường 50% nằm giữa hộp. Vòng tròn nổi bật quanh điểm giao nhau, nhãn 'Hợp lưu 3 yếu tố'. Giá chạm vùng và bật lên."
+  - part: 6
+    title: "Chờ xác nhận nến tại mức Fibonacci"
+    objective: "Biết cách dùng tín hiệu Price Action để quyết định có vào lệnh tại mức Fibonacci hay không."
+    key_points:
+      - "Mức Fibonacci chỉ cho biết 'nơi có thể', còn tín hiệu nến cho biết 'lực mua/bán đã xuất hiện hay chưa'."
+      - "Các tín hiệu hay dùng: Pin bar, nhấn chìm, hoặc khung nhỏ phá đỉnh/đáy gần nhất (CHoCH) ngay trong vùng Fibonacci."
+      - "Nếu giá đóng cửa xuyên qua mức đang chờ mà không có tín hiệu, hãy chuyển sự chú ý xuống mức kế tiếp thay vì vào lệnh ngay."
+      - "Chờ xác nhận giúp lọc lệnh xấu nhưng làm giá vào kém hơn một chút; đây là sự đánh đổi bình thường."
+    example: "Ví dụ giả định: XAUUSD hồi về 61,8% tại 3938. Nến H1 xuất hiện Pin bar với bóng dưới tới 3931, đóng tại 3943. Trader mua khi giá vượt đỉnh Pin bar 3946, thay vì đặt lệnh mua mù tại 3938."
+    mistakes:
+      - "Đặt lệnh giới hạn ở mọi mức Fibonacci như lưới bắt đáy."
+      - "Coi nến xác nhận trên M1 là đủ cho một mức Fibonacci vẽ trên D1."
+    visual:
+      type: pattern
+      idea: "Cận cảnh các nến hồi giảm về một đường ngang vàng 'Fibo 61.8%'. Tại đường có một Pin bar tăng với bóng dưới chọc qua và thân đóng trên đường, sau đó nến xanh vượt đỉnh Pin bar. Mũi tên 'Mua khi vượt đỉnh Pin bar', đường SL đỏ dưới bóng nến."
+  - part: 7
+    title: "Fibonacci mở rộng: tìm mục tiêu chốt lời"
+    objective: "Dùng Fibonacci mở rộng (extension) để ước lượng nơi giá có thể đi tới sau khi vượt đỉnh/đáy cũ."
+    key_points:
+      - "Fibonacci mở rộng chiếu các tỷ lệ lớn hơn 100% để ước lượng mục tiêu, phổ biến là 127,2%, 161,8%, 200% và 261,8%."
+      - "Cách 1 (dùng công cụ thoái lui có mức âm): kéo trên nhịp A–B, các mức −27,2% và −61,8% tương ứng 127,2% và 161,8% của nhịp A–B."
+      - "Cách 2 (Trend-Based Fib Extension, ba điểm A–B–C): đo độ dài A–B rồi chiếu từ điểm cuối sóng hồi C, các mức 100%, 161,8% là mục tiêu."
+      - "Hai cách cho kết quả khác nhau; nên biết rõ mình dùng cách nào và dùng các mức như vùng chốt lời từng phần, không phải mục tiêu chắc chắn."
+    example: "Ví dụ giả định XAUUSD: A = 3900, B = 4000, C = 3938,2. Cách 1: mức 127,2% ≈ 4027,2; 161,8% ≈ 4061,8. Cách 2: 100% = 3938,2 + 100 = 4038,2; 161,8% ≈ 4100."
+    mistakes:
+      - "Giữ lệnh chờ 261,8% trong khi giá đã gặp kháng cự lớn ở 127,2%."
+      - "Nhầm lẫn giữa hai cách đo nên đặt mục tiêu sai."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến 3 điểm: A đáy 3900, B đỉnh 4000, C đáy hồi 3938. Các đường mở rộng phía trên B: 100% (4038), 127.2%, 161.8% (4100), được kẻ nét đứt xanh lá, nhãn 'TP1', 'TP2'. Mũi tên A→B, B→C, và C→ mục tiêu. Chú thích nhỏ 'Trend-Based Fib Extension (A-B-C)'."
+  - part: 8
+    title: "Đặt cắt lỗ và chốt lời bằng Fibonacci"
+    objective: "Xây điểm cắt lỗ, chốt lời hợp lý cho lệnh vào tại vùng Fibonacci và tính R:R."
+    key_points:
+      - "Nếu vào ở 50–61,8%, cắt lỗ thường đặt dưới 78,6% hoặc dưới đáy nhịp (100%) cộng khoảng đệm, tùy độ chặt bạn chấp nhận."
+      - "Chốt lời từng phần là cách phổ biến: một phần ở đỉnh cũ (0%), một phần ở 127,2% hoặc 161,8%."
+      - "Sau khi giá vượt đỉnh cũ, có thể dời cắt lỗ về điểm hòa vốn để bảo vệ lệnh; mỗi trader có quy tắc riêng về thời điểm dời."
+      - "Luôn tính R:R trước khi vào; nếu đỉnh cũ quá gần điểm vào, lệnh có thể không đáng."
+    example: "Ví dụ giả định: mua EURUSD tại 1.0875 (vùng 50%), nhịp 1.0800 → 1.0950. SL dưới 78,6% (≈1.0832) tại 1.0828, rủi ro 47 pip. TP1 đỉnh cũ 1.0948 (73 pip), TP2 mức 127,2% ≈ 1.0991 (116 pip)."
+    mistakes:
+      - "Đặt cắt lỗ ngay dưới mức 61,8%, nơi giá rất hay quét qua."
+      - "Dời cắt lỗ về hòa vốn quá sớm khiến lệnh bị đóng ngay trước khi giá chạy."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến với Fibo thoái lui kẻ trên nhịp tăng. Điểm vào mũi tên xanh tại 50%; đường đỏ 'SL' dưới 78.6%; đường xanh lá 'TP1' ở mức 0% (đỉnh cũ), 'TP2' ở 127.2% phía trên. Hai hộp tô màu: đỏ (Entry→SL) và xanh (Entry→TP2), nhãn 'R:R'."
+  - part: 9
+    title: "Fibonacci đa khung và cụm Fibonacci"
+    objective: "Kết hợp Fibonacci từ nhiều khung hoặc nhiều nhịp để tìm vùng giá có xác suất cao hơn."
+    key_points:
+      - "Vẽ Fibonacci trên nhịp lớn (D1/H4) để xác định vùng chính, sau đó vẽ trên nhịp nhỏ hơn (H1) để tinh chỉnh."
+      - "Cụm Fibonacci (Fibonacci cluster) là khi các mức từ nhiều nhịp khác nhau rơi vào cùng một khoảng giá hẹp."
+      - "Cụm Fibonacci trùng thêm vùng hỗ trợ – kháng cự là kiểu hợp lưu được nhiều người ưa thích."
+      - "Càng vẽ nhiều nhịp càng dễ 'thấy cụm ở mọi nơi'; chỉ nên dùng 2–3 nhịp có ý nghĩa."
+    example: "Ví dụ giả định XAUUSD: Fibonacci D1 nhịp 3800 → 4000 cho 38,2% ≈ 3923,6. Fibonacci H4 nhịp 3880 → 4000 cho 61,8% ≈ 3925,8. Vùng 3923–3926 là cụm Fibonacci đáng theo dõi."
+    mistakes:
+      - "Chọn nhịp tùy tiện để cố tạo ra cụm."
+      - "Ưu tiên mức Fibonacci khung nhỏ hơn khung lớn khi hai cái mâu thuẫn."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD với hai bộ Fibonacci khác màu: bộ lớn màu xanh dương từ 3800 lên 4000 (chỉ hiển thị 38.2% = 3923.6) và bộ nhỏ màu cam từ 3880 lên 4000 (chỉ hiển thị 61.8% = 3925.8). Hai đường nằm sát nhau được bao bởi dải tím 'Fibonacci cluster 3923–3926'. Giá giảm vào dải và bật lên."
+  - part: 10
+    title: "Kế hoạch giao dịch Fibonacci và quản lý vốn"
+    objective: "Ghép tất cả thành một quy trình giao dịch theo xu hướng bằng Fibonacci với quản lý rủi ro cụ thể."
+    key_points:
+      - "Bước 1: xác định xu hướng khung lớn bằng cấu trúc HH/HL hoặc LH/LL; bước 2: chọn nhịp sóng gần nhất và vẽ Fibonacci thoái lui."
+      - "Bước 3: đánh dấu vùng 38,2–61,8% có hợp lưu; bước 4: chờ tín hiệu nến hoặc CHoCH khung nhỏ trong vùng."
+      - "Bước 5: SL dưới 78,6% hoặc đáy nhịp, TP tại đỉnh cũ và mức mở rộng 127,2–161,8%; chỉ vào nếu R:R tối thiểu khoảng 1:2."
+      - "Rủi ro cố định 0,5–1% mỗi lệnh; ghi lại mức Fibonacci nào cho phản ứng tốt nhất trên từng tài sản để điều chỉnh dần."
+    example: "Ví dụ giả định: tài khoản 3.000 USD, rủi ro 1% = 30 USD. Mua XAUUSD tại 3945 sau Pin bar ở vùng 50–61,8%, SL 3930 (15 USD giá). 0,01 lot lỗ 15 USD, vậy khối lượng 0,02 lot. TP1 4000, TP2 4027."
+    mistakes:
+      - "Dùng Fibonacci để bắt đáy ngược xu hướng khung lớn."
+      - "Không ghi nhật ký nên không biết mức nào hiệu quả với vàng, mức nào hiệu quả với EURUSD."
+    visual:
+      type: checklist
+      idea: "Checklist 5 bước có biểu tượng: '1. Xu hướng khung lớn ✓', '2. Chọn nhịp & vẽ Fibo ✓', '3. Vùng 38.2–61.8% có hợp lưu ✓', '4. Tín hiệu nến/CHoCH ✓', '5. SL dưới 78.6%, TP 0% & 127.2%, R:R ≥ 1:2, rủi ro ≤ 1% ✓'. Bên phải là biểu đồ thu nhỏ minh họa đủ 5 bước."
+sources:
+  - "https://www.cmegroup.com/education/courses/technical-analysis/fibonacci-retracements-and-extensions"
+  - "https://www.youtube.com/watch?v=tM1o5Zii0qI"
+  - "https://www.youtube.com/watch?v=pSweRYG17bo"
+  - "https://www.youtube.com/watch?v=TrbA2RgAnVI"
+  - "https://www.youtube.com/watch?v=VFIRA8fI1To"
+  - "https://www.babypips.com/learn/forex/fibonacci-retracement"
+  - "https://www.forextime.com/vi/education/forex-tutorials/retracement-in-forex-trading"
+  - "https://finashark.vn/trading-blog/cach-ve-fibonacci-thoai-lui-va-mo-rong-dung-chuan.html"
+  - "https://hollowpointtrading.substack.com/p/a-traders-complete-field-guide-to"
+  - "https://chartswatcher.com/pages/blog/master-fibonacci-retracement-and-extension-levels"

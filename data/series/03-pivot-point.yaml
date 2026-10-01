@@ -1,0 +1,169 @@
+id: pivot-point
+name: "Pivot Point và những điều cần biết"
+level: "Trung cấp"
+description: "Giúp người đọc tự tính và hiểu các loại Pivot Point (Classic, Fibonacci, Woodie, Camarilla, CPR), biết khi nào giao dịch bật lại, khi nào giao dịch phá vỡ quanh các mức pivot trên XAUUSD và EURUSD."
+lessons:
+  - part: 1
+    title: "Pivot Point là gì và vì sao nhiều người dùng?"
+    objective: "Hiểu nguồn gốc, ý nghĩa của Pivot Point và lý do nó được trader trong ngày theo dõi rộng rãi."
+    key_points:
+      - "Pivot Point (điểm xoay) là một bộ mức giá hỗ trợ – kháng cự được tính bằng công thức từ giá cao nhất, thấp nhất và đóng cửa của phiên trước."
+      - "Phương pháp bắt nguồn từ các nhà giao dịch sàn (floor traders) trên thị trường hàng hóa và chứng khoán, dùng để có nhanh bản đồ giá cho phiên mới."
+      - "Vì là công thức cố định, mọi người dùng cùng dữ liệu đều thấy cùng mức; điều này khiến pivot có tính 'tự hiện thực hóa' một phần."
+      - "Bộ pivot cơ bản gồm điểm trung tâm PP, ba mức kháng cự R1–R3 phía trên và ba mức hỗ trợ S1–S3 phía dưới."
+    example: "Ví dụ giả định: đầu phiên Á, trader nhìn biểu đồ XAUUSD đã có sẵn PP, R1, S1 tính từ phiên hôm qua. Thay vì tự kẻ hỗ trợ – kháng cự, họ biết ngay các mức cần quan sát trong ngày."
+    mistakes:
+      - "Nghĩ rằng pivot là chỉ báo dự đoán hướng đi; thực chất nó chỉ là bản đồ các mức giá đáng chú ý."
+      - "Dùng pivot mà không hiểu nó tính từ dữ liệu nào, dẫn đến lấy sai mức."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến trong ngày với 7 đường ngang nằm ngang suốt phiên: PP màu vàng ở giữa, R1, R2, R3 màu đỏ phía trên, S1, S2, S3 màu xanh phía dưới, mỗi đường có nhãn ở mép phải. Giá dao động, chạm S1 bật lên và dừng ở R1. Tiêu đề: 'Bản đồ giá của phiên mới'."
+  - part: 2
+    title: "Công thức Pivot Classic và cách tự tính"
+    objective: "Tự tính được bộ pivot Classic từ dữ liệu phiên trước."
+    key_points:
+      - "PP = (High + Low + Close) ÷ 3, dùng giá cao, thấp, đóng cửa của phiên trước."
+      - "R1 = 2 × PP − Low; S1 = 2 × PP − High."
+      - "R2 = PP + (High − Low); S2 = PP − (High − Low)."
+      - "R3 = High + 2 × (PP − Low); S3 = Low − 2 × (High − PP)."
+      - "Với forex và vàng, ngày giao dịch thường được tính kết thúc lúc 17:00 giờ New York; nếu máy chủ sàn đặt giờ khác, nến ngày và pivot có thể lệch nhau."
+    example: "Ví dụ giả định EURUSD hôm qua: High 1.0900, Low 1.0800, Close 1.0870. PP = (1.0900 + 1.0800 + 1.0870) ÷ 3 ≈ 1.0857. R1 ≈ 1.0913, S1 ≈ 1.0813, R2 ≈ 1.0957, S2 ≈ 1.0757, R3 ≈ 1.1013, S3 ≈ 1.0713."
+    mistakes:
+      - "Lấy dữ liệu từ nến ngày của sàn có giờ máy chủ không khớp 17:00 New York, tạo thêm nến Chủ nhật làm sai pivot thứ Hai."
+      - "Nhầm Close với Open khi thay vào công thức."
+    visual:
+      type: formula
+      idea: "Bảng công thức hai cột. Cột trái các dòng công thức: PP = (H + L + C) / 3; R1 = 2PP − L; S1 = 2PP − H; R2 = PP + (H − L); S2 = PP − (H − L); R3 = H + 2(PP − L); S3 = L − 2(H − PP). Cột phải là kết quả với ví dụ H 1.0900, L 1.0800, C 1.0870: PP 1.0857, R1 1.0913, S1 1.0813, R2 1.0957, S2 1.0757, R3 1.1013, S3 1.0713."
+  - part: 3
+    title: "Pivot ngày, tuần, tháng: chọn khung nào?"
+    objective: "Chọn loại pivot phù hợp với phong cách giao dịch và khung biểu đồ."
+    key_points:
+      - "Pivot ngày (daily) tính từ dữ liệu ngày hôm trước, phù hợp giao dịch trong ngày trên khung M15–H1."
+      - "Pivot tuần (weekly) tính từ dữ liệu tuần trước, phù hợp giao dịch vài ngày trên khung H1–H4."
+      - "Pivot tháng (monthly) tính từ dữ liệu tháng trước, dùng cho giao dịch dài hơn trên khung H4–D1."
+      - "Khi mức pivot ngày trùng hoặc rất gần mức pivot tuần/tháng, vùng đó thường được chú ý hơn (hợp lưu)."
+    example: "Ví dụ giả định: S1 ngày của XAUUSD là 3952, còn PP tuần là 3949. Vùng 3949–3952 là vùng hợp lưu đáng chờ phản ứng hơn so với S2 ngày đứng một mình."
+    mistakes:
+      - "Dùng pivot tháng để giao dịch lướt M5, khiến các mức quá xa giá."
+      - "Bật cùng lúc pivot ngày, tuần, tháng với đủ loại công thức khiến biểu đồ quá nhiều đường."
+    visual:
+      type: chart
+      idea: "Biểu đồ H1 XAUUSD với các đường pivot ngày nét mảnh (PP, S1, R1) và pivot tuần nét dày (PP tuần). Vùng S1 ngày 3952 và PP tuần 3949 gần nhau được tô vàng nhạt, nhãn 'Hợp lưu pivot ngày + tuần'. Giá giảm vào vùng này và bật lên, mũi tên xanh."
+  - part: 4
+    title: "Đọc thiên hướng thị trường quanh mức PP"
+    objective: "Dùng vị trí giá so với PP để đánh giá thiên hướng mua hay bán trong phiên."
+    key_points:
+      - "Giá mở phiên và duy trì phía trên PP thường được hiểu là thiên hướng tăng trong ngày; duy trì phía dưới PP là thiên hướng giảm."
+      - "PP thường đóng vai trò 'nam châm' khi thị trường đi ngang, giá dao động qua lại quanh nó."
+      - "Khi giá cắt PP nhiều lần trong phiên, thị trường đang thiếu hướng; nên giảm giao dịch hoặc chuyển sang chiến lược biên độ."
+      - "Thiên hướng theo PP chỉ là một gợi ý; nó cần được đối chiếu với xu hướng ở khung lớn."
+    example: "Ví dụ giả định: PP ngày của EURUSD là 1.0857. Phiên Âu mở ở 1.0870, giá hồi về 1.0859 rồi bật lên mà không đóng nến H1 dưới PP. Trader nghiêng về các lệnh mua với mục tiêu R1 1.0913."
+    mistakes:
+      - "Bán chỉ vì giá dưới PP trong khi xu hướng D1 đang tăng mạnh."
+      - "Coi mỗi lần giá chạm PP là tín hiệu vào lệnh."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột. Trái 'Thiên hướng tăng': giá mở trên đường PP vàng, hồi chạm PP rồi đi lên về R1, mũi tên xanh. Phải 'Thiếu hướng': giá cắt qua lại đường PP 5 lần, các dấu X nhỏ tại giao điểm, nhãn 'Đứng ngoài hoặc đánh biên độ'."
+  - part: 5
+    title: "Chiến lược bật lại tại S1 và R1"
+    objective: "Biết cách giao dịch đảo chiều tại các mức hỗ trợ – kháng cự pivot khi thị trường đi ngang."
+    key_points:
+      - "Trong ngày biên độ hẹp, giá thường dao động giữa S1 và R1; chiến lược bật lại (bounce) mua gần S1, bán gần R1."
+      - "Nên chờ tín hiệu từ chối như Pin bar hoặc nhấn chìm trên M15–H1 tại mức pivot, không đặt lệnh mù."
+      - "Cắt lỗ đặt vượt qua mức pivot một khoảng hợp lý, hoặc gần mức pivot kế tiếp; chốt lời phổ biến là PP hoặc mức đối diện."
+      - "Chiến lược này hoạt động kém trong ngày có tin mạnh hoặc xu hướng rõ, khi giá dễ xuyên qua S1/R1."
+    example: "Ví dụ giả định: XAUUSD có S1 3952, PP 3970. Giá giảm về 3953 tạo Pin bar M30 với bóng tới 3948. Mua tại 3956, SL 3944, TP1 tại PP 3970 (lợi nhuận 14 so với rủi ro 12)."
+    mistakes:
+      - "Bắt đáy tại S1 trong ngày đã có tin CPI làm giá giảm thẳng đứng."
+      - "Đặt SL sát ngay dưới S1, dễ bị quét."
+    visual:
+      type: chart
+      idea: "Biểu đồ M30 với 3 đường ngang: R1 đỏ, PP vàng, S1 xanh. Giá giảm về S1 tạo Pin bar (khoanh tròn), mũi tên mua, đường SL đỏ nét đứt dưới S1, đường TP ở PP. Sau đó giá lên chạm R1 tạo nến nhấn chìm giảm, mũi tên bán. Nhãn 'Biên độ S1 – R1'."
+  - part: 6
+    title: "Chiến lược phá vỡ mức pivot"
+    objective: "Biết khi nào nên giao dịch theo hướng phá vỡ R1/S1 thay vì chờ bật lại."
+    key_points:
+      - "Khi giá đóng cửa rõ ràng vượt R1 (hoặc thủng S1) với nến mạnh, thị trường có thể đang vào ngày xu hướng; mục tiêu kế tiếp thường là R2 (hoặc S2)."
+      - "Cách vào an toàn hơn là chờ giá retest mức vừa phá; R1 bị phá có thể trở thành hỗ trợ."
+      - "Phá vỡ có xác suất tốt hơn khi trùng hướng xu hướng khung lớn, hoặc xảy ra vào phiên có thanh khoản cao như mở cửa London, New York."
+      - "R3/S3 thường chỉ bị chạm trong ngày biến động bất thường; nhiều trader dùng chúng làm mức chốt lời hoặc cảnh báo quá đà."
+    example: "Ví dụ giả định: EURUSD có R1 1.0913, R2 1.0957. Phiên London, nến H1 đóng 1.0925, sau đó giá hồi về 1.0915 và giữ được. Mua tại 1.0918, SL 1.0898, TP gần R2 tại 1.0952."
+    mistakes:
+      - "Vào phá vỡ khi chỉ có bóng nến chọc qua R1."
+      - "Vẫn bán tại R1 theo thói quen trong ngày giá đã phá vỡ và đi xu hướng mạnh."
+    visual:
+      type: chart
+      idea: "Biểu đồ H1 với PP, R1, R2. Giá tăng, nến xanh lớn đóng vượt R1 (nhãn 'Breakout'), giá quay lại chạm R1 từ phía trên (nhãn 'Retest – R1 thành hỗ trợ'), sau đó đi lên gần R2. Mũi tên mua tại retest, đường SL dưới R1, đường TP dưới R2."
+  - part: 7
+    title: "Pivot Fibonacci và pivot Woodie"
+    objective: "Hiểu công thức và điểm khác biệt của hai biến thể pivot phổ biến."
+    key_points:
+      - "Pivot Fibonacci dùng cùng PP = (H + L + C) ÷ 3, nhưng các mức được tính bằng PP ± 0,382, 0,618 và 1,000 lần biên độ (H − L) của phiên trước."
+      - "Pivot Woodie đặt trọng số lớn hơn cho giá đóng cửa: PP = (H + L + 2 × C) ÷ 4; R1 = 2 × PP − L, S1 = 2 × PP − H."
+      - "Một số phiên bản Woodie dùng giá mở cửa của phiên hiện tại thay cho giá đóng cửa phiên trước; các nền tảng có thể khác nhau, nên kiểm tra cài đặt."
+      - "Không có biến thể nào 'đúng nhất'; quan trọng là chọn một loại và theo dõi phản ứng giá đủ lâu."
+    example: "Ví dụ giả định XAUUSD hôm qua: H 4050, L 4000, C 4040. Fibonacci: PP = 4030, R1 ≈ 4049,1, R2 ≈ 4060,9, R3 = 4080, S1 ≈ 4010,9, S2 ≈ 3999,1, S3 = 3980. Woodie: PP = 4032,5, R1 = 4065, S1 = 4015."
+    mistakes:
+      - "Trộn mức của nhiều loại pivot trên cùng biểu đồ mà không biết đường nào là của loại nào."
+      - "Nghĩ rằng pivot Fibonacci tốt hơn chỉ vì có 'Fibonacci' trong tên."
+    visual:
+      type: formula
+      idea: "Bảng so sánh 2 cột. Cột 'Fibonacci Pivot': PP = (H+L+C)/3; R1 = PP + 0.382×(H−L); R2 = PP + 0.618×(H−L); R3 = PP + 1.000×(H−L); S1–S3 tương tự với dấu trừ. Cột 'Woodie Pivot': PP = (H+L+2C)/4; R1 = 2PP − L; S1 = 2PP − H; R2 = PP + (H−L); S2 = PP − (H−L). Dòng cuối là kết quả với ví dụ H 4050, L 4000, C 4040."
+  - part: 8
+    title: "Pivot Camarilla: H3/L3 đảo chiều, H4/L4 phá vỡ"
+    objective: "Hiểu công thức Camarilla và cách sử dụng phổ biến cho giao dịch ngắn hạn."
+    key_points:
+      - "Camarilla tính các mức xoay quanh giá đóng cửa phiên trước: H(n) = C + (H − L) × 1,1 ÷ k và L(n) = C − (H − L) × 1,1 ÷ k, với k = 12, 6, 4, 2 cho mức 1, 2, 3, 4."
+      - "Các mức Camarilla nằm gần giá hơn pivot Classic, nên được ưa dùng cho giao dịch lướt sóng trong ngày."
+      - "Cách dùng phổ biến: giá chạm H3 thì tìm bán đảo chiều, chạm L3 thì tìm mua; giá phá vỡ rõ H4 thì theo hướng tăng, thủng L4 thì theo hướng giảm."
+      - "Nhiều nền tảng bổ sung H5/L5 với công thức riêng; các tài liệu không thống nhất về mức này."
+    example: "Ví dụ giả định XAUUSD hôm qua: H 4050, L 4000, C 4040, biên độ × 1,1 = 55. H3 = 4040 + 55 ÷ 4 = 4053,75; L3 = 4026,25; H4 = 4040 + 55 ÷ 2 = 4067,5; L4 = 4012,5. Giá chạm 4054 và tạo nến từ chối: cân nhắc bán, SL trên H4."
+    mistakes:
+      - "Bán tại H3 trong khi giá đã phá vỡ H4 với nến rất mạnh."
+      - "Áp dụng Camarilla cho giao dịch nhiều ngày, trong khi nó được thiết kế cho biên độ trong ngày."
+    visual:
+      type: chart
+      idea: "Biểu đồ M15 với 4 đường trên H1–H4 và 4 đường dưới L1–L4, khoảng giữa H3 và L3 tô xám nhạt nhãn 'Vùng đảo chiều'. Ở một đoạn giá chạm H3 rồi quay xuống (mũi tên đỏ 'Bán tại H3'); ở đoạn khác giá phá vượt H4 bằng nến xanh lớn (mũi tên xanh 'Breakout H4')."
+  - part: 9
+    title: "CPR và hợp lưu pivot với công cụ khác"
+    objective: "Biết đọc Vùng pivot trung tâm (CPR) và kết hợp pivot với xu hướng, đường trung bình hoặc vùng cung cầu."
+    key_points:
+      - "CPR (Central Pivot Range) gồm ba đường: PP = (H + L + C) ÷ 3, BC = (H + L) ÷ 2 và TC = 2 × PP − BC; nếu TC thấp hơn BC thì hoán đổi tên hai đường."
+      - "CPR hẹp thường được hiểu là phiên trước tích lũy, phiên mới có khả năng đi xu hướng; CPR rộng gợi ý phiên đi ngang. Đây là quan sát thực nghiệm, không phải quy luật."
+      - "Mức pivot đáng tin hơn khi trùng với yếu tố khác: đỉnh đáy cũ, số tròn, EMA 50, vùng cung cầu hay mức Fibonacci."
+      - "Hãy dùng pivot như bản đồ và các công cụ khác như bộ lọc, không cộng thêm chỉ báo chỉ để có thêm tín hiệu."
+    example: "Ví dụ giả định XAUUSD: H 4050, L 4000, C 4040. BC = 4025, PP = 4030, TC = 4035; CPR rộng 10 USD, khá hẹp so với biên độ 50 USD. Nếu S1 Classic 4010 trùng với vùng cầu H1 4008–4012, đây là vùng mua đáng chú ý."
+    mistakes:
+      - "Thêm 5–6 chỉ báo để 'xác nhận' khiến tín hiệu luôn mâu thuẫn và trễ."
+      - "Kết luận ngày xu hướng chỉ dựa vào CPR hẹp mà không xem lịch tin tức."
+    visual:
+      type: chart
+      idea: "Biểu đồ M30 có dải CPR tô tím nhạt gồm 3 đường TC, PP, BC ở giữa; phía dưới có đường S1 xanh trùng với hộp xanh nhạt 'Vùng cầu H1' và đường EMA 50 màu cam đi qua cùng khu vực, nhãn 'Hợp lưu: S1 + vùng cầu + EMA 50'. Mũi tên xanh giá bật lên từ đó."
+  - part: 10
+    title: "Kế hoạch giao dịch với Pivot và quản lý rủi ro"
+    objective: "Xây một quy trình giao dịch trong ngày với pivot, có quy tắc cắt lỗ, khối lượng và thời điểm tránh giao dịch."
+    key_points:
+      - "Trước phiên: xác định xu hướng H4/D1, ghi lại PP, S1, R1, S2, R2 (hoặc H3/L3, H4/L4) và đánh dấu vùng hợp lưu."
+      - "Trong phiên: giá trên PP và thuận xu hướng thì ưu tiên mua tại retest PP/S1 hoặc phá vỡ R1; ngược lại cho lệnh bán."
+      - "SL đặt ngoài mức pivot kế tiếp hoặc ngoài cấu trúc giá; rủi ro mỗi lệnh cố định khoảng 0,5–1% tài khoản."
+      - "Đứng ngoài 15–30 phút quanh tin mạnh (Non-Farm, CPI, Fed) và đóng hoặc giảm lệnh cuối ngày vì pivot được tính lại cho phiên mới."
+    example: "Ví dụ giả định: tài khoản 1.000 USD, rủi ro 1% = 10 USD. Mua XAUUSD tại retest S1 3956, SL 3946 (10 USD giá). 0,01 lot lỗ 10 USD nếu chạm SL, nên chọn 0,01 lot; TP1 tại PP 3970, TP2 tại R1."
+    mistakes:
+      - "Tiếp tục giao dịch các mức pivot cũ sang ngày hôm sau khi bộ pivot đã thay đổi."
+      - "Tăng khối lượng vì thấy 'mức pivot rất mạnh'."
+    visual:
+      type: checklist
+      idea: "Checklist hai phần. 'Trước phiên': ô tích 'Xu hướng H4/D1', 'Ghi PP, S1, R1, S2, R2', 'Đánh dấu hợp lưu', 'Kiểm tra lịch tin'. 'Trong phiên': ô tích 'Giá trên/dưới PP?', 'Bật lại hay phá vỡ?', 'SL ngoài mức pivot kế tiếp', 'Rủi ro ≤ 1%'. Biểu tượng đồng hồ với chú thích 'Pivot tính lại mỗi ngày lúc 17:00 New York'."
+sources:
+  - "https://www.babypips.com/learn/forex/how-to-calculate-pivot-points"
+  - "https://www.youtube.com/watch?v=CniaInMpugI"
+  - "https://www.youtube.com/watch?v=KMrWZ3QbTfY"
+  - "https://www.youtube.com/watch?v=TMv1wJsU5lA"
+  - "https://www.actionforex.com/markets/pivot-points/pivot-point-forumlas/"
+  - "https://www.tradingpedia.com/forex-trading-indicators/fibonacci-pivot-points-demark-calculation/"
+  - "https://www.luxalgo.com/library/concept/woodie-pivots/"
+  - "https://medium.com/@anoobpaul/pivot-points-and-central-pivot-range-cpr-using-python-04c0a613738c"
+  - "https://www.strike.money/technical-analysis/pivot-points"
+  - "https://www.tradingsim.com/blog/pivot-points"
+  - "https://www.litefinance.org/blog/for-beginners/best-technical-indicators/pivot-point/"
+  - "https://tradersentiments.com/tools/pivot-point-calculator"

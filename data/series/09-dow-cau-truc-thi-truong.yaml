@@ -1,0 +1,165 @@
+id: dow-cau-truc-thi-truong
+name: "Lý thuyết Dow & cấu trúc thị trường"
+level: "Cơ bản"
+description: "Giúp trader đọc xu hướng bằng đỉnh và đáy theo Lý thuyết Dow, nhận diện phá vỡ cấu trúc và đảo chiều, rồi dùng cấu trúc đa khung thời gian để lập kế hoạch giao dịch."
+lessons:
+  - part: 1
+    title: "Lý thuyết Dow là gì và vì sao vẫn còn dùng"
+    objective: "Nắm được nguồn gốc và 6 nguyên lý cốt lõi của Lý thuyết Dow (Dow Theory)."
+    key_points:
+      - "Lý thuyết Dow được đúc kết từ các bài viết của Charles Dow (đồng sáng lập Wall Street Journal) cuối thế kỷ 19, sau đó được những người kế tục hệ thống hóa."
+      - "Sáu nguyên lý: thị trường phản ánh tất cả; có ba loại xu hướng; xu hướng chính có ba giai đoạn; các chỉ số phải xác nhận nhau; khối lượng xác nhận xu hướng; xu hướng tiếp diễn cho đến khi có tín hiệu đảo chiều rõ ràng."
+      - "Phần lớn khái niệm 'cấu trúc thị trường' (market structure) hiện đại như đỉnh cao hơn, đáy cao hơn đều bắt nguồn từ Dow."
+      - "Lý thuyết gốc viết cho chỉ số cổ phiếu Mỹ; khi áp dụng cho forex và vàng, trader chủ yếu dùng phần định nghĩa xu hướng bằng đỉnh–đáy."
+    example: "Ví dụ: trên biểu đồ ngày XAUUSD, nếu mỗi đợt tăng vượt đỉnh trước và mỗi đợt điều chỉnh dừng trên đáy trước, theo Dow đó là xu hướng tăng và được giả định tiếp diễn cho đến khi chuỗi này bị phá."
+    mistakes:
+      - "Cho rằng lý thuyết cũ thì không còn giá trị, trong khi nhiều phương pháp mới chỉ là cách gọi khác của nó."
+      - "Áp dụng máy móc nguyên lý 'các chỉ số xác nhận nhau' của cổ phiếu sang forex mà không điều chỉnh."
+    visual:
+      type: checklist
+      idea: "Danh sách đánh số 6 nguyên lý của Lý thuyết Dow, mỗi dòng một biểu tượng nhỏ: 1. Giá phản ánh tất cả; 2. Ba loại xu hướng; 3. Ba giai đoạn của xu hướng chính; 4. Chỉ số xác nhận nhau; 5. Khối lượng xác nhận; 6. Xu hướng tiếp diễn đến khi đảo chiều rõ ràng."
+  - part: 2
+    title: "Ba cấp xu hướng: chính, thứ cấp và nhỏ"
+    objective: "Phân biệt xu hướng chính (primary), điều chỉnh thứ cấp (secondary) và dao động nhỏ (minor)."
+    key_points:
+      - "Xu hướng chính kéo dài nhiều tháng đến nhiều năm, giống thủy triều."
+      - "Xu hướng thứ cấp là các đợt điều chỉnh ngược chiều kéo dài vài tuần đến vài tháng, thường hồi lại khoảng 1/3 đến 2/3 đợt trước, giống những con sóng."
+      - "Dao động nhỏ kéo dài vài ngày đến vài tuần, giống gợn sóng, dễ bị nhiễu."
+      - "Với trader ngày nay, có thể quy đổi tương đối: khung tuần/ngày ≈ chính, H4 ≈ thứ cấp, H1 trở xuống ≈ nhỏ."
+    example: "Ví dụ giả định: vàng tăng dài hạn trên khung tuần (xu hướng chính), trong đó có đợt giảm 6 tuần từ 2.450 về 2.300 (điều chỉnh thứ cấp), và trong mỗi tuần có những nhịp lên xuống 20–30 USD (dao động nhỏ)."
+    mistakes:
+      - "Nhầm một đợt điều chỉnh thứ cấp là đảo chiều xu hướng chính."
+      - "Giao dịch theo dao động nhỏ trên M5 mà không biết xu hướng lớn đang đi đâu."
+    visual:
+      type: chart
+      idea: "Đường giá zigzag đi lên dài (xu hướng chính, mũi tên xanh lớn), có một đoạn giảm vừa ở giữa (điều chỉnh thứ cấp, khung chữ nhật cam), phóng to một đoạn nhỏ cho thấy các gợn sóng ngắn (dao động nhỏ). Nhãn ba cấp tương ứng 'Thủy triều – Sóng – Gợn sóng'."
+  - part: 3
+    title: "Ba giai đoạn của một xu hướng chính"
+    objective: "Nhận biết giai đoạn tích lũy, tham gia đại chúng và phân phối trong một xu hướng."
+    key_points:
+      - "Tích lũy (accumulation): giá đi ngang ở vùng thấp sau đợt giảm dài, dòng tiền hiểu biết âm thầm mua vào khi tin tức còn xấu."
+      - "Tham gia đại chúng (public participation): giá tăng rõ ràng, tin tức tốt dần, trader theo xu hướng tham gia; đây thường là giai đoạn dài và dễ giao dịch nhất."
+      - "Phân phối (distribution): giá tăng chậm lại, biến động lớn, tin tức rất lạc quan; người mua sớm bán dần cho người đến muộn."
+      - "Các giai đoạn chỉ rõ ràng khi nhìn lại; lúc đang diễn ra, trader nên dựa vào cấu trúc đỉnh–đáy để hành động."
+    example: "Ví dụ giả định trên EURUSD: giá đi ngang 1,0500–1,0600 suốt 2 tháng (tích lũy), sau đó tăng mạnh lên 1,1200 với các đỉnh đáy cao dần (đại chúng), rồi dao động rộng 1,1150–1,1280 không tạo đỉnh mới rõ ràng (phân phối)."
+    mistakes:
+      - "Mua đuổi ở giai đoạn phân phối vì tin tức đang tốt nhất."
+      - "Cố đoán đáy trong giai đoạn tích lũy mà không chờ cấu trúc xác nhận."
+    visual:
+      type: chart
+      idea: "Đường giá hình chữ S: vùng đi ngang thấp (tô xanh nhạt, nhãn 'Tích lũy'), đoạn tăng dốc với đỉnh đáy cao dần (tô xanh đậm, nhãn 'Tham gia đại chúng'), vùng đi ngang cao biến động mạnh (tô đỏ nhạt, nhãn 'Phân phối'). Mũi tên chỉ thời điểm tin tức xấu nhất và tốt nhất."
+  - part: 4
+    title: "Xác định đỉnh và đáy dao động (swing)"
+    objective: "Biết cách đánh dấu đỉnh dao động (swing high) và đáy dao động (swing low) một cách nhất quán."
+    key_points:
+      - "Swing high là cây nến có đỉnh cao hơn các nến xung quanh; một quy tắc phổ biến là cao hơn ít nhất 2 nến bên trái và 2 nến bên phải."
+      - "Swing low là cây nến có đáy thấp hơn các nến xung quanh theo cùng quy tắc."
+      - "Đỉnh đáy có ý nghĩa là những điểm tạo ra một nhịp đẩy (impulse) rõ ràng, không phải mọi răng cưa nhỏ."
+      - "Mỗi người có thể dùng quy tắc khác nhau (2 nến, 3 nến, hay dùng giá đóng cửa); quan trọng là dùng nhất quán trên cùng một khung."
+    example: "Ví dụ trên XAUUSD H1: giá lên 2.415 rồi 2 nến sau đều có đỉnh thấp hơn, 2 nến trước cũng thấp hơn → 2.415 là swing high. Giá giảm về 2.398 và bật lên với 2 nến hai bên có đáy cao hơn → 2.398 là swing low."
+    mistakes:
+      - "Đánh dấu quá nhiều đỉnh đáy nhỏ trên khung thấp nên thấy xu hướng 'đổi chiều' liên tục."
+      - "Mỗi lần nhìn biểu đồ lại dùng một cách xác định đỉnh đáy khác."
+    visual:
+      type: pattern
+      idea: "Cận cảnh 7 cây nến: cây giữa có râu trên cao nhất, đánh dấu chấm đỏ và nhãn 'Swing High', 2 nến bên trái và 2 nến bên phải đánh số 1–2. Bên cạnh là cụm 5 nến với cây giữa thấp nhất, chấm xanh và nhãn 'Swing Low'."
+  - part: 5
+    title: "Xu hướng tăng, giảm và đi ngang theo cấu trúc"
+    objective: "Phân loại thị trường bằng chuỗi HH-HL, LH-LL và vùng đi ngang (range)."
+    key_points:
+      - "Xu hướng tăng: đỉnh sau cao hơn đỉnh trước (higher high – HH) và đáy sau cao hơn đáy trước (higher low – HL)."
+      - "Xu hướng giảm: đỉnh thấp hơn (lower high – LH) và đáy thấp hơn (lower low – LL)."
+      - "Đi ngang: các đỉnh và đáy dao động trong một vùng, không tạo HH-HL hay LH-LL rõ ràng."
+      - "Xác định trạng thái thị trường trước, sau đó mới chọn chiến lược: theo xu hướng hay giao dịch biên độ."
+    example: "Ví dụ trên EURUSD H4: đáy 1,0800 → đỉnh 1,0880 → đáy 1,0840 (HL) → đỉnh 1,0920 (HH) → đáy 1,0870 (HL). Chuỗi này xác nhận xu hướng tăng trên H4."
+    mistakes:
+      - "Gọi là xu hướng tăng chỉ vì giá hôm nay cao hơn hôm qua."
+      - "Áp dụng chiến lược theo xu hướng trong khi thị trường đang đi ngang."
+    visual:
+      type: chart
+      idea: "Ba biểu đồ nhỏ xếp ngang: (1) zigzag đi lên với nhãn HL, HH, HL, HH, mũi tên xanh; (2) zigzag đi xuống với nhãn LH, LL, LH, LL, mũi tên đỏ; (3) zigzag nằm giữa hai đường ngang song song, nhãn 'Range'."
+  - part: 6
+    title: "Phá vỡ cấu trúc (BOS): xu hướng tiếp diễn"
+    objective: "Nhận diện phá vỡ cấu trúc (Break of Structure – BOS) để xác nhận xu hướng còn tiếp diễn."
+    key_points:
+      - "Trong xu hướng tăng, BOS xảy ra khi giá vượt lên trên swing high gần nhất, tạo HH mới."
+      - "Trong xu hướng giảm, BOS xảy ra khi giá thủng swing low gần nhất, tạo LL mới."
+      - "Nhiều trader yêu cầu nến đóng cửa vượt mức đỉnh/đáy thay vì chỉ râu nến chạm qua; đây là lựa chọn cá nhân nhưng nên thống nhất."
+      - "Sau BOS, đáy (hoặc đỉnh) tạo ra nhịp phá vỡ trở thành mức cấu trúc quan trọng cần bảo vệ."
+    example: "Ví dụ XAUUSD H1: đang tăng, swing high gần nhất 2.420. Một nến H1 đóng cửa tại 2.426 → BOS tăng. Đáy 2.405 trước nhịp phá vỡ trở thành HL cần giữ."
+    mistakes:
+      - "Coi một râu nến quét qua đỉnh rồi đóng cửa ngược lại là BOS."
+      - "Đánh dấu BOS trên khung M5 rồi kết luận xu hướng ngày đã thay đổi."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến xu hướng tăng: đường ngang nét đứt tại swing high 2.420, một nến xanh đóng cửa vượt lên, nhãn 'BOS' trên đường. Đáy 2.405 trước đó đánh dấu 'HL – mức cần giữ' bằng đường ngang xanh."
+  - part: 7
+    title: "Thay đổi tính chất (CHoCH) và đảo chiều"
+    objective: "Phân biệt dấu hiệu đầu tiên của đảo chiều (Change of Character – CHoCH) với tín hiệu đảo chiều được xác nhận."
+    key_points:
+      - "Trong xu hướng tăng, CHoCH là khi giá thủng HL gần nhất, lần đầu tiên phá chuỗi đáy cao dần."
+      - "Theo cách hiểu kinh điển của Dow, đảo chiều được xác nhận khi sau đó giá hồi lên tạo LH và tiếp tục thủng đáy, tức đủ cặp LH-LL."
+      - "CHoCH là cảnh báo để thận trọng, giảm vị thế hoặc ngừng mua, chưa phải lệnh bắt buộc đảo chiều."
+      - "Thuật ngữ BOS/CHoCH phổ biến trong cộng đồng price action hiện đại; sách kinh điển chỉ gọi là 'phá vỡ chuỗi đỉnh đáy'."
+    example: "Ví dụ giả định EURUSD H4: xu hướng tăng với HL 1,0870. Giá thủng 1,0870 (CHoCH), hồi lên 1,0905 nhưng không vượt đỉnh cũ 1,0930 (LH), rồi giảm thủng 1,0850 (LL) → đảo chiều giảm được xác nhận."
+    mistakes:
+      - "Bán ngay khi thấy CHoCH đầu tiên, trong khi đó có thể chỉ là điều chỉnh sâu."
+      - "Chờ quá nhiều xác nhận đến mức vào lệnh ở cuối đợt giảm."
+    visual:
+      type: chart
+      idea: "Zigzag tăng với HH, HL, sau đó giá thủng HL cuối (nhãn 'CHoCH', chấm cam), hồi lên dưới đỉnh cũ (nhãn 'LH'), rồi giảm thủng đáy mới (nhãn 'LL – xác nhận đảo chiều', chấm đỏ). Đường ngang nét đứt tại các mức bị phá."
+  - part: 8
+    title: "Phân tích đa khung thời gian theo cấu trúc"
+    objective: "Biết cách kết hợp cấu trúc khung lớn và khung nhỏ để chọn hướng và điểm vào lệnh."
+    key_points:
+      - "Khung lớn (ví dụ D1/H4) xác định hướng giao dịch chính; khung nhỏ (H1/M15) dùng để tìm điểm vào."
+      - "Tỷ lệ khung phổ biến là khoảng 1:4 đến 1:6, ví dụ D1 – H4 – H1 hoặc H4 – H1 – M15."
+      - "Điều chỉnh giảm trên khung nhỏ thường chỉ là nhịp hồi HL trên khung lớn; chờ khung nhỏ BOS ngược lại theo hướng khung lớn để vào lệnh."
+      - "Khi khung lớn đi ngang, nên giảm kỳ vọng hoặc chuyển sang giao dịch biên độ."
+    example: "Ví dụ XAUUSD: H4 đang tăng (HH-HL). Giá điều chỉnh về gần HL của H4, trên H1 tạo LH-LL. Khi H1 phá lên swing high gần nhất (BOS tăng trên H1), trader xem xét mua với cắt lỗ dưới đáy H1 vừa tạo."
+    mistakes:
+      - "Bán theo xu hướng giảm của M15 trong khi H4 đang ở giữa một xu hướng tăng mạnh."
+      - "Dùng quá nhiều khung thời gian đến mức tín hiệu mâu thuẫn và tê liệt."
+    visual:
+      type: chart
+      idea: "Hai khung song song: trái là H4 xu hướng tăng với vùng HL tô xanh; phải là H1 phóng to vùng đó, giá giảm LH-LL rồi phá lên swing high gần nhất (nhãn 'BOS H1 – điểm vào'), mũi tên mua và đường SL dưới đáy H1."
+  - part: 9
+    title: "Vào lệnh, cắt lỗ và chốt lời theo cấu trúc"
+    objective: "Dùng đỉnh đáy cấu trúc để đặt điểm vào, cắt lỗ và mục tiêu có logic."
+    key_points:
+      - "Điểm vào phổ biến: vào khi giá hồi về vùng HL (trong xu hướng tăng) và có tín hiệu xác nhận, hoặc vào khi BOS trên khung nhỏ."
+      - "Cắt lỗ đặt sau đỉnh/đáy cấu trúc gần nhất cộng thêm một khoảng đệm (ví dụ theo spread hoặc một phần ATR)."
+      - "Chốt lời có thể đặt tại swing high trước đó, tại mức R cố định, hoặc dời cắt lỗ theo từng HL mới (trailing theo cấu trúc)."
+      - "Nếu khoảng cách từ điểm vào đến cấu trúc quá xa, giảm khối lượng để giữ nguyên số tiền rủi ro."
+    example: "Ví dụ giả định GBPUSD H1 xu hướng tăng: HL tại 1,2700, vào lệnh mua 1,2720 khi H1 BOS, cắt lỗ 1,2690 (dưới HL 10 pip đệm), mục tiêu đỉnh cũ 1,2780 → R:R 1:2. Khi giá tạo HL mới 1,2745, dời cắt lỗ xuống dưới mức đó."
+    mistakes:
+      - "Đặt cắt lỗ ngay tại đáy cấu trúc, không có khoảng đệm, nên dễ bị quét."
+      - "Đặt cắt lỗ cố định 20 pip cho mọi lệnh bất kể cấu trúc nằm ở đâu."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến xu hướng tăng: mũi tên mua tại 1,2720, đường SL đỏ tại 1,2690 dưới HL 1,2700, đường TP xanh tại đỉnh cũ 1,2780, nhãn 'R:R 1:2'. Thêm một HL mới 1,2745 với mũi tên cho thấy dời SL lên."
+  - part: 10
+    title: "Kế hoạch giao dịch theo cấu trúc thị trường"
+    objective: "Tổng hợp series thành một quy trình từng bước để phân tích và giao dịch theo cấu trúc."
+    key_points:
+      - "Bước 1: trên D1/H4 đánh dấu swing high/low, xác định trạng thái tăng, giảm hay đi ngang."
+      - "Bước 2: đánh dấu mức cấu trúc quan trọng (HL gần nhất trong xu hướng tăng, LH gần nhất trong xu hướng giảm) – nơi xu hướng bị coi là sai nếu thủng."
+      - "Bước 3: trên H1/M15 chờ giá về vùng cấu trúc và có BOS theo hướng khung lớn để vào lệnh."
+      - "Bước 4: đặt cắt lỗ sau cấu trúc, tính khối lượng theo % rủi ro, chọn cách chốt lời; dừng mua khi khung lớn xuất hiện CHoCH."
+    example: "Ví dụ kế hoạch giả định cho XAUUSD: H4 tăng, HL then chốt 2.380. Kịch bản: nếu giá về 2.385–2.395 và H1 BOS tăng → mua, SL 2.376, TP đỉnh H4 2.440, rủi ro 1%. Nếu H4 đóng cửa dưới 2.380 → hủy kịch bản mua, chờ cấu trúc mới."
+    mistakes:
+      - "Nhảy thẳng xuống khung nhỏ tìm điểm vào mà bỏ qua bước xác định xu hướng khung lớn."
+      - "Không xác định trước mức giá khiến kịch bản bị vô hiệu."
+    visual:
+      type: checklist
+      idea: "Sơ đồ 4 bước dạng checklist có mũi tên: ☐ 1. D1/H4: xu hướng? ☐ 2. Mức cấu trúc then chốt ☐ 3. H1/M15: chờ BOS theo hướng lớn ☐ 4. SL sau cấu trúc, khối lượng theo % rủi ro, TP tại đỉnh/đáy cũ. Góc dưới: 'Khung lớn CHoCH → dừng'."
+sources:
+  - "https://www.luxalgo.com/library/concept/dow-theory/"
+  - "https://www.strike.money/technical-analysis/dow-theory"
+  - "https://fxfoundations.com/learn/technical-analysis/market-structure"
+  - "https://www.vrdnation.com/market-structure-hh-hl-lh-ll-explained/"
+  - "https://trendllylab.com/learning/technical-analysis/dow-theory-market-trends/"
+  - "https://www.youtube.com/watch?v=UXW1o6Gdq6I"
+  - "https://www.youtube.com/watch?v=U5DTamH28N0"
+  - "https://www.youtube.com/watch?v=OoDviKm9MgY"
+  - "https://www.youtube.com/watch?v=79RCybRsAuw"

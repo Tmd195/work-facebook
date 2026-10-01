@@ -1,0 +1,192 @@
+id: bill-williams
+name: "Hệ thống Bill Williams: Alligator, Fractals, AO"
+level: "Trung cấp"
+description: "Giúp trader hiểu và áp dụng bộ công cụ của Bill Williams (Alligator, Fractals, Awesome Oscillator, Accelerator) cùng ba tín hiệu vào lệnh 'Three Wise Men' để giao dịch theo xu hướng có quy tắc rõ ràng."
+lessons:
+  - part: 1
+    title: "Tổng quan hệ thống Bill Williams"
+    objective: "Hiểu các thành phần của hệ thống và vai trò của từng công cụ."
+    key_points:
+      - "Bill Williams là trader và tác giả nổi tiếng với các sách 'Trading Chaos' và 'New Trading Dimensions'; hệ thống còn được gọi là Profitunity."
+      - "Các công cụ chính: Alligator (xác định xu hướng), Fractals (xác định điểm phá vỡ), Awesome Oscillator - AO (động lượng), Accelerator Oscillator - AC (gia tốc động lượng)."
+      - "Ý tưởng chung: thị trường phần lớn thời gian đi ngang; chỉ giao dịch khi xu hướng 'thức dậy' và tham gia theo hướng đó."
+      - "Các công cụ này có sẵn trên MT4/MT5 và TradingView, mặc định dùng giá trung vị (High + Low) / 2."
+    example: "Ví dụ giả định: trên EURUSD H4, Alligator xác định xu hướng tăng, Fractal xác định mức phá vỡ 1,0880, AO trên 0 xác nhận động lượng tăng."
+    mistakes:
+      - "Dùng riêng lẻ một công cụ mà bỏ qua các công cụ còn lại trong hệ thống."
+      - "Thêm quá nhiều chỉ báo khác vào hệ thống vốn đã đầy đủ."
+    visual:
+      type: checklist
+      idea: "Sơ đồ 4 khối: 'Alligator → Xu hướng', 'Fractals → Điểm phá vỡ', 'AO → Động lượng', 'AC → Gia tốc'. Mũi tên nối tất cả vào khối trung tâm 'Quyết định vào lệnh'."
+  - part: 2
+    title: "Alligator: hàm, răng và môi"
+    objective: "Nắm cấu tạo và tham số mặc định của Alligator."
+    key_points:
+      - "Hàm (Jaw - xanh dương): SMMA 13 của giá trung vị, dịch về phía trước 8 nến."
+      - "Răng (Teeth - đỏ): SMMA 8, dịch 5 nến; Môi (Lips - xanh lá): SMMA 5, dịch 3 nến."
+      - "SMMA (Smoothed Moving Average) là trung bình động làm mượt, phản ứng chậm hơn SMA cùng chu kỳ."
+      - "Việc dịch đường về tương lai giúp giảm tín hiệu giả nhưng khiến Alligator phản ứng chậm hơn."
+    example: "Ví dụ giả định: trên XAUUSD H1, khi giá tăng, Môi (xanh lá) đi lên đầu tiên, rồi đến Răng (đỏ), cuối cùng là Hàm (xanh dương)."
+    mistakes:
+      - "Dùng EMA thay cho SMMA hoặc quên dịch đường rồi tưởng là cùng chỉ báo."
+      - "Hiểu sai thứ tự đường dẫn đến đọc ngược xu hướng."
+    visual:
+      type: formula
+      idea: "Bảng 3 dòng: 'Hàm (xanh dương): SMMA 13, dịch 8'; 'Răng (đỏ): SMMA 8, dịch 5'; 'Môi (xanh lá): SMMA 5, dịch 3'. Bên dưới hình minh họa con cá sấu nhỏ với ba đường có màu tương ứng."
+  - part: 3
+    title: "Alligator ngủ, thức dậy, ăn và no"
+    objective: "Đọc trạng thái thị trường qua vị trí ba đường Alligator."
+    key_points:
+      - "Ngủ: ba đường đan xen, nằm sát nhau → thị trường đi ngang, không giao dịch."
+      - "Thức dậy: các đường bắt đầu tách ra, Môi cắt qua Răng và Hàm → xu hướng có thể bắt đầu."
+      - "Ăn: ba đường xếp đúng thứ tự và mở rộng (tăng: Môi > Răng > Hàm; giảm: Môi < Răng < Hàm), giá nằm ngoài miệng → xu hướng mạnh."
+      - "No: các đường hội tụ trở lại → xu hướng yếu đi, chuẩn bị chốt lời."
+    example: "Ví dụ giả định: EURUSD H4 đi ngang 1,0800-1,0840 với ba đường đan xen; sau đó Môi cắt lên trên Răng và Hàm, các đường tách ra và giá tăng lên 1,0920."
+    mistakes:
+      - "Vào lệnh khi Alligator đang ngủ."
+      - "Giữ lệnh khi các đường đã hội tụ và bắt đầu đan xen trở lại."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD H4 chia 4 giai đoạn có nhãn: 'Ngủ' (ba đường đan xen, giá đi ngang), 'Thức dậy' (đường bắt đầu tách), 'Ăn' (ba đường xếp xanh lá > đỏ > xanh dương, mở rộng, giá tăng), 'No' (đường hội tụ lại). Các vạch dọc phân chia giai đoạn."
+  - part: 4
+    title: "Fractals: đỉnh và đáy 5 nến"
+    objective: "Nhận diện Fractal và hiểu cách dùng nó làm mức phá vỡ."
+    key_points:
+      - "Fractal tăng (up fractal): nến giữa có High cao hơn High của 2 nến bên trái và 2 nến bên phải."
+      - "Fractal giảm (down fractal): nến giữa có Low thấp hơn Low của 2 nến hai bên."
+      - "Fractal chỉ được xác nhận sau khi 2 nến bên phải đã đóng cửa, nên luôn trễ ít nhất 2 nến."
+      - "Trong hệ thống, lệnh mua chờ (buy stop) đặt trên up fractal nằm trên Răng của Alligator; lệnh bán chờ (sell stop) dưới down fractal nằm dưới Răng."
+    example: "Ví dụ giả định: XAUUSD H1 có 5 nến với High lần lượt 2.402, 2.405, 2.411, 2.407, 2.404 → nến thứ ba là up fractal tại 2.411; đặt buy stop tại 2.411,5."
+    mistakes:
+      - "Coi fractal là đỉnh/đáy ngay khi nến giữa vừa hình thành, chưa đủ 2 nến bên phải."
+      - "Giao dịch phá vỡ fractal nằm bên trong miệng Alligator."
+    visual:
+      type: pattern
+      idea: "Cận cảnh 5 nến: nến giữa có High cao nhất, mũi tên nhỏ phía trên ghi 'Up fractal'; nhóm 5 nến khác với nến giữa có Low thấp nhất, mũi tên phía dưới 'Down fractal'. Ghi chú '2 nến bên phải phải đóng cửa mới xác nhận'."
+  - part: 5
+    title: "Awesome Oscillator: đo động lượng"
+    objective: "Hiểu công thức AO và các tín hiệu cơ bản."
+    key_points:
+      - "AO = SMA 5 của giá trung vị − SMA 34 của giá trung vị, hiển thị dạng histogram."
+      - "Cột xanh khi giá trị AO cao hơn cột trước, cột đỏ khi thấp hơn cột trước."
+      - "AO cắt lên trên 0 cho thấy động lượng ngắn hạn mạnh hơn dài hạn theo hướng tăng; cắt xuống dưới 0 ngược lại."
+      - "Phân kỳ giữa hai đỉnh AO và đỉnh giá cảnh báo động lượng suy yếu."
+    example: "Ví dụ giả định: EURUSD có SMA 5 trung vị = 1,0875, SMA 34 trung vị = 1,0855 → AO = 0,0020 (dương), cột xanh nếu cột trước nhỏ hơn."
+    mistakes:
+      - "Nghĩ cột đỏ trên 0 nghĩa là xu hướng giảm; nó chỉ có nghĩa động lượng đang chậm lại."
+      - "Vào lệnh ngay khi AO đổi màu một cột."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến EURUSD H4 phía trên, histogram AO phía dưới: các cột đỏ dưới 0, chuyển xanh, cắt lên trên 0 (nhãn 'Cắt 0'), cột xanh cao dần rồi xuất hiện cột đỏ trên 0 (nhãn 'Động lượng chậm lại'). Công thức AO ghi góc trên."
+  - part: 6
+    title: "Accelerator Oscillator: đo gia tốc"
+    objective: "Hiểu AC và cách dùng AC để xác nhận thêm."
+    key_points:
+      - "AC = AO − SMA 5 của AO; đo xem động lượng đang tăng tốc hay giảm tốc."
+      - "Theo quy tắc gốc, AC thường đổi hướng trước AO, và AO thường đổi hướng trước giá."
+      - "Tín hiệu mua phổ biến: trên 0 cần 2 cột xanh liên tiếp; dưới 0 cần 3 cột xanh liên tiếp (tương tự ngược lại cho bán)."
+      - "Không mua khi AC đang đỏ, không bán khi AC đang xanh."
+    example: "Ví dụ giả định: XAUUSD H1, AC dưới 0 xuất hiện 3 cột xanh liên tiếp trong khi Alligator vừa thức dậy theo hướng tăng → xác nhận thêm cho lệnh mua."
+    mistakes:
+      - "Dùng AC như tín hiệu chính, trong khi nó chỉ là công cụ xác nhận."
+      - "Đếm sai số cột yêu cầu theo vị trí trên/dưới 0."
+    visual:
+      type: chart
+      idea: "Khung chỉ báo AC: các cột đỏ dưới 0, sau đó 3 cột xanh liên tiếp vẫn dưới 0 (nhãn '3 cột xanh dưới 0 = mua'), và một ví dụ khác 2 cột xanh trên 0 (nhãn '2 cột xanh trên 0'). Phía trên là nến XAUUSD tương ứng."
+  - part: 7
+    title: "Wise Man 1: nến đảo chiều phân kỳ"
+    objective: "Nhận diện tín hiệu thứ nhất - nến đảo chiều phân kỳ (divergent bar)."
+    key_points:
+      - "Nến tăng phân kỳ (bullish divergent bar): có đáy thấp hơn nến trước nhưng đóng cửa ở nửa trên của nến."
+      - "Tín hiệu mạnh hơn khi nến nằm hoàn toàn dưới miệng Alligator và cách xa các đường."
+      - "Đặt buy stop trên High của nến tín hiệu; dừng lỗ dưới Low của nến; nếu giá phá Low trước khi kích hoạt thì hủy lệnh."
+      - "Tín hiệu bán ngược lại: đỉnh cao hơn, đóng cửa ở nửa dưới, nằm trên miệng Alligator."
+    example: "Ví dụ giả định: EURUSD H4 giảm về 1,0780, xuất hiện nến Low 1,0772 thấp hơn nến trước, đóng cửa 1,0795 (nửa trên), nằm dưới cả ba đường Alligator → buy stop 1,0802, SL 1,0770."
+    mistakes:
+      - "Mua ngay khi nến đóng cửa thay vì chờ giá vượt High của nến tín hiệu."
+      - "Lấy nến phân kỳ nằm bên trong miệng Alligator làm tín hiệu."
+    visual:
+      type: pattern
+      idea: "Cận cảnh: nhịp giảm 4 nến đỏ, nến tín hiệu có đáy thấp nhất và thân đóng cửa ở nửa trên (râu dưới dài), nằm dưới ba đường Alligator. Đường gạch trên High ghi 'Buy stop', đường dưới Low ghi 'SL'. Nhãn 'Wise Man 1'."
+  - part: 8
+    title: "Wise Man 2 và 3: AO saucer và phá Fractal"
+    objective: "Nhận diện tín hiệu thứ hai (AO) và thứ ba (Fractal) để vào lệnh hoặc nhồi thêm."
+    key_points:
+      - "Wise Man 2 - AO 'đĩa' (saucer) mua: AO trên 0, có một cột đỏ (hoặc chuỗi cột đỏ) rồi một cột xanh, tạo hình chiếc đĩa; đặt buy stop trên High của nến ứng với cột xanh."
+      - "AO cắt lên trên 0 cũng là một tín hiệu động lượng thuộc nhóm Wise Man 2."
+      - "Wise Man 3 - phá Fractal: giá vượt up fractal gần nhất nằm trên Răng của Alligator thì mua (ngược lại cho bán)."
+      - "Trong hệ thống gốc, các tín hiệu sau có thể dùng để thêm vị thế khi xu hướng tiếp diễn; người mới nên dùng khối lượng tổng không vượt quá giới hạn rủi ro."
+    example: "Ví dụ giả định: XAUUSD H1 đã mua theo Wise Man 1 ở 2.390; AO trên 0 tạo đĩa đỏ - xanh tại nến High 2.408 → buy stop 2.408,5; sau đó up fractal 2.415 nằm trên Răng bị phá → tín hiệu Wise Man 3."
+    mistakes:
+      - "Nhồi lệnh liên tục mà không dời dừng lỗ, làm rủi ro tổng tăng vọt."
+      - "Dùng phá fractal nằm dưới Răng làm tín hiệu mua."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD H1 xu hướng tăng với Alligator. Khung AO bên dưới khoanh hình đĩa (cột xanh - đỏ - xanh trên 0) nhãn 'Wise Man 2'. Trên biểu đồ giá đánh dấu up fractal trên Răng và mũi tên phá vỡ nhãn 'Wise Man 3'."
+  - part: 9
+    title: "Quản lý lệnh: dừng lỗ theo Alligator và Fractal"
+    objective: "Biết cách dời dừng lỗ và thoát lệnh theo hệ thống."
+    key_points:
+      - "Dừng lỗ ban đầu: dưới Low của nến tín hiệu (hoặc dưới down fractal gần nhất)."
+      - "Trailing stop phổ biến: dời dừng lỗ theo đường Răng (đỏ) hoặc theo down fractal mới hình thành bên dưới giá."
+      - "Bản thận trọng: thoát khi giá đóng cửa dưới Răng; bản nới lỏng hơn: thoát khi đóng cửa dưới Hàm (xanh dương)."
+      - "Chốt một phần khi có 5 cột AO hoặc AC cùng màu liên tiếp kèm giá đi xa Alligator - một dấu hiệu quá đà theo cách đọc phổ biến."
+    example: "Ví dụ giả định: lệnh mua EURUSD H4 từ 1,0802, SL 1,0770. Ba ngày sau Răng ở 1,0845 và down fractal gần nhất 1,0850 → dời SL lên 1,0844. Giá đóng cửa dưới Răng tại 1,0890 → thoát."
+    mistakes:
+      - "Dời dừng lỗ theo đường Môi quá sát, bị quét ở nhịp hồi nhỏ."
+      - "Không bao giờ dời dừng lỗ, để lệnh lãi quay về lỗ."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD H4 xu hướng tăng với Alligator, các bậc thang SL màu đỏ đi lên theo đường Răng và các down fractal (mũi tên nhỏ). Cuối cùng nến đóng cửa dưới Răng có nhãn 'Thoát lệnh'."
+  - part: 10
+    title: "Lọc tín hiệu theo khung lớn"
+    objective: "Tăng chất lượng tín hiệu bằng phân tích đa khung thời gian."
+    key_points:
+      - "Xác định hướng Alligator trên khung lớn (ví dụ D1 cho giao dịch H4, H4 cho giao dịch H1)."
+      - "Chỉ nhận tín hiệu Wise Man cùng hướng Alligator khung lớn đang 'ăn'."
+      - "Khi Alligator khung lớn đang ngủ, giảm khối lượng hoặc đứng ngoài."
+      - "Không cần quá 2 khung thời gian; nhiều hơn dễ gây mâu thuẫn và chần chừ."
+    example: "Ví dụ giả định: XAUUSD D1 có Alligator xếp tăng; trên H4 xuất hiện bearish divergent bar → bỏ qua; vài ngày sau bullish divergent bar dưới miệng Alligator H4 → nhận tín hiệu."
+    mistakes:
+      - "Bán theo tín hiệu H1 khi D1 đang tăng mạnh."
+      - "Chờ mọi khung thời gian cùng hướng nên không bao giờ vào lệnh."
+    visual:
+      type: compare
+      idea: "Hai ô: trái 'XAUUSD D1' với Alligator xếp tăng mở rộng (nhãn 'Đang ăn - tăng'); phải 'XAUUSD H4' với một tín hiệu bán bị gạch chéo 'Bỏ qua' và một tín hiệu mua có dấu tick 'Nhận'."
+  - part: 11
+    title: "Kế hoạch giao dịch Bill Williams hoàn chỉnh"
+    objective: "Tổng hợp các quy tắc thành một kế hoạch giao dịch cụ thể."
+    key_points:
+      - "Khung: H4 giao dịch, D1 định hướng; cặp XAUUSD, EURUSD, GBPUSD."
+      - "Vào lệnh: Alligator D1 đang 'ăn'; trên H4 có Wise Man 1 (nến phân kỳ ngoài miệng) hoặc Wise Man 3 (phá fractal ngoài Răng), AC không ngược màu."
+      - "Dừng lỗ: dưới Low nến tín hiệu hoặc down fractal; trailing theo Răng/fractal; thoát khi đóng cửa qua Răng hoặc Hàm."
+      - "Rủi ro tối đa 1% tổng cho mọi lệnh cùng hướng (kể cả lệnh nhồi); đánh giá lại sau mỗi 30 lệnh."
+    example: "Ví dụ giả định: GBPUSD D1 Alligator xếp giảm. Trên H4 xuất hiện nến giảm phân kỳ trên miệng Alligator, Low 1,2710 → sell stop 1,2708, SL 1,2745 (37 pip). Tài khoản 3.000 USD, rủi ro 1% = 30 USD → khoảng 0,08 lot."
+    mistakes:
+      - "Nhồi lệnh khiến rủi ro tổng vượt 2-3% tài khoản."
+      - "Bỏ qua bước kiểm tra lại trên dữ liệu quá khứ."
+    visual:
+      type: checklist
+      idea: "Checklist: 'D1: Alligator đang ăn', 'H4: Wise Man 1 hoặc 3 ngoài miệng', 'AC không ngược màu', 'SL: Low nến tín hiệu / fractal', 'Trailing: Răng hoặc fractal', 'Tổng rủi ro ≤ 1%'. Bên cạnh biểu đồ GBPUSD H4 nhỏ với Entry/SL."
+  - part: 12
+    title: "Giới hạn của hệ thống Bill Williams"
+    objective: "Hiểu điểm yếu và các điều kiện khiến hệ thống hoạt động kém."
+    key_points:
+      - "Alligator và AO đều dựa trên trung bình động nên trễ; thường vào sau khi một phần xu hướng đã chạy."
+      - "Thị trường đi ngang kéo dài tạo nhiều tín hiệu fractal phá vỡ giả."
+      - "Nến phân kỳ là tín hiệu bắt đảo chiều, nên tỷ lệ bị dừng lỗ có thể cao trong xu hướng mạnh ngược hướng."
+      - "Nhiều nghiên cứu kiểm tra độc lập cho thấy kết quả không đồng đều giữa các thị trường và giai đoạn; cần tự kiểm tra trên cặp mình giao dịch."
+    example: "Ví dụ giả định: EURUSD H4 đi ngang 3 tuần trong biên 80 pip; 6 lần phá fractal liên tiếp đều quay đầu, mỗi lần thua khoảng 1R."
+    mistakes:
+      - "Tin rằng hệ thống 'cổ điển' thì chắc chắn còn hiệu quả."
+      - "Đổ lỗi cho chỉ báo thay vì xem lại việc bỏ qua trạng thái Alligator ngủ."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Hiệu quả' (xu hướng rõ, Alligator mở rộng, phá fractal đi xa) và 'Kém hiệu quả' (đi ngang, đường đan xen, phá fractal giả liên tục, vào trễ). Biểu đồ minh họa nhỏ dưới mỗi cột."
+sources:
+  - "https://www.tradingview.com/scripts/alligator/"
+  - "https://admiralmarkets.com/education/articles/forex-basics/bill-williams"
+  - "https://hw.online/education/three-wise-men-and-the-alligator/"
+  - "https://www.forexfactory.com/thread/26044-profitunity-chaos-trading-system-by-bill-williams?page=73"
+  - "https://marketcheese.com/research/1067-the-effectiveness-of-the-profitunity-ts-by-bill-williams"
+  - "https://www.litefinance.org/blog/for-beginners/best-technical-indicators/alligator-indicator/"

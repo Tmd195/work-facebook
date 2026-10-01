@@ -1,0 +1,154 @@
+id: crt-candle-range-theory
+name: "Candle Range Theory (CRT)"
+level: "Chuyên sâu"
+description: "Giúp người đọc dùng range của một cây nến khung lớn làm bản đồ giao dịch: nhận diện cú quét đỉnh/đáy, giá quay lại trong range và vào lệnh ở khung nhỏ với rủi ro xác định."
+lessons:
+  - part: 1
+    title: "CRT là gì: mỗi cây nến là một range"
+    objective: "Hiểu ý tưởng cốt lõi của Candle Range Theory (CRT): range của một nến khung lớn là bản đồ cho các nến tiếp theo."
+    key_points:
+      - "CRT (Candle Range Theory) coi đỉnh và đáy của một cây nến khung lớn (D1, H4, H1…) là ranh giới của một vùng giao dịch (range)."
+      - "Phía trên đỉnh nến có thanh khoản mua (BSL), phía dưới đáy nến có thanh khoản bán (SSL) – giống range đi ngang nhưng gói trong một cây nến."
+      - "Tình huống CRT điển hình: nến sau quét một đầu của range rồi đóng cửa trở lại bên trong, hướng tới đầu còn lại."
+      - "CRT phát triển từ các ý tưởng ICT (thanh khoản, turtle soup, Power of 3) và có tính fractal – áp dụng được trên nhiều khung."
+    example: "Ví dụ giả định: nến H4 của XAUUSD có đỉnh 2.360, đáy 2.340. Range 2.340–2.360 trở thành bản đồ: quét trên 2.360 rồi quay lại → mục tiêu 2.340."
+    mistakes:
+      - "Nghĩ rằng mọi cây nến đều tạo setup CRT; chỉ nến có range rõ ràng ở vị trí quan trọng mới đáng theo dõi."
+    visual:
+      type: chart
+      idea: "Một cây nến H4 lớn được phóng to thành hộp chữ nhật; đường trên nhãn 'CRT High – BSL', đường dưới 'CRT Low – SSL'. Mũi tên giá ở nến sau quét lên trên đường trên rồi quay xuống về đường dưới."
+  - part: 2
+    title: "Giải phẫu range: CRT high, CRT low, 50%"
+    objective: "Đánh dấu chính xác các mức quan trọng trong range của nến tham chiếu."
+    key_points:
+      - "CRT high và CRT low là đỉnh và đáy tính cả râu của nến tham chiếu (nến 1)."
+      - "Mức 50% của range là điểm cân bằng: trên là premium, dưới là discount – thường là mục tiêu đầu tiên."
+      - "Giá mở và đóng của nến tham chiếu cũng là các mốc phụ khi giá phản ứng bên trong range."
+      - "Range càng lớn so với các nến xung quanh và nằm tại vùng then chốt khung lớn thì càng đáng giao dịch."
+    example: "Ví dụ giả định: nến D1 EURUSD có đỉnh 1,0900, đáy 1,0800 → 50% = 1,0850. Nếu giá quét trên 1,0900 rồi quay lại, mục tiêu 1 là 1,0850, mục tiêu 2 là 1,0800."
+    mistakes:
+      - "Chỉ dùng thân nến làm range, bỏ mất phần râu nơi chứa thanh khoản."
+    visual:
+      type: formula
+      idea: "Một cây nến D1 lớn đứng cạnh thang giá: CRT High 1,0900 | 50% (EQ) 1,0850 | CRT Low 1,0800. Tô nửa trên đỏ nhạt 'Premium', nửa dưới xanh nhạt 'Discount'. Công thức: 50% = (High + Low) ÷ 2."
+  - part: 3
+    title: "Purge: quét đỉnh/đáy và đóng lại trong range"
+    objective: "Nhận diện điều kiện purge hợp lệ của CRT."
+    key_points:
+      - "Purge (sweep) là khi nến 2 vượt qua CRT high hoặc CRT low của nến 1, lấy thanh khoản ở đó."
+      - "Điều kiện then chốt: nến 2 đóng cửa trở lại bên trong range của nến 1 – cho thấy cú vượt không được chấp nhận."
+      - "Nếu nến 2 đóng cửa bên ngoài range, đó là phá vỡ (breakout), không phải setup CRT đảo chiều."
+      - "Râu quét càng dài và đóng cửa càng sâu vào range thì tín hiệu từ chối càng rõ."
+    example: "Ví dụ giả định: nến 1 H4 XAUUSD range 2.340–2.360. Nến 2 lên 2.366 rồi đóng 2.352 (trong range) → purge hợp lệ. Nếu nến 2 đóng 2.364 thì không phải CRT."
+    mistakes:
+      - "Vào lệnh khi nến 2 chưa đóng cửa, chỉ vì thấy giá vừa vượt đỉnh."
+    visual:
+      type: compare
+      idea: "Hai cột cận cảnh 2 nến. Trái 'Purge hợp lệ': nến 2 có râu trên vượt đường CRT High, thân đóng dưới đường, dấu tích. Phải 'Breakout': nến 2 đóng thân trên đường CRT High, dấu X."
+  - part: 4
+    title: "Turtle soup trong CRT"
+    objective: "Hiểu turtle soup – bẫy phá vỡ giả – và vai trò của nó trong CRT."
+    key_points:
+      - "Turtle soup là chiến lược giao dịch ngược lại các cú phá vỡ đỉnh/đáy thất bại: người mua breakout bị kẹt khi giá quay lại."
+      - "Trong CRT, nến quét range chính là pha turtle soup – tương ứng pha thao túng (manipulation) trong Power of 3."
+      - "Turtle soup có ý nghĩa hơn khi đỉnh/đáy bị quét là thanh khoản rõ ràng: đỉnh/đáy ngày trước, equal highs/lows, đỉnh/đáy phiên."
+      - "Người kẹt lệnh phải đóng lỗ theo hướng ngược lại, góp thêm lực cho nhịp quay về range."
+    example: "Ví dụ giả định: GBPUSD có đỉnh ngày trước 1,2750 trùng CRT high H4. Giá quét lên 1,2758, người mua breakout vào lệnh, rồi giá rơi về 1,2735 – họ bị kẹt, lệnh cắt lỗ đẩy giá xuống nhanh."
+    mistakes:
+      - "Gọi mọi râu nến vượt đỉnh là turtle soup mà không xét đó có phải thanh khoản quan trọng."
+    visual:
+      type: chart
+      idea: "Đường ngang 'PDH = CRT High'; râu nến vượt lên (nhãn 'Turtle soup'), biểu tượng người mua breakout bị kẹt phía trên; mũi tên giá đi xuống mạnh vào range, nhãn 'Stop của người mua kích hoạt'."
+  - part: 5
+    title: "Mô hình 3 nến: tích lũy, thao túng, phân phối"
+    objective: "Nắm mô hình CRT 3 nến cổ điển và ứng với AMD."
+    key_points:
+      - "Nến 1 (Accumulation): tạo range tham chiếu."
+      - "Nến 2 (Manipulation): quét CRT high hoặc CRT low rồi đóng lại trong range."
+      - "Nến 3 (Distribution): di chuyển về phía đầu đối diện của range nến 1 – mục tiêu chính của setup."
+      - "Điểm vào nằm trong nến 2 (sau khi purge xác nhận) hoặc đầu nến 3, tìm ở khung nhỏ hơn."
+    example: "Ví dụ giả định: D1 EURUSD. Nến thứ Hai range 1,0820–1,0880. Thứ Ba quét xuống 1,0805 và đóng 1,0840. Thứ Tư tăng lên 1,0885, chạm CRT high – đúng mô hình 3 nến tăng."
+    mistakes:
+      - "Kỳ vọng nến 3 luôn đi hết range; nhiều khi giá chỉ đạt 50%."
+    visual:
+      type: pattern
+      idea: "Ba nến D1 cạnh nhau đánh số 1-2-3 với nhãn A, M, D: nến 1 tạo hộp range, nến 2 có râu dưới dài xuyên qua đáy hộp rồi đóng trong hộp, nến 3 xanh chạy lên chạm đỉnh hộp. Mũi tên chỉ mục tiêu 'CRT High'."
+  - part: 6
+    title: "Biến thể CRT: 2 nến, inside bar, nhiều nến"
+    objective: "Nhận diện các biến thể khác của CRT để không bỏ lỡ hoặc hiểu sai setup."
+    key_points:
+      - "Mô hình 2 nến: nến 2 vừa quét vừa chạy ngay về đầu đối diện trong cùng một nến – thường gặp khi biến động cao."
+      - "Inside bar CRT: nến 2 nằm gọn trong range nến 1 (không quét); setup chỉ kích hoạt khi một nến sau đó quét range nến 1."
+      - "Nhiều nến tích lũy (multiple inside bars) trước cú quét thường tạo ra range chặt và thanh khoản tập trung hơn."
+      - "Trong mọi biến thể, nến 1 vẫn là bản đồ tham chiếu; chỉ thời điểm quét thay đổi."
+    example: "Ví dụ giả định: H4 XAUUSD nến 1 range 2.300–2.330; nến 2 và 3 là inside bar trong 2.308–2.322; nến 4 quét xuống 2.296 rồi đóng 2.312 → CRT kích hoạt, mục tiêu 2.330."
+    mistakes:
+      - "Lấy nhầm inside bar làm nến tham chiếu thay cho nến 1 có range lớn."
+    visual:
+      type: pattern
+      idea: "Ba cụm nến minh họa: (a) '2 nến' – nến 2 quét đáy rồi chạy lên đỉnh; (b) 'Inside bar' – nến 2 nhỏ nằm trong hộp nến 1, nến 3 mới quét; (c) 'Nhiều inside bar' – 3 nến nhỏ trong hộp rồi một nến quét. Hộp range nến 1 vẽ nét đứt cho cả ba."
+  - part: 7
+    title: "Căn chỉnh khung thời gian trong CRT"
+    objective: "Ghép đúng cặp khung thời gian: khung tham chiếu và khung vào lệnh."
+    key_points:
+      - "Cặp phổ biến: Tháng → Tuần/Ngày; Tuần → H4/Ngày; Ngày → H1/H4; H4 → M15; H1 → M5."
+      - "Khung lớn cho range và cú purge; khung nhỏ hơn dùng để tìm điểm vào (MSS, FVG, OB) trong lúc nến lớn đang quét."
+      - "CRT khung nhỏ cùng hướng với CRT khung lớn cho độ đồng thuận cao hơn."
+      - "Nên kiểm tra thêm hướng của nến tuần/ngày (bias) để chỉ lấy CRT cùng chiều."
+    example: "Ví dụ giả định: bias D1 GBPUSD tăng. Nến H4 01:00 NY quét đáy nến H4 trước tại 1,2650; trên M15 giá tạo MSS tăng ở 1,2662 → vào lệnh mua theo cặp H4 → M15."
+    mistakes:
+      - "Dùng khung vào lệnh quá gần khung tham chiếu (ví dụ H4 với H1), khó thấy cấu trúc bên trong cú quét."
+    visual:
+      type: formula
+      idea: "Bảng 2 cột 'Khung tham chiếu (range)' | 'Khung vào lệnh': Monthly | Weekly/Daily; Weekly | Daily/H4; Daily | H4/H1; H4 | M15; H1 | M5. Mũi tên từ cột trái sang phải, ghi chú 'chỉ lấy setup cùng bias'."
+  - part: 8
+    title: "Thời điểm then chốt: nến H4 và killzone"
+    objective: "Biết các cây nến và khung giờ mà cộng đồng CRT thường theo dõi, quy đổi sang giờ Việt Nam."
+    key_points:
+      - "Nhiều trader CRT theo dõi nến H4 mở lúc 01:00, 05:00 và 09:00 giờ NY – tương ứng 12:00, 16:00, 20:00 giờ VN khi Mỹ giờ mùa hè (13:00, 17:00, 21:00 khi giờ mùa đông)."
+      - "Lưu ý: nến H4 trên nền tảng của bạn phải được căn theo giờ NY; nếu server dùng giờ khác, hãy chỉnh múi giờ biểu đồ."
+      - "Cú purge có giá trị hơn khi xảy ra trong London killzone (02:00–05:00 NY) hoặc New York killzone (07:00–10:00 NY)."
+      - "Tránh vào lệnh sát tin lớn (CPI, NFP, FOMC) vì cú quét do tin có thể không quay lại range."
+    example: "Ví dụ giả định (giờ mùa hè): nến H4 EURUSD mở 05:00 NY (16:00 VN) quét đỉnh nến H4 trước lúc 08:15 NY (19:15 VN) trong NY killzone, sau đó M15 tạo MSS giảm – thời điểm phù hợp với CRT."
+    mistakes:
+      - "Không đồng bộ múi giờ biểu đồ nên đánh dấu sai nến H4."
+    visual:
+      type: chart
+      idea: "Trục thời gian một ngày chia 6 nến H4, đánh dấu nổi bật các nến mở 01:00, 05:00, 09:00 NY với giờ VN (hè/đông) bên dưới. Hai dải màu nhạt 'London KZ' và 'NY KZ' chồng lên trục."
+  - part: 9
+    title: "Vào lệnh khung nhỏ trong nến khung lớn"
+    objective: "Có quy trình cụ thể để vào lệnh khung nhỏ khi nến khung lớn đang purge."
+    key_points:
+      - "Bước 1: khi giá vượt CRT high/low, chuyển xuống khung vào lệnh và chờ – chưa đặt lệnh ngược tại đường."
+      - "Bước 2: chờ MSS (phá cấu trúc ngắn hạn) có displacement quay vào range."
+      - "Bước 3: vào lệnh tại FVG hoặc OB vừa tạo; dừng lỗ ngoài điểm cực của cú quét."
+      - "Bước 4: TP1 tại 50% range nến 1, TP2 tại đầu đối diện; nếu nến khung lớn đóng cửa ngoài range thì thoát lệnh."
+    example: "Ví dụ giả định: range H4 XAUUSD 2.340–2.360, giá quét lên 2.365. M15 phá đáy nội bộ 2.357, để lại FVG 2.358–2.361. Bán 2.360, SL 2.367, TP1 2.350, TP2 2.340 (R:R ≈ 1:1,4 và 1:2,9)."
+    mistakes:
+      - "Không thoát lệnh khi nến H4 đóng cửa trên CRT high, điều kiện setup đã mất."
+    visual:
+      type: chart
+      idea: "Hộp range H4 nền; bên trong đặt nến M15: nhịp lên vượt đường trên (nhãn 'Purge'), nến đỏ dài phá đáy nội bộ ('MSS'), hộp FVG đỏ, mũi tên bán. Đường SL trên đỉnh quét, TP1 ở 50%, TP2 ở CRT Low."
+  - part: 10
+    title: "Checklist CRT và quản lý rủi ro"
+    objective: "Tổng hợp mô hình CRT hoàn chỉnh và quy tắc quản lý vốn đi kèm."
+    key_points:
+      - "Checklist: bias khung lớn → nến tham chiếu ở vị trí quan trọng → purge thanh khoản rõ ràng → đóng lại trong range (hoặc MSS khung nhỏ) → entry FVG/OB trong killzone."
+      - "Rủi ro cố định 0,5–1%/lệnh; R:R tới TP2 nên từ 1:2 trở lên, nếu không thì bỏ qua."
+      - "Chốt một phần tại 50% range và dời SL về hòa vốn; thoát nếu nến khung lớn đóng ngoài range."
+      - "CRT có thể thất bại khi giá chuyển thành xu hướng mạnh – theo dõi số lần quét thất bại liên tiếp để nhận ra thị trường đang trending."
+    example: "Ví dụ giả định: tài khoản 4.000 USD, rủi ro 0,5% = 20 USD. Lệnh XAUUSD SL 7 giá → khối lượng = 20 ÷ (7 × 100) ≈ 0,028 → làm tròn xuống 0,02 lot (rủi ro thực tế 14 USD, không vượt kế hoạch)."
+    mistakes:
+      - "Giao dịch ngược xu hướng mạnh chỉ vì thấy râu quét đỉnh trên một nến."
+    visual:
+      type: checklist
+      idea: "Thẻ 5 bước có ô tích: Bias HTF | Nến tham chiếu tại vùng quan trọng | Purge + đóng trong range | MSS + FVG/OB khung nhỏ trong killzone | R:R ≥ 1:2. Góc dưới: công thức lot = rủi ro USD ÷ (SL × 100) cho XAUUSD."
+sources:
+  - "https://www.theinnercircletraders.com/candle-range-theory-crt-trading/"
+  - "https://www.theinnercircletraders.com/types-of-crt-candle-range-theory/"
+  - "https://www.ictkillzone.com/ict-crt"
+  - "https://grandalgo.com/blog/candle-range-theory-crt-explained"
+  - "https://www.tradingview.com/script/lEJTsZZ2-CRT-Trades-turtle-soup-A-M-D-ranges-with-inside-bars/"
+  - "https://www.slideshare.net/slideshow/candle-range-theory-crt-by-legacy-trading-pdf/283734795"
+  - "https://gist.ly/youtube-summarizer/mastering-crt-a-comprehensive-guide-to-candle-range-theory"
+  - "https://www.youtube.com/results?search_query=candle+range+theory+CRT"

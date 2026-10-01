@@ -1,0 +1,182 @@
+id: volume-profile
+name: "Volume Profile & Market Profile"
+level: "Chuyên sâu"
+description: "Giúp trader đọc phân bố khối lượng và thời gian theo từng mức giá để xác định vùng giá trị, hỗ trợ/kháng cự có cơ sở và lập kế hoạch giao dịch vàng, EURUSD."
+lessons:
+  - part: 1
+    title: "Volume Profile là gì: volume theo mức giá"
+    objective: "Hiểu Volume Profile hiển thị khối lượng theo mức giá thay vì theo thời gian."
+    key_points:
+      - "Volume truyền thống nằm dưới biểu đồ theo từng nến; Volume Profile là biểu đồ cột nằm ngang cho biết bao nhiêu khối lượng giao dịch ở mỗi mức giá."
+      - "Mức giá có nhiều giao dịch là nơi thị trường chấp nhận giá (giá 'công bằng'); mức ít giao dịch là nơi giá bị từ chối hoặc đi qua nhanh."
+      - "Có nhiều cách chọn phạm vi: theo phiên (session), theo vùng tự chọn (fixed range), hoặc hiển thị trong khung nhìn (visible range)."
+      - "Công cụ dựa trên ý tưởng đấu giá: giá di chuyển để tìm nơi cả người mua và người bán sẵn sàng giao dịch."
+    example: "Ví dụ giả định: trong một tuần, XAUUSD giao dịch từ 2.300 đến 2.380 nhưng gần một nửa khối lượng tập trung quanh 2.335–2.345. Vùng đó là nơi thị trường 'đồng ý' về giá trong tuần."
+    mistakes:
+      - "Nhầm Volume Profile với chỉ báo volume thông thường dưới biểu đồ."
+    visual:
+      type: compare
+      idea: "Hai cột: trái là biểu đồ nến với volume bars dọc bên dưới theo thời gian; phải là cùng biểu đồ đó nhưng có histogram ngang bên cạnh trục giá, các thanh dài nhất ở giữa vùng giá. Nhãn 'Volume theo thời gian' và 'Volume theo giá'."
+  - part: 2
+    title: "Dữ liệu nào cho vàng và EUR: GC và 6E"
+    objective: "Biết chọn nguồn dữ liệu phù hợp khi dùng Volume Profile cho thị trường giao ngay."
+    key_points:
+      - "Forex và vàng giao ngay không có volume tập trung; tick volume chỉ là số lần thay đổi giá tại một broker."
+      - "Hợp đồng tương lai vàng GC (COMEX) và euro 6E (CME) có volume thật, thường dùng làm dữ liệu chuẩn cho Volume Profile."
+      - "Giá futures lệch so với giá spot một khoản (basis) do lãi suất và kỳ hạn; cần quy đổi mức giá khi chuyển sang chart spot."
+      - "Hợp đồng có ngày đáo hạn, nên dùng hợp đồng liên tục hoặc hợp đồng đang có thanh khoản cao nhất."
+    example: "Ví dụ giả định: POC trên GC là 2.365 trong khi giá GC hiện tại cao hơn XAUUSD 15 giá. Quy đổi, POC tương ứng trên spot khoảng 2.350."
+    mistakes:
+      - "Lấy mức giá futures áp thẳng lên chart spot mà không trừ chênh lệch."
+    visual:
+      type: compare
+      idea: "Hai biểu đồ cạnh nhau: 'GC futures' và 'XAUUSD spot', cùng hình dạng profile nhưng trục giá lệch nhau; mũi tên nối POC hai bên với nhãn 'Chênh lệch basis ≈ 15 (giả định)'."
+  - part: 3
+    title: "POC – mức giá kiểm soát"
+    objective: "Hiểu POC (Point of Control) và vai trò nam châm/hỗ trợ/kháng cự của nó."
+    key_points:
+      - "POC là mức giá có khối lượng giao dịch lớn nhất trong phạm vi được chọn."
+      - "POC thể hiện mức giá thị trường coi là công bằng nhất; giá thường có xu hướng quay lại POC khi thị trường cân bằng."
+      - "Khi giá đã rời xa và POC chưa được chạm lại, nó có thể hoạt động như vùng hỗ trợ hoặc kháng cự."
+      - "POC dịch chuyển dần lên (hoặc xuống) qua các phiên cho thấy giá trị đang được chấp nhận theo hướng đó."
+    example: "Ví dụ giả định: POC phiên hôm qua của EURUSD là 1,0855; sáng nay giá mở cửa 1,0890 rồi giảm về đúng 1,0855 và bật lên, POC đóng vai trò hỗ trợ."
+    mistakes:
+      - "Coi POC là mức giá chính xác tới từng pip thay vì một vùng nhỏ."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến kèm Volume Profile bên phải; thanh dài nhất được tô đậm và kéo thành đường ngang nhãn 'POC'. Giá sau đó quay lại chạm đường POC và bật lên với mũi tên."
+  - part: 4
+    title: "Value Area 70%: VAH và VAL"
+    objective: "Hiểu vùng giá trị (Value Area) và hai biên VAH, VAL."
+    key_points:
+      - "Value Area là vùng giá chứa khoảng 70% khối lượng của phạm vi, xuất phát từ ý tưởng xấp xỉ một độ lệch chuẩn."
+      - "VAH (Value Area High) là biên trên, VAL (Value Area Low) là biên dưới của vùng giá trị."
+      - "Giá trong vùng giá trị = thị trường cân bằng; giá ngoài vùng = mất cân bằng, đang thăm dò giá mới."
+      - "Vùng giá trị được tính bằng cách bắt đầu từ POC và mở rộng dần lên/xuống theo phía có volume lớn hơn cho đến khi đạt 70%."
+    example: "Ví dụ giả định: phiên trước XAUUSD có VAH 2.362, POC 2.350, VAL 2.338. Hôm nay mở cửa ở 2.355, nằm trong vùng giá trị, thị trường có khả năng dao động cân bằng."
+    mistakes:
+      - "Nghĩ rằng con số 70% là quy luật tự nhiên; đây là quy ước có thể điều chỉnh."
+    visual:
+      type: chart
+      idea: "Volume Profile ngang với vùng 70% tô màu nhạt, hai đường ngang nhãn 'VAH' (trên) và 'VAL' (dưới), đường đậm 'POC' ở giữa. Chú thích '≈70% khối lượng'."
+  - part: 5
+    title: "HVN và LVN: vùng dày và vùng mỏng"
+    objective: "Nhận diện các nút khối lượng cao (HVN) và thấp (LVN) để dự đoán hành vi giá."
+    key_points:
+      - "HVN (High Volume Node) là vùng giá có khối lượng lớn, giá thường chậm lại, đi ngang và tạo hỗ trợ/kháng cự."
+      - "LVN (Low Volume Node) là vùng khối lượng thấp, giá thường đi qua nhanh hoặc bị từ chối mạnh."
+      - "LVN giữa hai HVN thường là ranh giới tốt để đặt điểm vào lệnh hoặc dừng lỗ."
+      - "Khi giá phá qua LVN, nó có xu hướng chạy nhanh tới HVN kế tiếp."
+    example: "Ví dụ giả định: profile tháng của EURUSD có HVN tại 1,0800 và 1,0950, LVN tại 1,0880. Giá vượt 1,0880 thường chạy nhanh lên vùng 1,0950."
+    mistakes:
+      - "Đặt dừng lỗ ngay trong vùng HVN, nơi giá thường dao động qua lại."
+    visual:
+      type: chart
+      idea: "Volume Profile có hai 'bướu' lớn (nhãn HVN) và một 'eo' hẹp ở giữa (nhãn LVN). Biểu đồ giá bên cạnh: giá đi ngang lâu ở HVN, vượt nhanh qua LVN với mũi tên dài."
+  - part: 6
+    title: "Hình dạng profile: P, b và D"
+    objective: "Đọc hình dạng profile để nhận biết trạng thái cân bằng hay mất cân bằng của phiên."
+    key_points:
+      - "Profile hình D (phân phối chuẩn): khối lượng tập trung ở giữa, thị trường cân bằng, thường đi ngang."
+      - "Profile hình P: khối lượng tập trung phía trên với đuôi mỏng bên dưới, thường do mua lên mạnh hoặc người bán khống đóng vị thế (short covering)."
+      - "Profile hình b: khối lượng tập trung phía dưới với đuôi mỏng bên trên, thường do người mua thoát vị thế (long liquidation)."
+      - "Hình dạng giúp đoán trạng thái phiên kế tiếp, nhưng cần kết hợp vị trí so với vùng giá trị trước đó."
+    example: "Ví dụ giả định: phiên New York của XAUUSD mở 2.330, tăng nhanh lên 2.360 rồi đi ngang ở 2.355–2.362 hết phiên: profile hình P."
+    mistakes:
+      - "Mặc định P là tín hiệu mua và b là tín hiệu bán mà không xét bối cảnh."
+    visual:
+      type: compare
+      idea: "Ba profile ngang cạnh nhau có nhãn 'P', 'D', 'b': P phình ở trên đuôi dưới mỏng, D phình ở giữa, b phình ở dưới đuôi trên mỏng. Dưới mỗi hình ghi trạng thái ngắn gọn."
+  - part: 7
+    title: "Market Profile: TPO và Initial Balance"
+    objective: "Hiểu Market Profile dựa trên thời gian (TPO) và khái niệm Initial Balance."
+    key_points:
+      - "Market Profile do J. Peter Steidlmayer phát triển cho sàn CBOT, ghi nhận thời gian giá ở mỗi mức bằng các chữ cái TPO (Time Price Opportunity)."
+      - "Mỗi chữ cái thường tương ứng một khoảng 30 phút; mức giá có nhiều chữ cái là nơi giá ở lâu nhất."
+      - "Initial Balance (IB) là biên độ của hai khoảng 30 phút đầu tiên (thường là giờ đầu phiên)."
+      - "Giá phá vỡ IB và duy trì cho thấy một bên đang mạnh hơn; giá ở trong IB cả ngày cho thấy phiên cân bằng."
+    example: "Ví dụ giả định: phiên New York của 6E có IB từ 1,0860 đến 1,0880. Sau 11 giờ giá vượt 1,0880 và giữ được, nhiều khả năng phiên mở rộng lên trên."
+    mistakes:
+      - "Nhầm POC theo TPO (thời gian) với POC theo volume; hai mức có thể khác nhau."
+    visual:
+      type: chart
+      idea: "Biểu đồ TPO dạng các chữ cái A, B, C, D... xếp theo hàng giá; hai cột đầu A và B được tô màu và kẻ biên nhãn 'Initial Balance'. Mũi tên chỉ chữ cái phá ra ngoài IB ở phía trên."
+  - part: 8
+    title: "Naked POC và vùng giá trị phiên trước"
+    objective: "Biết dùng naked POC và vùng giá trị phiên trước làm mức tham chiếu giao dịch."
+    key_points:
+      - "Naked POC (hay virgin POC) là POC của phiên trước chưa bị giá chạm lại; thường đóng vai trò nam châm hút giá."
+      - "Quy tắc 80% (theo Market Profile): nếu giá mở ngoài vùng giá trị phiên trước, quay vào và giữ trong vùng hai khoảng 30 phút, khả năng cao sẽ đi tới biên đối diện."
+      - "Mở cửa trên VAH và giữ được là dấu hiệu tăng; mở dưới VAL và giữ được là dấu hiệu giảm."
+      - "Các mức naked POC nhiều ngày có thể trùng nhau tạo vùng tham chiếu mạnh hơn."
+    example: "Ví dụ giả định: EURUSD mở phiên dưới VAL 1,0840, rồi quay vào trên 1,0840 và giữ trong 1 giờ. Mục tiêu tham khảo là VAH 1,0885; dừng lỗ dưới mức mở cửa."
+    mistakes:
+      - "Coi quy tắc 80% là xác suất chính xác 80% thay vì tên gọi của một kinh nghiệm thực hành."
+    visual:
+      type: chart
+      idea: "Hai phiên liền nhau: phiên trước có hộp vùng giá trị (VAH, VAL, POC); phiên sau mở dưới VAL rồi quay vào trong hộp, mũi tên đi lên tới VAH. Một đường POC cũ kéo dài sang phải nhãn 'Naked POC'."
+  - part: 9
+    title: "Cân bằng và mất cân bằng: lý thuyết đấu giá"
+    objective: "Hiểu chu kỳ cân bằng – mất cân bằng để quyết định giao dịch đảo chiều trong vùng hay theo breakout."
+    key_points:
+      - "Thị trường luân phiên giữa cân bằng (giá xoay quanh vùng giá trị) và mất cân bằng (giá rời vùng tìm giá trị mới)."
+      - "Khi cân bằng: chiến lược phù hợp là bán ở VAH, mua ở VAL, mục tiêu POC."
+      - "Khi mất cân bằng: theo hướng phá vỡ, vào lệnh khi giá kiểm tra lại biên vùng giá trị cũ."
+      - "Vùng giá trị các phiên chồng lên nhau = cân bằng; vùng giá trị dịch chuyển lên/xuống liên tục = xu hướng."
+    example: "Ví dụ giả định: 5 phiên XAUUSD có vùng giá trị chồng lấp ở 2.330–2.360 (cân bằng). Phiên thứ 6 đóng cửa 2.375 và vùng giá trị mới hình thành trên 2.365: chuyển sang mất cân bằng tăng."
+    mistakes:
+      - "Dùng chiến lược đi ngang khi thị trường đã bắt đầu xu hướng."
+    visual:
+      type: chart
+      idea: "Chuỗi profile theo ngày: 5 profile đầu chồng lấp trong cùng hộp nhãn 'Cân bằng', profile thứ 6 và 7 dịch lên trên nhãn 'Mất cân bằng – xu hướng', mũi tên đi lên nối các POC."
+  - part: 10
+    title: "Thiết lập 1: giao dịch trong vùng giá trị"
+    objective: "Áp dụng thiết lập đảo chiều tại biên vùng giá trị khi thị trường cân bằng."
+    key_points:
+      - "Điều kiện: vùng giá trị các phiên gần đây chồng lấp, không có tin lớn sắp ra."
+      - "Chờ giá chạm VAH/VAL hoặc HVN và xuất hiện nến từ chối (bóng dài, không đóng cửa ngoài vùng)."
+      - "Mục tiêu 1 là POC, mục tiêu 2 là biên đối diện; dừng lỗ ngoài LVN gần nhất phía sau biên."
+      - "Nếu giá đóng cửa và được chấp nhận ngoài vùng (nhiều nến/TPO), hủy kịch bản đảo chiều."
+    example: "Ví dụ giả định: EURUSD có VAL 1,0820, POC 1,0850, VAH 1,0880. Giá xuống 1,0822, nến H1 bóng dưới dài. Mua 1,0828, dừng lỗ 1,0805, chốt 1 tại 1,0850, chốt 2 tại 1,0875."
+    mistakes:
+      - "Đặt lệnh chờ đúng VAL mà không chờ dấu hiệu từ chối."
+    visual:
+      type: chart
+      idea: "Hộp vùng giá trị với VAH, POC, VAL; giá đi xuống chạm VAL tạo nến bóng dưới dài; ký hiệu Entry, SL dưới LVN, TP1 tại POC, TP2 gần VAH bằng các đường ngang có nhãn."
+  - part: 11
+    title: "Thiết lập 2: breakout và kiểm tra lại"
+    objective: "Áp dụng thiết lập theo xu hướng khi giá rời vùng giá trị và kiểm tra lại biên."
+    key_points:
+      - "Giá phá vỡ VAH/VAL với volume tăng và được chấp nhận bên ngoài là dấu hiệu mất cân bằng."
+      - "Điểm vào an toàn hơn là khi giá quay lại kiểm tra biên cũ (VAH thành hỗ trợ, VAL thành kháng cự) hoặc LVN."
+      - "Mục tiêu là HVN hoặc naked POC kế tiếp theo hướng phá vỡ."
+      - "Kết hợp xu hướng khung lớn: chỉ giao dịch breakout cùng chiều với vùng giá trị đang dịch chuyển."
+    example: "Ví dụ giả định: XAUUSD vượt VAH tuần 2.362 bằng nến H4 volume lớn, quay về 2.364 rồi bật lên. Mua 2.366, dừng lỗ 2.352 (dưới LVN), mục tiêu naked POC 2.395."
+    mistakes:
+      - "Mua đuổi ngay khi phá vỡ, bị cuốn vào cú phá vỡ giả quay lại vùng giá trị."
+    visual:
+      type: chart
+      idea: "Hộp vùng giá trị cũ; giá vượt lên trên VAH, quay xuống chạm VAH (nhãn 'Retest') rồi đi lên tới đường naked POC phía trên. Profile ngang bên phải cho thấy LVN ngay trên VAH."
+  - part: 12
+    title: "Kế hoạch giao dịch Profile và quản lý rủi ro"
+    objective: "Xây dựng quy trình chuẩn bị hằng ngày và quản lý rủi ro khi giao dịch theo Volume/Market Profile."
+    key_points:
+      - "Chuẩn bị trước phiên: đánh dấu VAH, VAL, POC phiên trước, naked POC, HVN/LVN khung tuần, và lịch tin kinh tế."
+      - "Xác định trạng thái: mở cửa trong hay ngoài vùng giá trị, cân bằng hay mất cân bằng, để chọn thiết lập 1 hoặc 2."
+      - "Rủi ro mỗi lệnh 0,5–1% tài khoản, dừng lỗ đặt sau LVN/biên vùng, không nới dừng lỗ."
+      - "Ghi nhật ký kèm ảnh profile để đánh giá thiết lập nào phù hợp với từng cặp và phiên."
+    example: "Ví dụ giả định: tài khoản 8.000 USD, rủi ro 0,75% = 60 USD. Lệnh mua EURUSD dừng lỗ 23 pip, khối lượng khoảng 0,26 lot; mục tiêu POC cách 22 pip và VAH cách 47 pip."
+    mistakes:
+      - "Vẽ quá nhiều profile và mức giá khiến biểu đồ rối, mức nào cũng thành 'hỗ trợ'."
+    visual:
+      type: checklist
+      idea: "Checklist chuẩn bị phiên: VAH/VAL/POC phiên trước ✓, Naked POC ✓, HVN/LVN tuần ✓, Lịch tin ✓, Trạng thái cân bằng? ✓, Chọn thiết lập ✓, Rủi ro ≤1% ✓. Bên cạnh là biểu đồ nhỏ đã kẻ sẵn các mức này."
+sources:
+  - "https://www.jumpstarttrading.com/volume-profile/"
+  - "https://tradingwyckoff.com/en/volume-profile-2/"
+  - "https://www.trader-dale.com/my-best-trading-strategy-learn-how-to-trade-using-volume-profile-and-poc/"
+  - "https://www.youtube.com/watch?v=4wVCtmv7OOQ"
+  - "https://www.youtube.com/watch?v=CrHdBH6yBJ8"
+  - "https://www.youtube.com/watch?v=O8bhSguZ9U4"
+  - "https://grandalgo.com/blog/market-profile-trading-explained"
+  - "https://help.quantower.com/quantower/analytics-panels/tpo-chart"

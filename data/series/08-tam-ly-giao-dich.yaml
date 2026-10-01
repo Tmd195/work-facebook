@@ -1,0 +1,163 @@
+id: tam-ly-giao-dich
+name: "Tâm lý giao dịch"
+level: "Trung cấp"
+description: "Giúp trader nhận diện các bẫy cảm xúc phổ biến, rèn tư duy xác suất và xây dựng thói quen, quy trình để thực thi hệ thống một cách kỷ luật."
+lessons:
+  - part: 1
+    title: "Vì sao tâm lý quyết định kết quả giao dịch"
+    objective: "Hiểu rằng cùng một hệ thống nhưng kết quả khác nhau chủ yếu do khả năng thực thi nhất quán của người giao dịch."
+    key_points:
+      - "Kết quả giao dịch = lợi thế của hệ thống (edge) × mức độ thực thi đúng quy tắc; thiếu một trong hai đều không bền."
+      - "Thị trường không gây ra cảm xúc; chính cách ta diễn giải biến động giá mới tạo ra sợ hãi hay hưng phấn."
+      - "Tâm lý giao dịch (trading psychology) không phải là 'không có cảm xúc', mà là không để cảm xúc quyết định thay cho quy tắc."
+      - "Phần lớn lỗi tâm lý lộ ra qua hành vi đo được: dời cắt lỗ, vào lệnh ngoài kế hoạch, tăng khối lượng đột ngột."
+    example: "Ví dụ giả định: hai trader cùng dùng một chiến lược breakout trên XAUUSD có kỳ vọng dương. Người A làm đúng 100 lệnh liên tục; người B bỏ qua tín hiệu sau 3 lệnh thua và dời cắt lỗ khi sợ. Sau 3 tháng, kết quả của họ có thể trái ngược nhau dù tín hiệu giống hệt."
+    mistakes:
+      - "Liên tục đổi hệ thống mỗi khi thua vài lệnh thay vì xem lại mình có làm đúng quy tắc không."
+      - "Đổ lỗi cho 'sàn quét lệnh' hay 'cá mập' thay vì nhìn vào hành vi của chính mình."
+    visual:
+      type: formula
+      idea: "Công thức lớn ở giữa: Kết quả = Lợi thế hệ thống × Kỷ luật thực thi. Bên dưới 3 dòng: Lợi thế tốt × kỷ luật kém = thua lỗ; Lợi thế kém × kỷ luật tốt = thua chậm; Lợi thế tốt × kỷ luật tốt = có cơ hội bền vững."
+  - part: 2
+    title: "Sợ hãi và tham lam: hai cảm xúc gốc"
+    objective: "Nhận diện được các hành vi giao dịch xuất phát từ sợ hãi (fear) và tham lam (greed)."
+    key_points:
+      - "Sợ hãi biểu hiện qua: không dám vào lệnh khi có tín hiệu, chốt lời quá sớm, cắt lệnh trước khi chạm cắt lỗ."
+      - "Tham lam biểu hiện qua: vào lệnh quá lớn, không chốt lời theo kế hoạch, mở thêm lệnh ngoài hệ thống."
+      - "Hai cảm xúc này thường luân phiên: một lệnh lãi lớn sinh tham lam, ngay sau đó một lệnh thua sinh sợ hãi."
+      - "Cách giảm cường độ cảm xúc hiệu quả nhất là giảm khối lượng về mức mà kết quả một lệnh không làm bạn mất ngủ."
+    example: "Ví dụ: mua EURUSD tại 1,0850 với mục tiêu 1,0910 và cắt lỗ 1,0820. Giá lên 1,0875 rồi chững lại, trader sợ mất lãi nên đóng lệnh; sau đó giá chạm 1,0910. Đây là sợ hãi phá vỡ R:R của kế hoạch."
+    mistakes:
+      - "Cho rằng mình chỉ có vấn đề với tham lam, không nhận ra sợ hãi cũng làm mất lợi nhuận."
+      - "Giao dịch khối lượng lớn đến mức theo dõi từng tick giá."
+    visual:
+      type: compare
+      idea: "Hai cột: 'SỢ HÃI' (bỏ lỡ tín hiệu, chốt non, cắt lệnh trước SL, không dám vào lại) và 'THAM LAM' (lot quá lớn, gồng lãi quá mục tiêu, vào lệnh ngoài kế hoạch, nhồi lệnh). Biểu tượng đơn giản trên đầu mỗi cột, màu xanh lam và cam."
+  - part: 3
+    title: "Tư duy xác suất: mỗi lệnh chỉ là một lần tung"
+    objective: "Hiểu và chấp nhận rằng kết quả một lệnh đơn lẻ là ngẫu nhiên, còn lợi thế chỉ thể hiện qua một chuỗi lệnh."
+    key_points:
+      - "Bất cứ điều gì cũng có thể xảy ra trên thị trường, kể cả khi mọi tín hiệu đều đẹp."
+      - "Không cần biết giá sẽ đi đâu tiếp theo vẫn có thể có lãi, nếu hệ thống có kỳ vọng dương và được thực hiện đủ nhiều lần."
+      - "Lệnh thắng và lệnh thua phân bố ngẫu nhiên trong chuỗi; không thể biết lệnh nào trong 20 lệnh tới sẽ thắng."
+      - "Lợi thế chỉ là xác suất nghiêng về một phía, và mỗi khoảnh khắc thị trường đều là duy nhất."
+    example: "Ví dụ giả định: hệ thống thắng 55%. Trong 20 lệnh tới có thể có chuỗi thua 5 lệnh liền ngay từ đầu, nhưng sau 100 lệnh tỷ lệ thắng thực tế thường tiến gần lại quanh 55%."
+    mistakes:
+      - "Đánh giá một quyết định là 'sai' chỉ vì lệnh đó thua, dù đã làm đúng quy tắc."
+      - "Cần 'chắc chắn' trước khi vào lệnh nên luôn vào muộn."
+    visual:
+      type: chart
+      idea: "Dải 20 ô vuông xanh (thắng) và đỏ (thua) xếp ngẫu nhiên, có cụm 5 ô đỏ liền nhau ở đầu. Bên dưới là đường vốn tích lũy đi lên dần dù có đoạn giảm. Nhãn: 'Từng lệnh ngẫu nhiên – chuỗi lệnh có lợi thế'."
+  - part: 4
+    title: "Chấp nhận rủi ro trước khi vào lệnh"
+    objective: "Biết cách chấp nhận trọn vẹn khoản lỗ tiềm năng trước khi bấm nút, để không hoảng loạn trong lúc lệnh chạy."
+    key_points:
+      - "Chấp nhận rủi ro nghĩa là đã xác định và đồng ý mất số tiền tại cắt lỗ trước khi vào lệnh, không chỉ là đặt cắt lỗ cho có."
+      - "Nếu nghĩ đến việc thua lệnh mà thấy khó chịu, khối lượng đang quá lớn hoặc chưa tin vào hệ thống."
+      - "Coi cắt lỗ là chi phí kinh doanh bình thường, giống tiền mặt bằng của một cửa hàng."
+      - "Một câu tự hỏi đơn giản trước mỗi lệnh: 'Nếu lệnh này dính cắt lỗ, tôi vẫn ổn chứ?'"
+    example: "Ví dụ: bán XAUUSD tại 2.380, cắt lỗ 2.388, rủi ro 40 USD. Trước khi vào, trader viết vào nhật ký 'chấp nhận mất 40 USD'. Khi giá chạy lên 2.386, họ không cần dời cắt lỗ vì khoản lỗ đã được chấp nhận từ trước."
+    mistakes:
+      - "Dời cắt lỗ ra xa khi giá tiến gần để 'cho lệnh thêm cơ hội'."
+      - "Vào lệnh không có cắt lỗ với lý do 'vàng thế nào cũng hồi'."
+    visual:
+      type: checklist
+      idea: "Checklist 'Trước khi bấm nút': ☐ Đã biết điểm cắt lỗ ☐ Đã tính số tiền mất nếu dính SL ☐ Số tiền này ≤ mức rủi ro trong kế hoạch ☐ Tôi chấp nhận mất số tiền này ☐ Lệnh này đúng tín hiệu của hệ thống."
+  - part: 5
+    title: "FOMO, giao dịch trả thù và giao dịch quá mức"
+    objective: "Nhận diện ba hành vi phá tài khoản phổ biến nhất và có cách ngắt chúng."
+    key_points:
+      - "FOMO (fear of missing out - sợ bỏ lỡ) khiến trader đuổi theo cây nến lớn, vào lệnh ở điểm R:R xấu."
+      - "Giao dịch trả thù (revenge trading) là vào lệnh ngay sau khi thua, thường với khối lượng lớn hơn, để 'lấy lại'."
+      - "Giao dịch quá mức (overtrading) là vào quá nhiều lệnh ngoài tiêu chí, thường do chán hoặc muốn đạt chỉ tiêu tiền."
+      - "Cách ngắt hiệu quả: quy định nghỉ bắt buộc sau 2 lệnh thua liên tiếp và giới hạn số lệnh tối đa mỗi ngày."
+    example: "Ví dụ giả định: tin CPI ra, vàng tăng 25 USD trong 5 phút. Trader mua đuổi ở đỉnh nến, giá hồi 12 USD và dính cắt lỗ; tức giận, họ vào lệnh bán gấp đôi khối lượng và lại thua khi giá tăng tiếp."
+    mistakes:
+      - "Nghĩ rằng cơ hội sẽ không bao giờ quay lại nên phải vào ngay."
+      - "Không có quy tắc dừng, để cảm xúc quyết định khi nào thôi giao dịch."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến 5 phút XAUUSD: một cây nến xanh dài đột biến (nhãn 'Tin CPI'), mũi tên mua đặt ở đỉnh nến (nhãn 'FOMO'), giá hồi xuống chạm SL (dấu X đỏ), tiếp theo mũi tên bán khối lượng lớn (nhãn 'Trả thù') và giá tăng tiếp chạm SL lần hai."
+  - part: 6
+    title: "Các thiên kiến nhận thức của trader"
+    objective: "Biết các thiên kiến (cognitive bias) phổ biến và cách chúng làm méo quyết định giao dịch."
+    key_points:
+      - "Thiên kiến xác nhận (confirmation bias): chỉ tìm tin tức, ý kiến ủng hộ lệnh đang giữ."
+      - "Né tránh thua lỗ (loss aversion): nỗi đau mất tiền lớn hơn niềm vui được cùng số tiền, khiến ta gồng lỗ và chốt lãi sớm."
+      - "Thiên kiến gần đây (recency bias): đánh giá quá cao vài lệnh gần nhất so với dữ liệu dài hạn."
+      - "Tự tin thái quá (overconfidence) sau chuỗi thắng làm tăng khối lượng và lơi lỏng tiêu chí vào lệnh."
+    example: "Ví dụ: đang mua GBPUSD và lỗ dần, trader chỉ đọc những bài nhận định 'GBP sẽ tăng' và bỏ qua dữ liệu cho thấy USD mạnh lên. Đó là thiên kiến xác nhận kết hợp né tránh thua lỗ."
+    mistakes:
+      - "Nghĩ rằng mình đủ lý trí để miễn nhiễm với thiên kiến."
+      - "Sau 5 lệnh thắng liền thì tăng gấp ba khối lượng."
+    visual:
+      type: checklist
+      idea: "Bảng 4 dòng 'Thiên kiến → Biểu hiện → Cách khắc phục': Xác nhận → chỉ đọc tin ủng hộ → viết lý do lệnh có thể sai; Né tránh thua lỗ → gồng lỗ → SL cứng trên sàn; Gần đây → đổi hệ thống sau vài lệnh → đánh giá theo mẫu 50 lệnh; Tự tin thái quá → tăng lot → cố định % rủi ro."
+  - part: 7
+    title: "Kỷ luật bắt đầu từ quy tắc viết ra"
+    objective: "Biến kế hoạch giao dịch thành bộ quy tắc rõ ràng, đo được và có thể kiểm tra sau mỗi lệnh."
+    key_points:
+      - "Quy tắc tốt phải cụ thể đến mức người khác đọc vào cũng biết khi nào vào, đặt cắt lỗ ở đâu, khối lượng bao nhiêu."
+      - "Quy tắc mơ hồ như 'vào khi thấy đẹp' mở cửa cho cảm xúc xen vào."
+      - "Dùng danh sách kiểm tra (checklist) trước khi vào lệnh giúp giảm quyết định bốc đồng."
+      - "Chấm điểm kỷ luật sau mỗi lệnh (làm đúng quy tắc hay không) quan trọng hơn chấm lãi/lỗ."
+    example: "Ví dụ quy tắc cụ thể cho XAUUSD: 'Chỉ mua khi khung H4 tạo đỉnh và đáy cao dần; vào khi H1 phá đỉnh gần nhất; cắt lỗ dưới đáy H1 gần nhất; rủi ro 1%; không giao dịch 30 phút trước và sau tin NFP'."
+    mistakes:
+      - "Có quy tắc nhưng không bao giờ đối chiếu lại sau khi lệnh đóng."
+      - "Thêm ngoại lệ vào quy tắc mỗi khi thị trường làm mình khó chịu."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Quy tắc mơ hồ' (vào khi thấy giá đẹp; cắt lỗ chỗ hợp lý; đánh vừa phải; tránh tin lớn) và 'Quy tắc cụ thể' (vào khi H1 phá đỉnh gần nhất; SL dưới đáy H1 gần nhất; rủi ro 1%; nghỉ 30 phút trước/sau NFP). Dấu X đỏ và tích xanh."
+  - part: 8
+    title: "Nhật ký giao dịch và nhật ký cảm xúc"
+    objective: "Biết cách ghi nhật ký kết hợp số liệu và cảm xúc để tìm ra lỗi hành vi lặp lại."
+    key_points:
+      - "Nhật ký (trading journal) ghi tối thiểu: ngày giờ, cặp, lý do vào, điểm vào, cắt lỗ, chốt lời, kết quả theo R, ảnh chụp biểu đồ."
+      - "Thêm cột cảm xúc trước, trong và sau lệnh (bình tĩnh, lo lắng, hưng phấn, bực bội) với thang điểm 1–5."
+      - "Cột 'đúng quy tắc: có/không' giúp tách lệnh thua do hệ thống với lệnh thua do vi phạm."
+      - "Xem lại nhật ký mỗi tuần để tìm mẫu hình như 'hay thua vào thứ Sáu' hoặc 'vi phạm sau 2 lệnh thua'."
+    example: "Ví dụ giả định: sau một tháng, nhật ký cho thấy 8 trên 10 lệnh vi phạm quy tắc xảy ra sau 21h giờ Việt Nam, khi trader đã mệt. Giải pháp: dừng giao dịch sau 21h."
+    mistakes:
+      - "Chỉ ghi lệnh thắng hoặc chỉ ghi khi có thời gian."
+      - "Ghi nhật ký nhưng không bao giờ đọc lại để rút ra quy luật."
+    visual:
+      type: formula
+      idea: "Mẫu bảng nhật ký với các cột: Ngày | Cặp | Setup | Entry | SL | TP | Kết quả (R) | Đúng quy tắc? | Cảm xúc (1–5) | Ghi chú. Điền sẵn 2 dòng ví dụ: XAUUSD, Breakout H1, +2R, Có, 2; EURUSD, Ngoài kế hoạch, −1R, Không, 4."
+  - part: 9
+    title: "Thói quen trước, trong và sau phiên"
+    objective: "Xây dựng quy trình hằng ngày giúp giữ trạng thái tâm lý ổn định khi giao dịch."
+    key_points:
+      - "Trước phiên: kiểm tra lịch kinh tế, đánh dấu vùng giá quan trọng, viết kịch bản nếu–thì cho từng cặp."
+      - "Trong phiên: chỉ hành động khi kịch bản xuất hiện; hạn chế xem mạng xã hội và nhóm chat nhận định."
+      - "Sau phiên: ghi nhật ký, chấm điểm kỷ luật, tắt nền tảng giao dịch để tránh vào lệnh bốc đồng."
+      - "Ngủ đủ, vận động và nghỉ giữa phiên ảnh hưởng trực tiếp đến khả năng ra quyết định."
+    example: "Ví dụ quy trình cho người giao dịch phiên Âu tại Việt Nam: 14h00 xem lịch tin và vẽ vùng giá; 14h30–17h30 giao dịch theo kịch bản; 17h45 ghi nhật ký và tắt máy, không mở lại trong buổi tối."
+    mistakes:
+      - "Mở biểu đồ và vào lệnh ngay mà không chuẩn bị kịch bản."
+      - "Ngồi trước màn hình hàng giờ dù không có tín hiệu, dẫn đến vào lệnh vì chán."
+    visual:
+      type: checklist
+      idea: "Dòng thời gian 3 khối: TRƯỚC PHIÊN (☐ lịch tin ☐ vùng giá ☐ kịch bản nếu–thì ☐ tâm trạng ổn?) → TRONG PHIÊN (☐ chỉ vào theo kịch bản ☐ tối đa 3 lệnh ☐ dừng khi chạm giới hạn lỗ) → SAU PHIÊN (☐ nhật ký ☐ chấm điểm kỷ luật ☐ tắt nền tảng)."
+  - part: 10
+    title: "Kế hoạch rèn luyện tâm lý 30 ngày"
+    objective: "Ghép toàn bộ series thành một chương trình 30 ngày cụ thể để cải thiện kỷ luật."
+    key_points:
+      - "Tuần 1: giảm khối lượng xuống mức thoải mái, ghi nhật ký đầy đủ mọi lệnh kèm cảm xúc."
+      - "Tuần 2: áp dụng checklist trước lệnh và quy tắc nghỉ sau 2 lệnh thua liên tiếp."
+      - "Tuần 3: đọc lại nhật ký, chọn đúng một lỗi hành vi lặp lại nhiều nhất và đặt một quy tắc chặn nó."
+      - "Tuần 4: đo tỷ lệ lệnh đúng quy tắc; mục tiêu là tăng tỷ lệ này, không phải tăng lợi nhuận."
+    example: "Ví dụ giả định: tuần 1 trader chỉ làm đúng quy tắc 60% số lệnh. Sau khi dùng checklist và giới hạn 3 lệnh/ngày, tuần 4 tỷ lệ này lên 90%, dù lãi/lỗ tuần đó vẫn có thể âm do biến động thị trường."
+    mistakes:
+      - "Cố sửa mọi lỗi cùng lúc nên không sửa được lỗi nào."
+      - "Đánh giá chương trình bằng lãi/lỗ của một tháng thay vì mức độ tuân thủ."
+    visual:
+      type: checklist
+      idea: "Lịch 4 tuần dạng 4 hàng: Tuần 1 – Giảm lot + nhật ký cảm xúc; Tuần 2 – Checklist trước lệnh + nghỉ sau 2 lệnh thua; Tuần 3 – Tìm 1 lỗi lặp lại, đặt 1 quy tắc chặn; Tuần 4 – Đo % lệnh đúng quy tắc (mục tiêu ≥ 90%). Mỗi hàng có ô tích."
+sources:
+  - "https://www.youtube.com/playlist?list=PL-PKMabkPBe736m-nmFYURLaI445TnWgc"
+  - "https://www.youtube.com/watch?v=8fz1OkqUja8"
+  - "https://tradethatswing.com/key-takeaways-from-trading-in-the-zone-by-mark-douglas/"
+  - "https://www.elearnmarkets.com/school/units/trading-in-the-zone"
+  - "https://tradingsossos.com/mark-douglas-and-his-5-fundamental-truths-of-trading/"
+  - "https://forums.babypips.com/t/five-fundamental-truths-of-trading-from-trading-in-the-zone-by-mark-douglas/1028659"
+  - "https://wisduni.com/tai-lieu/chien-thang-tam-ly-giao-dich-forex/"

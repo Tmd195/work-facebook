@@ -1,0 +1,158 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  #wrap { position: relative; width: __W__px; height: __H__px; overflow: hidden;
+          font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto, Ubuntu, sans-serif; }
+  #chart { position: absolute; inset: 0; }
+  #legend { position: absolute; left: 12px; top: 8px; z-index: 5; font-size: 14px; color: #131722;
+            line-height: 20px; pointer-events: none; }
+  #legend .sym { font-weight: 600; font-size: 15px; }
+  #legend .ohlc span { margin-right: 6px; }
+  #legend .lbl { color: #787b86; }
+  #legend .ind { font-size: 12px; color: #787b86; }
+</style>
+<script>__LIB__</script>
+</head><body>
+<div id="wrap"><div id="chart"></div><div id="legend"></div></div>
+<script>
+const SPEC = __SPEC__;
+const LC = LightweightCharts;
+const T = SPEC.theme;
+
+const chart = LC.createChart(document.getElementById('chart'), {
+  width: SPEC.width, height: SPEC.height,
+  layout: { background: { type: "solid", color: T.bg }, textColor: T.text, fontSize: 12, attributionLogo: true,
+            panes: { separatorColor: T.border } },
+  grid: { vertLines: { color: T.grid }, horzLines: { color: T.grid } },
+  rightPriceScale: { borderColor: T.border, scaleMargins: { top: 0.12, bottom: 0.08 } },
+  timeScale: { visible: SPEC.timeAxis !== false, borderColor: T.border, timeVisible: SPEC.timeVisible, secondsVisible: false,
+               rightOffset: SPEC.rightOffset, barSpacing: SPEC.barSpacing },
+  crosshair: { mode: LC.CrosshairMode.Hidden,
+               vertLine: { visible: false, labelVisible: false }, horzLine: { visible: false, labelVisible: false } },
+  handleScroll: false, handleScale: false,
+});
+
+const candles = chart.addSeries(LC.CandlestickSeries, {
+  upColor: T.up, downColor: T.down, borderVisible: false, wickUpColor: T.up, wickDownColor: T.down,
+  priceLineVisible: true, lastValueVisible: true,
+  autoscaleInfoProvider: original => {
+    const r = original();
+    if (!r || !SPEC.extraRange) return r;
+    r.priceRange.minValue = Math.min(r.priceRange.minValue, SPEC.extraRange[0]);
+    r.priceRange.maxValue = Math.max(r.priceRange.maxValue, SPEC.extraRange[1]);
+    return r;
+  },
+  priceFormat: { type: 'price', precision: SPEC.digits, minMove: Math.pow(10, -SPEC.digits) },
+});
+candles.setData(SPEC.candles);
+
+// ---- Đường chỉ báo trên chart chính
+for (const ln of SPEC.lines || []) {
+  const s = chart.addSeries(LC.LineSeries, { color: ln.color, lineWidth: ln.width || 2, lineStyle: ln.style || 0,
+    priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+  s.setData(ln.data);
+}
+
+// ---- Đường giá ngang có nhãn trên trục giá (giống TradingView)
+for (const pl of SPEC.priceLines || []) {
+  candles.createPriceLine({ price: pl.price, color: pl.color, lineWidth: pl.width || 1,
+    lineStyle: pl.style ?? 2, axisLabelVisible: true, title: pl.title || '' });
+}
+
+// ---- Marker trên/dưới nến
+if ((SPEC.markers || []).length) LC.createSeriesMarkers(candles, SPEC.markers);
+
+// ---- Panel phụ (RSI / Volume)
+let paneIdx = 1;
+for (const p of SPEC.panes || []) {
+  for (const s of p.series) {
+    const type = s.kind === 'histogram' ? LC.HistogramSeries : LC.LineSeries;
+    const opts = s.kind === 'histogram'
+      ? { priceFormat: { type: 'volume' }, priceLineVisible: false, lastValueVisible: false }
+      : { color: s.color, lineWidth: 2, priceLineVisible: false, lastValueVisible: true, crosshairMarkerVisible: false };
+    const ser = chart.addSeries(type, opts, paneIdx);
+    ser.setData(s.data);
+    for (const lv of s.levels || []) ser.createPriceLine({ price: lv, color: '#787b86', lineWidth: 1, lineStyle: 2, axisLabelVisible: false });
+  }
+  paneIdx++;
+}
+
+// ---- Primitive vẽ: vùng chữ nhật, đoạn thẳng, mũi tên, chữ, dải mây (theo chỉ số nến - logical)
+class Drawings {
+  constructor(shapes) { this.shapes = shapes; }
+  attached({ chart, series }) { this.chart = chart; this.series = series; }
+  paneViews() {
+    const self = this;
+    return [{ zOrder: () => 'normal', renderer: () => ({ draw(target) {
+      target.useBitmapCoordinateSpace(scope => {
+        const ctx = scope.context, hr = scope.horizontalPixelRatio, vr = scope.verticalPixelRatio;
+        const ts = self.chart.timeScale();
+        const X = i => { const c = ts.logicalToCoordinate(i); return c === null ? null : c * hr; };
+        const Y = p => { const c = self.series.priceToCoordinate(p); return c === null ? null : c * vr; };
+        const W = scope.bitmapSize.width;
+        const font = (sz, bold) => `${bold ? 'bold ' : ''}${Math.round(sz * vr)}px -apple-system, "Trebuchet MS", Roboto, sans-serif`;
+        for (const s of self.shapes) {
+          ctx.save();
+          if (s.type === 'band') {
+            for (let k = 0; k + 1 < s.points.length; k++) {
+              const [i0, a0, b0] = s.points[k], [i1, a1, b1] = s.points[k + 1];
+              ctx.fillStyle = a0 >= b0 ? s.upColor : s.downColor;
+              ctx.beginPath(); ctx.moveTo(X(i0), Y(a0)); ctx.lineTo(X(i1), Y(a1)); ctx.lineTo(X(i1), Y(b1)); ctx.lineTo(X(i0), Y(b0)); ctx.closePath(); ctx.fill();
+            }
+          } else if (s.type === 'rect') {
+            const x0 = X(s.i1), x1 = s.i2 == null ? W : X(s.i2), y0 = Y(s.p1), y1 = Y(s.p2);
+            ctx.fillStyle = s.fill; ctx.fillRect(Math.min(x0, x1), Math.min(y0, y1), Math.abs(x1 - x0), Math.abs(y1 - y0));
+            if (s.border) { ctx.strokeStyle = s.border; ctx.lineWidth = 1 * hr; ctx.strokeRect(Math.min(x0, x1), Math.min(y0, y1), Math.abs(x1 - x0), Math.abs(y1 - y0)); }
+            if (s.label) { ctx.fillStyle = s.labelColor || s.border || '#131722'; ctx.font = font(11, true); ctx.textBaseline = 'middle';
+              ctx.textAlign = s.labelAlign || 'right'; const lx = (s.labelAlign === 'left') ? Math.min(x0, x1) + 6 * hr : Math.max(x0, x1) - 6 * hr;
+              ctx.fillText(s.label, lx, (y0 + y1) / 2); }
+          } else if (s.type === 'segment') {
+            const x0 = X(s.i1), y0 = Y(s.p1), x1 = X(s.i2), y1 = Y(s.p2);
+            ctx.strokeStyle = s.color; ctx.lineWidth = (s.width || 1) * hr; if (s.dash) ctx.setLineDash(s.dash.map(v => v * hr));
+            ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke(); ctx.setLineDash([]);
+            if (s.arrow) { const a = Math.atan2(y1 - y0, x1 - x0), L = 12 * hr; ctx.fillStyle = s.color; ctx.beginPath();
+              ctx.moveTo(x1, y1); ctx.lineTo(x1 - L * Math.cos(a - 0.45), y1 - L * Math.sin(a - 0.45)); ctx.lineTo(x1 - L * Math.cos(a + 0.45), y1 - L * Math.sin(a + 0.45)); ctx.closePath(); ctx.fill(); }
+            if (s.label) { ctx.fillStyle = s.color; ctx.font = font(11, true); ctx.textAlign = s.labelAlign || 'center'; ctx.textBaseline = 'bottom';
+              const lx = s.labelAlign === 'left' ? Math.min(x0, x1) + 4 * hr : s.labelAlign === 'right' ? Math.max(x0, x1) - 4 * hr : (x0 + x1) / 2;
+              ctx.fillText(s.label, lx, (y0 + y1) / 2 - 3 * vr); }
+          } else if (s.type === 'text') {
+            ctx.font = font(s.size || 12, true); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+            const x = X(s.i), y = Y(s.p) + (s.dy || 0) * vr, w = ctx.measureText(s.text).width + 10 * hr, h = (s.size || 12) * 1.6 * vr;
+            if (s.bg) { ctx.fillStyle = s.bg; ctx.beginPath(); ctx.roundRect(x - w / 2, y - h / 2, w, h, 3 * hr); ctx.fill(); }
+            ctx.fillStyle = s.color || '#131722'; ctx.fillText(s.text, x, y);
+          }
+          ctx.restore();
+        }
+      });
+    } }) }];
+  }
+}
+if ((SPEC.shapes || []).length) candles.attachPrimitive(new Drawings(SPEC.shapes));
+
+// ---- Chiều cao panel phụ
+const panes = chart.panes();
+for (let k = 1; k < panes.length; k++) panes[k].setHeight(SPEC.paneHeight);
+
+chart.timeScale().fitContent();
+if (SPEC.rightOffset) chart.timeScale().applyOptions({ rightOffset: SPEC.rightOffset });
+
+// ---- Legend kiểu TradingView
+const last = SPEC.candles[SPEC.candles.length - 1];
+const first = SPEC.candles[0];
+const chg = last.close - SPEC.candles[SPEC.candles.length - 2].close;
+const col = chg >= 0 ? T.up : T.down;
+const fmt = v => v.toFixed(SPEC.digits);
+document.getElementById('legend').innerHTML =
+  `<div><span class="sym">${SPEC.symbol}${SPEC.tf ? " · " + SPEC.tf : ""}</span>
+   <span class="ohlc" style="margin-left:10px">
+   <span class="lbl">O</span><span style="color:${col}">${fmt(last.open)}</span>
+   <span class="lbl">H</span><span style="color:${col}">${fmt(last.high)}</span>
+   <span class="lbl">L</span><span style="color:${col}">${fmt(last.low)}</span>
+   <span class="lbl">C</span><span style="color:${col}">${fmt(last.close)}</span>
+   <span style="color:${col}">${chg >= 0 ? '+' : ''}${fmt(chg)}</span></span></div>` +
+  (SPEC.legendLines || []).map(l => `<div class="ind"><span style="color:${l.color}">${l.text}</span></div>`).join('');
+
+requestAnimationFrame(() => requestAnimationFrame(() => { window.__ready = true; }));
+</script>
+</body></html>

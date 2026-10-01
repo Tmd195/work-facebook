@@ -1,0 +1,164 @@
+id: trend-following-turtle
+name: "Trend Following & hệ thống Turtle"
+level: "Chuyên sâu"
+description: "Giúp trader hiểu triết lý giao dịch theo xu hướng và từng quy tắc của hệ thống Turtle (Donchian breakout, định cỡ vị thế theo N, nhồi lệnh, thoát lệnh) để tự xây một hệ thống trend following có quy tắc rõ ràng cho vàng và forex."
+lessons:
+  - part: 1
+    title: "Triết lý trend following: không đoán đỉnh đáy"
+    objective: "Hiểu cách tư duy của giao dịch theo xu hướng (trend following) và vì sao nó chấp nhận tỷ lệ thắng thấp."
+    key_points:
+      - "Trend following không dự đoán giá; nó chỉ phản ứng: mua khi giá đã tăng đủ mạnh, bán khi giá đã giảm đủ mạnh, và giữ cho đến khi xu hướng kết thúc."
+      - "Đặc trưng thống kê: nhiều lệnh thua nhỏ, ít lệnh thắng lớn; tỷ lệ thắng thường dưới 50% nhưng lệnh thắng trung bình lớn gấp nhiều lần lệnh thua."
+      - "Lợi nhuận phần lớn đến từ vài xu hướng lớn mỗi năm, nên bỏ lỡ một tín hiệu có thể bỏ lỡ cả năm kết quả."
+      - "Khó khăn lớn nhất là tâm lý: chịu đựng chuỗi thua dài và trả lại một phần lợi nhuận khi thoát lệnh muộn."
+    example: "Ví dụ giả định: 10 lệnh theo xu hướng trên XAUUSD có 6 lệnh thua, mỗi lệnh −1R, 3 lệnh hòa hoặc lãi nhỏ tổng +1R, và 1 lệnh bắt được xu hướng lớn +8R → tổng +3R dù chỉ thắng lớn 1 lần."
+    mistakes:
+      - "Chốt lời sớm ở các lệnh thắng, làm mất chính những lệnh lớn nuôi cả hệ thống."
+      - "Bỏ hệ thống sau 5–6 lệnh thua liên tiếp, đúng trước khi xu hướng lớn xuất hiện."
+    visual:
+      type: chart
+      idea: "Biểu đồ cột kết quả 10 lệnh theo R: 6 cột đỏ ngắn (−1R), 3 cột xám rất ngắn, 1 cột xanh rất cao (+8R). Bên phải là đường vốn đi ngang giảm nhẹ rồi nhảy lên. Nhãn: 'Thua nhỏ nhiều lần – thắng lớn ít lần'."
+  - part: 2
+    title: "Câu chuyện thí nghiệm Turtle"
+    objective: "Biết nguồn gốc của hệ thống Turtle và bài học rằng giao dịch có thể dạy được bằng quy tắc."
+    key_points:
+      - "Năm 1983, hai trader hàng hóa Richard Dennis và William Eckhardt tranh luận liệu giao dịch giỏi có thể đào tạo được hay không, và tuyển một nhóm học viên gọi là 'Turtles'."
+      - "Học viên được dạy một bộ quy tắc đầy đủ: thị trường nào, khối lượng bao nhiêu, vào lệnh, cắt lỗ, thoát lệnh và nhồi lệnh."
+      - "Theo các tài liệu được công bố sau này, nhóm này đạt lợi nhuận lớn trong vài năm, nhưng kết quả mỗi người rất khác nhau dù cùng một quy tắc."
+      - "Bài học chính: quy tắc đơn giản nhưng khó tuân thủ; sự khác biệt nằm ở kỷ luật thực thi."
+    example: "Ví dụ: hai học viên nhận cùng tín hiệu breakout trên một hợp đồng hàng hóa sau chuỗi thua dài; người làm đúng quy tắc vào lệnh và bắt được xu hướng, người còn lại bỏ qua vì sợ và đứng ngoài."
+    mistakes:
+      - "Nghĩ rằng chỉ cần biết quy tắc Turtle là sẽ có kết quả giống họ."
+      - "Bỏ qua bối cảnh: Turtle giao dịch danh mục nhiều thị trường futures, không chỉ một cặp."
+    visual:
+      type: checklist
+      idea: "Hình dòng thời gian đơn giản: 1983 – tranh luận 'trader bẩm sinh hay đào tạo được?' → Tuyển học viên → Dạy bộ quy tắc hoàn chỉnh (6 biểu tượng: thị trường, khối lượng, vào lệnh, cắt lỗ, thoát lệnh, nhồi lệnh) → Kết quả khác nhau theo mức kỷ luật."
+  - part: 3
+    title: "Kênh Donchian: công cụ đo breakout"
+    objective: "Biết cách dựng và đọc kênh Donchian (Donchian Channel) dùng trong hệ thống Turtle."
+    key_points:
+      - "Kênh Donchian gồm đường trên là giá cao nhất của N phiên gần nhất, đường dưới là giá thấp nhất của N phiên gần nhất, và có thể thêm đường giữa."
+      - "Giá vượt đường trên nghĩa là đang tạo mức cao nhất trong N phiên – một định nghĩa khách quan về breakout."
+      - "Hệ thống Turtle dùng kênh 20 ngày và 55 ngày để vào lệnh, kênh 10 ngày và 20 ngày để thoát lệnh."
+      - "Trên TradingView và MT5 có sẵn chỉ báo Donchian; cần chọn đúng số phiên và lưu ý kênh nên tính trên các phiên trước, không gồm nến hiện tại."
+    example: "Ví dụ giả định XAUUSD khung D1: giá cao nhất 20 ngày qua là 2.450, thấp nhất là 2.330. Khi giá hôm nay chạm 2.451, đó là breakout kênh 20 ngày."
+    mistakes:
+      - "Dùng chỉ báo tính cả nến hiện tại nên đường trên luôn chạy theo giá và không bao giờ bị phá."
+      - "Đổi số phiên liên tục để biểu đồ quá khứ trông đẹp hơn (tối ưu quá mức - overfitting)."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến D1 XAUUSD với kênh Donchian 20 ngày: đường trên màu xanh dạng bậc thang, đường dưới màu đỏ, đường giữa nét đứt. Một nến vượt đường trên được khoanh tròn, nhãn 'Breakout 20 ngày'."
+  - part: 4
+    title: "Đo biến động bằng N (ATR)"
+    objective: "Tính được N – thước đo biến động dựa trên khoảng dao động thực (True Range) mà Turtle dùng cho mọi quyết định."
+    key_points:
+      - "True Range = giá trị lớn nhất trong ba số: Cao − Thấp; |Cao − Đóng cửa hôm trước|; |Thấp − Đóng cửa hôm trước|."
+      - "N là trung bình 20 ngày của True Range, theo quy tắc gốc được làm mượt: N = (19 × N hôm trước + TR hôm nay) ÷ 20, rất gần với ATR 20 ngày."
+      - "N tính theo đơn vị giá (USD với vàng, pip với EURUSD), cho biết một ngày điển hình giá dao động bao nhiêu."
+      - "Dùng N giúp cắt lỗ, khối lượng và khoảng nhồi lệnh tự điều chỉnh theo biến động của từng thị trường."
+    example: "Ví dụ giả định: N hôm qua của XAUUSD là 30 USD; hôm nay cao 2.428, thấp 2.392, đóng cửa hôm trước 2.395 → TR = 36. N mới = (19 × 30 + 36) ÷ 20 = 30,3 USD."
+    mistakes:
+      - "Dùng biên độ Cao − Thấp mà bỏ qua khoảng gap so với giá đóng cửa hôm trước."
+      - "Dùng ATR của khung M15 cho hệ thống chạy trên khung ngày."
+    visual:
+      type: formula
+      idea: "Bảng tính từng dòng: Cao 2.428; Thấp 2.392; Đóng cửa hôm trước 2.395; TR = max(36; 33; 3) = 36; N hôm qua = 30; N mới = (19 × 30 + 36) ÷ 20 = 30,3 USD. Công thức tổng quát in đậm ở trên."
+  - part: 5
+    title: "Định cỡ vị thế theo đơn vị N"
+    objective: "Tự tính được khối lượng một Unit theo quy tắc Turtle cho XAUUSD và EURUSD."
+    key_points:
+      - "Biến động tiền (dollar volatility) = N × giá trị tiền của 1 đơn vị giá cho 1 lot."
+      - "1 Unit = (1% vốn tài khoản) ÷ dollar volatility, tức một biến động N chỉ làm tài khoản thay đổi khoảng 1%."
+      - "Vì cắt lỗ đặt cách 2N, mỗi Unit rủi ro khoảng 2% tài khoản nếu dính cắt lỗ."
+      - "Quy tắc gốc giảm quy mô tài khoản danh nghĩa 20% cho mỗi 10% sụt giảm, để khối lượng nhỏ lại khi đang thua."
+    example: "Ví dụ giả định: tài khoản 50.000 USD, 1% = 500 USD. XAUUSD N = 30 USD, 1 lot = 100 oz → dollar volatility = 30 × 100 = 3.000 USD/lot → 1 Unit = 500 ÷ 3.000 ≈ 0,16 lot. EURUSD N = 70 pip, 10 USD/pip/lot → 700 USD/lot → 1 Unit ≈ 0,71 lot."
+    mistakes:
+      - "Dùng khối lượng cố định cho vàng và EURUSD dù biến động hai thị trường khác hẳn nhau."
+      - "Quên rằng 1% ở đây là theo biến động N, rủi ro thực tại cắt lỗ 2N là khoảng 2%."
+    visual:
+      type: formula
+      idea: "Bảng 2 cột XAUUSD | EURUSD: Vốn 50.000 | 50.000; 1% vốn 500 | 500; N 30 USD | 70 pip; Giá trị/lot 100 USD mỗi 1 USD | 10 USD mỗi pip; Dollar volatility 3.000 | 700; 1 Unit ≈ 0,16 lot | ≈ 0,71 lot; Rủi ro tại 2N ≈ 960 USD | ≈ 994 USD."
+  - part: 6
+    title: "Hai hệ thống vào lệnh: 20 ngày và 55 ngày"
+    objective: "Nắm quy tắc vào lệnh của System 1 (20 ngày) và System 2 (55 ngày), gồm cả quy tắc bỏ qua tín hiệu."
+    key_points:
+      - "System 1: mua khi giá vượt mức cao nhất 20 ngày, bán khi giá thủng mức thấp nhất 20 ngày."
+      - "Quy tắc lọc của System 1: bỏ qua tín hiệu nếu lần breakout trước đó (dù có vào hay không) là một lệnh thắng; nếu bỏ qua, vẫn vào khi giá phá mức 55 ngày để không lỡ xu hướng lớn."
+      - "System 2: mua khi vượt mức cao nhất 55 ngày, bán khi thủng mức thấp nhất 55 ngày, nhận mọi tín hiệu không lọc."
+      - "Turtle vào lệnh ngay khi giá chạm mức breakout trong ngày, không chờ nến đóng cửa; nhiều phiên bản hiện đại lại chờ đóng cửa – đây là lựa chọn cần kiểm thử."
+    example: "Ví dụ giả định EURUSD: mức cao nhất 20 ngày là 1,0950 và lần breakout 20 ngày trước đó đã thua → System 1 nhận tín hiệu, đặt lệnh chờ mua tại 1,0951. Mức cao nhất 55 ngày là 1,1020 → System 2 chỉ vào khi giá chạm 1,1021."
+    mistakes:
+      - "Áp quy tắc lọc 'bỏ qua sau lệnh thắng' cho System 2."
+      - "Tự ý bỏ tín hiệu vì 'trông giá đã tăng quá nhiều'."
+    visual:
+      type: chart
+      idea: "Biểu đồ D1 với hai kênh: Donchian 20 ngày (đường mảnh xanh) và 55 ngày (đường đậm tím). Hai điểm breakout đánh dấu: 'S1 – vượt đỉnh 20 ngày' tại 1,0951 và 'S2 – vượt đỉnh 55 ngày' tại 1,1021, kèm mũi tên mua."
+  - part: 7
+    title: "Cắt lỗ 2N và quy tắc thoát lệnh"
+    objective: "Đặt cắt lỗ ban đầu theo 2N và thoát lệnh theo kênh ngược chiều 10 hoặc 20 ngày."
+    key_points:
+      - "Cắt lỗ ban đầu đặt cách giá vào 2N; với Unit đã tính theo 1% mỗi N, điều này giới hạn rủi ro khoảng 2% mỗi Unit."
+      - "System 1 thoát lệnh mua khi giá thủng mức thấp nhất 10 ngày (lệnh bán thoát khi vượt mức cao nhất 10 ngày)."
+      - "System 2 thoát lệnh mua khi giá thủng mức thấp nhất 20 ngày (lệnh bán thoát khi vượt mức cao nhất 20 ngày)."
+      - "Không có mục tiêu chốt lời cố định; phải chấp nhận trả lại một phần lợi nhuận để giữ được xu hướng lớn."
+    example: "Ví dụ giả định XAUUSD: mua 2.451 với N = 30 → cắt lỗ 2.391. Giá tăng lên 2.600, sau đó điều chỉnh; khi giá thủng mức thấp nhất 10 ngày tại 2.555, System 1 thoát lệnh, lãi 104 USD/oz dù đỉnh là 2.600."
+    mistakes:
+      - "Đặt chốt lời cố định 2R, cắt cụt chính những xu hướng lớn mà hệ thống cần."
+      - "Dời cắt lỗ ra xa hơn 2N khi giá tiến gần."
+    visual:
+      type: chart
+      idea: "Biểu đồ D1 xu hướng tăng: mũi tên mua tại 2.451, đường SL đỏ 2.391 nhãn '2N'. Kênh thấp nhất 10 ngày (đường cam dạng bậc thang) chạy theo bên dưới giá; tại điểm giá thủng đường cam ở 2.555 có dấu X nhãn 'Thoát lệnh S1'. Đỉnh 2.600 đánh dấu 'Phần lợi nhuận trả lại'."
+  - part: 8
+    title: "Nhồi lệnh theo ½N và giới hạn số Unit"
+    objective: "Biết cách gia tăng vị thế (pyramiding) theo quy tắc Turtle và các giới hạn tổng rủi ro."
+    key_points:
+      - "Sau lệnh đầu, thêm 1 Unit mỗi khi giá đi thuận thêm ½N so với giá khớp trước đó, tối đa 4 Unit trên một thị trường."
+      - "Mỗi lần thêm Unit, nâng cắt lỗ của toàn bộ các Unit lên thành 2N tính từ Unit mới nhất (tức dời lên ½N)."
+      - "Giới hạn trong quy tắc gốc: 4 Unit/thị trường, 6 Unit cho các thị trường tương quan chặt, 10 Unit cho tương quan lỏng, 12 Unit cho một hướng."
+      - "Với trader cá nhân, các cặp USD như EURUSD, GBPUSD và XAUUSD thường tương quan, nên cần giới hạn chung chặt hơn."
+    example: "Ví dụ giả định XAUUSD, N = 30: Unit 1 mua 2.451 (SL 2.391); Unit 2 tại 2.466; Unit 3 tại 2.481; Unit 4 tại 2.496. Sau Unit 4, cắt lỗ chung = 2.496 − 60 = 2.436."
+    mistakes:
+      - "Nhồi lệnh khi giá đi ngược (bình quân giá giảm) – ngược hoàn toàn với Turtle."
+      - "Thêm Unit nhưng không nâng cắt lỗ, làm rủi ro tổng tăng gấp nhiều lần."
+    visual:
+      type: chart
+      idea: "Biểu đồ giá đi lên dạng bậc thang với 4 mũi tên mua tại 2.451, 2.466, 2.481, 2.496 (nhãn Unit 1–4, khoảng cách '½N = 15'). Các đường SL đỏ nâng dần: 2.391 → 2.406 → 2.421 → 2.436. Bảng nhỏ góc phải: giới hạn 4 / 6 / 10 / 12 Unit."
+  - part: 9
+    title: "Áp dụng Turtle cho vàng và forex hôm nay"
+    objective: "Hiểu những điều chỉnh thực tế khi áp dụng nguyên lý Turtle cho XAUUSD và các cặp tiền chính."
+    key_points:
+      - "Bản gốc dành cho danh mục futures đa dạng; chỉ giao dịch một hai cặp sẽ có ít xu hướng hơn và chuỗi thua có thể dài hơn."
+      - "Nhiều kiểm thử độc lập cho thấy breakout Donchian thuần túy kém hiệu quả hơn so với thập niên 1980; nhiều người thêm bộ lọc xu hướng (ví dụ đường trung bình 200 ngày) hoặc giảm rủi ro mỗi Unit."
+      - "Cần tính chi phí thực tế: spread, phí qua đêm (swap) khi giữ lệnh nhiều tuần, và gap đầu tuần."
+      - "Có thể áp dụng trên khung H4 với số phiên tương ứng, nhưng tín hiệu nhiễu hơn và phải kiểm thử lại từ đầu."
+    example: "Ví dụ giả định: một trader chỉ giao dịch XAUUSD theo System 2 trên D1, lọc thêm: chỉ mua khi giá trên đường trung bình 200 ngày; rủi ro 0,5% mỗi N thay vì 1% để chịu được chuỗi thua dài."
+    mistakes:
+      - "Sao chép nguyên bộ thông số từ năm 1983 mà không kiểm thử trên dữ liệu vàng và forex hiện tại."
+      - "Bỏ qua phí swap khi giữ lệnh vàng nhiều tuần."
+    visual:
+      type: compare
+      idea: "Hai cột 'Turtle gốc (1980s)' và 'Phiên bản cho trader cá nhân': Danh mục 20+ futures | 1–4 cặp/vàng; Rủi ro 1%/N | 0,5–1%/N; Không bộ lọc | Thêm lọc MA200; Phí thấp với futures | Tính spread + swap; Khung D1 | D1 hoặc H4 (cần kiểm thử)."
+  - part: 10
+    title: "Xây hệ thống trend following của riêng bạn"
+    objective: "Tổng hợp series thành một bản quy tắc trend following hoàn chỉnh, có thể kiểm thử và giao dịch."
+    key_points:
+      - "Một hệ thống hoàn chỉnh cần đủ 6 phần: thị trường, khối lượng (theo N), điểm vào (Donchian), cắt lỗ (2N), nhồi lệnh (½N, tối đa Unit), thoát lệnh (kênh ngược chiều)."
+      - "Kiểm thử quá khứ (backtest) trên nhiều năm dữ liệu, ghi lại tỷ lệ thắng, R trung bình, chuỗi thua dài nhất và drawdown lớn nhất."
+      - "Giao dịch thử với khối lượng nhỏ (forward test) ít nhất vài tháng trước khi tăng rủi ro."
+      - "Viết quy tắc ra giấy và cam kết nhận mọi tín hiệu, vì bỏ một tín hiệu có thể là bỏ lỡ xu hướng lớn nhất năm."
+    example: "Ví dụ bản quy tắc giả định: Thị trường XAUUSD + EURUSD; khung D1; vào lệnh khi phá kênh 55 ngày theo hướng MA200; Unit = 0,5% vốn ÷ (N × giá trị/lot); cắt lỗ 2N; nhồi mỗi ½N, tối đa 3 Unit mỗi cặp và 4 Unit tổng; thoát khi phá kênh 20 ngày ngược chiều."
+    mistakes:
+      - "Bắt đầu giao dịch tiền thật trước khi biết chuỗi thua và drawdown lớn nhất của hệ thống."
+      - "Thay đổi quy tắc sau mỗi lệnh thua."
+    visual:
+      type: checklist
+      idea: "Phiếu 'Hệ thống trend following của tôi' với 6 dòng điền: ☐ Thị trường ☐ Khối lượng: Unit = __% ÷ (N × giá trị/lot) ☐ Vào lệnh: Donchian __ ngày ☐ Cắt lỗ: __N ☐ Nhồi lệnh: mỗi __N, tối đa __ Unit ☐ Thoát: kênh __ ngày. Dưới cùng: ☐ Backtest ☐ Forward test ☐ Cam kết nhận mọi tín hiệu."
+sources:
+  - "https://www.theturtletrader.com/turtle-trading-rules/"
+  - "https://www.youtube.com/watch?v=TpA4LAEzFb4"
+  - "https://medium.com/@FMZQuant/turtle-trading-strategy-based-on-donchian-channels-e235ef1bf0ea"
+  - "https://www.lizardindicators.com/donchian-channel-strategy/"
+  - "https://journalplus.co/strategies/turtle-trading-strategy/"
+  - "https://www.litefinance.org/blog/for-beginners/trading-strategies/turtle-trading-strategy/"
+  - "https://martinkronicle.com/building-pyramids-asymmetric-trading/"
+  - "https://medium.com/@trading.dude/discipline-over-prediction-why-the-turtle-trading-rules-still-matter-f0f1d400d58d"

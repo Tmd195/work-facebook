@@ -1,0 +1,177 @@
+id: heikin-ashi-tdi
+name: "Heikin Ashi & TDI (Trading Made Simple)"
+level: "Trung cấp"
+description: "Giúp trader hiểu nến Heikin Ashi và chỉ báo Traders Dynamic Index (TDI), rồi áp dụng phong cách hệ thống 'Trading Made Simple' nổi tiếng trên diễn đàn ForexFactory với quy tắc vào lệnh, thoát lệnh và quản lý rủi ro rõ ràng."
+lessons:
+  - part: 1
+    title: "Nến Heikin Ashi được tính như thế nào"
+    objective: "Hiểu công thức Heikin Ashi và vì sao nó trông mượt hơn nến thường."
+    key_points:
+      - "HA Close = (Open + High + Low + Close) / 4 của nến thường cùng thời điểm."
+      - "HA Open = (HA Open trước + HA Close trước) / 2, nên mỗi nến phụ thuộc vào nến trước."
+      - "HA High = giá cao nhất trong High, HA Open, HA Close; HA Low = giá thấp nhất trong Low, HA Open, HA Close."
+      - "Kết quả là chuỗi nến cùng màu dài hơn, dễ nhìn xu hướng, nhưng giá trên nến HA không phải giá giao dịch thực tế."
+    example: "Ví dụ giả định: nến EURUSD có O 1,0850, H 1,0870, L 1,0845, C 1,0865 → HA Close = 1,08575; nếu HA Open trước 1,0840 và HA Close trước 1,0852 thì HA Open = 1,0846."
+    mistakes:
+      - "Đặt lệnh chờ hoặc dừng lỗ theo giá trên nến Heikin Ashi."
+      - "Backtest bằng giá HA rồi tin kết quả là thật."
+    visual:
+      type: formula
+      idea: "Bảng 4 công thức: HA Close, HA Open, HA High, HA Low. Bên cạnh là ví dụ số EURUSD. Dưới cùng ghi chú màu đỏ: 'Giá HA ≠ giá khớp lệnh thật'."
+  - part: 2
+    title: "Đọc xu hướng bằng nến Heikin Ashi"
+    objective: "Nhận biết xu hướng mạnh, yếu và khả năng đảo chiều qua hình dạng nến HA."
+    key_points:
+      - "Xu hướng tăng mạnh: chuỗi nến xanh thân lớn, gần như không có râu dưới."
+      - "Xu hướng giảm mạnh: chuỗi nến đỏ thân lớn, gần như không có râu trên."
+      - "Nến thân nhỏ có râu hai đầu (giống doji) cho thấy do dự, xu hướng có thể tạm dừng hoặc đảo chiều."
+      - "Heikin Ashi Smoothed (HAS) là biến thể làm mượt thêm bằng trung bình động, thường dùng như bộ lọc màu xu hướng."
+    example: "Ví dụ giả định: XAUUSD H1 có 7 nến HA xanh liên tiếp không râu dưới; nến thứ 8 thân nhỏ, râu hai đầu → tín hiệu thận trọng, không mở lệnh mua mới."
+    mistakes:
+      - "Coi một nến đổi màu là xu hướng đã đảo chiều."
+      - "Quên rằng nến HA trễ hơn nến thường vài nến."
+    visual:
+      type: compare
+      idea: "Hai cột cùng một đoạn giá XAUUSD H1: trái 'Nến thường' với màu xen kẽ xanh đỏ; phải 'Heikin Ashi' với chuỗi nến xanh liền mạch không râu dưới, kết thúc bằng một nến doji nhãn 'Do dự'."
+  - part: 3
+    title: "TDI: năm thành phần trong một chỉ báo"
+    objective: "Nắm cấu tạo và tham số mặc định của Traders Dynamic Index."
+    key_points:
+      - "TDI xây trên RSI 13; đường giá (price line, xanh lá) = SMA 2 của RSI; đường tín hiệu (signal line, đỏ) = SMA 7 của RSI."
+      - "Đường cơ sở thị trường (Market Base Line - MBL, vàng) = SMA 34 của RSI, thể hiện xu hướng dài hơn."
+      - "Dải biến động (volatility bands, xanh dương) = dải Bollinger 34 kỳ với khoảng 1,6185 độ lệch chuẩn tính trên RSI."
+      - "Các mức tham chiếu: 32 - 50 - 68 (một số phiên bản dùng thêm 30/70)."
+    example: "Ví dụ giả định: EURUSD H1 có RSI 13 = 58; đường xanh lá 60, đường đỏ 55, đường vàng 52 → động lượng ngắn hạn mạnh hơn trung hạn, thiên hướng tăng."
+    mistakes:
+      - "Nhầm vai trò của đường xanh lá và đường đỏ do mỗi phiên bản chỉ báo đặt màu khác nhau."
+      - "Đọc TDI như RSI thông thường với vùng 30/70 là đảo chiều."
+    visual:
+      type: chart
+      idea: "Khung chỉ báo TDI dưới biểu đồ nến: đường xanh lá (price line) nhạy nhất, đường đỏ (signal) mượt hơn, đường vàng (MBL) ở giữa, hai dải xanh dương bao ngoài. Các mức ngang 32, 50, 68 nét đứt. Nhãn chỉ từng thành phần."
+  - part: 4
+    title: "Tín hiệu TDI: giao cắt, đường vàng và mức 50"
+    objective: "Đọc các tín hiệu chính của TDI."
+    key_points:
+      - "Đường xanh lá cắt lên trên đường đỏ: động lượng ngắn hạn chuyển sang tăng; cắt xuống: chuyển sang giảm."
+      - "Cả hai đường nằm trên đường vàng và trên 50 là bối cảnh mua tốt hơn; dưới đường vàng và dưới 50 là bối cảnh bán."
+      - "Đường xanh lá trên 68 hoặc dưới 32 cho thấy động lượng đã kéo dãn, không nên vào lệnh mới theo hướng đó."
+      - "Dải xanh dương co hẹp cho thấy động lượng đang nén, có thể sắp bung."
+    example: "Ví dụ giả định: GBPUSD H1, đường xanh lá cắt lên đường đỏ tại 52, cả hai trên đường vàng 49 → tín hiệu mua hợp lệ; nếu giao cắt xảy ra tại 70 thì bỏ qua vì đã quá đà."
+    mistakes:
+      - "Mua khi giao cắt xảy ra dưới đường vàng và dưới 50."
+      - "Vào lệnh khi đường xanh lá đã vượt 68."
+    visual:
+      type: chart
+      idea: "Khung TDI: giao cắt xanh lá lên trên đỏ ở mức 52, phía trên đường vàng (vòng tròn xanh 'Mua hợp lệ'); một giao cắt khác ở 70 (vòng tròn đỏ 'Quá đà - bỏ qua'). Vùng trên 68 và dưới 32 tô nhạt."
+  - part: 5
+    title: "Shark fin: vây cá mập trên TDI"
+    objective: "Nhận diện tín hiệu kiệt sức 'shark fin' và cách dùng thận trọng."
+    key_points:
+      - "Shark fin xảy ra khi đường xanh lá vọt ra ngoài dải xanh dương rồi nhanh chóng quay vào trong, tạo hình vây cá mập."
+      - "Thường báo hiệu động lượng kiệt sức và có thể có nhịp hồi hoặc đảo chiều ngắn hạn."
+      - "Xác suất cao hơn khi shark fin khớp với vùng hỗ trợ/kháng cự quan trọng hoặc phân kỳ giá."
+      - "Đây là tín hiệu ngược xu hướng nên cần dừng lỗ chặt và mục tiêu ngắn hơn."
+    example: "Ví dụ giả định: XAUUSD M30 tăng nhanh, đường xanh lá vượt dải trên ở 78 rồi quay vào 66 trong 2 nến, giá đang ở kháng cự 2.450 → có thể chốt lời lệnh mua hoặc tìm lệnh bán ngắn hạn."
+    mistakes:
+      - "Bán mọi shark fin trong xu hướng tăng mạnh."
+      - "Gọi là shark fin khi đường xanh lá chưa thực sự ra ngoài dải."
+    visual:
+      type: chart
+      idea: "Khung TDI: đường xanh lá nhô ra ngoài dải xanh dương phía trên rồi quay vào tạo hình vây nhọn (vẽ hình vây cá mập mờ, nhãn 'Shark fin'). Biểu đồ giá phía trên chạm đường kháng cự 2.450 rồi quay đầu."
+  - part: 6
+    title: "Ý tưởng hệ thống Trading Made Simple"
+    objective: "Hiểu nguồn gốc và các thành phần của phong cách hệ thống TMS."
+    key_points:
+      - "Trading Made Simple (TMS) là một trong những chủ đề hệ thống dài nhất trên diễn đàn ForexFactory, với hơn 150.000 phản hồi."
+      - "Thành phần cốt lõi: TDI để vào và thoát lệnh, nến Heikin Ashi (bản làm mượt HAS) để xác định màu xu hướng, Stochastic (8,3,3) chỉ để xác nhận hướng."
+      - "Triết lý: chỉ vào lệnh khi mọi thành phần cùng hướng, vào sớm ở đầu tín hiệu và thoát nhanh khi động lượng yếu đi."
+      - "Có nhiều biến thể trong cộng đồng (khung ngày, phiên bản 'classic' hay 'simpler'); loạt bài này trình bày cách hiểu phổ biến, không phải bản gốc duy nhất."
+    example: "Ví dụ giả định: EURUSD H1 có HAS màu xanh, TDI đường xanh lá vừa cắt lên đường đỏ trên đường vàng, Stochastic hướng lên → ba thành phần cùng hướng tăng."
+    mistakes:
+      - "Tải bộ chỉ báo về dùng mà không hiểu từng thành phần làm gì."
+      - "Trộn nhiều biến thể khác nhau thành một bộ quy tắc mâu thuẫn."
+    visual:
+      type: checklist
+      idea: "Sơ đồ 3 tầng: tầng trên 'Heikin Ashi Smoothed → màu xu hướng', tầng giữa 'TDI → vào/thoát lệnh', tầng dưới 'Stochastic 8,3,3 → xác nhận hướng'. Mũi tên hội tụ vào 'Cùng hướng mới vào lệnh'."
+  - part: 7
+    title: "Quy tắc vào lệnh kiểu TMS"
+    objective: "Áp dụng các điều kiện vào lệnh cụ thể của hệ thống."
+    key_points:
+      - "Mua: nến HAS màu xanh, đường xanh lá TDI cắt lên trên đường đỏ, cả hai trên đường vàng; Stochastic 8,3,3 đang hướng lên."
+      - "Bán: ngược lại - HAS màu đỏ, xanh lá cắt xuống dưới đỏ, cả hai dưới đường vàng, Stochastic hướng xuống."
+      - "Vào lệnh sớm ở nến đầu tiên hoặc thứ hai của giao cắt; nếu đã đến nến thứ ba trở đi thì bỏ qua, chờ thiết lập khác."
+      - "Ngoại lệ: nếu đường xanh lá chạm đường đỏ rồi bật lại theo hướng cũ, có thể vào lệnh ở nhịp bật đó."
+    example: "Ví dụ giả định: GBPUSD H1 lúc mở phiên London, HAS chuyển xanh, xanh lá cắt lên đỏ tại 54 trên đường vàng 50, Stochastic đi lên từ 30 → mua ở nến đầu tiên tại 1,2735."
+    mistakes:
+      - "Vào lệnh khi giao cắt đã diễn ra 4-5 nến trước."
+      - "Bỏ qua điều kiện đường vàng vì thấy giao cắt 'đẹp'."
+    visual:
+      type: chart
+      idea: "Biểu đồ GBPUSD H1 với nến HAS chuyển từ đỏ sang xanh; khung TDI bên dưới có giao cắt xanh lá lên đỏ trên đường vàng (đánh số nến 1, 2 màu xanh 'Được vào', nến 3+ màu xám 'Bỏ qua'); khung Stochastic 8,3,3 hướng lên. Mũi tên 'Mua' tại nến 1."
+  - part: 8
+    title: "Thoát lệnh khi đường TDI phẳng hoặc móc"
+    objective: "Biết các tín hiệu thoát lệnh nhanh của hệ thống."
+    key_points:
+      - "Thoát khi đường xanh lá đi ngang, bắt đầu móc ngược (hook) hoặc tạo hình 'dấu tick' đảo chiều."
+      - "Thoát chắc chắn khi đường xanh lá cắt ngược qua đường đỏ."
+      - "Có thể chốt một phần khi đường xanh lá chạm 68 (mua) hoặc 32 (bán), hoặc chạm dải xanh dương."
+      - "Hệ thống ưu tiên nhiều lệnh ngắn với lợi nhuận vừa phải hơn là giữ lệnh dài."
+    example: "Ví dụ giả định: lệnh mua GBPUSD từ 1,2735; đường xanh lá lên 69 rồi móc xuống ở nến tiếp theo khi giá 1,2772 → thoát, lãi 37 pip."
+    mistakes:
+      - "Giữ lệnh qua nhiều lần đường xanh lá móc ngược vì hy vọng giá đi tiếp."
+      - "Thoát lệnh vì một nến HA nhỏ trong khi TDI vẫn dốc mạnh."
+    visual:
+      type: chart
+      idea: "Khung TDI: đường xanh lá đi lên chạm 69 rồi móc xuống (vòng tròn 'Hook - thoát'); một ví dụ khác đường xanh lá cắt xuống đường đỏ (nhãn 'Thoát bắt buộc'). Biểu đồ giá phía trên đánh dấu điểm thoát 1,2772."
+  - part: 9
+    title: "Lọc bằng khung lớn và giờ giao dịch"
+    objective: "Tăng chất lượng tín hiệu bằng khung lớn hơn và chọn thời điểm."
+    key_points:
+      - "Kiểm tra TDI trên khung lớn hơn (ví dụ H4 khi giao dịch H1): ưu tiên giao dịch khi đường xanh lá H4 cùng phía đường vàng."
+      - "Giao dịch chủ yếu phiên London và New York, khi động lượng đủ mạnh cho tín hiệu TDI."
+      - "Tránh giao dịch khi dải xanh dương rất hẹp và đường vàng đi ngang kéo dài (thị trường không có động lượng)."
+      - "Tránh 15-30 phút quanh tin lớn vì TDI dao động rất mạnh và cho tín hiệu giả."
+    example: "Ví dụ giả định: EURUSD H1 có tín hiệu mua lúc 2h sáng giờ Việt Nam với dải TDI rất hẹp, H4 đường xanh lá dưới đường vàng → bỏ qua."
+    mistakes:
+      - "Giao dịch tín hiệu TDI trong phiên Á thanh khoản thấp trên các cặp EUR, GBP."
+      - "Giao dịch ngay trước tin NFP hoặc FOMC."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Nhận tín hiệu' (H4 cùng hướng, phiên London/NY, dải TDI mở) và 'Bỏ qua' (H4 ngược hướng, phiên Á mỏng, dải hẹp, quanh tin lớn). Mỗi cột có hình TDI thu nhỏ minh họa."
+  - part: 10
+    title: "Kế hoạch giao dịch HA + TDI hoàn chỉnh"
+    objective: "Tổng hợp thành kế hoạch có điểm vào, dừng lỗ, chốt lời và quản lý rủi ro."
+    key_points:
+      - "Thiết lập: H1 với bộ lọc H4; EURUSD, GBPUSD, XAUUSD; phiên London và New York."
+      - "Vào lệnh: HAS cùng màu, giao cắt TDI cùng phía đường vàng, Stochastic cùng hướng, trong 1-2 nến đầu của tín hiệu."
+      - "Dừng lỗ: dưới đáy (trên đỉnh) swing gần nhất trên nến thường, hoặc khoảng 1,5 ATR; chốt một phần khi đạt 1R hoặc TDI chạm 68/32, phần còn lại thoát khi đường xanh lá móc ngược."
+      - "Rủi ro 0,5-1% mỗi lệnh; dừng giao dịch trong ngày sau 3 lệnh thua; ghi nhật ký kèm ảnh chụp TDI."
+    example: "Ví dụ giả định: XAUUSD H1 mua tại 2.405 theo tín hiệu, đáy swing gần nhất 2.396 → SL 2.395 (10 USD). Tài khoản 2.000 USD, rủi ro 1% = 20 USD → 0,02 lot. Chốt 50% ở 2.415, phần còn lại thoát khi TDI móc xuống ở 2.421."
+    mistakes:
+      - "Đặt dừng lỗ theo đáy nến Heikin Ashi thay vì nến thường."
+      - "Vào lệnh lại ngay sau khi vừa thoát vì sợ lỡ sóng."
+    visual:
+      type: checklist
+      idea: "Checklist: 'HAS cùng màu', 'TDI: xanh lá cắt đỏ, cùng phía vàng', 'Stochastic cùng hướng', 'Trong 1-2 nến đầu', 'SL: swing gần nhất (nến thường) / 1,5 ATR', 'Chốt 50% ở 1R hoặc 68/32', 'Thoát khi xanh lá móc ngược', 'Rủi ro ≤ 1%'."
+  - part: 11
+    title: "Giới hạn của hệ thống HA + TDI"
+    objective: "Đánh giá thực tế điểm yếu để không kỳ vọng sai."
+    key_points:
+      - "Cả Heikin Ashi và TDI đều là trung bình của giá nên có độ trễ; trong thị trường giật mạnh, tín hiệu đến muộn."
+      - "Thị trường đi ngang khiến đường xanh lá và đỏ cắt nhau liên tục, tạo chuỗi lệnh thua nhỏ."
+      - "Quy tắc thoát nhanh khiến lợi nhuận mỗi lệnh thường nhỏ, nên chi phí spread và hoa hồng ảnh hưởng lớn đến kết quả."
+      - "Thành công trên diễn đàn không đảm bảo hiệu quả cho mọi người; cần kiểm tra lại với dữ liệu và chi phí giao dịch của chính bạn."
+    example: "Ví dụ giả định: một lệnh EURUSD lãi trung bình 12 pip; nếu spread và hoa hồng tổng cộng 1,5 pip, chi phí đã chiếm khoảng 12% lợi nhuận mỗi lệnh thắng."
+    mistakes:
+      - "Không tính spread và hoa hồng khi đánh giá hệ thống thoát nhanh."
+      - "Đổi qua lại giữa nhiều biến thể TMS sau mỗi lần thua."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Điểm mạnh' (quy tắc rõ ràng, trực quan, dễ kiểm tra) và 'Điểm yếu' (trễ, nhiễu khi đi ngang, nhạy với chi phí giao dịch, nhiều biến thể gây rối). Dưới cùng biểu đồ thanh nhỏ: lợi nhuận 12 pip với 1,5 pip chi phí tô đỏ."
+sources:
+  - "https://www.forexfactory.com/thread/291622-trading-made-simple"
+  - "https://www.forexfactory.com/thread/917569-trading-made-simpler"
+  - "https://www.trading-attitude.com/wp-content/uploads/2014/01/Trading-Made-Simple-BigE-Erics-posts.pdf"
+  - "https://www.luxalgo.com/library/concept/traders-dynamic-index/"
+  - "https://trendspider.com/learning-center/introduction-to-tdi/"
+  - "https://chartschool.stockcharts.com/table-of-contents/chart-analysis/chart-types/heikin-ashi"

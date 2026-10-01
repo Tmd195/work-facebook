@@ -1,0 +1,182 @@
+id: vsa
+name: "VSA – Phân tích giá và khối lượng"
+level: "Chuyên sâu"
+description: "Giúp trader đọc mối quan hệ giữa biên độ nến, giá đóng cửa và khối lượng để phát hiện dấu hiệu sức mạnh hay suy yếu của dòng tiền lớn trên vàng và ngoại hối."
+lessons:
+  - part: 1
+    title: "VSA là gì: ba biến số của mỗi cây nến"
+    objective: "Hiểu VSA (Volume Spread Analysis) đọc thị trường qua ba biến số: khối lượng, biên độ và giá đóng cửa."
+    key_points:
+      - "VSA phát triển từ tư tưởng của Wyckoff, được Tom Williams hệ thống hóa thành phương pháp phân tích từng thanh giá."
+      - "Ba biến số: khối lượng (volume), biên độ nến (spread – từ đỉnh tới đáy) và vị trí giá đóng cửa (close: cao, giữa, thấp)."
+      - "Mỗi cây nến được đọc trong bối cảnh các nến trước đó và xu hướng nền, không đọc riêng lẻ."
+      - "Mục tiêu là trả lời: dòng tiền chuyên nghiệp đang mua, bán hay đứng ngoài?"
+    example: "Ví dụ giả định: nến H1 EURUSD tăng với biên độ 40 pip (rộng), đóng cửa sát đỉnh, volume cao gấp 1,5 lần trung bình 20 nến: cầu thật sự đang tham gia."
+    mistakes:
+      - "Chỉ nhìn màu nến xanh/đỏ mà bỏ qua vị trí giá đóng cửa và volume."
+    visual:
+      type: pattern
+      idea: "Một cây nến lớn cận cảnh có chú thích 3 mũi tên: 'Spread' đo từ đỉnh tới đáy, 'Close' chỉ vị trí đóng cửa (chia 3 vùng cao/giữa/thấp), và thanh volume bên dưới có nhãn 'Volume so với trung bình'."
+  - part: 2
+    title: "Tick volume trên forex: giới hạn cần biết"
+    objective: "Hiểu tick volume là gì, vì sao vẫn dùng được cho VSA và những giới hạn của nó."
+    key_points:
+      - "Forex giao ngay phi tập trung nên không có volume tổng hợp; MT4/MT5 hiển thị tick volume là số lần giá thay đổi trong mỗi nến."
+      - "Nhiều nghiên cứu cho thấy tick volume tương quan khá cao với volume thật ở các cặp chính và khung từ H1 trở lên."
+      - "Tick volume khác nhau giữa các broker, nên chỉ so sánh tương đối trên cùng một nguồn dữ liệu."
+      - "Có thể đối chiếu với volume hợp đồng tương lai CME: GC cho vàng, 6E cho EUR, 6B cho GBP."
+    example: "Ví dụ giả định: nến H4 XAUUSD có tick volume 25.000 tại broker A và 18.000 tại broker B. Con số khác nhau, nhưng ở cả hai nguồn nó đều gấp khoảng 2 lần trung bình, nên kết luận VSA vẫn giống nhau."
+    mistakes:
+      - "Dùng VSA trên khung M1–M5 nơi tick volume nhiễu nhiều."
+    visual:
+      type: compare
+      idea: "Hai biểu đồ volume xếp chồng: trên 'Tick volume XAUUSD (MT5)', dưới 'Volume GC futures (CME)'; các đỉnh volume trùng vị trí được nối bằng đường đứt nét, ghi chú 'Hình dạng tương đồng, con số khác nhau'."
+  - part: 3
+    title: "Đọc volume tương đối và bối cảnh"
+    objective: "Biết phân loại volume (rất cao, cao, trung bình, thấp) và đặt nến vào bối cảnh xu hướng."
+    key_points:
+      - "So volume nến hiện tại với trung bình động 20–30 nến hoặc với các nến gần nhất để phân loại."
+      - "Vị trí trong xu hướng rất quan trọng: volume cực lớn ở cuối xu hướng dài có ý nghĩa khác hẳn ở giữa vùng đi ngang."
+      - "Chú ý các vùng hỗ trợ/kháng cự trên khung lớn, vì tín hiệu VSA tại đó đáng tin cậy hơn."
+      - "Luôn xem nến kế tiếp để xác nhận: VSA đánh giá tín hiệu qua chuỗi nến, không qua một nến."
+    example: "Ví dụ giả định: trên D1 GBPUSD, đường trung bình volume 20 phiên là 60.000 tick; nến hôm nay 130.000 tick được xếp loại 'rất cao' và nằm ngay kháng cự tuần 1,3000."
+    mistakes:
+      - "Coi mọi nến volume cao là tín hiệu, bất kể vị trí trong xu hướng."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến với thanh volume bên dưới và đường trung bình volume 20; các thanh volume tô 4 màu theo mức: rất cao, cao, trung bình, thấp. Kẻ vùng kháng cự khung lớn, khoanh nến volume rất cao chạm vùng này."
+  - part: 4
+    title: "No Demand: khi nhịp tăng thiếu người mua"
+    objective: "Nhận diện tín hiệu No Demand (không có cầu) và cách dùng nó để tìm điểm bán."
+    key_points:
+      - "No Demand là nến tăng biên độ hẹp, volume thấp hơn hai nến trước đó, thường đóng cửa giữa hoặc thấp."
+      - "Tín hiệu cho thấy dòng tiền lớn không quan tâm tới việc đẩy giá lên ở mức này."
+      - "Đáng tin hơn khi xuất hiện trong xu hướng giảm, ở nhịp hồi lên kháng cự hoặc sau một dấu hiệu yếu."
+      - "Xác nhận khi nến kế tiếp giảm và phá đáy nến No Demand."
+    example: "Ví dụ giả định: EURUSD giảm từ 1,0950 xuống 1,0820, hồi về 1,0880 bằng một nến H1 xanh thân nhỏ, volume thấp nhất 10 nến. Nến sau phá đáy: tín hiệu No Demand cho lệnh bán."
+    mistakes:
+      - "Bán theo No Demand trong xu hướng tăng mạnh, nơi nến volume thấp chỉ là nghỉ ngơi bình thường."
+    visual:
+      type: pattern
+      idea: "Chuỗi 4 nến: hai nến tăng bình thường, nến thứ ba tăng thân hẹp có nhãn 'No Demand' và thanh volume thấp hơn hẳn hai thanh trước, nến thứ tư đỏ phá đáy với mũi tên xuống. Nền là kháng cự kẻ ngang."
+  - part: 5
+    title: "No Supply: khi nhịp giảm thiếu người bán"
+    objective: "Nhận diện tín hiệu No Supply (không có cung) và dùng nó để tìm điểm mua theo xu hướng."
+    key_points:
+      - "No Supply là nến giảm biên độ hẹp, volume thấp hơn hai nến trước, cho thấy áp lực bán đã cạn."
+      - "Tín hiệu mạnh nhất khi xuất hiện trong xu hướng tăng, ở nhịp chỉnh về hỗ trợ hoặc đường trung bình."
+      - "Xác nhận khi nến kế tiếp tăng và vượt đỉnh nến No Supply."
+      - "No Supply là phiên bản đối xứng của No Demand, đọc cùng logic nhưng ngược chiều."
+    example: "Ví dụ giả định: XAUUSD đang tăng trên H4, chỉnh về vùng hỗ trợ 2.350 bằng nến đỏ thân nhỏ, volume thấp nhất 15 nến; nến sau xanh vượt đỉnh. Đây là điểm mua theo xu hướng có rủi ro rõ ràng."
+    mistakes:
+      - "Mua No Supply khi khung lớn đang giảm mạnh."
+    visual:
+      type: pattern
+      idea: "Chuỗi 4 nến trên vùng hỗ trợ: hai nến giảm, nến thứ ba giảm thân hẹp có nhãn 'No Supply' và volume thấp, nến thứ tư xanh vượt đỉnh với mũi tên lên. Thanh volume tương ứng bên dưới."
+  - part: 6
+    title: "Stopping Volume: khi cú bán tháo bị chặn"
+    objective: "Nhận diện Stopping Volume – dấu hiệu dòng tiền lớn hấp thụ lực bán ở cuối nhịp giảm."
+    key_points:
+      - "Stopping Volume xuất hiện sau nhịp giảm: nến giảm biên độ rộng, volume rất cao, nhưng đóng cửa ở giữa hoặc gần đỉnh nến."
+      - "Đuôi dưới dài cho thấy lượng bán lớn đã được hấp thụ bởi người mua chuyên nghiệp."
+      - "Đây là dấu hiệu sức mạnh nhưng chưa phải lệnh mua ngay; thường cần một phép thử (test) sau đó."
+      - "Nhiều nến Stopping Volume liên tiếp tạo thành vùng hấp thụ, tương ứng với Selling Climax trong Wyckoff."
+    example: "Ví dụ giả định: GBPUSD rơi 120 pip trong 2 ngày, nến D1 thứ ba xuyên 1,2600 xuống 1,2560 nhưng đóng cửa 1,2640 với volume cao nhất tháng: Stopping Volume."
+    mistakes:
+      - "Bắt đáy ngay khi thấy nến volume khủng mà không chờ test hoặc xác nhận."
+    visual:
+      type: pattern
+      idea: "Chuỗi nến giảm mạnh, cây cuối có thân đỏ dài nhưng đóng cửa ở nửa trên với bóng dưới dài, thanh volume cao vọt có nhãn 'Stopping Volume'. Mũi tên chỉ đuôi dưới ghi 'lực mua hấp thụ'."
+  - part: 7
+    title: "Climax mua và bán: kết thúc xu hướng"
+    objective: "Phân biệt Buying Climax, Selling Climax và hiểu vì sao chúng đánh dấu điểm cạn kiệt xu hướng."
+    key_points:
+      - "Buying Climax: sau xu hướng tăng dài, nến tăng biên độ rất rộng, volume cực lớn, thường kèm tin tốt; dòng tiền lớn bán cho đám đông mua đuổi."
+      - "Selling Climax: sau xu hướng giảm dài, nến giảm rộng, volume cực lớn, đám đông bán hoảng loạn cho dòng tiền lớn."
+      - "Climax thường không phải điểm đảo chiều chính xác mà là mở đầu cho giai đoạn đi ngang."
+      - "Nến kế tiếp với biên độ hẹp, không đi tiếp được theo hướng cũ là xác nhận quan trọng."
+    example: "Ví dụ giả định: XAUUSD tăng 8 tuần liên tục, nến D1 bật 60 giá lên 2.520 sau tin xung đột với volume kỷ lục, hôm sau đóng cửa giảm: dấu hiệu Buying Climax."
+    mistakes:
+      - "Mua theo tin nóng đúng ngày có volume cao nhất chu kỳ."
+    visual:
+      type: compare
+      idea: "Hai cột: trái 'Buying Climax' – xu hướng tăng kết thúc bằng nến xanh rất dài và volume đỉnh, sau đó đi ngang; phải 'Selling Climax' – xu hướng giảm kết thúc bằng nến đỏ rất dài, volume đỉnh, đuôi dưới, sau đó đi ngang."
+  - part: 8
+    title: "Upthrust: bẫy phá đỉnh của dòng tiền lớn"
+    objective: "Nhận diện Upthrust – nến bẫy tăng giá báo hiệu suy yếu."
+    key_points:
+      - "Upthrust là nến tăng lên vượt đỉnh gần đó hoặc kháng cự rồi đóng cửa ở gần đáy nến, tạo bóng trên dài."
+      - "Upthrust với volume cao cho thấy cung lớn xuất hiện; Upthrust với volume thấp cho thấy cầu yếu."
+      - "Có hiệu lực mạnh nhất sau dấu hiệu yếu trước đó hoặc trong xu hướng giảm."
+      - "Xác nhận bằng nến kế tiếp giảm hoặc một No Demand ngay sau đó."
+    example: "Ví dụ giả định: EURUSD H4 vượt kháng cự 1,1000 lên 1,1025 rồi đóng cửa 1,0985, bóng trên dài, volume cao; nến sau giảm tiếp. Đây là Upthrust, dừng lỗ cho lệnh bán đặt trên 1,1030."
+    mistakes:
+      - "Mua breakout ngay khi giá vượt kháng cự trong nến, trước khi nến đóng cửa."
+    visual:
+      type: pattern
+      idea: "Đường kháng cự ngang; một cây nến vượt lên trên đường rồi đóng cửa sát đáy với bóng trên rất dài, nhãn 'Upthrust', volume cao bên dưới; nến sau đỏ với mũi tên xuống."
+  - part: 9
+    title: "Test và Shakeout: kiểm tra nguồn cung"
+    objective: "Nhận diện nến Test và Shakeout để xác nhận nguồn cung đã cạn trước khi giá tăng."
+    key_points:
+      - "Test là nến giảm xuống vùng có cung trước đó (thường sau Stopping Volume) rồi đóng cửa gần đỉnh với volume thấp."
+      - "Test thành công trên volume thấp cho thấy không còn người bán đáng kể, mở đường cho nhịp tăng."
+      - "Shakeout là nhịp giảm mạnh, nhanh xuống dưới hỗ trợ rồi đóng cửa cao, quét dừng lỗ; tương ứng Spring trong Wyckoff."
+      - "Test với volume cao là test thất bại, cung vẫn còn, cần chờ thêm."
+    example: "Ví dụ giả định: sau Stopping Volume tại 1,2560, GBPUSD hai ngày sau giảm về 1,2575 rồi đóng cửa 1,2630 với volume chỉ bằng 40% trung bình: Test thành công."
+    mistakes:
+      - "Không phân biệt test volume thấp (tốt) với test volume cao (cung còn mạnh)."
+    visual:
+      type: pattern
+      idea: "Vùng hỗ trợ kẻ ngang; nến Stopping Volume trước, vài nến sau đó, rồi một nến có bóng dưới chạm vùng và đóng cửa gần đỉnh với thanh volume thấp, nhãn 'Test'. Mũi tên lên sau đó."
+  - part: 10
+    title: "Effort vs Result trong VSA"
+    objective: "Áp dụng nguyên lý nỗ lực – kết quả để phát hiện phân kỳ giữa volume và biến động giá."
+    key_points:
+      - "Nỗ lực tăng (volume cao) mà kết quả nhỏ (biên độ hẹp, giá không đi tiếp) cho thấy lực đối ứng đang hấp thụ."
+      - "Nỗ lực nhỏ mà kết quả lớn có thể do thiếu thanh khoản, thường gặp khi ra tin hoặc phiên vắng."
+      - "Nỗ lực đi lên với volume giảm dần qua các đỉnh cho thấy xu hướng cạn dần lực."
+      - "So sánh các sóng (cụm nến) với nhau sẽ rõ ràng hơn so sánh từng nến lẻ."
+    example: "Ví dụ giả định: ba nhịp tăng liên tiếp của XAUUSD trên H4 có tổng volume 60.000, 45.000 và 30.000 tick trong khi giá vẫn tạo đỉnh mới: nỗ lực giảm dần, cảnh báo xu hướng yếu."
+    mistakes:
+      - "Diễn giải nến biên độ rộng volume thấp lúc ra tin như dấu hiệu sức mạnh thật."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến 3 nhịp tăng đánh số 1, 2, 3 với đỉnh cao dần; bên dưới là cụm volume của mỗi nhịp thấp dần, nối bằng đường dốc xuống, nhãn 'Nỗ lực giảm – cảnh báo'."
+  - part: 11
+    title: "Ghép tín hiệu VSA thành câu chuyện"
+    objective: "Biết kết hợp nhiều tín hiệu VSA theo chuỗi để xác định vùng đảo chiều có xác suất cao."
+    key_points:
+      - "Chuỗi tăng điển hình: Selling Climax/Stopping Volume → Test/Shakeout → No Supply → nến tăng volume cao vượt kháng cự."
+      - "Chuỗi giảm điển hình: Buying Climax → Upthrust → No Demand → nến giảm volume cao phá hỗ trợ."
+      - "Kết hợp khung thời gian: xác định bối cảnh trên D1/H4, tìm tín hiệu vào lệnh trên H1."
+      - "Một tín hiệu lẻ có độ tin cậy thấp; hai đến ba tín hiệu cùng hướng tại vùng quan trọng mới đáng hành động."
+    example: "Ví dụ giả định: EURUSD D1 có Stopping Volume tại 1,0700, H4 xuất hiện Test volume thấp tại 1,0710, rồi H1 có No Supply tại 1,0730. Ba tín hiệu cùng hướng tạo câu chuyện tăng giá."
+    mistakes:
+      - "Chọn lọc tín hiệu theo ý muốn và bỏ qua tín hiệu ngược chiều."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến đánh số các tín hiệu theo thứ tự: 1 Stopping Volume ở đáy, 2 Test, 3 No Supply, 4 nến tăng volume cao vượt kháng cự. Volume bars bên dưới, mũi tên nối các bước như dòng thời gian."
+  - part: 12
+    title: "Kế hoạch giao dịch VSA và quản lý rủi ro"
+    objective: "Xây dựng kế hoạch giao dịch hoàn chỉnh dựa trên tín hiệu VSA với quản lý rủi ro rõ ràng."
+    key_points:
+      - "Điều kiện vào lệnh: bối cảnh khung lớn đồng thuận + vùng hỗ trợ/kháng cự + ít nhất một tín hiệu VSA được nến sau xác nhận."
+      - "Dừng lỗ đặt sau đáy/đỉnh của nến tín hiệu (Stopping Volume, Test, Upthrust) cộng vùng đệm theo spread và ATR."
+      - "Rủi ro mỗi lệnh 0,5–1% tài khoản; mục tiêu đầu tiên là vùng kháng cự/hỗ trợ kế tiếp, tỷ lệ lợi nhuận/rủi ro tối thiểu 1:2."
+      - "Thoát sớm khi xuất hiện tín hiệu ngược chiều mạnh (ví dụ Upthrust khi đang giữ lệnh mua)."
+    example: "Ví dụ giả định: tài khoản 5.000 USD, rủi ro 1% = 50 USD. Bán EURUSD sau Upthrust tại 1,0985, dừng lỗ 1,1030 (45 pip), khối lượng khoảng 0,11 lot, mục tiêu 1,0895 (90 pip, tỷ lệ 1:2)."
+    mistakes:
+      - "Giao dịch VSA ngay trước tin lớn khi volume bị bóp méo."
+      - "Không ghi nhật ký tín hiệu nên không biết tín hiệu nào hiệu quả với mình."
+    visual:
+      type: checklist
+      idea: "Checklist: Bối cảnh khung lớn ✓, Vùng S/R ✓, Tín hiệu VSA ✓, Nến xác nhận ✓, SL sau nến tín hiệu ✓, Rủi ro ≤1% ✓, R:R ≥1:2 ✓. Bên cạnh là nến Upthrust nhỏ với đường Entry, SL, TP."
+sources:
+  - "https://www.earnforex.com/guides/volume-spread-analysis/"
+  - "https://www.earnforex.com/guides/tick-volume-in-forex/"
+  - "https://www.youtube.com/watch?v=3g0lxb018L4"
+  - "https://www.youtube.com/watch?v=vRbA4hW6lFc"
+  - "https://www.classcentral.com/course/youtube-forex-vsa-webinars-65551"
+  - "https://tradeproacademy.com/volume-spread-analysis-trading-strategy/"
+  - "https://dotnettutorials.net/lesson/volume-spread-analysis-in-trading/"

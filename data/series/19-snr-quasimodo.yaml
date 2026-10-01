@@ -1,0 +1,183 @@
+id: snr-quasimodo
+name: "SNR & Quasimodo (Malaysian SNR)"
+level: "Chuyên sâu"
+description: "Giúp người đọc vẽ hỗ trợ/kháng cự theo trường phái Malaysian SNR (A-level, V-level, fresh/unfresh), đọc storyline và giao dịch mô hình Quasimodo một cách có hệ thống."
+lessons:
+  - part: 1
+    title: "Malaysian SNR khác SNR truyền thống ra sao?"
+    objective: "Hiểu triết lý của Malaysian SNR: level là một đường giá chính xác dựa trên giá đóng/mở cửa, không phải một vùng rộng."
+    key_points:
+      - "Malaysian SNR (MSNR) vẽ hỗ trợ/kháng cự (support and resistance – SNR) là một đường ngang tại giá đóng hoặc mở cửa, không dùng râu nến."
+      - "Lý do: giá đóng/mở phản ánh nơi phe mua/bán thực sự chấp nhận; râu nến chỉ là di chuyển tạm thời."
+      - "Hệ thống gồm 3 phần chính: vẽ level (A/V, gap), đánh giá level (fresh/unfresh), đọc câu chuyện giá (storyline) – rồi mới tới mô hình vào lệnh như Quasimodo."
+      - "Cách gọi và quy tắc có khác nhau giữa các nhóm học MSNR; series này dùng cách hiểu phổ biến nhất."
+    example: "Ví dụ giả định: XAUUSD có đỉnh râu 2.412 nhưng giá đóng cửa cao nhất của cụm nến là 2.405. MSNR lấy 2.405 làm level kháng cự."
+    mistakes:
+      - "Vẽ vùng hỗ trợ/kháng cự rộng hàng chục giá rồi gọi là MSNR."
+    visual:
+      type: compare
+      idea: "Hai cột. Trái 'SNR truyền thống': hộp vùng rộng bao cả râu nến. Phải 'Malaysian SNR': một đường ngang mảnh đặt tại thân nến (giá đóng cửa), râu nến vượt qua đường được khoanh nhãn 'bỏ qua râu'."
+  - part: 2
+    title: "A-level và V-level trên biểu đồ line"
+    objective: "Tìm A-level (kháng cự) và V-level (hỗ trợ) bằng biểu đồ đường giá đóng cửa."
+    key_points:
+      - "Chuyển sang biểu đồ line (nối giá đóng cửa) để thấy các đỉnh hình chữ A và đáy hình chữ V rõ ràng."
+      - "A-level: đường ngang tại đỉnh chữ A – đóng vai trò kháng cự."
+      - "V-level: đường ngang tại đáy chữ V – đóng vai trò hỗ trợ."
+      - "Sau khi đánh dấu trên line chart, chuyển lại biểu đồ nến; level nằm đúng giá đóng cửa của nến tạo đỉnh/đáy."
+    example: "Ví dụ giả định: EURUSD H4 line chart có đỉnh A ở 1,0930 và đáy V ở 1,0860. Trên nến, râu có thể lên 1,0942, nhưng A-level vẫn là 1,0930."
+    mistakes:
+      - "Vẽ level ở mọi đỉnh nhỏ, khiến biểu đồ dày đặc đường ngang vô nghĩa."
+    visual:
+      type: chart
+      idea: "Biểu đồ line chart zigzag; tại mỗi đỉnh nhọn ghi chữ 'A' và kẻ đường ngang đỏ 'A-level (kháng cự)', tại mỗi đáy ghi 'V' và kẻ đường xanh 'V-level (hỗ trợ)'. Ô nhỏ góc phải cho thấy cùng đoạn trên biểu đồ nến với đường nằm ở thân nến."
+  - part: 3
+    title: "Gap level: mức giữa hai nến"
+    objective: "Nhận biết gap level – loại level thứ ba của MSNR."
+    key_points:
+      - "Gap level hình thành khi giá đóng cửa nến trước và giá mở cửa nến sau ở hai mức khác nhau, hoặc tại điểm nối giữa nến tăng và nến giảm liền kề."
+      - "Trên thị trường forex 24h, gap thật hiếm (chủ yếu đầu tuần), nên nhiều người coi điểm đóng-mở giữa hai nến đổi màu là level tham chiếu."
+      - "Gap level thường được dùng như vùng phản ứng khi giá quay lại, tương tự A/V level."
+      - "Định nghĩa gap level không thống nhất giữa các nhóm; nên kiểm chứng bằng backtest trước khi dùng."
+    example: "Ví dụ giả định: XAUUSD đóng tuần ở 2.350, mở tuần mới ở 2.358. Khoảng 2.350–2.358 là gap; mức 2.350 thường được theo dõi khi giá quay lại."
+    mistakes:
+      - "Ưu tiên gap level hơn A/V level rõ ràng trên khung lớn."
+    visual:
+      type: pattern
+      idea: "Cận cảnh hai nến: nến xanh đóng cửa ở mức X, nến kế tiếp mở cửa ở mức Y cao hơn, khoảng trống tô xám nhãn 'Gap'. Đường ngang tại X nhãn 'Gap level', mũi tên giá quay về chạm đường rồi bật lên."
+  - part: 4
+    title: "Level fresh và unfresh"
+    objective: "Đánh giá độ 'mới' của level để ưu tiên những level có xác suất phản ứng cao hơn."
+    key_points:
+      - "Level fresh (còn mới) là level chưa bị râu nến nào chạm lại kể từ khi hình thành."
+      - "Khi có râu nến chạm vào, level trở thành unfresh (đã dùng) và giảm độ tin cậy."
+      - "Level unfresh có thể 'fresh' trở lại khi bị thân nến đóng cửa xuyên qua – lúc đó nó có thể đổi vai (xem bài RBS/SBR)."
+      - "Ưu tiên giao dịch level fresh, đặc biệt trên khung lớn."
+    example: "Ví dụ giả định: GBPUSD có A-level 1,2800 hình thành tuần trước. Hôm qua một râu nến H1 chạm 1,2801 rồi giảm → level đã unfresh, lần chạm tới kém tin cậy hơn."
+    mistakes:
+      - "Vẫn đặt lệnh chờ tại level đã bị chạm nhiều lần."
+    visual:
+      type: compare
+      idea: "Hai cột. Trái 'Fresh': đường ngang xanh lá, giá đi xa và chưa chạm lại, mũi tên lần chạm đầu tiên bật mạnh. Phải 'Unfresh': cùng đường nhưng màu xám, đã có râu nến chạm (khoanh tròn), lần chạm sau giá xuyên qua."
+  - part: 5
+    title: "RBS và SBR: level đổi vai"
+    objective: "Nhận diện khi kháng cự thành hỗ trợ (RBS) và hỗ trợ thành kháng cự (SBR)."
+    key_points:
+      - "RBS (resistance become support): A-level bị thân nến đóng cửa vượt lên, sau đó giá quay lại test từ trên và giữ – level giờ là hỗ trợ."
+      - "SBR (support become resistance): V-level bị thân nến đóng cửa phá xuống, giá hồi lên test từ dưới và bị chặn."
+      - "Cú phá cần đóng cửa thân nến rõ ràng; râu xuyên qua không đủ."
+      - "RBS/SBR là cơ sở của mô hình Quasimodo, vì QM bản chất là chuỗi phá vỡ và đổi vai level."
+    example: "Ví dụ giả định: XAUUSD có A-level 2.380. Nến H1 đóng ở 2.388, sau đó giá hồi về 2.381 và bật lên → RBS tại 2.380."
+    mistakes:
+      - "Mua ngay khi vừa phá level mà không chờ giá quay lại xác nhận đổi vai."
+    visual:
+      type: chart
+      idea: "Bên trái: đường kháng cự, giá chạm 2 lần bị chặn, lần 3 nến thân dài đóng vượt lên, hồi về chạm đường từ trên rồi tăng (nhãn 'RBS'). Bên phải: hình đối xứng phá hỗ trợ xuống, nhãn 'SBR'."
+  - part: 6
+    title: "Storyline: đọc câu chuyện của giá"
+    objective: "Dùng storyline khung lớn để biết nên tìm mua hay bán và level nào đáng giao dịch."
+    key_points:
+      - "Storyline là hướng di chuyển của giá được 'kể' bằng chuỗi level bị phá trên khung lớn (D1/H4)."
+      - "Khi giá liên tục phá A-level và tạo RBS, storyline là tăng – chỉ tìm mua tại level hỗ trợ fresh."
+      - "Level nằm cản đường storyline (roadblock) là nơi có thể chốt lời hoặc chờ đợi, không phải nơi đảo chiều ngay."
+      - "Storyline chỉ đổi khi một level then chốt bị phá ngược hướng và có cấu trúc mới xác nhận."
+    example: "Ví dụ giả định: EURUSD D1 phá 1,0800 rồi 1,0850 lên 1,0900. Storyline tăng; level fresh 1,0850 (RBS) là nơi tìm mua, còn A-level D1 1,0950 phía trên là roadblock/mục tiêu."
+    mistakes:
+      - "Bán tại mọi A-level dù storyline khung lớn đang tăng."
+    visual:
+      type: chart
+      idea: "Biểu đồ D1 dạng bậc thang tăng: mỗi bậc là một level bị phá và test lại (nhãn RBS). Mũi tên lớn 'Storyline tăng'. Phía trên có đường đỏ nhãn 'Roadblock / Mục tiêu'."
+  - part: 7
+    title: "Mô hình Quasimodo (QM) là gì?"
+    objective: "Nhận diện cấu trúc mô hình Quasimodo tăng và giảm."
+    key_points:
+      - "QM giảm: giá tạo đỉnh (vai trái, L-shoulder) → đáy → đỉnh cao hơn (đầu, head – HH) → giảm phá xuống dưới đáy trước (LL)."
+      - "Cú phá đáy (thường bằng thân nến, có lực) là dấu hiệu đổi tính chất từ tăng sang giảm."
+      - "QM tăng là cấu trúc ngược lại: đáy (vai trái) → đỉnh → đáy thấp hơn (đầu – LL) → tăng phá đỉnh trước (HH)."
+      - "Khác vai-đầu-vai: QM có đáy thứ hai thấp hơn đáy đầu (với QM giảm) và vào lệnh trước khi vai phải kịp hình thành."
+    example: "Ví dụ giả định: XAUUSD H1 đỉnh 2.400 (vai trái), đáy 2.385, đỉnh 2.410 (đầu), sau đó giảm xuống 2.378 phá đáy 2.385 → hình thành QM giảm."
+    mistakes:
+      - "Nhầm một cú hồi bình thường thành QM khi chưa có cú phá đáy rõ ràng."
+    visual:
+      type: pattern
+      idea: "Đường giá QM giảm với 4 điểm nhãn: 'L-shoulder (H)', 'L', 'Head (HH)', 'LL'. Đường ngang nét đứt tại vai trái kéo sang phải. Bên cạnh hình đối xứng QM tăng."
+  - part: 8
+    title: "QML: vào lệnh, dừng lỗ, chốt lời"
+    objective: "Biết đặt lệnh tại QML (quasimodo level) với dừng lỗ và mục tiêu cụ thể."
+    key_points:
+      - "QML (quasimodo level/line) là level tại vai trái; với MSNR thường vẽ tại giá đóng/mở cửa của nến tạo vai trái."
+      - "Khi giá hồi lên QML sau cú phá LL, đặt lệnh bán tại QML (QM giảm) – vai phải sẽ hình thành tại đây nếu mô hình hiệu quả."
+      - "Dừng lỗ trên đỉnh đầu (head) cộng một khoảng đệm; một số người đặt SL ngắn hơn trên vai trái, đánh đổi tỷ lệ thắng."
+      - "Mục tiêu: đáy LL vừa tạo, sau đó là level hỗ trợ fresh tiếp theo theo storyline."
+    example: "Ví dụ giả định: QM giảm trên EURUSD có vai trái đóng nến ở 1,0920, đầu 1,0945, LL 1,0880. Bán chờ 1,0920, SL 1,0950, TP1 1,0880, TP2 1,0840 (R:R ≈ 1:1,3 và 1:2,7)."
+    mistakes:
+      - "Đặt dừng lỗ ngay sát QML khiến bị quét bởi râu nến thông thường."
+    visual:
+      type: chart
+      idea: "QM giảm hoàn chỉnh: đường QML nét đứt tại vai trái, mũi tên giá hồi lên chạm QML tạo vai phải. Đường đỏ SL trên đầu, đường xanh TP1 tại LL và TP2 tại level thấp hơn; nhãn 'Entry @ QML'."
+  - part: 9
+    title: "Compression: giá nén trước khi chạm level"
+    objective: "Nhận diện compression (CP) – dấu hiệu tăng xác suất phản ứng tại QML hoặc level fresh."
+    key_points:
+      - "Compression là kiểu giá tiến tới level bằng nhiều nhịp nhỏ, chồng chéo, thân nến ngắn, như bậc thang chậm."
+      - "Mỗi nhịp nhỏ tạo đáy/đỉnh nội bộ, nơi người vào lệnh sớm đặt dừng lỗ; khi giá chạm level, lớp thanh khoản này đã được gom."
+      - "Compression đi vào level thường cho phản ứng mạnh hơn so với giá lao thẳng vào bằng nến thân dài."
+      - "Ngược lại, giá tới level bằng momentum rất mạnh có nguy cơ xuyên qua level."
+    example: "Ví dụ giả định: XAUUSD tiến từ 2.360 lên QML 2.380 qua 6 nhịp nhỏ, mỗi nhịp chỉ 2-3 giá, nhiều râu. Đây là compression – điểm cộng cho lệnh bán tại 2.380."
+    mistakes:
+      - "Bán tại level khi giá đang lao lên bằng chuỗi nến thân dài không có hồi."
+    visual:
+      type: compare
+      idea: "Hai cột. Trái 'Compression': giá đi lên từng bậc nhỏ chồng chéo tới đường QML, nhãn 'CP', mũi tên bật xuống mạnh. Phải 'Momentum': 3 nến xanh thân dài lao vào đường và xuyên qua, dấu X."
+  - part: 10
+    title: "Lọc QM chất lượng: vị trí và biến thể"
+    objective: "Phân biệt QM có vị trí tốt với QM 'giữa đường' và biết các biến thể thường gặp."
+    key_points:
+      - "QM tốt hình thành tại level fresh khung lớn hoặc vùng premium/discount, cùng hướng storyline."
+      - "Cú phá LL/HH nên có thân nến dài (engulfing) – thể hiện bên đối diện bị áp đảo."
+      - "Biến thể thường gặp: QM tiếp diễn (QM nhỏ hình thành trong nhịp hồi, cùng hướng storyline) và QM kép (hai QML chồng nhau)."
+      - "Bỏ qua QM có đầu (head) quá xa vai trái khiến dừng lỗ không tương xứng với mục tiêu."
+    example: "Ví dụ giả định: GBPUSD storyline H4 giảm. Trên M15 xuất hiện QM giảm ngay dưới SBR H4 1,2750 – QM tiếp diễn có vị trí tốt. Một QM tăng xuất hiện ngược storyline giữa range thì bỏ qua."
+    mistakes:
+      - "Giao dịch mọi QM nhìn thấy trên khung M1–M5 mà không kiểm tra khung lớn."
+    visual:
+      type: checklist
+      idea: "Checklist lọc QM: Tại level fresh HTF ✓ | Cùng storyline ✓ | Phá LL/HH bằng thân nến mạnh ✓ | Có compression vào QML ✓ | SL hợp lý (đầu không quá xa) ✓. Bên cạnh minh họa nhỏ QM tiếp diễn trong nhịp hồi."
+  - part: 11
+    title: "Từ storyline khung lớn đến QM khung nhỏ"
+    objective: "Xây quy trình đa khung thời gian cho Malaysian SNR."
+    key_points:
+      - "D1/H4: vẽ A/V level, đánh dấu fresh/unfresh, xác định storyline và level mục tiêu."
+      - "H1: chờ giá đi tới level fresh khung lớn, quan sát compression."
+      - "M15/M5: tìm QM theo hướng storyline tại level đó; vào lệnh tại QML khung nhỏ."
+      - "Dừng lỗ theo đầu QM khung nhỏ nên ngắn; mục tiêu là level khung lớn tiếp theo, giúp R:R cao."
+    example: "Ví dụ giả định: XAUUSD storyline H4 tăng, V-level fresh 2.320. Giá compression xuống 2.320 trên H1; M15 tạo QM tăng: vai trái 2.324, đầu 2.316, HH 2.330. Mua tại 2.324, SL 2.314, TP A-level H4 2.360."
+    mistakes:
+      - "Vào lệnh khung nhỏ trước khi giá chạm level khung lớn."
+    visual:
+      type: chart
+      idea: "Ba ô xếp dọc: H4 (bậc thang tăng, đường V-level fresh xanh lá), H1 (giá compression về đường), M15 (QM tăng, đường QML, mũi tên mua, SL dưới đầu, TP đến A-level H4)."
+  - part: 12
+    title: "Checklist MSNR + QM và quản lý rủi ro"
+    objective: "Tổng hợp quy trình giao dịch hoàn chỉnh và quy tắc quản lý vốn."
+    key_points:
+      - "Checklist: storyline rõ → level fresh khung lớn → compression → QM cùng hướng với cú phá thân nến → vào tại QML."
+      - "Rủi ro mỗi lệnh cố định 0,5–1%; nếu khoảng SL đến đầu QM quá rộng, giảm khối lượng hoặc bỏ lệnh."
+      - "Chốt một phần tại LL/HH của QM, phần còn lại hướng tới level fresh tiếp theo; dời SL về hòa vốn sau TP1."
+      - "Level đã unfresh sau lệnh thua không nên giao dịch lại lần hai; ghi nhật ký để đánh giá tỷ lệ thắng theo từng loại level."
+    example: "Ví dụ giả định: tài khoản 3.000 USD, rủi ro 1% = 30 USD. Lệnh EURUSD tại QML có SL 15 pip → khối lượng 0,20 lot (0,2 lot ≈ 2 USD/pip)."
+    mistakes:
+      - "Cố vào lại cùng QML sau khi đã bị dừng lỗ vì 'level vẫn còn đó'."
+    visual:
+      type: checklist
+      idea: "Sơ đồ 5 bước nối bằng mũi tên: Storyline → Level fresh HTF → Compression → QM + phá thân nến → Entry QML. Dưới là thanh ghi chú quản lý vốn: 'Rủi ro 0,5–1% | TP1 tại LL/HH | SL hòa vốn sau TP1'."
+sources:
+  - "https://www.tradingview.com/script/zHJLrkfS-Malaysian-SnR-Storyline/"
+  - "https://www.tradingview.com/script/20NljIPT-Malaysian-SnR-Levels/"
+  - "https://www.tradingview.com/script/v5zEBKFJ-Malaysian-SnR-Levels-UAlgo/"
+  - "https://www.scribd.com/document/826847580/malaysian-snr-full-document-by-KororFX"
+  - "https://fxopen.com/blog/en/quasimodo-trading-pattern/"
+  - "https://forexbee.co/quasimodo-pattern/"
+  - "https://alchemymarkets.com/education/strategies/quasimodo-pattern/"
+  - "https://fxnx.com/en/blog/qml-continuation-smart-money-trend-pullback-entries"
+  - "https://www.youtube.com/results?search_query=malaysian+snr+quasimodo"

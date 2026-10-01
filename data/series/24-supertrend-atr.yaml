@@ -1,0 +1,192 @@
+id: supertrend-atr
+name: "Supertrend & ATR Trailing Stop"
+level: "Trung cấp"
+description: "Giúp trader hiểu ATR, cách Supertrend và các dải dừng lỗ động (UT Bot, Chandelier Exit) được tính, và xây dựng một kế hoạch giao dịch theo xu hướng có điểm vào, dừng lỗ, thoát lệnh rõ ràng trên XAUUSD và EURUSD."
+lessons:
+  - part: 1
+    title: "ATR: thước đo biên độ dao động của giá"
+    objective: "Hiểu ATR (Average True Range) đo cái gì và đọc được giá trị ATR trên biểu đồ."
+    key_points:
+      - "True Range (TR) là giá trị lớn nhất trong ba khoảng: High − Low, |High − Close phiên trước|, |Low − Close phiên trước|, nên tính cả khoảng trống giá (gap)."
+      - "ATR là trung bình của TR, mặc định 14 nến theo cách làm mượt của Welles Wilder; ATR chỉ đo độ biến động, không cho biết hướng."
+      - "ATR tính bằng đơn vị giá: ATR 14 của XAUUSD khung H1 bằng 6 nghĩa là trung bình mỗi nến H1 dao động khoảng 6 USD."
+      - "ATR tăng khi thị trường sôi động (tin tức, phiên London/New York) và giảm khi thị trường đi ngang, yên ắng."
+    example: "Ví dụ giả định: XAUUSD H1 có ATR(14) = 6 USD, EURUSD H1 có ATR(14) = 0,0012 (12 pip). Một mức dừng lỗ 3 USD cho vàng là quá chặt vì chỉ bằng nửa biên độ một cây nến bình thường."
+    mistakes:
+      - "Nghĩ ATR tăng là giá đang tăng; ATR tăng chỉ có nghĩa là biến động lớn hơn, giá có thể đang giảm mạnh."
+      - "So sánh ATR giữa hai cặp tiền khác đơn vị giá mà không quy đổi sang pip hoặc phần trăm."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến XAUUSD H1: nửa trái là vùng đi ngang với nến nhỏ, nửa phải là nhịp tăng mạnh với nến dài. Bên dưới là khung chỉ báo ATR(14): đường ATR nằm thấp (khoảng 3) ở vùng đi ngang rồi dốc lên (khoảng 8) ở vùng nến dài. Nhãn 'Biến động thấp' và 'Biến động cao', chú thích 'ATR không cho biết hướng'."
+  - part: 2
+    title: "Supertrend được tính như thế nào"
+    objective: "Nắm được công thức và tham số mặc định của Supertrend để không dùng nó như một 'hộp đen'."
+    key_points:
+      - "Supertrend lấy giá giữa nến hl2 = (High + Low) / 2, rồi cộng/trừ một bội số ATR để tạo dải trên và dải dưới."
+      - "Tham số mặc định phổ biến trên TradingView là ATR 10 và hệ số (factor/multiplier) 3."
+      - "Dải dưới chỉ được phép đi lên hoặc đứng yên khi đang xu hướng tăng, dải trên chỉ được đi xuống hoặc đứng yên khi đang xu hướng giảm, nên đường Supertrend có dạng bậc thang."
+      - "Khi giá đóng cửa vượt qua dải bên kia, Supertrend đảo chiều: đường chuyển từ dưới giá lên trên giá (hoặc ngược lại) và đổi màu."
+    example: "Ví dụ giả định: EURUSD có hl2 = 1,0850, ATR(10) = 0,0010, hệ số 3. Dải dưới cơ sở = 1,0850 − 3 × 0,0010 = 1,0820; dải trên cơ sở = 1,0880."
+    mistakes:
+      - "Tưởng Supertrend là đường trung bình động; thực chất nó là một đường dừng lỗ động dựa trên biến động."
+      - "Đổi tham số liên tục theo từng biểu đồ để 'đẹp' trong quá khứ (tối ưu hóa quá mức - overfitting)."
+    visual:
+      type: formula
+      idea: "Bảng công thức: dòng 1 'hl2 = (High + Low) / 2'; dòng 2 'Dải trên = hl2 + Hệ số × ATR'; dòng 3 'Dải dưới = hl2 − Hệ số × ATR'; dòng 4 'Mặc định: ATR 10, Hệ số 3'; dòng 5 'Giá đóng cửa vượt dải bên kia → đảo chiều'. Ví dụ số EURUSD ở cột phải."
+  - part: 3
+    title: "Đọc tín hiệu Supertrend: màu, vị trí, đảo chiều"
+    objective: "Nhận biết trạng thái xu hướng và điểm đảo chiều theo Supertrend trên biểu đồ."
+    key_points:
+      - "Đường nằm dưới giá và màu xanh là trạng thái tăng; đường nằm trên giá và màu đỏ là trạng thái giảm."
+      - "Tín hiệu chỉ hợp lệ khi nến đã đóng cửa; trong lúc nến đang chạy, đường có thể đổi màu rồi đổi lại."
+      - "Đoạn đường nằm ngang kéo dài cho thấy giá đang chững lại, còn đoạn bậc thang đi lên đều cho thấy xu hướng khỏe."
+      - "Khoảng cách giữa giá và đường Supertrend chính là rủi ro nếu dùng đường làm dừng lỗ."
+    example: "Ví dụ giả định trên XAUUSD H4: giá đóng cửa 2.415 vượt trên dải trên 2.410, Supertrend đổi sang xanh và nằm ở 2.392. Nếu mua tại 2.415 và đặt dừng lỗ dưới đường, rủi ro khoảng 23 USD/oz."
+    mistakes:
+      - "Vào lệnh khi nến chưa đóng cửa rồi thấy tín hiệu biến mất."
+      - "Vào lệnh khi giá đã chạy rất xa đường Supertrend, khiến dừng lỗ quá rộng so với mục tiêu."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến XAUUSD H4: nhịp giảm với đường Supertrend đỏ phía trên giá dạng bậc thang đi xuống, sau đó một nến tăng mạnh đóng cửa vượt lên, đường chuyển xanh xuống dưới giá và đi lên bậc thang. Mũi tên 'Đảo chiều sau khi nến đóng cửa', dấu ngoặc đo khoảng cách giá - đường ghi 'Rủi ro nếu đặt SL tại đường'."
+  - part: 4
+    title: "Chỉnh tham số ATR và hệ số cho vàng, EURUSD"
+    objective: "Hiểu tác động của việc tăng/giảm hệ số và chu kỳ ATR để chọn tham số phù hợp phong cách."
+    key_points:
+      - "Hệ số nhỏ (ví dụ 1,5-2) đặt đường sát giá hơn: tín hiệu sớm hơn nhưng nhiều tín hiệu nhiễu hơn."
+      - "Hệ số lớn (ví dụ 3-4) đặt đường xa giá: ít bị quét hơn nhưng vào trễ và dừng lỗ rộng hơn."
+      - "Chu kỳ ATR ngắn phản ứng nhanh với cú sốc biến động, chu kỳ dài cho đường ổn định hơn."
+      - "Nên chọn một bộ tham số, kiểm tra lại (backtest) trên nhiều tháng dữ liệu và giữ cố định, thay vì đổi theo từng tuần."
+    example: "Ví dụ giả định: trên EURUSD M15, Supertrend (10, 2) cho 9 lần đổi màu trong một tuần đi ngang, còn (10, 3) chỉ đổi màu 4 lần; đổi lại, (10, 3) vào lệnh trễ hơn khoảng 15 pip ở nhịp tăng cuối tuần."
+    mistakes:
+      - "Dùng hệ số quá nhỏ trên khung M1-M5 của vàng, nơi râu nến dài liên tục quét qua đường."
+      - "Chọn tham số dựa trên một vài lệnh thắng gần nhất."
+    visual:
+      type: compare
+      idea: "Hai cột cùng một đoạn giá EURUSD M15 đi ngang rồi tăng. Cột trái 'Hệ số 2': đường sát giá, đổi màu nhiều lần, các dấu X đỏ đánh dấu tín hiệu nhiễu. Cột phải 'Hệ số 3': đường xa giá, ít đổi màu, vào lệnh trễ hơn, mũi tên ghi 'trễ hơn nhưng ít nhiễu'."
+  - part: 5
+    title: "Supertrend thất bại khi thị trường đi ngang"
+    objective: "Nhận diện điều kiện thị trường khiến Supertrend liên tục cho tín hiệu sai."
+    key_points:
+      - "Supertrend là công cụ theo xu hướng (trend following), nên trong vùng đi ngang nó sẽ đảo màu liên tục và gây chuỗi lệnh thua nhỏ (whipsaw)."
+      - "Dấu hiệu đi ngang: đường Supertrend đổi màu nhiều lần trong khoảng hẹp, giá bám quanh EMA 50 nằm ngang, ATR giảm dần."
+      - "Có thể lọc bằng chỉ báo sức mạnh xu hướng như ADX (ví dụ chỉ giao dịch khi ADX 14 trên 20-25) hoặc bằng cấu trúc đỉnh đáy."
+      - "Một số lệnh thua liên tiếp trong vùng đi ngang là chi phí bình thường của hệ thống theo xu hướng, không phải lỗi."
+    example: "Ví dụ giả định: XAUUSD H1 dao động 2.380-2.395 trong phiên Á; Supertrend (10, 3) đổi màu 3 lần, mỗi lần thua 6-8 USD. Bộ lọc ADX dưới 20 sẽ loại bỏ cả ba tín hiệu này."
+    mistakes:
+      - "Tăng khối lượng để 'gỡ' sau vài lệnh thua liên tiếp trong vùng đi ngang."
+      - "Bỏ hệ thống ngay sau một chuỗi whipsaw mà không xem lại số liệu dài hạn."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD H1 đi ngang trong hộp 2.380-2.395, Supertrend đổi màu xanh/đỏ 3-4 lần, mỗi điểm đổi màu có dấu X đỏ 'whipsaw'. Bên dưới khung ADX(14) nằm dưới đường 20 được tô xám, nhãn 'Không giao dịch khi ADX < 20'."
+  - part: 6
+    title: "Kết hợp Supertrend với bộ lọc xu hướng EMA 200"
+    objective: "Dùng một bộ lọc khung lớn để chỉ đánh theo hướng chính của thị trường."
+    key_points:
+      - "Quy tắc lọc đơn giản: chỉ nhận tín hiệu mua của Supertrend khi giá trên EMA 200, chỉ nhận tín hiệu bán khi giá dưới EMA 200."
+      - "Có thể lọc bằng khung thời gian lớn hơn (ví dụ giao dịch H1 nhưng chỉ theo màu Supertrend trên H4)."
+      - "Bộ lọc giảm số lệnh và loại bớt tín hiệu ngược xu hướng, nhưng cũng bỏ lỡ một số điểm đảo chiều sớm."
+      - "Chỉ thêm một hoặc hai bộ lọc; quá nhiều điều kiện sẽ làm hệ thống gần như không bao giờ vào lệnh."
+    example: "Ví dụ giả định: EURUSD H1 đang dưới EMA 200 và Supertrend H4 màu đỏ. Supertrend H1 đổi xanh lúc 1,0790 nhưng bị bỏ qua; lần đổi đỏ tiếp theo tại 1,0775 mới được chọn để bán."
+    mistakes:
+      - "Dùng EMA 200 nhưng vẫn mua khi giá chỉ vừa chạm lên EMA rồi rớt xuống."
+      - "Thêm RSI, MACD, Stochastic cùng lúc làm bộ lọc dẫn đến tê liệt."
+    visual:
+      type: chart
+      idea: "Biểu đồ EURUSD H1 trong xu hướng giảm, đường EMA 200 màu cam nằm trên giá. Supertrend đổi xanh một lần (đánh dấu 'Bỏ qua - ngược EMA 200') rồi đổi đỏ (mũi tên xuống 'Bán - cùng hướng EMA 200'). Góc trên ghi 'Supertrend H4: Đỏ'."
+  - part: 7
+    title: "UT Bot: ATR trailing stop dạng tín hiệu"
+    objective: "Hiểu logic của các chỉ báo kiểu UT Bot phổ biến trên TradingView và điểm giống, khác so với Supertrend."
+    key_points:
+      - "UT Bot là một đường dừng lỗ động (ATR trailing stop) với khoảng cách = Hệ số độ nhạy (key value) × ATR, mặc định phổ biến là độ nhạy 1 và ATR 10."
+      - "Tín hiệu mua xuất hiện khi giá đóng cửa cắt lên trên đường trailing stop, tín hiệu bán khi cắt xuống dưới."
+      - "Vì đường bám theo giá đóng cửa và hệ số mặc định nhỏ, UT Bot nhạy hơn Supertrend (10, 3) và cho nhiều tín hiệu hơn."
+      - "Có tùy chọn tính trên nến Heikin Ashi để làm mượt, nhưng khi backtest cần cẩn thận vì giá Heikin Ashi không phải giá khớp lệnh thật."
+    example: "Ví dụ giả định: XAUUSD M15 có ATR(10) = 2,5 USD, độ nhạy 1 → đường trailing cách giá khoảng 2,5 USD. Với độ nhạy 2, khoảng cách là 5 USD và số tín hiệu giảm gần một nửa."
+    mistakes:
+      - "Tin rằng nhãn 'Buy/Sell' trên biểu đồ là tín hiệu chắc chắn, trong khi đó chỉ là điểm giá cắt qua một đường ATR."
+      - "Backtest trên nến Heikin Ashi rồi tưởng kết quả đó giống giao dịch thật."
+    visual:
+      type: compare
+      idea: "Hai cột cùng đoạn giá XAUUSD M15. Trái 'UT Bot (1, 10)': đường trailing sát giá, nhiều nhãn Buy/Sell nhỏ. Phải 'Supertrend (10, 3)': đường bậc thang xa giá, ít tín hiệu. Dòng dưới: 'Nhạy hơn = nhiều tín hiệu hơn + nhiều nhiễu hơn'."
+  - part: 8
+    title: "Chandelier Exit: thoát lệnh treo theo đỉnh cao nhất"
+    objective: "Dùng Chandelier Exit để quản lý lệnh đang lãi theo biến động thị trường."
+    key_points:
+      - "Chandelier Exit cho lệnh mua = Đỉnh cao nhất N nến − Hệ số × ATR(N); cấu hình phổ biến là N = 22 và hệ số 3."
+      - "Cho lệnh bán = Đáy thấp nhất N nến + Hệ số × ATR(N)."
+      - "Đường treo từ đỉnh cao nhất (như đèn chùm treo từ trần nhà) nên chỉ dời lên khi giá tạo đỉnh mới."
+      - "Phù hợp làm công cụ thoát lệnh (exit) hơn là tín hiệu vào lệnh."
+    example: "Ví dụ giả định: lệnh mua XAUUSD D1, đỉnh cao nhất 22 phiên là 2.480, ATR(22) = 25 → Chandelier Exit = 2.480 − 75 = 2.405. Giá đóng cửa dưới 2.405 thì đóng lệnh."
+    mistakes:
+      - "Kéo dừng lỗ sát hơn đường Chandelier vì sợ mất lãi, khiến lệnh bị quét ở nhịp điều chỉnh bình thường."
+      - "Dời đường xuống khi giá đi ngược, phá vỡ nguyên tắc dừng lỗ chỉ đi một chiều."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD D1 xu hướng tăng; đường ngang chấm đánh dấu đỉnh cao nhất 22 phiên, mũi tên thẳng đứng đi xuống ghi '3 × ATR', đường Chandelier Exit màu tím bên dưới giá chỉ đi lên. Cuối biểu đồ nến đóng cửa dưới đường với nhãn 'Thoát lệnh'."
+  - part: 9
+    title: "Quy tắc vào lệnh với Supertrend"
+    objective: "Viết ra được một bộ quy tắc vào lệnh rõ ràng, kiểm tra được."
+    key_points:
+      - "Điều kiện 1: khung lớn đồng thuận (giá trên EMA 200 hoặc Supertrend H4 cùng màu)."
+      - "Điều kiện 2: Supertrend khung giao dịch đổi màu theo hướng đó và nến tín hiệu đã đóng cửa."
+      - "Điều kiện 3: khoảng cách từ giá vào đến đường Supertrend không quá khoảng 1,5 × ATR; nếu xa hơn, chờ giá hồi về gần đường."
+      - "Cách vào thay thế: khi Supertrend đã cùng màu, vào lệnh ở nhịp hồi chạm gần đường rồi xuất hiện nến xác nhận đi lại theo xu hướng."
+    example: "Ví dụ giả định trên EURUSD H1, ATR = 0,0012: Supertrend đổi xanh tại 1,0862, đường ở 1,0838 (cách 24 pip = 2 ATR, quá xa). Trader chờ giá hồi về 1,0848 rồi mua khi có nến tăng đóng cửa, rủi ro chỉ còn khoảng 10-12 pip."
+    mistakes:
+      - "Mua đuổi ngay nến đổi màu dài bất thường sau tin tức."
+      - "Không viết quy tắc ra giấy nên mỗi lần vào lệnh lại theo cảm tính."
+    visual:
+      type: checklist
+      idea: "Checklist 4 dòng có ô tick: '1. Khung lớn cùng hướng (EMA 200 / Supertrend H4)'; '2. Supertrend đổi màu, nến đã đóng cửa'; '3. Khoảng cách tới đường ≤ 1,5 ATR'; '4. Nếu quá xa: chờ hồi về đường + nến xác nhận'. Góc phải có hình nhỏ minh họa nhịp hồi chạm đường xanh."
+  - part: 10
+    title: "Dừng lỗ, chốt lời và tính khối lượng"
+    objective: "Đặt dừng lỗ, mục tiêu và khối lượng lệnh hợp lý cho hệ thống Supertrend."
+    key_points:
+      - "Dừng lỗ ban đầu: phía bên kia đường Supertrend cộng thêm một khoảng đệm nhỏ (ví dụ 0,2-0,5 ATR) và chênh lệch giá mua bán (spread)."
+      - "Chốt lời từng phần: chốt khoảng 50% khi đạt 1,5R-2R (R = khoảng rủi ro ban đầu), phần còn lại để chạy theo đường Supertrend hoặc Chandelier Exit."
+      - "Khối lượng = (Số dư × % rủi ro) / (khoảng cách dừng lỗ × giá trị mỗi đơn vị giá); rủi ro mỗi lệnh thường giữ ở 0,5-1%."
+      - "Không bao giờ dời dừng lỗ ra xa hơn khi lệnh đi ngược."
+    example: "Ví dụ giả định: tài khoản 5.000 USD, rủi ro 1% = 50 USD, mua XAUUSD với dừng lỗ cách 10 USD; 1 lot = 100 oz → khối lượng = 50 / (10 × 100) = 0,05 lot. Mục tiêu 2R ở +20 USD."
+    mistakes:
+      - "Đặt dừng lỗ đúng bằng giá đường Supertrend, bị quét bởi spread hoặc râu nến."
+      - "Giữ nguyên khối lượng cố định cho mọi lệnh dù khoảng dừng lỗ thay đổi rất nhiều."
+    visual:
+      type: formula
+      idea: "Bảng: 'SL = đường Supertrend ± (0,2-0,5 ATR + spread)'; 'TP1 = 1,5-2R, chốt 50%'; 'Phần còn lại: trailing theo Supertrend'; 'Lot = (Vốn × %rủi ro) / (khoảng SL × giá trị 1 đơn vị)'. Ví dụ số XAUUSD bên dưới: 5.000 USD, 1%, SL 10 USD → 0,05 lot."
+  - part: 11
+    title: "Kế hoạch giao dịch Supertrend hoàn chỉnh"
+    objective: "Ghép toàn bộ quy tắc thành một kế hoạch giao dịch có thể kiểm tra lại và áp dụng."
+    key_points:
+      - "Thị trường và khung: ví dụ XAUUSD hoặc EURUSD, khung H1 với bộ lọc H4; tránh giao dịch 15-30 phút quanh tin lớn (NFP, CPI, FOMC)."
+      - "Vào lệnh: khung H4 cùng màu, Supertrend H1 (10, 3) đổi màu và nến đóng cửa, khoảng cách tới đường không quá 1,5 ATR."
+      - "Quản lý: dừng lỗ bên kia đường + đệm, chốt 50% ở 2R, dời dừng lỗ về hòa vốn, phần còn lại thoát khi Supertrend H1 đổi màu."
+      - "Rủi ro tối đa 1% mỗi lệnh, dừng giao dịch trong ngày sau 2-3 lệnh thua, ghi nhật ký mọi lệnh."
+    example: "Ví dụ giả định: H4 xanh, Supertrend H1 trên XAUUSD đổi xanh tại 2.402, đường ở 2.394 (ATR 6). SL 2.392, rủi ro 10 USD; chốt 50% tại 2.422, phần còn lại đóng khi đường đổi đỏ ở 2.437."
+    mistakes:
+      - "Bỏ qua bước kiểm tra lại (backtest) ít nhất 50-100 lệnh trước khi dùng tiền thật."
+      - "Chỉ áp dụng một phần kế hoạch, ví dụ dùng tín hiệu vào nhưng tự ý thoát lệnh theo cảm xúc."
+    visual:
+      type: checklist
+      idea: "Bảng kế hoạch 5 mục có biểu tượng: 'Thị trường & khung', 'Điều kiện vào', 'Dừng lỗ', 'Chốt lời & trailing', 'Quản lý rủi ro (1%/lệnh, dừng sau 2-3 lệnh thua)'. Bên cạnh là biểu đồ nhỏ XAUUSD H1 đánh dấu Entry, SL, TP1 (2R), Exit theo đổi màu."
+  - part: 12
+    title: "Giới hạn của Supertrend và kỳ vọng thực tế"
+    objective: "Hiểu khi nào hệ thống thất bại và đặt kỳ vọng đúng về tỷ lệ thắng."
+    key_points:
+      - "Hệ thống theo xu hướng thường có tỷ lệ thắng chỉ khoảng 35-45%, lợi nhuận đến từ số ít lệnh lãi lớn; đây là con số tham khảo, kết quả thực tế tùy dữ liệu và chi phí."
+      - "Thất bại điển hình: thị trường đi ngang kéo dài, tin tức gây giật hai chiều, và giãn spread ở đầu phiên hoặc cuối tuần."
+      - "Supertrend là chỉ báo trễ (lagging): luôn vào sau khi xu hướng đã bắt đầu và thoát sau khi xu hướng đã kết thúc một đoạn."
+      - "Kết quả quá khứ không đảm bảo tương lai; luôn kiểm tra trên tài khoản demo hoặc khối lượng nhỏ trước."
+    example: "Ví dụ giả định: trong 20 lệnh, 8 lệnh thắng trung bình +2,5R và 12 lệnh thua −1R → tổng +8R. Nếu trader sợ hãi chốt lời sớm ở +1R, tổng chỉ còn −4R dù tín hiệu y hệt."
+    mistakes:
+      - "Kỳ vọng tỷ lệ thắng trên 70% từ một hệ thống theo xu hướng."
+      - "Chốt lời sớm các lệnh thắng nhưng để lệnh thua chạy hết dừng lỗ, làm hỏng cấu trúc lợi nhuận của hệ thống."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Khi Supertrend hiệu quả' (xu hướng rõ, ATR ổn định, ADX > 25, biểu đồ nhỏ xu hướng bậc thang) và 'Khi Supertrend thất bại' (đi ngang, tin tức giật hai chiều, spread giãn, biểu đồ nhỏ đường đổi màu liên tục). Dưới cùng: 'Tỷ lệ thắng thấp + lệnh lãi lớn = hệ thống theo xu hướng'."
+sources:
+  - "https://www.tradingview.com/support/solutions/43000634738-supertrend/"
+  - "https://in.tradingview.com/scripts/supertrend/page-2/"
+  - "https://in.tradingview.com/scripts/utbot/"
+  - "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-overlays/chandelier-exit"
+  - "https://chartschool.stockcharts.com/table-of-contents/technical-indicators-and-overlays/technical-indicators/average-true-range-atr-and-average-true-range-percent-atrp"
+  - "https://tradenation.com/articles/tradingview-indicators/"

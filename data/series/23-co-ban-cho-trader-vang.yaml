@@ -1,0 +1,195 @@
+id: co-ban-cho-trader-vang
+name: "Phân tích cơ bản cho trader vàng"
+level: "Trung cấp"
+description: "Giúp trader XAUUSD hiểu các động lực vĩ mô chính của giá vàng (Fed, lãi suất thực, USD, lạm phát, việc làm, ngân hàng trung ương, địa chính trị, ETF) và biến chúng thành một kế hoạch phân tích hằng tuần kết hợp với kỹ thuật."
+lessons:
+  - part: 1
+    title: "Vàng không phải tiền tệ: điều gì làm giá vàng chạy"
+    objective: "Nắm bức tranh tổng thể về các nhóm yếu tố cơ bản tác động đến giá vàng."
+    key_points:
+      - "Vàng không trả lãi, nên giá vàng nhạy với chi phí cơ hội (opportunity cost) – tức lợi suất mà nhà đầu tư bỏ lỡ khi giữ vàng thay vì trái phiếu hay tiền gửi."
+      - "XAUUSD được định giá bằng USD, nên sức mạnh đồng USD và chính sách của Cục Dự trữ Liên bang Mỹ (Fed) có ảnh hưởng lớn."
+      - "Các nhóm động lực chính: lãi suất và USD; lạm phát và tăng trưởng; nhu cầu trú ẩn khi rủi ro tăng; nhu cầu của ngân hàng trung ương, quỹ ETF và nhu cầu vật chất (trang sức, vàng miếng, nhất là Trung Quốc, Ấn Độ)."
+      - "Trọng số của từng yếu tố thay đổi theo thời kỳ; không có một công thức cố định đúng mãi mãi."
+    example: "Ví dụ giả định: trong cùng một tuần, Fed phát tín hiệu giữ lãi suất cao (bất lợi cho vàng) nhưng căng thẳng địa chính trị leo thang (hỗ trợ vàng); giá vàng có thể chỉ đi ngang vì hai lực triệt tiêu nhau."
+    mistakes:
+      - "Chỉ nhìn một yếu tố (ví dụ chỉ nhìn DXY) và bỏ qua các lực còn lại."
+      - "Tin rằng mọi tin tốt cho kinh tế Mỹ thì vàng đều phải giảm."
+    visual:
+      type: chart
+      idea: "Sơ đồ trung tâm: biểu tượng thỏi vàng ở giữa, 6 mũi tên từ các ô xung quanh: 'Fed & lãi suất thực', 'USD (DXY)', 'Lạm phát & việc làm', 'Ngân hàng trung ương', 'ETF & nhà đầu tư', 'Địa chính trị & rủi ro'. Mỗi ô có ký hiệu ↑/↓ minh họa chiều tác động thường gặp."
+  - part: 2
+    title: "Fed, lãi suất và cuộc họp FOMC"
+    objective: "Hiểu cách chính sách của Fed ảnh hưởng tới vàng và các mốc giờ họp FOMC theo giờ Việt Nam."
+    key_points:
+      - "Ủy ban Thị trường Mở Liên bang (FOMC) họp 8 lần/năm để quyết định lãi suất quỹ liên bang (Fed funds rate)."
+      - "Tuyên bố chính sách ra lúc 14:00 giờ New York, họp báo 14:30; theo giờ VN là 01:00/01:30 (mùa hè Mỹ) hoặc 02:00/02:30 (mùa đông) sáng hôm sau."
+      - "Lập trường 'diều hâu' (hawkish – ưu tiên chống lạm phát, giữ lãi cao) thường bất lợi cho vàng; 'bồ câu' (dovish – nghiêng về giảm lãi) thường hỗ trợ vàng."
+      - "Bốn kỳ họp mỗi năm (tháng 3, 6, 9, 12) có thêm biểu đồ chấm (dot plot) dự báo lãi suất, thường gây biến động lớn hơn."
+    example: "Ví dụ giả định: thị trường đã kỳ vọng Fed giảm 0,25%. Fed giảm đúng 0,25% nhưng dot plot cho thấy ít lần giảm hơn trong năm sau → vàng có thể giảm dù Fed vừa hạ lãi, vì thông điệp 'diều hâu' hơn kỳ vọng."
+    mistakes:
+      - "Chỉ nhìn quyết định lãi suất mà bỏ qua dot plot và họp báo."
+      - "Giữ lệnh lớn qua đêm FOMC mà không tính đến biến động hai chiều."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Diều hâu (Hawkish)' – tăng/giữ lãi cao, lo lạm phát, lợi suất ↑, USD ↑, vàng thường ↓ ; 'Bồ câu (Dovish)' – giảm lãi, lo tăng trưởng, lợi suất ↓, USD ↓, vàng thường ↑. Dải dưới cùng: 'FOMC: 01:00 (hè) / 02:00 (đông) giờ VN'."
+  - part: 3
+    title: "Lãi suất thực: thước đo chi phí giữ vàng"
+    objective: "Hiểu lãi suất thực (real interest rate) là gì và vì sao nó thường tương quan nghịch với vàng."
+    key_points:
+      - "Lãi suất thực ≈ lãi suất danh nghĩa − lạm phát kỳ vọng; thước đo phổ biến là lợi suất trái phiếu Mỹ chống lạm phát 10 năm (10-year TIPS yield)."
+      - "Lãi suất thực tăng làm chi phí cơ hội giữ vàng tăng nên vàng thường chịu áp lực; lãi suất thực giảm thường hỗ trợ vàng."
+      - "Lãi suất danh nghĩa tăng nhưng lạm phát kỳ vọng tăng nhanh hơn thì lãi suất thực vẫn có thể giảm."
+      - "Từ năm 2022, tương quan nghịch này yếu đi rõ rệt vì ngân hàng trung ương mua mạnh và nhu cầu phòng ngừa rủi ro; nên coi đây là một lực quan trọng, không phải quy luật tuyệt đối."
+    example: "Ví dụ giả định: lợi suất danh nghĩa 10 năm 4,3%, lạm phát kỳ vọng 2,3% → lãi suất thực khoảng 2,0%. Nếu lạm phát kỳ vọng tăng lên 2,6% trong khi lợi suất danh nghĩa giữ nguyên, lãi suất thực còn 1,7% – môi trường thuận lợi hơn cho vàng."
+    mistakes:
+      - "Nhìn lợi suất danh nghĩa và kết luận ngay chiều đi của vàng."
+      - "Cho rằng vàng luôn phải giảm khi lãi suất thực dương."
+    visual:
+      type: formula
+      idea: "Công thức lớn: Lãi suất thực = Lợi suất danh nghĩa − Lạm phát kỳ vọng. Bên dưới bảng 2 kịch bản: A: 4,3% − 2,3% = 2,0% → vàng chịu áp lực; B: 4,3% − 2,6% = 1,7% → hỗ trợ vàng. Góc phải biểu đồ đường minh họa hai đường ngược chiều (lãi suất thực đảo ngược trục và giá vàng) kèm ghi chú 'tương quan yếu đi từ 2022'."
+  - part: 4
+    title: "Chỉ số USD (DXY) và mối quan hệ với vàng"
+    objective: "Hiểu chỉ số DXY và khi nào vàng đi ngược hoặc cùng chiều với USD."
+    key_points:
+      - "DXY đo sức mạnh USD so với rổ 6 đồng tiền, trong đó EUR chiếm khoảng 57,6%, nên DXY và EURUSD gần như ngược chiều nhau."
+      - "Vì vàng định giá bằng USD, USD mạnh lên khiến vàng đắt hơn với người mua dùng đồng tiền khác, nên thường có xu hướng nghịch chiều."
+      - "Trong khủng hoảng hoặc khi nhu cầu trú ẩn rất lớn, vàng và USD có thể cùng tăng."
+      - "Theo dõi DXY và EURUSD cùng lúc giúp xác nhận một đợt tăng/giảm của vàng có phải do USD hay do nhu cầu riêng của vàng."
+    example: "Ví dụ giả định: sau dữ liệu Mỹ, DXY tăng 0,6%, EURUSD giảm 70 pip và vàng giảm 25 USD – một nhịp 'USD mạnh' điển hình. Nhưng một ngày khác DXY tăng 0,3% mà vàng vẫn tăng 20 USD, gợi ý dòng tiền trú ẩn hoặc mua từ ngân hàng trung ương."
+    mistakes:
+      - "Mua vàng chỉ vì DXY giảm mà không kiểm tra lãi suất thực."
+      - "Mua vàng đồng thời bán EURUSD rồi ngạc nhiên khi cả hai cùng lỗ vì thực chất là hai hướng cược trái ngược về USD."
+    visual:
+      type: chart
+      idea: "Hai biểu đồ đường xếp chồng cùng trục thời gian: trên là DXY, dưới là XAUUSD. Phần lớn đoạn hai đường đi ngược chiều (tô xanh nhạt, nhãn 'tương quan nghịch'); một đoạn ngắn cả hai cùng tăng (tô cam, nhãn 'khủng hoảng – cùng tăng')."
+  - part: 5
+    title: "Lạm phát: đọc CPI và PCE"
+    objective: "Biết cách đọc dữ liệu CPI, PCE và phản ứng thường gặp của vàng."
+    key_points:
+      - "CPI (chỉ số giá tiêu dùng) do Cục Thống kê Lao động Mỹ (BLS) công bố hằng tháng, thường vào giữa tháng, lúc 08:30 giờ New York (19:30 hè / 20:30 đông giờ VN)."
+      - "PCE (chỉ số giá chi tiêu tiêu dùng cá nhân) do BEA công bố cuối tháng; PCE lõi là thước đo lạm phát Fed ưa dùng với mục tiêu 2%."
+      - "Thị trường chú ý nhất đến số lõi (core – bỏ thực phẩm và năng lượng) và so sánh với dự báo (forecast)."
+      - "Ngắn hạn: lạm phát cao hơn dự báo → kỳ vọng Fed diều hâu → lợi suất, USD tăng → vàng thường giảm; dài hạn, lạm phát cao kéo dài lại có thể hỗ trợ vàng như tài sản giữ giá trị."
+    example: "Ví dụ giả định: CPI lõi theo tháng dự báo 0,2%, thực tế 0,4%. Trong 15 phút đầu, lợi suất 2 năm tăng mạnh, DXY tăng và vàng giảm khoảng 30 USD."
+    mistakes:
+      - "Chỉ nhìn số CPI tổng mà bỏ qua CPI lõi và số so với tháng trước."
+      - "Nghĩ rằng 'lạm phát cao thì vàng tăng' áp dụng cho cả phản ứng ngay sau tin."
+    visual:
+      type: formula
+      idea: "Bảng đọc tin: Chỉ số | Dự báo | Thực tế | Kết luận. CPI lõi m/m | 0,2% | 0,4% | Cao hơn → hawkish. Dòng chuỗi phản ứng: Lạm phát > dự báo → Lợi suất ↑ → USD ↑ → Vàng ↓ (ngắn hạn). Ghi chú nhỏ: 'PCE lõi – thước đo Fed ưa dùng, mục tiêu 2%'."
+  - part: 6
+    title: "Thị trường lao động và tin NFP"
+    objective: "Hiểu báo cáo việc làm phi nông nghiệp (Non-Farm Payrolls – NFP) và cách nó tác động đến vàng."
+    key_points:
+      - "Báo cáo việc làm Mỹ thường ra ngày thứ Sáu đầu tiên của tháng lúc 08:30 giờ New York (19:30 hè / 20:30 đông giờ VN)."
+      - "Ba con số chính: số việc làm mới (NFP), tỷ lệ thất nghiệp và thu nhập bình quân theo giờ (average hourly earnings)."
+      - "Thị trường lao động mạnh hơn dự báo thường làm giảm kỳ vọng Fed hạ lãi → bất lợi cho vàng; yếu hơn dự báo thường hỗ trợ vàng."
+      - "Số liệu tháng trước thường được điều chỉnh (revision) và đôi khi các thành phần mâu thuẫn nhau, khiến giá giật hai chiều."
+    example: "Ví dụ giả định: NFP dự báo 150 nghìn, thực tế 250 nghìn, thất nghiệp giảm từ 4,2% xuống 4,0% → vàng giảm 20 USD trong 5 phút; nhưng nếu tháng trước bị điều chỉnh giảm mạnh, giá có thể hồi lại ngay sau đó."
+    mistakes:
+      - "Vào lệnh ngay giây công bố khi spread giãn rộng và trượt giá lớn."
+      - "Bỏ qua tỷ lệ thất nghiệp và tiền lương, chỉ nhìn số NFP."
+    visual:
+      type: chart
+      idea: "Biểu đồ M5 XAUUSD quanh 19:30 giờ VN: đường thẳng đứng nhãn 'NFP', một nến đỏ dài giảm 20 USD, tiếp theo vài nến râu dài hai chiều (nhãn 'giật hai chiều'). Hộp nhỏ bên cạnh: NFP 250k vs dự báo 150k; Thất nghiệp 4,0%; Lương +0,3%."
+  - part: 7
+    title: "Ngân hàng trung ương mua vàng"
+    objective: "Hiểu vì sao các ngân hàng trung ương mua vàng và tác động của dòng mua này lên xu hướng dài hạn."
+    key_points:
+      - "Ngân hàng trung ương giữ vàng làm tài sản dự trữ để đa dạng hóa ngoài USD, không có rủi ro đối tác và giữ giá trị lâu dài."
+      - "Theo Hội đồng Vàng Thế giới (World Gold Council – WGC), giai đoạn 2022–2024 các ngân hàng trung ương mua ròng hơn 1.000 tấn mỗi năm, gấp khoảng đôi mức trung bình thập kỷ trước."
+      - "Nhóm mua tích cực gồm nhiều ngân hàng trung ương thị trường mới nổi như Trung Quốc, Ba Lan, Thổ Nhĩ Kỳ, Ấn Độ; dữ liệu được WGC tổng hợp theo tháng và quý."
+      - "Dòng mua này ít nhạy với giá và lãi suất, tạo lực đỡ cho xu hướng dài hạn nhưng ít khi là nguyên nhân của biến động trong ngày."
+    example: "Ví dụ giả định: vàng giảm 3% sau một chuỗi dữ liệu Mỹ mạnh, nhưng báo cáo quý của WGC cho thấy ngân hàng trung ương vẫn mua đều; nhiều nhà phân tích coi đó là lý do các nhịp giảm sâu được mua lên nhanh hơn trước."
+    mistakes:
+      - "Dùng tin 'ngân hàng trung ương mua vàng' làm lý do vào lệnh mua trên khung M15."
+      - "Coi số liệu mua vàng là cố định, trong khi tốc độ mua có thể chậm lại theo từng năm."
+    visual:
+      type: chart
+      idea: "Biểu đồ cột lượng vàng ngân hàng trung ương mua ròng theo năm (số minh họa, ghi rõ 'nguồn: WGC'): giai đoạn 2010–2021 các cột khoảng 400–650 tấn, 2022–2024 các cột vượt 1.000 tấn được tô vàng đậm, đường ngang nét đứt đánh dấu mức trung bình trước 2022."
+  - part: 8
+    title: "Quỹ ETF vàng và vị thế nhà đầu tư"
+    objective: "Biết theo dõi dòng tiền quỹ ETF vàng và vị thế đầu cơ trên thị trường futures."
+    key_points:
+      - "Quỹ ETF vàng (như SPDR Gold Shares – GLD) nắm giữ vàng vật chất; lượng vàng nắm giữ tăng nghĩa là nhà đầu tư đang mua ròng."
+      - "Dòng tiền ETF phương Tây thường nhạy với lãi suất thực và tâm lý rủi ro; dòng tiền ETF châu Á có lúc đi ngược phương Tây."
+      - "Báo cáo cam kết giao dịch (Commitments of Traders – COT) của CFTC công bố thứ Sáu hằng tuần (dữ liệu tính đến thứ Ba) cho biết vị thế của nhóm quỹ đầu cơ (managed money) trên vàng COMEX."
+      - "Vị thế mua ròng ở mức cực đoan có thể là dấu hiệu thị trường đã đông người, dễ điều chỉnh mạnh khi có tin bất lợi; đây là chỉ báo bối cảnh, không phải tín hiệu vào lệnh."
+    example: "Ví dụ giả định: trong 4 tuần, lượng vàng của các ETF tăng thêm 40 tấn và COT cho thấy quỹ đầu cơ tăng vị thế mua ròng lên mức cao nhất một năm; trader nhận định xu hướng đang được ủng hộ nhưng cũng cảnh giác với một đợt chốt lời mạnh."
+    mistakes:
+      - "Đọc COT như tín hiệu vào lệnh ngắn hạn, trong khi dữ liệu đã trễ vài ngày."
+      - "Nhầm lẫn giữa dòng tiền ETF và nhu cầu ngân hàng trung ương."
+    visual:
+      type: chart
+      idea: "Hai panel: trên là giá XAUUSD dạng đường; dưới là biểu đồ cột dòng tiền ETF hằng tuần (cột xanh = mua ròng, đỏ = bán ròng) kèm đường vị thế mua ròng của managed money từ COT. Một vùng khoanh đỏ tại mức vị thế cực đoan với nhãn 'đông người – dễ điều chỉnh'."
+  - part: 9
+    title: "Địa chính trị và nhu cầu trú ẩn"
+    objective: "Hiểu vai trò tài sản trú ẩn (safe haven) của vàng và vì sao phản ứng với tin địa chính trị thường ngắn."
+    key_points:
+      - "Xung đột, khủng hoảng tài chính, bất ổn chính trị hay lo ngại về nợ công làm tăng nhu cầu vàng như tài sản phòng ngừa rủi ro."
+      - "Phản ứng giá thường mạnh nhất lúc tin bất ngờ xuất hiện, và hay phai dần nếu sự kiện không lan rộng sang kinh tế và chính sách tiền tệ."
+      - "Tin cuối tuần có thể tạo khoảng trống giá (gap) khi thị trường mở cửa sáng thứ Hai giờ VN."
+      - "Rủi ro kéo dài (như căng thẳng địa chính trị nhiều năm) có thể góp phần vào xu hướng mua dài hạn của ngân hàng trung ương và nhà đầu tư."
+    example: "Ví dụ giả định: một cuộc xung đột bất ngờ khiến vàng tăng 40 USD trong một phiên; ba ngày sau khi các bên tuyên bố đàm phán, giá trả lại 30 USD. Người mua đuổi ở đỉnh tin chịu lỗ."
+    mistakes:
+      - "Mua đuổi ngay khi tin nóng xuất hiện trên mạng xã hội."
+      - "Giữ lệnh lớn qua cuối tuần khi đang có căng thẳng chưa ngã ngũ."
+    visual:
+      type: chart
+      idea: "Biểu đồ H1 XAUUSD: một cây nến xanh dài đột biến nhãn 'Tin xung đột +40 USD', sau đó giá đi ngang rồi trượt dần xuống, nhãn 'Phản ứng phai dần (−30 USD)'. Mũi tên mua đuổi ở đỉnh nến kèm dấu X đỏ."
+  - part: 10
+    title: "Giao dịch quanh tin: kỳ vọng và thực tế"
+    objective: "Biết cách dùng lịch kinh tế và chuẩn bị kịch bản giao dịch trước các tin lớn."
+    key_points:
+      - "Giá phản ứng với mức chênh lệch giữa thực tế và kỳ vọng (dự báo), không phải với con số tốt hay xấu tuyệt đối."
+      - "Lịch kinh tế cho biết giờ công bố, mức độ quan trọng, số kỳ trước và dự báo; cần quy đổi đúng giờ VN theo mùa."
+      - "Ba cách tiếp cận phổ biến: đứng ngoài trước và sau tin; chờ 15–30 phút cho giá ổn định rồi giao dịch theo hướng đã hình thành; hoặc giữ lệnh đã có lãi với cắt lỗ đã dời về hòa vốn."
+      - "Quanh tin lớn, spread giãn và trượt giá có thể khiến lệnh cắt lỗ khớp xa hơn dự kiến; giảm khối lượng là cách bảo vệ đơn giản nhất."
+    example: "Ví dụ kịch bản giả định trước tin CPI: nếu CPI lõi ≥ 0,4% (cao hơn dự báo 0,2%) và vàng thủng đáy phiên Á sau 15 phút → xem xét bán theo; nếu ≤ 0,1% và vàng vượt đỉnh phiên → xem xét mua; nếu đúng dự báo → đứng ngoài."
+    mistakes:
+      - "Đặt lệnh chờ hai đầu sát giá ngay trước tin và bị khớp cả hai do giật giá."
+      - "Không biết hôm nay có tin lớn vì không xem lịch kinh tế."
+    visual:
+      type: checklist
+      idea: "Bảng kịch bản nếu–thì trước tin CPI: Nếu lõi ≥ 0,4% và vàng thủng đáy phiên → xem xét bán; Nếu lõi ≤ 0,1% và vàng vượt đỉnh phiên → xem xét mua; Nếu đúng dự báo → đứng ngoài. Dưới cùng checklist: ☐ Giờ VN đúng mùa ☐ Giảm khối lượng ☐ Chờ 15 phút ☐ Không lệnh chờ sát giá."
+  - part: 11
+    title: "Kết hợp cơ bản với phân tích kỹ thuật"
+    objective: "Biết cách dùng phân tích cơ bản để chọn hướng ưu tiên và phân tích kỹ thuật để chọn điểm vào, cắt lỗ."
+    key_points:
+      - "Phân tích cơ bản trả lời 'nên ưu tiên mua hay bán và vì sao'; phân tích kỹ thuật trả lời 'vào ở đâu, sai ở đâu'."
+      - "Khi các yếu tố cơ bản cùng chiều (lãi suất thực giảm, USD yếu, ETF mua ròng), ưu tiên giao dịch theo hướng đó trên biểu đồ."
+      - "Khi các yếu tố mâu thuẫn, giảm khối lượng hoặc chuyển sang giao dịch ngắn hạn theo kỹ thuật thuần túy."
+      - "Luôn có điểm cắt lỗ kỹ thuật; nhận định cơ bản đúng nhưng vào sai thời điểm vẫn có thể thua lỗ."
+    example: "Ví dụ giả định: lãi suất thực giảm 3 tuần liên tiếp, DXY dưới đường trung bình 50 ngày → thiên hướng mua vàng. Trên H4, trader chỉ mua khi giá hồi về vùng hỗ trợ và có tín hiệu tăng, cắt lỗ dưới đáy H4 gần nhất, rủi ro 1%."
+    mistakes:
+      - "Mua vàng vì 'cơ bản tốt' mà không đặt cắt lỗ, rồi gồng lỗ khi giá điều chỉnh sâu."
+      - "Bán vàng chỉ vì mô hình kỹ thuật trong khi mọi yếu tố cơ bản đang ủng hộ tăng mạnh."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Cơ bản – Hướng ưu tiên' (lãi suất thực ↓, DXY ↓, ETF mua ròng, NHTW mua → THIÊN HƯỚNG MUA) và 'Kỹ thuật – Thời điểm' (giá hồi về hỗ trợ H4, nến xác nhận tăng, SL dưới đáy H4, rủi ro 1%). Mũi tên nối hai cột vào ô 'Lệnh mua có kế hoạch'."
+  - part: 12
+    title: "Kế hoạch phân tích cơ bản hằng tuần"
+    objective: "Ghép toàn bộ series thành một quy trình phân tích cơ bản mỗi tuần cho XAUUSD."
+    key_points:
+      - "Cuối tuần: ghi lại lịch tin tuần tới theo giờ VN (FOMC, CPI, PCE, NFP, phát biểu của quan chức Fed) và đánh dấu ngày cần giảm khối lượng."
+      - "Chấm điểm từng yếu tố: lãi suất thực, DXY, kỳ vọng Fed, dòng tiền ETF/COT, tin ngân hàng trung ương, địa chính trị – mỗi yếu tố +1 (hỗ trợ vàng), 0 hoặc −1."
+      - "Tổng điểm cho ra thiên hướng tuần: dương rõ → ưu tiên mua; âm rõ → ưu tiên bán; gần 0 → giao dịch hai chiều với khối lượng nhỏ."
+      - "Cuối tuần sau, so sánh thiên hướng với diễn biến thực tế và ghi lại để cải thiện cách chấm điểm."
+    example: "Ví dụ bảng điểm giả định: lãi suất thực giảm (+1), DXY đi ngang (0), thị trường tăng kỳ vọng Fed hạ lãi (+1), ETF bán ròng nhẹ (−1), NHTW tiếp tục mua (+1), địa chính trị ổn định (0) → tổng +2: thiên hướng mua, nhưng giảm khối lượng vào ngày có CPI."
+    mistakes:
+      - "Thay đổi thiên hướng mỗi ngày theo từng bài nhận định trên mạng."
+      - "Không xem lại xem thiên hướng tuần trước đúng hay sai và vì sao."
+    visual:
+      type: formula
+      idea: "Bảng chấm điểm tuần với các dòng: Lãi suất thực → +1; DXY → 0; Kỳ vọng Fed → +1; ETF/COT → −1; Ngân hàng trung ương → +1; Địa chính trị → 0; TỔNG → +2 = Thiên hướng MUA. Phía dưới: dòng lịch tin tuần với ngày CPI được tô đỏ 'giảm khối lượng'."
+sources:
+  - "https://www.gold.org/goldhub/gold-focus/2025/06/you-asked-we-answered-are-fiscal-concerns-driving-gold"
+  - "https://www.cmegroup.com/articles/2026/precious-metals-outlook-2026-market-dynamics-following-a-record-breaking-year.html"
+  - "https://www.pimco.com/us/en/resources/education/understanding-gold-prices"
+  - "https://www.ssga.com/us/en/intermediary/insights/gold-2026-outlook-can-the-structural-bull-cycle-continue-to-5000"
+  - "https://goldsilver.com/industry-news/article/real-yields-vs-nominal-rates-gold/"
+  - "https://www.switchmarkets.com/learn/analysis-tools-gold-trading"
+  - "https://www.forex.com/en-us/news-and-analysis/gold-2026-outlook-fundamental-xau-usd-analysis/"
+  - "https://www.youtube.com/watch?v=kKOckbVvY-I"
+  - "https://goldinvest.de/en/world-gold-council-gold-outlook-2026-between-uncertainty-interest-rates-and-the-dollar/"

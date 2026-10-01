@@ -1,0 +1,16 @@
+{
+  "focus": "Lạm phát PCE tối nay – vàng chọn hướng",
+  "plans": [
+    {
+      "symbol": "XAUUSD",
+      "plan_a": {"condition": "PCE cao hơn dự báo, giá phá xuống 4185.1", "side": "SELL", "entry": 4185.1, "sl": 4221.3, "tp": 4113.3},
+      "plan_b": {"condition": "PCE thấp hơn dự báo, giá vượt lên 4221.3", "side": "BUY", "entry": 4221.3, "sl": 4185.1, "tp": 4248.5}
+    },
+    {
+      "symbol": "EURUSD",
+      "plan_a": {"condition": "USD mạnh, giá phá xuống 1.13714", "side": "SELL", "entry": 1.13714, "sl": 1.13875, "tp": 1.13431},
+      "plan_b": {"condition": "USD yếu, giá vượt lên 1.13788", "side": "BUY", "entry": 1.13788, "sl": 1.13636, "tp": 1.14012}
+    }
+  ],
+  "post": "🎯 PLAN A/B TỐI NAY THỨ TƯ, 30/09/2026\n19:30 tối nay Mỹ công bố Core PCE Price Index m/m – thước đo lạm phát Fed ưu tiên nhất, cùng lúc với GDP quý (Final GDP q/q). Đây là cặp tin có thể quyết định hướng đi của USD và vàng cho cả tuần.\n\n📊 Kỳ vọng: Core PCE dự báo 0.3%, cao hơn kỳ trước 0.2%. GDP dự báo 1.5%, bằng kỳ trước. Nếu lạm phát nóng hơn dự báo, thị trường sẽ lo Fed giữ lãi suất cao lâu hơn.\n\n🟡 XAUUSD – hiện tại 4210.6\n🔴 Plan A (PCE cao hơn dự báo, USD mạnh): chờ giá phá xuống vùng 4185.1 → SELL, SL 4221.3, TP 4113.3.\n🟢 Plan B (PCE thấp hơn dự báo, USD yếu): chờ giá vượt 4221.3 → BUY, SL 4185.1, TP 4248.5.\nVàng đã tăng mạnh trước tin nên Plan B có dư địa ngắn hơn, cần khắt khe hơn khi vào lệnh.\n\n🇪🇺 EURUSD – hiện tại 1.1373\nPlan A: phá xuống 1.13714 → SELL, SL 1.13875, TP 1.13431.\nPlan B: vượt 1.13788 → BUY, SL 1.13636, TP 1.14012.\n\n⏰ Không vào lệnh ngay khi tin ra – spread giãn và giá giật hai chiều rất mạnh. Chờ 5-15 phút cho nến H1 xác nhận, rủi ro tối đa 1-2% tài khoản cho mỗi lệnh.\n\nTối nay anh em nghiêng về Plan A hay Plan B? Comment để cùng theo dõi nhé 👇"
+}

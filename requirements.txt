@@ -1,0 +1,6 @@
+anthropic>=1.9
+requests>=2.32
+pillow>=11
+PyYAML>=6
+tzdata
+playwright>=1.48

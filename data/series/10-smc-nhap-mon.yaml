@@ -1,0 +1,301 @@
+id: smc-nhap-mon
+name: "SMC nhập môn"
+level: "Chuyên sâu"
+description: "Giúp người đọc nắm hệ thống Smart Money Concepts từ cấu trúc thị trường, thanh khoản đến order block, FVG và premium/discount, rồi ghép thành một quy trình giao dịch có kỷ luật trên XAUUSD và các cặp tiền chính."
+lessons:
+  - part: 1
+    title: "SMC là gì và vì sao nói về thanh khoản"
+    objective: "Hiểu SMC (Smart Money Concepts) nhìn thị trường qua hành vi của dòng tiền lớn và vai trò trung tâm của thanh khoản."
+    key_points:
+      - "SMC (Smart Money Concepts) là cách đọc hành động giá dựa trên giả định dòng tiền lớn (tổ chức, ngân hàng) cần thanh khoản đối ứng để khớp lệnh khối lượng lớn."
+      - "Thanh khoản (liquidity) chủ yếu nằm ở các cụm lệnh dừng lỗ và lệnh chờ phía trên đỉnh, phía dưới đáy rõ ràng."
+      - "Hệ thống xoay quanh 4 trụ cột: cấu trúc thị trường, thanh khoản, vùng quan tâm (POI – point of interest như order block, FVG) và vùng giá premium/discount."
+      - "SMC không phải chỉ báo hay công thức chắc thắng; nó là khung để đặt câu hỏi: giá đang đi lấy thanh khoản ở đâu, và sẽ phản ứng ở vùng nào."
+    example: "Ví dụ giả định: XAUUSD tạo hai đỉnh gần bằng nhau quanh 2.350. Nhiều người đặt dừng lỗ lệnh bán ngay trên 2.350, nên vùng này là 'bể thanh khoản' mà giá có thể quét lên trước khi đảo chiều."
+    mistakes:
+      - "Nghĩ rằng SMC giúp đoán chính xác 'cá mập' sẽ làm gì; thực tế đây chỉ là mô hình xác suất."
+      - "Học quá nhiều thuật ngữ cùng lúc mà bỏ qua nền tảng cấu trúc thị trường."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến XAUUSD đi ngang với hai đỉnh bằng nhau (vẽ đường ngang nét đứt, nhãn 'Equal Highs – BSL') và hai đáy bằng nhau (nhãn 'SSL'). Mũi tên giá quét lên trên đường BSL rồi quay đầu xuống. Góc phải liệt kê 4 trụ cột: Cấu trúc – Thanh khoản – POI – Premium/Discount."
+  - part: 2
+    title: "Swing high, swing low và cấu trúc xu hướng"
+    objective: "Xác định đúng đỉnh/đáy swing và đọc xu hướng tăng, giảm, đi ngang qua HH-HL và LH-LL."
+    key_points:
+      - "Swing high là đỉnh có ít nhất một nến đỉnh thấp hơn ở mỗi bên; swing low là đáy có ít nhất một nến đáy cao hơn ở mỗi bên (nhiều người dùng 2-3 nến mỗi bên cho chặt chẽ)."
+      - "Xu hướng tăng (uptrend): đỉnh cao hơn (HH – higher high) và đáy cao hơn (HL – higher low)."
+      - "Xu hướng giảm (downtrend): đỉnh thấp hơn (LH – lower high) và đáy thấp hơn (LL – lower low)."
+      - "Đi ngang (range): các đỉnh và đáy dao động quanh cùng một vùng, không phá vỡ rõ ràng."
+    example: "Ví dụ giả định trên EURUSD H4: đáy 1,0700 → đỉnh 1,0800 → đáy 1,0750 (HL) → đỉnh 1,0850 (HH). Chuỗi HH-HL cho thấy cấu trúc tăng."
+    mistakes:
+      - "Đánh dấu mọi nhấp nhô nhỏ thành swing, khiến biểu đồ rối và nhận sai xu hướng."
+      - "Xác định xu hướng trên một khung thời gian rồi áp dụng nguyên cho khung khác."
+    visual:
+      type: chart
+      idea: "Đường giá zigzag đi lên với 4 điểm được ghi nhãn L, H, HL, HH, HL, HH; bên cạnh là zigzag đi xuống với H, L, LH, LL. Dùng màu xanh cho uptrend, đỏ cho downtrend, có tiêu đề nhỏ cho mỗi bên."
+  - part: 3
+    title: "Cấu trúc swing và cấu trúc nội bộ"
+    objective: "Phân biệt cấu trúc chính (swing/external) với cấu trúc nội bộ (internal) để không bị nhiễu bởi các nhịp nhỏ."
+    key_points:
+      - "Cấu trúc swing (external structure) được tạo bởi các đỉnh/đáy lớn đã được xác nhận bằng một lần phá cấu trúc."
+      - "Cấu trúc nội bộ (internal structure) là các nhịp nhỏ nằm bên trong một con sóng hồi hoặc sóng đẩy lớn."
+      - "Một nhịp hồi có thể là xu hướng giảm ở cấu trúc nội bộ nhưng vẫn chỉ là pullback trong xu hướng tăng ở cấu trúc swing."
+      - "Quyết định hướng giao dịch dựa trên cấu trúc swing; dùng cấu trúc nội bộ để canh điểm vào."
+    example: "Ví dụ giả định: XAUUSD H1 đang tăng, hồi từ 2.400 về 2.380 với các LH-LL nhỏ. Đó là giảm nội bộ; chừng nào đáy swing 2.370 chưa bị phá bằng giá đóng cửa, cấu trúc swing vẫn tăng."
+    mistakes:
+      - "Thấy vài LL nhỏ trong nhịp hồi đã vội kết luận đảo chiều xu hướng chính."
+    visual:
+      type: chart
+      idea: "Một xu hướng tăng lớn (đường đậm) với HL và HH swing; phóng to một nhịp hồi bên trong, vẽ các LH-LL nhỏ (đường mảnh, nhãn 'internal'). Khung chú thích: 'External = định hướng, Internal = canh entry'."
+  - part: 4
+    title: "BOS: phá vỡ cấu trúc theo xu hướng"
+    objective: "Nhận diện BOS (Break of Structure) hợp lệ để xác nhận xu hướng tiếp diễn."
+    key_points:
+      - "BOS (Break of Structure) xảy ra khi giá phá qua đỉnh swing gần nhất trong uptrend hoặc đáy swing gần nhất trong downtrend, cùng hướng xu hướng hiện tại."
+      - "Phần lớn trader SMC yêu cầu thân nến đóng cửa vượt mức; chỉ râu nến xuyên qua thường được xem là quét thanh khoản, không phải BOS."
+      - "Mỗi BOS tạo ra một đáy (hoặc đỉnh) mới được 'bảo vệ', là mốc để theo dõi xu hướng còn hiệu lực hay không."
+      - "BOS đi kèm nến mạnh, thân dài (displacement) đáng tin hơn BOS bằng một nến yếu."
+    example: "Ví dụ giả định: GBPUSD tăng, đỉnh swing 1,2700. Một nến H1 đóng cửa ở 1,2725 → BOS tăng. Đáy gần nhất 1,2650 trở thành đáy cần bảo vệ."
+    mistakes:
+      - "Gọi BOS khi chỉ có râu nến vượt đỉnh."
+      - "Vào lệnh đuổi ngay tại nến BOS thay vì chờ giá hồi về vùng POI."
+    visual:
+      type: chart
+      idea: "Uptrend với đường ngang tại đỉnh swing; nến thân dài đóng cửa phía trên, ghi nhãn 'BOS'. Bên cạnh minh họa trường hợp chỉ có râu xuyên đường ngang rồi đóng dưới, gạch chéo đỏ với nhãn 'Không phải BOS – chỉ là sweep'."
+  - part: 5
+    title: "CHoCH: dấu hiệu đổi tính chất thị trường"
+    objective: "Hiểu CHoCH (Change of Character) là tín hiệu đầu tiên cho khả năng đảo chiều và cách phân biệt với BOS."
+    key_points:
+      - "CHoCH (Change of Character) là lần đầu tiên giá phá cấu trúc ngược chiều xu hướng đang có, ví dụ phá xuống đáy HL gần nhất trong uptrend."
+      - "CHoCH chỉ là cảnh báo đổi tính chất, chưa khẳng định xu hướng mới; cần thêm BOS theo hướng mới hoặc phản ứng tại POI để xác nhận."
+      - "Một số người dùng thuật ngữ MSS (Market Structure Shift) gần nghĩa với CHoCH, thường nhấn mạnh việc phá vỡ có lực."
+      - "CHoCH ở khung nhỏ trong vùng POI khung lớn là trigger vào lệnh phổ biến của SMC."
+    example: "Ví dụ giả định: XAUUSD M15 tăng với đáy HL tại 2.410. Giá đóng nến ở 2.405 → CHoCH giảm. Sau đó giá hồi lên, tạo LH rồi phá 2.395 → BOS giảm xác nhận cấu trúc mới."
+    mistakes:
+      - "Coi mọi CHoCH là đảo chiều xu hướng lớn trong khi nó chỉ xảy ra ở cấu trúc nội bộ."
+    visual:
+      type: chart
+      idea: "Zigzag tăng HH-HL, sau đó giá phá xuống dưới HL cuối (nhãn 'CHoCH' màu cam), hồi lên tạo LH, rồi phá đáy kế tiếp (nhãn 'BOS' màu đỏ). Mũi tên kịch bản giảm tiếp."
+  - part: 6
+    title: "Đỉnh/đáy mạnh và yếu (strong vs weak)"
+    objective: "Xác định swing nào cần được bảo vệ (strong) và swing nào nhiều khả năng bị phá (weak)."
+    key_points:
+      - "Đáy mạnh (strong low) trong uptrend là đáy đã tạo ra cú phá đỉnh (BOS); giá phá nó thì cấu trúc tăng bị vô hiệu."
+      - "Đỉnh yếu (weak high) là đỉnh chưa tạo ra BOS phía dưới, thường là mục tiêu thanh khoản tiếp theo của uptrend."
+      - "Trong downtrend thì ngược lại: đỉnh mạnh cần được bảo vệ, đáy yếu là mục tiêu."
+      - "Đặt dừng lỗ phía sau swing mạnh và đặt mục tiêu tại swing yếu là cách áp dụng trực tiếp."
+    example: "Ví dụ giả định: EURUSD tạo đáy 1,0800 rồi tăng phá đỉnh 1,0880 (BOS) lên 1,0920. Đáy 1,0800 là strong low; đỉnh 1,0920 là weak high – mục tiêu khi giá hồi xong."
+    mistakes:
+      - "Đặt dừng lỗ sau một đáy yếu vốn rất dễ bị quét."
+    visual:
+      type: chart
+      idea: "Uptrend có nhãn 'Strong Low' (khiên màu xanh) ở đáy tạo BOS và nhãn 'Weak High' (mục tiêu, hình cờ) ở đỉnh mới nhất. Mũi tên nét đứt từ nhịp hồi hướng lên weak high."
+  - part: 7
+    title: "Thanh khoản: BSL, SSL và equal highs/lows"
+    objective: "Nhận diện các vị trí tập trung thanh khoản trên biểu đồ."
+    key_points:
+      - "BSL (buy-side liquidity) là cụm lệnh mua dừng (stop của người bán, lệnh breakout mua) phía trên các đỉnh."
+      - "SSL (sell-side liquidity) là cụm lệnh bán dừng phía dưới các đáy."
+      - "Equal highs/lows (đỉnh/đáy bằng nhau), đỉnh/đáy ngày trước (PDH/PDL), đỉnh/đáy phiên Á và đường xu hướng chạm nhiều lần đều là nơi thanh khoản dày."
+      - "Đỉnh/đáy càng 'đẹp' và rõ ràng càng nhiều người nhìn thấy, nên càng nhiều lệnh dừng tập trung ở đó."
+    example: "Ví dụ giả định: XAUUSD có ba đáy gần 2.330 trong phiên Á. Phía dưới 2.330 là SSL; nhiều khả năng phiên London quét xuống 2.325 trước khi chọn hướng."
+    mistakes:
+      - "Đặt dừng lỗ ngay dưới equal lows — đúng chỗ thanh khoản bị nhắm tới."
+    visual:
+      type: chart
+      idea: "Biểu đồ đánh dấu: đường ngang trên hai đỉnh bằng nhau (nhãn 'BSL – Equal Highs'), đường dưới ba đáy bằng nhau (nhãn 'SSL – Equal Lows'), đường xu hướng chạm 3 lần (nhãn 'Trendline liquidity'), và đường PDH/PDL màu xám."
+  - part: 8
+    title: "Quét thanh khoản hay phá vỡ thật?"
+    objective: "Phân biệt liquidity sweep với breakout thật để tránh bị bẫy."
+    key_points:
+      - "Liquidity sweep (quét thanh khoản, liquidity grab) là khi giá vượt đỉnh/đáy chỉ bằng râu hoặc đóng lại nhanh trong vùng cũ, rồi quay đầu."
+      - "Breakout thật thường có nến thân lớn đóng cửa vượt mức và tiếp diễn, sau đó giữ được mức đã phá khi hồi lại."
+      - "Sweep có ý nghĩa nhất khi xảy ra tại vùng POI khung lớn hoặc trong khung giờ có thanh khoản cao."
+      - "Sau sweep, nên chờ CHoCH khung nhỏ thay vì đoán đỉnh/đáy."
+    example: "Ví dụ giả định: EURUSD quét lên 1,0955 vượt đỉnh 1,0950 rồi đóng nến M15 ở 1,0940, sau đó phá đáy nội bộ 1,0930 → kịch bản sweep + CHoCH giảm."
+    mistakes:
+      - "Thấy giá vượt đỉnh là mua đuổi ngay, không chờ nến đóng cửa."
+    visual:
+      type: compare
+      idea: "Hai cột: trái 'Sweep' — râu nến xuyên lên trên đường equal highs rồi đóng trong range, mũi tên quay xuống; phải 'Breakout thật' — nến thân dài đóng trên đường, hồi về test lại đường rồi đi tiếp lên."
+  - part: 9
+    title: "Inducement: mồi nhử trước vùng POI"
+    objective: "Hiểu inducement (IDM) và vì sao vùng POI có inducement phía trước thường đáng tin hơn."
+    key_points:
+      - "Inducement (IDM) là thanh khoản 'mồi' hình thành ngay trước một POI, thường là đáy/đỉnh nội bộ đầu tiên của nhịp hồi."
+      - "Những người vào lệnh sớm ở đó bị quét dừng lỗ, cung cấp thanh khoản để giá chạm POI thực sự."
+      - "Một POI chưa có inducement bị quét phía trước thì rủi ro bị giá xuyên qua cao hơn."
+      - "Định nghĩa IDM khác nhau giữa các trường phái; điểm chung là: chờ thanh khoản gần bị lấy trước rồi mới quan tâm POI."
+    example: "Ví dụ giả định: XAUUSD tăng, OB tại 2.360-2.365. Trên đó có đáy nội bộ 2.372. Giá giảm quét 2.372 (IDM) rồi chạm OB 2.364 và bật lên."
+    mistakes:
+      - "Vào lệnh ngay tại đáy nội bộ đầu tiên — chính là trở thành thanh khoản cho người khác."
+    visual:
+      type: chart
+      idea: "Uptrend với hộp OB màu xanh ở dưới; phía trên OB có đáy nội bộ đánh dấu đường nét đứt 'IDM'. Mũi tên giá quét qua IDM, chạm OB, rồi bật lên phá đỉnh."
+  - part: 10
+    title: "Order block là gì?"
+    objective: "Xác định order block (OB) tăng/giảm và cách vẽ vùng OB."
+    key_points:
+      - "Order block tăng (bullish OB) là nến giảm cuối cùng trước một nhịp tăng mạnh phá cấu trúc; OB giảm là nến tăng cuối cùng trước nhịp giảm mạnh."
+      - "Vùng OB thường vẽ từ đỉnh đến đáy của nến đó (có người chỉ dùng thân nến để vùng hẹp hơn)."
+      - "Ý tưởng: vùng này còn lệnh của dòng tiền lớn chưa khớp hết, nên giá quay lại có thể phản ứng."
+      - "OB là một loại POI; nó cần bối cảnh cấu trúc và thanh khoản mới có giá trị."
+    example: "Ví dụ giả định: GBPUSD có nến H1 giảm 1,2600-1,2615, ngay sau đó ba nến tăng mạnh phá đỉnh 1,2660. Vùng 1,2600-1,2615 là bullish OB."
+    mistakes:
+      - "Gọi mọi nến ngược màu là OB, kể cả khi nhịp sau đó không phá cấu trúc."
+    visual:
+      type: pattern
+      idea: "Cận cảnh 5-6 nến: một nến đỏ cuối cùng (tô hộp xanh nhạt nhãn 'Bullish OB') rồi chuỗi nến xanh thân dài phá đường đỉnh (nhãn 'BOS'). Bên cạnh hình đối xứng cho Bearish OB."
+  - part: 11
+    title: "Tiêu chí lọc order block chất lượng"
+    objective: "Biết cách chấm điểm OB để chỉ giao dịch những vùng có xác suất cao hơn."
+    key_points:
+      - "OB tốt thường đã quét thanh khoản (lấy đỉnh/đáy trước đó) trước khi tạo nhịp đẩy."
+      - "Nhịp rời OB có displacement và để lại FVG/imbalance, đồng thời tạo BOS hoặc CHoCH."
+      - "OB chưa bị chạm lại (unmitigated) có giá trị hơn OB đã được giá quay về kiểm tra."
+      - "OB nằm trong vùng discount (cho lệnh mua) hoặc premium (cho lệnh bán) và cùng hướng cấu trúc khung lớn được ưu tiên."
+    example: "Ví dụ giả định: trên XAUUSD có hai OB tăng. OB A ở 2.340 quét đáy cũ, tạo FVG và BOS; OB B ở 2.355 không quét gì, không có FVG. Ưu tiên OB A."
+    mistakes:
+      - "Chọn OB gần giá nhất chỉ vì sợ lỡ lệnh, bỏ qua các tiêu chí chất lượng."
+    visual:
+      type: checklist
+      idea: "Checklist 5 ô tích: Quét thanh khoản ✓, Có displacement + FVG ✓, Tạo BOS/CHoCH ✓, Chưa bị mitigate ✓, Nằm đúng premium/discount ✓. Bên cạnh minh họa nhỏ OB A đạt 5/5 và OB B đạt 1/5."
+  - part: 12
+    title: "FVG và imbalance: khoảng trống giá trị"
+    objective: "Nhận diện FVG (fair value gap) bằng mô hình 3 nến và hiểu cách giá thường phản ứng với nó."
+    key_points:
+      - "FVG tăng (fair value gap) là khoảng giữa đỉnh nến 1 và đáy nến 3 khi nến 2 tăng mạnh, hai râu không chồng lên nhau; FVG giảm thì ngược lại."
+      - "Imbalance phản ánh giá di chuyển một chiều quá nhanh, lệnh đối ứng chưa được khớp đầy đủ."
+      - "Giá thường quay lại lấp một phần hoặc toàn bộ FVG; mức 50% của FVG là mốc tham chiếu phổ biến."
+      - "FVG nằm sát hoặc chồng lên OB làm vùng POI mạnh hơn."
+    example: "Ví dụ giả định: EURUSD M15 nến 1 đỉnh 1,0850, nến 2 tăng mạnh, nến 3 đáy 1,0862. FVG = 1,0850-1,0862, mức 50% = 1,0856."
+    mistakes:
+      - "Kỳ vọng mọi FVG đều phải được lấp ngay; trong xu hướng mạnh nhiều FVG bị bỏ lại rất lâu."
+    visual:
+      type: pattern
+      idea: "Cận cảnh 3 nến: nến 1 nhỏ, nến 2 xanh thân rất dài, nến 3 nhỏ. Tô hộp vàng giữa đỉnh nến 1 và đáy nến 3, nhãn 'FVG', đường nét đứt ở giữa nhãn '50%'. Mũi tên giá quay về chạm 50% rồi đi lên."
+  - part: 13
+    title: "Mitigation và cách vào lệnh tại POI"
+    objective: "Hiểu mitigation và các cách đặt lệnh khi giá quay về vùng OB/FVG."
+    key_points:
+      - "Mitigation là khi giá quay về vùng POI để 'xử lý' phần lệnh còn treo; vùng đã được mitigate thường yếu đi cho lần chạm sau."
+      - "Có ba cách vào lệnh phổ biến: lệnh chờ tại mép OB, lệnh chờ tại 50% OB/FVG, hoặc chờ xác nhận ở khung nhỏ."
+      - "Tinh chỉnh vùng (refinement): xuống khung nhỏ hơn tìm OB/FVG nhỏ bên trong OB lớn để dừng lỗ ngắn hơn."
+      - "Dừng lỗ đặt ngoài vùng POI, cộng thêm biên độ spread – đặc biệt quan trọng với XAUUSD."
+    example: "Ví dụ giả định: OB H1 trên XAUUSD 2.380-2.388. Xuống M5 tìm được OB nhỏ 2.382-2.384. Lệnh mua chờ 2.384, dừng lỗ 2.379, rủi ro khoảng 5 giá."
+    mistakes:
+      - "Dời dừng lỗ ra xa hơn khi giá xuyên vào POI, biến một lệnh thua nhỏ thành thua lớn."
+    visual:
+      type: chart
+      idea: "Hộp OB H1 lớn; bên trong phóng to thành hộp OB M5 nhỏ hơn (nhãn 'Refined OB'). Ghi 3 mức vào lệnh: 'Mép OB', '50%', 'Xác nhận LTF'. Đường dừng lỗ đỏ dưới đáy hộp."
+  - part: 14
+    title: "Premium, discount và vùng cân bằng"
+    objective: "Dùng Fibonacci 0-100% trên dealing range để xác định vùng giá đắt/rẻ."
+    key_points:
+      - "Kéo Fibonacci từ đáy swing đến đỉnh swing của nhịp đang giao dịch; mức 50% gọi là equilibrium (vùng cân bằng)."
+      - "Trên 50% là premium (giá đắt) – ưu tiên tìm lệnh bán; dưới 50% là discount (giá rẻ) – ưu tiên tìm lệnh mua."
+      - "Trong uptrend, chỉ nên mua tại POI nằm trong vùng discount để có tỷ lệ lợi nhuận/rủi ro tốt."
+      - "Khi có BOS mới, dealing range được vẽ lại theo swing mới."
+    example: "Ví dụ giả định: GBPUSD tăng từ 1,2500 lên 1,2700. Equilibrium = 1,2600. Một OB tăng tại 1,2560 nằm trong discount nên đáng chú ý hơn OB tại 1,2650."
+    mistakes:
+      - "Mua ở vùng premium chỉ vì thấy có một OB, khiến mục tiêu gần mà rủi ro xa."
+    visual:
+      type: chart
+      idea: "Một nhịp tăng từ đáy đến đỉnh, kéo Fibonacci: nửa trên tô đỏ nhạt nhãn 'Premium – tìm Sell', nửa dưới tô xanh nhạt nhãn 'Discount – tìm Buy', đường 50% nhãn 'Equilibrium'. Hộp OB nằm trong vùng discount với mũi tên đi lên."
+  - part: 15
+    title: "Phân tích đa khung thời gian (top-down)"
+    objective: "Xây quy trình từ khung lớn xuống khung nhỏ để đồng bộ hướng và điểm vào."
+    key_points:
+      - "Khung lớn (ví dụ D1/H4) xác định cấu trúc swing, hướng ưu tiên và mục tiêu thanh khoản."
+      - "Khung trung (H1/M30) xác định POI và vùng premium/discount của nhịp hiện tại."
+      - "Khung nhỏ (M15/M5/M1) dùng để chờ xác nhận và vào lệnh."
+      - "Tỷ lệ phổ biến giữa các khung là khoảng 1:4 đến 1:6, ví dụ H4 → H1 → M15."
+    example: "Ví dụ giả định: XAUUSD H4 tăng, mục tiêu đỉnh 2.450. H1 có OB discount tại 2.400. Khi giá về 2.400, M5 tạo CHoCH tăng → vào lệnh mua."
+    mistakes:
+      - "Lấy tín hiệu M1 ngược hoàn toàn với cấu trúc H4 rồi kỳ vọng mục tiêu lớn."
+    visual:
+      type: chart
+      idea: "Ba khung xếp chồng từ trên xuống: H4 (mũi tên xu hướng tăng + mục tiêu BSL), H1 (hộp OB trong vùng discount), M5 (CHoCH tăng trong OB, mũi tên vào lệnh). Các mũi tên nối giữa các khung."
+  - part: 16
+    title: "Chọn POI: extreme hay decisional?"
+    objective: "Biết chọn giữa POI xa nhất (extreme) và POI gần quyết định (decisional) trong cùng một nhịp."
+    key_points:
+      - "Extreme POI là OB/FVG nằm ở đầu nhịp, gần swing tạo ra nhịp đó nhất; xác suất giữ giá cao nhưng giá có thể không về tới."
+      - "Decisional POI là vùng nằm giữa nhịp, ngay phía trên nơi có BOS; dễ được chạm hơn nhưng dễ bị xuyên qua hơn."
+      - "Nếu decisional POI chưa có inducement phía trước, khả năng giá xuyên xuống extreme POI tăng lên."
+      - "Có thể chia khối lượng hoặc chỉ đặt lệnh ở POI có nhiều yếu tố hội tụ nhất."
+    example: "Ví dụ giả định: EURUSD tăng từ 1,0800 lên 1,0950. Extreme OB 1,0800-1,0810, decisional OB 1,0870-1,0880. Giá quét đáy nội bộ 1,0890 rồi chạm 1,0875 – decisional POI được kích hoạt."
+    mistakes:
+      - "Đặt lệnh ở mọi POI trong cùng một nhịp, khiến tổng rủi ro vượt kế hoạch."
+    visual:
+      type: chart
+      idea: "Một nhịp tăng với hai hộp: hộp dưới cùng nhãn 'Extreme POI', hộp giữa nhịp nhãn 'Decisional POI'; đường IDM nét đứt phía trên decisional POI. Hai mũi tên kịch bản: bật ở decisional hoặc xuyên xuống extreme."
+  - part: 17
+    title: "Xác nhận khung nhỏ trong vùng POI"
+    objective: "Dùng CHoCH khung nhỏ và FVG để vào lệnh có xác nhận thay vì đặt lệnh mù."
+    key_points:
+      - "Khi giá chạm POI khung lớn, chuyển xuống khung nhỏ hơn 4-15 lần để quan sát."
+      - "Tín hiệu: quét thanh khoản nhỏ → CHoCH có displacement → để lại OB/FVG khung nhỏ."
+      - "Vào lệnh khi giá hồi về OB/FVG khung nhỏ vừa tạo; dừng lỗ ngoài điểm quét."
+      - "Đánh đổi: có xác nhận thì xác suất cao hơn nhưng có thể lỡ lệnh khi giá bật quá nhanh."
+    example: "Ví dụ giả định: XAUUSD chạm OB H1 2.300-2.305. M5 quét xuống 2.299, rồi tăng mạnh phá đỉnh 2.308 (CHoCH), để lại FVG 2.303-2.305. Mua tại 2.304, dừng lỗ 2.298."
+    mistakes:
+      - "Coi bất kỳ nến xanh nào trong POI là xác nhận, không đợi phá cấu trúc."
+    visual:
+      type: chart
+      idea: "Hộp POI H1 lớn ở nền; bên trong là các nến M5: nhịp giảm, râu quét đáy (nhãn 'Sweep'), nến tăng mạnh phá đỉnh nội bộ (nhãn 'CHoCH'), hộp vàng FVG, mũi tên vào lệnh và đường SL dưới râu quét."
+  - part: 18
+    title: "Thời điểm giao dịch và tin tức với SMC"
+    objective: "Biết các phiên giao dịch và tin tức ảnh hưởng thế nào đến setup SMC."
+    key_points:
+      - "Phiên Á thường tạo range hẹp; phiên London và New York hay quét đỉnh/đáy phiên Á rồi mới chạy xu hướng."
+      - "Giờ Việt Nam (UTC+7): London mở cửa khoảng 14:00 (mùa hè châu Âu) hoặc 15:00 (mùa đông); New York mở phiên chứng khoán 20:30 (mùa hè Mỹ) hoặc 21:30 (mùa đông)."
+      - "Tin mạnh như CPI, Non-farm, quyết định lãi suất Fed có thể xuyên qua mọi POI; nhiều trader đứng ngoài 15-30 phút trước và sau tin."
+      - "XAUUSD và các cặp USD còn chịu ảnh hưởng lớn từ biến động DXY."
+    example: "Ví dụ giả định: phiên Á XAUUSD đi ngang 2.320-2.330. Đầu phiên London giá quét lên 2.333 rồi CHoCH giảm khung M5 – một setup theo phiên điển hình."
+    mistakes:
+      - "Đặt lệnh chờ tại POI ngay trước tin Non-farm mà không giảm khối lượng hoặc hủy lệnh."
+    visual:
+      type: chart
+      idea: "Biểu đồ M15 một ngày chia 3 dải nền màu: Á (range hẹp, đường ngang trên/dưới), London (râu quét đỉnh Á, nhãn 'Sweep Asia High'), New York (nhịp xu hướng). Ghi giờ Việt Nam dưới trục thời gian."
+  - part: 19
+    title: "Mô hình giao dịch SMC hoàn chỉnh"
+    objective: "Ghép toàn bộ khái niệm thành một quy trình từng bước có thể kiểm tra lại."
+    key_points:
+      - "Bước 1–2: Xác định cấu trúc swing khung lớn và mục tiêu thanh khoản (weak high/low, equal highs/lows)."
+      - "Bước 3: Vẽ dealing range, chỉ chọn POI (OB/FVG chưa mitigate) trong vùng discount cho lệnh mua hoặc premium cho lệnh bán."
+      - "Bước 4: Chờ inducement bị quét và giá chạm POI, ưu tiên trong giờ London/New York."
+      - "Bước 5: Xác nhận CHoCH khung nhỏ, vào lệnh tại OB/FVG khung nhỏ, dừng lỗ ngoài điểm quét, mục tiêu tại thanh khoản đối diện."
+      - "Nếu thiếu một bước quan trọng, bỏ qua setup – không giao dịch cũng là một quyết định."
+    example: "Ví dụ giả định trên EURUSD: H4 tăng, mục tiêu 1,1000; H1 OB discount 1,0880; giá quét IDM 1,0895, chạm 1,0882; M5 CHoCH; mua 1,0885, SL 1,0870, TP 1,0985 (R:R khoảng 1:6,6)."
+    mistakes:
+      - "Bỏ bước xác định khung lớn, chỉ săn CHoCH khung nhỏ ở mọi nơi."
+    visual:
+      type: checklist
+      idea: "Sơ đồ 5 bước dạng bậc thang từ trên xuống: 1 Cấu trúc HTF → 2 Mục tiêu thanh khoản → 3 POI trong premium/discount → 4 Inducement + thời gian → 5 CHoCH LTF & entry. Mỗi bước có ô tích và biểu tượng nhỏ."
+  - part: 20
+    title: "Quản lý rủi ro và nhật ký cho trader SMC"
+    objective: "Áp dụng quy tắc quản lý vốn và nhật ký để đánh giá hệ thống một cách khách quan."
+    key_points:
+      - "Rủi ro mỗi lệnh cố định, phổ biến 0,5–1% tài khoản; khối lượng tính từ khoảng cách dừng lỗ, không tính theo cảm giác."
+      - "Dừng lỗ SMC thường ngắn nên tỷ lệ thắng có thể thấp; cần R:R tối thiểu khoảng 1:2 và giới hạn số lệnh thua liên tiếp mỗi ngày."
+      - "Có thể chốt một phần tại thanh khoản nội bộ đầu tiên và dời dừng lỗ về hòa vốn sau khi có BOS mới theo hướng lệnh."
+      - "Ghi nhật ký kèm ảnh chụp: khung lớn, POI, lý do vào, kết quả; sau 50-100 lệnh mới đánh giá hiệu quả hệ thống."
+    example: "Ví dụ giả định: tài khoản 5.000 USD, rủi ro 1% = 50 USD. Lệnh XAUUSD dừng lỗ 5 USD giá → khối lượng 0,10 lot (1 lot = 100 oz, mỗi 1 USD giá = 100 USD/lot)."
+    mistakes:
+      - "Tăng khối lượng sau chuỗi thua để 'gỡ'."
+      - "Đánh giá hệ thống chỉ qua vài lệnh gần nhất."
+    visual:
+      type: formula
+      idea: "Bảng công thức: Khối lượng = (Vốn × % rủi ro) ÷ (Khoảng SL × giá trị 1 điểm). Dòng ví dụ: 5.000 × 1% ÷ (5 × 100) = 0,10 lot. Bên dưới là mẫu nhật ký 5 cột: Ngày | Setup | Entry/SL/TP | Kết quả (R) | Bài học."
+sources:
+  - "https://www.youtube.com/watch?v=LWoZm_L5tNo"
+  - "https://www.youtube.com/watch?v=qKd1mdSb2Io"
+  - "https://www.youtube.com/watch?v=-XDmsCkNRGI"
+  - "https://www.youtube.com/watch?v=RjR2kTErlq4"
+  - "https://www.youtube.com/playlist?list=PLFM8JvKLNjgRQeGpW9GYOcUMWt0nAQG9D"
+  - "https://www.udemy.com/course/advanced-trading-course-complete-smart-money-concepts-smc/"
+  - "https://www.strike.money/technical-analysis/smart-money-concepts"
+  - "https://sammkt.com/smart-money-concept-smc-phan-1-cau-truc-thi-truong/"
+  - "https://habinhfx.com/cau-truc-thi-truong-smc/"
+  - "https://traderviet.tv/t/he-thong-giao-dich-noi-tieng-smart-money-concept-smc-phan-1-cau-truc-thi-truong.66536/"

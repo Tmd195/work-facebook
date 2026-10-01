@@ -1,0 +1,242 @@
+id: price-action-nhap-mon
+name: "Price Action nhập môn"
+level: "Cơ bản"
+description: "Giúp người mới đọc biểu đồ giá 'trần' không cần chỉ báo: nhận diện xu hướng, cấu trúc thị trường, mô hình nến cơ bản và xây được một kịch bản vào lệnh có điểm cắt lỗ rõ ràng trên XAUUSD, EURUSD."
+lessons:
+  - part: 1
+    title: "Price Action là gì và vì sao trader dùng nó"
+    objective: "Hiểu Price Action (hành động giá) là cách ra quyết định dựa trên chính chuyển động giá thay vì chỉ báo."
+    key_points:
+      - "Price Action (hành động giá) là phương pháp phân tích dựa trên hình dạng nến, đỉnh đáy và các vùng giá trên biểu đồ 'trần' (naked chart)."
+      - "Mọi chỉ báo như MA, RSI đều được tính từ giá nên luôn đi sau giá; đọc giá trực tiếp giúp phản ứng sớm hơn."
+      - "Ba trụ cột của Price Action là cấu trúc thị trường (xu hướng), vùng giá quan trọng (hỗ trợ/kháng cự) và tín hiệu nến tại vùng đó."
+      - "Price Action không dự đoán chắc chắn tương lai; nó giúp tìm các điểm có xác suất tốt hơn và biết rõ khi nào mình sai."
+    example: "Ví dụ giả định: trên XAUUSD khung H4, giá tạo đáy sau cao hơn đáy trước rồi xuất hiện nến rút chân dài tại vùng 3950. Người dùng Price Action đọc được: xu hướng vẫn tăng, bên mua đang bảo vệ vùng 3950, mà không cần nhìn bất kỳ chỉ báo nào."
+    mistakes:
+      - "Nghĩ Price Action là 'học thuộc mô hình nến' rồi vào lệnh ở bất kỳ đâu thấy nến đẹp, bỏ qua bối cảnh xu hướng và vùng giá."
+      - "Kỳ vọng Price Action cho tín hiệu đúng 100%, nên bỏ đặt cắt lỗ."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột. Cột trái 'Biểu đồ nhiều chỉ báo': biểu đồ nến bị phủ kín bởi 3 đường MA, Bollinger Bands, RSI và MACD bên dưới, rối mắt. Cột phải 'Biểu đồ trần – Price Action': cùng đoạn giá, chỉ có nến, 1 vùng hỗ trợ tô xanh nhạt, nhãn HH/HL trên các đỉnh đáy và 1 mũi tên tăng. Tiêu đề: 'Đọc giá trực tiếp'."
+  - part: 2
+    title: "Giải phẫu cây nến Nhật và tâm lý phía sau"
+    objective: "Đọc được một cây nến cho biết điều gì về lực mua và lực bán trong phiên đó."
+    key_points:
+      - "Mỗi cây nến ghi 4 mức giá OHLC: giá mở cửa (Open), cao nhất (High), thấp nhất (Low) và đóng cửa (Close)."
+      - "Thân nến (body) là khoảng giữa Open và Close; nến tăng đóng cửa trên giá mở, nến giảm đóng cửa dưới giá mở."
+      - "Bóng nến (wick/shadow) cho thấy vùng giá đã bị từ chối: bóng dưới dài nghĩa là giá bị đẩy xuống rồi bị mua lên lại."
+      - "Thân dài, bóng ngắn thể hiện một bên áp đảo; thân nhỏ, bóng hai đầu dài thể hiện sự lưỡng lự (indecision)."
+    example: "Ví dụ giả định: nến H1 của EURUSD mở 1.0850, xuống thấp nhất 1.0820, lên cao nhất 1.0860 rồi đóng 1.0855. Thân nhỏ ở phía trên, bóng dưới dài 30 pip: bên bán đã đẩy giá xuống nhưng bên mua kéo lại gần hết."
+    mistakes:
+      - "Chỉ nhìn màu nến mà bỏ qua tỷ lệ thân/bóng và vị trí đóng cửa."
+      - "Đọc nến khi nến chưa đóng cửa; hình dạng nến có thể thay đổi hoàn toàn trước khi phiên kết thúc."
+    visual:
+      type: pattern
+      idea: "Hai cây nến lớn cận cảnh đặt cạnh nhau: một nến tăng xanh và một nến giảm đỏ. Mỗi nến có chú thích mũi tên chỉ vào: High, Open, Close, Low, 'Thân nến (body)', 'Bóng trên', 'Bóng dưới'. Bên dưới là hàng 3 nến nhỏ minh họa: thân dài bóng ngắn ('Áp đảo'), thân nhỏ bóng dài 2 đầu ('Lưỡng lự'), bóng dưới dài ('Từ chối giá thấp')."
+  - part: 3
+    title: "Cấu trúc thị trường: HH, HL, LH, LL"
+    objective: "Xác định thị trường đang tăng, giảm hay đi ngang bằng cách đọc chuỗi đỉnh và đáy."
+    key_points:
+      - "Xu hướng tăng (uptrend) là chuỗi đỉnh cao hơn (Higher High – HH) và đáy cao hơn (Higher Low – HL)."
+      - "Xu hướng giảm (downtrend) là chuỗi đỉnh thấp hơn (Lower High – LH) và đáy thấp hơn (Lower Low – LL)."
+      - "Khi đỉnh và đáy dao động trong một biên độ không tạo HH/HL hay LH/LL rõ ràng, thị trường đang đi ngang (sideway/range)."
+      - "Cấu trúc thị trường (market structure) là 'bộ xương' của mọi phân tích Price Action: xác định nó trước, rồi mới tìm điểm vào."
+    example: "Ví dụ giả định trên XAUUSD H4: đáy 3900 → đỉnh 3960 → đáy 3930 → đỉnh 3990 → đáy 3955. Đỉnh sau cao hơn đỉnh trước, đáy sau cao hơn đáy trước, nên đây là xu hướng tăng; ưu tiên tìm lệnh mua."
+    mistakes:
+      - "Đánh dấu mọi nhấp nhô nhỏ là đỉnh/đáy, khiến cấu trúc trông lộn xộn và đổi xu hướng liên tục."
+      - "Cố bắt đỉnh trong xu hướng tăng chỉ vì 'giá đã lên nhiều'."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến chia 3 phần từ trái sang phải. Phần 1: giá đi lên zigzag 3 nhịp, các đỉnh gắn nhãn HH, các đáy gắn nhãn HL, tiêu đề 'Xu hướng tăng'. Phần 2: giá đi ngang giữa 2 đường nét đứt, tiêu đề 'Sideway'. Phần 3: giá đi xuống zigzag 3 nhịp, nhãn LH và LL, tiêu đề 'Xu hướng giảm'."
+  - part: 4
+    title: "Xác định đỉnh, đáy hợp lệ (swing high/low)"
+    objective: "Biết cách chọn đỉnh và đáy có ý nghĩa để vẽ cấu trúc thị trường nhất quán."
+    key_points:
+      - "Đỉnh sóng (swing high) là cây nến có đỉnh cao hơn các nến lân cận hai bên; đáy sóng (swing low) ngược lại. Nhiều người dùng quy tắc tối thiểu 2 nến mỗi bên, có người dùng 3 – cần chọn một quy tắc và giữ nhất quán."
+      - "Đỉnh/đáy có ý nghĩa thường là điểm bắt đầu của một nhịp di chuyển rõ ràng, không phải một gợn nhỏ trong vùng tích lũy."
+      - "Mức độ chi tiết phụ thuộc khung thời gian: đỉnh đáy trên H4 là cấu trúc chính, đỉnh đáy trên M15 là cấu trúc phụ (internal)."
+      - "Có trader tính đỉnh/đáy theo bóng nến, có trader theo giá đóng cửa; điều quan trọng là áp dụng một cách thống nhất."
+    example: "Ví dụ giả định trên EURUSD H1: nến có đỉnh 1.0920, hai nến trước có đỉnh 1.0905 và 1.0910, hai nến sau có đỉnh 1.0912 và 1.0898. Nến 1.0920 là một swing high hợp lệ theo quy tắc 2 nến mỗi bên."
+    mistakes:
+      - "Vẽ cấu trúc trên M5 rồi kết luận xu hướng cho cả ngày."
+      - "Thay đổi quy tắc chọn đỉnh đáy tùy cảm xúc để 'khớp' với lệnh mình muốn vào."
+    visual:
+      type: pattern
+      idea: "Cận cảnh 5 cây nến: nến giữa có đỉnh cao nhất, được khoanh tròn và gắn nhãn 'Swing High', hai nến trái và hai nến phải có đỉnh thấp hơn, có đường nét đứt nối ngang so sánh. Bên dưới là cụm 5 nến khác với nến giữa có đáy thấp nhất, nhãn 'Swing Low'."
+  - part: 5
+    title: "Sóng đẩy và sóng hồi trong xu hướng"
+    objective: "Phân biệt nhịp đẩy theo xu hướng (impulse) với nhịp điều chỉnh (correction) để vào lệnh đúng thời điểm."
+    key_points:
+      - "Sóng đẩy (impulse) đi theo xu hướng, thường có nến thân dài, ít bóng, di chuyển nhanh và xa."
+      - "Sóng hồi (correction/pullback) đi ngược xu hướng, thường chậm hơn, nến nhỏ, chồng chéo và quãng đường ngắn hơn."
+      - "Trong xu hướng khỏe, sóng đẩy dài hơn sóng hồi; khi sóng hồi bắt đầu dài và mạnh ngang sóng đẩy, xu hướng có dấu hiệu yếu đi."
+      - "Cách tiếp cận phổ biến của Price Action là chờ sóng hồi kết thúc để vào theo hướng sóng đẩy kế tiếp, thay vì đuổi theo giữa sóng đẩy."
+    example: "Ví dụ giả định: XAUUSD tăng mạnh từ 3920 lên 3980 trong 6 nến H1 thân dài (sóng đẩy), rồi lừ đừ giảm về 3955 qua 10 nến nhỏ (sóng hồi). Sóng hồi chậm và nông cho thấy bên mua vẫn kiểm soát."
+    mistakes:
+      - "Mua đuổi ở cuối sóng đẩy khi giá đã chạy xa, khiến điểm cắt lỗ phải đặt rất rộng."
+      - "Nhầm sóng hồi là đảo chiều và vào lệnh ngược xu hướng chính."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến xu hướng tăng gồm 3 sóng đẩy (nến xanh thân dài, được tô nền xanh nhạt, nhãn 'Impulse') xen kẽ 2 sóng hồi (nến nhỏ chồng chéo, tô nền xám, nhãn 'Pullback'). Mũi tên dài cho sóng đẩy, mũi tên ngắn cho sóng hồi. Chú thích: 'Sóng đẩy dài hơn sóng hồi = xu hướng khỏe'."
+  - part: 6
+    title: "Phá vỡ cấu trúc BOS và CHoCH"
+    objective: "Nhận biết khi nào xu hướng được tiếp diễn (BOS) và khi nào có dấu hiệu đổi chiều (CHoCH)."
+    key_points:
+      - "BOS (Break of Structure – phá vỡ cấu trúc) là khi giá vượt đỉnh gần nhất trong xu hướng tăng hoặc thủng đáy gần nhất trong xu hướng giảm, xác nhận xu hướng tiếp diễn."
+      - "CHoCH (Change of Character – thay đổi tính chất) là lần đầu giá phá ngược cấu trúc, ví dụ thủng đáy HL gần nhất trong xu hướng tăng; đây là cảnh báo sớm, chưa phải xác nhận đảo chiều."
+      - "Nhiều trader yêu cầu nến phải đóng cửa vượt mức, không chỉ bóng nến chạm qua, để tính là phá vỡ hợp lệ."
+      - "Sau CHoCH, cấu trúc đảo chiều chỉ được củng cố khi giá tạo thêm một đỉnh thấp hơn (LH) rồi phá đáy tiếp (LL)."
+    example: "Ví dụ giả định: EURUSD tăng với đáy HL tại 1.0850, đỉnh HH tại 1.0950. Giá giảm và đóng nến H4 tại 1.0835, dưới 1.0850: đó là CHoCH. Người mua nên thận trọng, chờ xem giá có hồi lên tạo LH dưới 1.0950 rồi giảm tiếp hay không."
+    mistakes:
+      - "Coi mỗi lần bóng nến chọc qua đỉnh/đáy là BOS, dẫn đến bị bẫy phá vỡ giả."
+      - "Vào lệnh đảo chiều ngay tại CHoCH đầu tiên với khối lượng lớn mà không chờ thêm xác nhận."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến: giá tăng tạo HL1, HH1, HL2, HH2; các đoạn vượt đỉnh có đường ngang nét đứt và nhãn 'BOS'. Sau HH2, giá giảm mạnh đóng cửa dưới HL2, đường nét đứt tại HL2 có nhãn đỏ 'CHoCH'. Tiếp theo giá hồi lên tạo LH thấp hơn HH2 rồi giảm, nhãn 'LH' và 'LL'."
+  - part: 7
+    title: "Phân tích đa khung thời gian (top-down)"
+    objective: "Dùng khung lớn để chọn hướng và khung nhỏ để tìm điểm vào lệnh."
+    key_points:
+      - "Phân tích đa khung (multi-timeframe / top-down) bắt đầu từ khung lớn để xác định xu hướng chính và vùng giá quan trọng."
+      - "Một bộ khung phổ biến là D1 – H4 – H1 cho giao dịch trong vài ngày, hoặc H4 – H1 – M15 cho giao dịch trong ngày; tỷ lệ giữa các khung thường khoảng 4 đến 6 lần."
+      - "Khi khung lớn tăng mà khung nhỏ đang giảm, khung nhỏ thường chỉ là sóng hồi của khung lớn."
+      - "Lệnh thuận chiều khung lớn thường có xác suất tốt hơn lệnh ngược chiều."
+    example: "Ví dụ giả định: XAUUSD D1 đang tăng (HH, HL). Trên H4, giá đang hồi về vùng hỗ trợ 3940. Xuống H1, chờ giá tạo CHoCH tăng trong vùng 3940 rồi mới tìm lệnh mua."
+    mistakes:
+      - "Mở quá nhiều khung thời gian rồi bị rối vì mỗi khung một tín hiệu."
+      - "Vào lệnh theo khung M5 ngược với xu hướng D1 mà không nhận ra."
+    visual:
+      type: chart
+      idea: "Ba ô biểu đồ xếp từ trái sang phải, tiêu đề D1, H4, H1. Ô D1: xu hướng tăng với mũi tên lớn và chữ 'Hướng'. Ô H4: giá hồi xuống một vùng hỗ trợ tô xanh, chữ 'Vùng'. Ô H1: phóng to vùng đó, giá tạo đáy rồi phá đỉnh nhỏ, nhãn 'CHoCH' và mũi tên 'Điểm vào'. Mũi tên ngang nối 3 ô."
+  - part: 8
+    title: "Vùng giá quan trọng (key level) trong Price Action"
+    objective: "Biết chọn các vùng giá đáng chú ý để chỉ chờ tín hiệu ở đó, không giao dịch giữa 'vùng không người'."
+    key_points:
+      - "Vùng giá quan trọng (key level) là nơi giá từng phản ứng mạnh: đỉnh/đáy sóng rõ ràng, vùng phá vỡ cũ, số tròn như 4000 của vàng hay 1.1000 của EURUSD."
+      - "Nên vẽ vùng (zone) có độ dày thay vì một đường mảnh, vì giá hiếm khi quay về đúng một mức chính xác."
+      - "Tín hiệu nến chỉ có giá trị khi xuất hiện tại key level; cùng một cây nến ở giữa biên độ thì gần như không có ý nghĩa."
+      - "Chủ đề hỗ trợ – kháng cự sẽ được học sâu ở series riêng; ở đây chỉ cần biết chọn 2–4 vùng gần giá nhất trên khung lớn."
+    example: "Ví dụ giả định: EURUSD H4 có đỉnh cũ 1.0950–1.0960 từng đảo chiều giá hai lần. Trader đánh dấu vùng này và chỉ quan sát tín hiệu bán khi giá chạm lại, bỏ qua các nến xuất hiện ở khoảng giữa 1.0880–1.0920."
+    mistakes:
+      - "Vẽ quá nhiều đường đến mức chỗ nào cũng là 'vùng quan trọng'."
+      - "Coi một mức giá là tuyệt đối, đặt cắt lỗ sát ngay mép vùng."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến H4 đi ngang lên xuống. Hai vùng tô màu: vùng kháng cự đỏ nhạt phía trên (giá chạm 2 lần và quay đầu, có mũi tên đỏ đi xuống) và vùng hỗ trợ xanh nhạt phía dưới (giá chạm 2 lần và bật lên). Khu vực giữa được gạch chéo xám với nhãn 'Vùng không người – không giao dịch'."
+  - part: 9
+    title: "Mô hình nến Pin bar: tín hiệu từ chối giá"
+    objective: "Nhận diện Pin bar đúng chuẩn và biết khi nào nó đáng tin."
+    key_points:
+      - "Pin bar là nến có thân nhỏ nằm ở một đầu, bóng dài ở đầu kia; nhiều tài liệu lấy chuẩn bóng dài gấp khoảng 2–3 lần thân."
+      - "Pin bar tăng (bóng dưới dài) cho thấy giá thấp bị từ chối; Pin bar giảm (bóng trên dài) cho thấy giá cao bị từ chối."
+      - "Pin bar mạnh khi xuất hiện tại key level, thuận xu hướng khung lớn và bóng nến chọc ra khỏi vùng rồi đóng cửa lại bên trong."
+      - "Cách vào phổ biến: lệnh chờ khi giá vượt đỉnh Pin bar tăng, hoặc lệnh giới hạn ở khoảng 50% bóng nến; cắt lỗ đặt ngoài đầu bóng."
+    example: "Ví dụ giả định: XAUUSD hồi về vùng hỗ trợ 3940–3945 trên H4, tạo Pin bar với bóng dưới xuống 3932, đóng cửa 3948. Lệnh mua chờ đặt trên đỉnh nến 3951, cắt lỗ dưới 3930."
+    mistakes:
+      - "Giao dịch mọi Pin bar, kể cả Pin bar nhỏ xuất hiện giữa vùng giá không có ý nghĩa."
+      - "Đặt cắt lỗ ngay trong thân nến thay vì ngoài đầu bóng."
+    visual:
+      type: pattern
+      idea: "Cận cảnh 6 cây nến: 4 nến giảm dần về một vùng hỗ trợ tô xanh, sau đó một Pin bar tăng với bóng dưới rất dài xuyên qua vùng xanh và đóng cửa trong vùng, cuối cùng 1 nến tăng xác nhận. Chú thích: 'Bóng dài ≥ 2–3 lần thân', 'Điểm vào: trên đỉnh Pin bar', 'SL: dưới đầu bóng'."
+  - part: 10
+    title: "Mô hình nến nhấn chìm (Engulfing)"
+    objective: "Nhận diện nến nhấn chìm và hiểu nó thể hiện sự chuyển giao quyền kiểm soát giữa bên mua và bên bán."
+    key_points:
+      - "Nhấn chìm tăng (bullish engulfing) là nến tăng có thân bao trọn thân nến giảm liền trước; nhấn chìm giảm ngược lại."
+      - "Ở forex, nến mở cửa thường sát giá đóng của nến trước nên nhiều trader nới tiêu chí: chỉ cần thân nến sau bao phủ phần lớn thân nến trước và đóng cửa vượt qua giá mở của nó."
+      - "Nến nhấn chìm càng lớn so với các nến xung quanh và càng đóng cửa gần đỉnh/đáy thì tín hiệu càng rõ."
+      - "Giống Pin bar, nhấn chìm chỉ có giá trị khi xuất hiện tại vùng giá quan trọng và có bối cảnh xu hướng ủng hộ."
+    example: "Ví dụ giả định: EURUSD tăng lên vùng kháng cự 1.0950 trên H4. Một nến tăng nhỏ đóng 1.0948, nến sau mở 1.0948 rồi giảm mạnh đóng 1.0915, thân bao trọn nến trước. Đây là nhấn chìm giảm tại kháng cự; cắt lỗ đặt trên đỉnh cụm nến khoảng 1.0962."
+    mistakes:
+      - "Nhầm bóng nến với thân nến khi kiểm tra điều kiện 'bao trọn'."
+      - "Vào lệnh khi nến nhấn chìm quá dài khiến cắt lỗ lớn mà không giảm khối lượng."
+    visual:
+      type: pattern
+      idea: "Hai cặp nến cận cảnh. Bên trái 'Nhấn chìm tăng': nến đỏ nhỏ rồi nến xanh lớn có thân bao trọn, khung nét đứt bao quanh thân hai nến. Bên phải 'Nhấn chìm giảm': nến xanh nhỏ rồi nến đỏ lớn bao trọn. Phía dưới mỗi cặp ghi vị trí lý tưởng: 'tại hỗ trợ' và 'tại kháng cự'."
+  - part: 11
+    title: "Inside bar: nén giá trước khi bùng nổ"
+    objective: "Hiểu Inside bar và cách giao dịch phá vỡ khỏi nến mẹ."
+    key_points:
+      - "Inside bar là nến có cả đỉnh và đáy nằm trong phạm vi nến liền trước (gọi là nến mẹ – mother bar)."
+      - "Inside bar thể hiện sự tạm nghỉ, tích lũy; hướng phá vỡ khỏi nến mẹ thường được dùng làm tín hiệu."
+      - "Cách dùng phổ biến nhất là giao dịch phá vỡ thuận xu hướng: trong xu hướng tăng, đặt lệnh chờ mua trên đỉnh nến mẹ."
+      - "Cắt lỗ có thể đặt dưới đáy nến mẹ (an toàn hơn) hoặc dưới 50% nến mẹ (chặt hơn), tùy độ dài nến mẹ."
+    example: "Ví dụ giả định: XAUUSD D1 đang tăng; nến mẹ có đỉnh 3990, đáy 3950. Nến hôm sau có đỉnh 3982, đáy 3961, nằm trọn bên trong. Đặt lệnh chờ mua tại 3992, cắt lỗ dưới 3950."
+    mistakes:
+      - "Giao dịch Inside bar trên khung quá nhỏ như M1, M5 nơi tín hiệu rất nhiễu."
+      - "Giao dịch ngược xu hướng khi Inside bar xuất hiện giữa thị trường đi ngang."
+    visual:
+      type: pattern
+      idea: "Cận cảnh: một nến mẹ lớn màu xanh, kế bên là 1 nến nhỏ nằm trọn trong phạm vi đỉnh-đáy của nến mẹ (hai đường ngang nét đứt kéo từ đỉnh và đáy nến mẹ). Nến thứ ba phá lên trên đường nét đứt phía trên, mũi tên tăng. Nhãn: 'Mother bar', 'Inside bar', 'Buy stop trên đỉnh nến mẹ', 'SL dưới đáy nến mẹ'."
+  - part: 12
+    title: "Mô hình giá: hai đỉnh, hai đáy, vai đầu vai"
+    objective: "Nhận diện các mô hình đảo chiều phổ biến và cách xác định điểm xác nhận của chúng."
+    key_points:
+      - "Hai đỉnh (double top) gồm hai đỉnh gần ngang nhau và một đáy giữa gọi là đường cổ (neckline); mô hình chỉ hoàn thành khi giá đóng cửa thủng đường cổ."
+      - "Hai đáy (double bottom) là phiên bản ngược lại, hoàn thành khi giá vượt đường cổ phía trên."
+      - "Vai đầu vai (head and shoulders) gồm vai trái, đầu cao nhất, vai phải thấp hơn đầu; đây thực chất là một cấu trúc HH bị thất bại rồi chuyển sang LH."
+      - "Mục tiêu đo lường truyền thống bằng khoảng cách từ đỉnh (đầu) đến đường cổ, chiếu từ điểm phá vỡ; đây là ước lượng, không phải mức chắc chắn."
+    example: "Ví dụ giả định: EURUSD tạo hai đỉnh tại 1.1000 và 1.0995, đáy giữa 1.0920. Khi nến H4 đóng tại 1.0910, mô hình hoàn thành; mục tiêu ước lượng 1.0920 − 0.0080 = 1.0840."
+    mistakes:
+      - "Gọi mô hình khi mới có đỉnh thứ hai, chưa thủng đường cổ."
+      - "Tìm mô hình đảo chiều ở mọi nơi trong khi xu hướng chính vẫn rất mạnh."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến hình chữ M (hai đỉnh). Hai đỉnh nhãn 'Đỉnh 1', 'Đỉnh 2', đáy giữa có đường ngang nét đứt 'Đường cổ (neckline)'. Nến đỏ đóng cửa thủng đường cổ có nhãn 'Xác nhận'. Mũi tên thẳng đứng đo từ đỉnh xuống đường cổ, rồi mũi tên tương đương chiếu xuống dưới với nhãn 'Mục tiêu ước lượng'."
+  - part: 13
+    title: "Phá vỡ thật, phá vỡ giả và retest"
+    objective: "Phân biệt breakout thật với fakeout và biết cách chờ retest để vào lệnh an toàn hơn."
+    key_points:
+      - "Phá vỡ thật (breakout) thường có nến thân lớn đóng cửa hẳn ngoài vùng và giá tiếp tục đi xa, không quay lại ngay."
+      - "Phá vỡ giả (false breakout/fakeout) là khi giá vượt vùng bằng bóng nến hoặc một nến rồi nhanh chóng quay lại bên trong, thường bẫy những người vào đuổi."
+      - "Retest (kiểm tra lại) là khi giá sau phá vỡ quay lại chạm vùng cũ; kháng cự cũ lúc này có thể trở thành hỗ trợ mới."
+      - "Có hai trường phái: vào ngay khi nến phá vỡ đóng cửa (không bỏ lỡ nhưng dễ dính phá vỡ giả) hoặc chờ retest (an toàn hơn nhưng có thể bỏ lỡ)."
+    example: "Ví dụ giả định: XAUUSD đi ngang dưới 4000 nhiều ngày. Nến H4 đóng tại 4012, sau đó giá hồi về 4002 tạo Pin bar tăng rồi đi lên 4040. Đó là phá vỡ – retest thành công. Nếu giá đóng lại dưới 3995 thì đây là phá vỡ giả."
+    mistakes:
+      - "Mua đuổi ngay khi giá vừa chọc qua kháng cự khi nến chưa đóng cửa."
+      - "Không có kế hoạch cho tình huống phá vỡ giả, nên bị kẹt lệnh và gồng lỗ."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột. Trái 'Phá vỡ thật + retest': giá đi ngang dưới đường kháng cự, nến xanh lớn đóng vượt lên, giá quay lại chạm đường (nhãn 'Retest') rồi đi lên, mũi tên xanh. Phải 'Phá vỡ giả': giá chọc bóng nến qua đường kháng cự rồi nến đỏ đóng lại bên dưới, giá giảm mạnh, nhãn 'Fakeout – bẫy người mua'."
+  - part: 14
+    title: "Xây kịch bản vào lệnh: Entry, SL, TP và R:R"
+    objective: "Biết đặt điểm vào, cắt lỗ, chốt lời theo logic Price Action và tính tỷ lệ lợi nhuận/rủi ro."
+    key_points:
+      - "Điểm cắt lỗ (Stop Loss) đặt ở nơi mà nếu giá chạm tới thì ý tưởng giao dịch không còn đúng, ví dụ dưới đáy Pin bar hoặc dưới đáy HL gần nhất, cộng thêm một khoảng đệm."
+      - "Điểm chốt lời (Take Profit) thường đặt trước vùng cản tiếp theo, như đỉnh cũ hoặc kháng cự gần nhất."
+      - "Tỷ lệ R:R (risk:reward) so sánh khoảng cách tới TP với khoảng cách tới SL; nhiều trader chỉ nhận lệnh có R:R tối thiểu khoảng 1:1,5 đến 1:2."
+      - "Nếu vùng cản gần quá khiến R:R thấp, bỏ qua lệnh là quyết định hợp lý, dù tín hiệu nến rất đẹp."
+    example: "Ví dụ giả định: mua EURUSD tại 1.0860 sau Pin bar tại hỗ trợ, đáy Pin bar 1.0842; đặt SL 1.0838 (rủi ro 22 pip). Kháng cự gần nhất 1.0910, đặt TP 1.0905 (lợi nhuận 45 pip). R:R ≈ 1:2."
+    mistakes:
+      - "Đặt SL theo số pip cố định cảm tính (ví dụ luôn 10 pip) mà không dựa vào cấu trúc giá."
+      - "Dời SL ra xa khi giá gần chạm, biến lỗ nhỏ thành lỗ lớn."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến tăng hồi về vùng hỗ trợ xanh, Pin bar tại vùng. Ba đường ngang: đường xanh dương 'Entry 1.0860', đường đỏ dưới đáy Pin bar 'SL 1.0838', đường xanh lá trước kháng cự phía trên 'TP 1.0905'. Ô tô màu đỏ giữa Entry và SL ghi '22 pip', ô xanh giữa Entry và TP ghi '45 pip', khung chú thích 'R:R ≈ 1:2'."
+  - part: 15
+    title: "Kế hoạch giao dịch Price Action và quản lý vốn"
+    objective: "Ghép toàn bộ kiến thức thành một quy trình giao dịch từng bước, kèm quy tắc quản lý rủi ro."
+    key_points:
+      - "Quy trình gợi ý: (1) xác định xu hướng khung lớn, (2) đánh dấu key level, (3) chờ giá về vùng, (4) chờ tín hiệu nến hoặc CHoCH ở khung nhỏ, (5) đặt Entry, SL, TP và kiểm tra R:R."
+      - "Chỉ rủi ro một phần nhỏ tài khoản mỗi lệnh, phổ biến là 0,5–2%; khối lượng lệnh được tính từ khoảng cách SL, không phải ngược lại."
+      - "Với vàng, 1 lot thường là 100 ounce nên giá chạy 1 USD tương đương 100 USD/lot; hợp đồng có thể khác tùy sàn, cần kiểm tra trước."
+      - "Ghi nhật ký giao dịch (trading journal) với ảnh chụp biểu đồ, lý do vào lệnh và kết quả để cải thiện theo thời gian; không có hệ thống nào thắng mọi lệnh."
+    example: "Ví dụ giả định: tài khoản 1.000 USD, rủi ro 1% = 10 USD. Lệnh mua XAUUSD có SL cách điểm vào 5 USD giá. Với 0,01 lot (1 ounce), lỗ 5 USD nếu chạm SL, nên khối lượng phù hợp là 0,02 lot để mức lỗ tối đa là 10 USD."
+    mistakes:
+      - "Tăng gấp đôi khối lượng sau chuỗi lệnh thua để 'gỡ'."
+      - "Giao dịch khi không có tín hiệu rõ ràng chỉ vì muốn có lệnh mỗi ngày."
+    visual:
+      type: checklist
+      idea: "Checklist dạng thẻ với 6 ô tích: '1. Xu hướng D1/H4 là gì?', '2. Đã đánh dấu key level?', '3. Giá đã về vùng?', '4. Có tín hiệu nến/CHoCH?', '5. SL theo cấu trúc, R:R ≥ 1:2?', '6. Rủi ro ≤ 1% tài khoản?'. Góc dưới có công thức nhỏ: 'Khối lượng = Số tiền rủi ro ÷ (Khoảng cách SL × Giá trị mỗi điểm)'."
+sources:
+  - "https://www.youtube.com/playlist?list=PLXWi52aRZnNHkXSeG7E213pkSDayGp0HD"
+  - "https://www.youtube.com/playlist?list=PLU9f1fTtAn5oZxHxZVa50-myUJfohUGt9"
+  - "https://www.youtube.com/watch?v=kzRsEU3M7zY"
+  - "https://www.youtube.com/watch?v=3iX9Lwh-UUE"
+  - "https://www.youtube.com/playlist?list=PLyIuJUzzZCa47PCqcPoPqegFIlGSmXKEn"
+  - "https://www.classcentral.com/course/youtube-price-action-trading-80092"
+  - "https://tradeciety.com/price-action-course-video-complete-course"
+  - "https://www.learntotradethemarket.com/price-action-videos-playlist"
+  - "https://khoahocgiahoi.com/khoa-hoc/khoa-hoc-price-action-trading-by-nhaduhanhfx"
+  - "https://qmcapital.vn/bai-viet/kien-thuc/kien-thuc-chung/chien-luoc-giao-dich-price-action-cach-doc-bieu-do-gia-de-hieu-thi-truong"
+  - "https://www.babypips.com/learn/forex"

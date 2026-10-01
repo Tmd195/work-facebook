@@ -1,0 +1,226 @@
+id: wyckoff
+name: "Phương pháp Wyckoff"
+level: "Chuyên sâu"
+description: "Giúp trader đọc được hành vi của dòng tiền lớn qua giá và khối lượng, nhận diện vùng tích lũy/phân phối trên XAUUSD, EURUSD, GBPUSD và lập kế hoạch vào lệnh theo các sự kiện Wyckoff."
+lessons:
+  - part: 1
+    title: "Wyckoff là gì và vì sao vẫn còn giá trị"
+    objective: "Hiểu nguồn gốc, triết lý cốt lõi và cách tiếp cận thị trường của phương pháp Wyckoff."
+    key_points:
+      - "Richard D. Wyckoff (1873–1934) xây dựng phương pháp dựa trên quan sát hành vi của các nhà đầu tư lớn thông qua giá, khối lượng (volume) và thời gian."
+      - "Wyckoff không dự đoán bằng chỉ báo mà đọc mối quan hệ cung – cầu thể hiện trực tiếp trên biểu đồ nến và khối lượng."
+      - "Thị trường vận động theo chu kỳ 4 giai đoạn: tích lũy (accumulation), tăng giá (markup), phân phối (distribution), giảm giá (markdown)."
+      - "Phương pháp áp dụng được cho vàng, ngoại hối và chỉ số vì mọi thị trường tự do đều do cung – cầu chi phối."
+    example: "Ví dụ giả định: XAUUSD giảm từ 2.450 xuống 2.300, đi ngang 3 tuần trong biên 2.300–2.350 rồi bứt lên 2.420. Theo Wyckoff, 3 tuần đi ngang đó là nơi cần phân tích xem dòng tiền lớn đang gom hàng hay không."
+    mistakes:
+      - "Coi Wyckoff là một mô hình nến cố định để vào lệnh máy móc, trong khi bản chất là đọc bối cảnh cung – cầu."
+    visual:
+      type: chart
+      idea: "Một đường giá hình sin lớn chia 4 đoạn có nhãn: vùng đi ngang dưới đáy 'Tích lũy', đoạn đi lên 'Markup', vùng đi ngang trên đỉnh 'Phân phối', đoạn đi xuống 'Markdown'. Dưới biểu đồ có thanh volume cao ở hai vùng đi ngang. Mũi tên vòng tròn thể hiện chu kỳ lặp lại."
+  - part: 2
+    title: "Composite Man – nhân vật đứng sau thị trường"
+    objective: "Hiểu khái niệm Composite Man để nhìn thị trường từ góc độ của dòng tiền lớn."
+    key_points:
+      - "Composite Man (hay Composite Operator) là hình tượng giả định đại diện cho tổng thể các tổ chức lớn có khả năng chi phối giá."
+      - "Composite Man lên kế hoạch, gom hàng ở giá thấp khi đám đông hoảng loạn và phân phối ở giá cao khi đám đông hưng phấn."
+      - "Mục tiêu khi học Wyckoff là nghiên cứu dấu vết của Composite Man trên biểu đồ để đi cùng hướng với họ, không đi ngược."
+      - "Đây là công cụ tư duy (heuristic), không có nghĩa có một cá nhân duy nhất thao túng toàn bộ thị trường."
+    example: "Ví dụ giả định: EURUSD rơi mạnh sau tin xấu, nến đỏ dài với volume tăng vọt nhưng giá đóng cửa lại xa đáy. Góc nhìn Composite Man: có lực mua lớn hấp thụ lượng bán tháo của nhỏ lẻ."
+    mistakes:
+      - "Nghĩ rằng Composite Man là âm mưu và đổ lỗi mọi thua lỗ cho bị thao túng thay vì học cách đọc dấu vết."
+    visual:
+      type: compare
+      idea: "Hai cột. Cột trái 'Đám đông': bán hoảng loạn ở đáy, mua đuổi ở đỉnh (biểu tượng mặt hoảng sợ và hưng phấn). Cột phải 'Composite Man': gom hàng ở đáy, xả hàng ở đỉnh. Ở giữa là đường giá chu kỳ với mũi tên 'Gom' ở đáy và 'Xả' ở đỉnh."
+  - part: 3
+    title: "Quy luật 1: Cung và Cầu"
+    objective: "Nắm quy luật cung – cầu (Law of Supply and Demand) và cách đọc nó trên nến và volume."
+    key_points:
+      - "Khi cầu lớn hơn cung giá tăng, khi cung lớn hơn cầu giá giảm, khi cân bằng giá đi ngang."
+      - "Nến tăng với biên độ rộng và volume cao cho thấy cầu mạnh; nến tăng biên độ hẹp, volume thấp cho thấy cầu yếu."
+      - "Cần so sánh các nhịp tăng và nhịp giảm: nhịp nào có biên độ và volume lớn hơn thì phe đó đang chiếm ưu thế."
+      - "Trên forex giao ngay chỉ có tick volume, nên ưu tiên so sánh tương đối giữa các nhịp thay vì con số tuyệt đối."
+    example: "Ví dụ giả định: trên H4 XAUUSD, ba nhịp tăng gần nhất có volume trung bình 18.000 tick, ba nhịp giảm chỉ khoảng 9.000 tick. Cầu đang áp đảo cung, xu hướng tăng còn được hỗ trợ."
+    mistakes:
+      - "Chỉ nhìn một cây nến riêng lẻ mà không so sánh với các nhịp trước đó."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến xu hướng tăng với các nhịp lên (nến xanh dài) và nhịp chỉnh (nến đỏ ngắn). Thanh volume bên dưới: cao ở nhịp lên, thấp ở nhịp chỉnh. Nhãn 'Cầu > Cung' và cán cân nghiêng về phía cầu."
+  - part: 4
+    title: "Quy luật 2: Nguyên nhân và Kết quả"
+    objective: "Hiểu quy luật nguyên nhân – kết quả (Law of Cause and Effect) và cách ước lượng mục tiêu giá từ độ rộng vùng đi ngang."
+    key_points:
+      - "Vùng đi ngang tích lũy hoặc phân phối là 'nguyên nhân', nhịp xu hướng sau đó là 'kết quả'."
+      - "Vùng đi ngang càng kéo dài và rộng thì nhịp xu hướng tiếp theo có tiềm năng càng lớn."
+      - "Wyckoff gốc dùng biểu đồ Point and Figure (đếm ngang) để ước lượng mục tiêu; trader hiện đại thường dùng chiều cao và thời gian vùng đi ngang làm tham chiếu."
+      - "Mục tiêu giá chỉ là vùng tham khảo, không phải cam kết thị trường sẽ đạt tới."
+    example: "Ví dụ giả định: EURUSD tích lũy 2 tháng trong biên 1,0700–1,0850 (150 pip). Một cách ước lượng thận trọng là nhịp tăng sau khi phá vỡ có thể đi ít nhất bằng chiều cao vùng, khoảng 1,1000."
+    mistakes:
+      - "Kỳ vọng một vùng tích lũy rất ngắn tạo ra xu hướng lớn."
+      - "Coi mục tiêu ước lượng là chắc chắn và không chốt lời từng phần."
+    visual:
+      type: chart
+      idea: "Hộp chữ nhật vùng đi ngang có nhãn 'Nguyên nhân (Cause)', chiều rộng thời gian được đánh dấu bằng mũi tên ngang. Sau khi giá phá lên, mũi tên dọc chiếu chiều cao hộp lên trên có nhãn 'Kết quả (Effect) – mục tiêu tham khảo'."
+  - part: 5
+    title: "Quy luật 3: Nỗ lực và Kết quả"
+    objective: "Biết phát hiện sự phân kỳ giữa volume (nỗ lực) và biến động giá (kết quả) để cảnh báo đảo chiều."
+    key_points:
+      - "Volume là 'nỗ lực' (effort), biên độ và quãng đường giá là 'kết quả' (result); hai yếu tố này nên đồng thuận."
+      - "Volume tăng mạnh nhưng giá đi rất ít cho thấy có lực đối ứng đang hấp thụ, thường báo hiệu xu hướng sắp yếu đi."
+      - "Volume giảm dần trong khi giá vẫn đẩy lên cho thấy nhịp tăng thiếu sự tham gia, dễ thất bại."
+      - "Quy luật này là nền tảng để nhận diện các sự kiện như Selling Climax hay Buying Climax ở các bài sau."
+    example: "Ví dụ giả định: GBPUSD tiến lên vùng 1,2900, volume H1 gấp đôi trung bình nhưng ba cây nến liên tiếp chỉ nhích 10 pip và để lại bóng trên dài. Nỗ lực lớn, kết quả nhỏ: có người bán đang chặn."
+    mistakes:
+      - "Thấy volume lớn là mặc định xu hướng mạnh mà không kiểm tra kết quả giá."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến tăng tới đỉnh, ba cây cuối có thân nhỏ và bóng trên dài, trong khi thanh volume bên dưới cao vọt. Khoanh tròn vùng này với nhãn 'Nỗ lực lớn – Kết quả nhỏ'. Mũi tên chỉ xuống phía sau."
+  - part: 6
+    title: "Chu kỳ thị trường và cách tiếp cận 5 bước"
+    objective: "Nắm quy trình 5 bước Wyckoff và vị trí của tích lũy/phân phối trong chu kỳ."
+    key_points:
+      - "Bước 1: xác định xu hướng và vị thế hiện tại của thị trường chung (với forex có thể dùng DXY làm bối cảnh)."
+      - "Bước 2: chọn tài sản cùng chiều và mạnh/yếu hơn thị trường chung; bước 3: chọn tài sản có 'nguyên nhân' đủ lớn."
+      - "Bước 4: đánh giá mức độ sẵn sàng di chuyển qua các phép thử (test); bước 5: canh thời điểm vào lệnh cùng nhịp đảo chiều của bối cảnh chung."
+      - "Ngoài tích lũy và phân phối còn có tái tích lũy (re-accumulation) và tái phân phối (re-distribution) xuất hiện giữa xu hướng."
+    example: "Ví dụ giả định: DXY đang phân phối dưới đỉnh và yếu dần; EURUSD đang trong vùng đi ngang với dấu hiệu tích lũy. Theo 5 bước, EURUSD là ứng viên mua hợp lý hơn USDJPY."
+    mistakes:
+      - "Phân tích một cặp tiền tách rời khỏi bối cảnh đồng USD."
+    visual:
+      type: checklist
+      idea: "Danh sách 5 bước đánh số với biểu tượng: 1) Xu hướng chung (biểu đồ DXY nhỏ), 2) Sức mạnh tương đối, 3) Nguyên nhân đủ lớn, 4) Phép thử sẵn sàng, 5) Canh thời điểm. Bên cạnh là sơ đồ chu kỳ nhỏ có thêm hộp 'Tái tích lũy' giữa nhịp tăng."
+  - part: 7
+    title: "Tích lũy pha A: PS, SC, AR, ST"
+    objective: "Nhận diện các sự kiện dừng xu hướng giảm trong pha A của mô hình tích lũy."
+    key_points:
+      - "PS (Preliminary Support – hỗ trợ sơ bộ): lực mua đáng kể đầu tiên xuất hiện sau xu hướng giảm dài, volume tăng."
+      - "SC (Selling Climax – cao trào bán): bán tháo dữ dội, nến dài, volume cực lớn, thường tạo bóng dưới khi dòng tiền lớn hấp thụ."
+      - "AR (Automatic Rally – hồi phục tự động): nhịp bật lên sau SC do áp lực bán cạn; đỉnh AR xác định cạnh trên của vùng giao dịch."
+      - "ST (Secondary Test – kiểm định thứ cấp): giá quay lại vùng SC với volume và biên độ nhỏ hơn, xác nhận cung đã giảm."
+    example: "Ví dụ giả định: XAUUSD giảm tới 2.280 với nến D1 volume gấp 3 lần trung bình (SC), bật lên 2.340 (AR), rồi quay về 2.290 với volume chỉ bằng nửa (ST). Vùng 2.280–2.340 trở thành biên tích lũy cần theo dõi."
+    mistakes:
+      - "Mua ngay tại SC vì nghĩ đã chạm đáy, trong khi pha A chỉ cho thấy xu hướng giảm đã dừng, chưa xác nhận tăng."
+    visual:
+      type: chart
+      idea: "Xu hướng giảm đi vào vùng đáy: nhãn PS ở nhịp chững đầu tiên, SC tại đáy sâu nhất với thanh volume rất cao, AR ở đỉnh hồi, ST ở đáy thứ hai cao hơn hoặc ngang SC với volume thấp hơn. Kẻ đường ngang trên tại AR và dưới tại SC tạo vùng giao dịch, ghi 'Pha A'."
+  - part: 8
+    title: "Tích lũy pha B: xây dựng nguyên nhân"
+    objective: "Hiểu bản chất pha B và cách đọc các nhịp lên xuống bên trong vùng giao dịch."
+    key_points:
+      - "Pha B là giai đoạn dài nhất, nơi dòng tiền lớn gom dần hàng ở giá thấp và tạo 'nguyên nhân' cho nhịp tăng sau."
+      - "Giá dao động giữa vùng SC và AR, có thể có nhiều ST, đôi khi xuất hiện đỉnh nhẹ vượt AR gọi là UA (Upthrust Action)."
+      - "Dấu hiệu tích cực: volume ở các nhịp giảm co lại dần, nhịp giảm về đáy vùng yếu đi."
+      - "Giao dịch trong pha B rủi ro cao vì giá đi ngang khó đoán; phần lớn trader Wyckoff chỉ quan sát."
+    example: "Ví dụ giả định: EURUSD dao động 6 tuần giữa 1,0720 và 1,0860. Mỗi lần giảm về 1,0730 volume nhỏ hơn lần trước, cho thấy lượng cung đang bị hấp thụ dần."
+    mistakes:
+      - "Liên tục mua đáy bán đỉnh trong pha B và bị quét dừng lỗ ở cả hai phía."
+    visual:
+      type: chart
+      idea: "Vùng giao dịch hình hộp với nhiều nhịp zigzag bên trong, nhãn ST nhiều lần gần đáy và UA ở đỉnh nhẹ vượt cạnh trên. Thanh volume ở các nhịp giảm thấp dần, có đường xu hướng giảm vẽ trên đỉnh các thanh volume. Ghi 'Pha B – xây nguyên nhân'."
+  - part: 9
+    title: "Spring và Test: phép thử cuối của pha C"
+    objective: "Nhận diện Spring, Test và hiểu vì sao đây là điểm vào lệnh có rủi ro thấp."
+    key_points:
+      - "Spring (cú rũ bỏ) là nhịp giá xuyên thủng đáy vùng giao dịch rồi nhanh chóng quay lại bên trong, bẫy người bán và quét dừng lỗ."
+      - "Sau Spring thường có Test: giá quay lại gần vùng Spring với volume thấp, cho thấy cung đã cạn."
+      - "Spring với volume thấp và hồi nhanh là tín hiệu tốt; Spring với volume rất lớn cần chờ Test để xác nhận."
+      - "Không phải vùng tích lũy nào cũng có Spring; khi không có, pha C có thể là một LPS cao hơn đáy vùng."
+    example: "Ví dụ giả định: XAUUSD trong vùng 2.280–2.340, phá xuống 2.268 trong phiên Á rồi đóng cửa H4 lại trên 2.285. Hai ngày sau giá test 2.278 với volume thấp và giữ được: tổ hợp Spring + Test."
+    mistakes:
+      - "Bán theo cú phá đáy mà không chờ xác nhận nến đóng cửa."
+      - "Đặt dừng lỗ ngay dưới đáy vùng, đúng nơi Spring sẽ quét."
+    visual:
+      type: chart
+      idea: "Hộp vùng giao dịch, giá đâm xuyên đáy hộp tạo bóng dài (nhãn Spring) rồi quay lại trong hộp, sau đó một đáy nhỏ cao hơn gần đó (nhãn Test) với thanh volume thấp. Mũi tên xanh hướng lên từ Test, ghi 'Pha C'."
+  - part: 10
+    title: "SOS, LPS và BU: pha D–E của tích lũy"
+    objective: "Nhận diện dấu hiệu cầu chiếm ưu thế và các điểm vào lệnh xác nhận trong pha D và E."
+    key_points:
+      - "SOS (Sign of Strength – dấu hiệu sức mạnh): nhịp tăng mạnh, biên độ rộng, volume tăng, vượt lên cạnh trên vùng giao dịch."
+      - "LPS (Last Point of Support – điểm hỗ trợ cuối): nhịp điều chỉnh sau SOS với volume thấp, tạo đáy cao hơn; có thể có nhiều LPS."
+      - "BU (Back-up): giá quay lại kiểm tra cạnh trên vùng cũ (nay là hỗ trợ) trước khi bước vào pha E tăng giá."
+      - "Pha E là giai đoạn markup rõ ràng, giá rời hẳn vùng giao dịch và các nhịp chỉnh ngắn."
+    example: "Ví dụ giả định: EURUSD bứt qua 1,0860 bằng nến D1 dài, volume cao (SOS), chỉnh về 1,0870 với volume thấp (LPS/BU) rồi tăng lên 1,1000. LPS là điểm mua xác nhận với dừng lỗ dưới 1,0820."
+    mistakes:
+      - "Mua đuổi ngay đỉnh SOS thay vì chờ nhịp chỉnh LPS có rủi ro thấp hơn."
+    visual:
+      type: chart
+      idea: "Toàn bộ sơ đồ tích lũy sau Spring: nhịp tăng mạnh vượt cạnh trên hộp (nhãn SOS, volume cao), chỉnh nhẹ về cạnh trên (nhãn LPS / BU, volume thấp), sau đó đi lên dốc (nhãn Pha E – Markup). Ghi chú pha D và E bên dưới trục thời gian."
+  - part: 11
+    title: "Sơ đồ tích lũy hoàn chỉnh: pha A đến E"
+    objective: "Ghép toàn bộ sự kiện thành sơ đồ tích lũy và phân biệt biến thể có Spring và không có Spring."
+    key_points:
+      - "Thứ tự điển hình: PS → SC → AR → ST (pha A), nhiều ST/UA (pha B), Spring/Test (pha C), SOS → LPS (pha D), markup (pha E)."
+      - "Sơ đồ 1 có Spring dưới đáy vùng; sơ đồ 2 không có Spring, phép thử pha C là một đáy cao hơn (LPS) sát đáy vùng."
+      - "Gắn nhãn sự kiện chỉ có giá trị khi xét cả giá, volume và thời gian, không chỉ hình dạng."
+      - "Nên phân tích trên khung lớn (H4, D1) để xác định cấu trúc, khung nhỏ để tinh chỉnh điểm vào."
+    example: "Ví dụ giả định trên D1 XAUUSD: PS 2.320, SC 2.280, AR 2.340, ST 2.290, Spring 2.268, SOS vượt 2.345, LPS 2.335. Mỗi nhãn được kiểm tra bằng volume tương ứng."
+    mistakes:
+      - "Ép mọi vùng đi ngang vào sơ đồ cho khớp, kể cả khi volume không xác nhận."
+    visual:
+      type: compare
+      idea: "Hai sơ đồ tích lũy cạnh nhau. Trái 'Sơ đồ 1 – có Spring': đầy đủ nhãn PS, SC, AR, ST, Spring, Test, SOS, LPS, BU, chia pha A–E bằng đường dọc. Phải 'Sơ đồ 2 – không Spring': cùng cấu trúc nhưng pha C là LPS đáy cao hơn. Volume bars dưới mỗi sơ đồ."
+  - part: 12
+    title: "Phân phối pha A–B: PSY, BC, AR, ST"
+    objective: "Nhận diện các sự kiện dừng xu hướng tăng và giai đoạn xả hàng của dòng tiền lớn."
+    key_points:
+      - "PSY (Preliminary Supply – cung sơ bộ): lực bán đáng kể đầu tiên sau xu hướng tăng dài, volume tăng."
+      - "BC (Buying Climax – cao trào mua): đám đông mua đuổi, nến dài, volume cực lớn, thường kèm tin tức tích cực."
+      - "AR (Automatic Reaction – phản ứng tự động): nhịp giảm sau BC, đáy AR xác định cạnh dưới vùng phân phối; ST quay lại vùng BC với volume nhỏ hơn."
+      - "Trong pha B, dòng tiền lớn xả hàng dần; có thể xuất hiện UT (Upthrust) vượt nhẹ đỉnh vùng rồi quay đầu."
+    example: "Ví dụ giả định: XAUUSD tăng mạnh lên 2.520 với volume kỷ lục sau tin địa chính trị (BC), giảm về 2.460 (AR), rồi hồi lên 2.515 với volume thấp hơn (ST). Biên 2.460–2.520 là vùng phân phối tiềm năng."
+    mistakes:
+      - "Mua đuổi tại BC vì tin tức quá tốt."
+    visual:
+      type: chart
+      idea: "Xu hướng tăng đi vào đỉnh: nhãn PSY ở nhịp chững đầu, BC tại đỉnh cao nhất với volume rất cao, AR ở đáy giảm, ST quay về gần BC với volume thấp. Kẻ hộp phân phối giữa BC và AR, ghi 'Pha A' và 'Pha B' với UT nhỏ vượt cạnh trên."
+  - part: 13
+    title: "UTAD, SOW, LPSY: pha C–E của phân phối"
+    objective: "Nhận diện bẫy tăng cuối cùng và các điểm bán xác nhận khi cung chiếm ưu thế."
+    key_points:
+      - "UTAD (Upthrust After Distribution): cú vượt đỉnh vùng phân phối rồi nhanh chóng quay lại, bẫy người mua phá vỡ; tương tự Spring nhưng ngược chiều."
+      - "SOW (Sign of Weakness – dấu hiệu yếu): nhịp giảm mạnh, volume tăng, xuyên thủng hoặc tiến sát cạnh dưới vùng."
+      - "LPSY (Last Point of Supply – điểm cung cuối): nhịp hồi yếu, volume thấp sau SOW, thường là điểm bán có rủi ro thấp."
+      - "Pha E là markdown: giá rời vùng phân phối, các nhịp hồi ngắn và thất bại."
+    example: "Ví dụ giả định: GBPUSD vượt 1,3050 lên 1,3075 rồi đóng cửa H4 lại dưới 1,3040 (UTAD), giảm mạnh xuống 1,2920 (SOW), hồi lên 1,2960 với volume thấp (LPSY). Điểm bán ở LPSY, dừng lỗ trên 1,3000."
+    mistakes:
+      - "Mua theo cú phá đỉnh UTAD mà không chờ xác nhận giữ được trên vùng."
+    visual:
+      type: chart
+      idea: "Sơ đồ phân phối hoàn chỉnh: PSY, BC, AR, ST, UT trong pha B, UTAD vượt đỉnh hộp rồi quay xuống (pha C), SOW giảm xuyên cạnh dưới với volume cao, LPSY hồi thấp với volume thấp (pha D), markdown pha E. Đường dọc chia pha A–E."
+  - part: 14
+    title: "Áp dụng Wyckoff cho XAUUSD và forex"
+    objective: "Biết điều chỉnh phương pháp Wyckoff cho đặc thù vàng và ngoại hối giao ngay."
+    key_points:
+      - "Forex giao ngay chỉ có tick volume; có thể đối chiếu với volume hợp đồng tương lai vàng (GC) hoặc euro (6E) trên sàn CME."
+      - "Phiên Á thường volume thấp, các cú Spring/UTAD hay xuất hiện ở đầu phiên London hoặc New York khi thanh khoản tăng."
+      - "Tin vĩ mô (CPI, NFP, FOMC) thường tạo cao trào SC/BC; cần chờ cấu trúc hình thành thay vì giao dịch ngay khi tin ra."
+      - "Dùng DXY và lợi suất trái phiếu Mỹ làm bối cảnh để xác nhận chiều tích lũy/phân phối của vàng và EURUSD."
+    example: "Ví dụ giả định: sau tin CPI, XAUUSD rơi 40 giá trong 15 phút với volume cực lớn rồi rút chân (SC tiềm năng). Trader Wyckoff đánh dấu vùng, chờ AR và ST trong các ngày tiếp theo thay vì bắt đáy ngay."
+    mistakes:
+      - "So sánh con số tick volume giữa các broker khác nhau như thể là volume thật."
+    visual:
+      type: compare
+      idea: "Hai biểu đồ xếp chồng cùng trục thời gian: trên là XAUUSD với tick volume, dưới là GC futures với volume thật; khoanh tròn cùng một cây SC xuất hiện volume đột biến ở cả hai. Ghi chú các phiên Á/London/New York bằng dải màu nền."
+  - part: 15
+    title: "Kế hoạch giao dịch Wyckoff và quản lý rủi ro"
+    objective: "Xây dựng kế hoạch giao dịch hoàn chỉnh từ phân tích Wyckoff kèm quản lý vốn chặt chẽ."
+    key_points:
+      - "Quy trình: xác định bối cảnh (DXY, khung D1) → gắn nhãn cấu trúc → chờ pha C (Spring/UTAD) hoặc pha D (LPS/LPSY) → vào lệnh ở khung nhỏ."
+      - "Dừng lỗ đặt sau điểm phủ định cấu trúc: dưới đáy Spring cho lệnh mua, trên đỉnh UTAD cho lệnh bán, cộng thêm vùng đệm theo ATR."
+      - "Rủi ro mỗi lệnh giới hạn 0,5–1% tài khoản; chốt lời từng phần ở cạnh đối diện vùng và theo mục tiêu nguyên nhân – kết quả."
+      - "Nếu giá quay lại sâu trong vùng giao dịch sau SOS hoặc SOW, coi kịch bản đã sai và thoát lệnh, không cố gồng."
+    example: "Ví dụ giả định: tài khoản 10.000 USD, rủi ro 1% = 100 USD. Mua XAUUSD tại LPS 2.335, dừng lỗ 2.315 (20 giá), khối lượng 0,05 lot. Chốt 50% tại 2.375, phần còn lại dời dừng lỗ về hòa vốn, mục tiêu 2.400."
+    mistakes:
+      - "Vào lệnh lớn ngay pha B vì quá tự tin vào nhận định tích lũy."
+      - "Không có tiêu chí phủ định kịch bản, dẫn tới giữ lệnh lỗ quá lâu."
+    visual:
+      type: checklist
+      idea: "Checklist kế hoạch: Bối cảnh ✓, Cấu trúc & nhãn ✓, Tín hiệu pha C/D ✓, Điểm vào ✓, Dừng lỗ dưới Spring ✓, Rủi ro ≤1% ✓, Mục tiêu từng phần ✓. Bên cạnh là sơ đồ tích lũy nhỏ đánh dấu điểm Entry tại LPS, SL dưới Spring, TP1/TP2 bằng các đường ngang."
+sources:
+  - "https://www.wyckoffanalytics.com/wyckoff-trading-course-part-1/"
+  - "https://chartschool.stockcharts.com/table-of-contents/market-analysis/wyckoff-analysis-articles/the-wyckoff-method-a-tutorial"
+  - "https://www.youtube.com/playlist?list=PLZFzCJOGVX87KyAwFeLPa5Eml32XQf-Ls"
+  - "https://www.youtube.com/watch?v=9E_GzBipPrs"
+  - "https://www.youtube.com/watch?v=8sbfrusR5Eo"
+  - "https://mrconnect.net/phuong-phap-wyckoff-01-cau-truc-phuong-phap-luan-chu-ky-thi-truong/12160"
+  - "https://techprofit.vn/phuong-phap-Wyckoff-dong-tien-thong-minh/1767167360736"

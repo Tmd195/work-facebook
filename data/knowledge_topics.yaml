@@ -1,0 +1,69 @@
+# Giáo trình bài Kiến thức (12:00). Hệ thống đăng lần lượt từ trên xuống, bỏ qua chủ đề đã đăng
+# (lưu ở state/used_topics.json). Thêm/bớt/sắp xếp lại thoải mái - chỉ cần giữ "id" không trùng.
+
+- { id: fx-pip-lot,          category: "Nền tảng",          topic: "Pip, point và lot: cách tính lời lỗ trên EURUSD và XAUUSD" }
+- { id: fx-sessions,         category: "Nền tảng",          topic: "Các phiên giao dịch Á - Âu - Mỹ theo giờ Việt Nam và đặc điểm biến động" }
+- { id: fx-spread-swap,      category: "Nền tảng",          topic: "Spread, swap và chi phí ẩn khi giao dịch" }
+- { id: fx-leverage-margin,  category: "Nền tảng",          topic: "Đòn bẩy và ký quỹ: vì sao đòn bẩy cao dễ cháy tài khoản" }
+- { id: fx-order-types,      category: "Nền tảng",          topic: "Các loại lệnh: Market, Limit, Stop và khi nào dùng" }
+- { id: fx-dxy,              category: "Nền tảng",          topic: "Chỉ số DXY là gì và vì sao trader vàng phải theo dõi" }
+- { id: fx-timeframes,       category: "Nền tảng",          topic: "Phân tích đa khung thời gian: D1 định hướng, H4 tìm vùng, H1 vào lệnh" }
+
+- { id: cs-anatomy,          category: "Nến Nhật",          topic: "Cấu tạo một cây nến và cách đọc tâm lý mua bán" }
+- { id: cs-pinbar,           category: "Nến Nhật",          topic: "Nến Pin Bar: nhận diện và điều kiện để có giá trị" }
+- { id: cs-engulfing,        category: "Nến Nhật",          topic: "Mô hình nến nhấn chìm (Engulfing)" }
+- { id: cs-doji,             category: "Nến Nhật",          topic: "Nến Doji: do dự hay đảo chiều?" }
+- { id: cs-inside-bar,       category: "Nến Nhật",          topic: "Inside Bar: nến tích lũy và cách giao dịch phá vỡ" }
+- { id: cs-morning-star,     category: "Nến Nhật",          topic: "Mô hình Morning Star và Evening Star" }
+- { id: cs-context,          category: "Nến Nhật",          topic: "Vì sao mô hình nến chỉ có ý nghĩa tại vùng giá quan trọng" }
+
+- { id: pa-sr,               category: "Price Action",      topic: "Hỗ trợ và kháng cự: vẽ vùng chứ không vẽ đường" }
+- { id: pa-sr-flip,          category: "Price Action",      topic: "Hỗ trợ biến thành kháng cự (SR flip)" }
+- { id: pa-trend-structure,  category: "Price Action",      topic: "Cấu trúc xu hướng: đỉnh cao hơn, đáy cao hơn" }
+- { id: pa-trendline,        category: "Price Action",      topic: "Cách vẽ trendline đúng và những lỗi hay gặp" }
+- { id: pa-breakout-fake,    category: "Price Action",      topic: "Phá vỡ thật và phá vỡ giả (false breakout)" }
+- { id: pa-pullback,         category: "Price Action",      topic: "Giao dịch pullback: chờ giá hồi thay vì đuổi giá" }
+- { id: pa-range,            category: "Price Action",      topic: "Thị trường đi ngang (sideway): nhận diện và cách giao dịch" }
+- { id: pa-double-top,       category: "Price Action",      topic: "Mô hình hai đỉnh, hai đáy" }
+- { id: pa-head-shoulders,   category: "Price Action",      topic: "Mô hình vai đầu vai" }
+- { id: pa-triangle,         category: "Price Action",      topic: "Mô hình tam giác và nêm" }
+- { id: pa-round-numbers,    category: "Price Action",      topic: "Số tròn tâm lý trên vàng: vùng 50 và 100 giá" }
+- { id: pa-prev-day-hl,      category: "Price Action",      topic: "Đỉnh/đáy ngày hôm trước: vùng giá trader chuyên nghiệp luôn đánh dấu" }
+
+- { id: ind-ema,             category: "Chỉ báo",           topic: "Đường EMA 20/50/200: xác định xu hướng và vùng hồi" }
+- { id: ind-rsi,             category: "Chỉ báo",           topic: "RSI: quá mua, quá bán và cái bẫy bắt đỉnh đáy" }
+- { id: ind-rsi-divergence,  category: "Chỉ báo",           topic: "Phân kỳ RSI: tín hiệu suy yếu của xu hướng" }
+- { id: ind-atr,             category: "Chỉ báo",           topic: "ATR: đo biến động để đặt dừng lỗ hợp lý" }
+- { id: ind-pivot,           category: "Chỉ báo",           topic: "Pivot Point: cách tính và sử dụng trong ngày" }
+- { id: ind-fibonacci,       category: "Chỉ báo",           topic: "Fibonacci thoái lui: các mức 38.2 - 50 - 61.8" }
+- { id: ind-macd,            category: "Chỉ báo",           topic: "MACD: động lượng và giao cắt" }
+- { id: ind-too-many,        category: "Chỉ báo",           topic: "Vì sao dùng quá nhiều chỉ báo làm bạn giao dịch tệ hơn" }
+
+- { id: smc-liquidity,       category: "SMC",               topic: "Thanh khoản (liquidity) là gì và vì sao giá hay quét đỉnh đáy" }
+- { id: smc-order-block,     category: "SMC",               topic: "Order Block: vùng lệnh của tổ chức" }
+- { id: smc-fvg,             category: "SMC",               topic: "Fair Value Gap (FVG): khoảng trống giá" }
+- { id: smc-bos-choch,       category: "SMC",               topic: "BOS và CHoCH: phá vỡ cấu trúc và đổi tính chất" }
+- { id: smc-supply-demand,   category: "SMC",               topic: "Vùng cung - cầu (Supply & Demand)" }
+
+- { id: rm-risk-per-trade,   category: "Quản lý vốn",       topic: "Quy tắc 1-2% rủi ro mỗi lệnh" }
+- { id: rm-position-size,    category: "Quản lý vốn",       topic: "Cách tính khối lượng lệnh theo dừng lỗ" }
+- { id: rm-rr,               category: "Quản lý vốn",       topic: "Tỷ lệ R:R và winrate: kiếm tiền dù thua nhiều hơn thắng" }
+- { id: rm-stop-loss,        category: "Quản lý vốn",       topic: "Đặt dừng lỗ ở đâu: theo cấu trúc giá, không theo cảm xúc" }
+- { id: rm-drawdown,         category: "Quản lý vốn",       topic: "Sụt giảm tài khoản (drawdown) và toán học của việc gỡ lỗ" }
+- { id: rm-news-trading,     category: "Quản lý vốn",       topic: "Quản lý rủi ro khi có tin mạnh: giãn spread và trượt giá" }
+- { id: rm-journal,          category: "Quản lý vốn",       topic: "Nhật ký giao dịch: công cụ tiến bộ nhanh nhất" }
+
+- { id: psy-fomo,            category: "Tâm lý",            topic: "FOMO: sợ lỡ cơ hội và cách kiểm soát" }
+- { id: psy-revenge,         category: "Tâm lý",            topic: "Giao dịch trả thù sau khi thua lỗ" }
+- { id: psy-overtrading,     category: "Tâm lý",            topic: "Giao dịch quá mức (overtrading)" }
+- { id: psy-probability,     category: "Tâm lý",            topic: "Tư duy xác suất: mỗi lệnh chỉ là một lần tung đồng xu có lợi thế" }
+- { id: psy-discipline,      category: "Tâm lý",            topic: "Kỷ luật với kế hoạch giao dịch" }
+- { id: psy-moving-sl,       category: "Tâm lý",            topic: "Vì sao dời dừng lỗ là thói quen nguy hiểm nhất" }
+
+- { id: fa-nfp,              category: "Phân tích cơ bản",  topic: "Tin Non-Farm Payrolls (NFP) tác động thế nào tới USD và vàng" }
+- { id: fa-cpi,              category: "Phân tích cơ bản",  topic: "Lạm phát CPI và PCE: vì sao thị trường phản ứng mạnh" }
+- { id: fa-fomc,             category: "Phân tích cơ bản",  topic: "FOMC và lãi suất Fed: cơ chế tác động tới tỷ giá" }
+- { id: fa-real-yield,       category: "Phân tích cơ bản",  topic: "Lợi suất thực và mối quan hệ nghịch với giá vàng" }
+- { id: fa-ecb-boe,          category: "Phân tích cơ bản",  topic: "ECB và BoE: yếu tố chi phối EURUSD và GBPUSD" }
+- { id: fa-safe-haven,       category: "Phân tích cơ bản",  topic: "Vàng là tài sản trú ẩn: khi nào đúng, khi nào không" }
+- { id: fa-read-calendar,    category: "Phân tích cơ bản",  topic: "Cách đọc lịch kinh tế: Actual, Forecast, Previous" }

@@ -1,0 +1,182 @@
+id: harmonic
+name: "Mô hình Harmonic"
+level: "Chuyên sâu"
+description: "Giúp trader nhận diện các mô hình Harmonic XABCD bằng tỉ lệ Fibonacci chính xác, xác định vùng đảo chiều tiềm năng (PRZ) và lập kế hoạch vào lệnh, dừng lỗ, chốt lời có kỷ luật."
+lessons:
+  - part: 1
+    title: "Harmonic là gì: hình học + Fibonacci"
+    objective: "Hiểu nguồn gốc và nguyên lý của giao dịch Harmonic dựa trên cấu trúc XABCD và tỉ lệ Fibonacci."
+    key_points:
+      - "H.M. Gartley mô tả cấu trúc 5 điểm trong sách năm 1935; Larry Pesavento và Scott Carney sau đó gắn các tỉ lệ Fibonacci chính xác và phát triển thêm nhiều mô hình."
+      - "Mô hình Harmonic gồm 5 điểm X, A, B, C, D tạo thành 4 nhịp: XA, AB, BC, CD."
+      - "Ý tưởng chính: khi các nhịp đạt đúng tỉ lệ Fibonacci, điểm D là vùng có xác suất đảo chiều cao hơn."
+      - "Harmonic là công cụ xác định vùng giá, cần xác nhận bằng hành động giá trước khi vào lệnh."
+    example: "Ví dụ giả định: EURUSD tăng từ X = 1,0600 lên A = 1,0800, các nhịp sau tạo hình chữ M với tỉ lệ khớp mô hình Gartley tăng; điểm D dự kiến quanh 1,0643."
+    mistakes:
+      - "Nghĩ chỉ cần nhìn hình dạng M/W là đủ, bỏ qua việc đo tỉ lệ."
+    visual:
+      type: pattern
+      idea: "Sơ đồ XABCD dạng chữ M (mô hình tăng): đường nối X-A-B-C-D với nhãn điểm, các tam giác XAB và BCD tô màu nhạt, mũi tên lên từ D."
+  - part: 2
+    title: "Các tỉ lệ Fibonacci dùng trong Harmonic"
+    objective: "Nắm bộ tỉ lệ Fibonacci chính và cách đo thoái lui, mở rộng trên từng nhịp."
+    key_points:
+      - "Tỉ lệ thoái lui (retracement) chính: 0,382; 0,5; 0,618; 0,707; 0,786; 0,886."
+      - "Tỉ lệ mở rộng (extension/projection) chính: 1,13; 1,272; 1,414; 1,618; 2,0; 2,24; 2,618; 3,14; 3,618."
+      - "B được đo theo % của XA; C theo % của AB; D được đo vừa theo % của XA vừa theo phép chiếu BC (BC projection)."
+      - "Mô hình AB=CD (hai nhịp bằng nhau) là nền tảng có trong hầu hết mô hình Harmonic."
+    example: "Ví dụ giả định: XA của XAUUSD từ 2.300 lên 2.400 (100 giá). B tại 0,618 XA nghĩa là B = 2.400 − 61,8 = 2.338,2."
+    mistakes:
+      - "Đo Fibonacci sai điểm gốc, ví dụ đo B theo AB thay vì theo XA."
+    visual:
+      type: formula
+      idea: "Bảng hai cột: 'Thoái lui' (0,382 ... 0,886) và 'Mở rộng' (1,13 ... 3,618). Bên cạnh là sơ đồ XABCD với mũi tên chỉ: B đo theo XA, C đo theo AB, D đo theo XA và BC."
+  - part: 3
+    title: "Nền tảng AB=CD"
+    objective: "Nhận diện mô hình AB=CD và các biến thể mở rộng của nó."
+    key_points:
+      - "AB=CD gồm ba nhịp: AB, BC điều chỉnh, CD dài bằng AB về giá (và thường tương đồng về thời gian)."
+      - "C thường thoái lui 0,618–0,786 của AB; CD khi đó thường bằng 1,272–1,618 phép chiếu BC."
+      - "Biến thể mở rộng: CD dài 1,272 hoặc 1,618 lần AB, xuất hiện khi động lượng mạnh."
+      - "Trong các mô hình XABCD, AB=CD giúp thu hẹp vùng D."
+    example: "Ví dụ giả định: GBPUSD giảm AB từ 1,2900 xuống 1,2800 (100 pip), hồi C lên 1,2862 (62%). CD = AB cho điểm D tại 1,2762."
+    mistakes:
+      - "Bắt buộc CD bằng đúng AB tới từng pip thay vì chấp nhận một vùng nhỏ."
+    visual:
+      type: pattern
+      idea: "Hình zigzag 3 nhịp A-B-C-D đi xuống, hai đoạn AB và CD được tô cùng màu và có nhãn 'bằng nhau', đường Fibonacci 0,618 trên nhịp BC, mũi tên lên tại D."
+  - part: 4
+    title: "Mô hình Gartley"
+    objective: "Nhận diện mô hình Gartley với các tỉ lệ chuẩn."
+    key_points:
+      - "B thoái lui đúng khoảng 0,618 của XA."
+      - "C thoái lui 0,382–0,886 của AB."
+      - "D tại 0,786 của XA, thường trùng với phép chiếu BC 1,272–1,618 và AB=CD."
+      - "D nằm trong phạm vi XA (không vượt X), là mô hình thoái lui."
+    example: "Ví dụ giả định Gartley tăng EURUSD: X = 1,0600, A = 1,0800, B = 1,0676 (0,618), C = 1,0767 (khoảng 0,73 AB). D tại 0,786 XA = 1,0643."
+    mistakes:
+      - "Gọi mô hình là Gartley khi B thoái lui chỉ 0,5 – đó có thể là Bat."
+    visual:
+      type: pattern
+      idea: "Sơ đồ Gartley tăng hình chữ M: các đường đứt nét nối X-B ghi '0,618 XA', A-C ghi '0,382–0,886 AB', X-D ghi '0,786 XA', B-D ghi '1,272–1,618 BC'. Vùng nhỏ quanh D tô màu nhãn 'PRZ'."
+  - part: 5
+    title: "Mô hình Bat"
+    objective: "Nhận diện mô hình Bat và phân biệt với Gartley."
+    key_points:
+      - "B thoái lui 0,382–0,5 của XA (nhỏ hơn 0,618)."
+      - "C thoái lui 0,382–0,886 của AB."
+      - "D tại 0,886 của XA, phép chiếu BC 1,618–2,618, AB=CD thường mở rộng 1,272."
+      - "Bat có D sâu hơn Gartley nhưng vẫn nằm trong XA, cho dừng lỗ ngắn khi đặt ngay sau X."
+    example: "Ví dụ giả định Bat tăng XAUUSD: X = 2.300, A = 2.400, B = 2.355 (0,45 XA), C = 2.385. D tại 0,886 XA = 2.311,4."
+    mistakes:
+      - "Vào lệnh tại 0,786 vì quen Gartley, trong khi Bat hoàn thành ở 0,886."
+    visual:
+      type: pattern
+      idea: "Sơ đồ Bat tăng: nhãn X, A, B, C, D với ghi chú 'B: 0,382–0,5 XA', 'D: 0,886 XA', 'BC: 1,618–2,618'. Đường ngang tại X nằm ngay dưới D, nhãn 'X gần D – dừng lỗ ngắn'."
+  - part: 6
+    title: "Mô hình Butterfly"
+    objective: "Nhận diện mô hình Butterfly – mô hình mở rộng vượt qua điểm X."
+    key_points:
+      - "B thoái lui đúng khoảng 0,786 của XA."
+      - "C thoái lui 0,382–0,886 của AB."
+      - "D tại 1,27 của XA (một số cách dùng chấp nhận tới 1,618), phép chiếu BC 1,618–2,24."
+      - "D vượt quá X nên Butterfly thường xuất hiện ở đỉnh/đáy mới của xu hướng."
+    example: "Ví dụ giả định Butterfly giảm GBPUSD: X = 1,3000, A = 1,2800, B = 1,2957 (0,786), C = 1,2860. D tại 1,27 XA = 1,3054, vượt đỉnh X."
+    mistakes:
+      - "Đặt dừng lỗ ngay sau X như mô hình thoái lui, trong khi D đã vượt X."
+    visual:
+      type: pattern
+      idea: "Sơ đồ Butterfly giảm hình chữ W ngược: D cao hơn X, đường ngang tại X có nhãn 'D vượt X', ghi chú 'B: 0,786 XA', 'D: 1,27 XA', 'BC: 1,618–2,24'."
+  - part: 7
+    title: "Mô hình Crab và Deep Crab"
+    objective: "Nhận diện mô hình Crab với điểm D mở rộng xa nhất."
+    key_points:
+      - "Crab: B thoái lui 0,382–0,618 của XA, C thoái lui 0,382–0,886 của AB."
+      - "D tại 1,618 của XA, phép chiếu BC rất dài 2,24–3,618."
+      - "Deep Crab: B thoái lui khoảng 0,886 của XA, D vẫn tại 1,618 XA."
+      - "Do D rất xa, giá thường đảo chiều mạnh nhưng cũng có thể phá qua nhanh; cần xác nhận kỹ."
+    example: "Ví dụ giả định Crab tăng XAUUSD: X = 2.400, A = 2.450, B = 2.425 (0,5), C = 2.440. D tại 1,618 XA = 2.450 − 80,9 = 2.369,1."
+    mistakes:
+      - "Bắt dao rơi ở 1,272 khi mô hình Crab chưa hoàn thành tới 1,618."
+    visual:
+      type: pattern
+      idea: "Sơ đồ Crab tăng: D thấp hơn X khá xa, ghi chú 'B: 0,382–0,618', 'D: 1,618 XA', 'BC: 2,24–3,618'. Thêm một sơ đồ nhỏ Deep Crab với B ở 0,886."
+  - part: 8
+    title: "Mô hình Shark và Cypher"
+    objective: "Nhận diện hai mô hình có điểm C vượt qua A: Shark và Cypher."
+    key_points:
+      - "Shark (Carney, ký hiệu gốc 0-X-A-B-C): theo cách ký hiệu XABCD, C vượt A khoảng 1,13–1,618 của AB, D hoàn thành tại 0,886–1,13 của XC; nhịp cuối mạnh tương ứng 1,618–2,24 của nhịp trước."
+      - "Cypher (không do Carney phát triển): B thoái lui 0,382–0,618 của XA, C vượt A tới 1,272–1,414 của XA, D tại 0,786 của XC."
+      - "Cả hai đều có điểm C tạo đỉnh/đáy mới vượt A rồi thất bại, nên trông khác Gartley/Bat."
+      - "Shark hoàn thành sâu (gần hoặc vượt gốc X của nhịp XC), Cypher hoàn thành nông hơn ở 0,786 XC."
+    example: "Ví dụ giả định Cypher tăng EURUSD: X = 1,0700, A = 1,0800, B = 1,0745, C = 1,0835 (1,35 XA). D tại 0,786 XC = 1,0835 − 0,786 × 135 pip ≈ 1,0729."
+    mistakes:
+      - "Đo D của Cypher theo XA như Gartley thay vì theo XC."
+    visual:
+      type: compare
+      idea: "Hai cột: trái 'Shark' – C vượt A, D về vùng 0,886–1,13 XC (gần hoặc dưới X); phải 'Cypher' – C vượt A ở 1,272–1,414 XA, D tại 0,786 XC. Đường đứt nét đo XC ở cả hai."
+  - part: 9
+    title: "PRZ – vùng đảo chiều tiềm năng"
+    objective: "Biết xây dựng PRZ (Potential Reversal Zone) từ sự hợp lưu của nhiều tỉ lệ."
+    key_points:
+      - "PRZ là vùng giá nơi nhiều phép đo hội tụ: tỉ lệ XA của điểm D, phép chiếu BC và AB=CD (hoặc biến thể)."
+      - "PRZ càng hẹp, hợp lưu càng nhiều tỉ lệ thì vùng càng có ý nghĩa."
+      - "Tỉ lệ XA là mức quan trọng nhất xác định điểm D; phép chiếu BC và AB=CD dùng để xác nhận."
+      - "PRZ trùng hỗ trợ/kháng cự khung lớn, mức tròn hoặc vùng cung cầu sẽ đáng tin cậy hơn."
+    example: "Ví dụ giả định Gartley EURUSD: 0,786 XA = 1,0643, AB=CD = 1,0643, phép chiếu BC 1,272 = 1,0651. PRZ là 1,0643–1,0651, khá hẹp (8 pip)."
+    mistakes:
+      - "Vào lệnh khi giá mới chạm mức đầu tiên của PRZ rộng, không chờ phản ứng."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến hình thành mô hình XABCD; quanh D có ba đường ngang nhãn '0,786 XA', '1,618 BC', 'AB=CD' gần nhau, vùng giữa chúng tô màu nhãn 'PRZ'. Nến đảo chiều xuất hiện trong vùng."
+  - part: 10
+    title: "Xác nhận đảo chiều tại PRZ"
+    objective: "Biết dùng hành động giá và chỉ báo để xác nhận phản ứng tại PRZ trước khi vào lệnh."
+    key_points:
+      - "Tín hiệu xác nhận: nến từ chối (pin bar, nến nhấn chìm), phá cấu trúc nhỏ ở khung thấp hơn."
+      - "Phân kỳ RSI tại điểm D làm tăng độ tin cậy của mô hình."
+      - "Nếu giá đóng cửa vượt hẳn qua toàn bộ PRZ (và qua X với mô hình thoái lui), mô hình thất bại."
+      - "Có thể chia lệnh: một phần tại PRZ với dừng lỗ ngắn, phần còn lại sau tín hiệu xác nhận."
+    example: "Ví dụ giả định: XAUUSD chạm PRZ Bat 2.311–2.315, H1 tạo nến nhấn chìm tăng và RSI phân kỳ dương. Vào lệnh 2.318 sau khi nến đóng cửa."
+    mistakes:
+      - "Tiếp tục giữ kỳ vọng đảo chiều khi giá đã đóng cửa phá qua X."
+    visual:
+      type: pattern
+      idea: "Cận cảnh vùng PRZ tô màu, vài nến đi xuống chạm vùng rồi nến nhấn chìm tăng lớn; bên dưới là RSI với đáy cao hơn tạo phân kỳ dương, mũi tên xanh lên."
+  - part: 11
+    title: "Vào lệnh, dừng lỗ và chốt lời"
+    objective: "Nắm cách đặt điểm vào, dừng lỗ và mục tiêu chuẩn cho mô hình Harmonic."
+    key_points:
+      - "Điểm vào: trong PRZ sau tín hiệu xác nhận, hoặc lệnh chờ tại tỉ lệ XA chính của mô hình."
+      - "Dừng lỗ: sau X với Gartley/Bat; sau mức mở rộng kế tiếp (ví dụ sau 1,618 với Butterfly, sau 2,0–2,24 với Crab) kèm vùng đệm theo ATR."
+      - "Mục tiêu phổ biến: TP1 tại 0,382 của nhịp AD, TP2 tại 0,618 của AD; có thể thêm mức C."
+      - "Tại TP1 chốt một phần và dời dừng lỗ về hòa vốn để bảo vệ lợi nhuận."
+    example: "Ví dụ giả định Gartley tăng EURUSD: A = 1,0800, D = 1,0643, AD = 157 pip. Vào 1,0648, dừng lỗ 1,0590 (dưới X). TP1 = 1,0643 + 0,382 × 157 ≈ 1,0703; TP2 ≈ 1,0740."
+    mistakes:
+      - "Kỳ vọng giá quay về tận A hoặc vượt A trong mọi trường hợp."
+    visual:
+      type: chart
+      idea: "Mô hình Gartley tăng hoàn chỉnh với các đường ngang: Entry tại D, SL dưới X (đỏ), TP1 tại 0,382 AD và TP2 tại 0,618 AD (xanh), mũi tên đo nhịp AD."
+  - part: 12
+    title: "Kế hoạch giao dịch Harmonic và quản lý rủi ro"
+    objective: "Xây dựng quy trình giao dịch Harmonic hoàn chỉnh với quản lý rủi ro chặt chẽ."
+    key_points:
+      - "Quy trình: tìm cấu trúc XABCD rõ ràng → đo B để xác định loại mô hình → tính PRZ → chờ xác nhận → vào lệnh."
+      - "Lọc theo bối cảnh: ưu tiên mô hình cùng chiều xu hướng khung lớn hoặc tại vùng hỗ trợ/kháng cự mạnh, tránh thời điểm tin lớn."
+      - "Rủi ro mỗi lệnh 0,5–1% tài khoản; nếu dừng lỗ quá xa so với TP1, bỏ qua mô hình."
+      - "Lưu thống kê từng loại mô hình trên từng cặp để biết mô hình nào phù hợp với mình."
+    example: "Ví dụ giả định: tài khoản 6.000 USD, rủi ro 1% = 60 USD. Lệnh Gartley dừng lỗ 58 pip → khối lượng khoảng 0,1 lot; TP1 cách 55 pip, TP2 cách 92 pip, tỉ lệ lợi nhuận/rủi ro trung bình khoảng 1,3."
+    mistakes:
+      - "Ép điểm vào mô hình khi tỉ lệ chỉ gần đúng, chạy theo số lượng thay vì chất lượng."
+      - "Vào toàn bộ khối lượng ngay khi giá chạm PRZ."
+    visual:
+      type: checklist
+      idea: "Checklist: Cấu trúc XABCD rõ ✓, Tỉ lệ B xác định mô hình ✓, PRZ hợp lưu ✓, Bối cảnh khung lớn ✓, Xác nhận nến/RSI ✓, SL đúng chuẩn ✓, Rủi ro ≤1% ✓, TP 0,382/0,618 AD ✓. Bên cạnh là bảng nhỏ tóm tắt tỉ lệ B và D của 6 mô hình."
+sources:
+  - "https://chartschool.stockcharts.com/table-of-contents/trading-strategies-and-models/trading-strategies/harmonic-patterns"
+  - "https://harmonictrader.com/harmonic-patterns/"
+  - "https://medium.com/@TarantulaFX/harmonic-trading-patterns-from-scott-m-carney-explained-in-detail-2d318ff99263"
+  - "https://fxopen.com/blog/en/how-to-trade-the-cypher-harmonic-pattern/"
+  - "https://www.luxalgo.com/library/concept/cypher/"
+  - "https://admiralmarkets.com/education/articles/forex-strategy/harmonic-trading-patterns"
+  - "https://www.tradingsim.com/blog/harmonic-patterns-in-stock-trading"

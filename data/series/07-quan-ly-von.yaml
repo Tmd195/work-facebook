@@ -1,0 +1,196 @@
+id: quan-ly-von
+name: "Quản lý vốn"
+level: "Cơ bản"
+description: "Giúp trader tính đúng khối lượng lệnh, giới hạn rủi ro theo % tài khoản và xây dựng một kế hoạch quản lý vốn bằng văn bản để sống sót qua chuỗi thua và phát triển tài khoản bền vững."
+lessons:
+  - part: 1
+    title: "Vì sao quản lý vốn quan trọng hơn điểm vào lệnh"
+    objective: "Hiểu rằng điểm vào lệnh quyết định một lệnh, còn quản lý vốn (money management) quyết định sự sống còn của cả tài khoản."
+    key_points:
+      - "Không hệ thống nào thắng 100%, nên chuỗi thua liên tiếp là điều chắc chắn sẽ xảy ra, chỉ là không biết khi nào."
+      - "Quản lý vốn trả lời ba câu hỏi: mỗi lệnh mất tối đa bao nhiêu, vào khối lượng bao nhiêu, và khi nào dừng giao dịch."
+      - "Hai trader dùng cùng một tín hiệu có thể ra kết quả trái ngược chỉ vì khác nhau ở mức rủi ro mỗi lệnh."
+      - "Mục tiêu số một là bảo toàn vốn để còn cơ hội giao dịch tiếp; lợi nhuận là mục tiêu thứ hai."
+    example: "Ví dụ giả định: hai trader cùng có 1.000 USD, cùng gặp chuỗi 6 lệnh thua liên tiếp trên XAUUSD. Người A rủi ro 1% mỗi lệnh còn khoảng 941 USD; người B rủi ro 20% mỗi lệnh chỉ còn khoảng 262 USD."
+    mistakes:
+      - "Dành hết thời gian tìm điểm vào 'hoàn hảo' mà không quyết định trước mỗi lệnh được phép mất bao nhiêu tiền."
+      - "Nghĩ rằng tài khoản nhỏ thì phải đánh lớn mới 'đáng công'."
+    visual:
+      type: compare
+      idea: "Hai cột: Trader A (rủi ro 1%/lệnh) và Trader B (rủi ro 20%/lệnh). Mỗi cột liệt kê số dư sau từng lệnh thua 1→6: A: 990, 980, 970, 961, 951, 941; B: 800, 640, 512, 410, 328, 262. Dòng cuối tô xanh cho A, đỏ cho B."
+  - part: 2
+    title: "Đơn vị đo lường: pip, point, lot và giá trị pip"
+    objective: "Tính được giá trị tiền của một pip (EURUSD) và của 1 USD biến động (XAUUSD) theo từng khối lượng lot."
+    key_points:
+      - "Với EURUSD, 1 pip = 0,0001; 1 lot chuẩn (standard lot) = 100.000 đơn vị nên 1 pip ≈ 10 USD, 1 mini lot (0,1) ≈ 1 USD, 1 micro lot (0,01) ≈ 0,1 USD."
+      - "Với XAUUSD, đa số sàn quy định 1 lot = 100 ounce, nên giá đi 1 USD (ví dụ 2.400 → 2.401) thì 1 lot lãi/lỗ 100 USD, 0,01 lot lãi/lỗ 1 USD."
+      - "Cách gọi 'pip' của vàng khác nhau giữa các sàn (có nơi 0,1 USD, có nơi 0,01 USD), nên an toàn nhất là quy đổi theo USD giá biến động."
+      - "Luôn kiểm tra contract size trong thông số hợp đồng (contract specification) của sàn trước khi tính khối lượng."
+    example: "Ví dụ: vào 0,2 lot XAUUSD, giá đi ngược 7 USD → lỗ 7 × 100 × 0,2 = 140 USD. Vào 0,5 lot EURUSD, giá đi ngược 30 pip → lỗ 30 × 10 × 0,5 = 150 USD."
+    mistakes:
+      - "Áp cách tính pip của EURUSD sang vàng, dẫn đến khối lượng sai gấp 10 lần."
+      - "Không biết sàn mình đang dùng quy định 1 lot vàng là bao nhiêu ounce."
+    visual:
+      type: formula
+      idea: "Bảng 2 phần. EURUSD: 1 lot → 10 USD/pip; 0,1 lot → 1 USD/pip; 0,01 lot → 0,1 USD/pip. XAUUSD (1 lot = 100 oz): 1 lot → 100 USD mỗi 1 USD giá; 0,1 lot → 10 USD; 0,01 lot → 1 USD. Dòng ghi chú nhỏ: kiểm tra contract size của sàn."
+  - part: 3
+    title: "Đòn bẩy và ký quỹ: con dao hai lưỡi"
+    objective: "Phân biệt đòn bẩy (leverage), ký quỹ (margin) và rủi ro thực tế của một lệnh."
+    key_points:
+      - "Ký quỹ là số tiền sàn tạm giữ để mở lệnh; đòn bẩy 1:100 nghĩa là chỉ cần ký quỹ khoảng 1% giá trị hợp đồng."
+      - "Đòn bẩy cao không tự làm tăng rủi ro; rủi ro thật nằm ở khối lượng lệnh và khoảng cách cắt lỗ."
+      - "Mức ký quỹ còn lại (margin level) giảm dưới ngưỡng của sàn sẽ bị gọi ký quỹ (margin call) hoặc tự động cắt lệnh (stop out)."
+      - "Đòn bẩy thực tế = tổng giá trị vị thế ÷ vốn tài khoản; nên theo dõi con số này thay vì đòn bẩy sàn cấp."
+    example: "Ví dụ: tài khoản 2.000 USD mở 1 lot EURUSD giá 1,1000 (giá trị 110.000 USD) → đòn bẩy thực tế khoảng 55 lần; giá đi ngược 100 pip là mất 1.000 USD, tức 50% tài khoản."
+    mistakes:
+      - "Chọn đòn bẩy 1:1000 rồi mở khối lượng tối đa mà ký quỹ cho phép."
+      - "Đặt cắt lỗ theo mức ký quỹ còn lại thay vì theo cấu trúc giá."
+    visual:
+      type: formula
+      idea: "Bảng tính: Vốn 2.000 USD → Lệnh 1 lot EURUSD = 110.000 USD → Ký quỹ (1:100) = 1.100 USD → Đòn bẩy thực tế = 55x → Giá ngược 100 pip = -1.000 USD (-50%). Dòng cuối tô đỏ."
+  - part: 4
+    title: "Quy tắc rủi ro cố định 1–2% mỗi lệnh"
+    objective: "Biết cách chọn và áp dụng mức rủi ro cố định theo phần trăm tài khoản (fixed fractional) cho mỗi lệnh."
+    key_points:
+      - "Rủi ro mỗi lệnh = số tiền mất nếu chạm cắt lỗ, tính bằng % vốn hiện tại; phổ biến là 0,5–2%, người mới nên bắt đầu 0,5–1%."
+      - "Rủi ro theo % tự co lại khi tài khoản giảm và tự tăng khi tài khoản lớn lên, giúp chống cháy tài khoản."
+      - "Mức % phù hợp phụ thuộc tỷ lệ thắng, chuỗi thua dài nhất từng gặp và mức sụt giảm bạn chịu được về tâm lý."
+      - "Một số trader dùng rủi ro cố định theo số tiền (fixed amount) cho đơn giản; cả hai cách đều được nếu tuân thủ nhất quán."
+    example: "Ví dụ: tài khoản 5.000 USD, rủi ro 1% → mỗi lệnh chỉ được mất tối đa 50 USD, bất kể là lệnh vàng hay EURUSD."
+    mistakes:
+      - "Tăng % rủi ro khi 'cảm thấy chắc chắn' về một lệnh."
+      - "Tính 1% theo vốn ban đầu mãi mãi dù tài khoản đã sụt giảm mạnh."
+    visual:
+      type: checklist
+      idea: "Checklist 'Chọn mức rủi ro mỗi lệnh': ☐ Người mới: 0,5–1% ☐ Có lịch sử ≥100 lệnh: tối đa 1–2% ☐ Tổng rủi ro các lệnh đang mở ≤ 3–5% ☐ Tính trên vốn hiện tại ☐ Không đổi % giữa chừng vì cảm xúc."
+  - part: 5
+    title: "Công thức tính khối lượng lệnh (position sizing)"
+    objective: "Tự tính được khối lượng lot từ số tiền rủi ro và khoảng cách cắt lỗ."
+    key_points:
+      - "Công thức: Khối lượng (lot) = Số tiền rủi ro ÷ (Khoảng cách cắt lỗ × Giá trị 1 đơn vị giá cho 1 lot)."
+      - "Thứ tự đúng: xác định cắt lỗ theo phân tích kỹ thuật trước, sau đó mới tính khối lượng; không làm ngược lại."
+      - "Cắt lỗ xa thì khối lượng nhỏ, cắt lỗ gần thì khối lượng lớn hơn, nhưng số tiền rủi ro luôn giữ nguyên."
+      - "Làm tròn khối lượng xuống theo bước lot nhỏ nhất của sàn (thường 0,01) để không vượt mức rủi ro."
+    example: "Ví dụ XAUUSD: vốn 5.000 USD, rủi ro 1% = 50 USD, mua 2.400, cắt lỗ 2.392 (8 USD). Khối lượng = 50 ÷ (8 × 100) = 0,0625 → làm tròn xuống 0,06 lot. Ví dụ EURUSD: rủi ro 50 USD, cắt lỗ 25 pip → 50 ÷ (25 × 10) = 0,2 lot."
+    mistakes:
+      - "Luôn vào cố định 0,1 lot cho mọi lệnh bất kể cắt lỗ xa hay gần."
+      - "Kéo cắt lỗ lại gần chỉ để được vào khối lượng lớn hơn."
+    visual:
+      type: formula
+      idea: "Bảng tính từng dòng: Vốn = 5.000 USD; Rủi ro 1% = 50 USD; Entry 2.400 / SL 2.392 → khoảng cách 8 USD; Giá trị 1 lot = 100 USD mỗi 1 USD giá; Khối lượng = 50 ÷ (8 × 100) = 0,0625 → 0,06 lot. Ô kết quả cuối tô nổi bật."
+  - part: 6
+    title: "Tỷ lệ R:R và tỷ lệ thắng hòa vốn"
+    objective: "Hiểu mối quan hệ giữa tỷ lệ lợi nhuận/rủi ro (risk:reward) và tỷ lệ thắng (win rate) cần thiết để không lỗ."
+    key_points:
+      - "R:R = khoảng cách chốt lời ÷ khoảng cách cắt lỗ; ví dụ cắt lỗ 10 USD, chốt lời 20 USD là R:R 1:2."
+      - "Tỷ lệ thắng hòa vốn = 1 ÷ (1 + R), chưa tính phí: R:R 1:1 cần thắng 50%, 1:2 cần 33,3%, 1:3 cần 25%."
+      - "R:R cao không tự động tốt hơn, vì mục tiêu xa thường làm tỷ lệ thắng giảm; phải xét hai con số cùng nhau."
+      - "Spread, hoa hồng và trượt giá (slippage) làm tỷ lệ thắng hòa vốn thực tế cao hơn lý thuyết một chút."
+    example: "Ví dụ giả định: 10 lệnh EURUSD với R:R 1:2, thắng 4 thua 6 → +8R − 6R = +2R. Cùng 10 lệnh nhưng R:R 1:1 và thắng 4 → +4R − 6R = −2R."
+    mistakes:
+      - "Chỉ khoe tỷ lệ thắng cao mà không nhìn lệnh thua trung bình lớn gấp mấy lần lệnh thắng."
+      - "Đặt R:R 1:5 trên giấy nhưng thực tế luôn chốt sớm khi giá mới đi được 1R."
+    visual:
+      type: formula
+      idea: "Bảng 2 cột 'R:R' → 'Tỷ lệ thắng hòa vốn': 1:0,5 → 66,7%; 1:1 → 50%; 1:1,5 → 40%; 1:2 → 33,3%; 1:3 → 25%. Dòng công thức phía trên: Win% hòa vốn = 1 ÷ (1 + R)."
+  - part: 7
+    title: "Đo kết quả bằng R-multiple và kỳ vọng"
+    objective: "Ghi kết quả mỗi lệnh theo đơn vị R và tính được kỳ vọng (expectancy) của hệ thống."
+    key_points:
+      - "1R là số tiền rủi ro ban đầu của lệnh; lệnh lãi gấp đôi rủi ro là +2R, lệnh dính cắt lỗ đủ là −1R."
+      - "Kỳ vọng = (Tỷ lệ thắng × R thắng trung bình) − (Tỷ lệ thua × R thua trung bình), hoặc đơn giản là tổng R chia số lệnh."
+      - "Kỳ vọng dương (ví dụ +0,3R/lệnh) mới đáng để giao dịch tiền thật; cần mẫu đủ lớn, ít nhất vài chục đến 100 lệnh."
+      - "Đo bằng R giúp so sánh các lệnh có khối lượng khác nhau và tách kỹ năng ra khỏi quy mô tài khoản."
+    example: "Ví dụ giả định: sau 50 lệnh XAUUSD, tổng cộng +15R → kỳ vọng = 15 ÷ 50 = +0,3R/lệnh. Nếu 1R = 50 USD thì trung bình mỗi lệnh đóng góp khoảng 15 USD, nhưng từng lệnh riêng lẻ vẫn có thể thắng hoặc thua."
+    mistakes:
+      - "Chỉ ghi lãi/lỗ bằng USD nên không biết hệ thống thật sự có lợi thế hay không."
+      - "Kết luận hệ thống tốt hay xấu sau 5–10 lệnh."
+    visual:
+      type: formula
+      idea: "Bảng nhật ký mini 6 dòng: Lệnh 1: −1R; 2: +2R; 3: −1R; 4: +1,5R; 5: −1R; 6: +2R. Dòng tổng: +2,5R. Dòng cuối: Kỳ vọng = 2,5 ÷ 6 ≈ +0,42R/lệnh."
+  - part: 8
+    title: "Sụt giảm tài khoản và toán học phục hồi"
+    objective: "Hiểu vì sao mức sụt giảm (drawdown) càng sâu thì càng khó gỡ lại."
+    key_points:
+      - "Drawdown là mức giảm từ đỉnh vốn gần nhất xuống đáy, tính theo %."
+      - "Lãi cần để hồi phục = D ÷ (1 − D): mất 10% cần +11,1%; mất 20% cần +25%; mất 30% cần +42,9%; mất 50% cần +100%."
+      - "Rủi ro mỗi lệnh nhỏ giúp drawdown khi gặp chuỗi thua nằm ở mức có thể hồi phục được."
+      - "Nên đặt trước ngưỡng drawdown tối đa (ví dụ 10–15%) để dừng lại và xem xét hệ thống."
+    example: "Ví dụ: tài khoản 10.000 USD giảm còn 7.000 USD (−30%). Muốn về lại 10.000 USD cần lãi 3.000 USD trên 7.000 USD, tức khoảng +42,9%."
+    mistakes:
+      - "Tăng khối lượng để 'gỡ nhanh' khi đang drawdown sâu, khiến tài khoản lún tiếp."
+      - "Không biết drawdown lớn nhất mình chịu được trước khi giao dịch."
+    visual:
+      type: chart
+      idea: "Biểu đồ cột hai màu: trục X là mức lỗ 10%, 20%, 30%, 40%, 50%, 75%; cột đỏ là % lỗ, cột xanh là % cần lãi để hồi phục: 11,1%, 25%, 42,9%, 66,7%, 100%, 300%. Nhãn số trên mỗi cột, tiêu đề 'Lỗ càng sâu, gỡ càng khó'."
+  - part: 9
+    title: "Chuỗi thua và rủi ro cháy tài khoản"
+    objective: "Ước lượng chuỗi thua có thể gặp và hiểu khái niệm rủi ro cháy tài khoản (risk of ruin)."
+    key_points:
+      - "Với tỷ lệ thắng 40%, xác suất thua liên tiếp 8 lệnh trong một chuỗi cụ thể là 0,6^8 ≈ 1,7%, nhưng qua hàng trăm lệnh thì gần như chắc chắn sẽ gặp ít nhất một lần."
+      - "Risk of ruin là xác suất tài khoản giảm tới mức không thể hoặc không muốn giao dịch tiếp; nó tăng rất nhanh khi % rủi ro mỗi lệnh tăng."
+      - "Risk of ruin phụ thuộc đồng thời vào tỷ lệ thắng, R:R và % rủi ro; cách ước lượng thực tế nhất là mô phỏng Monte Carlo trên chính kết quả lệnh của bạn."
+      - "Hệ thống có kỳ vọng âm thì dù rủi ro nhỏ cỡ nào, về dài hạn vẫn đi đến thua lỗ."
+    example: "Ví dụ giả định: hệ thống thắng 40%, gặp chuỗi 10 lệnh thua. Rủi ro 1%/lệnh → tài khoản giảm khoảng 9,6%. Rủi ro 5%/lệnh → giảm khoảng 40%, cần lãi khoảng 67% để hồi phục."
+    mistakes:
+      - "Tin rằng 'đã thua 5 lệnh liền thì lệnh sau chắc thắng' (ngụy biện con bạc - gambler's fallacy)."
+      - "Chọn % rủi ro mà không thử tính chuỗi thua 10 lệnh sẽ làm tài khoản giảm bao nhiêu."
+    visual:
+      type: formula
+      idea: "Bảng 'Chuỗi 10 lệnh thua' với 3 dòng: Rủi ro 1% → còn 90,4% vốn; Rủi ro 2% → còn 81,7%; Rủi ro 5% → còn 59,9%. Bên cạnh mỗi dòng là thanh ngang thể hiện vốn còn lại, dòng 5% tô đỏ."
+  - part: 10
+    title: "Giới hạn rủi ro ngày, tuần và lệnh tương quan"
+    objective: "Thiết lập các giới hạn tổng rủi ro để một ngày xấu không phá hỏng cả tháng."
+    key_points:
+      - "Đặt giới hạn lỗ ngày (ví dụ 2–3%) và tuần (ví dụ 5–6%); chạm ngưỡng thì dừng giao dịch đến kỳ sau."
+      - "Các cặp tương quan cao như EURUSD và GBPUSD, hoặc mua vàng và bán DXY, thực chất là cùng một hướng đặt cược vào USD."
+      - "Tổng rủi ro các lệnh đang mở (portfolio heat) nên được cộng dồn và giới hạn, ví dụ không quá 3–5% vốn."
+      - "Mức giới hạn cụ thể khác nhau giữa các trader; quan trọng là viết ra trước và tuân thủ."
+    example: "Ví dụ giả định: đang mua EURUSD rủi ro 1% và mua GBPUSD rủi ro 1%, rồi thêm lệnh mua XAUUSD rủi ro 1%. Nếu USD bất ngờ mạnh lên sau tin NFP, cả ba có thể cùng chạm cắt lỗ → mất 3% chỉ trong một sự kiện."
+    mistakes:
+      - "Mở nhiều lệnh trên các cặp USD cùng chiều và nghĩ rằng mình đã 'đa dạng hóa'."
+      - "Tiếp tục vào lệnh để gỡ sau khi đã chạm giới hạn lỗ trong ngày."
+    visual:
+      type: checklist
+      idea: "Checklist 'Giới hạn rủi ro': ☐ Rủi ro mỗi lệnh ≤ 1% ☐ Tổng lệnh đang mở ≤ 3% ☐ Lỗ trong ngày chạm 2% → tắt máy ☐ Lỗ trong tuần chạm 5% → nghỉ đến tuần sau ☐ EURUSD, GBPUSD, XAUUSD cùng hướng chống USD được tính là một nhóm."
+  - part: 11
+    title: "Các mô hình tăng giảm khối lượng theo vốn"
+    objective: "Phân biệt các cách điều chỉnh khối lượng theo tài khoản và hiểu vì sao nên tránh gấp thếp (martingale)."
+    key_points:
+      - "Rủi ro cố định theo % (fixed fractional): khối lượng tự tăng khi lãi, giảm khi lỗ, là cách phổ biến và an toàn nhất cho đa số trader."
+      - "Tiêu chí Kelly (Kelly criterion) f = W − (1 − W) ÷ R cho mức rủi ro tối ưu về lý thuyết nhưng rất dao động; nếu dùng, nhiều người chỉ lấy 1/4 đến 1/2 Kelly."
+      - "Martingale (gấp đôi khối lượng sau mỗi lệnh thua) có thể thắng nhiều lần liên tiếp nhưng một chuỗi thua dài sẽ xóa sạch tài khoản."
+      - "Một số trader giảm % rủi ro khi đang drawdown và chỉ tăng lại khi vốn về đỉnh cũ (anti-martingale)."
+    example: "Ví dụ giả định Kelly: tỷ lệ thắng 50%, R:R 1:2 → f = 0,5 − 0,5 ÷ 2 = 25%. Con số này quá cao để dùng thực tế; 1/4 Kelly là khoảng 6%, nhiều trader vẫn thấy cao và chọn 1–2%."
+    mistakes:
+      - "Gấp thếp khối lượng sau mỗi lệnh thua để 'gỡ một lệnh là về bờ'."
+      - "Dùng Kelly đầy đủ với số liệu tỷ lệ thắng ước lượng từ quá ít lệnh."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Fixed fractional' (khối lượng 0,10 → 0,10 → 0,09 → 0,09 sau các lệnh thua, đường vốn giảm từ từ) và 'Martingale' (khối lượng 0,10 → 0,20 → 0,40 → 0,80 → 1,60, đường vốn rơi thẳng đứng ở lệnh thứ 5). Biểu tượng dấu tích xanh và dấu X đỏ."
+  - part: 12
+    title: "Viết kế hoạch quản lý vốn cá nhân"
+    objective: "Tổng hợp toàn bộ series thành một kế hoạch quản lý vốn bằng văn bản có thể áp dụng ngay."
+    key_points:
+      - "Kế hoạch cần có: % rủi ro mỗi lệnh, cách tính khối lượng, R:R tối thiểu, giới hạn lỗ ngày/tuần, tổng rủi ro mở tối đa, ngưỡng drawdown phải dừng."
+      - "Ghi nhật ký mọi lệnh theo R và đánh giá kỳ vọng sau mỗi 30–50 lệnh trước khi thay đổi bất cứ quy tắc nào."
+      - "Dùng bảng tính hoặc công cụ tính khối lượng để không phải tính nhẩm khi thị trường đang chạy."
+      - "Kế hoạch tốt là kế hoạch bạn tuân thủ được cả khi đang thua, nên hãy chọn con số thận trọng."
+    example: "Ví dụ kế hoạch mẫu cho tài khoản 3.000 USD giao dịch XAUUSD và EURUSD: rủi ro 1% = 30 USD/lệnh; R:R tối thiểu 1:1,5; tối đa 2 lệnh mở cùng lúc; lỗ 2% trong ngày thì dừng; drawdown 10% thì giảm rủi ro xuống 0,5% và rà soát lại hệ thống."
+    mistakes:
+      - "Chỉ giữ kế hoạch trong đầu nên dễ tự 'sửa luật' khi cảm xúc lên cao."
+      - "Sao chép nguyên kế hoạch của người khác mà không khớp với vốn và tâm lý của mình."
+    visual:
+      type: checklist
+      idea: "Mẫu 'Kế hoạch quản lý vốn của tôi' dạng phiếu điền: Vốn: ____ ; Rủi ro/lệnh: __% ; Công thức lot: Rủi ro ÷ (SL × giá trị/lot) ; R:R tối thiểu: ____ ; Lỗ tối đa/ngày: __% ; Lỗ tối đa/tuần: __% ; Tổng rủi ro mở: __% ; Drawdown phải dừng: __% ; Ngày rà soát: ____."
+sources:
+  - "https://www.youtube.com/watch?v=fSBQ_1p9NPk"
+  - "https://www.youtube.com/watch?v=tZqobytWXnI"
+  - "https://www.youtube.com/playlist?list=PLIeR_0tsP4es7Yup_grwQKJVrg93vP-6J"
+  - "https://www.classcentral.com/course/youtube-risk-management-forex-65496"
+  - "https://www.classcentral.com/course/youtube-forex-money-management-65515"
+  - "https://www.tradingwithrayner.com/forex-risk-management/"
+  - "https://en.wikipedia.org/wiki/Risk_of_ruin"
+  - "https://vantharpinstitute.com/van-tharp-teaches-position-sizing-strategies-and-risk-management/"
+  - "https://hocpriceaction.com/cac-phuong-phap-quan-ly-von-forex/"
+  - "https://www.udemy.com/course/risk-and-money-management-masterclass-for-forex-traders/"

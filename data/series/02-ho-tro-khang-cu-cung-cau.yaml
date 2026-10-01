@@ -1,0 +1,198 @@
+id: ho-tro-khang-cu-cung-cau
+name: "Hỗ trợ – Kháng cự & Cung cầu"
+level: "Cơ bản"
+description: "Giúp người đọc vẽ đúng vùng hỗ trợ – kháng cự và vùng cung cầu, đánh giá vùng nào mạnh, vùng nào yếu, rồi biến chúng thành kế hoạch vào lệnh có cắt lỗ rõ ràng trên vàng và các cặp tiền chính."
+lessons:
+  - part: 1
+    title: "Hỗ trợ và kháng cự là gì?"
+    objective: "Hiểu khái niệm hỗ trợ, kháng cự và tâm lý đám đông tạo ra chúng."
+    key_points:
+      - "Hỗ trợ (support) là vùng giá phía dưới nơi lực mua đủ mạnh để chặn đà giảm; kháng cự (resistance) là vùng phía trên nơi lực bán chặn đà tăng."
+      - "Chúng hình thành vì nhiều người cùng nhớ một mức giá: người mua lỡ cơ hội muốn mua lại ở đó, người đang lỗ muốn thoát hòa vốn."
+      - "Hỗ trợ và kháng cự không phải bức tường tuyệt đối; chúng là vùng có xác suất phản ứng cao hơn những vùng khác."
+      - "Mỗi lần giá tiến tới vùng, có hai kịch bản: bật lại (bounce) hoặc phá vỡ (breakout); trader cần chuẩn bị cho cả hai."
+    example: "Ví dụ giả định: XAUUSD ba lần giảm về quanh 3900 rồi đều bật lên. Nhiều người đã thấy 3900 'giữ giá' nên lần tới khi giá về đó, lệnh mua lại xuất hiện, tạo thành vùng hỗ trợ."
+    mistakes:
+      - "Tin rằng hỗ trợ chắc chắn giữ, nên mua mà không đặt cắt lỗ."
+      - "Nghĩ hỗ trợ/kháng cự là một con số chính xác đến từng pip."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến đi ngang dao động giữa hai vùng: vùng dưới tô xanh nhạt nhãn 'Hỗ trợ (Support)', giá chạm 3 lần và bật lên với 3 mũi tên xanh hướng lên; vùng trên tô đỏ nhạt nhãn 'Kháng cự (Resistance)', giá chạm 2 lần và quay xuống với mũi tên đỏ."
+  - part: 2
+    title: "Vẽ vùng, đừng vẽ đường: cách kẻ chuẩn"
+    objective: "Biết cách kẻ vùng hỗ trợ/kháng cự có độ dày hợp lý từ đỉnh đáy trên biểu đồ."
+    key_points:
+      - "Bắt đầu từ khung lớn (D1, H4), tìm các đỉnh và đáy rõ ràng nơi giá đổi chiều mạnh."
+      - "Vùng thường được kẻ từ khu vực tập trung giá đóng/mở cửa đến đầu bóng nến; một số trader chỉ dùng thân nến, số khác dùng bóng – cả hai đều phổ biến."
+      - "Độ dày vùng nên tương xứng biến động của tài sản: vàng biến động mạnh nên vùng thường rộng hơn EURUSD."
+      - "Chỉ giữ 2–3 vùng gần giá hiện tại ở mỗi phía; biểu đồ quá nhiều đường sẽ làm mất tác dụng."
+    example: "Ví dụ giả định: trên EURUSD H4, ba đỉnh cũ có bóng nến tại 1.0958, 1.0962, 1.0965 và giá đóng cửa quanh 1.0945–1.0950. Vùng kháng cự hợp lý là 1.0945–1.0965 thay vì một đường 1.0960."
+    mistakes:
+      - "Kẻ vùng trên khung M5 rồi coi như vùng quan trọng của cả tuần."
+      - "Cố kẻ đường đi qua tất cả các đỉnh, dẫn đến vùng dày tới mức vô dụng."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột trên cùng một biểu đồ nến có 3 đỉnh xấp xỉ nhau. Trái 'Sai: một đường mảnh': một đường ngang đi qua một đỉnh, các đỉnh khác vượt qua hoặc không chạm, dấu X đỏ. Phải 'Đúng: một vùng': hình chữ nhật đỏ nhạt bao từ thân nến tới đầu bóng của cả 3 đỉnh, dấu tích xanh."
+  - part: 3
+    title: "Đánh giá độ mạnh của vùng hỗ trợ – kháng cự"
+    objective: "Phân biệt vùng mạnh và vùng yếu dựa trên các tiêu chí cụ thể."
+    key_points:
+      - "Vùng trên khung thời gian lớn (W1, D1) thường mạnh hơn vùng trên khung nhỏ."
+      - "Phản ứng rời vùng càng mạnh (nến dài, giá đi xa nhanh) thì vùng càng có ý nghĩa."
+      - "Vùng được nhiều lần tôn trọng thì đáng chú ý, nhưng mỗi lần chạm cũng tiêu hao lệnh chờ ở đó, nên vùng bị test quá nhiều lần có thể yếu dần và dễ bị phá – các tài liệu có quan điểm khác nhau ở điểm này."
+      - "Vùng trùng hợp với yếu tố khác như số tròn, đường xu hướng hay mức Fibonacci (hợp lưu – confluence) thường đáng tin hơn."
+    example: "Ví dụ giả định: vùng 4000 của XAUUSD vừa là số tròn, vừa là đỉnh D1 tháng trước, và lần gần nhất giá rời vùng bằng một nến giảm 40 USD. Đây là vùng mạnh hơn nhiều so với một đáy nhỏ trên M30."
+    mistakes:
+      - "Đánh giá mọi vùng như nhau, giao dịch với cùng khối lượng và cùng mức tự tin."
+      - "Cho rằng vùng chạm càng nhiều lần càng chắc chắn giữ."
+    visual:
+      type: checklist
+      idea: "Bảng chấm điểm vùng giá với 4 tiêu chí và cột điểm: 'Khung thời gian lớn (D1/W1)', 'Giá rời vùng mạnh, nhanh', 'Có hợp lưu: số tròn/Fibo/trendline', 'Chưa bị test quá nhiều lần'. Bên cạnh là hình nhỏ vùng đỏ trên biểu đồ với nhãn 'Vùng 4000 – 4/4 tiêu chí'."
+  - part: 4
+    title: "Đảo vai: kháng cự thành hỗ trợ và ngược lại"
+    objective: "Hiểu hiện tượng đảo vai (role reversal) và cách tận dụng khi giá retest."
+    key_points:
+      - "Khi kháng cự bị phá vỡ rõ ràng, nó thường trở thành hỗ trợ mới; khi hỗ trợ bị thủng, nó thường thành kháng cự mới."
+      - "Lý do tâm lý: người bán bị kẹt muốn thoát hòa vốn, người mua lỡ cơ hội muốn vào lại khi giá quay về vùng cũ."
+      - "Điểm vào phổ biến là chờ giá quay lại vùng vừa phá (retest) và xuất hiện tín hiệu nến xác nhận."
+      - "Nếu giá phá vỡ rồi quay lại sâu vào trong vùng và đóng cửa ở phía cũ, sự đảo vai thất bại; đây có thể là phá vỡ giả."
+    example: "Ví dụ giả định: EURUSD phá kháng cự 1.0950 bằng nến H4 đóng 1.0975. Hai ngày sau giá giảm về 1.0952, tạo Pin bar tăng rồi đi lên 1.1010. Kháng cự cũ đã đóng vai hỗ trợ mới."
+    mistakes:
+      - "Mua ngay khi giá chạm vùng retest mà không chờ phản ứng, dù giá đang giảm rất mạnh."
+      - "Vẫn coi vùng cũ là kháng cự sau khi nó đã bị phá vỡ rõ ràng."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến: giá chạm vùng đỏ 'Kháng cự' 2 lần bị đẩy xuống, lần 3 phá vỡ đi lên bằng nến xanh lớn. Sau đó giá quay xuống chạm lại đúng vùng đó (vùng chuyển sang màu xanh, nhãn 'Hỗ trợ mới'), có nhãn 'Retest' và mũi tên xanh đi lên tiếp."
+  - part: 5
+    title: "Số tròn và đỉnh đáy ngày/tuần trước"
+    objective: "Biết thêm các mức giá 'ai cũng nhìn thấy' để bổ sung vào bản đồ hỗ trợ – kháng cự."
+    key_points:
+      - "Số tròn (round numbers / mức tâm lý) như 4000, 3950 với vàng hay 1.1000, 1.0950 với EURUSD thường tập trung nhiều lệnh chờ và lệnh chốt lời."
+      - "Đỉnh và đáy của ngày trước (Previous Day High/Low – PDH/PDL) và tuần trước là các mức tham chiếu được nhiều trader trong ngày theo dõi."
+      - "Giá thường dao động quanh số tròn vài pip hoặc vài giá thay vì dừng chính xác, nên đặt lệnh hơi trước số tròn thường hợp lý hơn."
+      - "Các mức này nên được dùng như yếu tố hợp lưu, không phải lý do duy nhất để vào lệnh."
+    example: "Ví dụ giả định: đỉnh hôm qua của XAUUSD là 3998, ngay dưới số tròn 4000. Vùng 3995–4005 là cụm kháng cự kép; trader có thể đặt chốt lời lệnh mua ở 3993 thay vì 4000 để tránh bị hụt."
+    mistakes:
+      - "Đặt cắt lỗ đúng tại số tròn, nơi giá thường quét qua rồi quay lại."
+      - "Coi mọi số tròn nhỏ như 3910, 3920 đều quan trọng ngang 4000."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến H1 XAUUSD với 3 đường ngang: đường nét đứt đậm '4000 – số tròn', đường nét đứt cam 'PDH 3998', đường nét đứt cam dưới 'PDL 3955'. Giá chạm vùng 3995–4005 (tô đỏ nhạt) và quay đầu xuống, có nhãn 'Cụm kháng cự kép'."
+  - part: 6
+    title: "Cung cầu là gì? Khác gì hỗ trợ – kháng cự"
+    objective: "Hiểu khái niệm vùng cung cầu (supply & demand) và điểm khác biệt so với hỗ trợ – kháng cự truyền thống."
+    key_points:
+      - "Vùng cầu (demand zone) là nơi lực mua vượt hẳn lực bán, khiến giá rời đi mạnh lên trên; vùng cung (supply zone) là nơi lực bán áp đảo khiến giá rời đi mạnh xuống dưới."
+      - "Ý tưởng cốt lõi là mất cân bằng (imbalance): tại đó có thể vẫn còn lệnh chưa được khớp hết, nên khi giá quay lại, phản ứng dễ lặp lại."
+      - "Hỗ trợ – kháng cự thường được vẽ từ nhiều lần chạm; vùng cung cầu lại chú trọng nơi giá bắt đầu một cú bứt mạnh, và ưu tiên vùng chưa bị chạm lại."
+      - "Hai cách nhìn bổ sung cho nhau; nhiều trader dùng cả hai trên cùng biểu đồ."
+    example: "Ví dụ giả định: EURUSD đi ngang 4 nến H1 quanh 1.0870–1.0880 rồi tăng vọt 60 pip trong 3 nến. Vùng 1.0870–1.0880 được coi là vùng cầu vì đó là điểm xuất phát của cú tăng mạnh."
+    mistakes:
+      - "Gọi bất kỳ vùng đi ngang nào là vùng cung cầu, dù giá rời khỏi đó rất yếu."
+      - "Tin rằng vùng cung cầu cho biết chính xác vị trí lệnh của 'tổ chức'; đây chỉ là cách suy luận từ hành vi giá."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột. Trái 'Hỗ trợ – kháng cự': biểu đồ giá chạm một vùng ngang 3 lần, nhãn 'Dựa vào số lần chạm'. Phải 'Vùng cung cầu': biểu đồ có cụm 3 nến nhỏ đi ngang rồi một nến xanh rất dài bứt lên, cụm nến nhỏ được bao bởi hộp xanh 'Demand zone', nhãn 'Dựa vào điểm xuất phát cú bứt mạnh'."
+  - part: 7
+    title: "4 cấu trúc tạo vùng: RBR, DBD, RBD, DBR"
+    objective: "Nhận diện bốn kiểu hình thành vùng cung cầu theo trình tự nến."
+    key_points:
+      - "Mỗi vùng gồm ba phần: nhịp đi vào (leg-in), nền giá (base – vài nến thân nhỏ) và nhịp đi ra (leg-out – nến thân dài)."
+      - "Hai cấu trúc đảo chiều: Rally-Base-Drop (RBD) tạo vùng cung, Drop-Base-Rally (DBR) tạo vùng cầu."
+      - "Hai cấu trúc tiếp diễn: Rally-Base-Rally (RBR) tạo vùng cầu, Drop-Base-Drop (DBD) tạo vùng cung."
+      - "Một quy tắc tham khảo phổ biến: nến nền có thân nhỏ hơn khoảng một nửa tổng chiều dài nến, nến bứt có thân chiếm phần lớn cây nến; mỗi người dạy có ngưỡng hơi khác nhau."
+    example: "Ví dụ giả định: XAUUSD tăng từ 3900 lên 3950 (Rally), đi ngang 3 nến H1 quanh 3948–3955 (Base), rồi giảm mạnh xuống 3910 (Drop). Đây là cấu trúc RBD, vùng 3948–3955 là vùng cung."
+    mistakes:
+      - "Chọn nền giá có quá nhiều nến (10–20 nến), khiến vùng loãng và kém tin cậy."
+      - "Nhầm lẫn cấu trúc vì không xác định rõ nhịp đi vào."
+    visual:
+      type: pattern
+      idea: "Lưới 2x2 bốn ô mô hình nến cận cảnh. Ô 1 'RBR': nến xanh lên, 2 nến nhỏ, nến xanh lên mạnh, hộp xanh quanh nền. Ô 2 'DBD': nến đỏ xuống, 2 nến nhỏ, nến đỏ xuống mạnh, hộp đỏ quanh nền. Ô 3 'RBD': lên – nền – xuống, hộp đỏ 'Supply'. Ô 4 'DBR': xuống – nền – lên, hộp xanh 'Demand'."
+  - part: 8
+    title: "Cách vẽ vùng cung cầu: proximal và distal"
+    objective: "Kẻ chính xác ranh giới vùng cung cầu để dùng làm điểm vào và điểm cắt lỗ."
+    key_points:
+      - "Đường gần (proximal line) là cạnh vùng gần giá hiện tại nhất, thường lấy theo thân nến nền; đây là nơi giá chạm vùng đầu tiên."
+      - "Đường xa (distal line) là cạnh còn lại, thường lấy theo đầu bóng xa nhất của nền giá hoặc của cả cụm nến tạo vùng."
+      - "Với vùng cầu: proximal là cạnh trên, distal là cạnh dưới; với vùng cung ngược lại."
+      - "Nếu vùng quá dày so với mục tiêu lợi nhuận, có thể xuống khung nhỏ hơn để thu hẹp vùng (refine)."
+    example: "Ví dụ giả định: vùng cầu trên EURUSD H4 có thân nến nền cao nhất 1.0880 và bóng thấp nhất 1.0858. Proximal = 1.0880, distal = 1.0858. Lệnh mua giới hạn có thể đặt ở 1.0880, cắt lỗ dưới 1.0855."
+    mistakes:
+      - "Lấy cả nến bứt mạnh vào trong vùng, khiến vùng quá rộng."
+      - "Đặt cắt lỗ đúng distal line mà không chừa khoảng đệm cho spread."
+    visual:
+      type: chart
+      idea: "Cận cảnh biểu đồ nến cấu trúc DBR: nến đỏ giảm, 3 nến nền nhỏ, nến xanh dài bứt lên. Hộp xanh bao nền giá với hai đường ngang: cạnh trên nét liền nhãn 'Proximal 1.0880 – điểm vào', cạnh dưới nét liền nhãn 'Distal 1.0858'. Dưới distal có đường đỏ 'SL 1.0855'."
+  - part: 9
+    title: "Chấm điểm chất lượng vùng cung cầu"
+    objective: "Dùng các tiêu chí khách quan để lọc vùng cung cầu đáng giao dịch."
+    key_points:
+      - "Độ mới (freshness): vùng chưa bị giá quay lại chạm lần nào được nhiều người ưu tiên hơn vùng đã test."
+      - "Sức bứt (departure strength): giá rời vùng bằng nến dài, nhanh, tạo khoảng cách lớn thì vùng chất lượng hơn."
+      - "Thời gian ở nền: nền ít nến (khoảng 1–6 nến) thường tốt hơn nền kéo dài."
+      - "Vị trí trong xu hướng: vùng cầu trong xu hướng tăng khung lớn (hoặc vùng cung trong xu hướng giảm) có xác suất tốt hơn vùng ngược xu hướng."
+      - "Khoảng cách tới vùng đối diện: phải đủ xa để đạt R:R hợp lý."
+    example: "Ví dụ giả định: hai vùng cầu trên XAUUSD H4. Vùng A tại 3920 mới tinh, giá rời đi bằng 2 nến tăng 45 USD, thuận xu hướng D1. Vùng B tại 3880 đã bị chạm 2 lần, giá rời đi yếu. Vùng A đáng ưu tiên hơn."
+    mistakes:
+      - "Giao dịch vùng đã bị chạm nhiều lần chỉ vì nó 'đã từng đúng'."
+      - "Chọn vùng mà kháng cự gần nhất chỉ cách chưa đủ 1R."
+    visual:
+      type: checklist
+      idea: "Thẻ chấm điểm 5 tiêu chí có ô tích và điểm: 'Vùng mới, chưa test', 'Giá rời vùng mạnh', 'Nền 1–6 nến', 'Thuận xu hướng khung lớn', 'R:R ≥ 1:2'. Bên phải là hình nhỏ so sánh 'Vùng A: 5/5' (hộp xanh đậm) và 'Vùng B: 2/5' (hộp xanh nhạt, có dấu chấm hỏi)."
+  - part: 10
+    title: "Khi vùng bị phá: vùng thất bại và vùng lật"
+    objective: "Biết xử lý khi vùng cung cầu không giữ được và cách nhận diện vùng đổi vai."
+    key_points:
+      - "Khi giá đóng cửa xuyên qua distal line, vùng được coi là thất bại (broken); nên xóa hoặc đánh dấu lại, không tiếp tục chờ vào lệnh ở đó."
+      - "Vùng cầu bị phá mạnh có thể trở thành vùng cung khi giá hồi lên (flip zone), tương tự hiện tượng đảo vai của hỗ trợ – kháng cự."
+      - "Mỗi lần giá chạm vùng, một phần lệnh chờ đã được khớp; vì vậy vùng chạm lần thứ ba trở đi thường kém tin cậy hơn."
+      - "Một vùng thất bại cũng là thông tin: nó cho thấy bên đối diện đang mạnh, có thể là dấu hiệu xu hướng thay đổi."
+    example: "Ví dụ giả định: vùng cầu EURUSD 1.0858–1.0880 bị nến H4 đóng tại 1.0840. Vài phiên sau giá hồi lên 1.0862, xuất hiện nến nhấn chìm giảm. Vùng cầu cũ đã đổi vai thành vùng cung."
+    mistakes:
+      - "Tiếp tục mua lại vùng đã bị phá vì tin 'vùng này rất mạnh'."
+      - "Để biểu đồ đầy vùng cũ đã hết hiệu lực, gây nhiễu khi phân tích."
+    visual:
+      type: chart
+      idea: "Biểu đồ nến: hộp xanh 'Vùng cầu' ở giữa; giá giảm xuyên qua hộp bằng nến đỏ lớn đóng dưới cạnh dưới, nhãn 'Phá vỡ – vùng thất bại'. Sau đó giá hồi lên chạm lại hộp (hộp chuyển sang màu đỏ, nhãn 'Flip zone – vùng cung mới') và giảm tiếp với mũi tên đỏ."
+  - part: 11
+    title: "Hai cách vào lệnh tại vùng: chờ sẵn hay xác nhận"
+    objective: "So sánh hai phương pháp vào lệnh tại vùng và chọn cách phù hợp với bản thân."
+    key_points:
+      - "Vào lệnh chờ sẵn (set and forget): đặt lệnh giới hạn tại proximal line, SL ngoài distal; ưu điểm là không bỏ lỡ và R:R cao, nhược điểm là dễ thua khi vùng bị phá."
+      - "Vào lệnh có xác nhận (confirmation entry): chờ giá vào vùng rồi xuất hiện tín hiệu như Pin bar, nhấn chìm hoặc CHoCH ở khung nhỏ; ưu điểm là lọc bớt lệnh xấu, nhược điểm là có thể bị lỡ và R:R thấp hơn."
+      - "Không có cách nào vượt trội tuyệt đối; nhiều trader dùng lệnh chờ cho vùng chất lượng cao và chờ xác nhận cho vùng trung bình."
+      - "Dù chọn cách nào, cần quy định trước và giữ nhất quán để có thể đánh giá kết quả."
+    example: "Ví dụ giả định: vùng cung XAUUSD 3988–3998. Cách 1: đặt bán giới hạn 3988, SL 4002. Cách 2: chờ giá vào vùng, xuống M15 thấy CHoCH giảm rồi bán ở 3985, SL trên đỉnh vừa tạo 3996."
+    mistakes:
+      - "Đổi cách vào lệnh liên tục theo kết quả lệnh trước."
+      - "Chờ xác nhận quá nhiều điều kiện đến mức giá đã chạy gần hết mục tiêu."
+    visual:
+      type: compare
+      idea: "So sánh 2 cột trên cùng vùng cung đỏ. Trái 'Lệnh chờ sẵn': mũi tên bán đặt đúng cạnh dưới vùng, đường đỏ SL trên vùng, ghi 'R:R cao – rủi ro bị phá vùng'. Phải 'Chờ xác nhận': ô phóng to khung M15 bên trong vùng với đỉnh, đáy và nhãn 'CHoCH', mũi tên bán sau đó, ghi 'Ít lệnh xấu – dễ lỡ lệnh'."
+  - part: 12
+    title: "Kế hoạch giao dịch với vùng giá và quản lý rủi ro"
+    objective: "Ghép kiến thức hỗ trợ – kháng cự và cung cầu thành một quy trình giao dịch cụ thể có kiểm soát rủi ro."
+    key_points:
+      - "Bước 1: xác định xu hướng D1/H4; bước 2: vẽ vùng trên khung lớn và chấm điểm; bước 3: chỉ chọn vùng thuận xu hướng, đủ R:R."
+      - "Bước 4: chọn cách vào (lệnh chờ hoặc xác nhận); bước 5: SL ngoài vùng có khoảng đệm, TP trước vùng đối diện gần nhất."
+      - "Rủi ro mỗi lệnh giữ ở mức nhỏ cố định (ví dụ 1% tài khoản) và tính khối lượng theo khoảng cách SL."
+      - "Tránh đặt lệnh chờ sát giờ tin tức mạnh như Non-Farm, CPI Mỹ, quyết định lãi suất Fed vì giá có thể trượt qua vùng."
+    example: "Ví dụ giả định: tài khoản 2.000 USD, rủi ro 1% = 20 USD. Mua EURUSD tại vùng cầu 1.0880, SL 1.0855 (25 pip). Với 1 lot chuẩn ≈ 10 USD/pip, khối lượng = 20 ÷ (25 × 10) = 0,08 lot. TP trước vùng cung 1.0940, lợi nhuận tiềm năng 60 pip, R:R ≈ 1:2,4."
+    mistakes:
+      - "Đặt nhiều lệnh chờ ở nhiều vùng cùng hướng, cộng dồn rủi ro vượt kế hoạch."
+      - "Không xem lịch kinh tế trước khi để lệnh chờ qua đêm."
+    visual:
+      type: checklist
+      idea: "Sơ đồ quy trình 5 bước dạng bậc thang có số thứ tự: '1. Xu hướng D1/H4', '2. Vẽ & chấm điểm vùng', '3. Chọn vùng thuận xu hướng, R:R ≥ 1:2', '4. Lệnh chờ hoặc chờ xác nhận', '5. SL ngoài vùng, rủi ro 1%'. Góc phải có biểu tượng lịch với chú thích 'Kiểm tra lịch tin tức'."
+sources:
+  - "https://www.youtube.com/playlist?list=PLXWi52aRZnNG-8n7gyrr8W5N05FMOdrlB"
+  - "https://www.youtube.com/watch?v=9jJM_OcnIug"
+  - "https://www.youtube.com/watch?v=iIivGm5x90I"
+  - "https://maktradingschool.com/rally-base-drop-strategy/"
+  - "https://maktradingschool.com/best-price-action-trading-strategy-using-supply-and-demand-zones/"
+  - "https://priceactionninja.com/trading-rally-base-rally-drop-base-drop-zones-complete-guide/"
+  - "https://tradeciety.com/the-6-golden-rules-of-trading-supply-and-demand"
+  - "https://traderviet.tv/t/chi-tiet-kien-thuc-ve-khang-cu-ho-tro-phan-2-ve-chinh-xac-khang-cu-ho-tro-chi-voi-2-buoc.58064/"
+  - "https://traderviet.tv/t/chi-tiet-kien-thuc-ve-khang-cu-ho-tro-phan-cuoi-cach-xac-dinh-suc-manh-cua-mot-nguong-khang-cu-ho-tro.58159/"
+  - "https://www.ebc.com/vi/forex/xu-huong-ho-tro-khang-cu"
+  - "https://www.babypips.com/learn/forex/support-and-resistance"

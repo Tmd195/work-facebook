@@ -1,0 +1,161 @@
+id: tuong-quan-lien-thi-truong
+name: "Tương quan & Liên thị trường"
+level: "Trung cấp"
+description: "Giúp trader đo và đọc mối tương quan giữa XAUUSD, EURUSD, GBPUSD và DXY để xác nhận tín hiệu kỹ thuật, tránh nhân đôi rủi ro vô tình và phát hiện sớm các nhịp yếu."
+lessons:
+  - part: 1
+    title: "Hệ số tương quan là gì"
+    objective: "Hiểu hệ số tương quan (correlation coefficient) và cách đọc giá trị từ −1 đến +1."
+    key_points:
+      - "Hệ số tương quan Pearson đo mức độ hai chuỗi giá biến động cùng chiều, nằm trong khoảng −1 đến +1."
+      - "+1: luôn đi cùng chiều; −1: luôn ngược chiều; gần 0: không có quan hệ tuyến tính rõ ràng."
+      - "Quy ước tham khảo: trên 0,7 hoặc dưới −0,7 là tương quan mạnh; 0,3-0,7 là trung bình."
+      - "Nên tính trên thay đổi giá (lợi suất) thay vì mức giá tuyệt đối để tránh tương quan giả do cả hai cùng có xu hướng."
+    example: "Ví dụ giả định: tương quan 50 phiên D1 giữa EURUSD và GBPUSD là +0,82 → hai cặp thường đi cùng chiều trong giai đoạn này."
+    mistakes:
+      - "Nghĩ tương quan cao nghĩa là cặp này gây ra biến động của cặp kia."
+      - "Đọc tương quan từ một giai đoạn rất ngắn như 5 nến."
+    visual:
+      type: formula
+      idea: "Thang đo ngang từ −1 đến +1: đầu trái đỏ 'Ngược chiều mạnh', giữa xám '≈ 0 Không liên quan', đầu phải xanh 'Cùng chiều mạnh'. Mốc ±0,7 đánh dấu 'Mạnh'. Dưới thang là 3 hình mini: hai đường đi cùng, hai đường ngược nhau, hai đường ngẫu nhiên."
+  - part: 2
+    title: "Bản đồ tương quan: vàng, EURUSD, GBPUSD, DXY"
+    objective: "Nắm các mối quan hệ điển hình giữa các thị trường chính mà page theo dõi."
+    key_points:
+      - "DXY là chỉ số đô la Mỹ so với rổ 6 đồng tiền, trong đó EUR chiếm khoảng 57,6%, nên EURUSD thường tương quan nghịch rất mạnh với DXY."
+      - "EURUSD và GBPUSD thường tương quan dương mạnh vì cùng có USD là đồng tiền định giá."
+      - "XAUUSD thường tương quan nghịch với DXY (nhiều giai đoạn trong khoảng −0,5 đến −0,8) vì vàng được định giá bằng USD."
+      - "Vàng cũng thường nghịch chiều với lợi suất thực của trái phiếu Mỹ, nhưng quan hệ này đã yếu đi rõ rệt trong một số giai đoạn gần đây."
+    example: "Ví dụ giả định: trong một tuần DXY tăng 1%, EURUSD giảm khoảng 1,1%, GBPUSD giảm 0,8%, XAUUSD giảm 0,6% - mức độ khác nhau dù cùng hướng ngược DXY."
+    mistakes:
+      - "Coi các mối tương quan là cố định vĩnh viễn."
+      - "Quên rằng vàng còn chịu tác động mạnh từ nhu cầu trú ẩn và ngân hàng trung ương, không chỉ USD."
+    visual:
+      type: chart
+      idea: "Sơ đồ mạng 4 nút: DXY ở giữa; mũi tên đỏ 'nghịch mạnh' tới EURUSD, đỏ 'nghịch' tới GBPUSD, đỏ nhạt 'nghịch, thay đổi theo giai đoạn' tới XAUUSD; mũi tên xanh 'thuận mạnh' giữa EURUSD và GBPUSD. Ghi chú 'EUR ≈ 57,6% DXY'."
+  - part: 3
+    title: "Đo tương quan trên TradingView"
+    objective: "Tự đo tương quan bằng công cụ có sẵn thay vì dựa vào bảng của người khác."
+    key_points:
+      - "TradingView có chỉ báo tích hợp 'Correlation Coefficient': chọn mã so sánh (ví dụ TVC:DXY) và độ dài (ví dụ 20 hoặc 50)."
+      - "Có thể đặt biểu đồ so sánh (Compare) để nhìn hai đường giá chồng lên nhau."
+      - "Nên xem tương quan ở 2 độ dài: ngắn (20) để thấy thay đổi gần đây, dài (100) để thấy quan hệ nền."
+      - "Đo trên cùng khung thời gian bạn giao dịch; tương quan H1 có thể khác D1."
+    example: "Ví dụ giả định: trên XAUUSD D1, chỉ báo tương quan với DXY độ dài 50 cho −0,65, nhưng độ dài 20 chỉ còn −0,15 → quan hệ gần đây đang yếu đi."
+    mistakes:
+      - "Dùng bảng tương quan cũ từ nhiều tháng trước."
+      - "Chỉ xem một độ dài duy nhất."
+    visual:
+      type: chart
+      idea: "Biểu đồ XAUUSD D1 phía trên, khung dưới là chỉ báo Correlation Coefficient với DXY: hai đường (độ dài 20 màu cam, độ dài 50 màu xanh). Đường 50 ổn định quanh −0,65, đường 20 tăng dần lên −0,15. Đường ngang −0,7 nét đứt."
+  - part: 4
+    title: "Tương quan thay đổi theo thời gian"
+    objective: "Hiểu vì sao tương quan không ổn định và cách theo dõi sự thay đổi."
+    key_points:
+      - "Tương quan thay đổi theo chu kỳ chính sách tiền tệ, khủng hoảng và các câu chuyện riêng của từng đồng tiền."
+      - "Khi một sự kiện riêng xảy ra (ví dụ tin chính trị Anh), GBPUSD có thể tách khỏi EURUSD trong vài ngày đến vài tuần."
+      - "Giai đoạn căng thẳng địa chính trị có thể khiến vàng và USD cùng tăng vì cả hai đều là tài sản trú ẩn."
+      - "Thói quen tốt: kiểm tra lại tương quan mỗi tuần trước khi dùng nó cho quyết định giao dịch."
+    example: "Ví dụ giả định: trong một tuần khủng hoảng, DXY tăng 1,2% và XAUUSD cũng tăng 2%, tương quan 20 phiên chuyển từ −0,6 sang +0,3."
+    mistakes:
+      - "Bán vàng chỉ vì DXY tăng trong lúc thị trường đang hoảng loạn."
+      - "Cho rằng tương quan đã đổi dấu là 'thị trường sai'."
+    visual:
+      type: chart
+      idea: "Đường tương quan 20 phiên XAUUSD-DXY theo thời gian: phần lớn nằm dưới 0 (tô đỏ nhạt), một đoạn vọt lên trên 0 (tô vàng) có nhãn 'Giai đoạn căng thẳng: vàng và USD cùng tăng'."
+  - part: 5
+    title: "Tránh nhân đôi rủi ro vô tình"
+    objective: "Tính rủi ro thực tế khi mở nhiều lệnh trên các cặp tương quan."
+    key_points:
+      - "Mua EURUSD và mua GBPUSD cùng lúc khi tương quan +0,8 gần giống như đặt cược hai lần vào việc USD yếu đi."
+      - "Mua EURUSD và mua XAUUSD cũng là cùng hướng 'bán USD' trong nhiều giai đoạn."
+      - "Quy tắc thực hành: coi các lệnh cùng hướng trên cặp tương quan mạnh (trên 0,7) là một nhóm, tổng rủi ro nhóm không quá giới hạn một lệnh hoặc tối đa khoảng 1,5 lần."
+      - "Mua EURUSD và bán GBPUSD khi tương quan cao lại gần như triệt tiêu nhau - kiểm tra xem bạn có thực sự có quan điểm hay không."
+    example: "Ví dụ giả định: tài khoản 4.000 USD, mỗi lệnh rủi ro 1% (40 USD). Mua đồng thời EURUSD, GBPUSD và XAUUSD → nếu USD tăng mạnh, cả ba có thể cùng chạm dừng lỗ, mất 120 USD (3%) trong một sự kiện."
+    mistakes:
+      - "Tưởng mở nhiều cặp là 'đa dạng hóa' trong khi tất cả đều cùng một yếu tố USD."
+      - "Không cộng rủi ro các lệnh cùng nhóm."
+    visual:
+      type: compare
+      idea: "Hai cột: trái 'Tưởng là 3 lệnh độc lập' (3 ô: Mua EURUSD 1%, Mua GBPUSD 1%, Mua XAUUSD 1%); phải 'Thực tế: 1 cược bán USD ≈ 3%' (một khối lớn màu đỏ). Mũi tên ghi 'Tin USD mạnh → cả ba cùng lỗ'."
+  - part: 6
+    title: "Dùng DXY để xác nhận tín hiệu EURUSD và vàng"
+    objective: "Kết hợp phân tích DXY với tín hiệu kỹ thuật trên cặp đang giao dịch."
+    key_points:
+      - "Trước khi mua EURUSD hoặc XAUUSD, kiểm tra DXY: DXY đang ở kháng cự hoặc vừa phá cấu trúc giảm là bối cảnh ủng hộ."
+      - "Tín hiệu mua EURUSD đồng thời với DXY phá hỗ trợ có nhiều xác nhận hơn tín hiệu mua khi DXY đang tăng mạnh."
+      - "Dùng DXY như bộ lọc bối cảnh, không phải tín hiệu vào lệnh chính xác từng pip."
+      - "Lưu ý giờ giao dịch: DXY là hợp đồng có giờ nghỉ riêng; dùng cùng khung thời gian khi so sánh."
+    example: "Ví dụ giả định: EURUSD H1 có tín hiệu mua tại hỗ trợ 1,0820, trong khi DXY vừa bị từ chối tại kháng cự 104,80 với nến râu trên dài → tín hiệu mua được ưu tiên."
+    mistakes:
+      - "Chờ DXY xác nhận hoàn hảo đến mức bỏ lỡ mọi tín hiệu."
+      - "Dùng DXY để dự đoán GBPUSD khi đồng bảng đang có câu chuyện riêng."
+    visual:
+      type: compare
+      idea: "Hai biểu đồ xếp dọc cùng khung H1: trên EURUSD chạm hỗ trợ 1,0820 với mũi tên 'Mua'; dưới DXY chạm kháng cự 104,80 với nến râu trên dài, mũi tên 'Bị từ chối'. Đường dọc nối cùng thời điểm, nhãn 'Hai bên xác nhận nhau'."
+  - part: 7
+    title: "Phân kỳ liên thị trường: cảnh báo sớm"
+    objective: "Nhận biết khi hai thị trường tương quan dương không cùng xác nhận đỉnh/đáy mới."
+    key_points:
+      - "Khi EURUSD tạo đỉnh mới nhưng GBPUSD không vượt được đỉnh cũ, sức mạnh của nhịp tăng chung có thể đang yếu."
+      - "Tương tự với XAUUSD so với nghịch đảo của DXY: vàng tạo đáy mới nhưng DXY không tạo đỉnh mới có thể là dấu hiệu bán đã yếu."
+      - "Đây là tín hiệu cảnh báo cần thêm xác nhận từ cấu trúc giá trên chính cặp giao dịch, không phải lệnh vào ngay."
+      - "Chỉ có ý nghĩa khi hai thị trường đang có tương quan mạnh trong giai đoạn đó."
+    example: "Ví dụ giả định: EURUSD vượt đỉnh 1,0950 lên 1,0962, còn GBPUSD chỉ lên 1,2840 dưới đỉnh cũ 1,2860 → trader đang mua EURUSD chốt một phần và kéo dừng lỗ lên."
+    mistakes:
+      - "Bán ngay khi thấy phân kỳ mà không có xác nhận phá cấu trúc."
+      - "So sánh hai thị trường đang có tương quan yếu."
+    visual:
+      type: chart
+      idea: "Hai biểu đồ xếp dọc: trên EURUSD với đỉnh 2 cao hơn đỉnh 1 (đường nối đi lên, nhãn 'Đỉnh cao hơn'); dưới GBPUSD với đỉnh 2 thấp hơn đỉnh 1 (đường nối đi xuống, nhãn 'Không xác nhận'). Biểu tượng cảnh báo vàng giữa hai biểu đồ."
+  - part: 8
+    title: "Đọc sức mạnh tiền tệ tương đối"
+    objective: "Chọn cặp giao dịch dựa trên đồng mạnh và đồng yếu."
+    key_points:
+      - "Ý tưởng: ghép đồng tiền mạnh nhất với đồng tiền yếu nhất để tăng khả năng có xu hướng rõ."
+      - "Cách đơn giản: so sánh % thay đổi trong ngày/tuần của EURUSD, GBPUSD, USDJPY, AUDUSD... để xếp hạng USD và các đồng khác."
+      - "Nếu USD yếu đồng loạt nhưng EUR mạnh hơn GBP, mua EURUSD có thể tốt hơn mua GBPUSD."
+      - "Bảng sức mạnh tiền tệ chỉ phản ánh quá khứ gần; vẫn cần điểm vào kỹ thuật và dừng lỗ."
+    example: "Ví dụ giả định: trong tuần, EURUSD +1,2%, GBPUSD +0,3%, USDJPY −0,8% → USD yếu, EUR mạnh hơn GBP; ưu tiên tìm điểm mua EURUSD."
+    mistakes:
+      - "Mua đồng mạnh nhất ngay sau một nhịp tăng dựng đứng."
+      - "Tin tuyệt đối vào các bảng 'currency strength meter' không rõ cách tính."
+    visual:
+      type: chart
+      idea: "Biểu đồ thanh ngang xếp hạng % thay đổi tuần: EUR +1,2% (xanh đậm), JPY +0,8%, GBP +0,3%, USD −0,9% (đỏ). Mũi tên ghép 'EUR mạnh + USD yếu → ưu tiên EURUSD'."
+  - part: 9
+    title: "Quy trình liên thị trường trước mỗi lệnh"
+    objective: "Có một quy trình ngắn gọn áp dụng tương quan vào kế hoạch giao dịch."
+    key_points:
+      - "Bước 1: Kiểm tra tương quan 20 và 50 kỳ giữa cặp định giao dịch với DXY và các cặp đang có lệnh."
+      - "Bước 2: Xem DXY có ủng hộ hướng giao dịch không (cấu trúc, vùng giá quan trọng)."
+      - "Bước 3: Gom các lệnh cùng nhóm tương quan, đảm bảo tổng rủi ro nhóm không quá khoảng 1,5% tài khoản."
+      - "Bước 4: Vào lệnh theo tín hiệu của hệ thống chính bạn đang dùng; liên thị trường chỉ là lớp lọc và quản lý rủi ro."
+    example: "Ví dụ giả định: đang mua EURUSD rủi ro 1%, xuất hiện tín hiệu mua XAUUSD; tương quan vàng - EURUSD 50 kỳ là +0,6 → chỉ vào vàng với rủi ro 0,5% để tổng nhóm là 1,5%."
+    mistakes:
+      - "Dùng tương quan để biện minh cho lệnh đã vào theo cảm tính."
+      - "Bỏ qua bước 3 vì 'lệnh nào cũng đẹp'."
+    visual:
+      type: checklist
+      idea: "Checklist 4 bước có ô tick: '1. Đo tương quan 20/50 kỳ', '2. DXY ủng hộ hướng?', '3. Tổng rủi ro nhóm ≤ 1,5%', '4. Vào theo hệ thống chính'. Bên cạnh có hình tròn chia nhóm 'Nhóm bán USD: EURUSD + XAUUSD'."
+  - part: 10
+    title: "Giới hạn của phân tích tương quan"
+    objective: "Hiểu khi nào tương quan dẫn đến quyết định sai."
+    key_points:
+      - "Tương quan đo quá khứ và có thể đổi dấu đột ngột khi có cú sốc."
+      - "Tương quan không phải quan hệ nhân quả và không cho biết thị trường nào đi trước."
+      - "Trên khung nhỏ (M1-M15), nhiễu lớn khiến hệ số tương quan dao động mạnh và kém tin cậy."
+      - "Phân tích liên thị trường làm chậm quyết định; nếu dùng quá nhiều thị trường, dễ rơi vào tê liệt phân tích."
+    example: "Ví dụ giả định: trader bán vàng vì DXY bật tăng mạnh, nhưng cùng lúc có tin căng thẳng địa chính trị; vàng tăng 25 USD cùng USD và lệnh bị dừng lỗ."
+    mistakes:
+      - "Dùng tương quan thay cho dừng lỗ."
+      - "Theo dõi quá 4-5 thị trường cùng lúc."
+    visual:
+      type: compare
+      idea: "Hai cột: 'Tương quan hữu ích' (lọc bối cảnh, kiểm soát rủi ro nhóm, khung H4-D1) và 'Tương quan gây hại' (cú sốc đổi dấu, khung M1-M15 nhiễu, nhầm là nhân quả, quá nhiều thị trường)."
+sources:
+  - "https://www.lbma.org.uk/alchemist/issue-90/an-update-on-gold-real-interest-rates-and-the-dollar"
+  - "https://www.phillipnova.com.sg/educational_articles/why-gold-moves-when-the-dollar-moves-the-correlation-between-dxy-and-gold-prices/"
+  - "https://www.axiory.com/education/metals-trading-series/advanced-guide-to-trading-gold-xau-usd-how-to-use/"
+  - "https://www.longtermtrends.com/gold-vs-real-yields/"
+  - "https://goldsilver.com/industry-news/article/dollar-vs-gold-relationship-why-they-often-move-in-opposite-directions/"

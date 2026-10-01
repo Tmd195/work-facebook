@@ -1,0 +1,66 @@
+# ============================================================
+#  Cấu hình hệ thống auto content Facebook - Forex
+# ============================================================
+
+brand:
+  name: "FOREX DAILY"          # Tên page (tạm) - đổi khi có thương hiệu
+  handle: "facebook.com/yourpage"
+  logo: ""                     # Đường dẫn logo PNG, để trống nếu chưa có
+
+timezone: "Asia/Ho_Chi_Minh"
+
+# Các mã page tập trung
+symbols:
+  - { code: XAUUSD, name: "Vàng",       digits: 2 }
+  - { code: EURUSD, name: "Euro",       digits: 5 }
+  - { code: GBPUSD, name: "Bảng Anh",   digits: 5 }
+  - { code: DXY,    name: "USD Index",  digits: 3 }
+
+# Lịch kinh tế: chỉ lấy các đồng tiền ảnh hưởng tới các mã trên
+calendar:
+  currencies: [USD, EUR, GBP]
+  impacts: [High, Medium]
+  max_events_on_banner: 7
+
+design:
+  style: "block"               # editorial | clean | block | dark
+
+knowledge:
+  # Thứ tự đăng series (cơ bản → chuyên sâu). Series không có trong danh sách sẽ xếp cuối theo số file.
+  series_order:
+    - price-action-nhap-mon
+    - ho-tro-khang-cu-cung-cau
+    - pivot-point
+    - fibonacci
+    - ma-ema
+    - rsi-macd-phan-ky
+    - quan-ly-von
+    - tam-ly-giao-dich
+    - dow-cau-truc-thi-truong
+    - giao-dich-theo-phien
+    - co-ban-cho-trader-vang
+    - trend-following-turtle
+    - smc-nhap-mon
+    - snr-quasimodo
+    - crt-candle-range-theory
+    - ict-chuyen-sau
+    - al-brooks-price-action
+    - wyckoff
+    - vsa
+    - volume-profile
+    - elliott
+    - harmonic
+    - ichimoku
+
+ai:
+  backend: "claude_code"       # claude_code (dùng gói Pro/Max, 0đ) | api (ANTHROPIC_API_KEY, tính phí)
+  claude_code_model: "opus"    # model khi dùng Claude Code: opus | sonnet
+  model: "claude-opus-5"       # model khi dùng API
+  effort: "high"
+
+# Lịch đăng cố định (giờ Việt Nam)
+schedule:
+  morning:   { time: "07:30", days: [mon, tue, wed, thu, fri] }
+  knowledge: { times: ["12:00", "21:00"], days: [mon, tue, wed, thu, fri, sat, sun] }   # 2 bài/ngày, mỗi lần 1 phần tiếp theo
+  strategy_ae: { time: "10:00", days: [mon, tue, wed, thu, fri] }   # Chiến lược XAUUSD phiên Á - Âu
+  strategy_us: { time: "18:30", days: [mon, tue, wed, thu, fri] }   # Chiến lược XAUUSD phiên Mỹ (mùa đông: 19:30)

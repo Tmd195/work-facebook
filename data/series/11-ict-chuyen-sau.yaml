@@ -1,0 +1,297 @@
+id: ict-chuyen-sau
+name: "ICT chuyên sâu"
+level: "Chuyên sâu"
+description: "Giúp người đọc hiểu các khái niệm cốt lõi của phương pháp ICT – thời gian (killzone), daily bias, Power of 3, OTE, Silver Bullet, SMT – và ghép chúng thành một mô hình giao dịch trong ngày có quản lý rủi ro."
+lessons:
+  - part: 1
+    title: "ICT là gì: giá, thời gian và thanh khoản"
+    objective: "Nắm khung tư duy nền tảng của ICT: giá được 'phân phối' giữa các vùng thanh khoản theo thời gian."
+    key_points:
+      - "ICT (Inner Circle Trader) mô tả thị trường như được dẫn dắt bởi thuật toán phân phối giá IPDA (Interbank Price Delivery Algorithm) – đây là mô hình giải thích, không phải điều được chứng minh."
+      - "Giá luôn di chuyển giữa hai trạng thái: đi lấy thanh khoản (liquidity) và lấp các vùng mất cân bằng (imbalance/FVG)."
+      - "Thời gian là yếu tố ngang hàng với giá: setup chỉ được ưu tiên khi xuất hiện trong khung giờ có thanh khoản cao."
+      - "ICT và SMC dùng nhiều thuật ngữ giống nhau; SMC là phần được cộng đồng đơn giản hóa từ các ý tưởng ICT."
+    example: "Ví dụ giả định: EURUSD đang ở giữa đỉnh tuần trước 1,0950 và đáy tuần trước 1,0820. Câu hỏi ICT đặt ra: giá sẽ đi lấy bể thanh khoản nào trước, và vào khung giờ nào?"
+    mistakes:
+      - "Coi IPDA như sự thật tuyệt đối thay vì một mô hình để tổ chức quan sát."
+    visual:
+      type: chart
+      idea: "Sơ đồ giá dao động giữa đường trên 'BSL – đỉnh tuần trước' và đường dưới 'SSL – đỉnh/đáy tuần trước', giữa có hộp FVG. Ở góc đặt biểu tượng đồng hồ với chú thích 'Giá + Thời gian + Thanh khoản'."
+  - part: 2
+    title: "Killzone: giờ NY và giờ Việt Nam"
+    objective: "Nhớ chính xác các killzone theo giờ New York và quy đổi sang giờ Việt Nam theo mùa."
+    key_points:
+      - "Asian killzone: 20:00–00:00 giờ NY (một số tài liệu dùng 19:00–22:00) = 07:00–11:00 giờ VN khi Mỹ dùng giờ mùa hè (EDT), 08:00–12:00 khi giờ mùa đông (EST)."
+      - "London killzone: 02:00–05:00 NY = 13:00–16:00 VN (mùa hè) hoặc 14:00–17:00 VN (mùa đông)."
+      - "New York AM killzone: 07:00–10:00 NY = 18:00–21:00 VN (mùa hè) hoặc 19:00–22:00 VN (mùa đông); London close: 10:00–12:00 NY = 21:00–23:00 VN (mùa hè)."
+      - "Mỹ chuyển giờ mùa hè từ Chủ nhật thứ 2 tháng 3 đến Chủ nhật đầu tháng 11; Việt Nam không đổi giờ nên killzone theo giờ VN dịch 1 tiếng."
+    example: "Ví dụ: ngày 15/7 (giờ mùa hè Mỹ), London killzone trên XAUUSD tính theo giờ VN là 13:00–16:00; đến ngày 15/12 (giờ mùa đông) thành 14:00–17:00."
+    mistakes:
+      - "Dùng một bảng giờ VN cố định quanh năm, quên điều chỉnh khi Mỹ đổi giờ."
+    visual:
+      type: formula
+      idea: "Bảng 4 hàng × 3 cột: Killzone | Giờ New York | Giờ VN (hè / đông). Hàng: Asian 20:00–00:00 | 07–11 / 08–12; London 02:00–05:00 | 13–16 / 14–17; NY AM 07:00–10:00 | 18–21 / 19–22; London Close 10:00–12:00 | 21–23 / 22–24. Chú thích quy tắc +11h (hè) và +12h (đông)."
+  - part: 3
+    title: "Midnight open và range phiên Á"
+    objective: "Dùng giá mở cửa lúc nửa đêm NY và range phiên Á làm mốc tham chiếu trong ngày."
+    key_points:
+      - "Midnight open (giá mở lúc 00:00 giờ NY, tức 11:00 VN mùa hè / 12:00 VN mùa đông) được ICT dùng như 'true day open' – mốc chia premium/discount trong ngày."
+      - "Ngày tăng: thường tìm mua dưới midnight open; ngày giảm: thường tìm bán trên midnight open."
+      - "Range phiên Á (đỉnh/đáy hình thành trong Asian session) là thanh khoản gần mà London hay New York nhắm tới."
+      - "Một số người dùng thêm giá mở 08:30 NY (giờ tin kinh tế Mỹ) làm mốc phụ."
+    example: "Ví dụ giả định: XAUUSD midnight open 2.340, ngày dự kiến tăng. Phiên London giá giảm xuống 2.333 (dưới midnight open, quét đáy phiên Á 2.335) – đó là vùng ICT tìm mua."
+    mistakes:
+      - "Dùng giá mở cửa nến D1 của sàn (thường theo giờ server) thay cho midnight open NY."
+    visual:
+      type: chart
+      idea: "Biểu đồ M15 một ngày: đường ngang nét đứt 'Midnight Open'; hộp xám range phiên Á với đường đỉnh/đáy; nhịp London quét đáy Á xuống dưới midnight open (nhãn 'Discount'), rồi nhịp NY tăng vượt đỉnh Á."
+  - part: 4
+    title: "Power of 3: tích lũy – thao túng – phân phối"
+    objective: "Hiểu Power of 3 (AMD) và cách nó hiện diện trong cây nến ngày."
+    key_points:
+      - "Power of 3 (PO3) chia một cây nến (ngày, tuần, H4) thành 3 pha: Accumulation (tích lũy), Manipulation (thao túng), Distribution (phân phối) – gọi tắt AMD."
+      - "Nến ngày tăng điển hình: mở cửa, giảm xuống dưới giá mở tạo râu dưới (thao túng), rồi tăng mạnh và đóng gần đỉnh (phân phối)."
+      - "Trong ngày, tích lũy thường ở phiên Á, thao túng ở London, phân phối ở New York – nhưng thứ tự có thể lệch."
+      - "Ứng dụng: khi đã có bias tăng, cơ hội tốt là mua trong pha thao túng dưới giá mở cửa."
+    example: "Ví dụ giả định: EURUSD mở ngày 1,0850, phiên Á đi ngang 1,0845-1,0858, London giảm xuống 1,0830, New York tăng lên 1,0910 rồi đóng 1,0900. Nến ngày có râu dưới ngắn, thân xanh dài – đúng hình AMD."
+    mistakes:
+      - "Cho rằng AMD lặp lại mỗi ngày; ngày tin lớn hay ngày đi ngang thường phá khuôn mẫu."
+    visual:
+      type: chart
+      idea: "Bên trái: một cây nến ngày xanh với râu dưới, đánh dấu 'Open', 'Low', 'Close'. Bên phải: đường giá M15 tương ứng chia 3 dải màu nhãn 'A – Á', 'M – London', 'D – New York', mũi tên đường đi giá."
+  - part: 5
+    title: "Judas swing: cú đánh lừa đầu phiên"
+    objective: "Nhận diện Judas swing và tránh bị cuốn theo hướng sai đầu phiên."
+    key_points:
+      - "Judas swing là cú di chuyển giả đầu phiên (thường London hoặc NY) đi ngược bias ngày để quét thanh khoản rồi đảo chiều."
+      - "Nó thường xuất hiện trong killzone, quét đỉnh/đáy phiên Á hoặc đỉnh/đáy ngày trước."
+      - "Dấu hiệu kết thúc Judas swing: quét thanh khoản xong, sau đó có MSS (market structure shift) kèm displacement ngược lại."
+      - "Judas swing chính là pha Manipulation trong Power of 3."
+    example: "Ví dụ giả định: bias ngày giảm cho GBPUSD. Đầu London giá tăng từ 1,2700 lên 1,2735, quét đỉnh phiên Á 1,2728, rồi giảm mạnh phá đáy nội bộ 1,2715 – Judas swing hoàn tất."
+    mistakes:
+      - "Mua đuổi cú tăng đầu phiên khi bias ngày là giảm."
+    visual:
+      type: chart
+      idea: "M5: range phiên Á (hộp xám), đầu London giá vọt lên quét đỉnh Á (nhãn 'Judas swing' + đường BSL), sau đó nến đỏ dài phá đáy nội bộ (nhãn 'MSS'), mũi tên đỏ đi xuống mục tiêu SSL."
+  - part: 6
+    title: "Daily bias: xác định hướng của ngày"
+    objective: "Có quy trình xác định hướng ưu tiên (bias) trước khi tìm setup."
+    key_points:
+      - "Bias xuất phát từ khung D1/H4: giá vừa lấy thanh khoản ở đâu và đang hướng tới bể thanh khoản nào tiếp theo (draw on liquidity)."
+      - "Đỉnh/đáy ngày trước (PDH/PDL) là tham chiếu chính: nến ngày hôm qua quét PDL rồi đóng lại trên, hôm nay ưu tiên hướng lên PDH."
+      - "Kiểm tra FVG D1 chưa lấp và vị trí giá trong dealing range (premium hay discount)."
+      - "Nếu không xác định được bias rõ ràng, chấp nhận đứng ngoài hoặc chỉ giao dịch nhỏ."
+    example: "Ví dụ giả định: XAUUSD hôm qua quét đáy 2.310 (PDL của hôm kia) rồi đóng nến ở 2.330. Trên có FVG D1 2.350-2.358 chưa lấp. Bias hôm nay: tăng, mục tiêu FVG rồi PDH 2.360."
+    mistakes:
+      - "Đổi bias liên tục theo từng nến M5."
+    visual:
+      type: chart
+      idea: "Biểu đồ D1 vài nến: nến hôm qua có râu dưới quét đường PDL rồi đóng xanh; phía trên vẽ hộp FVG D1 và đường PDH. Mũi tên nét đứt 'Draw on liquidity' hướng lên."
+  - part: 7
+    title: "Draw on liquidity: ERL và IRL"
+    objective: "Hiểu cách giá luân phiên giữa thanh khoản bên ngoài và bên trong range."
+    key_points:
+      - "ERL (external range liquidity) là đỉnh/đáy của dealing range – nơi chứa lệnh dừng."
+      - "IRL (internal range liquidity) là FVG và vùng mất cân bằng nằm bên trong range."
+      - "Quy luật tham chiếu: sau khi lấy ERL, giá thường quay về IRL; sau khi chạm IRL, giá thường hướng tới ERL phía đối diện."
+      - "Dùng quy luật này để chọn mục tiêu chốt lời hợp lý thay vì đặt TP tùy ý."
+    example: "Ví dụ giả định: EURUSD quét đỉnh range 1,0950 (ERL) rồi giảm về lấp FVG 1,0880-1,0890 (IRL). Nếu FVG giữ giá và có MSS tăng, mục tiêu tiếp theo lại là ERL 1,0950 hoặc cao hơn."
+    mistakes:
+      - "Đặt mục tiêu vượt quá ERL khi chưa có lý do cho thấy giá muốn mở rộng range."
+    visual:
+      type: chart
+      idea: "Dealing range với đường trên 'ERL – BSL' và đường dưới 'ERL – SSL', hộp FVG ở giữa nhãn 'IRL'. Mũi tên số 1 giá quét ERL trên, số 2 quay về IRL, số 3 hướng lại ERL."
+  - part: 8
+    title: "Dealing range, premium/discount và IPDA 20-40-60"
+    objective: "Xác định dealing range và dùng khung tham chiếu IPDA 20/40/60 ngày giao dịch."
+    key_points:
+      - "Dealing range là khoảng từ swing low đến swing high đang chi phối giá; 50% là equilibrium, trên là premium, dưới là discount."
+      - "ICT gợi ý nhìn lại 20, 40 và 60 ngày giao dịch gần nhất trên D1 để tìm đỉnh/đáy và FVG quan trọng (IPDA data ranges)."
+      - "Mua ở discount, bán ở premium của dealing range khớp với bias là nguyên tắc chọn vị trí."
+      - "OTE và các POI chỉ có ý nghĩa khi đặt trong đúng dealing range."
+    example: "Ví dụ giả định: trong 20 ngày giao dịch gần nhất, GBPUSD có đỉnh 1,2850 và đáy 1,2600 → equilibrium 1,2725. Giá hiện 1,2650 nằm ở discount, phù hợp bias tăng."
+    mistakes:
+      - "Chọn dealing range quá nhỏ (vài nến M5) rồi gọi là discount trong bối cảnh khung lớn đang premium."
+    visual:
+      type: chart
+      idea: "Biểu đồ D1 với ba vạch dọc đánh dấu 20, 40, 60 ngày trước; khung chữ nhật dealing range chia đôi, nửa trên đỏ 'Premium', nửa dưới xanh 'Discount', đường 50% 'EQ'."
+  - part: 9
+    title: "MSS và displacement"
+    objective: "Phân biệt MSS (market structure shift) có displacement với một cú phá cấu trúc yếu."
+    key_points:
+      - "Displacement là nhịp di chuyển mạnh, nhiều nến thân dài cùng chiều, thường để lại FVG – dấu hiệu dòng tiền lớn tham gia."
+      - "MSS là phá vỡ swing ngắn hạn gần nhất sau khi giá vừa quét thanh khoản, đi kèm displacement."
+      - "MSS không có displacement (nến yếu, nhiều râu) dễ là bẫy."
+      - "Chuỗi chuẩn: quét thanh khoản → MSS + displacement → FVG → giá hồi về FVG để vào lệnh."
+    example: "Ví dụ giả định: XAUUSD M5 quét đáy 2.320, sau đó 3 nến xanh liên tiếp đẩy lên 2.332, phá đỉnh ngắn hạn 2.328 và để lại FVG 2.324-2.327 → MSS tăng hợp lệ."
+    mistakes:
+      - "Gọi MSS khi giá chỉ lách qua đỉnh bằng một nến nhỏ."
+    visual:
+      type: compare
+      idea: "Hai cột. Trái 'MSS có displacement': râu quét đáy, ba nến xanh thân dài phá đường đỉnh, hộp FVG vàng. Phải 'Phá yếu': nến nhỏ nhiều râu lách qua đường đỉnh rồi rơi lại, dấu X."
+  - part: 10
+    title: "FVG nâng cao: BISI, SIBI, CE, inverse FVG"
+    objective: "Dùng các biến thể FVG theo cách gọi của ICT để tinh chỉnh điểm vào."
+    key_points:
+      - "BISI (buyside imbalance, sellside inefficiency) là FVG tăng; SIBI (sellside imbalance, buyside inefficiency) là FVG giảm."
+      - "CE (consequent encroachment) là mức 50% của FVG – mốc vào lệnh và mốc đánh giá FVG còn giữ hay không."
+      - "Inverse FVG (IFVG): FVG bị giá đóng cửa xuyên qua hoàn toàn thì có thể đổi vai, trở thành vùng cản theo chiều ngược lại."
+      - "FVG xuất hiện trong killzone và cùng hướng bias có giá trị cao hơn FVG ngẫu nhiên."
+    example: "Ví dụ giả định: EURUSD có SIBI 1,0900-1,0910. Giá tăng, đóng nến H1 ở 1,0918 (xuyên qua) rồi hồi về 1,0908 và bật lên → SIBI đã thành inverse FVG hỗ trợ."
+    mistakes:
+      - "Đặt dừng lỗ ngay mép FVG mà không chừa khoảng cho râu quét CE."
+    visual:
+      type: pattern
+      idea: "Hai cận cảnh: (1) BISI vàng với đường CE 50% ở giữa, giá chạm CE rồi bật lên; (2) SIBI đỏ bị nến xanh đóng cửa xuyên qua, nhãn 'IFVG', giá quay lại test từ trên và bật lên."
+  - part: 11
+    title: "Order block và mitigation block theo ICT"
+    objective: "Phân biệt order block với mitigation block và cách dùng mỗi loại."
+    key_points:
+      - "Bullish OB theo ICT: nến giảm cuối cùng (hoặc cụm nến giảm) trước displacement tăng phá cấu trúc; tham chiếu quan trọng là giá mở của nến đó và mức 50% thân."
+      - "Mitigation block hình thành khi một xu hướng thất bại mà KHÔNG quét được đỉnh/đáy trước (ví dụ tạo lower high rồi giảm phá đáy); vùng OB của nhịp thất bại thành kháng cự."
+      - "Điểm khác cốt lõi với breaker block (bài sau): breaker có quét thanh khoản, mitigation block thì không."
+      - "Cả hai đều cần MSS kèm displacement để có giá trị."
+    example: "Ví dụ giả định: GBPUSD tăng lên 1,2750, hồi về 1,2700, tăng lại chỉ tới 1,2740 (không vượt 1,2750) rồi giảm phá 1,2700. Vùng nến tăng cuối trước nhịp giảm quanh 1,2725-1,2735 là mitigation block để tìm bán."
+    mistakes:
+      - "Nhầm lẫn mitigation block với breaker do không kiểm tra đỉnh trước có bị quét hay không."
+    visual:
+      type: chart
+      idea: "Đường giá: đỉnh A, đáy B, đỉnh C thấp hơn A (nhãn 'không quét A'), giảm phá B (nhãn 'MSS'). Tô hộp đỏ nhạt ở vùng gần đỉnh C nhãn 'Mitigation Block'; mũi tên giá hồi chạm hộp rồi giảm."
+  - part: 12
+    title: "Breaker block: vùng đổi vai sau cú quét"
+    objective: "Nhận diện breaker block và cách giao dịch khi giá quay lại."
+    key_points:
+      - "Bearish breaker: giá tạo đỉnh, hồi, rồi quét lên trên đỉnh đó (lấy BSL), sau đó giảm mạnh phá đáy giữa (MSS)."
+      - "Vùng nến tăng cuối cùng trước cú quét lên (OB tăng cũ đã bị phá) trở thành breaker – kháng cự khi giá hồi lại."
+      - "Bullish breaker là cấu trúc ngược lại: quét đáy rồi tăng phá đỉnh giữa."
+      - "Breaker kết hợp với FVG trong cùng vùng giá tạo điểm vào có nhiều yếu tố hội tụ."
+    example: "Ví dụ giả định: XAUUSD đỉnh 2.380, đáy 2.370, quét lên 2.384 rồi giảm phá 2.370. Nến tăng cuối trước cú quét 2.372-2.376 là bearish breaker; bán khi giá hồi về 2.374."
+    mistakes:
+      - "Vẽ breaker khi chưa có cú quét thanh khoản rõ ràng."
+    visual:
+      type: chart
+      idea: "Mô hình chữ M lệch: đỉnh 1, đáy giữa, đỉnh 2 cao hơn (nhãn 'Sweep BSL'), giảm phá đáy giữa (nhãn 'MSS'). Hộp đỏ nhãn 'Bearish Breaker' ở nến tăng cuối trước đỉnh 2; mũi tên hồi chạm hộp rồi đi xuống."
+  - part: 13
+    title: "OTE: vùng vào lệnh tối ưu 62–79%"
+    objective: "Dùng OTE (optimal trade entry) để vào lệnh ở vùng hồi sâu hợp lý."
+    key_points:
+      - "OTE là vùng hồi Fibonacci 62%–79% của nhịp displacement vừa tạo MSS; mức 70,5% thường được xem là 'điểm ngọt'."
+      - "Kéo Fibonacci từ đáy đến đỉnh nhịp tăng (hoặc đỉnh đến đáy nhịp giảm) – chỉ phần thân nhịp đã phá cấu trúc."
+      - "OTE mạnh hơn khi trùng FVG, OB hoặc breaker, và rơi vào killzone."
+      - "Mục tiêu thường dùng: đỉnh/đáy cũ (−0%), phần mở rộng −27% và −62% theo cách ICT đánh số Fibonacci."
+    example: "Ví dụ giả định: EURUSD tăng từ 1,0800 lên 1,0900 tạo MSS. OTE nằm trong 1,0821–1,0838, mức 70,5% ≈ 1,0830. Có FVG 1,0828-1,0835 trùng vùng → điểm vào ưu tiên."
+    mistakes:
+      - "Kéo Fibonacci trên nhịp không có displacement hay không phá cấu trúc."
+    visual:
+      type: chart
+      idea: "Nhịp tăng từ đáy đến đỉnh với Fibonacci: dải 62%-79% tô xanh đậm nhãn 'OTE', đường 70,5% nét đứt. Hộp FVG nằm chồng trong dải. Mũi tên giá hồi vào OTE rồi đi lên vượt đỉnh."
+  - part: 14
+    title: "Silver Bullet: cửa sổ 1 giờ"
+    objective: "Nắm cấu trúc chiến lược Silver Bullet và ba khung giờ áp dụng."
+    key_points:
+      - "Silver Bullet là cửa sổ 1 giờ: 03:00–04:00, 10:00–11:00 và 14:00–15:00 giờ NY."
+      - "Quy đổi giờ VN: 14:00–15:00, 21:00–22:00, 01:00–02:00 (hôm sau) khi Mỹ giờ mùa hè; cộng thêm 1 giờ khi giờ mùa đông."
+      - "Quy trình: xác định mục tiêu thanh khoản → trong cửa sổ, chờ giá quét thanh khoản gần và tạo FVG theo hướng mục tiêu → vào lệnh khi giá hồi về FVG."
+      - "Thường dùng M1–M5 để tìm FVG; cần đủ khoảng cách tới mục tiêu (ví dụ ≥ 10–15 pip với EURUSD) mới đáng vào."
+    example: "Ví dụ giả định: 10:05 NY, XAUUSD quét đáy 2.342 rồi tăng tạo FVG M1 2.345-2.347. Mua 2.346, SL 2.341, mục tiêu đỉnh phiên London 2.356."
+    mistakes:
+      - "Vào lệnh ngoài cửa sổ giờ vì FVG 'trông giống' setup."
+    visual:
+      type: chart
+      idea: "Biểu đồ M1/M5 với dải dọc tô màu nhãn '10:00–11:00 NY (21:00–22:00 VN mùa hè)'; trong dải: râu quét đáy (SSL), nến tăng mạnh tạo hộp FVG vàng, mũi tên vào lệnh, đường TP tại BSL phía trên."
+  - part: 15
+    title: "SMT divergence: phân kỳ giữa các tài sản liên quan"
+    objective: "Dùng SMT divergence để xác nhận cú quét thanh khoản có khả năng đảo chiều."
+    key_points:
+      - "SMT (smart money technique) divergence: hai tài sản tương quan thuận mà một bên tạo đỉnh/đáy mới còn bên kia không xác nhận."
+      - "Cặp thường dùng: EURUSD với GBPUSD (tương quan thuận); EURUSD hoặc XAUUSD với DXY (tương quan nghịch – so đáy của bên này với đỉnh của bên kia)."
+      - "Ví dụ tăng: EURUSD tạo đáy thấp hơn nhưng GBPUSD tạo đáy cao hơn tại vùng POI → dấu hiệu sức bán yếu."
+      - "SMT là công cụ xác nhận, nên dùng cùng killzone và MSS, không dùng đơn lẻ."
+    example: "Ví dụ giả định: 08:30 NY, EURUSD quét xuống 1,0795 (dưới đáy 1,0800) nhưng GBPUSD chỉ về 1,2610, cao hơn đáy cũ 1,2600. Sau đó EURUSD có MSS tăng → SMT tăng được xác nhận."
+    mistakes:
+      - "So sánh hai cặp ở hai khung thời gian hoặc hai thời điểm khác nhau."
+    visual:
+      type: compare
+      idea: "Hai biểu đồ xếp dọc cùng trục thời gian: EURUSD tạo đáy 2 thấp hơn đáy 1 (nhãn 'LL'), GBPUSD tạo đáy 2 cao hơn (nhãn 'HL'). Đường nối hai đáy mỗi biểu đồ đi ngược hướng nhau, nhãn 'SMT Divergence'."
+  - part: 16
+    title: "Hồ sơ tuần (weekly profile)"
+    objective: "Hiểu các khuôn mẫu đỉnh/đáy tuần thường gặp để định hướng trong tuần."
+    key_points:
+      - "Trong tuần tăng, đáy tuần thường (không phải luôn luôn) hình thành từ thứ Hai đến thứ Tư; tuần giảm thì đỉnh tuần tương tự."
+      - "Mẫu phổ biến: đầu tuần đi ngược (thao túng), giữa tuần đảo chiều, cuối tuần mở rộng – tương đương Power of 3 cho nến tuần."
+      - "Thứ Năm có thể đảo chiều nếu mục tiêu tuần đã đạt; thứ Sáu thường hồi về hoặc đi ngang, đặc biệt ngày có Non-farm."
+      - "Lịch tin kinh tế trong tuần (CPI, FOMC, NFP) thường quyết định ngày nào tạo đỉnh/đáy tuần."
+    example: "Ví dụ giả định: bias tuần của XAUUSD là tăng. Thứ Hai giảm từ 2.360 xuống 2.335, thứ Ba quét 2.330 rồi MSS tăng H1. Đáy 2.330 có khả năng là đáy tuần, mục tiêu đỉnh tuần trước 2.390."
+    mistakes:
+      - "Áp hồ sơ tuần cứng nhắc trong tuần có tin lớn bất thường."
+    visual:
+      type: chart
+      idea: "Biểu đồ H4 một tuần, chia 5 cột theo ngày T2–T6. Đường giá: T2 giảm, T3 tạo đáy (nhãn 'Low of week'), T4–T5 tăng mạnh, T6 đi ngang. Chú thích 'A–M–D cho nến tuần'."
+  - part: 17
+    title: "MMXM: mô hình nhà tạo lập thị trường"
+    objective: "Đọc cấu trúc Market Maker Buy/Sell Model (MMXM) trên khung lớn."
+    key_points:
+      - "Market Maker Buy Model (MMBM): bắt đầu từ vùng tích lũy ban đầu, giá giảm theo từng bậc (sell side of the curve), quét thanh khoản ở vùng discount khung lớn, rồi đảo chiều (smart money reversal)."
+      - "Phía tăng (buy side of the curve) thường đối xứng với phía giảm, giá quay về đúng các vùng tích lũy/phân phối cũ trên đường xuống."
+      - "Market Maker Sell Model (MMSM) là cấu trúc ngược lại, đảo chiều ở vùng premium."
+      - "Mục tiêu cuối thường là vùng tích lũy ban đầu (original consolidation)."
+    example: "Ví dụ giả định: EURUSD H4 tích lũy quanh 1,0950, giảm từng bậc qua 1,0900 và 1,0850, quét 1,0800 tại FVG D1, đảo chiều; giá tăng lại lần lượt về 1,0850, 1,0900 rồi mục tiêu 1,0950."
+    mistakes:
+      - "Gán mọi chữ V trên biểu đồ là MMXM mà không có vùng tích lũy ban đầu và POI khung lớn."
+    visual:
+      type: chart
+      idea: "Hình chữ V lớn: bên trái các bậc giảm với hộp xám 'tích lũy/phân phối', đáy V có hộp xanh 'HTF POI – Smart Money Reversal', bên phải các bậc tăng chạm lại các hộp xám. Nhãn 'Sell side of curve' và 'Buy side of curve', đỉnh trái 'Original Consolidation'."
+  - part: 18
+    title: "Mô hình NY AM: từ bias đến điểm vào"
+    objective: "Ghép daily bias, Judas swing, MSS, FVG/OTE thành một kịch bản phiên New York."
+    key_points:
+      - "Trước phiên: xác định bias D1, mục tiêu thanh khoản (PDH/PDL, đỉnh/đáy London), midnight open."
+      - "Trong 07:00–10:00 NY (18:00–21:00 VN mùa hè): chờ giá quét đỉnh/đáy London hoặc phiên Á theo hướng ngược bias (Judas)."
+      - "Xác nhận: MSS kèm displacement trên M5/M15, có thể kèm SMT với cặp liên quan."
+      - "Vào lệnh tại FVG/OTE của nhịp displacement, dừng lỗ ngoài điểm quét, mục tiêu tại thanh khoản đối diện."
+    example: "Ví dụ giả định: bias GBPUSD giảm, đỉnh London 1,2780. 08:45 NY giá quét lên 1,2786, M5 MSS giảm, để lại FVG 1,2770-1,2775. Bán 1,2773, SL 1,2790, TP đáy London 1,2720."
+    mistakes:
+      - "Vào lệnh trong tin 08:30 NY khi spread giãn và giá giật mạnh."
+    visual:
+      type: chart
+      idea: "M5 phiên London + NY: đường đỉnh London (BSL), cú quét lên trong dải NY killzone, nhãn 'Judas', nến đỏ dài 'MSS', hộp FVG đỏ, mũi tên bán đi xuống đường đáy London (SSL, TP). Đường midnight open nét đứt."
+  - part: 19
+    title: "Checklist giao dịch ICT hoàn chỉnh"
+    objective: "Có một danh sách kiểm tra ngắn để quyết định vào hay bỏ setup ICT."
+    key_points:
+      - "1) Bias D1/H4 rõ ràng và mục tiêu thanh khoản xác định (draw on liquidity)."
+      - "2) Đang trong killzone hoặc cửa sổ Silver Bullet; không có tin đỏ trong 30 phút tới."
+      - "3) Giá ở discount (mua) hoặc premium (bán) của dealing range; đã quét thanh khoản ngược hướng."
+      - "4) MSS + displacement, có FVG/OB/breaker trong vùng OTE; SMT là điểm cộng."
+      - "5) R:R tối thiểu 1:2 tới mục tiêu đầu tiên; thiếu điều kiện 1–4 thì bỏ qua."
+    example: "Ví dụ giả định: XAUUSD đạt 1, 2, 3, 4 nhưng mục tiêu chỉ cách 6 giá trong khi SL 5 giá (R:R 1:1,2) → bỏ lệnh dù setup đẹp."
+    mistakes:
+      - "Tự 'nới' checklist khi đã ngồi chờ lâu mà chưa có lệnh."
+    visual:
+      type: checklist
+      idea: "Thẻ checklist 5 dòng có ô tích: Bias & DOL | Killzone & tin tức | Premium/Discount + Sweep | MSS + FVG/OTE (+SMT) | R:R ≥ 1:2. Dưới cùng dòng chữ đỏ: 'Thiếu 1 điều kiện = Không vào lệnh'."
+  - part: 20
+    title: "Quản lý rủi ro và tâm lý khi học ICT"
+    objective: "Áp dụng quy tắc rủi ro, giới hạn lệnh và cách luyện tập phù hợp với phương pháp ICT."
+    key_points:
+      - "Rủi ro cố định 0,5–1% mỗi lệnh; tối đa 1–2 lệnh mỗi killzone và dừng giao dịch trong ngày sau 2 lệnh thua."
+      - "Chốt một phần tại thanh khoản nội bộ đầu tiên, dời SL về hòa vốn khi giá tạo cấu trúc mới theo hướng lệnh."
+      - "ICT có rất nhiều khái niệm; chọn một mô hình (ví dụ Silver Bullet) và backtest/forward test ít nhất vài chục lệnh trước khi thêm công cụ."
+      - "Ghi nhật ký có ảnh, giờ VN và giờ NY của lệnh để kiểm tra tính hiệu quả theo từng killzone."
+    example: "Ví dụ giả định: tài khoản 2.000 USD, rủi ro 0,5% = 10 USD. EURUSD SL 10 pip → khối lượng 0,10 lot (1 pip ≈ 1 USD với 0,1 lot)."
+    mistakes:
+      - "Thêm ngày càng nhiều khái niệm vào một biểu đồ cho đến khi mọi hướng đều có 'lý do'."
+    visual:
+      type: formula
+      idea: "Bảng quy tắc: Rủi ro/lệnh 0,5–1% | Tối đa lệnh/killzone 2 | Dừng ngày sau 2 lệnh thua | Chốt 50% tại TP1, SL về hòa vốn. Bên dưới công thức: Lot = Rủi ro USD ÷ (SL pip × giá trị pip), ví dụ 10 ÷ (10 × 10) = 0,10."
+sources:
+  - "https://www.youtube.com/playlist?list=PLVgHx4Z63paYiFGQ56PjTF1PGePL3r69s"
+  - "https://www.youtube.com/watch?v=tmeCWULSTHc"
+  - "https://www.youtube.com/watch?v=nQfHZ2DEJ8c"
+  - "https://www.youtube.com/playlist?list=PLPQdF5CtaHIiHX6FB00b5ycVOD4joZ2aE"
+  - "https://www.theinnercircletraders.com/ict-trading-strategy-london-open-model/"
+  - "https://www.ictkillzone.com/ict-kill-zones"
+  - "https://innercircletrader.net/tutorials/killzone-silver-bullet-overlap/"
+  - "https://backtrex.com/en/blog/ict-silver-bullet-strategy-trading-guide"
+  - "https://www.ultimamarkets.com/academy/ict-silver-bullet-times-to-trade/"
+  - "https://www.studocu.vn/vn/document/truong-dai-hoc-bach-khoa-ha-noi/teaching-methodologies/smc-by-ict-read-and-comment-by-tuan/82030683"
