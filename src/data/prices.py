@@ -73,15 +73,43 @@ def _yahoo(code: str, range_: str = "6mo") -> Series:
 
 
 def _gold_spot() -> float:
-    resp = requests.get("https://api.gold-api.com/price/XAU", timeout=30, headers=UA)
-    resp.raise_for_status()
-    return float(resp.json()["price"])
+    """Giá vàng spot: gold-api.com → dự phòng Twelve Data. Cả hai lỗi thì raise để nơi gọi dùng giá tương lai."""
+    import time
+    errors = []
+    for attempt in range(2):
+        try:
+            resp = requests.get("https://api.gold-api.com/price/XAU", timeout=20, headers=UA)
+            resp.raise_for_status()
+            return float(resp.json()["price"])
+        except Exception as exc:
+            errors.append(f"gold-api: {type(exc).__name__}")
+            time.sleep(3)
+    key = env("TWELVEDATA_API_KEY")
+    if key:
+        try:
+            r = requests.get("https://api.twelvedata.com/price", params={"symbol": "XAU/USD", "apikey": key},
+                             timeout=20).json()
+            if "price" in r:
+                return float(r["price"])
+            errors.append(f"twelvedata: {r.get('message')}")
+        except Exception as exc:
+            errors.append(f"twelvedata: {type(exc).__name__}")
+    raise RuntimeError("Không lấy được giá vàng spot (" + "; ".join(errors) + ")")
+
+
+def _basis(futures_last: float) -> tuple[float, str]:
+    """Chênh lệch spot - tương lai. Không lấy được spot → 0 (dùng giá tương lai, ghi chú lại)."""
+    try:
+        return _gold_spot() - futures_last, ""
+    except Exception as exc:
+        print(f"  ! {exc} → dùng giá hợp đồng tương lai GC=F")
+        return 0.0, "giá hợp đồng tương lai GC=F (nguồn spot tạm lỗi)"
 
 
 def _yahoo_gold_adjusted(range_: str = "6mo") -> Series:
     fut = _yahoo("XAUUSD", range_)
-    spot = _gold_spot()
-    basis = spot - fut.last
+    basis, note = _basis(fut.last)
+    spot = fut.last + basis
     candles = [Candle(c.date, c.open + basis, c.high + basis, c.low + basis, c.close + basis, c.volume)
                for c in fut.candles]
     return Series("XAUUSD", candles, spot, "Yahoo GC=F + gold-api spot",
@@ -141,7 +169,7 @@ def get_m5(code: str) -> Series:
     ]
     last = result["meta"].get("regularMarketPrice") or candles[-1].close
     if code == "XAUUSD":
-        basis = _gold_spot() - last
+        basis, _ = _basis(last)
         candles = [Candle(c.date, c.open + basis, c.high + basis, c.low + basis, c.close + basis, c.volume)
                    for c in candles]
         last += basis
@@ -158,8 +186,8 @@ def get_intraday(code: str) -> Series:
             print(f"  ! Twelve Data H1 lỗi ({exc}), dùng Yahoo")
     series = _yahoo_h1(code)
     if code == "XAUUSD":
-        spot = _gold_spot()
-        basis = spot - series.last
+        basis, _ = _basis(series.last)
+        spot = series.last + basis
         series = Series(code, [Candle(c.date, c.open + basis, c.high + basis, c.low + basis, c.close + basis, c.volume)
                                for c in series.candles], spot, "Yahoo GC=F + gold-api spot",
                         [f"Nến quy đổi từ GC=F, chênh lệch {basis:+.2f}"])

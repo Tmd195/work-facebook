@@ -394,6 +394,8 @@ def track(check: bool = False) -> bool:
     if check:
         print("DUE" if due else "NONE")
         return True
+    if not due:
+        return True
     m5 = get_m5("XAUUSD")
     for slot, entry in due:
         posted = datetime.fromisoformat(entry["posted_at"]).astimezone(timezone.utc)
@@ -438,13 +440,24 @@ def auto(check: bool = False) -> bool:
         print("DUE" if "DUE" in buf.getvalue() else "NONE")
         return True
     ok = True
+    errs_path = ROOT / "state" / "errors.json"
+    errs = _load(errs_path)
     for fn in (news, examples, track):
         try:
             ok = fn(False) and ok
+            errs.pop(fn.__name__, None)
         except Exception as exc:
             traceback.print_exc()
-            telegram.need_fix(f"❌ Lỗi khi chạy comment theo dõi '{fn.__name__}': {type(exc).__name__}: {exc}")
+            n = errs.get(fn.__name__, 0) + 1
+            errs[fn.__name__] = n
+            msg = f"comment theo dõi '{fn.__name__}': {type(exc).__name__}: {str(exc)[:200]}"
+            if n == 1:
+                telegram.send(f"⚠️ Lỗi tạm thời khi chạy {msg}\n🔧 Hệ thống sẽ tự thử lại ở vòng sau.")
+            elif n == 3:
+                telegram.need_fix(f"❌ Lỗi lặp lại 3 lần liên tiếp khi chạy {msg}")
             ok = False
+    errs_path.parent.mkdir(parents=True, exist_ok=True)
+    errs_path.write_text(json.dumps(errs, ensure_ascii=False), encoding="utf-8")
     return ok
 
 
