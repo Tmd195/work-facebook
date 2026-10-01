@@ -62,12 +62,22 @@ def setup_telegram(v: dict) -> bool:
 
 
 def setup_facebook(v: dict) -> bool:
+    # Có user token mới (vừa lấy thêm quyền) → luôn đổi lại token Page; xong thì xoá user token tạm khỏi .env
+    if v.get("FB_USER_TOKEN") and v.get("FB_APP_ID") and v.get("FB_APP_SECRET"):
+        ok = _exchange_facebook(v)
+        if ok:
+            write_env("FB_USER_TOKEN", "")
+        return ok
     if v.get("FB_PAGE_TOKEN") and v.get("FB_PAGE_ID"):
         page = requests.get(f"{GRAPH}/{v['FB_PAGE_ID']}", timeout=30,
                             params={"fields": "name", "access_token": v["FB_PAGE_TOKEN"]}).json()
         if "name" in page:
             print(f"✓ Facebook: token Page '{page['name']}' đang hoạt động")
             return True
+    return _exchange_facebook(v)
+
+
+def _exchange_facebook(v: dict) -> bool:
     app_id, secret, user_tok = v.get("FB_APP_ID"), v.get("FB_APP_SECRET"), v.get("FB_USER_TOKEN")
     if not (app_id and secret and user_tok):
         print("- Facebook: cần đủ FB_APP_ID, FB_APP_SECRET, FB_USER_TOKEN")
@@ -85,7 +95,7 @@ def setup_facebook(v: dict) -> bool:
         print(f"✗ Facebook: không thấy Page nào - {pages.get('error', {}).get('message', 'kiểm tra lại quyền khi tạo token')}")
         return False
     want = v.get("FB_PAGE_NAME", "").lower()
-    page = next((p for p in data if want and want in p["name"].lower()), None)
+    page = next((p for p in data if p["id"] == v.get("FB_PAGE_ID")), None) or         next((p for p in data if want and want in p["name"].lower()), None)
     if page is None:
         if len(data) > 1:
             print("! Facebook: tài khoản quản lý nhiều Page:")
