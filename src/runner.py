@@ -93,6 +93,8 @@ def label(job: str) -> str:
 # ===================================================================== chạy 1 việc
 
 def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: int = 3) -> bool:
+    if not (CONFIG.get("autopost") or {}).get("live", False):
+        dry_run = True                       # công tắc an toàn: chưa bật đăng thật
     now = datetime.now(TZ)
     day = now.strftime("%d/%m")
     target = target_time(job, now)

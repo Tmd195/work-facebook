@@ -3,9 +3,13 @@
 # ============================================================
 
 brand:
-  name: "FOREX DAILY"          # Tên page (tạm) - đổi khi có thương hiệu
-  handle: "facebook.com/yourpage"
+  name: "DUY THÁI ĐẶNG"        # Tên hiển thị trên ảnh
+  handle: "facebook.com/Dangduythai9xx"
   logo: ""                     # Đường dẫn logo PNG, để trống nếu chưa có
+
+# Công tắc đăng thật: false = chỉ gửi bản xem trước về Telegram, KHÔNG đăng lên Page
+autopost:
+  live: false
 
 timezone: "Asia/Ho_Chi_Minh"
 
