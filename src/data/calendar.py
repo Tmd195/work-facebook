@@ -6,19 +6,20 @@ import requests
 
 from src.config import CONFIG, ROOT, TZ
 
-FEED_URL = "https://nfs.faireconomy.media/ff_calendar_thisweek.json"
+FEED_URL = "https://nfs.faireconomy.media/ff_calendar_{which}.json"
 
 
-CACHE = ROOT / "state" / "calendar_week.json"
+CACHE_DIR = ROOT / "state"
 CACHE_TTL = timedelta(hours=1)
 
 
-def fetch_week() -> list[dict]:
-    """Feed giới hạn số lần gọi, nên lưu đệm 1 giờ; nếu feed lỗi thì dùng bản đệm cũ."""
+def fetch_week(which: str = "thisweek") -> list[dict]:
+    """which: thisweek | nextweek. Feed giới hạn số lần gọi, nên lưu đệm 1 giờ; nếu feed lỗi thì dùng bản đệm cũ."""
+    CACHE = CACHE_DIR / ("calendar_week.json" if which == "thisweek" else f"calendar_{which}.json")
     if CACHE.exists() and datetime.now() - datetime.fromtimestamp(CACHE.stat().st_mtime) < CACHE_TTL:
         return json.loads(CACHE.read_text(encoding="utf-8"))
     try:
-        resp = requests.get(FEED_URL, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+        resp = requests.get(FEED_URL.format(which=which), timeout=30, headers={"User-Agent": "Mozilla/5.0"})
         resp.raise_for_status()
         data = resp.json()
     except (requests.RequestException, ValueError) as exc:

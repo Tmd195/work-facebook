@@ -181,6 +181,29 @@ def run_strategy(session: str, post_file: str | None = None):
     return result, images
 
 
+def run_weekly():
+    """Chủ nhật 22:00: tổng quan tuần mới (lịch tin cả tuần + xu hướng DXY/XAUUSD/EURUSD/GBPUSD)."""
+    from src.content import weekly
+    from src.design import weekly_album
+
+    now = datetime.now(TZ)
+    out_dir = OUTPUT / now.strftime("%Y-%m-%d")
+    out_dir.mkdir(parents=True, exist_ok=True)
+    print(f"[{now:%H:%M}] Tổng quan tuần mới")
+    ctx = weekly.build_context(now)
+    print(f"  Tuần {ctx['tuần']} · {len(ctx['calendar'])} tin đỏ")
+    result = weekly.generate(ctx)
+    if not result:
+        print("✗ Không tạo được bài tổng quan tuần")
+        return None
+    images = weekly_album.render_album(out_dir, ctx, result)
+    (out_dir / "weekly.txt").write_text(weekly.finalize(result["post"]), encoding="utf-8")
+    (out_dir / "weekly.json").write_text(json.dumps({"context": ctx, "result": result}, ensure_ascii=False, indent=1),
+                                         encoding="utf-8")
+    print(f"✓ Xong ({result['writer']}): {len(images)} ảnh")
+    return result, images
+
+
 def check_keys():
     """Kiểm tra các API key trong .env có dùng được không (không in key ra màn hình)."""
     import anthropic
@@ -212,7 +235,7 @@ def check_keys():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("job", choices=["morning", "knowledge", "plan", "strategy", "check"])
+    parser.add_argument("job", choices=["morning", "knowledge", "plan", "strategy", "weekly", "check"])
     parser.add_argument("--all-styles", action="store_true")
     parser.add_argument("--post", help="file JSON chứa bài tự viết")
     parser.add_argument("--series", help="id series (mặc định: series đang đăng dở)")
@@ -221,6 +244,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
     if args.job == "morning":
         run_morning(args.all_styles, args.post)
+    elif args.job == "weekly":
+        run_weekly()
     elif args.job == "strategy":
         run_strategy(args.session, args.post)
     elif args.job == "plan":

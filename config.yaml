@@ -70,3 +70,4 @@ schedule:
   knowledge: { times: ["12:00", "21:00"], days: [mon, tue, wed, thu, fri, sat, sun] }   # 2 bài/ngày, mỗi lần 1 phần tiếp theo
   strategy_ae: { time: "10:00", days: [mon, tue, wed, thu, fri] }   # Chiến lược XAUUSD phiên Á - Âu
   strategy_us: { time: "18:30", days: [mon, tue, wed, thu, fri] }   # Chiến lược XAUUSD phiên Mỹ (mùa đông: 19:30)
+  weekly:      { time: "22:00", days: [sun] }                       # Tổng quan tuần mới

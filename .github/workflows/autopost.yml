@@ -11,12 +11,13 @@ on:
     - cron: "8 11 * * 1-5"    # 18:08 VN → Chiến lược phiên Mỹ 18:30 (mùa hè Mỹ)
     - cron: "8 12 * * 1-5"    # 19:08 VN → Chiến lược phiên Mỹ 19:30 (mùa đông Mỹ)
     - cron: "38 13 * * *"     # 20:38 VN → Kiến thức 21:00
+    - cron: "38 14 * * 0"     # Chủ nhật 21:38 VN → Tổng quan tuần mới 22:00
   workflow_dispatch:
     inputs:
       job:
         description: "Bài cần chạy"
         type: choice
-        options: [morning, strategy_ae, knowledge, strategy_us]
+        options: [morning, strategy_ae, knowledge, strategy_us, weekly]
       dry_run:
         description: "Chạy thử (không đăng Facebook)"
         type: boolean
@@ -56,6 +57,7 @@ jobs:
             "8 11 * * 1-5")  JOB=strategy_us ;;
             "8 12 * * 1-5")  JOB=strategy_us ;;
             "38 13 * * *")   JOB=knowledge ;;
+            "38 14 * * 0")   JOB=weekly ;;
             *)               JOB="${{ inputs.job }}" ;;
           esac
           FLAGS=""

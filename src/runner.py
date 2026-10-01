@@ -63,6 +63,8 @@ def post_meta(job: str, out_dir) -> dict:
     if job == "morning":
         ctx = json.loads((out_dir / "morning.json").read_text(encoding="utf-8"))["context"]
         return {"events": ctx["calendar"]}
+    if job == "weekly":
+        return {}
     if job == "knowledge":
         meta = json.loads((out_dir / "knowledge.json").read_text(encoding="utf-8"))
         return {"series": meta["series"], "part": meta["part"]}
@@ -90,6 +92,8 @@ def _files(job: str, out_dir):
         return out_dir / "morning.txt", [out_dir / "morning.png"]
     if job == "knowledge":
         return out_dir / "knowledge.txt", sorted(out_dir.glob("knowledge_[0-9][0-9].png"))
+    if job == "weekly":
+        return out_dir / "weekly.txt", sorted(out_dir.glob("weekly_[0-9][0-9].png"))
     s = job.split("_")[1]
     return out_dir / f"strategy_{s}.txt", sorted(out_dir.glob(f"strategy_{s}_[0-9][0-9].png"))
 
@@ -100,6 +104,8 @@ def generate(job: str):
         return run.run_morning()
     if job == "knowledge":
         return run.run_knowledge()
+    if job == "weekly":
+        return run.run_weekly()
     return run.run_strategy(job.split("_")[1])
 
 
@@ -108,7 +114,7 @@ def label(job: str) -> str:
         from src.content import knowledge
         nxt = knowledge.next_lesson()
         return f"Kiến thức: {nxt[0]['name']} – Phần {nxt[1]['part']}/{len(nxt[0]['lessons'])}" if nxt else "Kiến thức"
-    return {"morning": "Bản tin sáng", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
+    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
             "strategy_us": "Chiến lược XAUUSD phiên Mỹ"}[job]
 
 
@@ -192,7 +198,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=["morning", "strategy_ae", "knowledge", "strategy_us"])
+    ap.add_argument("job", choices=["morning", "strategy_ae", "knowledge", "strategy_us", "weekly"])
     ap.add_argument("--dry-run", action="store_true", help="tạo bài + báo Telegram, không đăng")
     ap.add_argument("--now", action="store_true", help="không chờ đúng giờ đăng")
     ap.add_argument("--at", help="đăng vào giờ chỉ định HH:MM (giờ VN), dùng cho bài đăng bổ sung")

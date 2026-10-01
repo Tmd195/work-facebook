@@ -50,3 +50,7 @@ def strategy(session: str, bias: str) -> str:
     sess = "#PhienAu" if session == "ae" else "#PhienMy"
     b = {"giảm": "#XuHuongGiam", "tăng": "#XuHuongTang"}.get(bias, "")
     return " ".join(_dedupe([BRAND, "#XAUUSD", "#giavang", "#chienluocvang", sess] + ([b] if b else []) + ["#forex"]))
+
+
+def weekly() -> str:
+    return " ".join(_dedupe([BRAND, "#TongQuanTuan", "#XAUUSD", "#EURUSD", "#GBPUSD", "#DXY", "#giavang", "#forex"]))
