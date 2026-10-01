@@ -50,8 +50,8 @@ def _upload_photo(image: Path, published: bool, caption: str = "") -> str:
     return res.get("post_id") or res["id"]
 
 
-def publish(caption: str, images: list[Path], retries: int = 3) -> str:
-    """Đăng bài, trả về link bài viết. Tự thử lại khi lỗi mạng / lỗi tạm thời của Facebook."""
+def publish(caption: str, images: list[Path], retries: int = 3) -> tuple[str, str]:
+    """Đăng bài, trả về (link, post_id). Tự thử lại khi lỗi mạng / lỗi tạm thời của Facebook."""
     last_exc = None
     for attempt in range(retries):
         try:
@@ -63,7 +63,7 @@ def publish(caption: str, images: list[Path], retries: int = 3) -> str:
                 for i, m in enumerate(media):
                     data[f"attached_media[{i}]"] = json.dumps(m)
                 post_id = _call("POST", f"{env('FB_PAGE_ID')}/feed", data=data)["id"]
-            return permalink(post_id)
+            return permalink(post_id), post_id
         except FacebookError as exc:
             if exc.needs_user:
                 raise
@@ -72,6 +72,27 @@ def publish(caption: str, images: list[Path], retries: int = 3) -> str:
             last_exc = exc
         time.sleep(20 * (attempt + 1))
     raise FacebookError(f"Đăng bài thất bại sau {retries} lần: {last_exc}")
+
+
+def comment(post_id: str, message: str, image: Path | None = None, retries: int = 3) -> str:
+    """Comment với tư cách Page dưới bài viết (kèm 1 ảnh nếu có). Trả về id comment."""
+    last_exc = None
+    for attempt in range(retries):
+        try:
+            if image:
+                with open(image, "rb") as f:
+                    res = _call("POST", f"{post_id}/comments", data={"message": message}, files={"source": f})
+            else:
+                res = _call("POST", f"{post_id}/comments", data={"message": message})
+            return res["id"]
+        except FacebookError as exc:
+            if exc.needs_user:
+                raise
+            last_exc = exc
+        except requests.RequestException as exc:
+            last_exc = exc
+        time.sleep(15 * (attempt + 1))
+    raise FacebookError(f"Comment thất bại sau {retries} lần: {last_exc}")
 
 
 def permalink(post_id: str) -> str:

@@ -124,6 +124,30 @@ def _yahoo_h1(code: str) -> Series:
     return Series(code, candles, last, "Yahoo Finance")
 
 
+def get_m5(code: str) -> Series:
+    """Nến M5 ~5 ngày gần nhất (Yahoo). Vàng được quy đổi về giá spot như các khung khác."""
+    resp = requests.get(
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{YAHOO_SYMBOL[code]}",
+        params={"interval": "5m", "range": "5d"}, headers=UA, timeout=30,
+    )
+    resp.raise_for_status()
+    result = resp.json()["chart"]["result"][0]
+    q = result["indicators"]["quote"][0]
+    candles = [
+        Candle(datetime.fromtimestamp(ts, timezone.utc), q["open"][i], q["high"][i], q["low"][i], q["close"][i],
+               (q.get("volume") or [0])[i] or 0)
+        for i, ts in enumerate(result["timestamp"])
+        if None not in (q["open"][i], q["high"][i], q["low"][i], q["close"][i])
+    ]
+    last = result["meta"].get("regularMarketPrice") or candles[-1].close
+    if code == "XAUUSD":
+        basis = _gold_spot() - last
+        candles = [Candle(c.date, c.open + basis, c.high + basis, c.low + basis, c.close + basis, c.volume)
+                   for c in candles]
+        last += basis
+    return Series(code, candles, last, "Yahoo Finance 5m")
+
+
 def get_intraday(code: str) -> Series:
     """Nến H1 khoảng 1 tháng gần nhất."""
     key = env("TWELVEDATA_API_KEY")

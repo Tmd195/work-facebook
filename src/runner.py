@@ -47,15 +47,37 @@ def _slot(job: str, target: datetime) -> str:
     return f"{target:%Y-%m-%d} {job} {target:%H:%M}"
 
 
+def load_posted() -> dict:
+    import json
+    return json.loads(POSTED.read_text(encoding="utf-8")) if POSTED.exists() else {}
+
+
 def already_posted(job: str, target: datetime) -> bool:
-    import json
-    return POSTED.exists() and _slot(job, target) in json.loads(POSTED.read_text(encoding="utf-8"))
+    entry = load_posted().get(_slot(job, target))
+    return bool(entry) and not (isinstance(entry, dict) and entry.get("preview"))
 
 
-def mark_posted(job: str, target: datetime, link: str):
+def post_meta(job: str, out_dir) -> dict:
+    """Dữ liệu cần cho các comment theo dõi sau này (output/ không được lưu giữa các lần chạy)."""
     import json
-    data = json.loads(POSTED.read_text(encoding="utf-8")) if POSTED.exists() else {}
-    data[_slot(job, target)] = link
+    if job == "morning":
+        ctx = json.loads((out_dir / "morning.json").read_text(encoding="utf-8"))["context"]
+        return {"events": ctx["calendar"]}
+    if job == "knowledge":
+        meta = json.loads((out_dir / "knowledge.json").read_text(encoding="utf-8"))
+        return {"series": meta["series"], "part": meta["part"]}
+    s = job.split("_")[1]
+    d = json.loads((out_dir / f"strategy_{s}.json").read_text(encoding="utf-8"))
+    return {"session": s, "scenarios": d["result"]["scenarios"], "price": d["data"]["giá_hiện_tại"],
+            "title": d["result"]["title"]}
+
+
+def mark_posted(job: str, target: datetime, link: str, post_id: str | None = None, meta: dict | None = None,
+                preview: bool = False):
+    import json
+    data = load_posted()
+    data[_slot(job, target)] = {"job": job, "link": link, "post_id": post_id, "posted_at": datetime.now(TZ).isoformat(),
+                                "preview": preview, "meta": meta or {}}
     keep = sorted(data)[-200:]                     # giữ 200 bài gần nhất
     POSTED.parent.mkdir(parents=True, exist_ok=True)
     POSTED.write_text(json.dumps({k: data[k] for k in keep}, ensure_ascii=False, indent=1), encoding="utf-8")
@@ -140,19 +162,22 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     # --- 2. Chờ đúng giờ rồi đăng
     if not no_wait and not dry_run:
         wait_until(target)
+    meta = post_meta(job, out_dir)
     if dry_run:
         telegram.send_preview(f"🧪 [XEM TRƯỚC - chưa đăng] {name} {day}\n{len(images)} ảnh · bài đầy đủ bên dưới. "
                               f"Anh duyệt, nếu ổn nhắn em bật đăng thật.", caption, images)
+        if not already_posted(job, target):
+            mark_posted(job, target, "preview", None, meta, preview=True)
         return True
     try:
-        link = facebook.publish(caption, images)
+        link, post_id = facebook.publish(caption, images)
     except facebook.FacebookError as exc:
         hint = ("\n👉 Token Facebook hết hạn hoặc thiếu quyền - cần anh lấy lại token theo hướng dẫn."
                 if exc.needs_user else "")
         telegram.send(f"❌ {name} {day}: đăng Facebook thất bại.\n{exc}{hint}")
         return False
 
-    mark_posted(job, target, link)
+    mark_posted(job, target, link, post_id, meta)
     if job == "knowledge":
         import json
         from src.content import knowledge

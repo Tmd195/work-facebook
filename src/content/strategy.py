@@ -11,8 +11,8 @@ import re
 from src.content import llm
 
 HASHTAGS = "#XAUUSD #giavang #gold #forex #chienluocvang"
-DISCLAIMER = ("⚠️ Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. "
-              "Hãy chờ tín hiệu xác nhận và quản lý rủi ro cho từng lệnh.")
+DISCLAIMER = ("⚠️ Đây là góc nhìn cá nhân của Thái, không phải 1 lời khuyên đầu tư. Hãy tự chịu trách nhiệm "
+              "với mọi quyết định của bản thân tại thời điểm hiện tại cũng như tương lai.")
 
 SYSTEM_PROMPT = """Bạn là chuyên viên phân tích vàng (XAUUSD) của một Facebook Page cho trader Việt Nam.
 Nhiệm vụ: viết BÀI CHIẾN LƯỢC CHUYÊN SÂU cho phiên giao dịch được giao, dựa trên khối DỮ LIỆU (giá thật, đa khung,

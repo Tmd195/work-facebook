@@ -1,0 +1,95 @@
+# Comment theo dõi dưới các bài đã đăng (chạy riêng, không làm trễ lịch đăng bài chính).
+# Giờ cron là UTC (giờ VN = UTC + 7).
+name: Follow-up comments
+
+on:
+  schedule:
+    - cron: "*/15 1-19 * * 1-5"   # 08:00-02:45 VN: kiểm tra tin đỏ vừa ra → comment dưới Bản tin sáng
+    - cron: "32 5 * * *"          # 12:32 VN: ví dụ thực tế cho bài Kiến thức 12:00
+    - cron: "32 14 * * *"         # 21:32 VN: ví dụ thực tế cho bài Kiến thức 21:00
+    - cron: "0 15 * * 1-5"        # 22:00 VN: cập nhật lệnh cho các bài Chiến lược
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "Loại comment"
+        type: choice
+        options: [news, examples, track]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: followup
+  cancel-in-progress: false
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Chọn việc theo lịch
+        id: pick
+        run: |
+          case "${{ github.event.schedule }}" in
+            "*/15 1-19 * * 1-5") JOB=news ;;
+            "32 5 * * *")        JOB=examples ;;
+            "32 14 * * *")       JOB=examples ;;
+            "0 15 * * 1-5")      JOB=track ;;
+            *)                   JOB="${{ inputs.job }}" ;;
+          esac
+          echo "job=$JOB" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Cài thư viện cơ bản
+        run: pip install -r requirements.txt
+
+      - name: Có việc cần làm không?
+        id: check
+        run: echo "status=$(python -m src.followup ${{ steps.pick.outputs.job }} --check | tail -1)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-node@v4
+        if: steps.check.outputs.status == 'DUE'
+        with:
+          node-version: "20"
+
+      - name: Cài trình duyệt & Claude Code
+        if: steps.check.outputs.status == 'DUE'
+        run: |
+          python -m playwright install --with-deps chromium
+          npm install -g @anthropic-ai/claude-code
+
+      - name: Comment
+        if: steps.check.outputs.status == 'DUE'
+        run: python -m src.followup ${{ steps.pick.outputs.job }}
+
+      - name: Lưu trạng thái
+        if: always() && steps.check.outputs.status == 'DUE'
+        run: |
+          git config user.name "autopost-bot"
+          git config user.email "autopost-bot@users.noreply.github.com"
+          git add state/followups.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Cập nhật trạng thái comment"
+            for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+          fi
+
+      - name: Báo lỗi hệ thống
+        if: failure()
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode text="❌ Lỗi hệ thống khi chạy comment '${{ steps.pick.outputs.job }}'. Xem chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

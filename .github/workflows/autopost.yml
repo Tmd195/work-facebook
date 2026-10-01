@@ -85,7 +85,10 @@ jobs:
           git config user.name "autopost-bot"
           git config user.email "autopost-bot@users.noreply.github.com"
           git add state/series_progress.json state/posted.json 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m "Cập nhật tiến độ đăng bài" && git push)
+          if ! git diff --cached --quiet; then
+            git commit -m "Cập nhật tiến độ đăng bài"
+            for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+          fi
 
       - name: Báo lỗi hệ thống
         if: failure()
