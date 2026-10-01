@@ -1,11 +1,16 @@
 {
   "done": {
-    "price-action-nhap-mon": 1
+    "price-action-nhap-mon": 2
   },
   "history": [
     {
       "series": "price-action-nhap-mon",
       "part": 1,
+      "date": "2026-10-01"
+    },
+    {
+      "series": "price-action-nhap-mon",
+      "part": 2,
       "date": "2026-10-01"
     }
   ]
