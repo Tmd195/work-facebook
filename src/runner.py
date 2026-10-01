@@ -151,7 +151,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
             telegram.send(f"🔧 Đang sửa lỗi: thử lại lần {k + 1}/{attempts} (đổi nguồn dữ liệu dự phòng, cho AI viết lại)...")
             time.sleep(60 * k)
     else:
-        telegram.send(f"❌ {name} {day} KHÔNG hoàn thành sau {attempts} lần thử.\n"
+        telegram.need_fix(f"❌ {name} {day} KHÔNG hoàn thành sau {attempts} lần thử.\n"
                       f"Lỗi cuối: {err}\nBài này sẽ không được đăng. Em cần anh kiểm tra giúp.")
         return False
     if had_error:
@@ -175,7 +175,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     except facebook.FacebookError as exc:
         hint = ("\n👉 Token Facebook hết hạn hoặc thiếu quyền - cần anh lấy lại token theo hướng dẫn."
                 if exc.needs_user else "")
-        telegram.send(f"❌ {name} {day}: đăng Facebook thất bại.\n{exc}{hint}")
+        telegram.need_fix(f"❌ {name} {day}: đăng Facebook thất bại.\n{exc}{hint}")
         return False
 
     mark_posted(job, target, link, post_id, meta)

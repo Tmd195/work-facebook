@@ -60,7 +60,7 @@ def publish_comment(entry: dict, text: str, image: Path | None, what: str) -> bo
     try:
         facebook.comment(entry["post_id"], text, image)
     except facebook.FacebookError as exc:
-        telegram.send(f"❌ Comment thất bại: {what}\n{exc}")
+        (telegram.need_fix if exc.needs_user else telegram.send)(f"❌ Comment thất bại: {what}\n{exc}")
         return False
     telegram.send(f"💬 Đã comment: {what}\n🔗 Bài viết: {entry['link']}\nAnh kiểm tra nếu cần sửa đổi.")
     return True
