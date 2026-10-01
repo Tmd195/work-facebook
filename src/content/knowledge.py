@@ -168,9 +168,11 @@ def generate(series: dict, lesson: dict, ref_prices: dict) -> dict | None:
     return {**result, "writer": "ai"}
 
 
-def finalize(post: str, facts: list[str]) -> str:
+def finalize(post: str, facts: list[str], series_id: str = "") -> str:
     """Gắn các mốc giá thật tìm được trên biểu đồ, mỗi mốc một dòng ngắn: "📊 Kháng cự gần nhất: 4,258.58".
     Chỉ giữ các mốc giá; thông tin mô tả (RSI, Supertrend...) đã nằm trên ảnh."""
     levels = [f for f in facts if not f.startswith(("RSI", "Supertrend", "Giá so với"))]
     note = "\n\n" + "\n".join(f"📊 {f}" for f in levels) if levels else ""
-    return f"{post.rstrip()}{note}\n\n{HASHTAGS}"
+    from src.content import hashtags
+    from src.content.fbtext import render
+    return f"{render(post).rstrip()}{note}\n\n{hashtags.knowledge(series_id)}"

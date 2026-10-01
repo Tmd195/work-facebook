@@ -168,5 +168,8 @@ def generate(context: dict) -> dict:
     return {**write_with_template(context), "writer": "template"}
 
 
-def finalize(post: str) -> str:
-    return f"{post.rstrip()}\n\n{DISCLAIMER}\n\n{HASHTAGS}"
+def finalize(post: str, events: list | None = None) -> str:
+    from src.content import hashtags
+    from src.content.fbtext import render
+    return f"{render(post).rstrip()}\n\n{DISCLAIMER}\n\n{hashtags.morning(events or [])}"
+

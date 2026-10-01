@@ -4,16 +4,15 @@ name: Follow-up comments
 
 on:
   schedule:
-    - cron: "*/15 1-19 * * 1-5"   # 08:00-02:45 VN: kiểm tra tin đỏ vừa ra → comment dưới Bản tin sáng
-    - cron: "32 5 * * *"          # 12:32 VN: ví dụ thực tế cho bài Kiến thức 12:00
-    - cron: "32 14 * * *"         # 21:32 VN: ví dụ thực tế cho bài Kiến thức 21:00
-    - cron: "0 15 * * 1-5"        # 22:00 VN: cập nhật lệnh cho các bài Chiến lược
+    # 15 phút/lần, 08:00-02:45 VN: tin đỏ vừa ra, ví dụ cho bài Kiến thức đã đăng đủ 30 phút,
+    # cập nhật lệnh các bài Chiến lược (từ 22:00).
+    - cron: "*/15 1-19 * * *"
   workflow_dispatch:
     inputs:
       job:
         description: "Loại comment"
         type: choice
-        options: [news, examples, track]
+        options: [auto, news, examples, track]
 
 permissions:
   contents: write
@@ -38,13 +37,8 @@ jobs:
       - name: Chọn việc theo lịch
         id: pick
         run: |
-          case "${{ github.event.schedule }}" in
-            "*/15 1-19 * * 1-5") JOB=news ;;
-            "32 5 * * *")        JOB=examples ;;
-            "32 14 * * *")       JOB=examples ;;
-            "0 15 * * 1-5")      JOB=track ;;
-            *)                   JOB="${{ inputs.job }}" ;;
-          esac
+          JOB="${{ inputs.job }}"
+          if [ -z "$JOB" ]; then JOB=auto; fi
           echo "job=$JOB" >> "$GITHUB_OUTPUT"
 
       - uses: actions/checkout@v4

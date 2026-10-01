@@ -21,6 +21,10 @@ on:
         description: "Chạy thử (không đăng Facebook)"
         type: boolean
         default: true
+      at:
+        description: "Giờ đăng chỉ định HH:MM (để trống = theo lịch)"
+        type: string
+        default: ""
 
 permissions:
   contents: write          # lưu tiến độ series / bài đã đăng vào repo
@@ -56,6 +60,7 @@ jobs:
           esac
           FLAGS=""
           if [ "${{ inputs.dry_run }}" = "true" ]; then FLAGS="--dry-run --now"; fi
+          if [ -n "${{ inputs.at }}" ]; then FLAGS="$FLAGS --at ${{ inputs.at }}"; fi
           echo "job=$JOB" >> "$GITHUB_OUTPUT"
           echo "flags=$FLAGS" >> "$GITHUB_OUTPUT"
 

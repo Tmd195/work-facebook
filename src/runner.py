@@ -114,12 +114,13 @@ def label(job: str) -> str:
 
 # ===================================================================== chạy 1 việc
 
-def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: int = 3) -> bool:
+def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: int = 3, at: str | None = None) -> bool:
     if not (CONFIG.get("autopost") or {}).get("live", False):
         dry_run = True                       # công tắc an toàn: chưa bật đăng thật
     now = datetime.now(TZ)
     day = now.strftime("%d/%m")
-    target = target_time(job, now)
+    target = (now.replace(hour=int(at[:2]), minute=int(at[3:]), second=0, microsecond=0) if at
+              else target_time(job, now))
     if not no_wait and target - now > MAX_EARLY:
         print(f"Bỏ qua: giờ đăng {target:%H:%M}, còn quá sớm (lịch chạy của mùa khác)")
         return True
@@ -194,5 +195,6 @@ if __name__ == "__main__":
     ap.add_argument("job", choices=["morning", "strategy_ae", "knowledge", "strategy_us"])
     ap.add_argument("--dry-run", action="store_true", help="tạo bài + báo Telegram, không đăng")
     ap.add_argument("--now", action="store_true", help="không chờ đúng giờ đăng")
+    ap.add_argument("--at", help="đăng vào giờ chỉ định HH:MM (giờ VN), dùng cho bài đăng bổ sung")
     a = ap.parse_args()
-    sys.exit(0 if run_job(a.job, a.dry_run, a.now) else 1)
+    sys.exit(0 if run_job(a.job, a.dry_run, a.now, at=a.at) else 1)

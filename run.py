@@ -43,7 +43,7 @@ def run_morning(all_styles: bool = False, post_file: str | None = None):
     else:
         print("- Viết bài...")
         result = morning.generate(context)
-    post = morning.finalize(result["post"])
+    post = morning.finalize(result["post"], events)
 
     print("- Vẽ banner...")
     styles = list(STYLES) if all_styles else [CONFIG["design"]["style"]]
@@ -102,7 +102,7 @@ def run_knowledge(post_file: str | None = None, series_id: str | None = None, pa
         images.append(carousel.render_slide(out_dir / f"knowledge_{k:02d}.png", series["name"], lesson["part"], total,
                                             k, len(slides), sl["heading"], sl["body"], chart_img, caption,
                                             sl.get("diagram")))
-    (out_dir / "knowledge.txt").write_text(knowledge.finalize(result["post"], facts), encoding="utf-8")
+    (out_dir / "knowledge.txt").write_text(knowledge.finalize(result["post"], facts, series["id"]), encoding="utf-8")
     (out_dir / "knowledge.json").write_text(json.dumps(
         {"series": series["id"], "part": lesson["part"], "result": result, "facts": facts},
         ensure_ascii=False, indent=2), encoding="utf-8")
@@ -174,7 +174,7 @@ def run_strategy(session: str, post_file: str | None = None):
         return None
 
     images = strategy_album.render_album(out_dir, session, data, result)
-    (out_dir / f"strategy_{session}.txt").write_text(strategy.finalize(result["post"]), encoding="utf-8")
+    (out_dir / f"strategy_{session}.txt").write_text(strategy.finalize(result["post"], session, result.get("bias", "")), encoding="utf-8")
     (out_dir / f"strategy_{session}.json").write_text(json.dumps({"data": data, "result": result},
                                                                  ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"✓ Xong ({result['writer']}): {len(images)} ảnh")

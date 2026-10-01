@@ -9,7 +9,7 @@ brand:
 
 # Công tắc đăng thật: false = chỉ gửi bản xem trước về Telegram, KHÔNG đăng lên Page
 autopost:
-  live: false
+  live: true
 
 timezone: "Asia/Ho_Chi_Minh"
 

@@ -179,6 +179,8 @@ def generate(data: dict) -> dict | None:
     return None
 
 
-def finalize(post: str) -> str:
+def finalize(post: str, session: str = "us", bias: str = "") -> str:
+    from src.content import hashtags
     from src.content.fbtext import render
-    return f"{render(post).rstrip()}\n\n{DISCLAIMER}\n\n{HASHTAGS}"
+    return f"{render(post).rstrip()}\n\n{DISCLAIMER}\n\n{hashtags.strategy(session, bias)}"
+

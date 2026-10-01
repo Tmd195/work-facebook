@@ -387,7 +387,10 @@ def _track_chart(candles: list, sims: list[dict]) -> Image.Image:
 
 def track(check: bool = False) -> bool:
     from src.data.prices import get_m5
-    due = [(slot, e) for slot, e in todays_posts("strategy") if not done(f"{slot}|track")]
+    if datetime.now(TZ).hour < 22 and not check_force_track():
+        due = []
+    else:
+        due = [(slot, e) for slot, e in todays_posts("strategy") if not done(f"{slot}|track")]
     if check:
         print("DUE" if due else "NONE")
         return True
@@ -418,7 +421,34 @@ def track(check: bool = False) -> bool:
     return True
 
 
-JOBS = {"examples": examples, "news": news, "track": track}
+def check_force_track() -> bool:
+    """Chạy tay 'track' thì không chờ tới 22:00."""
+    return "track" in sys.argv
+
+
+def auto(check: bool = False) -> bool:
+    """Chạy định kỳ 15 phút/lần: tin đỏ, ví dụ Kiến thức (đủ 30 phút sau khi đăng), cập nhật lệnh (từ 22:00)."""
+    if check:
+        import io
+        from contextlib import redirect_stdout
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            for fn in (news, examples, track):
+                fn(True)
+        print("DUE" if "DUE" in buf.getvalue() else "NONE")
+        return True
+    ok = True
+    for fn in (news, examples, track):
+        try:
+            ok = fn(False) and ok
+        except Exception as exc:
+            traceback.print_exc()
+            telegram.send(f"❌ Lỗi khi chạy comment theo dõi '{fn.__name__}': {type(exc).__name__}: {exc}")
+            ok = False
+    return ok
+
+
+JOBS = {"auto": auto, "examples": examples, "news": news, "track": track}
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
