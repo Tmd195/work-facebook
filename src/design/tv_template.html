@@ -19,6 +19,8 @@
 const SPEC = __SPEC__;
 const LC = LightweightCharts;
 const T = SPEC.theme;
+document.body.style.background = T.bg;
+document.getElementById('legend').style.color = T.text;
 
 const chart = LC.createChart(document.getElementById('chart'), {
   width: SPEC.width, height: SPEC.height,

@@ -4,14 +4,7 @@ from PIL import Image, ImageDraw
 from src.config import CONFIG, SYMBOLS
 from src.design.common import SIZE_4X5, fit, fmt_price, key_levels, pick_events, sans, save, sparkline, wrap
 
-GREEN = (18, 61, 47)
-CREAM = (245, 241, 232)
-INK = (20, 20, 20)
-MUTED = (110, 108, 100)
-LIME = (214, 242, 92)
-UP = (26, 127, 75)
-DOWN = (196, 52, 40)
-DIVIDER = (214, 208, 196)
+from src.design.palette import ACCENT as LIME, BG as CREAM, DIVIDER, DOWN, INK, MUTED, PRIMARY as GREEN, SUB, UP
 
 W, H = SIZE_4X5
 M = 64
@@ -24,7 +17,7 @@ def render(path, date_label: str, focus: str, markets: dict, events: list[dict])
     # --- Khối màu trên
     d.rectangle([0, 0, W, 560], fill=GREEN)
     d.text((M, 56), CONFIG["brand"]["name"], font=sans("Bold", 24), fill=LIME)
-    d.text((W - M, 58), "FOREX · VÀNG", font=sans("SemiBold", 22), fill=(170, 200, 185), anchor="ra")
+    d.text((W - M, 58), "FOREX · VÀNG", font=sans("SemiBold", 22), fill=SUB, anchor="ra")
     d.text((M - 5, 104), "BẢN TIN SÁNG", font=sans("ExtraBold", 108), fill=CREAM)
 
     pill_w = d.textlength(date_label, font=sans("Bold", 26)) + 44

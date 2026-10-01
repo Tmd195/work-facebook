@@ -3,6 +3,7 @@ from PIL import Image, ImageDraw
 
 from src.config import CONFIG
 from src.design.common import SIZE_4X5, fit, sans, save, wrap
+from src.design.palette import CARD as CARD_C, DIVIDER as DIVIDER_C, SUB, TRACK  # noqa: F401
 from src.design.styles.block import CREAM, DIVIDER, DOWN, GREEN, INK, LIME, MUTED, UP
 
 W, H = SIZE_4X5
@@ -62,7 +63,7 @@ def render(path, number: int, category: str, title: str, points: list[str], diag
     # --- Khối tiêu đề
     d.rectangle([0, 0, W, block_h], fill=GREEN)
     d.text((M, 56), CONFIG["brand"]["name"], font=sans("Bold", 24), fill=LIME)
-    d.text((W - M, 58), "KIẾN THỨC FOREX", font=sans("SemiBold", 22), fill=(170, 200, 185), anchor="ra")
+    d.text((W - M, 58), "KIẾN THỨC FOREX", font=sans("SemiBold", 22), fill=SUB, anchor="ra")
     tag = f"KIẾN THỨC #{number:02d}  ·  {category.upper()}"
     tw = d.textlength(tag, font=sans("Bold", 24))
     d.rounded_rectangle([M, 118, M + tw + 44, 166], radius=24, fill=LIME)

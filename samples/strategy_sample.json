@@ -1,0 +1,692 @@
+{
+ "data": {
+  "loại_bài": "Kế hoạch phiên Mỹ",
+  "thời_điểm": "11:53 01/10/2026 (giờ VN)",
+  "mã": "XAUUSD",
+  "giá_hiện_tại": 4179.0,
+  "ATR_H1": 13.1,
+  "ATR_D1": 94.95,
+  "vĩ_mô": {
+   "US10Y": {
+    "label": "Lợi suất trái phiếu Mỹ 10 năm (%)",
+    "last": 5.293,
+    "chg_1d": 0.038,
+    "chg_5d": 0.179
+   },
+   "DXY": {
+    "label": "Chỉ số USD (DXY)",
+    "last": 101.613,
+    "chg_1d": 0.163,
+    "chg_5d": 0.323
+   },
+   "VIX": {
+    "label": "Chỉ số sợ hãi VIX",
+    "last": 16.34,
+    "chg_1d": 0.3,
+    "chg_5d": 1.16
+   },
+   "SPX_FUT": {
+    "label": "Hợp đồng tương lai S&P 500",
+    "last": 7751.0,
+    "chg_1d": 35.5,
+    "chg_5d": -16.0
+   },
+   "SILVER": {
+    "label": "Bạc (USD/oz)",
+    "last": 61.435,
+    "chg_1d": 1.337,
+    "chg_5d": -2.022
+   },
+   "OIL": {
+    "label": "Dầu WTI (USD/thùng)",
+    "last": 89.2,
+    "chg_1d": -1.22,
+    "chg_5d": -5.41
+   },
+   "REAL_YIELD": {
+    "label": "Lợi suất thực 10 năm - TIPS (%)",
+    "last": 2.91,
+    "chg_1d": 0.01,
+    "date": "2026-09-29"
+   }
+  },
+  "lịch_kinh_tế_hôm_nay": [
+   {
+    "time": "02:30",
+    "datetime": "2026-10-01T02:30:00+07:00",
+    "currency": "USD",
+    "impact": "Medium",
+    "title": "President Trump Speaks",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "time": "05:00",
+    "datetime": "2026-10-01T05:00:00+07:00",
+    "currency": "USD",
+    "impact": "Medium",
+    "title": "FOMC Member Kashkari Speaks",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "time": "15:00",
+    "datetime": "2026-10-01T15:00:00+07:00",
+    "currency": "GBP",
+    "impact": "Medium",
+    "title": "BOE Gov Bailey Speaks",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "time": "19:30",
+    "datetime": "2026-10-01T19:30:00+07:00",
+    "currency": "USD",
+    "impact": "Medium",
+    "title": "Unemployment Claims",
+    "forecast": "201K",
+    "previous": "197K"
+   },
+   {
+    "time": "20:30",
+    "datetime": "2026-10-01T20:30:00+07:00",
+    "currency": "EUR",
+    "impact": "Medium",
+    "title": "ECB President Lagarde Speaks",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "time": "21:00",
+    "datetime": "2026-10-01T21:00:00+07:00",
+    "currency": "USD",
+    "impact": "Medium",
+    "title": "FOMC Member Waller Speaks",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "time": "21:00",
+    "datetime": "2026-10-01T21:00:00+07:00",
+    "currency": "USD",
+    "impact": "Medium",
+    "title": "ISM Manufacturing PMI",
+    "forecast": "54.8",
+    "previous": "54.6"
+   }
+  ],
+  "phiên_hôm_nay": {
+   "Á": {
+    "status": "đang diễn ra",
+    "from": "06:00",
+    "to": "14:00",
+    "open": 4158.6,
+    "high": 4182.0,
+    "low": 4155.1,
+    "close": 4179.0,
+    "range": 26.9,
+    "change": 20.4,
+    "volume": 2887
+   },
+   "Âu": {
+    "status": "chưa mở",
+    "from": "14:00",
+    "to": "19:30"
+   },
+   "Mỹ": {
+    "status": "chưa mở",
+    "from": "19:30",
+    "to": "04:00"
+   }
+  },
+  "phiên_Mỹ_hôm_qua": {
+   "status": "đã kết thúc",
+   "from": "19:30",
+   "to": "04:00",
+   "open": 4214.5,
+   "high": 4220.7,
+   "low": 4152.4,
+   "close": 4163.3,
+   "range": 68.3,
+   "change": -51.2,
+   "volume": 79788
+  },
+  "đa_khung": {
+   "D1": {
+    "khung": "D1",
+    "giá": 4179.0,
+    "xu_hướng_EMA": "giảm",
+    "EMA20": 4298.74,
+    "EMA50": 4327.76,
+    "EMA200": 4312.73,
+    "RSI14": 37.0,
+    "ATR14": 94.95,
+    "Ichimoku": {
+     "vị_trí_giá_so_với_mây": "dưới",
+     "Tenkan": 4256.8,
+     "Kijun": 4411.2,
+     "mây_hiện_tại": [
+      4329.4,
+      4441.53
+     ],
+     "mây_tương_lai": "giảm (đỏ)"
+    },
+    "cấu_trúc_gần_nhất": {
+     "loại": "CHoCH",
+     "hướng": "giảm",
+     "mức": 4247.5,
+     "cách_đây_số_nến": 3
+    },
+    "đỉnh_swing_gần": [
+     4483.3,
+     4729.2,
+     4532.7,
+     4414.0
+    ],
+    "đáy_swing_gần": [
+     4339.7,
+     4303.4,
+     4247.5,
+     4117.3
+    ],
+    "sóng_lớn_gần_nhất": {
+     "từ": 3929.6,
+     "đến": 4729.2,
+     "hướng": "tăng",
+     "fibonacci_hồi": {
+      "0.236": 4540.49,
+      "0.382": 4423.75,
+      "0.5": 4329.4,
+      "0.618": 4235.05,
+      "0.786": 4100.71
+     }
+    }
+   },
+   "H4": {
+    "khung": "H4",
+    "giá": 4179.0,
+    "xu_hướng_EMA": "giảm",
+    "EMA20": 4185.96,
+    "EMA50": 4238.43,
+    "EMA200": 4321.82,
+    "RSI14": 44.1,
+    "ATR14": 28.61,
+    "Ichimoku": {
+     "vị_trí_giá_so_với_mây": "dưới",
+     "Tenkan": 4188.85,
+     "Kijun": 4221.55,
+     "mây_hiện_tại": [
+      4303.37,
+      4330.75
+     ],
+     "mây_tương_lai": "giảm (đỏ)"
+    },
+    "cấu_trúc_gần_nhất": {
+     "loại": "BOS",
+     "hướng": "giảm",
+     "mức": 4263.4,
+     "cách_đây_số_nến": 19
+    },
+    "đỉnh_swing_gần": [
+     4388.3,
+     4383.8,
+     4325.8,
+     4225.3
+    ],
+    "đáy_swing_gần": [
+     4252.5,
+     4263.4,
+     4117.3,
+     4152.4
+    ],
+    "sóng_lớn_gần_nhất": {
+     "từ": 4414.0,
+     "đến": 4117.3,
+     "hướng": "giảm",
+     "fibonacci_hồi": {
+      "0.236": 4187.32,
+      "0.382": 4230.64,
+      "0.5": 4265.65,
+      "0.618": 4300.66,
+      "0.786": 4350.51
+     }
+    }
+   },
+   "H1": {
+    "khung": "H1",
+    "giá": 4179.0,
+    "xu_hướng_EMA": "đi ngang/giằng co",
+    "EMA20": 4171.43,
+    "EMA50": 4177.56,
+    "EMA200": 4250.51,
+    "RSI14": 53.6,
+    "ATR14": 13.1,
+    "Ichimoku": {
+     "vị_trí_giá_so_với_mây": "trong",
+     "Tenkan": 4167.2,
+     "Kijun": 4188.85,
+     "mây_hiện_tại": [
+      4163.7,
+      4211.95
+     ],
+     "mây_tương_lai": "tăng (xanh)"
+    },
+    "cấu_trúc_gần_nhất": {
+     "loại": "CHoCH",
+     "hướng": "tăng",
+     "mức": 4166.5,
+     "cách_đây_số_nến": 1
+    },
+    "đỉnh_swing_gần": [
+     4193.9,
+     4208.2,
+     4225.3,
+     4166.5
+    ],
+    "đáy_swing_gần": [
+     4148.6,
+     4172.8,
+     4171.8,
+     4152.4
+    ],
+    "sóng_lớn_gần_nhất": {
+     "từ": 4310.2,
+     "đến": 4117.3,
+     "hướng": "giảm",
+     "fibonacci_hồi": {
+      "0.236": 4162.82,
+      "0.382": 4190.99,
+      "0.5": 4213.75,
+      "0.618": 4236.51,
+      "0.786": 4268.92
+     }
+    }
+   }
+  },
+  "trạng_thái_thị_trường": {
+   "trạng_thái": "xu hướng giảm rõ (D1 và H4 đồng thuận)",
+   "hệ_thống_áp_dụng": [
+    "Dow & cấu trúc thị trường",
+    "EMA 20/50 + Fibonacci hồi để vào thuận xu hướng",
+    "Ichimoku (Kijun/mây làm kháng cự/hỗ trợ động)"
+   ]
+  },
+  "vùng_giá": [
+   {
+    "id": "Z1",
+    "lo": 3998.69,
+    "hi": 4001.31,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "Số tròn 4000"
+    ]
+   },
+   {
+    "id": "Z2",
+    "lo": 4048.69,
+    "hi": 4051.31,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "Số tròn 4050"
+    ]
+   },
+   {
+    "id": "Z3",
+    "lo": 4099.05,
+    "hi": 4101.66,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Số tròn 4100",
+     "Fibo 0.786 D1"
+    ]
+   },
+   {
+    "id": "Z4",
+    "lo": 4105.32,
+    "hi": 4107.94,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "S2"
+    ]
+   },
+   {
+    "id": "Z5",
+    "lo": 4115.99,
+    "hi": 4118.61,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Đáy swing D1",
+     "Đáy swing H4"
+    ]
+   },
+   {
+    "id": "Z6",
+    "lo": 4132.46,
+    "hi": 4135.08,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "S1"
+    ]
+   },
+   {
+    "id": "Z7",
+    "lo": 4148.6,
+    "hi": 4155.1,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 6,
+    "thành_phần": [
+     "Đáy swing H1",
+     "Số tròn 4150",
+     "Đáy swing H1",
+     "Đáy swing H4",
+     "Đáy ngày trước",
+     "Đáy phiên Á"
+    ]
+   },
+   {
+    "id": "Z8",
+    "lo": 4163.7,
+    "hi": 4166.5,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Mây H1 (cạnh dưới)",
+     "Đỉnh swing H1"
+    ]
+   },
+   {
+    "id": "Z9",
+    "lo": 4170.99,
+    "hi": 4173.61,
+    "vị_trí": "dưới giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Đáy swing H1",
+     "Đáy swing H1"
+    ]
+   },
+   {
+    "id": "Z10",
+    "lo": 4177.56,
+    "hi": 4182.0,
+    "vị_trí": "chứa giá hiện tại",
+    "hợp_lưu": 3,
+    "thành_phần": [
+     "EMA50 H1",
+     "Pivot ngày",
+     "Đỉnh phiên Á"
+    ]
+   },
+   {
+    "id": "Z11",
+    "lo": 4186.78,
+    "hi": 4189.39,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Fibo 0.236 H4",
+     "Kijun H1"
+    ]
+   },
+   {
+    "id": "Z12",
+    "lo": 4192.59,
+    "hi": 4195.21,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "Đỉnh swing H1"
+    ]
+   },
+   {
+    "id": "Z13",
+    "lo": 4198.69,
+    "hi": 4201.31,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "Số tròn 4200"
+    ]
+   },
+   {
+    "id": "Z14",
+    "lo": 4206.67,
+    "hi": 4211.95,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 3,
+    "thành_phần": [
+     "R1",
+     "Đỉnh swing H1",
+     "Mây H1 (cạnh trên)"
+    ]
+   },
+   {
+    "id": "Z15",
+    "lo": 4221.55,
+    "hi": 4225.3,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 4,
+    "thành_phần": [
+     "Kijun H4",
+     "Đỉnh swing H1",
+     "Đỉnh swing H4",
+     "Đỉnh ngày trước"
+    ]
+   },
+   {
+    "id": "Z16",
+    "lo": 4230.64,
+    "hi": 4238.43,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 3,
+    "thành_phần": [
+     "Fibo 0.382 H4",
+     "Fibo 0.618 D1",
+     "EMA50 H4"
+    ]
+   },
+   {
+    "id": "Z17",
+    "lo": 4247.5,
+    "hi": 4252.5,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 4,
+    "thành_phần": [
+     "Đáy swing D1",
+     "Số tròn 4250",
+     "R2",
+     "Đáy swing H4"
+    ]
+   },
+   {
+    "id": "Z18",
+    "lo": 4263.4,
+    "hi": 4265.65,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Đáy swing H4",
+     "Fibo 0.5 H4"
+    ]
+   },
+   {
+    "id": "Z19",
+    "lo": 4300,
+    "hi": 4303.4,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 4,
+    "thành_phần": [
+     "Số tròn 4300",
+     "Fibo 0.618 H4",
+     "Mây H4 (cạnh dưới)",
+     "Đáy swing D1"
+    ]
+   },
+   {
+    "id": "Z20",
+    "lo": 4325.8,
+    "hi": 4330.75,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 5,
+    "thành_phần": [
+     "Đỉnh swing H4",
+     "EMA50 D1",
+     "Fibo 0.5 D1",
+     "Mây D1 (cạnh dưới)",
+     "Mây H4 (cạnh trên)"
+    ]
+   },
+   {
+    "id": "Z21",
+    "lo": 4338.39,
+    "hi": 4341.01,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "Đáy swing D1"
+    ]
+   },
+   {
+    "id": "Z22",
+    "lo": 4348.95,
+    "hi": 4351.56,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Số tròn 4350",
+     "Fibo 0.786 H4"
+    ]
+   },
+   {
+    "id": "Z23",
+    "lo": 4383.8,
+    "hi": 4388.3,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Đỉnh swing H4",
+     "Đỉnh swing H4"
+    ]
+   },
+   {
+    "id": "Z24",
+    "lo": 4398.69,
+    "hi": 4401.31,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 1,
+    "thành_phần": [
+     "Số tròn 4400"
+    ]
+   },
+   {
+    "id": "Z25",
+    "lo": 4411.2,
+    "hi": 4414.0,
+    "vị_trí": "trên giá",
+    "hợp_lưu": 2,
+    "thành_phần": [
+     "Kijun D1",
+     "Đỉnh swing D1"
+    ]
+   }
+  ]
+ },
+ "result": {
+  "title": "Hồi kỹ thuật trong xu hướng giảm: ưu tiên SELL tại 4221-4225",
+  "bias": "giảm",
+  "macro_points": [
+   "Lợi suất 10 năm Mỹ 5.293% (+0.038), cao nhất từ 2007, tiếp tục đè nặng lên vàng",
+   "DXY 101.613 (+0.163), lên vùng cao nhất 2 tháng; lợi suất thực 2.91%",
+   "PCE tháng 8 thấp hơn dự báo, xác suất Fed tăng lãi suất tháng 10 giảm còn khoảng 51.5%",
+   "Phiên Mỹ: Jobless Claims 19:30, ISM sản xuất và Waller phát biểu 21:00; thứ Sáu có NFP"
+  ],
+  "mtf": {
+   "d1": "Giá nằm dưới EMA20/50/200 và dưới mây Ichimoku, RSI 37. CHoCH giảm tại 4247.5 cách đây 3 nến, giá đã thủng Fibo 0.618 (4235.05) của sóng tăng lớn. Xu hướng trung hạn nghiêng giảm.",
+   "h4": "EMA giảm, giá dưới mây và dưới Kijun 4221.55. Nhịp hồi từ đáy 4117.3 đang chạm EMA20 H4 (4185.96) và Fibo 0.236 (4187.32). Vùng hồi hợp lý để bán là 4221.55-4238.43.",
+   "h1": "Đi ngang giằng co trong mây (4163.7-4211.95). Có CHoCH tăng tại 4166.5, RSI 53.6, giá đang thử EMA50 4177.56. Động lượng hồi ngắn hạn, chưa đủ để đảo xu hướng lớn."
+  },
+  "session_review": "Phiên Mỹ hôm qua đảo chiều mạnh từ 4220.7 xuống 4152.4, đóng cửa 4163.3 (-51.2). Phiên Á giữ được trên đáy cũ, low 4155.1 rồi hồi lên 4182.0, biên độ 26.9. Đây là nhịp hồi kỹ thuật về kháng cự, chưa phá được cấu trúc giảm.",
+  "levels": {
+   "resistance_near": [
+    4188.85,
+    4200,
+    4211.95
+   ],
+   "resistance_strong": [
+    4225.3,
+    4238.43,
+    4250
+   ],
+   "support_near": [
+    4173.61,
+    4165,
+    4155.1
+   ],
+   "support_extended": [
+    4148.6,
+    4117.3,
+    4100
+   ],
+   "pivot": {
+    "price": 4225.3,
+    "note": "Kijun H4 + đỉnh ngày trước; giá đóng H1 trên 4238.43 thì thiên hướng giảm suy yếu"
+   }
+  },
+  "scenarios": [
+   {
+    "side": "SELL",
+    "role": "chính",
+    "entry": [
+     4221.55,
+     4225.3
+    ],
+    "sl": 4247.5,
+    "tp": [
+     4182.0,
+     4152.4,
+     4117.3
+    ],
+    "trigger": "Giá hồi lên 4221.55-4225.3 và xuất hiện nến từ chối H1 (râu trên dài, nhấn chìm giảm)",
+    "invalidation": "H1 đóng cửa trên 4238.43 (EMA50 H4) hoặc ISM/Claims yếu khiến USD giảm mạnh"
+   },
+   {
+    "side": "BUY",
+    "role": "phụ",
+    "entry": [
+     4148.6,
+     4155.1
+    ],
+    "sl": 4132.46,
+    "tp": [
+     4177.56,
+     4188.85,
+     4206.67
+    ],
+    "trigger": "Giá về 4148.6-4155.1, giữ trên đáy 4152.4, H1 có nến từ chối tăng và dữ liệu Mỹ yếu",
+    "invalidation": "H1 đóng cửa dưới 4148.6, mở đường về 4117.3"
+   }
+  ],
+  "risk": [
+   "Không vào lệnh 5 phút trước và sau 19:30 và 21:00 (Claims, ISM, Waller)",
+   "Không bán đuổi ở 4179-4182; chờ giá hồi lên vùng hợp lưu cao",
+   "Lệnh BUY là ngược xu hướng: khối lượng nhỏ, chốt lời từng phần sớm",
+   "Chốt một phần tại TP1 và dời SL về hòa vốn; ATR H1 13.1 nên SL không đặt quá sát"
+  ],
+  "conclusion": "Xu hướng D1 và H4 vẫn giảm, nhịp hồi phiên Á là cơ hội tìm điểm bán. Vùng quan sát chính là 4221.55-4225.3; thủng 4148.6 thì mở rộng giảm về 4117.3, vượt 4238.43 thì đứng ngoài.",
+  "post": "🟡 CHIẾN LƯỢC XAUUSD | PHIÊN MỸ Thứ Năm, 01/10/2026\nLuận điểm: vàng đang hồi kỹ thuật trong xu hướng giảm. Ưu tiên chờ bán ở vùng 4221.55-4225.3 nếu giá xuất hiện tín hiệu từ chối. Chỉ cân nhắc mua ngắn khi giá giữ được 4148.6-4155.1.\n\n🌍 Bối cảnh vĩ mô & tin tức\nLợi suất trái phiếu Mỹ 10 năm đang ở 5.293% (+0.038), mức cao nhất kể từ 2007. DXY tăng lên 101.613, vùng cao nhất 2 tháng. Lợi suất thực giữ ở 2.91%, nên chi phí cơ hội khi nắm giữ vàng vẫn rất cao. Hôm qua, PCE tháng 8 thấp hơn kỳ vọng (core 3.0% so với cùng kỳ) và kéo xác suất Fed tăng lãi suất tháng 10 xuống khoảng 51.5%. Dù vậy, vàng vẫn mất giá trong phiên Mỹ vì lợi suất và USD tăng át đi tin tốt. Tối nay có Jobless Claims lúc 19:30 (dự báo 201K), Lagarde phát biểu lúc 20:30, ISM sản xuất (dự báo 54.8) và Waller phát biểu lúc 21:00. Số liệu mạnh sẽ củng cố USD và gây bất lợi cho vàng. Thứ Sáu có NFP nên thị trường dễ thận trọng.\n\n📊 Phân tích đa khung\nD1: giá ở dưới EMA20/50/200 và dưới mây Ichimoku, RSI 37. Có CHoCH giảm tại 4247.5 và giá đã thủng Fibo 0.618 (4235.05) của sóng tăng lớn, nên xu hướng trung hạn nghiêng giảm.\nH4: EMA xếp giảm, giá nằm dưới Kijun 4221.55. Nhịp hồi từ đáy 4117.3 đang chạm EMA20 H4 4185.96 và Fibo 0.236 4187.32. Vùng hồi lý tưởng để bán nằm ở 4221.55-4238.43, nơi hội tụ Kijun H4, Fibo 0.382 và EMA50 H4.\nH1: giá giằng co trong mây (4163.7-4211.95). CHoCH tăng tại 4166.5 và RSI 53.6 cho thấy lực hồi ngắn hạn, nhưng giá vẫn nằm dưới EMA200 H1 4250.51.\n\n⏱ Diễn biến phiên\nPhiên Mỹ hôm qua lên tới 4220.7 rồi đảo chiều mạnh xuống 4152.4, đóng cửa 4163.3 (-51.2). Phiên Á hôm nay không thủng đáy đó, tạo đáy 4155.1 rồi hồi lên 4182.0, biên độ 26.9. Như vậy phe mua đang bảo vệ vùng 4150. Tuy nhiên đây mới là nhịp hồi về kháng cự. Nếu phiên Âu quét lên 4188.85-4200 rồi suy yếu, phiên Mỹ có cơ hội nối lại đà giảm.\n\n🗺 Bản đồ vùng giá\nKháng cự gần: 4188.85 (Kijun H1), 4200, 4211.95 (R1, cạnh trên mây H1).\nKháng cự mạnh: 4221.55-4225.3 (Kijun H4, đỉnh ngày trước), 4238.43 (EMA50 H4), 4250.\nHỗ trợ gần: 4173.61, 4165, 4155.1.\nHỗ trợ mở rộng: 4148.6-4152.4 (hợp lưu 6), 4117.3, 4100.\nMốc then chốt: H1 đóng trên 4238.43 thì kịch bản giảm suy yếu; thủng 4148.6 thì mở rộng giảm.\n\n🎯 Kịch bản\nKịch bản chính, SELL 4221.55-4225.3: SL 4247.5, TP1 4182.0, TP2 4152.4, TP3 4117.3. Chỉ vào lệnh khi H1 có nến từ chối rõ (râu trên dài, nhấn chìm giảm) tại vùng này. Hủy kịch bản khi H1 đóng trên 4238.43.\nKịch bản phụ, BUY 4148.6-4155.1: SL 4132.46, TP1 4177.56, TP2 4188.85, TP3 4206.67. Kích hoạt khi giá giữ được đáy 4152.4 và có tín hiệu từ chối giảm, nhất là khi dữ liệu Mỹ yếu. Hủy khi H1 đóng dưới 4148.6, lúc đó mục tiêu giảm chuyển về 4117.3.\n\n⚠️ Quản lý rủi ro\nĐứng ngoài khoảng 5 phút trước và sau 19:30 và 21:00 vì giá có thể quét hai đầu.\nKhông bán đuổi ở 4179-4182 vì vị trí này nằm giữa biên độ, tỷ lệ lợi nhuận/rủi ro kém.\nLệnh BUY đi ngược xu hướng lớn, anh em nên giảm khối lượng và chốt lời từng phần sớm.\nĐạt TP1 thì dời SL về hòa vốn. ATR H1 13.1, nên SL không đặt quá sát vùng vào.\n\n✅ Kết luận\nThiên hướng chính vẫn là giảm theo D1 và H4. Nhịp hồi phiên Á tạo cơ hội tìm điểm bán đẹp hơn tại 4221.55-4225.3. Vùng 4148.6-4155.1 là ranh giới của phe mua trong ngắn hạn. Theo anh em, ISM tối nay có đủ mạnh để đẩy vàng thủng 4150 trước khi NFP ra không?",
+  "sources": [
+   "https://www.bloomberg.com/news/articles/2026-10-01/gold-steady-as-softer-inflation-data-tempers-fed-rate-hike-bets",
+   "https://www.riotimesonline.com/gold-silver-precious-metals-wednesday-september-30-2026",
+   "https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-wednesday-september-30-2026-gold-edges-up-from-multi-month-lows-yesterday-110253067.html",
+   "https://www.cnbc.com/2026/09/30/gold-price-metal-bullion.html",
+   "https://tradingeconomics.com/commodity/gold"
+  ],
+  "writer": "ai"
+ }
+}

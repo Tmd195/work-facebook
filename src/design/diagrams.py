@@ -15,10 +15,11 @@ import random
 from PIL import Image, ImageDraw
 
 from src.design.common import fit, sans, wrap
+from src.design.palette import CARD as CARD_C, DIVIDER as DIVIDER_C, SUB, TRACK  # noqa: F401
 from src.design.styles.block import CREAM, DIVIDER, DOWN, GREEN, INK, LIME, MUTED, UP
 
 GOLD = (201, 150, 40)
-CARD = (236, 231, 219)
+CARD = CARD_C
 PALETTE = {"red": DOWN, "green": UP, "ink": INK, "gold": GOLD, "gray": MUTED, "lime": (150, 180, 40)}
 
 DIAGRAM_SPEC = """Trường "diagram" là JSON mô tả hình minh họa, chọn 1 trong 5 loại:

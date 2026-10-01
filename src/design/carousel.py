@@ -4,11 +4,11 @@ from PIL import Image, ImageDraw
 from src.config import CONFIG
 from src.design import diagrams
 from src.design.common import SIZE_4X5, fit, sans, save, wrap
+from src.design.palette import CARD as CARD_C, DIVIDER as DIVIDER_C, SUB, TRACK  # noqa: F401
 from src.design.styles.block import CREAM, DIVIDER, GREEN, INK, LIME, MUTED
 
 W, H = SIZE_4X5
 M = 60
-SUB = (170, 200, 185)
 
 
 def _footer(d: ImageDraw.ImageDraw, left: str, right: str | None = None):
@@ -34,7 +34,7 @@ def render_cover(path, series_name: str, level: str, part: int, total: int, titl
     pw = d.textlength(pill, font=sans("ExtraBold", 28)) + 44
     d.rounded_rectangle([M, 204, M + pw, 256], radius=26, fill=LIME)
     d.text((M + pw / 2, 230), pill, font=sans("ExtraBold", 28), fill=GREEN, anchor="mm")
-    d.rounded_rectangle([M + pw + 24, 226, W - M, 234], radius=4, fill=(40, 90, 72))
+    d.rounded_rectangle([M + pw + 24, 226, W - M, 234], radius=4, fill=TRACK)
     d.rounded_rectangle([M + pw + 24, 226, M + pw + 24 + (W - 2 * M - pw - 24) * part / total, 234], radius=4, fill=LIME)
 
     y = 300
@@ -77,7 +77,7 @@ def render_slide(path, series_name: str, part: int, total: int, idx: int, count:
     if chart_img is not None:
         cw = W - 2 * M
         ch = int(chart_img.height * cw / chart_img.width)
-        d.rectangle([M - 2, y - 2, M + cw + 1, y + ch + 1], outline=(214, 208, 196), width=2)
+        d.rectangle([M - 2, y - 2, M + cw + 1, y + ch + 1], outline=DIVIDER, width=2)
         img.alpha_composite(chart_img.resize((cw, ch), Image.LANCZOS), (M, y))
         d = ImageDraw.Draw(img)
         if caption:

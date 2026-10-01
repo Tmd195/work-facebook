@@ -8,13 +8,13 @@ from src.chart_tools import build_real, ema, load
 from src.config import CONFIG, TZ
 from src.design import carousel
 from src.design.common import SIZE_4X5, fit, sans, save, wrap
+from src.design.palette import CARD as CARD_C, DIVIDER as DIVIDER_C, SUB, TRACK  # noqa: F401
 from src.design.styles.block import CREAM, DOWN, GREEN, LIME, MUTED, UP
 from src.design.tvchart import TV, TVChart
 from src.strategy_data import session_windows
 
 W, H = SIZE_4X5
 M = 60
-SUB = (170, 200, 185)
 CHART_CSS = (640, 420)          # khung ngang, chừa chỗ cho phần diễn giải bên dưới
 
 
@@ -122,7 +122,7 @@ def banner(path, session_label: str, data: dict, result: dict, now: datetime):
     y = max(y + 40, 860)
     bias = result["bias"]
     bcol = DOWN if bias == "giảm" else UP if bias == "tăng" else MUTED
-    for label, col in ((f"THIÊN HƯỚNG {bias.upper()}", bcol), (f"GIÁ {money(data['giá_hiện_tại'])}", (40, 90, 72))):
+    for label, col in ((f"THIÊN HƯỚNG {bias.upper()}", bcol), (f"GIÁ {money(data['giá_hiện_tại'])}", TRACK)):
         bw = d.textlength(label, font=sans("ExtraBold", 32)) + 56
         d.rounded_rectangle([M, y, M + bw, y + 72], radius=14, fill=col)
         d.text((M + 28, y + 36), label, font=sans("ExtraBold", 32), fill=CREAM, anchor="lm")
@@ -135,7 +135,7 @@ def banner(path, session_label: str, data: dict, result: dict, now: datetime):
 
 # ===================================================================== ảnh bìa (mẫu anh chọn: tiêu đề + thiên hướng + ô vĩ mô)
 
-CARD = (236, 231, 219)
+CARD = CARD_C
 INK = (20, 20, 20)
 GOLD_HL = (230, 180, 80)
 MACRO_NAMES = {"US10Y": ("Lợi suất 10 năm", "%"), "US3M": ("Lợi suất 3 tháng", "%"),
@@ -181,8 +181,8 @@ def cover(path, session_label: str, data: dict, result: dict, now: datetime):
             d.rectangle([x, 846, x + tw_, 853], fill=GOLD_HL)
         d.text((x + 18, 866), name, font=sans("Medium", 19), fill=MUTED)
         d.text((x + 18, 900), f"{v['last']:.2f}{unit}", font=sans("ExtraBold", 34), fill=INK)
-        ch = v["chg_1d"] if abs(v["z_1d"]) >= abs(v.get("z_hôm_trước", 0)) else v.get("chg_hôm_trước", 0)
-        when = "hôm nay" if ch == v["chg_1d"] else "phiên trước"
+        ch = v.get("chg_1d", 0) if abs(v.get("z_1d", 0)) >= abs(v.get("z_hôm_trước", 0)) else v.get("chg_hôm_trước", 0)
+        when = "hôm nay" if ch == v.get("chg_1d", 0) else "phiên trước"
         corr = v.get("corr_vàng_20d")
         # Đỏ = bất lợi cho vàng (chỉ số đi ngược vàng mà tăng, hoặc đi cùng vàng mà giảm); xanh = có lợi
         col = (DOWN if (ch > 0) == ((corr if corr is not None else -1) < 0) else UP) if v.get("đáng_chú_ý") else MUTED

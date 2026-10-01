@@ -93,6 +93,7 @@ def snapshot() -> dict:
 
 def top_drivers(snap: dict, n: int = 4) -> list[str]:
     """Các yếu tố tác động mạnh nhất lúc này: ưu tiên 'đáng chú ý', rồi theo |z| × |tương quan|."""
-    z = lambda k: max(abs(snap[k]["z_1d"]), abs(snap[k].get("z_hôm_trước", 0)))
-    score = lambda k: (snap[k]["đáng_chú_ý"], snap[k]["vai_trò"] == "tác nhân", z(k) * abs(snap[k].get("corr_vàng_20d") or 0.5))
+    z = lambda k: max(abs(snap[k].get("z_1d", 0)), abs(snap[k].get("z_hôm_trước", 0)))
+    score = lambda k: (snap[k].get("đáng_chú_ý", False), snap[k].get("vai_trò", "tác nhân") == "tác nhân",
+                       z(k) * abs(snap[k].get("corr_vàng_20d") or 0.5))
     return sorted(snap, key=score, reverse=True)[:n]

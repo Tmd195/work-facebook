@@ -4,11 +4,12 @@ from PIL import Image, ImageDraw
 from src.config import CONFIG
 from src.design.common import SIZE_4X5, fit, fmt_price, sans, save, wrap
 from src.design.knowledge_card import dashed
+from src.design.palette import CARD as CARD_C, DIVIDER as DIVIDER_C, SUB, TRACK  # noqa: F401
 from src.design.styles.block import CREAM, DIVIDER, DOWN, GREEN, INK, LIME, MUTED, UP
 
 W, H = SIZE_4X5
 M = 56
-CARD = (236, 231, 219)
+CARD = CARD_C
 
 
 def arrow(d: ImageDraw.ImageDraw, pts: list[tuple], color, width: int = 5):
@@ -144,7 +145,7 @@ def render(path, date_label: str, focus: str, events: list[dict], chart: list, p
     # --- Header
     d.rectangle([0, 0, W, 320], fill=GREEN)
     d.text((M, 52), CONFIG["brand"]["name"], font=sans("Bold", 24), fill=LIME)
-    d.text((W - M, 54), date_label, font=sans("SemiBold", 22), fill=(170, 200, 185), anchor="ra")
+    d.text((W - M, 54), date_label, font=sans("SemiBold", 22), fill=SUB, anchor="ra")
     tag = "PLAN A/B TRƯỚC TIN" if events else "PLAN A/B PHIÊN MỸ"
     tw = d.textlength(tag, font=sans("Bold", 24))
     d.rounded_rectangle([M, 108, M + tw + 44, 156], radius=24, fill=LIME)
@@ -155,13 +156,13 @@ def render(path, date_label: str, focus: str, events: list[dict], chart: list, p
     if events:
         e = events[0]
         sub = f"{e['time']}  ·  {e['currency']} {e['title']}  ·  Dự báo {e['forecast'] or '-'}  ·  Trước {e['previous'] or '-'}"
-        d.text((M, 266), fit(d, sub, sans("Medium", 22), W - 2 * M), font=sans("Medium", 22), fill=(190, 215, 200))
+        d.text((M, 266), fit(d, sub, sans("Medium", 22), W - 2 * M), font=sans("Medium", 22), fill=SUB)
 
     # --- Biểu đồ
     d.text((M, 352), f"Kịch bản trên biểu đồ {plan['symbol']} H1 (giá thật)", font=sans("Bold", 24), fill=INK)
     tv = tv_chart(chart, plan, digits)
     shot = tv.resize((W - 2 * M, int(tv.height * (W - 2 * M) / tv.width)), Image.LANCZOS)
-    d.rectangle([M - 2, 408, W - M + 1, 410 + shot.height + 1], outline=(214, 208, 196), width=2)
+    d.rectangle([M - 2, 408, W - M + 1, 410 + shot.height + 1], outline=DIVIDER, width=2)
     img.alpha_composite(shot, (M, 410))
 
     # --- 2 thẻ plan

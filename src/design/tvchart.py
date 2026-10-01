@@ -19,12 +19,17 @@ from src.config import ASSETS
 TEMPLATE = Path(__file__).with_name("tv_template.html")
 LIB = ASSETS / "vendor" / "lightweight-charts.standalone.production.js"
 
-# Màu mặc định của TradingView (giao diện sáng)
-TV = {
+# Màu mặc định của TradingView - chọn giao diện sáng/tối trong config.yaml → design.chart_theme
+_TV_LIGHT = {
     "bg": "#ffffff", "text": "#131722", "grid": "#f0f3fa", "border": "#e0e3eb",
     "up": "#089981", "down": "#f23645", "blue": "#2962ff", "orange": "#ff9800",
     "purple": "#7e57c2", "gray": "#787b86", "teal": "#00897b", "pink": "#e91e63",
 }
+_TV_DARK = {**_TV_LIGHT, "bg": "#131722", "text": "#d1d4dc", "grid": "#1e222d", "border": "#2a2e39",
+            "gray": "#868993"}
+from src.design.palette import CHART_THEME  # noqa: E402
+
+TV = _TV_DARK if CHART_THEME == "dark" else _TV_LIGHT
 VN_OFFSET = 7 * 3600   # hiển thị trục thời gian theo giờ Việt Nam
 
 

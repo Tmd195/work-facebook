@@ -27,7 +27,9 @@ calendar:
   max_events_on_banner: 7
 
 design:
-  style: "block"               # editorial | clean | block | dark
+  style: "block"               # mẫu Bản tin sáng: editorial | clean | block | dark
+  palette: "reu-chanh"         # bộ màu: reu-chanh | navy-vang | than-cam | do-ruou | xanh-duong
+  chart_theme: "light"         # biểu đồ TradingView: light | dark
 
 knowledge:
   # Thứ tự đăng series (cơ bản → chuyên sâu). Series không có trong danh sách sẽ xếp cuối theo số file.

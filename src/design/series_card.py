@@ -4,6 +4,7 @@ from PIL import Image, ImageDraw
 from src.config import CONFIG
 from src.design import diagrams
 from src.design.common import SIZE_4X5, fit, sans, save, wrap
+from src.design.palette import CARD as CARD_C, DIVIDER as DIVIDER_C, SUB, TRACK  # noqa: F401
 from src.design.styles.block import CREAM, DIVIDER, GREEN, INK, LIME, MUTED
 
 W, H = SIZE_4X5
@@ -15,14 +16,14 @@ def header(img: Image.Image, series_name: str, level: str, part: int, total: int
     d.rectangle([0, 0, W, 400], fill=GREEN)
     d.text((M, 46), CONFIG["brand"]["name"], font=sans("Bold", 24), fill=LIME)
     d.text((W - M, 48), f"SERIES KIẾN THỨC · {level.upper()}", font=sans("SemiBold", 20),
-           fill=(170, 200, 185), anchor="ra")
+           fill=SUB, anchor="ra")
     pill = f"PHẦN {part}/{total}"
     pw = d.textlength(pill, font=sans("ExtraBold", 24)) + 40
     d.rounded_rectangle([M, 98, M + pw, 144], radius=23, fill=LIME)
     d.text((M + pw / 2, 121), pill, font=sans("ExtraBold", 24), fill=GREEN, anchor="mm")
     d.text((M + pw + 18, 121), fit(d, series_name.upper(), sans("Bold", 24), W - 2 * M - pw - 20),
            font=sans("Bold", 24), fill=CREAM, anchor="lm")
-    d.rounded_rectangle([M, 168, W - M, 176], radius=4, fill=(40, 90, 72))
+    d.rounded_rectangle([M, 168, W - M, 176], radius=4, fill=TRACK)
     d.rounded_rectangle([M, 168, M + (W - 2 * M) * part / total, 176], radius=4, fill=LIME)
     y = 204
     for line in wrap(d, title, sans("ExtraBold", 58), W - 2 * M, max_lines=3):
@@ -53,7 +54,7 @@ def render(path, series_name: str, level: str, part: int, total: int, title: str
         cw = W - 2 * M
         ch = int(chart_img.height * cw / chart_img.width)
         shot = chart_img.resize((cw, ch), Image.LANCZOS)
-        d.rectangle([M - 2, 422, M + cw + 1, 424 + ch + 1], outline=(214, 208, 196), width=2)
+        d.rectangle([M - 2, 422, M + cw + 1, 424 + ch + 1], outline=DIVIDER, width=2)
         img.alpha_composite(shot, (M, 424))
         d = ImageDraw.Draw(img)
         d.text((M, 424 + ch + 12), fit(d, chart_caption, sans("Medium", 17), W - 2 * M), font=sans("Medium", 17), fill=MUTED)

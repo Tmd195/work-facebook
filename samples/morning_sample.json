@@ -1,0 +1,413 @@
+{
+  "context": {
+    "date": "Thứ Năm, 01/10/2026",
+    "markets": {
+      "XAUUSD": {
+        "price": 4175.3,
+        "prev_close": 4160.2,
+        "change_pct": 0.36,
+        "prev_high": 4224.6,
+        "prev_low": 4151.7,
+        "pivot": 4178.83,
+        "r1": 4205.97,
+        "r2": 4251.73,
+        "s1": 4133.07,
+        "s2": 4105.93,
+        "ema20": 4310.64,
+        "ema50": 4335.41,
+        "rsi14": 34.9,
+        "atr14": 99.3,
+        "trend": "Giảm",
+        "resistance": [
+          4189.0,
+          4246.8
+        ],
+        "support": [
+          4144.9,
+          4019.7
+        ]
+      },
+      "EURUSD": {
+        "price": 1.1325,
+        "prev_close": 1.13408,
+        "change_pct": -0.14,
+        "prev_high": 1.13777,
+        "prev_low": 1.13293,
+        "pivot": 1.13493,
+        "r1": 1.13693,
+        "r2": 1.13977,
+        "s1": 1.13208,
+        "s2": 1.13008,
+        "ema20": 1.14749,
+        "ema50": 1.15181,
+        "rsi14": 22.5,
+        "atr14": 0.0052,
+        "trend": "Giảm",
+        "resistance": [
+          1.13254,
+          1.13545
+        ],
+        "support": []
+      },
+      "GBPUSD": {
+        "price": 1.3252,
+        "prev_close": 1.32328,
+        "change_pct": 0.15,
+        "prev_high": 1.33067,
+        "prev_low": 1.3224,
+        "pivot": 1.32545,
+        "r1": 1.3285,
+        "r2": 1.33372,
+        "s1": 1.32023,
+        "s2": 1.31718,
+        "ema20": 1.33733,
+        "ema50": 1.34279,
+        "rsi14": 30.1,
+        "atr14": 0.00703,
+        "trend": "Giảm",
+        "resistance": [
+          1.32732,
+          1.33069
+        ],
+        "support": [
+          1.3143
+        ]
+      },
+      "DXY": {
+        "price": 101.617,
+        "prev_close": 101.45,
+        "change_pct": 0.16,
+        "prev_high": 101.53,
+        "prev_low": 101.03,
+        "pivot": 101.337,
+        "r1": 101.643,
+        "r2": 101.837,
+        "s1": 101.143,
+        "s2": 100.837,
+        "ema20": 100.429,
+        "ema50": 100.089,
+        "rsi14": 70.0,
+        "atr14": 0.441,
+        "trend": "Tăng",
+        "resistance": [
+          101.64,
+          101.8
+        ],
+        "support": [
+          101.6,
+          101.33
+        ]
+      }
+    },
+    "calendar": [
+      {
+        "time": "02:30",
+        "datetime": "2026-10-01T02:30:00+07:00",
+        "currency": "USD",
+        "impact": "Medium",
+        "title": "President Trump Speaks",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "time": "05:00",
+        "datetime": "2026-10-01T05:00:00+07:00",
+        "currency": "USD",
+        "impact": "Medium",
+        "title": "FOMC Member Kashkari Speaks",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "time": "15:00",
+        "datetime": "2026-10-01T15:00:00+07:00",
+        "currency": "GBP",
+        "impact": "Medium",
+        "title": "BOE Gov Bailey Speaks",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "time": "19:30",
+        "datetime": "2026-10-01T19:30:00+07:00",
+        "currency": "USD",
+        "impact": "Medium",
+        "title": "Unemployment Claims",
+        "forecast": "201K",
+        "previous": "197K"
+      },
+      {
+        "time": "20:30",
+        "datetime": "2026-10-01T20:30:00+07:00",
+        "currency": "EUR",
+        "impact": "Medium",
+        "title": "ECB President Lagarde Speaks",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "time": "21:00",
+        "datetime": "2026-10-01T21:00:00+07:00",
+        "currency": "USD",
+        "impact": "Medium",
+        "title": "FOMC Member Waller Speaks",
+        "forecast": "",
+        "previous": ""
+      },
+      {
+        "time": "21:00",
+        "datetime": "2026-10-01T21:00:00+07:00",
+        "currency": "USD",
+        "impact": "Medium",
+        "title": "ISM Manufacturing PMI",
+        "forecast": "54.8",
+        "previous": "54.6"
+      }
+    ]
+  },
+  "markets": {
+    "XAUUSD": {
+      "price": 4175.3,
+      "prev_close": 4160.2,
+      "change_pct": 0.36,
+      "prev_high": 4224.6,
+      "prev_low": 4151.7,
+      "pivot": 4178.83,
+      "r1": 4205.97,
+      "r2": 4251.73,
+      "s1": 4133.07,
+      "s2": 4105.93,
+      "ema20": 4310.64,
+      "ema50": 4335.41,
+      "rsi14": 34.9,
+      "atr14": 99.3,
+      "trend": "Giảm",
+      "resistance": [
+        4189.0,
+        4246.8
+      ],
+      "support": [
+        4144.9,
+        4019.7
+      ],
+      "spark": [
+        4518.8,
+        4544.9,
+        4654.1,
+        4671.3,
+        4668.0,
+        4626.8,
+        4637.5,
+        4503.4,
+        4455.0,
+        4369.9,
+        4388.1,
+        4513.4,
+        4450.1,
+        4412.5,
+        4434.2,
+        4380.8,
+        4382.4,
+        4325.4,
+        4306.3,
+        4361.0,
+        4373.2,
+        4398.4,
+        4357.4,
+        4349.9,
+        4291.9,
+        4271.5,
+        4294.7,
+        4141.9,
+        4153.2,
+        4160.2,
+        4175.3
+      ],
+      "source": "Yahoo GC=F + gold-api spot",
+      "notes": [
+        "Nến quy đổi từ GC=F, chênh lệch -26.50"
+      ]
+    },
+    "EURUSD": {
+      "price": 1.1325,
+      "prev_close": 1.13408,
+      "change_pct": -0.14,
+      "prev_high": 1.13777,
+      "prev_low": 1.13293,
+      "pivot": 1.13493,
+      "r1": 1.13693,
+      "r2": 1.13977,
+      "s1": 1.13208,
+      "s2": 1.13008,
+      "ema20": 1.14749,
+      "ema50": 1.15181,
+      "rsi14": 22.5,
+      "atr14": 0.0052,
+      "trend": "Giảm",
+      "resistance": [
+        1.13254,
+        1.13545
+      ],
+      "support": [],
+      "spark": [
+        1.16738,
+        1.16878,
+        1.16816,
+        1.16683,
+        1.16747,
+        1.16549,
+        1.16564,
+        1.1589,
+        1.16176,
+        1.15955,
+        1.15853,
+        1.16283,
+        1.1614,
+        1.16276,
+        1.16274,
+        1.16339,
+        1.161,
+        1.15939,
+        1.15485,
+        1.15376,
+        1.14699,
+        1.1476,
+        1.14797,
+        1.14646,
+        1.14479,
+        1.13819,
+        1.13748,
+        1.1378,
+        1.13727,
+        1.13408,
+        1.1325
+      ],
+      "source": "Yahoo Finance",
+      "notes": []
+    },
+    "GBPUSD": {
+      "price": 1.3252,
+      "prev_close": 1.32328,
+      "change_pct": 0.15,
+      "prev_high": 1.33067,
+      "prev_low": 1.3224,
+      "pivot": 1.32545,
+      "r1": 1.3285,
+      "r2": 1.33372,
+      "s1": 1.32023,
+      "s2": 1.31718,
+      "ema20": 1.33733,
+      "ema50": 1.34279,
+      "rsi14": 30.1,
+      "atr14": 0.00703,
+      "trend": "Giảm",
+      "resistance": [
+        1.32732,
+        1.33069
+      ],
+      "support": [
+        1.3143
+      ],
+      "spark": [
+        1.35999,
+        1.36435,
+        1.36536,
+        1.36383,
+        1.3647,
+        1.35969,
+        1.35971,
+        1.35404,
+        1.35501,
+        1.35153,
+        1.34836,
+        1.35318,
+        1.35172,
+        1.35468,
+        1.35446,
+        1.3552,
+        1.35093,
+        1.35258,
+        1.35009,
+        1.34735,
+        1.33829,
+        1.3358,
+        1.33887,
+        1.33709,
+        1.33431,
+        1.32415,
+        1.32107,
+        1.32293,
+        1.32543,
+        1.32328,
+        1.3252
+      ],
+      "source": "Yahoo Finance",
+      "notes": []
+    },
+    "DXY": {
+      "price": 101.617,
+      "prev_close": 101.45,
+      "change_pct": 0.16,
+      "prev_high": 101.53,
+      "prev_low": 101.03,
+      "pivot": 101.337,
+      "r1": 101.643,
+      "r2": 101.837,
+      "s1": 101.143,
+      "s2": 100.837,
+      "ema20": 100.429,
+      "ema50": 100.089,
+      "rsi14": 70.0,
+      "atr14": 0.441,
+      "trend": "Tăng",
+      "resistance": [
+        101.64,
+        101.8
+      ],
+      "support": [
+        101.6,
+        101.33
+      ],
+      "spark": [
+        98.83,
+        98.9,
+        98.8,
+        99.0,
+        98.92,
+        99.17,
+        99.16,
+        99.7,
+        99.43,
+        99.67,
+        99.56,
+        99.0,
+        99.16,
+        98.84,
+        98.77,
+        99.09,
+        99.12,
+        99.46,
+        99.65,
+        100.31,
+        100.22,
+        100.22,
+        100.43,
+        100.6,
+        101.1,
+        101.29,
+        100.97,
+        101.2,
+        101.37,
+        101.45,
+        101.617
+      ],
+      "source": "Yahoo Finance",
+      "notes": []
+    }
+  },
+  "result": {
+    "post": "☀️ BẢN TIN SÁNG Thứ Năm, 01/10/2026\nUSD tiếp tục mạnh lên. Tâm điểm hôm nay là cụm tin Mỹ buổi tối: Unemployment Claims và ISM Manufacturing PMI.\n\n🌍 Bức tranh chung\nDXY ở 101.617, tăng 0.16%, xu hướng vẫn là tăng. RSI14 chạm 70 nên đồng USD đã vào vùng quá mua. Đà tăng có thể chững lại quanh kháng cự 101.64. Hỗ trợ gần là 101.6.\n\n🟡 XAUUSD\nVàng ở 4175.3, hồi nhẹ 0.36%. Xu hướng chính vẫn là giảm, vì giá còn nằm dưới EMA20 4310.6. Kháng cự gần là 4189.0, hỗ trợ gần là 4144.9. Nếu giá không vượt được 4189.0, lực bán có thể quay lại. Nếu thủng 4144.9, vàng có thể giảm sâu hơn.\n\n💶 EURUSD\nEURUSD ở 1.1325, giảm 0.14%, xu hướng giảm. Giá đang sát kháng cự 1.13254, kháng cự kế tiếp là 1.13545. Phía dưới có thể tham khảo S1 1.13208 và S2 1.13008. RSI14 ở 22.5, tức là đã quá bán, nên cẩn thận với một nhịp hồi kỹ thuật.\n\n💷 GBPUSD\nGBPUSD ở 1.3252, tăng nhẹ 0.15%, nhưng xu hướng vẫn là giảm. Kháng cự gần là 1.32732, hỗ trợ là 1.3143. BOE Gov Bailey phát biểu lúc 15:00 và có thể làm GBP biến động.\n\n📅 Lịch tin đáng chú ý (giờ VN)\nHôm nay không có tin High, chủ yếu là tin Medium:\n19:30 Unemployment Claims (số đơn xin trợ cấp thất nghiệp lần đầu): dự báo 201K, kỳ trước 197K. Nếu số thực tế cao hơn dự báo, USD thường bị áp lực và vàng được hỗ trợ.\n20:30 ECB President Lagarde Speaks.\n21:00 ISM Manufacturing PMI (chỉ số quản lý mua hàng ngành sản xuất Mỹ): dự báo 54.8, kỳ trước 54.6. Nếu số thực tế tốt hơn dự báo, USD có thể được hỗ trợ và vàng chịu sức ép.\n21:00 FOMC Member Waller Speaks.\n\n⚠️ Từ 19:30 đến 21:00 có nhiều tin dồn lại. Nên giảm khối lượng và đặt sẵn dừng lỗ trước giờ tin.\n\n💬 Theo bạn, hôm nay vàng sẽ vượt được 4189.0 hay quay về 4144.9?",
+    "focus": "USD mạnh lên, chờ ISM Manufacturing PMI đêm nay",
+    "writer": "claude_code"
+  }
+}
