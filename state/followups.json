@@ -6,5 +6,26 @@
  "2026-10-01 knowledge 21:00|examples": {
   "at": "2026-10-01T21:27:22.081906+07:00",
   "count": 3
+ },
+ "2026-10-01 strategy_us 18:30|track": {
+  "at": "2026-10-01T22:02:06.159901+07:00",
+  "result": [
+   {
+    "side": "SELL",
+    "filled": false,
+    "tp_hit": 0,
+    "closed": null,
+    "floating_pips": null,
+    "pips_closed": null
+   },
+   {
+    "side": "BUY",
+    "filled": true,
+    "tp_hit": 1,
+    "closed": null,
+    "floating_pips": 947,
+    "pips_closed": null
+   }
+  ]
  }
 }
