@@ -141,8 +141,8 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     if not no_wait and not dry_run:
         wait_until(target)
     if dry_run:
-        telegram.send(f"🧪 [Chạy thử - chưa đăng] {name} {day}\n{len(images)} ảnh · {len(caption)} ký tự\n\n"
-                      f"{caption[:700]}{'…' if len(caption) > 700 else ''}")
+        telegram.send_preview(f"🧪 [XEM TRƯỚC - chưa đăng] {name} {day}\n{len(images)} ảnh · bài đầy đủ bên dưới. "
+                              f"Anh duyệt, nếu ổn nhắn em bật đăng thật.", caption, images)
         return True
     try:
         link = facebook.publish(caption, images)
