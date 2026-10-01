@@ -85,6 +85,19 @@ def mark_posted(job: str, target: datetime, link: str, post_id: str | None = Non
     POSTED.write_text(json.dumps({k: data[k] for k in keep}, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def record_followers():
+    """Lưu số người theo dõi theo ngày (cho báo cáo tuần)."""
+    import json
+    path = OUTPUT.parent / "state" / "metrics.json"
+    try:
+        n = facebook.page_stats().get("followers_count")
+    except Exception:
+        return
+    data = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"followers": {}, "weekly": {}}
+    data.setdefault("followers", {})[datetime.now(TZ).strftime("%Y-%m-%d")] = n
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 # ===================================================================== tạo bài
 
 def _files(job: str, out_dir):
@@ -185,6 +198,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         return False
 
     mark_posted(job, target, link, post_id, meta)
+    record_followers()
     if job == "knowledge":
         import json
         from src.content import knowledge

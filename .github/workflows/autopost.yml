@@ -91,7 +91,7 @@ jobs:
         run: |
           git config user.name "autopost-bot"
           git config user.email "autopost-bot@users.noreply.github.com"
-          git add state/series_progress.json state/posted.json 2>/dev/null || true
+          git add state/series_progress.json state/posted.json state/metrics.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Cập nhật tiến độ đăng bài"
             for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done

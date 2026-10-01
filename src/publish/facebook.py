@@ -106,3 +106,38 @@ def permalink(post_id: str) -> str:
 def check() -> str:
     """Kiểm tra token còn dùng được, trả về tên Page."""
     return _call("GET", env("FB_PAGE_ID"), params={"fields": "name"})["name"]
+
+
+def page_stats() -> dict:
+    """Số người theo dõi hiện tại của Page."""
+    return _call("GET", env("FB_PAGE_ID"), params={"fields": "followers_count,fan_count"})
+
+
+def post_stats(post_id: str) -> dict:
+    """Cảm xúc, bình luận (không tính comment của chính Page), chia sẻ; lượt xem nếu token có quyền read_insights."""
+    d = _call("GET", post_id, params={"fields": "created_time,reactions.summary(true).limit(0),"
+                                                "comments.summary(true).limit(0),shares"})
+    reactions = d.get("reactions", {}).get("summary", {}).get("total_count", 0)
+    comments_total = d.get("comments", {}).get("summary", {}).get("total_count", 0)
+    page_id = env("FB_PAGE_ID")
+    own, users = 0, set()
+    try:
+        cm = _call("GET", f"{post_id}/comments", params={"fields": "from", "limit": 100, "filter": "stream"})
+        for c in cm.get("data", []):
+            who = (c.get("from") or {}).get("id")
+            if who == page_id:
+                own += 1
+            elif who:
+                users.add(who)
+    except FacebookError:
+        pass
+    out = {"reactions": reactions, "comments": max(0, comments_total - own), "commenters": len(users),
+           "shares": d.get("shares", {}).get("count", 0), "views": None}
+    try:
+        ins = _call("GET", f"{post_id}/insights", params={"metric": "post_media_view,post_total_media_view_unique"})
+        vals = {m["name"]: (m.get("values") or [{}])[0].get("value") for m in ins.get("data", [])}
+        out["views"] = vals.get("post_media_view")
+        out["reach"] = vals.get("post_total_media_view_unique")
+    except FacebookError:
+        pass
+    return out
