@@ -1,0 +1,76 @@
+# Bộ điều phối chạy liên tục (24/7) - đăng bài đúng giờ, comment theo dõi, báo cáo tuần.
+# Mỗi phiên ~5h20' rồi tự khởi động phiên kế tiếp. Cron 30 phút/lần chỉ là "người gác":
+# nếu chuỗi bị đứt (GitHub lỗi, phiên bị huỷ...) thì khởi động lại; nếu đang có phiên chạy thì thoát ngay.
+name: Daemon
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Chỉ cho phép 1 bộ điều phối chạy
+        id: single
+        run: |
+          for i in $(seq 1 8); do
+            OTHERS=$(gh run list -R "$GITHUB_REPOSITORY" --workflow daemon.yml --json databaseId,status \
+              -q "[.[] | select((.status==\"in_progress\") and (.databaseId < ${{ github.run_id }}))] | length")
+            if [ "$OTHERS" = "0" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+            echo "Đang có bộ điều phối khác chạy, chờ..."; sleep 30
+          done
+          echo "go=false" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.single.outputs.go == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.single.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        if: steps.single.outputs.go == 'true'
+        with:
+          node-version: "20"
+
+      - name: Cài thư viện
+        if: steps.single.outputs.go == 'true'
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          npm install -g @anthropic-ai/claude-code
+          git config user.name "autopost-bot"
+          git config user.email "autopost-bot@users.noreply.github.com"
+
+      - name: Chạy bộ điều phối
+        if: steps.single.outputs.go == 'true'
+        run: python -m src.daemon
+
+      - name: Khởi động phiên kế tiếp
+        if: always() && steps.single.outputs.go == 'true'
+        run: gh workflow run daemon.yml -R "$GITHUB_REPOSITORY"
+
+      - name: Báo lỗi hệ thống
+        if: failure() && steps.single.outputs.go == 'true'
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode text="⚠️ Bộ điều phối gặp lỗi và đã tự khởi động lại phiên mới. Chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

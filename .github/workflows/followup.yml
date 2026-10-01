@@ -3,10 +3,6 @@
 name: Follow-up comments
 
 on:
-  schedule:
-    # 15 phút/lần, 08:00-02:45 VN: tin đỏ vừa ra, ví dụ cho bài Kiến thức đã đăng đủ 30 phút,
-    # cập nhật lệnh các bài Chiến lược (từ 22:00).
-    - cron: "*/15 1-19 * * *"
   workflow_dispatch:
     inputs:
       job:

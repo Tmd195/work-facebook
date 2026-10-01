@@ -1,17 +1,9 @@
-# Tự động tạo & đăng bài lên Facebook Page, báo cáo về Telegram.
+# Chạy tay 1 bài (lịch tự động do workflow Daemon đảm nhận).
 # Giờ cron là UTC (giờ VN = UTC + 7). Mỗi lịch chạy sớm ~15-20 phút để kịp tạo bài,
 # bộ điều phối (src/runner.py) tự chờ đến đúng giờ đăng.
 name: Auto post
 
 on:
-  schedule:
-    - cron: "12 0 * * 1-5"    # 07:12 VN → Bản tin sáng 07:30
-    - cron: "40 2 * * 1-5"    # 09:40 VN → Chiến lược phiên Á-Âu 10:00
-    - cron: "38 4 * * *"      # 11:38 VN → Kiến thức 12:00
-    - cron: "8 11 * * 1-5"    # 18:08 VN → Chiến lược phiên Mỹ 18:30 (mùa hè Mỹ)
-    - cron: "8 12 * * 1-5"    # 19:08 VN → Chiến lược phiên Mỹ 19:30 (mùa đông Mỹ)
-    - cron: "38 13 * * *"     # 20:38 VN → Kiến thức 21:00
-    - cron: "38 14 * * 0"     # Chủ nhật 21:38 VN → Tổng quan tuần mới 22:00
   workflow_dispatch:
     inputs:
       job:
@@ -105,58 +97,3 @@ jobs:
           curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -d chat_id="${TELEGRAM_CHAT_ID}" \
             --data-urlencode text="❌ Lỗi hệ thống khi chạy '${{ steps.pick.outputs.job }}'. Xem chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 🖥 Bật Máy để sửa đổi"
-
-  # Comment nối tiếp ngay sau bài đăng (không phụ thuộc lịch 15 phút của GitHub):
-  # - Kiến thức: chờ 30 phút → 2-3 ví dụ biểu đồ thật
-  # - Chiến lược Á-Âu: canh tin đỏ 5 phút/lần tới 16:00
-  # - Chiến lược phiên Mỹ: canh tin đỏ 5 phút/lần tới 00:30, 22:00 cập nhật lệnh
-  chain:
-    needs: post
-    if: ${{ (needs.post.outputs.job == 'knowledge' || needs.post.outputs.job == 'strategy_ae' || needs.post.outputs.job == 'strategy_us') && !contains(needs.post.outputs.flags, '--dry-run') }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 360
-    concurrency:
-      group: chain-${{ needs.post.outputs.job }}
-      cancel-in-progress: false
-    env:
-      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
-      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
-      PYTHONIOENCODING: utf-8
-      TZ: Asia/Ho_Chi_Minh
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-          cache: pip
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-      - name: Cài thư viện
-        run: |
-          pip install -r requirements.txt
-          python -m playwright install --with-deps chromium
-          npm install -g @anthropic-ai/claude-code
-      - name: Comment nối tiếp (chờ / canh tin đỏ / cập nhật lệnh)
-        run: |
-          git config user.name "autopost-bot"
-          git config user.email "autopost-bot@users.noreply.github.com"
-          python -m src.followup chain --kind ${{ needs.post.outputs.job }}
-      - name: Lưu trạng thái
-        if: always()
-        run: |
-          git config user.name "autopost-bot"
-          git config user.email "autopost-bot@users.noreply.github.com"
-          git add state/followups.json 2>/dev/null || true
-          if ! git diff --cached --quiet; then
-            git commit -m "Cập nhật trạng thái comment"
-            for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
-          fi
-      - name: Báo lỗi hệ thống
-        if: failure()
-        run: |
-          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage"             -d chat_id="${TELEGRAM_CHAT_ID}"             --data-urlencode text="❌ Lỗi khi comment nối tiếp sau bài '${{ needs.post.outputs.job }}'. Xem: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} 🖥 Bật Máy để sửa đổi"
