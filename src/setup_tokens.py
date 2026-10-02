@@ -124,7 +124,45 @@ def check_claude(v: dict) -> bool:
     return ok
 
 
+def setup_job_page(job_key: str, match: str) -> bool:
+    """Token Page cho Job khác (vd. CWG_VN): từ FB_USER_TOKEN → token Page không hết hạn, ghi
+    FB_PAGE_ID__<JOB> / FB_PAGE_TOKEN__<JOB>. match = username Page (vd. CWG.Partner), ID hoặc 1 phần tên."""
+    v = read_env()
+    app_id, secret, user_tok = v.get("FB_APP_ID"), v.get("FB_APP_SECRET"), v.get("FB_USER_TOKEN")
+    if not (app_id and secret and user_tok):
+        print("- Facebook: cần đủ FB_APP_ID, FB_APP_SECRET, FB_USER_TOKEN")
+        return False
+    long = requests.get(f"{GRAPH}/oauth/access_token", timeout=30, params={
+        "grant_type": "fb_exchange_token", "client_id": app_id, "client_secret": secret,
+        "fb_exchange_token": user_tok}).json()
+    if "access_token" not in long:
+        print(f"✗ Facebook: không đổi được token dài hạn - {long.get('error', {}).get('message')}")
+        return False
+    data = requests.get(f"{GRAPH}/me/accounts", timeout=30, params={
+        "access_token": long["access_token"], "fields": "id,name,username,access_token,tasks", "limit": 100}).json().get("data", [])
+    m = match.lower()
+    page = next((p for p in data if p["id"] == match or (p.get("username") or "").lower() == m), None) or \
+        next((p for p in data if m in p["name"].lower()), None)
+    if page is None:
+        print("✗ Facebook: không thấy Page khớp. Các Page token này quản lý: " + ", ".join(p["name"] for p in data))
+        return False
+    write_env(f"FB_PAGE_ID__{job_key}", page["id"])
+    write_env(f"FB_PAGE_TOKEN__{job_key}", page["access_token"])
+    dbg = requests.get(f"{GRAPH}/debug_token", timeout=30, params={
+        "input_token": page["access_token"], "access_token": f"{app_id}|{secret}"}).json().get("data", {})
+    print(f"✓ Facebook [{job_key}]: token Page '{page['name']}' "
+          f"({'không hết hạn' if dbg.get('expires_at', 0) == 0 else 'có hạn'}), quyền: {', '.join(dbg.get('scopes', []))}")
+    print("  Các Page khác token này quản lý: " + ", ".join(p["name"] for p in data if p["id"] != page["id"]))
+    return True
+
+
 if __name__ == "__main__":
+    import sys
+    if len(sys.argv) >= 4 and sys.argv[1] == "job":      # python -m src.setup_tokens job CWG_VN CWG.Partner
+        ok = setup_job_page(sys.argv[2].upper().replace("-", "_"), sys.argv[3])
+        if ok:
+            write_env("FB_USER_TOKEN", "")
+        sys.exit(0 if ok else 1)
     v = read_env()
     results = {"Telegram": setup_telegram(v), "Facebook": setup_facebook(read_env()), "Claude": check_claude(v)}
     print("\nTóm tắt: " + " · ".join(f"{k} {'✓' if ok else '✗'}" for k, ok in results.items()))
