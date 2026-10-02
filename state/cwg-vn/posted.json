@@ -1,0 +1,18 @@
+{
+ "2026-10-03 cwg_license 09:00": {
+  "job": "cwg_license",
+  "link": "preview",
+  "post_id": null,
+  "posted_at": "2026-10-03T00:35:16.471059+07:00",
+  "preview": true,
+  "meta": {}
+ },
+ "2026-10-03 cwg_trend 08:30": {
+  "job": "cwg_trend",
+  "link": "preview",
+  "post_id": null,
+  "posted_at": "2026-10-03T00:35:44.394409+07:00",
+  "preview": true,
+  "meta": {}
+ }
+}

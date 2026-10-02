@@ -19,7 +19,7 @@ import time
 import traceback
 from datetime import datetime, timedelta
 
-from src.config import CONFIG, JOB, ROOT, STATE, TZ
+from src.config import CONFIG, IS_DEFAULT_JOB, JOB, ROOT, STATE, TZ
 from src.publish import telegram
 
 SESSION = timedelta(hours=5, minutes=20)
@@ -40,14 +40,14 @@ def sh(cmd: str, timeout: int = 3600) -> int:
 
 
 def sync():
-    sh("git pull --rebase -q || (git rebase --abort; git pull -q --no-rebase)", 120)
+    sh("git pull --rebase --autostash -q || (git rebase --abort; git pull -q --no-rebase --autostash)", 120)
 
 
 def save_state(msg: str):
     if "GITHUB_ACTIONS" not in os.environ:
         return
     files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
-                                                 "reels_progress", "brand_progress"))
+                                                 "reels_progress", "brand_progress", "hunter"))
     sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "
        f"(git commit -qm '{msg}' && (git push -q || (git pull --rebase -q && git push -q)))", 180)
 
@@ -60,7 +60,9 @@ def due_jobs(now: datetime) -> list[tuple[str, datetime]]:
     from src.runner import _slot, already_posted, target_time
     out = []
     for job, cfg in CONFIG["schedule"].items():
-        if DAYS[now.weekday()] not in cfg.get("days", []):
+        if DAYS[now.weekday()] not in cfg.get("days", DAYS):
+            continue
+        if cfg.get("dates") and now.strftime("%Y-%m-%d") not in cfg["dates"]:
             continue
         targets = []
         if job == "knowledge":
@@ -101,9 +103,10 @@ def one_round():
     now = datetime.now(TZ)
     for job, target in due_jobs(now):
         run_post(job, target)
-    sh("python -m src.followup auto", 2400)
-    save_state("Cập nhật trạng thái comment")
-    if weekly_report_due(datetime.now(TZ)):
+    if IS_DEFAULT_JOB:                                   # comment theo dõi + báo cáo tuần: riêng Page Thái
+        sh("python -m src.followup auto", 2400)
+    save_state("Cập nhật trạng thái")
+    if IS_DEFAULT_JOB and weekly_report_due(datetime.now(TZ)):
         sh("python -m src.report", 1800)
         save_state("Lưu số liệu báo cáo tuần")
 
@@ -116,7 +119,12 @@ def main():
         one_round()
         return
     start = datetime.now(TZ)
-    print(f"Bộ điều phối bắt đầu {start:%H:%M %d/%m}, chạy tới {start + SESSION:%H:%M}", flush=True)
+    print(f"Bộ điều phối [{JOB}] bắt đầu {start:%H:%M %d/%m}, chạy tới {start + SESSION:%H:%M}", flush=True)
+    if (CONFIG.get("hunter") or {}).get("enabled"):     # bộ săn tin chạy luồng riêng, không bị bài theo lịch chặn
+        import threading
+        from src import hunter
+        threading.Thread(target=hunter.run_forever, args=(start + SESSION - timedelta(minutes=2),
+                                                         CONFIG["hunter"].get("interval", 60)), daemon=True).start()
     errors = 0
     while datetime.now(TZ) < start + SESSION:
         try:

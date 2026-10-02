@@ -68,6 +68,8 @@ def post_meta(job: str, out_dir) -> dict:
     if job == "reel":
         from src.reels import job as reel
         return reel.meta(out_dir)
+    if job.startswith("cwg_"):
+        return {}
     if job == "knowledge":
         meta = json.loads((out_dir / "knowledge.json").read_text(encoding="utf-8"))
         return {"series": meta["series"], "part": meta["part"]}
@@ -114,6 +116,9 @@ def _files(job: str, out_dir):
         from src.reels import job as reel
         cap, video, thumb = reel.files(out_dir)
         return cap, [video, thumb]
+    if job.startswith("cwg_"):
+        from src.content import cwg_daily
+        return cwg_daily.files(job, out_dir)
     s = job.split("_")[1]
     return out_dir / f"strategy_{s}.txt", sorted(out_dir.glob(f"strategy_{s}_[0-9][0-9].png"))
 
@@ -129,10 +134,16 @@ def generate(job: str):
     if job == "reel":
         from src.reels import job as reel
         return reel.generate(OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
+    if job.startswith("cwg_"):
+        from src.content import cwg_daily
+        return cwg_daily.generate(job, OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
     return run.run_strategy(job.split("_")[1])
 
 
 def label(job: str) -> str:
+    if job.startswith("cwg_"):
+        from src.content.cwg_daily import JOB_NAMES
+        return JOB_NAMES.get(job, job)
     if job == "knowledge":
         from src.content import knowledge
         nxt = knowledge.next_lesson()
@@ -236,7 +247,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("job", choices=["morning", "strategy_ae", "knowledge", "strategy_us", "weekly", "reel"])
+    ap.add_argument("job")
     ap.add_argument("--dry-run", action="store_true", help="tạo bài + báo Telegram, không đăng")
     ap.add_argument("--now", action="store_true", help="không chờ đúng giờ đăng")
     ap.add_argument("--at", help="đăng vào giờ chỉ định HH:MM (giờ VN), dùng cho bài đăng bổ sung")

@@ -1,0 +1,83 @@
+# Bộ điều phối Page CWG Markets & Partner (Job cwg-vn): tin tức theo lịch + bộ săn tin, chạy liên tục 24/7.
+# Mỗi phiên ~5h20' rồi tự khởi động phiên kế tiếp. Cron 30 phút/lần chỉ là "người gác":
+# nếu chuỗi bị đứt (GitHub lỗi, phiên bị huỷ...) thì khởi động lại; nếu đang có phiên chạy thì thoát ngay.
+name: Daemon CWG VN
+
+on:
+  schedule:
+    - cron: "15,45 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      JOB: cwg-vn
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID_CWG_VN }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN_CWG_VN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TWELVEDATA_API_KEY: ${{ secrets.TWELVEDATA_API_KEY }}
+      ASSETS_KEY: ${{ secrets.ASSETS_KEY }}
+      GH_TOKEN: ${{ github.token }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Chỉ cho phép 1 bộ điều phối chạy
+        id: single
+        run: |
+          for i in $(seq 1 8); do
+            OTHERS=$(gh run list -R "$GITHUB_REPOSITORY" --workflow daemon-cwg-vn.yml --json databaseId,status \
+              -q "[.[] | select((.status==\"in_progress\") and (.databaseId < ${{ github.run_id }}))] | length")
+            if [ "$OTHERS" = "0" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+            echo "Đang có bộ điều phối khác chạy, chờ..."; sleep 30
+          done
+          echo "go=false" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        if: steps.single.outputs.go == 'true'
+
+      - uses: actions/setup-python@v5
+        if: steps.single.outputs.go == 'true'
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - uses: actions/setup-node@v4
+        if: steps.single.outputs.go == 'true'
+        with:
+          node-version: "20"
+
+      - name: Cài thư viện
+        if: steps.single.outputs.go == 'true'
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+          npm install -g @anthropic-ai/claude-code
+          ffmpeg -version >/dev/null 2>&1 || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          git config user.name "autopost-bot"
+          git config user.email "autopost-bot@users.noreply.github.com"
+
+      - name: Giải mã ảnh, giọng, nhạc cho Reels
+        if: steps.single.outputs.go == 'true'
+        run: python -m src.reels.assets_bundle unpack || echo "⚠️ Không giải mã được gói Reels"
+
+      - name: Chạy bộ điều phối
+        if: steps.single.outputs.go == 'true'
+        run: python -m src.daemon
+
+      - name: Khởi động phiên kế tiếp
+        if: always() && steps.single.outputs.go == 'true'
+        run: gh workflow run daemon-cwg-vn.yml -R "$GITHUB_REPOSITORY"
+
+      - name: Báo lỗi hệ thống
+        if: failure() && steps.single.outputs.go == 'true'
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            --data-urlencode text="⚠️ Bộ điều phối gặp lỗi và đã tự khởi động lại phiên mới. Chi tiết: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

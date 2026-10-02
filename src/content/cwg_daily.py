@@ -250,6 +250,51 @@ summary (1 câu nhận định ≤ 25 từ), photo (fed/gold/oil/japan), caption
     return {"slot": t, "name": "Tin nóng", "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
+# ------------------------------------------------------------------ chạy theo lịch (runner gọi)
+
+JOB_NAMES = {"cwg_morning": "Bản tin đầu ngày", "cwg_trend": "Bảng tin xu hướng", "cwg_macro": "Phân tích vĩ mô",
+             "cwg_license": "Bài giấy phép"}
+
+
+def license_for_today(now: datetime) -> tuple[str, int]:
+    """Giấy phép theo ngày trong lịch (dates thứ 1 → FCA, thứ 2 → FSCA, thứ 3 → VFSC)."""
+    dates = (CONFIG["schedule"].get("cwg_license") or {}).get("dates") or []
+    codes = [x["code"] for x in BP["licenses_detail"]]
+    today = now.strftime("%Y-%m-%d")
+    k = dates.index(today) if today in dates else 0
+    return codes[min(k, len(codes) - 1)], min(k, len(codes) - 1) + 1
+
+
+def generate(job: str, out_dir: Path) -> bool:
+    now = datetime.now(TZ)
+    folder = out_dir / job
+    if folder.exists():
+        for old in folder.glob("*.png"):
+            old.unlink()
+    folder.mkdir(parents=True, exist_ok=True)
+    if job == "cwg_license":
+        code, idx = license_for_today(now)
+        p = post_license(code, idx, folder)
+    else:
+        snap = snapshot()
+        if len(snap) < 6:
+            raise RuntimeError(f"Thiếu dữ liệu giá ({len(snap)}/8 sản phẩm)")
+        if job == "cwg_morning":
+            p = post_morning(now.date(), snap, calendar(now.date()), folder)
+        elif job == "cwg_trend":
+            p = post_trend(now.date(), snap, calendar(now.date()), folder)
+        else:
+            p = post_macro(now.date(), snap, folder)
+    (folder / "caption.txt").write_text(p["caption"], encoding="utf-8")
+    (folder / "images.json").write_text(json.dumps([str(i) for i in p["images"]]), encoding="utf-8")
+    return True
+
+
+def files(job: str, out_dir: Path) -> tuple[Path, list[Path]]:
+    folder = out_dir / job
+    return folder / "caption.txt", [Path(x) for x in json.loads((folder / "images.json").read_text(encoding="utf-8"))]
+
+
 # ------------------------------------------------------------------ dượt cả ngày
 
 def demo(day: date) -> list[dict]:

@@ -171,10 +171,20 @@ brandpost:
 hashtags:
   brand: ["#CWGPartner", "#CWGMarkets"]
 
-# Lịch đăng (giờ VN) – lệch giờ với Page Duy Thái Đặng
+# Lịch đăng (giờ VN) – tuyến tin tức xây kênh (anh chốt 03/10/2026)
 schedule:
-  brandpost: { times: ["08:00", "12:15", "20:30"], days: [mon, tue, wed, thu, fri, sat, sun] }
-  reel:      { time: "19:45", days: [mon, tue, wed, thu, fri, sat, sun] }
+  cwg_morning: { time: "07:30", days: [mon, tue, wed, thu, fri] }   # Bản tin đầu ngày
+  cwg_trend:   { time: "08:30", days: [mon, tue, wed, thu, fri] }   # Bảng tin xu hướng (duy nhất trong ngày)
+  cwg_license: { time: "09:00", dates: ["2026-10-05", "2026-10-06", "2026-10-07"] }   # FCA → FSCA → VFSC (bài ghim)
+  cwg_macro:   { time: "10:00", days: [mon, tue, wed, thu, fri] }   # Phân tích vĩ mô
+
+# Bộ săn tin: quét fxtin, tin đủ mạnh (AI chấm ≥ 7/10) thành bài TIN NÓNG
+hunter:
+  enabled: true
+  interval: 60            # giây giữa 2 lần quét
+  batch_minutes: 5        # tin thường gom 5 phút rồi mới chấm; tin số liệu ≥ 3 sao xử lý ngay
+  min_gap_minutes: 30     # 2 bài tin nóng cách nhau tối thiểu
+  max_per_day: 4
 
 reels:
   voice: demo                          # giọng đọc mẫu của trang tạo giọng (không nhân bản người thật)
