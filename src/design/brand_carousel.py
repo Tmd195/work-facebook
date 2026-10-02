@@ -453,3 +453,202 @@ def render_ad(path, person: Image.Image | None, hero: str = "$50", unit: str = "
            "tương ứng.", font=sans("Medium", 16), fill=MUTED, anchor="lm")
     save(img, path)
     return path
+
+
+# ------------------------------------------------------------------ ảnh quảng cáo có chiều sâu (bản 2)
+
+def _shadow(img: Image.Image, box, radius: int, blur: int = 18, offset=(0, 14), alpha: int = 70):
+    from PIL import ImageFilter
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    x0, y0, x1, y1 = box
+    ImageDraw.Draw(layer).rounded_rectangle([x0 + offset[0], y0 + offset[1], x1 + offset[0], y1 + offset[1]],
+                                            radius=radius, fill=(20, 10, 12, alpha))
+    img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(blur)))
+
+
+def _glow(img: Image.Image, center, r: int, color, alpha: int = 90):
+    from PIL import ImageFilter
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    cx, cy = center
+    ImageDraw.Draw(layer).ellipse([cx - r, cy - r, cx + r, cy + r], fill=color + (alpha,))
+    img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(r // 2)))
+
+
+def _bg_candles(img: Image.Image, box, color, alpha: int = 26, seed: int = 5):
+    import random
+    rnd = random.Random(seed)
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    d = ImageDraw.Draw(layer)
+    x0, y0, x1, y1 = box
+    p = (y0 + y1) / 2
+    x = x0
+    while x < x1:
+        o = p
+        p += rnd.uniform(-22, 26)
+        p = min(y1 - 20, max(y0 + 20, p))
+        hi, lo = min(o, p) - rnd.uniform(6, 20), max(o, p) + rnd.uniform(6, 20)
+        d.line([(x + 7, hi), (x + 7, lo)], fill=color + (alpha,), width=2)
+        d.rectangle([x, min(o, p), x + 14, max(o, p) + 2], fill=color + (alpha,))
+        x += 24
+    img.alpha_composite(layer)
+
+
+def _arch_photo(img: Image.Image, photo: Image.Image, box, focus=(0.5, 0.25)):
+    """Ảnh người trong khung vòm (bo tròn phía trên) + bóng đổ + viền đỏ lệch phía sau."""
+    from PIL import ImageOps
+    x0, y0, x1, y1 = box
+    w, h = x1 - x0, y1 - y0
+    _shadow(img, box, 40, blur=26, offset=(0, 22), alpha=90)
+    pic = ImageOps.fit(photo.convert("RGBA"), (w, h), Image.LANCZOS, centering=focus)
+    mask = Image.new("L", (w, h), 0)
+    md = ImageDraw.Draw(mask)
+    md.ellipse([0, 0, w - 1, w - 1], fill=255)                      # vòm phía trên
+    md.rounded_rectangle([0, w // 2, w - 1, h - 1], radius=40, fill=255)
+    img.paste(pic, (x0, y0), mask)
+
+
+def _float_card(img, x, y, title: str, sub: str, dot=(34, 176, 92), w: int | None = None):
+    d = ImageDraw.Draw(img)
+    ft, fs = sans("ExtraBold", 27), sans("Medium", 21)
+    w = w or int(max(d.textlength(title, font=ft), d.textlength(sub, font=fs)) + 92)
+    h = 96
+    _shadow(img, (x, y, x + w, y + h), 22, blur=16, offset=(0, 10), alpha=60)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([x, y, x + w, y + h], radius=22, fill=WHITE)
+    d.ellipse([x + 26, y + 26, x + 46, y + 46], fill=dot)
+    d.text((x + 62, y + 34), title, font=ft, fill=INK, anchor="lm")
+    d.text((x + 28, y + 70), sub, font=fs, fill=MUTED, anchor="lm")
+
+
+def _license_strip(img, y, licenses, score):
+    d = ImageDraw.Draw(img)
+    n = len(licenses) + 1
+    cw = (W - 2 * M - (n - 1) * 10) / n
+    _shadow(img, (M, y, W - M, y + 84), 20, blur=14, offset=(0, 8), alpha=35)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([M, y, W - M, y + 84], radius=20, fill=WHITE)
+    for k, (name, country, num) in enumerate(licenses):
+        x0 = M + k * (cw + 10)
+        d.text((x0 + 22, y + 28), name, font=sans("ExtraBold", 26), fill=INK, anchor="lm")
+        d.text((x0 + 28 + d.textlength(name, font=sans("ExtraBold", 26)), y + 30), country, font=sans("Medium", 16),
+               fill=MUTED, anchor="lm")
+        d.text((x0 + 22, y + 60), num, font=sans("SemiBold", 19), fill=PRIMARY, anchor="lm")
+        if k:
+            d.line([(x0 - 5, y + 18), (x0 - 5, y + 66)], fill=(232, 232, 236), width=2)
+    x0 = M + (n - 1) * (cw + 10)
+    d.rounded_rectangle([x0, y, W - M, y + 84], radius=20, fill=PRIMARY)
+    d.text((x0 + 22, y + 32), score, font=sans("ExtraBold", 34), fill=WHITE, anchor="lm")
+    d.text((x0 + 28 + d.textlength(score, font=sans("ExtraBold", 34)), y + 37), "/10", font=sans("Bold", 18),
+           fill=ACCENT, anchor="lm")
+    d.text((x0 + 22, y + 62), "Điểm WikiFX", font=sans("SemiBold", 18), fill=ACCENT, anchor="lm")
+
+
+def render_ad2(path, photo: Image.Image, layout: str = "right", hook=("Mỗi lot khách đánh,", "bạn nhận bao nhiêu?"),
+               hero="$50", unit="/lot", hero_sub="Vàng XAUUSD · spread 5.x pip",
+               chips=("Thưởng doanh số ≥5%", "Không yêu cầu doanh số"),
+               float1=("Rebate nảy ngay", "khi khách đóng lệnh"), float2="85% spread",
+               licenses=(("FCA", "Anh", "FRN 785129"), ("FSCA", "Nam Phi", "FSP 54031"), ("VFSC", "Vanuatu", "Số ĐK 41694")),
+               score="8.25", button="Nhắn tin nhận chính sách", focus=(0.5, 0.22)):
+    """layout: right (ảnh vòm bên phải) | hero (ảnh phủ nền phía sau, chữ đè bên trái)."""
+    img = Image.new("RGBA", (W, H), (250, 250, 251))
+    d = ImageDraw.Draw(img)
+    for yy in range(H):                                  # nền chuyển nhẹ trắng → xám ấm
+        t = yy / H
+        d.line([(0, yy), (W, yy)], fill=(int(252 - 10 * t), int(252 - 11 * t), int(253 - 9 * t), 255))
+
+    if layout == "hero":
+        from PIL import ImageOps
+        pic = ImageOps.fit(photo.convert("RGBA"), (700, 1060), Image.LANCZOS, centering=focus)
+        import numpy as np
+        hw, hh = pic.size
+        fx = np.clip(np.arange(hw) / 300, 0, 1) ** 1.6                  # mờ dần sang trái
+        fy = np.minimum(np.clip(np.arange(hh) / 140, 0, 1), np.clip((hh - 1 - np.arange(hh)) / 220, 0, 1)) ** 1.4
+        fade = Image.fromarray((np.outer(fy, fx) * 255).astype("uint8"), "L")
+        pic.putalpha(Image.composite(fade, Image.new("L", pic.size, 0), pic.getchannel("A")))
+        _glow(img, (820, 470), 300, PRIMARY, 60)
+        img.alpha_composite(pic, (W - pic.width, 60))
+        photo_box = (W - pic.width + 260, 60, W, 60 + pic.height)
+    else:
+        _glow(img, (800, 520), 330, PRIMARY, 70)
+        _bg_candles(img, (40, 860, 560, 1020), PRIMARY, 22)
+        photo_box = (548, 176, 1010, 940)
+        _arch_photo(img, photo, photo_box, focus)
+
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, 10], fill=PRIMARY)
+    icon = _logo("icon", 56)
+    if icon is not None:
+        img.alpha_composite(icon, (M, 40))
+    d.text((M + 76, 68), "CWG", font=sans("ExtraBold", 40), fill=PRIMARY, anchor="lm")
+    sx = M + 92 + d.textlength("CWG", font=sans("ExtraBold", 40))
+    d.line([(sx, 48), (sx, 88)], fill=(210, 210, 214), width=2)
+    d.text((sx + 18, 56), "CHƯƠNG TRÌNH", font=sans("Bold", 20), fill=INK, anchor="lm")
+    d.text((sx + 18, 82), "ĐỐI TÁC IB", font=sans("Bold", 20), fill=INK, anchor="lm")
+
+    # tiêu đề câu hỏi
+    y = 170
+    for k, line in enumerate(hook):
+        d.text((M, y), line, font=sans("ExtraBold", 50), fill=INK if k == 0 else PRIMARY)
+        y += 64
+
+    # thẻ $50/lot – điểm nhấn chính
+    hx0, hy0, hx1, hy1 = M, 330, 520, 640
+    _shadow(img, (hx0, hy0, hx1, hy1), 34, blur=24, offset=(0, 18), alpha=110)
+    card = Image.new("RGBA", (hx1 - hx0, hy1 - hy0), (0, 0, 0, 0))
+    cd = ImageDraw.Draw(card)
+    for xx in range(card.width):                         # đỏ chuyển nhẹ
+        t = xx / card.width
+        cd.line([(xx, 0), (xx, card.height)], fill=(int(236 - 40 * t), int(16 - 10 * t), int(36 - 14 * t), 255))
+    m = Image.new("L", card.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, card.width - 1, card.height - 1], radius=34, fill=255)
+    img.paste(card, (hx0, hy0), m)
+    d = ImageDraw.Draw(img)
+    d.text((hx0 + 36, hy0 + 44), "IB NHẬN", font=sans("ExtraBold", 28), fill=(255, 210, 214), anchor="lm")
+    big = sans("ExtraBold", 150)
+    d.text((hx0 + 26, hy0 + 222), hero, font=big, fill=WHITE, anchor="ls")
+    d.text((hx0 + 38 + d.textlength(hero, font=big), hy0 + 214), unit, font=sans("ExtraBold", 50), fill=WHITE,
+           anchor="ls")
+    d.line([(hx0 + 36, hy0 + 246), (hx1 - 36, hy0 + 246)], fill=(255, 255, 255, 90), width=2)
+    d.text((hx0 + 36, hy0 + 278), hero_sub, font=sans("SemiBold", 25), fill=(255, 225, 228), anchor="lm")
+
+    # chip phụ
+    y = 676
+    for c in chips[:2]:
+        _check(d, M, y + 4, 36, PRIMARY)
+        d.text((M + 54, y + 22), c, font=sans("Bold", 30), fill=INK, anchor="lm")
+        y += 58
+
+    # thẻ nổi trên ảnh
+    px0, py0, px1, py1 = photo_box
+    if layout == "right":
+        _float_card(img, px1 - 290, py1 - 130, float1[0], float1[1])
+    else:
+        _float_card(img, W - 40 - 330, py1 - 300, float1[0], float1[1], w=320)
+    d = ImageDraw.Draw(img)
+    f = sans("ExtraBold", 30)
+    pw = d.textlength(float2, font=f) + 60
+    fx, fy = min(px1, W - 40) - pw - 10, py0 + 60 if layout == "right" else py0 + 120
+    _shadow(img, (fx, fy, fx + pw, fy + 64), 32, blur=14, offset=(0, 8), alpha=70)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([fx, fy, fx + pw, fy + 64], radius=32, fill=PRIMARY)
+    d.text((fx + pw / 2, fy + 32), float2, font=f, fill=WHITE, anchor="mm")
+
+    # nút
+    label = button.upper()
+    f = sans("ExtraBold", 32)
+    bw = d.textlength(label, font=f) + 150
+    by = 1000
+    _shadow(img, (M, by, M + bw, by + 92), 46, blur=18, offset=(0, 12), alpha=110)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([M, by, M + bw, by + 92], radius=46, fill=PRIMARY)
+    cx, cy = M + 52, by + 46                              # biểu tượng bong bóng chat
+    d.ellipse([cx - 18, cy - 16, cx + 18, cy + 16], outline=WHITE, width=4)
+    d.polygon([(cx - 14, cy + 10), (cx - 20, cy + 22), (cx - 4, cy + 14)], fill=WHITE)
+    d.text((M + 90, by + 46), label, font=f, fill=WHITE, anchor="lm")
+
+    _license_strip(img, 1150, licenses, score)
+    d = ImageDraw.Draw(img)
+    d.text((M, H - 46), "Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Mỗi pháp nhân được cấp phép tại khu vực "
+           "tương ứng. Hình ảnh minh họa.", font=sans("Medium", 15), fill=MUTED, anchor="lm")
+    save(img, path)
+    return path
