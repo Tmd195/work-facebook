@@ -29,22 +29,42 @@ brandpost:
   audience: >-
     Người Việt đang hoặc muốn làm đại lý/IB forex-vàng: trader có cộng đồng, chủ group/kênh tài chính, người làm
     affiliate, nhân viên sales tài chính, đại lý đang làm cho sàn khác muốn tìm chính sách tốt hơn.
-  commission_claim: "Hoa hồng lên tới 50$/lot – chính sách riêng cho từng đại lý, tùy quy mô và thỏa thuận"
-  cta: "📩 Inbox Page để nhận chính sách đại lý riêng"
+  commission_claim: "IB nhận 85% spread – ví dụ XAUUSD spread 5.x pip, IB nhận $50/lot"
+  cta: "📩 Inbox Page để nhận chính sách chi tiết"
+  # Dữ kiện anh xác nhận 02/10/2026 (ảnh + caption Page CWG Markets - IB Partner; giấy phép đối chiếu WikiFX).
   facts:
-    - "CWG Markets có chương trình Đối tác giới thiệu (Introducing Broker – IB), đăng ký làm đối tác không mất phí."
-    - "Chương trình IB của CWG có cơ cấu nhiều tầng, đối tác tăng thu nhập khi mạng lưới và khối lượng giao dịch tăng."
-    - "CWG Markets (VU) được cấp phép và quản lý bởi Ủy ban Dịch vụ Tài chính Vanuatu (VFSC), số đăng ký 41694."
-    - "Hoa hồng cho đại lý lên tới 50$/lot; mức cụ thể là thỏa thuận riêng với từng đại lý, KHÔNG công bố bảng tầng."
+    - "Hoa hồng IB: 85% spread."
+    - "Thưởng doanh số: tối thiểu 5%."
+    - "Ví dụ: vàng XAUUSD spread 5.x pip thì IB nhận $50/lot."
+    - "Hoa hồng trả ngay khi khách cắt lệnh, không giữ tiền của đối tác."
+    - "Không yêu cầu số khách hàng ban đầu; không yêu cầu doanh số tối thiểu."
+    - "Đăng ký làm đối tác IB không mất phí."
+    - "Có quản lý đối tác hỗ trợ tiếng Việt 1:1; có video đào tạo và bản tin phân tích mỗi ngày cho đối tác."
+    - "Tập đoàn CWG Markets có giấy phép: FCA (Vương quốc Anh, FRN 785129), FSCA (Nam Phi, FSP 54031), VFSC (Vanuatu, số đăng ký 41694). Mỗi pháp nhân được cấp phép tại khu vực tương ứng."
+    - "Điểm WikiFX của CWG Markets: 8.25/10."
+  # Chữ ký cố định cuối MỌI caption (dấu ấn riêng của Page) – hệ thống tự thêm, AI không viết lại.
+  signature: |-
+    💼 CWG MARKETS TUYỂN ĐỐI TÁC IB
+    💰 Chính sách hoa hồng cạnh tranh – lên tới 85% spread
+    🎓 Video đào tạo và bản tin phân tích thị trường mỗi ngày
+    🤝 Đội ngũ hỗ trợ tiếng Việt 1:1
+    📩 Inbox Page ngay để nhận chính sách chi tiết
+  # Cách viết học từ caption anh làm tay: mở bằng câu hỏi chạm đúng băn khoăn của IB, đưa tiêu chí so sánh đánh số,
+  # mỗi tiêu chí gắn 1 dữ kiện cụ thể, kết bằng lời mời nhẹ ("chỉ cần 15 phút trao đổi để tự so sánh").
+  style_examples:
+    - "Đang làm IB, bạn có biết mình nhận được bao nhiêu % spread không?"
+    - "Trước khi quyết định đưa khách về sàn nào, bạn nên so sánh 4 điều sau: tỷ lệ chia hoa hồng, thời điểm trả tiền, điều kiện ràng buộc, pháp lý."
+    - "Nếu bạn đang có tệp khách, chỉ cần 15 phút trao đổi để tự so sánh với chính sách hiện tại của mình."
   rules:
-    - "Không công bố bảng hoa hồng theo tầng, điều kiện lên cấp hay con số thu nhập cụ thể – chỉ dùng commission_claim."
+    - "Chỉ dùng số liệu có trong facts (85% spread, thưởng tối thiểu 5%, $50/lot ví dụ XAUUSD, giấy phép, WikiFX 8.25). Không tự thêm bảng tầng, điều kiện hay con số khác."
+    - "Khi nói giấy phép luôn nói 'tập đoàn CWG Markets' và giữ ý 'mỗi pháp nhân được cấp phép tại khu vực tương ứng'."
     - "Không hứa thu nhập, không 'làm giàu nhanh', không ví dụ thu nhập tháng; nói về cách xây hệ thống bền vững."
     - "Không so sánh hạ thấp sàn khác bằng tên; không nói sai về giấy phép (chỉ dùng facts)."
     - "Không khuyến khích khách vay tiền, dùng đòn bẩy quá mức; luôn nhắc quản lý rủi ro cho khách của đại lý."
     - "Không dùng markdown, không in đậm; dùng emoji vừa phải làm đầu mục."
   disclaimer: >-
-    ⚠️ Giao dịch CFD và ngoại hối có rủi ro cao do sử dụng đòn bẩy và có thể không phù hợp với tất cả nhà đầu tư.
-    Nội dung mang tính thông tin, không phải lời khuyên đầu tư.
+    ⚠️ Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Nội dung giới thiệu chương trình đối tác,
+    không phải lời khuyên đầu tư. Dành cho người từ 18 tuổi.
   pillars:
     hoc-nghe-ib:
       name: "Học nghề IB"

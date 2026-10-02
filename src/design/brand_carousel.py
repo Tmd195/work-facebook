@@ -166,38 +166,115 @@ def render_slide(path, idx: int, total: int, heading: str, body: str, points: li
     return path
 
 
-def render_cta(path, claim: str, points: list[str], cta: str):
-    """Ảnh cuối: kêu gọi trở thành đại lý."""
+def _icon_clock(d, x, y, s, col):
+    d.ellipse([x, y, x + s, y + s], outline=col, width=max(3, s // 10))
+    c = (x + s / 2, y + s / 2)
+    d.line([c, (c[0], y + s * 0.22)], fill=col, width=max(3, s // 10))
+    d.line([c, (x + s * 0.74, c[1])], fill=col, width=max(3, s // 10))
+
+
+def _icon_person(d, x, y, s, col):
+    d.ellipse([x + s * 0.3, y, x + s * 0.7, y + s * 0.4], fill=col)
+    d.pieslice([x + s * 0.08, y + s * 0.46, x + s * 0.92, y + s * 1.3], 180, 360, fill=col)
+
+
+def _icon_bars(d, x, y, s, col):
+    for k, hh in enumerate((0.45, 0.7, 1.0)):
+        bx = x + k * s * 0.36
+        d.rectangle([bx, y + s * (1 - hh), bx + s * 0.24, y + s], fill=col)
+
+
+def _icon_shield(d, x, y, s, col):
+    d.polygon([(x + s / 2, y), (x + s, y + s * 0.18), (x + s * 0.92, y + s * 0.62), (x + s / 2, y + s),
+               (x + s * 0.08, y + s * 0.62), (x, y + s * 0.18)], fill=col)
+    d.line([(x + s * 0.3, y + s * 0.5), (x + s * 0.45, y + s * 0.65), (x + s * 0.72, y + s * 0.35)],
+           fill=WHITE, width=max(3, s // 9))
+
+
+def render_cta(path, facts: dict, cta: str):
+    """Ảnh cuối mỗi album: thẻ 'Chính sách đối tác IB' – nền đỏ, các thẻ trắng.
+
+    facts: {"spread": "85%", "bonus": "5%", "example": ("XAUUSD spread 5.x pip", "$50/lot"),
+            "terms": [(icon, câu hỏi, trả lời)], "licenses": [(tên, nước, số)], "score": "8.25"}
+    """
     img = Image.new("RGBA", (W, H), PRIMARY)
+    _arcs(img, (0, 0, W, H), (W + 40, 260), (520, 430, 340))
     d = ImageDraw.Draw(img)
-    _arcs(img, (0, 0, W, H), (W + 60, 560), (600, 500, 400))
     _header(img, d, True)
     d = ImageDraw.Draw(img)
-    d.text((M, 190), "TRỞ THÀNH", font=sans("ExtraBold", 54), fill=ACCENT)
-    d.text((M - 4, 250), "ĐẠI LÝ CWG", font=sans("ExtraBold", 118), fill=WHITE)
-    # con số nổi bật
-    d.rounded_rectangle([M, 410, W - M, 680], radius=30, fill=WHITE)
-    d.text((M + 44, 444), "HOA HỒNG LÊN TỚI", font=sans("ExtraBold", 32), fill=INK)
-    big = sans("ExtraBold", 132)
-    d.text((M + 38, 600), "50$", font=big, fill=PRIMARY, anchor="ls")
-    d.text((M + 52 + d.textlength("50$", font=big), 600), "/ lot", font=sans("ExtraBold", 58), fill=PRIMARY, anchor="ls")
-    sub = fit(d, claim.split("–")[-1].strip() if "–" in claim else claim, sans("SemiBold", 26), W - 2 * M - 88)
-    d.text((M + 44, 642), sub, font=sans("SemiBold", 26), fill=MUTED, anchor="lm")
-    y = 730
-    for p in points[:4]:
-        _check(d, M, y + 2, 40, WHITE)
-        d.ellipse([M + 8, y + 10, M + 32, y + 34], fill=WHITE)
-        _check(d, M + 8, y + 10, 24, PRIMARY)
-        d.text((M + 64, y + 22), fit(d, p, sans("SemiBold", 34), W - 2 * M - 64), font=sans("SemiBold", 34), fill=WHITE,
-               anchor="lm")
-        y += 70
-    # nút kêu gọi
+    d.text((M, 146), "CHÍNH SÁCH", font=sans("ExtraBold", 38), fill=ACCENT)
+    d.text((M - 3, 206), "ĐỐI TÁC IB", font=sans("ExtraBold", 90), fill=WHITE)
+
+    # 2 thẻ số liệu
+    top, th = 322, 210
+    lw = int((W - 2 * M) * 0.58)
+    d.rounded_rectangle([M, top, M + lw, top + th], radius=28, fill=WHITE)
+    d.text((M + 34, top + 30), "HOA HỒNG", font=sans("ExtraBold", 26), fill=MUTED)
+    big = sans("ExtraBold", 120)
+    d.text((M + 28, top + 182), facts["spread"], font=big, fill=PRIMARY, anchor="ls")
+    d.text((M + 40 + d.textlength(facts["spread"], font=big), top + 176), "spread", font=sans("ExtraBold", 40),
+           fill=PRIMARY, anchor="ls")
+    rx = M + lw + 20
+    d.rounded_rectangle([rx, top, W - M, top + th], radius=28, outline=WHITE, width=4)
+    d.text((rx + 30, top + 30), "THƯỞNG DOANH SỐ", font=sans("ExtraBold", 22), fill=ACCENT)
+    d.text((rx + 30, top + 66), "tối thiểu", font=sans("SemiBold", 26), fill=WHITE)
+    d.text((rx + 26, top + 182), facts["bonus"], font=sans("ExtraBold", 92), fill=WHITE, anchor="ls")
+
+    # dải ví dụ
+    ey = top + th + 22
+    d.rounded_rectangle([M, ey, W - M, ey + 74], radius=37, fill=(150, 0, 14))
+    lab = "VÍ DỤ"
+    d.rounded_rectangle([M + 12, ey + 12, M + 24 + d.textlength(lab, font=sans("ExtraBold", 22)) + 24, ey + 62],
+                        radius=25, fill=WHITE)
+    d.text((M + 36, ey + 37), lab, font=sans("ExtraBold", 22), fill=PRIMARY, anchor="lm")
+    left, right = facts["example"]
+    f = sans("Bold", 30)
+    x = M + 150
+    d.text((x, ey + 37), left, font=f, fill=WHITE, anchor="lm")
+    x += d.textlength(left, font=f) + 22
+    _arrow(d, x, ey + 37, WHITE)
+    d.text((x + 52, ey + 37), "IB nhận " + right, font=sans("ExtraBold", 30), fill=WHITE, anchor="lm")
+
+    # 3 điều kiện
+    y = ey + 104
+    icons = {"person": _icon_person, "clock": _icon_clock, "bars": _icon_bars}
+    for icon, q, a in facts["terms"][:3]:
+        d.rounded_rectangle([M, y, W - M, y + 104], radius=22, fill=WHITE)
+        d.ellipse([M + 22, y + 20, M + 86, y + 84], fill=SOFT)
+        icons.get(icon, _icon_person)(d, M + 36, y + 34, 36, PRIMARY)
+        d.text((M + 110, y + 32), q, font=sans("Medium", 24), fill=MUTED, anchor="lm")
+        d.text((M + 110, y + 70), a, font=sans("ExtraBold", 31), fill=INK, anchor="lm")
+        y += 118
+
+    # pháp lý
+    y += 6
+    _icon_shield(d, M, y, 34, WHITE)
+    d.text((M + 48, y + 17), "PHÁP LÝ TẬP ĐOÀN CWG MARKETS", font=sans("ExtraBold", 24), fill=WHITE, anchor="lm")
+    y += 50
+    n = len(facts["licenses"]) + 1
+    cw = (W - 2 * M - (n - 1) * 12) / n
+    for k, (name, country, num) in enumerate(facts["licenses"]):
+        x0 = M + k * (cw + 12)
+        d.rounded_rectangle([x0, y, x0 + cw, y + 96], radius=18, fill=WHITE)
+        d.text((x0 + 20, y + 30), name, font=sans("ExtraBold", 30), fill=INK, anchor="lm")
+        d.text((x0 + 26 + d.textlength(name, font=sans("ExtraBold", 30)), y + 32), country, font=sans("Medium", 18),
+               fill=MUTED, anchor="lm")
+        d.text((x0 + 20, y + 70), num, font=sans("SemiBold", 21), fill=PRIMARY, anchor="lm")
+    x0 = M + (n - 1) * (cw + 12)
+    d.rounded_rectangle([x0, y, x0 + cw, y + 96], radius=18, fill=(150, 0, 14))
+    d.text((x0 + 20, y + 36), facts["score"], font=sans("ExtraBold", 38), fill=WHITE, anchor="lm")
+    d.text((x0 + 26 + d.textlength(facts["score"], font=sans("ExtraBold", 38)), y + 42), "/10", font=sans("Bold", 20),
+           fill=ACCENT, anchor="lm")
+    d.text((x0 + 20, y + 74), "Điểm WikiFX", font=sans("SemiBold", 20), fill=ACCENT, anchor="lm")
+
+    # nút
     label = cta.replace("📩", "").strip().upper()
-    f = sans("ExtraBold", 34)
+    f = sans("ExtraBold", 32)
     bw = d.textlength(label, font=f) + 96
-    by = H - 220
-    d.rounded_rectangle([(W - bw) / 2, by, (W + bw) / 2, by + 92], radius=46, fill=WHITE)
-    d.text((W / 2, by + 46), label, font=f, fill=PRIMARY, anchor="mm")
-    _footer(d, "Giao dịch CFD có rủi ro cao", on_red=True)
+    by = H - 166
+    d.rounded_rectangle([(W - bw) / 2, by, (W + bw) / 2, by + 84], radius=42, fill=WHITE)
+    d.text((W / 2, by + 42), label, font=f, fill=PRIMARY, anchor="mm")
+    d.text((W / 2, H - 46), "Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn · Mỗi pháp nhân được cấp phép tại "
+           "khu vực tương ứng", font=sans("Medium", 17), fill=SUB, anchor="mm")
     save(img, path)
     return path
