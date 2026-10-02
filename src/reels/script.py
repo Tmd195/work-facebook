@@ -3,11 +3,11 @@ import csv
 import json
 import random
 
-from src.config import ROOT
+from src.config import ROOT, STATE
 from src.content.llm import generate_json
 from src.reels.marks import MARKS_SPEC
 
-PROGRESS = ROOT / "state" / "reels_progress.json"
+PROGRESS = STATE / "reels_progress.json"
 CATALOG = ROOT / "data" / "reels" / "he-thong.csv"
 CTA = "Hãy comment điều mà bạn muốn biết về thị trường - Thái sẽ mổ xẻ nó ra cho bạn dễ hiểu nhất có thể"
 

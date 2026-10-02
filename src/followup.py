@@ -17,11 +17,12 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 from src.config import CONFIG, OUTPUT, ROOT, TZ
+from src.config import STATE as STATE_DIR
 from src.content import llm
 from src.publish import facebook, telegram
 
-STATE = ROOT / "state" / "followups.json"
-POSTED = ROOT / "state" / "posted.json"
+STATE = STATE_DIR / "followups.json"
+POSTED = STATE_DIR / "posted.json"
 PIP = 0.01                    # vàng: 1 pip = 0.01 → 4580.74 → 4580.84 = 10 pips
 STRATEGY_DISCLAIMER = ("⚠️ Đây là góc nhìn cá nhân của Thái, không phải 1 lời khuyên đầu tư. Hãy tự chịu trách nhiệm "
                        "với mọi quyết định của bản thân tại thời điểm hiện tại cũng như tương lai.")
@@ -440,7 +441,7 @@ def auto(check: bool = False) -> bool:
         print("DUE" if "DUE" in buf.getvalue() else "NONE")
         return True
     ok = True
-    errs_path = ROOT / "state" / "errors.json"
+    errs_path = STATE_DIR / "errors.json"
     errs = _load(errs_path)
     for fn in (news, examples, track):
         try:
@@ -497,7 +498,7 @@ def _commit_state():
     import subprocess
     if not (ROOT / ".git").exists() or "GITHUB_ACTIONS" not in __import__("os").environ:
         return
-    cmds = ["git add state/followups.json", "git diff --cached --quiet || (git commit -qm 'Cập nhật trạng thái comment' "
+    cmds = [f"git add {STATE.relative_to(ROOT).as_posix()}", "git diff --cached --quiet || (git commit -qm 'Cập nhật trạng thái comment' "
             "&& (git pull --rebase -q && git push -q || (sleep 5 && git pull --rebase -q && git push -q)))"]
     for c in cmds:
         subprocess.run(c, shell=True, cwd=ROOT)

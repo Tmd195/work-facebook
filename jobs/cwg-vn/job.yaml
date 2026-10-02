@@ -1,0 +1,74 @@
+# Job 2 – Page "CWG Markets & Partner" (https://www.facebook.com/CWG.Partner/)
+# Tệp khách: người Việt muốn làm đại lý (IB) cho CWG Markets. Anh là đối tác IB chính thức.
+# Ghi đè lên config.yaml. Chạy: JOB=cwg-vn python -m src.runner <việc> --dry-run --now
+
+job:
+  id: cwg-vn
+  name: "CWG VN"                       # nhãn ở đầu mỗi tin Telegram
+
+brand:
+  name: "CWG MARKETS & PARTNER"
+  handle: "facebook.com/CWG.Partner"
+  logo: "assets/brands/cwg/logo.png"
+  icon: "assets/brands/cwg/icon.png"
+
+autopost:
+  live: false                          # chỉ gửi bản xem trước về Telegram cho tới khi anh duyệt
+
+design:
+  style: block
+  palette: do-cwg
+  chart_theme: light
+
+# Nội dung thương hiệu – AI CHỈ được dùng các dữ kiện trong `facts`, không tự bịa số liệu về sàn/hoa hồng.
+brandpost:
+  language: vi
+  persona: >-
+    Đội ngũ CWG Markets & Partner – đối tác IB chính thức của CWG Markets tại Việt Nam. Xưng "CWG Partner" hoặc
+    "chúng tôi", gọi người đọc là "anh chị" hoặc "bạn". Giọng chuyên nghiệp, thực tế, gần gũi, không phô trương.
+  audience: >-
+    Người Việt đang hoặc muốn làm đại lý/IB forex-vàng: trader có cộng đồng, chủ group/kênh tài chính, người làm
+    affiliate, nhân viên sales tài chính, đại lý đang làm cho sàn khác muốn tìm chính sách tốt hơn.
+  commission_claim: "Hoa hồng lên tới 50$/lot – chính sách riêng cho từng đại lý, tùy quy mô và thỏa thuận"
+  cta: "📩 Inbox Page để nhận chính sách đại lý riêng"
+  facts:
+    - "CWG Markets có chương trình Đối tác giới thiệu (Introducing Broker – IB), đăng ký làm đối tác không mất phí."
+    - "Chương trình IB của CWG có cơ cấu nhiều tầng, đối tác tăng thu nhập khi mạng lưới và khối lượng giao dịch tăng."
+    - "CWG Markets (VU) được cấp phép và quản lý bởi Ủy ban Dịch vụ Tài chính Vanuatu (VFSC), số đăng ký 41694."
+    - "Hoa hồng cho đại lý lên tới 50$/lot; mức cụ thể là thỏa thuận riêng với từng đại lý, KHÔNG công bố bảng tầng."
+  rules:
+    - "Không công bố bảng hoa hồng theo tầng, điều kiện lên cấp hay con số thu nhập cụ thể – chỉ dùng commission_claim."
+    - "Không hứa thu nhập, không 'làm giàu nhanh', không ví dụ thu nhập tháng; nói về cách xây hệ thống bền vững."
+    - "Không so sánh hạ thấp sàn khác bằng tên; không nói sai về giấy phép (chỉ dùng facts)."
+    - "Không khuyến khích khách vay tiền, dùng đòn bẩy quá mức; luôn nhắc quản lý rủi ro cho khách của đại lý."
+    - "Không dùng markdown, không in đậm; dùng emoji vừa phải làm đầu mục."
+  disclaimer: >-
+    ⚠️ Giao dịch CFD và ngoại hối có rủi ro cao do sử dụng đòn bẩy và có thể không phù hợp với tất cả nhà đầu tư.
+    Nội dung mang tính thông tin, không phải lời khuyên đầu tư.
+  pillars:
+    hoc-nghe-ib:
+      name: "Học nghề IB"
+      brief: "Series kiến thức nghề đại lý: IB là gì, mô hình hoa hồng (rebate/CPA/rev-share nói chung), xây cộng đồng, chăm khách, marketing, tuân thủ"
+    ve-cwg:
+      name: "Về CWG Markets"
+      brief: "Giới thiệu CWG Markets và chương trình đối tác – CHỈ dựa trên facts; gợi ý inbox để biết chi tiết sản phẩm/điều kiện"
+    bo-cong-cu:
+      name: "Bộ công cụ đại lý"
+      brief: "Mẫu nội dung đại lý chia sẻ cho khách, kịch bản tư vấn, trả lời câu hỏi khách hay hỏi, checklist chăm khách"
+    goc-nhin-dai-ly:
+      name: "Góc nhìn đại lý"
+      brief: "Tình huống thực tế khi làm IB (ẩn danh, không số thu nhập): khó khăn thường gặp và cách xử lý, sai lầm của đại lý mới"
+  order: [hoc-nghe-ib, bo-cong-cu, hoc-nghe-ib, ve-cwg, hoc-nghe-ib, goc-nhin-dai-ly]
+
+hashtags:
+  brand: ["#CWGPartner", "#CWGMarkets"]
+
+# Lịch đăng (giờ VN) – lệch giờ với Page Duy Thái Đặng
+schedule:
+  brandpost: { times: ["08:00", "12:15", "20:30"], days: [mon, tue, wed, thu, fri, sat, sun] }
+  reel:      { time: "19:45", days: [mon, tue, wed, thu, fri, sat, sun] }
+
+reels:
+  voice: demo                          # giọng đọc mẫu của trang tạo giọng (không nhân bản người thật)
+  voice_index: 0
+  photos: false                        # không dùng ảnh người – nền thương hiệu

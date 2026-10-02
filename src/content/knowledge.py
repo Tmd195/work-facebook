@@ -11,12 +11,12 @@ from datetime import date
 import yaml
 
 from src.chart_tools import CHART_SPEC
-from src.config import CONFIG, ROOT
+from src.config import CONFIG, ROOT, STATE
 from src.content import llm
 from src.design.diagrams import is_valid as diagram_valid
 
 SERIES_DIR = ROOT / "data" / "series"
-PROGRESS_FILE = ROOT / "state" / "series_progress.json"
+PROGRESS_FILE = STATE / "series_progress.json"
 NOTES_DIR = ROOT / "knowledge"
 HASHTAGS = "#forex #kienthucforex #trading #giavang #XAUUSD"
 

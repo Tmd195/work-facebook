@@ -17,11 +17,10 @@ from datetime import datetime, timedelta
 
 from PIL import Image, ImageDraw
 
-from src.config import OUTPUT, ROOT, TZ
+from src.config import OUTPUT, ROOT, STATE, TZ
 from src.content import llm
 from src.publish import facebook, telegram
 
-STATE = ROOT / "state"
 EXPECTED_PER_WEEK = 30          # 5 ngày × 5 bài + 2 ngày × 2 bài + 1 bài tổng quan tuần
 TYPE_NAME = {"morning": "Bản tin sáng", "strategy_ae": "Chiến lược Á–Âu", "strategy_us": "Chiến lược Mỹ",
              "knowledge": "Kiến thức", "weekly": "Tổng quan tuần", "reel": "Reels"}

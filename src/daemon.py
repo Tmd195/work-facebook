@@ -19,13 +19,14 @@ import time
 import traceback
 from datetime import datetime, timedelta
 
-from src.config import CONFIG, ROOT, TZ
+from src.config import CONFIG, JOB, ROOT, STATE, TZ
 from src.publish import telegram
 
 SESSION = timedelta(hours=5, minutes=20)
 LEAD = timedelta(minutes=25)               # bắt đầu tạo bài trước giờ đăng
 LEAD_REEL = timedelta(minutes=55)          # video dựng lâu hơn (AI + giọng + dựng hình)
-ATTEMPTS = ROOT / "state" / "attempts.json"
+ATTEMPTS = STATE / "attempts.json"
+ST = STATE.relative_to(ROOT).as_posix()       # state hoặc state/<job>
 DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 
 
@@ -45,8 +46,9 @@ def sync():
 def save_state(msg: str):
     if "GITHUB_ACTIONS" not in os.environ:
         return
-    sh("git add state/posted.json state/series_progress.json state/followups.json state/metrics.json "
-       "state/attempts.json state/reels_progress.json 2>/dev/null; git diff --cached --quiet || "
+    files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
+                                                 "reels_progress", "brand_progress"))
+    sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "
        f"(git commit -qm '{msg}' && (git push -q || (git pull --rebase -q && git push -q)))", 180)
 
 
@@ -89,7 +91,7 @@ def run_post(job: str, target: datetime):
 def weekly_report_due(now: datetime) -> bool:
     if now.weekday() != 6 or now.hour < 23:
         return False
-    metrics = ROOT / "state" / "metrics.json"
+    metrics = STATE / "metrics.json"
     weekly = json.loads(metrics.read_text(encoding="utf-8")).get("weekly", {}) if metrics.exists() else {}
     return now.strftime("%Y-%m-%d") not in weekly
 

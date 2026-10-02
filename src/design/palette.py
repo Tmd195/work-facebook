@@ -13,6 +13,8 @@ PRESETS = {
     "than-cam":   {"name": "Than chì · Cam",     "primary": (28, 28, 32),  "accent": (255, 138, 48),  "bg": (246, 245, 242)},
     "do-ruou":    {"name": "Đỏ rượu · Kem vàng", "primary": (88, 22, 36),  "accent": (240, 196, 120), "bg": (247, 242, 236)},
     "xanh-duong": {"name": "Xanh dương · Cyan",  "primary": (12, 74, 140), "accent": (120, 220, 255), "bg": (243, 246, 250)},
+    # Thương hiệu CWG Markets: đỏ #FF0012 (lấy từ logo), nhấn trắng hồng, nền trắng xám
+    "do-cwg":     {"name": "Đỏ CWG · Trắng",     "primary": (225, 0, 22),  "accent": (255, 236, 238), "bg": (246, 246, 247)},
 }
 
 

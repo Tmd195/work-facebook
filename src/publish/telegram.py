@@ -1,10 +1,14 @@
 """Báo cáo về Telegram cho anh sau mỗi thao tác."""
 import requests
 
-from src.config import env
+from src.config import CONFIG, IS_DEFAULT_JOB, env
+
+# Job khác Page Thái: thêm nhãn tên Page ở đầu mỗi tin để anh biết tin của Page nào
+PREFIX = "" if IS_DEFAULT_JOB else f"[{CONFIG['job'].get('name', CONFIG['job']['id'])}] "
 
 
 def send(text: str) -> bool:
+    text = PREFIX + text
     token, chat = env("TELEGRAM_BOT_TOKEN"), env("TELEGRAM_CHAT_ID")
     if not token or not chat:
         print(f"[Telegram chưa cấu hình] {text}")

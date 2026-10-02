@@ -11,7 +11,7 @@ import traceback
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-from src.config import CONFIG, OUTPUT, TZ
+from src.config import CONFIG, OUTPUT, STATE, TZ
 from src.publish import facebook, telegram
 
 NY = ZoneInfo("America/New_York")
@@ -40,7 +40,7 @@ def wait_until(t: datetime):
 
 # ===================================================================== chống đăng trùng
 
-POSTED = OUTPUT.parent / "state" / "posted.json"
+POSTED = STATE / "posted.json"
 
 
 def _slot(job: str, target: datetime) -> str:
@@ -91,7 +91,7 @@ def mark_posted(job: str, target: datetime, link: str, post_id: str | None = Non
 def record_followers():
     """Lưu số người theo dõi theo ngày (cho báo cáo tuần)."""
     import json
-    path = OUTPUT.parent / "state" / "metrics.json"
+    path = STATE / "metrics.json"
     try:
         n = facebook.page_stats().get("followers_count")
     except Exception:
