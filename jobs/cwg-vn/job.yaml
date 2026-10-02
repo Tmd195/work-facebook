@@ -13,7 +13,7 @@ brand:
   icon: "assets/brands/cwg/icon.png"
 
 autopost:
-  live: false                          # chỉ gửi bản xem trước về Telegram cho tới khi anh duyệt
+  live: true                           # anh bật đăng thật 03/10/2026
 
 design:
   style: block
