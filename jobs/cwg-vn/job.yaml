@@ -36,7 +36,7 @@ brandpost:
     - "Hoa hồng IB: 85% spread."
     - "Thưởng doanh số: tối thiểu 5%."
     - "Ví dụ: vàng XAUUSD spread 5.x pip thì IB nhận $50/lot."
-    - "Hoa hồng trả ngay khi khách cắt lệnh, không giữ tiền của đối tác."
+    - "Rebate (hoa hồng) nảy ngay khi khách đóng lệnh, không giữ tiền của đối tác."
     - "Không yêu cầu số khách hàng ban đầu; không yêu cầu doanh số tối thiểu."
     - "Đăng ký làm đối tác IB không mất phí."
     - "Có quản lý đối tác hỗ trợ tiếng Việt 1:1; có video đào tạo và bản tin phân tích mỗi ngày cho đối tác."
@@ -49,6 +49,18 @@ brandpost:
     🎓 Video đào tạo và bản tin phân tích thị trường mỗi ngày
     🤝 Đội ngũ hỗ trợ tiếng Việt 1:1
     📩 Inbox Page ngay để nhận chính sách chi tiết
+  # Thẻ chính sách cuối album (anh duyệt 02/10/2026)
+  policy_card:
+    spread: "85%"
+    bonus: "5%"
+    example: ["XAUUSD spread 5.x pip", "$50/lot"]
+    terms:
+      - [person, "Điều kiện để bắt đầu?", "Nhắn tin ngay cho chúng tôi để thay đổi mức hoa hồng của bạn."]
+      - [clock, "", "Rebate (hoa hồng) nảy ngay khi đóng lệnh"]
+      - [bars, "Có yêu cầu doanh số tối thiểu?", "Không yêu cầu doanh số"]
+    licenses: [[FCA, "Anh", "FRN 785129"], [FSCA, "Nam Phi", "FSP 54031"], [VFSC, "Vanuatu", "Số ĐK 41694"]]
+    score: "8.25"
+    button: "Nhắn tin nhận chính sách"
   # Cách viết học từ caption anh làm tay: mở bằng câu hỏi chạm đúng băn khoăn của IB, đưa tiêu chí so sánh đánh số,
   # mỗi tiêu chí gắn 1 dữ kiện cụ thể, kết bằng lời mời nhẹ ("chỉ cần 15 phút trao đổi để tự so sánh").
   style_examples:

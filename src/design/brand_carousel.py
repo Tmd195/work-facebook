@@ -242,8 +242,14 @@ def render_cta(path, facts: dict, cta: str):
         d.rounded_rectangle([M, y, W - M, y + 104], radius=22, fill=WHITE)
         d.ellipse([M + 22, y + 20, M + 86, y + 84], fill=SOFT)
         icons.get(icon, _icon_person)(d, M + 36, y + 34, 36, PRIMARY)
-        d.text((M + 110, y + 32), q, font=sans("Medium", 24), fill=MUTED, anchor="lm")
-        d.text((M + 110, y + 70), a, font=sans("ExtraBold", 31), fill=INK, anchor="lm")
+        size = 31                                          # câu dài thì thu chữ cho vừa thẻ
+        while size > 22 and d.textlength(a, font=sans("ExtraBold", size)) > W - 2 * M - 140:
+            size -= 1
+        if q:
+            d.text((M + 110, y + 32), q, font=sans("Medium", 24), fill=MUTED, anchor="lm")
+            d.text((M + 110, y + 70), a, font=sans("ExtraBold", size), fill=INK, anchor="lm")
+        else:                                              # không có câu hỏi: 1 dòng giữa thẻ
+            d.text((M + 110, y + 52), a, font=sans("ExtraBold", size), fill=INK, anchor="lm")
         y += 118
 
     # pháp lý
