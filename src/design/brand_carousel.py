@@ -566,6 +566,7 @@ def render_ad2(path, photo: Image.Image, layout: str = "right", hook=("Mỗi lot
         fade = Image.fromarray((np.outer(fy, fx) * 255).astype("uint8"), "L")
         pic.putalpha(Image.composite(fade, Image.new("L", pic.size, 0), pic.getchannel("A")))
         _glow(img, (820, 470), 300, PRIMARY, 60)
+        _bg_candles(img, (40, 830, 600, 980), PRIMARY, 24)       # dải nến ẩn như bản A
         img.alpha_composite(pic, (W - pic.width, 60))
         photo_box = (W - pic.width + 260, 60, W, 60 + pic.height)
     else:
