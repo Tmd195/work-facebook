@@ -56,7 +56,7 @@ brandpost:
     example: ["XAUUSD spread 5.x pip", "$50/lot"]
     terms:
       - [person, "Điều kiện để bắt đầu?", "Nhắn tin ngay cho chúng tôi để thay đổi mức hoa hồng của bạn."]
-      - [clock, "", "Rebate (hoa hồng) nảy ngay khi đóng lệnh"]
+      - [clock, "Hoa hồng trả khi nào?", "Rebate (hoa hồng) nảy ngay khi đóng lệnh"]
       - [bars, "Có yêu cầu doanh số tối thiểu?", "Không yêu cầu doanh số"]
     licenses: [[FCA, "Anh", "FRN 785129"], [FSCA, "Nam Phi", "FSP 54031"], [VFSC, "Vanuatu", "Số ĐK 41694"]]
     score: "8.25"
