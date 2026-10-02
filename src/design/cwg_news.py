@@ -31,10 +31,8 @@ def _brand_header(img: Image.Image, right: str = ""):
     """Thanh đỏ trên cùng + logo + tên Page; bên phải nhãn nhỏ (vd. giờ tin)."""
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, W, 10], fill=PRIMARY)
-    icon = _logo("icon", 56)
-    if icon is not None:
-        img.alpha_composite(icon, (M, 40))
-    d.text((M + 76, 68), CONFIG["brand"]["name"], font=sans("ExtraBold", 28), fill=INK, anchor="lm")
+    _brand_lockup(img, M, 26)
+    d = ImageDraw.Draw(img)
     if right:
         f = sans("Bold", 22)
         w = d.textlength(right, font=f) + 36
@@ -43,12 +41,55 @@ def _brand_header(img: Image.Image, right: str = ""):
 
 
 def _brand_footer(img: Image.Image, note: str):
+    """Dải đỏ thương hiệu ở chân ảnh: logo + tên Page + link, dòng cảnh báo nhỏ phía trên."""
     d = ImageDraw.Draw(img)
-    d.line([(M, H - 92), (W - M, H - 92)], fill=LINE, width=2)
-    d.text((M, H - 62), CONFIG["brand"]["handle"], font=sans("Bold", 22), fill=PRIMARY, anchor="lm")
-    d.text((W - M, H - 62), "CWG Partner · Cập nhật thị trường cho đối tác", font=sans("SemiBold", 20), fill=MUTED,
-           anchor="rm")
-    d.text((M, H - 30), note, font=sans("Medium", 15), fill=MUTED, anchor="lm")
+    d.text((M, H - 112), note, font=sans("Medium", 15), fill=MUTED, anchor="lm")
+    d.rectangle([0, H - 92, W, H], fill=PRIMARY)
+    icon = _logo("icon", 46)
+    x = M
+    if icon is not None:
+        d.rounded_rectangle([x - 4, H - 70, x + icon.width + 4, H - 20], radius=12, fill=WHITE)
+        img.alpha_composite(icon, (x, H - 68))
+        x += icon.width + 22
+    d.text((x, H - 46), "CWG", font=sans("ExtraBold", 34), fill=WHITE, anchor="lm")
+    x += d.textlength("CWG", font=sans("ExtraBold", 34)) + 14
+    d.text((x, H - 46), "MARKETS & PARTNER", font=sans("Bold", 22), fill=(255, 220, 224), anchor="lm")
+    d.text((W - M, H - 46), CONFIG["brand"]["handle"], font=sans("Bold", 24), fill=WHITE, anchor="rm")
+
+
+def _brand_lockup(img: Image.Image, x: int, y: int):
+    """Cụm logo nổi: thẻ trắng + biểu tượng + chữ CWG đỏ lớn + MARKETS & PARTNER."""
+    d = ImageDraw.Draw(img)
+    icon = _logo("icon", 60)
+    fw = sans("ExtraBold", 44)
+    fs = sans("Bold", 17)
+    w = (icon.width if icon else 0) + 22 + d.textlength("CWG", font=fw) + 16 + d.textlength("MARKETS &", font=fs) + 40
+    _shadow(img, (x, y, x + w, y + 84), 20, blur=14, offset=(0, 8), alpha=70)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([x, y, x + w, y + 84], radius=20, fill=WHITE)
+    cx = x + 16
+    if icon is not None:
+        img.alpha_composite(icon, (int(cx), y + 12))
+        cx += icon.width + 18
+    d.text((cx, y + 44), "CWG", font=fw, fill=PRIMARY, anchor="lm")
+    cx += d.textlength("CWG", font=fw) + 14
+    d.line([(cx - 6, y + 22), (cx - 6, y + 62)], fill=LINE, width=2)
+    d.text((cx + 6, y + 30), "MARKETS &", font=fs, fill=INK, anchor="lm")
+    d.text((cx + 6, y + 54), "PARTNER", font=fs, fill=INK, anchor="lm")
+    return w
+
+
+def _c_watermark(img: Image.Image, cx: int, cy: int, radii=(300, 240, 180), alpha: int = 38, box=None):
+    """Hoạ tiết vòng cung chữ C của logo, chìm trên ảnh."""
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ld = ImageDraw.Draw(layer)
+    for r in radii:
+        ld.arc([cx - r, cy - r, cx + r, cy + r], 40, 320, fill=(255, 255, 255, alpha), width=18)
+    if box:
+        mask = Image.new("L", img.size, 0)
+        ImageDraw.Draw(mask).rectangle(box, fill=255)
+        layer.putalpha(Image.composite(layer.getchannel("A"), Image.new("L", img.size, 0), mask))
+    img.alpha_composite(layer)
 
 
 def _tri(d, x, y, s, up: bool, col):
@@ -73,7 +114,7 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
     img.alpha_composite(shield, (W - 470, 150))
     d = ImageDraw.Draw(img)
 
-    _pill(d, M, 140, "PHÁP LÝ TẬP ĐOÀN CWG MARKETS", 22, PRIMARY, WHITE, pad=22)
+    _pill(d, M, 142, "PHÁP LÝ TẬP ĐOÀN CWG MARKETS", 22, PRIMARY, WHITE, pad=22)
     d.text((M - 6, 340), lic["code"], font=sans("ExtraBold", 170), fill=PRIMARY, anchor="ls")
     d.text((M, 385), lic["name"], font=sans("Bold", 32), fill=INK, anchor="lm")
     d.text((M, 425), lic["country"], font=sans("SemiBold", 28), fill=MUTED, anchor="lm")
@@ -243,9 +284,9 @@ def _ticker(img: Image.Image, y: int, items: list):
     """Dải băng giá kiểu đài tin tức: [(mã, giá, % thay đổi)]."""
     d = ImageDraw.Draw(img)
     d.rectangle([0, y, W, y + 64], fill=(22, 22, 26))
-    d.rectangle([0, y, 150, y + 64], fill=PRIMARY)
-    d.text((75, y + 32), "LIVE", font=sans("ExtraBold", 26), fill=WHITE, anchor="mm")
-    x = 176
+    d.rectangle([0, y, 184, y + 64], fill=PRIMARY)
+    d.text((92, y + 32), "CWG LIVE", font=sans("ExtraBold", 24), fill=WHITE, anchor="mm")
+    x = 206
     for sym, price, chg in items:
         up = chg >= 0
         col = (60, 200, 120) if up else (255, 90, 100)
@@ -267,13 +308,11 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     img = _paper()
     band_h = 600 if data else 520
     _photo_band(img, photo, band_h)
+    _c_watermark(img, W + 40, 300, box=(0, 0, W, band_h - 60))
     d = ImageDraw.Draw(img)
     d.rectangle([0, 0, W, 10], fill=PRIMARY)
-    icon = _logo("icon", 56)
-    if icon is not None:
-        d.rounded_rectangle([M - 6, 34, M + 62, 102], radius=16, fill=WHITE)
-        img.alpha_composite(icon, (M, 40))
-    d.text((M + 84, 68), CONFIG["brand"]["name"], font=sans("ExtraBold", 28), fill=WHITE, anchor="lm")
+    _brand_lockup(img, M, 30)
+    d = ImageDraw.Draw(img)
     f = sans("Bold", 22)
     w = d.textlength(time_label, font=f) + 36
     d.rounded_rectangle([W - M - w, 48, W - M, 88], radius=20, outline=(255, 255, 255), width=2)
@@ -282,13 +321,13 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     x = M
     f = sans("ExtraBold", 26)
     w = d.textlength("TIN NÓNG", font=f) + 92
-    d.rounded_rectangle([x, 140, x + w, 190], radius=25, fill=PRIMARY)
-    d.polygon([(x + 30, 149), (x + 42, 149), (x + 36, 162), (x + 46, 162), (x + 28, 182), (x + 33, 167), (x + 23, 167)],
+    d.rounded_rectangle([x, 146, x + w, 196], radius=25, fill=PRIMARY)
+    d.polygon([(x + 30, 155), (x + 42, 155), (x + 36, 168), (x + 46, 168), (x + 28, 188), (x + 33, 173), (x + 23, 173)],
               fill=WHITE)
-    d.text((x + 58, 165), "TIN NÓNG", font=f, fill=WHITE, anchor="lm")
-    _pill(d, x + w + 14, 140, f"Mức ảnh hưởng: {level}", 22, WHITE, PRIMARY, pad=22)
+    d.text((x + 58, 171), "TIN NÓNG", font=f, fill=WHITE, anchor="lm")
+    _pill(d, x + w + 14, 146, f"Mức ảnh hưởng: {level}", 22, WHITE, PRIMARY, pad=22)
 
-    y = 236
+    y = 240
     _soft_shadow_text(img, wrap(d, headline, sans("ExtraBold", 56), W - 2 * M, max_lines=4), M, y, 70)
     d = ImageDraw.Draw(img)
     for line in wrap(d, headline, sans("ExtraBold", 56), W - 2 * M, max_lines=4):
@@ -335,7 +374,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
             d.line([(M + 30, yy + rh), (W - M - 30, yy + rh)], fill=LINE, width=2)
         yy += rh
     y = yy + 30
-    ty = H - 92 - 64 - 14
+    ty = H - 92 - 64 - 36
     if summary and y + 80 < ty:
         sl = wrap(d, summary, sans("SemiBold", 27), W - 2 * M - 70, max_lines=2)
         bh = len(sl) * 38 + 40
