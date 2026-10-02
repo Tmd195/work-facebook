@@ -46,7 +46,7 @@ def _extract_json(text: str) -> dict:
         text = fence.group(1)
     start, end = text.find("{"), text.rfind("}")
     if start < 0 or end < 0:
-        raise LLMError("AI không trả về JSON")
+        raise LLMError(f"AI không trả về JSON: {text[:200]!r}")
     return json.loads(text[start:end + 1])
 
 

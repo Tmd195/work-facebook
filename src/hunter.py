@@ -44,23 +44,37 @@ def _save(d: dict):
     FILE.write_text(json.dumps(d, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+ARCHIVE = STATE / "hunter_archive.json"
+
+
+def _archive(items: list):
+    """Kho tin quan trọng 9 ngày gần nhất – dùng cho bài 'Top 5 tin của tuần' thứ 7."""
+    if not items:
+        return
+    arch = json.loads(ARCHIVE.read_text(encoding="utf-8")) if ARCHIVE.exists() else []
+    cut = (datetime.now(TZ) - timedelta(days=9)).isoformat()
+    arch = [x for x in arch if x["at"] >= cut] + items
+    ARCHIVE.write_text(json.dumps(arch, ensure_ascii=False), encoding="utf-8")
+
+
 def active(now: datetime) -> bool:
-    """Chỉ săn tin khi thị trường mở: thứ 2 05:00 → thứ 7 04:00 giờ VN."""
-    wd, h = now.weekday(), now.hour
-    if wd == 5:
-        return h < 4
-    if wd == 6:
-        return False
-    if wd == 0:
-        return h >= 5
+    """Săn tin cả tuần; cuối tuần (thứ 7 04:00 → thứ 2 05:00) chỉ nhận tin cực lớn (xem weekend())."""
     return True
+
+
+def weekend(now: datetime) -> bool:
+    wd, h = now.weekday(), now.hour
+    return (wd == 5 and h >= 4) or wd == 6 or (wd == 0 and h < 5)
 
 
 def fetch() -> list[dict]:
     r = requests.post(URL, json={"limit": 40, "page": 1}, headers=HEAD, timeout=20)
     r.raise_for_status()
+    j = r.json()
+    if j.get("code") != 200:                 # vd. "访问过于频繁" = truy cập quá thường xuyên → coi là lỗi, không phải "hết tin"
+        raise RuntimeError(f"nguồn tin từ chối: {j.get('msg')}")
     out = []
-    for x in (r.json().get("data") or {}).get("list") or []:
+    for x in (j.get("data") or {}).get("list") or []:
         t = datetime.fromisoformat(x["pub_time_tz"]).replace(tzinfo=ZoneInfo("Asia/Bangkok")).astimezone(TZ)
         out.append({"id": str(x["id"]), "at": t.isoformat(), "time": t.strftime("%H:%M"), "text": x["translate"],
                     "important": x["important"] != "0", "star": int(x["star"] or 0), "actual": x["actual"],
@@ -99,6 +113,7 @@ def tick(dry_run: bool | None = None) -> str:
 
     new = [x for x in items if x["id"] not in d["seen"]]
     d["seen"] += [x["id"] for x in new]
+    _archive([x for x in new if tier1(x)])
     cutoff = now - timedelta(minutes=40)
     fresh = [x for x in new if datetime.fromisoformat(x["at"]) >= cutoff]
     d["pending"] = [x for x in d["pending"] if datetime.fromisoformat(x["at"]) >= cutoff] + [x for x in fresh if tier1(x)]
@@ -115,19 +130,22 @@ def tick(dry_run: bool | None = None) -> str:
 
     today = now.strftime("%Y-%m-%d")
     done_today = d["posts"].get(today, 0)
+    wk = weekend(now)
+    cap = CFG.get("weekend_max_per_day", 2) if wk else CFG.get("max_per_day", 4)
     last = datetime.fromisoformat(d["last_post"]) if d["last_post"] else None
     gap = timedelta(minutes=CFG.get("min_gap_minutes", 30))
-    if done_today >= CFG.get("max_per_day", 4) or (last and now - last < gap and not urgent):
-        d["pending"] = [] if done_today >= CFG.get("max_per_day", 4) else d["pending"]
+    if done_today >= cap or (last and now - last < gap and not urgent):
+        d["pending"] = [] if done_today >= cap else d["pending"]
         _save(d)
         return msg + " (giới hạn tần suất)"
 
     from src.content import cwg_daily
     cand, d["pending"] = d["pending"], []
     _save(d)
-    groups = cwg_daily.pick_breaking(cand, n=1)
+    need = CFG.get("weekend_min_score", 8) if wk else 7
+    groups = cwg_daily.pick_breaking(cand, n=1, min_score=need)
     if not groups:
-        return msg + " → không tin nào đủ 7 điểm"
+        return msg + f" → không tin nào đủ {need} điểm"
     group = groups[0]
     folder = OUTPUT / now.strftime("%Y-%m-%d") / f"breaking_{now:%H%M}"
     folder.mkdir(parents=True, exist_ok=True)

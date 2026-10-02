@@ -23,7 +23,7 @@ from src.data.prices import Candle, get_intraday, get_series
 from src.design.diagrams import synth_candles
 from src.design.tvchart import TV, TVChart
 
-DIGITS = {"XAUUSD": 2, "EURUSD": 5, "GBPUSD": 5, "DXY": 3}
+DIGITS = {"XAUUSD": 2, "EURUSD": 5, "GBPUSD": 5, "DXY": 3, "AUDUSD": 5, "USDCAD": 5, "USDJPY": 3, "WTI": 2}
 WINDOW = {"H1": 120, "H4": 110, "D1": 120}
 
 CHART_SPEC = """Trường "chart" mô tả biểu đồ (giao diện TradingView) đi kèm bài, chọn 1 trong 2 chế độ:

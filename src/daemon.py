@@ -47,7 +47,7 @@ def save_state(msg: str):
     if "GITHUB_ACTIONS" not in os.environ:
         return
     files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
-                                                 "reels_progress", "brand_progress", "hunter"))
+                                                 "reels_progress", "brand_progress", "hunter", "hunter_archive"))
     sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "
        f"(git commit -qm '{msg}' && (git push -q || (git pull --rebase -q && git push -q)))", 180)
 

@@ -177,6 +177,13 @@ schedule:
   cwg_trend:   { time: "08:30", days: [mon, tue, wed, thu, fri] }   # Bảng tin xu hướng (duy nhất trong ngày)
   cwg_license: { time: "09:00", dates: ["2026-10-05", "2026-10-06", "2026-10-07"] }   # FCA → FSCA → VFSC (bài ghim)
   cwg_macro:   { time: "10:00", days: [mon, tue, wed, thu, fri] }   # Phân tích vĩ mô
+  # Cuối tuần (anh chốt 03/10/2026) – mỗi ngày 3 bài
+  cwg_wk_recap: { time: "09:00", days: [sat] }   # Tổng kết tuần
+  cwg_wk_top5:  { time: "14:00", days: [sat] }   # Top 5 tin của tuần (từ kho tin bộ săn tin đã bắt)
+  cwg_wk_tech:  { time: "20:00", days: [sat] }   # Phân tích khung tuần (biểu đồ TradingView)
+  cwg_wk_cot:   { time: "10:00", days: [sun] }   # Dòng tiền lớn – báo cáo COT của CFTC
+  cwg_wk_macro: { time: "15:00", days: [sun] }   # Chủ đề vĩ mô tuần tới (kịch bản trước sự kiện)
+  cwg_wk_ahead: { time: "20:00", days: [sun] }   # Lịch tin & góc nhìn tuần mới
 
 # Bộ săn tin: quét fxtin, tin đủ mạnh (AI chấm ≥ 7/10) thành bài TIN NÓNG
 hunter:
@@ -185,6 +192,8 @@ hunter:
   batch_minutes: 5        # tin thường gom 5 phút rồi mới chấm; tin số liệu ≥ 3 sao xử lý ngay
   min_gap_minutes: 30     # 2 bài tin nóng cách nhau tối thiểu
   max_per_day: 4
+  weekend_max_per_day: 2   # cuối tuần chỉ tin cực lớn (OPEC, thuế quan, chiến sự…)
+  weekend_min_score: 8
 
 reels:
   voice: demo                          # giọng đọc mẫu của trang tạo giọng (không nhân bản người thật)

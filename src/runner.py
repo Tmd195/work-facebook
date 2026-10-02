@@ -117,8 +117,8 @@ def _files(job: str, out_dir):
         cap, video, thumb = reel.files(out_dir)
         return cap, [video, thumb]
     if job.startswith("cwg_"):
-        from src.content import cwg_daily
-        return cwg_daily.files(job, out_dir)
+        from src.content import cwg_daily, cwg_weekend
+        return (cwg_weekend if job.startswith("cwg_wk_") else cwg_daily).files(job, out_dir)
     s = job.split("_")[1]
     return out_dir / f"strategy_{s}.txt", sorted(out_dir.glob(f"strategy_{s}_[0-9][0-9].png"))
 
@@ -135,15 +135,17 @@ def generate(job: str):
         from src.reels import job as reel
         return reel.generate(OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
     if job.startswith("cwg_"):
-        from src.content import cwg_daily
-        return cwg_daily.generate(job, OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
+        from src.content import cwg_daily, cwg_weekend
+        mod = cwg_weekend if job.startswith("cwg_wk_") else cwg_daily
+        return mod.generate(job, OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
     return run.run_strategy(job.split("_")[1])
 
 
 def label(job: str) -> str:
     if job.startswith("cwg_"):
         from src.content.cwg_daily import JOB_NAMES
-        return JOB_NAMES.get(job, job)
+        from src.content.cwg_weekend import JOB_NAMES as WK
+        return {**JOB_NAMES, **WK}.get(job, job)
     if job == "knowledge":
         from src.content import knowledge
         nxt = knowledge.next_lesson()

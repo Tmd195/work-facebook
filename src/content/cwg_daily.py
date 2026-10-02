@@ -5,6 +5,7 @@ tin nóng (săn tin fxtin), bài giấy phép. Số liệu do hệ thống lấy
 """
 import argparse
 import json
+import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -74,6 +75,7 @@ def fxtin(day: date, pages: int = 8) -> list[dict]:
         lst = (r.get("data") or {}).get("list") or []
         if not lst:
             break
+        time.sleep(1.5)
         for x in lst:
             t = datetime.fromisoformat(x["pub_time_tz"]).replace(tzinfo=ZoneInfo("Asia/Bangkok")).astimezone(TZ)
             if t.date() == day:
@@ -195,13 +197,13 @@ caption (100-160 từ), hashtags (2-3). Mọi con số trong bài phải lấy t
     return {"slot": "10:00", "name": "Phân tích vĩ mô", "images": imgs, "caption": caption(r["caption"], r["hashtags"])}
 
 
-def pick_breaking(items: list, n: int = 2) -> list:
+def pick_breaking(items: list, n: int = 2, min_score: int = 7) -> list:
     cand = [x for x in items if x["star"] >= 2 or x["important"]]
     lines = "\n".join(f"[{k}] {x['time']} sao={x['star']} {x['text']}"
                       + (f" | thực tế {x['actual']}, dự báo {x['forecast']}, trước {x['previous']}" if x["actual"] not in ("null", "") else "")
                       for k, x in enumerate(cand[:120]))
     r = generate_json(WRITER, f"""Đây là các tin trong ngày từ nguồn tin nhanh. Chấm điểm ảnh hưởng tới thị trường ngoại hối,
-vàng, dầu (0-10) và chọn tối đa {n} tin quan trọng nhất (≥ 7 điểm), gom các tin cùng sự kiện lại.
+vàng, dầu (0-10) và chọn tối đa {n} tin quan trọng nhất (≥ {min_score} điểm), gom các tin cùng sự kiện lại.
 {lines}
 Trả về picks: [{{ids: [chỉ số tin liên quan], score}}] sắp xếp giảm dần.""",
                       {"type": "object", "properties": {"picks": {"type": "array", "items": {"type": "object", "properties": {
@@ -209,7 +211,7 @@ Trả về picks: [{{ids: [chỉ số tin liên quan], score}}] sắp xếp gi�
                           "required": ["ids", "score"]}}}, "required": ["picks"]})
     out = []
     for p in r["picks"][:n]:
-        if p["score"] >= 7:
+        if p["score"] >= min_score:
             out.append([cand[i] for i in p["ids"] if 0 <= i < len(cand)])
     return out
 
