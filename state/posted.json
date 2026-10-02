@@ -80,5 +80,61 @@
    "price": 4173.74,
    "title": "Vàng nghiêng giảm, ưu tiên canh bán nhịp hồi lên 4,216 - 4,220"
   }
+ },
+ "2026-10-02 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129160326735108",
+  "post_id": "1121396124381014_122129160326735108",
+  "posted_at": "2026-10-02T07:30:04.890239+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "16:00",
+     "datetime": "2026-10-02T16:00:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "Core CPI Flash Estimate y/y",
+     "forecast": "2.5%",
+     "previous": "2.4%"
+    },
+    {
+     "time": "16:00",
+     "datetime": "2026-10-02T16:00:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "CPI Flash Estimate y/y",
+     "forecast": "3.7%",
+     "previous": "3.3%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-02T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Average Hourly Earnings m/m",
+     "forecast": "0.3%",
+     "previous": "0.3%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-02T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Non-Farm Employment Change",
+     "forecast": "89K",
+     "previous": "162K"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-02T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Unemployment Rate",
+     "forecast": "4.1%",
+     "previous": "4.1%"
+    }
+   ]
+  }
  }
 }
