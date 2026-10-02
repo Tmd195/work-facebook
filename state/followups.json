@@ -31,5 +31,14 @@
  "2026-10-02 knowledge 12:00|examples": {
   "at": "2026-10-02T12:27:24.272098+07:00",
   "count": 3
+ },
+ "2026-10-02 morning 07:30|news|2026-10-02T19:30:00+07:00|USD": {
+  "at": "2026-10-02T19:35:51.816918+07:00",
+  "impact": "GIẢM",
+  "sources": [
+   "https://www.bls.gov/news.release/empsit.nr0.htm",
+   "https://tradingeconomics.com/united-states/non-farm-payrolls",
+   "https://www.fxstreet.com/macroeconomics/economic-indicator/nfp"
+  ]
  }
 }
