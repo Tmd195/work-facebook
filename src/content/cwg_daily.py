@@ -24,7 +24,9 @@ FXTIN = "https://www.fxtin.com/page/finance/information"
 
 WRITER = """Bạn là biên tập viên tin tài chính của Page "CWG Markets & Partner" – kênh cập nhật thị trường nhanh cho
 đối tác IB lâu năm (họ dùng thông tin để chia sẻ lại cho khách). Giọng chuyên nghiệp, ngắn gọn, đi thẳng vào tác động
-lên thị trường. Không hô hào, không hứa lợi nhuận, không đưa điểm vào lệnh / SL / TP. Không dùng markdown, không in đậm,
+lên thị trường.
+CAPTION PHẢI THOÁNG, DỄ ĐỌC TRÊN ĐIỆN THOẠI: mỗi đoạn tối đa 1-2 câu, xuống dòng giữa các ý; khi nói nhiều sản phẩm thì
+mỗi sản phẩm (hoặc mỗi nhóm nhỏ) một dòng riêng, có emoji đầu dòng; không viết thành một khối chữ dài. Không hô hào, không hứa lợi nhuận, không đưa điểm vào lệnh / SL / TP. Không dùng markdown, không in đậm,
 không ghi "18+", không kêu gọi comment. Chỉ dùng số liệu được cung cấp; không tự bịa số."""
 
 
@@ -100,7 +102,7 @@ def facts_text(snap: dict) -> str:
 def caption(body: str, tags: list[str]) -> str:
     brand = (CONFIG.get("hashtags") or {}).get("brand") or []
     tags = list(dict.fromkeys(t.replace(" ", "") for t in brand + [t if t.startswith("#") else "#" + t for t in tags]))[:6]
-    parts = [fbtext.render(body).strip(), BP.get("signature", "").strip(), BP.get("disclaimer", "").strip()]
+    parts = [fbtext.airy(fbtext.render(body).strip()), BP.get("signature", "").strip(), BP.get("disclaimer", "").strip()]
     return "\n\n".join(p for p in parts if p) + "\n\n" + " ".join(tags)
 
 

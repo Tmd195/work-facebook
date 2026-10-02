@@ -129,7 +129,7 @@ def caption(post: dict) -> str:
     brand_tags = (CONFIG.get("hashtags") or {}).get("brand") or []
     tags = brand_tags + [t if t.startswith("#") else "#" + t for t in post.get("hashtags") or []]
     tags = list(dict.fromkeys(t.replace(" ", "") for t in tags))[:6]
-    parts = [fbtext.render(post["caption"]).strip(), BP.get("signature", "").strip(),
+    parts = [fbtext.airy(fbtext.render(post["caption"]).strip()), BP.get("signature", "").strip(),
              BP.get("disclaimer", "").strip()]
     return "\n\n".join(p for p in parts if p) + "\n\n" + " ".join(tags)
 
