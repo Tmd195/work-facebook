@@ -1,0 +1,19 @@
+id: hoc-nghe-ib
+name: "Học nghề IB"
+level: "Từ 0 đến đại lý chuyên nghiệp"
+lessons:
+  - {part: 1,  title: "IB là gì – vai trò giữa sàn và trader", focus: "IB làm gì mỗi ngày, khác gì môi giới truyền thống, vì sao sàn cần IB"}
+  - {part: 2,  title: "Thu nhập của IB đến từ đâu", focus: "Rebate theo lot, chia spread, các mô hình phổ biến nói chung; thu nhập phụ thuộc khối lượng khách giao dịch"}
+  - {part: 3,  title: "Tính rebate theo lot – ví dụ với vàng", focus: "Cách đọc spread, pip, lot; ví dụ XAUUSD spread 5.x pip → $50/lot theo chính sách 85% spread"}
+  - {part: 4,  title: "5 tiêu chí chọn sàn để làm IB", focus: "Pháp lý, thời điểm trả rebate, điều kiện ràng buộc, sản phẩm/điều kiện giao dịch, hỗ trợ đối tác"}
+  - {part: 5,  title: "Chân dung khách hàng phù hợp", focus: "Ai là khách tiềm năng, ai không nên mời, tránh khách vào vì ham lợi nhuận nhanh"}
+  - {part: 6,  title: "Xây tệp khách từ con số 0", focus: "Bắt đầu từ mối quan hệ, cộng đồng, chia sẻ giá trị trước khi mời mở tài khoản"}
+  - {part: 7,  title: "Làm nội dung cho IB", focus: "Kênh nào (Facebook, TikTok, Zalo, Telegram), đăng gì, tần suất, tránh nội dung hứa lợi nhuận"}
+  - {part: 8,  title: "Vận hành cộng đồng Zalo/Telegram", focus: "Nội quy, lịch nội dung, bản tin hằng ngày, xử lý tranh cãi, giữ tương tác"}
+  - {part: 9,  title: "Quy trình tư vấn mở tài khoản 5 bước", focus: "Hỏi nhu cầu – giải thích rủi ro – hướng dẫn mở tài khoản – nạp tiền – lệnh đầu tiên"}
+  - {part: 10, title: "Chăm khách sau khi nạp tiền", focus: "Hỗ trợ kỹ thuật, nhắc quản lý vốn, đồng hành tuần đầu, giữ khách lâu dài"}
+  - {part: 11, title: "Vì sao khách sống lâu thì IB mới bền", focus: "Quản trị rủi ro cho khách: khối lượng hợp lý, SL, tránh cháy tài khoản; khách bền = rebate bền"}
+  - {part: 12, title: "Theo dõi khối lượng và rebate", focus: "Đọc báo cáo đối tác, theo dõi khách hoạt động, phát hiện khách sắp bỏ"}
+  - {part: 13, title: "Xây đội IB cấp dưới", focus: "Khi nào nên mở rộng, chọn người, đào tạo, chia chính sách, giữ uy tín hệ thống"}
+  - {part: 14, title: "Tuân thủ và đạo đức nghề IB", focus: "Không hứa lợi nhuận, không giữ tiền/tài khoản của khách, minh bạch rủi ro, tôn trọng luật địa phương"}
+  - {part: 15, title: "Lộ trình 90 ngày cho IB mới", focus: "Tháng 1 nền tảng, tháng 2 nội dung + cộng đồng, tháng 3 tư vấn + chăm khách; mục tiêu đo được"}
