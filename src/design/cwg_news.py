@@ -346,8 +346,10 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
             d.rounded_rectangle([x0, y, x0 + bw, y + 150], radius=24, fill=WHITE,
                                 outline=col if main else LINE, width=4 if main else 2)
             d.text((x0 + bw / 2, y + 40), lab, font=sans("Bold", 22), fill=MUTED, anchor="mm")
-            d.text((x0 + bw / 2, y + 100), str(val), font=sans("ExtraBold", 56 if main else 46),
-                   fill=col if main else INK, anchor="mm")
+            size = 56 if main else 46
+            while size > 24 and d.textlength(str(val), font=sans("ExtraBold", size)) > bw - 30:
+                size -= 2
+            d.text((x0 + bw / 2, y + 100), str(val), font=sans("ExtraBold", size), fill=col if main else INK, anchor="mm")
         y += 182
     else:
         y = max(y + 20, band_h + 10)
@@ -385,5 +387,240 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     if ticker:
         _ticker(img, ty, ticker)
     _brand_footer(img, "Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    save(img, path)
+    return path
+
+
+# ------------------------------------------------------------------ bản tin đầu ngày / bảng tin xu hướng / vĩ mô
+
+ORANGE = (230, 140, 20)
+
+
+def _kicker(d, y: int, text: str, right: str = "") -> int:
+    w = _pill(d, M, y, text, 24, PRIMARY, WHITE, pad=24)
+    if right:
+        d.text((M + w + 18, y + 23), right, font=sans("SemiBold", 24), fill=MUTED, anchor="lm")
+    return y + 64
+
+
+def _spark(d, box, values, col):
+    x0, y0, x1, y1 = box
+    lo, hi = min(values), max(values)
+    span = (hi - lo) or 1
+    pts = [(x0 + i * (x1 - x0) / (len(values) - 1), y1 - (v - lo) / span * (y1 - y0)) for i, v in enumerate(values)]
+    d.line(pts, fill=col, width=3, joint="curve")
+    d.ellipse([pts[-1][0] - 4, pts[-1][1] - 4, pts[-1][0] + 4, pts[-1][1] + 4], fill=col)
+
+
+def _fmt(v: float, digits: int) -> str:
+    return f"{v:,.{digits}f}"
+
+
+def render_morning(path, time_label: str, title: str, tiles: list, events: list, note: str = ""):
+    """tiles: [{"code","price","digits","chg","spark"}] x8 ; events: [{"time","ccy","title","impact","forecast","previous"}]"""
+    img = _paper()
+    _brand_header(img, time_label)
+    d = ImageDraw.Draw(img)
+    y = _kicker(d, 140, "BẢN TIN ĐẦU NGÀY", "Cập nhật trước giờ giao dịch")
+    for line in wrap(d, title, sans("ExtraBold", 46), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=sans("ExtraBold", 46), fill=INK)
+        y += 58
+    y += 14
+    # lưới 8 sản phẩm 4x2
+    cols, gap = 4, 14
+    tw = (W - 2 * M - (cols - 1) * gap) / cols
+    th = 150
+    for k, t in enumerate(tiles[:8]):
+        x0 = M + (k % cols) * (tw + gap)
+        y0 = y + (k // cols) * (th + gap)
+        _shadow(img, (x0, y0, x0 + tw, y0 + th), 18, blur=12, offset=(0, 6), alpha=30)
+        d = ImageDraw.Draw(img)
+        d.rounded_rectangle([x0, y0, x0 + tw, y0 + th], radius=18, fill=WHITE)
+        up = t["chg"] >= 0
+        col = UP if up else DOWN
+        d.text((x0 + 18, y0 + 26), t["code"], font=sans("ExtraBold", 24), fill=INK, anchor="lm")
+        d.text((x0 + 18, y0 + 62), _fmt(t["price"], t["digits"]), font=sans("Bold", 24), fill=INK, anchor="lm")
+        d.text((x0 + 18, y0 + 94), f"{t['chg']:+.2f}%", font=sans("ExtraBold", 22), fill=col, anchor="lm")
+        _spark(d, (x0 + 18, y0 + 112, x0 + tw - 18, y0 + th - 14), t["spark"][-20:], col)
+    y += 2 * th + gap + 34
+    # lịch tin
+    d.text((M, y), "LỊCH TIN QUAN TRỌNG HÔM NAY", font=sans("ExtraBold", 26), fill=INK)
+    d.text((W - M, y + 14), "giờ Việt Nam", font=sans("Medium", 20), fill=MUTED, anchor="rm")
+    y += 48
+    rows = events[:6]
+    rh = 66
+    if rows:
+        _shadow(img, (M, y, W - M, y + rh * len(rows) + 12), 22, blur=14, offset=(0, 8), alpha=30)
+        d = ImageDraw.Draw(img)
+        d.rounded_rectangle([M, y, W - M, y + rh * len(rows) + 12], radius=22, fill=WHITE)
+        yy = y + 6
+        for k, e in enumerate(rows):
+            cy = yy + rh / 2
+            dot = PRIMARY if e["impact"] == "High" else ORANGE
+            d.ellipse([M + 22, cy - 7, M + 36, cy + 7], fill=dot)
+            d.text((M + 52, cy), e["time"], font=sans("ExtraBold", 24), fill=INK, anchor="lm")
+            d.rounded_rectangle([M + 136, cy - 17, M + 206, cy + 17], radius=10, fill=(244, 244, 247))
+            d.text((M + 171, cy), e["ccy"], font=sans("ExtraBold", 19), fill=INK, anchor="mm")
+            fc = f"DB {e['forecast']}" if e.get("forecast") else ""
+            fcw = d.textlength(fc, font=sans("SemiBold", 20)) if fc else 0
+            d.text((M + 222, cy), fit(d, e["title"], sans("SemiBold", 23), W - 2 * M - 250 - fcw), font=sans("SemiBold", 23),
+                   fill=(50, 50, 56), anchor="lm")
+            if fc:
+                d.text((W - M - 20, cy), fc, font=sans("SemiBold", 20), fill=MUTED, anchor="rm")
+            if k < len(rows) - 1:
+                d.line([(M + 22, yy + rh), (W - M - 22, yy + rh)], fill=LINE, width=2)
+            yy += rh
+        y = yy + 22
+    else:
+        d.text((M, y + 10), "Không có tin tác động mạnh trong ngày.", font=sans("SemiBold", 24), fill=MUTED)
+        y += 60
+    if note and y + 70 < H - 130:
+        sl = wrap(d, note, sans("SemiBold", 25), W - 2 * M - 70, max_lines=2)
+        bh = len(sl) * 36 + 36
+        d.rounded_rectangle([M, y, W - M, y + bh], radius=20, fill=(253, 234, 236))
+        d.rectangle([M, y + 12, M + 8, y + bh - 12], fill=PRIMARY)
+        for k, line in enumerate(sl):
+            d.text((M + 36, y + 18 + k * 36), line, font=sans("SemiBold", 25), fill=INK)
+    _brand_footer(img, "Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    save(img, path)
+    return path
+
+
+def render_trend(path, time_label: str, title: str, rows: list):
+    """rows: [{"code","bias":"up|down|flat","support","resistance","reason"}] (tối đa 8)"""
+    img = _paper()
+    _brand_header(img, time_label)
+    d = ImageDraw.Draw(img)
+    y = _kicker(d, 140, "BẢNG TIN XU HƯỚNG", "Góc nhìn tổng quan trong ngày")
+    for line in wrap(d, title, sans("ExtraBold", 40), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=sans("ExtraBold", 40), fill=INK)
+        y += 52
+    y += 10
+    # tiêu đề cột
+    cx = [M + 24, M + 200, M + 420, M + 690]
+    d.rounded_rectangle([M, y, W - M, y + 50], radius=14, fill=(28, 28, 32))
+    for x, lab in zip(cx, ["SẢN PHẨM", "XU HƯỚNG", "VÙNG HỖ TRỢ", "VÙNG KHÁNG CỰ"]):
+        d.text((x, y + 25), lab, font=sans("ExtraBold", 19), fill=WHITE, anchor="lm")
+    y += 62
+    rh = 96
+    n = len(rows[:8])
+    _shadow(img, (M, y, W - M, y + rh * n), 20, blur=14, offset=(0, 8), alpha=30)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([M, y, W - M, y + rh * n], radius=20, fill=WHITE)
+    lab = {"up": ("TĂNG", UP), "down": ("GIẢM", DOWN), "flat": ("ĐI NGANG", FLAT)}
+    for k, r in enumerate(rows[:8]):
+        yy = y + k * rh
+        d.text((cx[0], yy + 34), r["code"], font=sans("ExtraBold", 28), fill=INK, anchor="lm")
+        t, col = lab.get(r["bias"], lab["flat"])
+        w = d.textlength(t, font=sans("ExtraBold", 20)) + 56
+        d.rounded_rectangle([cx[1], yy + 16, cx[1] + w, yy + 52], radius=18, fill=col)
+        if r["bias"] == "flat":
+            d.rectangle([cx[1] + 14, yy + 32, cx[1] + 30, yy + 36], fill=WHITE)
+        else:
+            _tri(d, cx[1] + 14, yy + 26, 16, r["bias"] == "up", WHITE)
+        d.text((cx[1] + 38, yy + 34), t, font=sans("ExtraBold", 20), fill=WHITE, anchor="lm")
+        d.text((cx[2], yy + 34), r["support"], font=sans("Bold", 23), fill=UP, anchor="lm")
+        d.text((cx[3], yy + 34), r["resistance"], font=sans("Bold", 23), fill=DOWN, anchor="lm")
+        d.text((cx[0], yy + 74), fit(d, r["reason"], sans("Medium", 20), W - 2 * M - 48), font=sans("Medium", 20),
+               fill=MUTED, anchor="lm")
+        if k < n - 1:
+            d.line([(M + 20, yy + rh), (W - M - 20, yy + rh)], fill=LINE, width=2)
+    _brand_footer(img, "Góc nhìn tổng quan, không phải tín hiệu giao dịch. Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn.")
+    save(img, path)
+    return path
+
+
+def render_macro_cover(path, photo, time_label: str, title: str, subtitle: str, headings: list):
+    img = _paper()
+    _photo_band(img, photo, 760)
+    _c_watermark(img, W + 40, 360, box=(0, 0, W, 700))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, 10], fill=PRIMARY)
+    _brand_lockup(img, M, 30)
+    d = ImageDraw.Draw(img)
+    f = sans("Bold", 22)
+    w = d.textlength(time_label, font=f) + 36
+    d.rounded_rectangle([W - M - w, 48, W - M, 88], radius=20, outline=(255, 255, 255), width=2)
+    d.text((W - M - w / 2, 68), time_label, font=f, fill=WHITE, anchor="mm")
+    _pill(d, M, 300, "PHÂN TÍCH VĨ MÔ", 24, PRIMARY, WHITE, pad=24)
+    y = 370
+    lines = wrap(d, title, sans("ExtraBold", 62), W - 2 * M, max_lines=3)
+    _soft_shadow_text(img, lines, M, y, 76)
+    d = ImageDraw.Draw(img)
+    for line in lines:
+        d.text((M, y), line, font=sans("ExtraBold", 62), fill=WHITE)
+        y += 76
+    for line in wrap(d, subtitle, sans("SemiBold", 30), W - 2 * M, max_lines=2):
+        d.text((M, y + 10), line, font=sans("SemiBold", 30), fill=(255, 225, 228))
+        y += 42
+    y = 790
+    d.text((M, y), "NỘI DUNG CHÍNH", font=sans("ExtraBold", 24), fill=PRIMARY)
+    y += 48
+    for i, h in enumerate(headings[:3]):
+        d.text((M, y), f"{i + 1:02d}", font=sans("ExtraBold", 38), fill=PRIMARY)
+        d.text((M + 80, y + 6), fit(d, h, sans("Bold", 32), W - 2 * M - 80), font=sans("Bold", 32), fill=INK)
+        y += 78
+        d.line([(M + 80, y - 18), (W - M, y - 18)], fill=LINE, width=2)
+    _brand_footer(img, "Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    save(img, path)
+    return path
+
+
+def _compare_chart(img: Image.Image, box, series: dict, colors: list, title: str):
+    """Biểu đồ so sánh % thay đổi của nhiều tài sản (chuẩn hoá về 0% ở đầu kỳ)."""
+    d = ImageDraw.Draw(img)
+    x0, y0, x1, y1 = box
+    _shadow(img, box, 22, blur=14, offset=(0, 8), alpha=30)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle(box, radius=22, fill=WHITE)
+    d.text((x0 + 24, y0 + 30), title, font=sans("ExtraBold", 22), fill=INK, anchor="lm")
+    norm = {k: [(v / s[0] - 1) * 100 for v in s] for k, s in series.items()}
+    allv = [v for s in norm.values() for v in s]
+    lo, hi = min(allv), max(allv)
+    pad = (hi - lo) * 0.1 or 1
+    lo, hi = lo - pad, hi + pad
+    cx0, cy0, cx1, cy1 = x0 + 70, y0 + 70, x1 - 130, y1 - 30
+    for k in range(5):
+        v = lo + (hi - lo) * k / 4
+        yy = cy1 - (v - lo) / (hi - lo) * (cy1 - cy0)
+        d.line([(cx0, yy), (cx1, yy)], fill=LINE, width=1)
+        d.text((cx0 - 10, yy), f"{v:+.1f}%", font=sans("Medium", 16), fill=MUTED, anchor="rm")
+    z = cy1 - (0 - lo) / (hi - lo) * (cy1 - cy0)
+    d.line([(cx0, z), (cx1, z)], fill=(190, 190, 196), width=2)
+    for (name, vals), col in zip(norm.items(), colors):
+        pts = [(cx0 + i * (cx1 - cx0) / (len(vals) - 1), cy1 - (v - lo) / (hi - lo) * (cy1 - cy0)) for i, v in enumerate(vals)]
+        d.line(pts, fill=col, width=4, joint="curve")
+        d.ellipse([pts[-1][0] - 5, pts[-1][1] - 5, pts[-1][0] + 5, pts[-1][1] + 5], fill=col)
+        d.text((cx1 + 12, pts[-1][1]), f"{name} {vals[-1]:+.1f}%", font=sans("Bold", 18), fill=col, anchor="lm")
+
+
+def render_macro_slide(path, idx: int, total: int, heading: str, body: str, points: list, chart: dict | None = None):
+    img = _paper()
+    _brand_header(img, f"{idx:02d}/{total:02d}")
+    d = ImageDraw.Draw(img)
+    y = 140
+    d.text((M - 4, y - 10), f"{idx:02d}", font=sans("ExtraBold", 96), fill=PRIMARY)
+    lines = wrap(d, heading, sans("ExtraBold", 44), W - 2 * M - 150, max_lines=2)
+    ty = y + 30 - (len(lines) - 1) * 26
+    for line in lines:
+        d.text((M + 150, ty), line, font=sans("ExtraBold", 44), fill=INK)
+        ty += 54
+    y += 140
+    for line in wrap(d, body, sans("Medium", 33), W - 2 * M, max_lines=6):
+        d.text((M, y), line, font=sans("Medium", 33), fill=(50, 50, 56))
+        y += 47
+    y += 16
+    if chart:
+        _compare_chart(img, (M, y, W - M, y + 480), chart["series"], chart["colors"], chart["title"])
+        y += 512
+    d = ImageDraw.Draw(img)
+    for p in points[:3]:
+        if y + 50 > H - 130:
+            break
+        d.ellipse([M, y + 8, M + 24, y + 32], fill=PRIMARY)
+        d.text((M + 40, y + 20), fit(d, p, sans("SemiBold", 30), W - 2 * M - 40), font=sans("SemiBold", 30), fill=INK,
+               anchor="lm")
+        y += 58
+    _brand_footer(img, "Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
     save(img, path)
     return path

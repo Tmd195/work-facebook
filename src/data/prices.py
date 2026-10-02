@@ -14,7 +14,8 @@ import requests
 from src.config import env
 
 UA = {"User-Agent": "Mozilla/5.0"}
-YAHOO_SYMBOL = {"XAUUSD": "GC=F", "EURUSD": "EURUSD=X", "GBPUSD": "GBPUSD=X", "DXY": "DX-Y.NYB"}
+YAHOO_SYMBOL = {"XAUUSD": "GC=F", "EURUSD": "EURUSD=X", "GBPUSD": "GBPUSD=X", "DXY": "DX-Y.NYB",
+                "AUDUSD": "AUDUSD=X", "USDCAD": "USDCAD=X", "USDJPY": "USDJPY=X", "WTI": "CL=F"}
 TWELVE_SYMBOL = {"XAUUSD": "XAU/USD", "EURUSD": "EUR/USD", "GBPUSD": "GBP/USD"}
 
 

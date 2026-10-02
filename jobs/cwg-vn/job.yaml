@@ -92,6 +92,82 @@ brandpost:
       brief: "Tình huống thực tế khi làm IB (ẩn danh, không số thu nhập): khó khăn thường gặp và cách xử lý, sai lầm của đại lý mới"
   order: [hoc-nghe-ib, bo-cong-cu, hoc-nghe-ib, ve-cwg, hoc-nghe-ib, goc-nhin-dai-ly]
 
+  # Bài giấy phép (bài ghim những ngày đầu) – chỉ dữ kiện đã xác minh 03/10/2026
+  licenses_detail:
+    - code: FCA
+      short: "FRN 785129"
+      name: "Financial Conduct Authority"
+      country: "Vương quốc Anh"
+      entity: "CWG Markets Ltd"
+      number_label: "Số tham chiếu (FRN)"
+      number: "785129"
+      address: "76 Cannon Street, London, EC4N 6AE"
+      status: "Được cấp phép (Authorised)"
+      verify_steps: ["Vào register.fca.org.uk", "Nhập số 785129 vào ô tìm kiếm", "Đối chiếu tên CWG Markets Ltd và địa chỉ"]
+      caption: |-
+        🇬🇧 GIẤY PHÉP FCA – VƯƠNG QUỐC ANH
+        CWG Markets Ltd · FRN 785129
+
+        1️⃣ FCA là cơ quan quản lý tài chính của Vương quốc Anh, thuộc nhóm khắt khe nhất thế giới
+        2️⃣ Pháp nhân CWG Markets Ltd có tên trên sổ đăng ký FCA, trụ sở 76 Cannon Street, London
+        3️⃣ Tự tra cứu trong 30 giây: register.fca.org.uk → nhập 785129
+        4️⃣ Lưu ý: FCA từng cảnh báo các trang giả mạo tên CWG Markets. Chỉ tin thông tin tra trực tiếp trên trang của FCA
+
+        Tập đoàn CWG Markets được cấp phép tại 3 khu vực: FCA · FSCA · VFSC. Mỗi pháp nhân hoạt động theo giấy phép tại khu vực tương ứng.
+        📩 Inbox Page để nhận chính sách đối tác chi tiết
+
+        ⚠️ Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Nội dung giới thiệu chương trình đối tác, không phải lời khuyên đầu tư.
+
+        #CWGPartner #CWGMarkets #FCA #GiayPhep
+    - code: FSCA
+      short: "FSP 54031"
+      name: "Financial Sector Conduct Authority"
+      country: "Nam Phi"
+      entity: "CWG Markets SA (PTY) LTD"
+      number_label: "Số đăng ký (FSP)"
+      number: "54031"
+      address: "Nhà cung cấp dịch vụ tài chính được FSCA cấp phép"
+      status: "Được cấp phép"
+      verify_steps: ["Vào fsca.co.za → mục tra cứu FSP", "Nhập số 54031", "Đối chiếu tên CWG Markets SA (PTY) LTD"]
+      caption: |-
+        🇿🇦 GIẤY PHÉP FSCA – NAM PHI
+        CWG Markets SA (PTY) LTD · FSP 54031
+
+        1️⃣ FSCA là cơ quan giám sát hành vi thị trường tài chính của Nam Phi
+        2️⃣ Pháp nhân CWG Markets SA (PTY) LTD được FSCA cấp phép là nhà cung cấp dịch vụ tài chính, số 54031
+        3️⃣ Tự tra cứu: fsca.co.za → mục tra cứu FSP → nhập 54031
+
+        Tập đoàn CWG Markets được cấp phép tại 3 khu vực: FCA · FSCA · VFSC. Mỗi pháp nhân hoạt động theo giấy phép tại khu vực tương ứng.
+        📩 Inbox Page để nhận chính sách đối tác chi tiết
+
+        ⚠️ Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Nội dung giới thiệu chương trình đối tác, không phải lời khuyên đầu tư.
+
+        #CWGPartner #CWGMarkets #FSCA #GiayPhep
+    - code: VFSC
+      short: "Số ĐK 41694"
+      name: "Vanuatu Financial Services Commission"
+      country: "Vanuatu"
+      entity: "CWG MARKETS LTD"
+      number_label: "Số công ty / giấy phép"
+      number: "41694"
+      address: "Financial Dealers Licence hạng A, B, C · cấp 02/10/2023"
+      status: "Đang hoạt động (Active)"
+      verify_steps: ["Vào vfsc.vu → Financial Dealers Licensee List", "Tìm số 41694", "Đối chiếu tên CWG MARKETS LTD, trạng thái Active"]
+      caption: |-
+        🇻🇺 GIẤY PHÉP VFSC – VANUATU
+        CWG MARKETS LTD · Số 41694
+
+        1️⃣ VFSC là Ủy ban Dịch vụ Tài chính Vanuatu, cấp Giấy phép Kinh doanh Tài chính (Financial Dealers Licence)
+        2️⃣ CWG MARKETS LTD được cấp phép ngày 02/10/2023, hạng A, B, C, trạng thái đang hoạt động
+        3️⃣ Tự tra cứu: vfsc.vu → Financial Dealers Licensee List → tìm 41694
+
+        Tập đoàn CWG Markets được cấp phép tại 3 khu vực: FCA · FSCA · VFSC. Mỗi pháp nhân hoạt động theo giấy phép tại khu vực tương ứng.
+        📩 Inbox Page để nhận chính sách đối tác chi tiết
+
+        ⚠️ Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Nội dung giới thiệu chương trình đối tác, không phải lời khuyên đầu tư.
+
+        #CWGPartner #CWGMarkets #VFSC #GiayPhep
+
 hashtags:
   brand: ["#CWGPartner", "#CWGMarkets"]
 
