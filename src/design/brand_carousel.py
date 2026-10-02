@@ -546,7 +546,7 @@ def _license_strip(img, y, licenses, score):
 def render_ad2(path, photo: Image.Image, layout: str = "right", hook=("Mỗi lot khách đánh,", "bạn nhận bao nhiêu?"),
                hero="$50", unit="/lot", hero_sub="Vàng XAUUSD · spread 5.x pip",
                chips=("Thưởng doanh số ≥5%", "Không yêu cầu doanh số"),
-               float1=("Rebate nảy ngay", "khi khách đóng lệnh"), float2="85% spread",
+               float1=("Rebate cộng ngay", "khi đóng lệnh"), float2="85% spread",
                licenses=(("FCA", "Anh", "FRN 785129"), ("FSCA", "Nam Phi", "FSP 54031"), ("VFSC", "Vanuatu", "Số ĐK 41694")),
                score="8.25", button="Nhắn tin nhận chính sách", focus=(0.5, 0.22)):
     """layout: right (ảnh vòm bên phải) | hero (ảnh phủ nền phía sau, chữ đè bên trái)."""

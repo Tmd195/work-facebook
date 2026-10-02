@@ -36,7 +36,7 @@ brandpost:
     - "Hoa hồng IB: 85% spread."
     - "Thưởng doanh số: tối thiểu 5%."
     - "Ví dụ: vàng XAUUSD spread 5.x pip thì IB nhận $50/lot."
-    - "Rebate (hoa hồng) nảy ngay khi khách đóng lệnh, không giữ tiền của đối tác."
+    - "Rebate (hoa hồng) cộng ngay khi đóng lệnh, không giữ tiền của đối tác. (Viết đúng cụm 'Rebate cộng ngay khi đóng lệnh', không thêm chữ 'khách'.)"
     - "Không yêu cầu số khách hàng ban đầu; không yêu cầu doanh số tối thiểu."
     - "Đăng ký làm đối tác IB không mất phí."
     - "Có quản lý đối tác hỗ trợ tiếng Việt 1:1; có video đào tạo và bản tin phân tích mỗi ngày cho đối tác."
@@ -56,7 +56,7 @@ brandpost:
     example: ["XAUUSD spread 5.x pip", "$50/lot"]
     terms:
       - [person, "Điều kiện để bắt đầu?", "Nhắn tin ngay cho chúng tôi để thay đổi mức hoa hồng của bạn."]
-      - [clock, "Hoa hồng trả khi nào?", "Rebate (hoa hồng) nảy ngay khi đóng lệnh"]
+      - [clock, "Hoa hồng trả khi nào?", "Rebate (hoa hồng) cộng ngay khi đóng lệnh"]
       - [bars, "Có yêu cầu doanh số tối thiểu?", "Không yêu cầu doanh số"]
     licenses: [[FCA, "Anh", "FRN 785129"], [FSCA, "Nam Phi", "FSP 54031"], [VFSC, "Vanuatu", "Số ĐK 41694"]]
     score: "8.25"
