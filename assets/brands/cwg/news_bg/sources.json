@@ -1,0 +1,18 @@
+{
+ "fed-1": {
+  "source": "https://commons.wikimedia.org/wiki/File:Eccles_Building_(26088200676).jpg",
+  "license": "Public domain"
+ },
+ "gold-1": {
+  "source": "https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg",
+  "license": "CC0"
+ },
+ "oil-1": {
+  "source": "https://commons.wikimedia.org/wiki/File:Holstein_at_Dusk.jpg",
+  "license": "CC0"
+ },
+ "japan-1": {
+  "source": "https://commons.wikimedia.org/wiki/File:Bank_of_Japan_building_(40368).jpg",
+  "license": "CC0"
+ }
+}

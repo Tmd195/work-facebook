@@ -208,3 +208,143 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
     _brand_footer(img, "Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
     save(img, path)
     return path
+
+
+# ------------------------------------------------------------------ thẻ tin nóng có ảnh nền + dải băng giá
+
+def _photo_band(img: Image.Image, photo_path, height: int):
+    """Ảnh chủ đề phủ nửa trên: làm tối, phủ đỏ nhẹ góc trái dưới, mờ dần vào nền giấy ở mép dưới."""
+    import numpy as np
+    from PIL import ImageEnhance, ImageOps
+    ph = ImageOps.fit(Image.open(photo_path).convert("RGB"), (W, height), Image.LANCZOS, centering=(0.5, 0.45))
+    ph = ImageEnhance.Color(ph).enhance(0.8)
+    arr = np.asarray(ph).astype("float32")
+    yy, xx = np.mgrid[0:height, 0:W]
+    dark = 0.42 + 0.28 * (yy / height)                                   # tối dần xuống dưới cho chữ trắng nổi
+    arr *= (1 - dark)[..., None]
+    red = np.clip(1 - (xx / W) * 1.2, 0, 1) * np.clip(yy / height, 0, 1) * 0.35   # ánh đỏ thương hiệu góc trái dưới
+    arr = arr * (1 - red[..., None]) + np.array(PRIMARY, "float32") * red[..., None]
+    alpha = np.clip((height - 1 - yy) / 110, 0, 1) * 255               # mờ vào nền giấy ở 110px cuối
+    band = np.dstack([np.clip(arr, 0, 255), alpha]).astype("uint8")
+    img.alpha_composite(Image.fromarray(band, "RGBA"), (0, 0))
+
+
+def _soft_shadow_text(img: Image.Image, lines: list, x: int, y: int, step: int):
+    """Bóng mờ mềm phía sau chữ trắng trên ảnh (không bị viền cứng)."""
+    from PIL import ImageFilter
+    layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ld = ImageDraw.Draw(layer)
+    for k, line in enumerate(lines):
+        ld.text((x, y + 4 + k * step), line, font=sans("ExtraBold", 56), fill=(0, 0, 0, 170))
+    img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(8)))
+
+
+def _ticker(img: Image.Image, y: int, items: list):
+    """Dải băng giá kiểu đài tin tức: [(mã, giá, % thay đổi)]."""
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, y, W, y + 64], fill=(22, 22, 26))
+    d.rectangle([0, y, 150, y + 64], fill=PRIMARY)
+    d.text((75, y + 32), "LIVE", font=sans("ExtraBold", 26), fill=WHITE, anchor="mm")
+    x = 176
+    for sym, price, chg in items:
+        up = chg >= 0
+        col = (60, 200, 120) if up else (255, 90, 100)
+        seg = f"{sym} {price}"
+        f = sans("Bold", 20)
+        if x + d.textlength(seg, font=f) + 90 > W:
+            break
+        d.text((x, y + 32), seg, font=f, fill=WHITE, anchor="lm")
+        x += d.textlength(seg, font=f) + 8
+        _tri(d, x, y + 26, 12, up, col)
+        x += 16
+        txt = f"{chg:+.2f}%"
+        d.text((x, y + 32), txt, font=sans("Bold", 19), fill=col, anchor="lm")
+        x += d.textlength(txt, font=sans("Bold", 19)) + 22
+
+
+def render_breaking_photo(path, photo, time_label: str, headline: str, data: dict | None, impacts: list,
+                          summary: str, level: str = "CAO", ticker: list | None = None):
+    img = _paper()
+    band_h = 600 if data else 520
+    _photo_band(img, photo, band_h)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, 10], fill=PRIMARY)
+    icon = _logo("icon", 56)
+    if icon is not None:
+        d.rounded_rectangle([M - 6, 34, M + 62, 102], radius=16, fill=WHITE)
+        img.alpha_composite(icon, (M, 40))
+    d.text((M + 84, 68), CONFIG["brand"]["name"], font=sans("ExtraBold", 28), fill=WHITE, anchor="lm")
+    f = sans("Bold", 22)
+    w = d.textlength(time_label, font=f) + 36
+    d.rounded_rectangle([W - M - w, 48, W - M, 88], radius=20, outline=(255, 255, 255), width=2)
+    d.text((W - M - w / 2, 68), time_label, font=f, fill=WHITE, anchor="mm")
+
+    x = M
+    f = sans("ExtraBold", 26)
+    w = d.textlength("TIN NÓNG", font=f) + 92
+    d.rounded_rectangle([x, 140, x + w, 190], radius=25, fill=PRIMARY)
+    d.polygon([(x + 30, 149), (x + 42, 149), (x + 36, 162), (x + 46, 162), (x + 28, 182), (x + 33, 167), (x + 23, 167)],
+              fill=WHITE)
+    d.text((x + 58, 165), "TIN NÓNG", font=f, fill=WHITE, anchor="lm")
+    _pill(d, x + w + 14, 140, f"Mức ảnh hưởng: {level}", 22, WHITE, PRIMARY, pad=22)
+
+    y = 236
+    _soft_shadow_text(img, wrap(d, headline, sans("ExtraBold", 56), W - 2 * M, max_lines=4), M, y, 70)
+    d = ImageDraw.Draw(img)
+    for line in wrap(d, headline, sans("ExtraBold", 56), W - 2 * M, max_lines=4):
+        d.text((M, y), line, font=sans("ExtraBold", 56), fill=WHITE)
+        y += 70
+    if data:
+        y = max(y + 26, band_h - 170)
+        bw = (W - 2 * M - 2 * 16) / 3
+        cols = [("THỰC TẾ", data["actual"]), ("DỰ BÁO", data["forecast"]), ("KỲ TRƯỚC", data["previous"])]
+        for k, (lab, val) in enumerate(cols):
+            x0 = M + k * (bw + 16)
+            main = k == 0
+            col = UP if data.get("better") is True else DOWN if data.get("better") is False else INK
+            _shadow(img, (x0, y, x0 + bw, y + 150), 24, blur=18, offset=(0, 12), alpha=80 if main else 50)
+            d = ImageDraw.Draw(img)
+            d.rounded_rectangle([x0, y, x0 + bw, y + 150], radius=24, fill=WHITE,
+                                outline=col if main else LINE, width=4 if main else 2)
+            d.text((x0 + bw / 2, y + 40), lab, font=sans("Bold", 22), fill=MUTED, anchor="mm")
+            d.text((x0 + bw / 2, y + 100), str(val), font=sans("ExtraBold", 56 if main else 46),
+                   fill=col if main else INK, anchor="mm")
+        y += 182
+    else:
+        y = max(y + 20, band_h + 10)
+
+    d = ImageDraw.Draw(img)
+    d.text((M, y), "TÁC ĐỘNG TỚI THỊ TRƯỜNG", font=sans("ExtraBold", 26), fill=INK)
+    y += 48
+    rows = impacts[:4]
+    rh = 74
+    _shadow(img, (M, y, W - M, y + rh * len(rows) + 16), 24, blur=16, offset=(0, 10), alpha=40)
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle([M, y, W - M, y + rh * len(rows) + 16], radius=24, fill=WHITE)
+    yy = y + 8
+    for k, (asset, direction, why) in enumerate(rows):
+        col = UP if direction == "up" else DOWN if direction == "down" else FLAT
+        d.text((M + 30, yy + rh / 2), asset, font=sans("ExtraBold", 31), fill=INK, anchor="lm")
+        if direction == "flat":
+            d.rectangle([M + 230, yy + rh / 2 - 4, M + 262, yy + rh / 2 + 4], fill=col)
+        else:
+            _tri(d, M + 230, yy + rh / 2 - 15, 30, direction == "up", col)
+        d.text((M + 290, yy + rh / 2), fit(d, why, sans("SemiBold", 25), W - 2 * M - 320), font=sans("SemiBold", 25),
+               fill=(60, 60, 66), anchor="lm")
+        if k < len(rows) - 1:
+            d.line([(M + 30, yy + rh), (W - M - 30, yy + rh)], fill=LINE, width=2)
+        yy += rh
+    y = yy + 30
+    ty = H - 92 - 64 - 14
+    if summary and y + 80 < ty:
+        sl = wrap(d, summary, sans("SemiBold", 27), W - 2 * M - 70, max_lines=2)
+        bh = len(sl) * 38 + 40
+        d.rounded_rectangle([M, y, W - M, y + bh], radius=22, fill=(253, 234, 236))
+        d.rectangle([M, y + 14, M + 8, y + bh - 14], fill=PRIMARY)
+        for k, line in enumerate(sl):
+            d.text((M + 40, y + 22 + k * 38), line, font=sans("SemiBold", 27), fill=INK)
+    if ticker:
+        _ticker(img, ty, ticker)
+    _brand_footer(img, "Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    save(img, path)
+    return path
