@@ -136,5 +136,51 @@
     }
    ]
   }
+ },
+ "2026-10-02 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129175488735108",
+  "post_id": "1121396124381014_122129175488735108",
+  "posted_at": "2026-10-02T10:00:08.124926+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4163.49,
+      4169.92
+     ],
+     "sl": 4192.52,
+     "tp": [
+      4150.53,
+      4139.78,
+      4119.57
+     ],
+     "trigger": "Giá hồi lên 4163-4170, có nến H1 từ chối; ưu tiên vào sau khi NFP lắng.",
+     "invalidation": "H1 đóng cửa trên 4192, cấu trúc giảm ngắn hạn bị phá."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4134.45,
+      4139.78
+     ],
+     "sl": 4110.27,
+     "tp": [
+      4150.53,
+      4169.92,
+      4183.23
+     ],
+     "trigger": "Giá về 4134-4140, có nến đảo chiều tăng, hợp khi NFP yếu kéo USD giảm.",
+     "invalidation": "H1 đóng cửa dưới 4116, xu hướng giảm nối lại."
+    }
+   ],
+   "price": 4157.11,
+   "title": "XAUUSD phiên Á-Âu: ưu tiên bán hồi, chờ NFP tối nay"
+  }
  }
 }
