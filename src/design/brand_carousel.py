@@ -284,3 +284,172 @@ def render_cta(path, facts: dict, cta: str):
            "khu vực tương ứng", font=sans("Medium", 17), fill=SUB, anchor="mm")
     save(img, path)
     return path
+
+# Phương án màu cho thẻ chính sách: "red" (nền đỏ), "light" (nền trắng, đỏ chỉ ở điểm nhấn), "dark" (nền than, điểm đỏ)
+CTA_THEMES = {
+    "light": {"bg": (248, 248, 249), "title": INK, "kicker": PRIMARY, "brand": INK,
+              "tile1": PRIMARY, "tile1_label": (255, 214, 218), "tile1_text": WHITE, "tile1_sub": WHITE,
+              "tile2_line": PRIMARY, "tile2_label": PRIMARY, "tile2_sub": MUTED, "tile2_text": PRIMARY,
+              "strip": (253, 234, 236), "strip_text": INK, "strip_strong": PRIMARY, "strip_tag": PRIMARY, "strip_tag_text": WHITE,
+              "card": WHITE, "card_line": (232, 232, 235), "q": MUTED, "a": INK, "icon_bg": (253, 234, 236), "icon": PRIMARY,
+              "legal": INK, "lic_card": WHITE, "lic_name": INK, "lic_num": PRIMARY, "score": (28, 28, 32), "score_sub": (200, 200, 205),
+              "btn": PRIMARY, "btn_text": WHITE, "foot": MUTED, "deco": None},
+    "dark": {"bg": (22, 22, 26), "title": WHITE, "kicker": (255, 90, 100), "brand": WHITE,
+             "tile1": PRIMARY, "tile1_label": (255, 214, 218), "tile1_text": WHITE, "tile1_sub": WHITE,
+             "tile2_line": (255, 90, 100), "tile2_label": (255, 90, 100), "tile2_sub": (170, 170, 178), "tile2_text": WHITE,
+             "strip": (40, 40, 46), "strip_text": (230, 230, 235), "strip_strong": (255, 90, 100), "strip_tag": PRIMARY,
+             "strip_tag_text": WHITE, "card": (36, 36, 42), "card_line": (52, 52, 60), "q": (160, 160, 170), "a": WHITE,
+             "icon_bg": (60, 22, 28), "icon": (255, 90, 100), "legal": WHITE, "lic_card": (36, 36, 42), "lic_name": WHITE,
+             "lic_num": (255, 90, 100), "score": PRIMARY, "score_sub": (255, 214, 218), "btn": PRIMARY, "btn_text": WHITE,
+             "foot": (130, 130, 140), "deco": None},
+}
+
+
+def render_cta_theme(path, facts: dict, cta: str, theme: str = "light"):
+    """Thẻ chính sách theo phương án màu dịu mắt (đỏ chỉ dùng cho 1 điểm nhấn chính + nút)."""
+    T = CTA_THEMES[theme]
+    img = Image.new("RGBA", (W, H), T["bg"])
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, 10], fill=PRIMARY)
+    icon = _logo("icon", 56)
+    if icon is not None:
+        img.alpha_composite(icon, (M, 44))
+    d.text((M + 78, 72), CONFIG["brand"]["name"], font=sans("ExtraBold", 28), fill=T["brand"], anchor="lm")
+    d.text((M, 146), "CHÍNH SÁCH", font=sans("ExtraBold", 36), fill=T["kicker"])
+    d.text((M - 3, 202), "ĐỐI TÁC IB", font=sans("ExtraBold", 88), fill=T["title"])
+
+    top, th = 320, 210
+    lw = int((W - 2 * M) * 0.58)
+    d.rounded_rectangle([M, top, M + lw, top + th], radius=28, fill=T["tile1"])
+    d.text((M + 34, top + 30), "HOA HỒNG", font=sans("ExtraBold", 26), fill=T["tile1_label"])
+    big = sans("ExtraBold", 120)
+    d.text((M + 28, top + 182), facts["spread"], font=big, fill=T["tile1_text"], anchor="ls")
+    d.text((M + 40 + d.textlength(facts["spread"], font=big), top + 176), "spread", font=sans("ExtraBold", 40),
+           fill=T["tile1_sub"], anchor="ls")
+    rx = M + lw + 20
+    d.rounded_rectangle([rx, top, W - M, top + th], radius=28, fill=T["card"], outline=T["tile2_line"], width=3)
+    d.text((rx + 30, top + 30), "THƯỞNG DOANH SỐ", font=sans("ExtraBold", 22), fill=T["tile2_label"])
+    d.text((rx + 30, top + 66), "tối thiểu", font=sans("SemiBold", 26), fill=T["tile2_sub"])
+    d.text((rx + 26, top + 182), facts["bonus"], font=sans("ExtraBold", 92), fill=T["tile2_text"], anchor="ls")
+
+    ey = top + th + 22
+    d.rounded_rectangle([M, ey, W - M, ey + 74], radius=37, fill=T["strip"])
+    lab = "VÍ DỤ"
+    d.rounded_rectangle([M + 12, ey + 12, M + 48 + d.textlength(lab, font=sans("ExtraBold", 22)), ey + 62],
+                        radius=25, fill=T["strip_tag"])
+    d.text((M + 36, ey + 37), lab, font=sans("ExtraBold", 22), fill=T["strip_tag_text"], anchor="lm")
+    left, right = facts["example"]
+    f = sans("Bold", 30)
+    x = M + 150
+    d.text((x, ey + 37), left, font=f, fill=T["strip_text"], anchor="lm")
+    x += d.textlength(left, font=f) + 22
+    _arrow(d, x, ey + 37, T["strip_text"])
+    d.text((x + 52, ey + 37), "IB nhận " + right, font=sans("ExtraBold", 30), fill=T["strip_strong"], anchor="lm")
+
+    y = ey + 104
+    icons = {"person": _icon_person, "clock": _icon_clock, "bars": _icon_bars}
+    for icon_name, q, a in facts["terms"][:3]:
+        d.rounded_rectangle([M, y, W - M, y + 104], radius=22, fill=T["card"], outline=T["card_line"], width=2)
+        d.ellipse([M + 22, y + 20, M + 86, y + 84], fill=T["icon_bg"])
+        icons.get(icon_name, _icon_person)(d, M + 36, y + 34, 36, T["icon"])
+        size = 31
+        while size > 22 and d.textlength(a, font=sans("ExtraBold", size)) > W - 2 * M - 140:
+            size -= 1
+        d.text((M + 110, y + 32), q, font=sans("Medium", 24), fill=T["q"], anchor="lm")
+        d.text((M + 110, y + 70), a, font=sans("ExtraBold", size), fill=T["a"], anchor="lm")
+        y += 118
+
+    y += 6
+    _icon_shield(d, M, y, 34, PRIMARY)
+    d.text((M + 48, y + 17), "PHÁP LÝ TẬP ĐOÀN CWG MARKETS", font=sans("ExtraBold", 24), fill=T["legal"], anchor="lm")
+    y += 50
+    n = len(facts["licenses"]) + 1
+    cw = (W - 2 * M - (n - 1) * 12) / n
+    for k, (name, country, num) in enumerate(facts["licenses"]):
+        x0 = M + k * (cw + 12)
+        d.rounded_rectangle([x0, y, x0 + cw, y + 96], radius=18, fill=T["lic_card"], outline=T["card_line"], width=2)
+        d.text((x0 + 20, y + 30), name, font=sans("ExtraBold", 30), fill=T["lic_name"], anchor="lm")
+        d.text((x0 + 26 + d.textlength(name, font=sans("ExtraBold", 30)), y + 32), country, font=sans("Medium", 18),
+               fill=T["q"], anchor="lm")
+        d.text((x0 + 20, y + 70), num, font=sans("SemiBold", 21), fill=T["lic_num"], anchor="lm")
+    x0 = M + (n - 1) * (cw + 12)
+    d.rounded_rectangle([x0, y, x0 + cw, y + 96], radius=18, fill=T["score"])
+    d.text((x0 + 20, y + 36), facts["score"], font=sans("ExtraBold", 38), fill=WHITE, anchor="lm")
+    d.text((x0 + 26 + d.textlength(facts["score"], font=sans("ExtraBold", 38)), y + 42), "/10", font=sans("Bold", 20),
+           fill=T["score_sub"], anchor="lm")
+    d.text((x0 + 20, y + 74), "Điểm WikiFX", font=sans("SemiBold", 20), fill=T["score_sub"], anchor="lm")
+
+    label = cta.replace("📩", "").strip().upper()
+    f = sans("ExtraBold", 32)
+    bw = d.textlength(label, font=f) + 96
+    by = H - 166
+    d.rounded_rectangle([(W - bw) / 2, by, (W + bw) / 2, by + 84], radius=42, fill=T["btn"])
+    d.text((W / 2, by + 42), label, font=f, fill=T["btn_text"], anchor="mm")
+    d.text((W / 2, H - 46), "Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn · Mỗi pháp nhân được cấp phép tại "
+           "khu vực tương ứng", font=sans("Medium", 17), fill=T["foot"], anchor="mm")
+    save(img, path)
+    return path
+
+
+def render_ad(path, person: Image.Image | None, hero: str = "$50", unit: str = "/lot",
+              sub: str = "Vàng XAUUSD · rebate nảy ngay khi đóng lệnh",
+              chips: tuple = ("85% spread", "Thưởng tối thiểu 5%"),
+              legal: str = "Tập đoàn CWG Markets · FCA · FSCA · VFSC · WikiFX 8.25/10",
+              button: str = "Nhắn tin nhận chính sách"):
+    """Ảnh quảng cáo ít chữ: 1 thông điệp chính ($50/lot) + gương mặt minh họa. Chi tiết để ở caption / ảnh sau."""
+    img = Image.new("RGBA", (W, H), (248, 248, 249))
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, W, 10], fill=PRIMARY)
+    icon = _logo("icon", 56)
+    if icon is not None:
+        img.alpha_composite(icon, (M, 44))
+    d.text((M + 78, 72), CONFIG["brand"]["name"], font=sans("ExtraBold", 28), fill=INK, anchor="lm")
+
+    # ảnh người minh họa bên phải: khung bo cong + khối đỏ lệch phía sau
+    px0, py0, pw, ph = 560, 170, 456, 760
+    d.rounded_rectangle([px0 + 26, py0 + 26, px0 + pw + 26, py0 + ph + 26], radius=60, fill=PRIMARY)
+    if person is not None:
+        from PIL import ImageOps
+        ph_img = ImageOps.fit(person.convert("RGBA"), (pw, ph), Image.LANCZOS, centering=(0.5, 0.2))
+        mask = Image.new("L", (pw, ph), 0)
+        ImageDraw.Draw(mask).rounded_rectangle([0, 0, pw - 1, ph - 1], radius=60, fill=255)
+        img.paste(ph_img, (px0, py0), mask)
+    else:
+        d.rounded_rectangle([px0, py0, px0 + pw, py0 + ph], radius=60, fill=(225, 225, 230))
+    d = ImageDraw.Draw(img)
+    d.text((px0 + pw - 16, py0 + ph - 18), "Hình ảnh minh họa", font=sans("Medium", 16), fill=(235, 235, 240), anchor="rb")
+
+    # thông điệp chính bên trái
+    _pill(d, M, 200, "CWG TUYỂN ĐỐI TÁC IB", 22, PRIMARY, WHITE, pad=22)
+    d.text((M, 300), "IB nhận", font=sans("ExtraBold", 64), fill=INK)
+    big = sans("ExtraBold", 210)
+    d.text((M - 10, 600), hero, font=big, fill=PRIMARY, anchor="ls")
+    d.text((M + 6, 690), unit, font=sans("ExtraBold", 80), fill=PRIMARY, anchor="ls")
+    y = 730
+    for line in wrap(d, sub, sans("SemiBold", 32), 470, max_lines=3):
+        d.text((M, y), line, font=sans("SemiBold", 32), fill=(70, 70, 76))
+        y += 44
+
+    # 2 chip phụ
+    cy = 1000
+    x = M
+    for c in chips[:2]:
+        f = sans("ExtraBold", 30)
+        w = d.textlength(c, font=f) + 56
+        d.rounded_rectangle([x, cy, x + w, cy + 66], radius=33, fill=WHITE, outline=(232, 232, 235), width=2)
+        d.text((x + w / 2, cy + 33), c, font=f, fill=INK, anchor="mm")
+        x += w + 16
+
+    # nút + pháp lý + cảnh báo
+    f = sans("ExtraBold", 34)
+    label = button.upper()
+    bw = d.textlength(label, font=f) + 110
+    by = 1110
+    d.rounded_rectangle([M, by, M + bw, by + 90], radius=45, fill=PRIMARY)
+    d.text((M + bw / 2, by + 45), label, font=f, fill=WHITE, anchor="mm")
+    _icon_shield(d, M, 1236, 28, PRIMARY)
+    d.text((M + 40, 1250), legal, font=sans("SemiBold", 22), fill=INK, anchor="lm")
+    d.text((M, H - 40), "Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Mỗi pháp nhân được cấp phép tại khu vực "
+           "tương ứng.", font=sans("Medium", 16), fill=MUTED, anchor="lm")
+    save(img, path)
+    return path
