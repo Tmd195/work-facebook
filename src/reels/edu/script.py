@@ -1,7 +1,8 @@
 """AI viết kịch bản Reels kiến thức (phong cách thẻ tối + biểu đồ minh họa) cho Page thương hiệu.
 
 AI chỉ viết LỜI + mô tả HÌNH DẠNG giá (đoạn tích luỹ, quét đáy, đẩy mạnh…) + chú thích; hệ thống tự sinh nến.
-Chủ đề xoay vòng theo danh sách TOPICS, không lặp lại tới khi hết vòng.
+Chủ đề xoay vòng theo danh sách TOPICS (64 chủ đề ≈ 64 ngày/vòng), không lặp lại tới khi hết vòng;
+sang vòng sau mỗi chủ đề bắt buộc viết góc mới, và mọi video đều né ý của các video đã làm (lưu tiêu đề).
 """
 import json
 import random
@@ -11,6 +12,7 @@ from src.config import STATE
 from src.content.llm import generate_json
 
 TOPICS = {
+    # --- Smart Money / ICT (24)
     "po3": "PO3 (Power of Three): Accumulation – Manipulation – Distribution, cách smart money bẫy trader nhỏ lẻ",
     "liquidity-sweep": "Liquidity sweep: vì sao stop loss hay bị quét ngay đáy/đỉnh rồi giá chạy đúng hướng",
     "fvg-strong": "FVG mạnh hay yếu: dấu hiệu xác nhận một FVG đáng tin (sau cú quét + phá cấu trúc)",
@@ -19,18 +21,66 @@ TOPICS = {
     "3-conditions": "3 điều kiện trước khi vào lệnh để không bị quét stop loss: thanh khoản – cấu trúc – FVG",
     "equal-lows": "Đáy bằng nhau (equal lows) là nam châm thanh khoản – đừng đặt stop loss ngay dưới",
     "equal-highs": "Đỉnh bằng nhau (equal highs) và cú phá giả trước khi giảm",
-    "fake-breakout": "Phá vỡ giả (fakeout): nhận diện khi giá phá range rồi quay lại",
     "premium-discount": "Premium & Discount: chỉ mua ở vùng giảm giá, bán ở vùng đắt của con sóng",
     "inducement": "Inducement: đáy/đỉnh mồi nhử trước vùng vào lệnh thật",
-    "retest-entry": "Vào lệnh khi retest thay vì đuổi theo cây nến lớn",
-    "sl-placement": "Đặt stop loss ở đâu cho đúng: dưới đáy quét chứ không phải dưới đáy gần nhất",
-    "rr": "Tỉ lệ rủi ro/lợi nhuận: vì sao thắng 40% vẫn có lãi với RR 1:3",
-    "trend-pullback": "Giao dịch theo xu hướng: đợi nhịp hồi về vùng cân bằng rồi mới vào",
-    "range-trading": "Giao dịch trong vùng đi ngang: mua đáy bán đỉnh và khi nào thì dừng",
     "mss": "MSS (Market Structure Shift) sau cú quét thanh khoản – tín hiệu đảo chiều sớm",
     "breaker": "Breaker block: OB bị phá biến thành vùng cản ngược chiều",
+    "mitigation": "Mitigation block: vùng giá quay lại 'xử lý' lệnh còn treo của tổ chức",
+    "ifvg": "Inverse FVG: FVG bị phá thủng đổi vai thành vùng cản/hỗ trợ",
+    "ote": "OTE – vùng vào lệnh tối ưu 62-79% Fibonacci của con sóng sau phá cấu trúc",
+    "internal-external": "Thanh khoản nội bộ và thanh khoản bên ngoài: giá đi từ đâu tới đâu",
+    "swing-structure": "Cấu trúc swing và cấu trúc nội bộ: vì sao 2 trader nhìn cùng biểu đồ lại thấy ngược nhau",
+    "displacement": "Displacement: cú đẩy giá mạnh để lại FVG – dấu chân thật của tổ chức",
+    "sell-side-buy-side": "Buy-side và sell-side liquidity: giá luôn tìm tới nơi có nhiều lệnh dừng",
+    "judas-swing": "Judas swing: cú chạy giả đầu phiên trước khi giá đi hướng thật",
+    "turtle-soup": "Turtle soup: giao dịch ngược cú phá vỡ đỉnh/đáy cũ thất bại",
+    "smt": "Phân kỳ SMT: hai thị trường tương quan không cùng tạo đỉnh/đáy mới – dấu hiệu bẫy",
+    "rejection-block": "Rejection block: râu nến dài tại vùng thanh khoản nói lên điều gì",
+    "trendline-liquidity": "Trendline liquidity: đường xu hướng chạm 3 lần là nơi chứa đầy stop loss",
+    # --- Price action (14)
+    "fake-breakout": "Phá vỡ giả (fakeout): nhận diện khi giá phá range rồi quay lại",
+    "retest-entry": "Vào lệnh khi retest thay vì đuổi theo cây nến lớn",
+    "trend-pullback": "Giao dịch theo xu hướng: đợi nhịp hồi về vùng cân bằng rồi mới vào",
+    "range-trading": "Giao dịch trong vùng đi ngang: mua đáy bán đỉnh và khi nào thì dừng",
     "double-top": "Hai đỉnh: khi nào là mô hình đảo chiều, khi nào là bẫy thanh khoản",
+    "double-bottom": "Hai đáy: xác nhận đảo chiều đúng cách thay vì bắt đáy sớm",
+    "sr-flip": "Hỗ trợ thành kháng cự (S/R flip): vùng giá đổi vai sau khi bị phá",
+    "pinbar": "Nến pin bar: chỉ có giá trị khi xuất hiện đúng vùng thanh khoản",
+    "engulfing": "Nến nhấn chìm: tín hiệu mạnh hay bẫy tuỳ vị trí xuất hiện",
+    "inside-bar": "Inside bar: nén giá trước cú bùng nổ – vào theo hướng nào",
+    "consolidation-breakout": "Nén giá (tích luỹ hẹp dần) trước cú breakout thật",
+    "higher-low": "Đáy cao dần – đỉnh cao dần: đọc xu hướng chỉ bằng mắt thường",
+    "exhaustion": "Dấu hiệu cạn lực của xu hướng: nến nhỏ dần, râu dài, không phá được đỉnh",
+    "momentum-candle": "Nến động lượng lớn: đuổi theo hay chờ hồi",
+    # --- Đa khung thời gian & thời điểm (8)
+    "mtf": "Phân tích đa khung: khung lớn cho hướng, khung nhỏ cho điểm vào",
+    "htf-poi": "Vùng quan tâm khung lớn (POI): chỉ tìm lệnh khi giá chạm vùng khung lớn",
+    "killzone-london": "Phiên London: vì sao cú quét thanh khoản phiên Á hay xảy ra đầu phiên Âu",
+    "killzone-ny": "Phiên New York: cú đảo chiều sau khi quét đỉnh/đáy phiên London",
+    "asian-range": "Biên độ phiên Á: vùng thanh khoản cho cả ngày giao dịch",
+    "news-spike": "Giao dịch quanh tin mạnh (NFP, CPI): cú giật 2 chiều quét cả 2 phe",
+    "daily-bias": "Xác định thiên hướng ngày (daily bias) trước khi mở biểu đồ khung nhỏ",
+    "weekly-open": "Giá mở cửa tuần/ngày làm mốc cân bằng – trên mốc ưu tiên mua, dưới ưu tiên bán",
+    # --- Quản lý rủi ro & vốn (10)
+    "sl-placement": "Đặt stop loss ở đâu cho đúng: dưới đáy quét chứ không phải dưới đáy gần nhất",
+    "rr": "Tỉ lệ rủi ro/lợi nhuận: vì sao thắng 40% vẫn có lãi với RR 1:3",
+    "position-size": "Tính khối lượng lệnh theo % rủi ro thay vì theo cảm tính",
+    "partial-tp": "Chốt lời từng phần: TP1 tại thanh khoản gần, phần còn lại chạy theo cấu trúc",
+    "breakeven": "Dời stop loss về hoà vốn: sớm quá thì bị quét, muộn quá thì mất lãi",
+    "trailing-structure": "Trailing stop theo cấu trúc: dời SL dưới mỗi đáy cao dần mới",
+    "drawdown": "Chuỗi thua liên tiếp là bình thường: rủi ro 1% giúp sống sót qua 10 lệnh thua",
+    "tp-liquidity": "Đặt chốt lời tại vùng thanh khoản đối diện thay vì số pip cố định",
+    "overleverage": "Đòn bẩy cao và khối lượng lớn: một cú quét đủ cháy tài khoản",
+    "no-trade": "Không vào lệnh cũng là một vị thế: khi nào nên đứng ngoài",
+    # --- Tâm lý & sai lầm thường gặp (8)
     "fomo": "Đuổi theo giá (FOMO): vì sao vào lệnh ở cuối con sóng làm RR rất kém",
+    "revenge-trade": "Gỡ lệnh (revenge trading) sau khi bị quét stop loss",
+    "early-entry": "Vào lệnh quá sớm khi chưa có xác nhận – lỗi kinh điển của người mới",
+    "moving-sl": "Nới stop loss khi giá chạy ngược – thói quen phá tài khoản",
+    "counter-trend": "Bắt đỉnh bắt đáy ngược xu hướng mạnh",
+    "overtrading": "Giao dịch quá nhiều: ít setup đẹp hơn nhiều lệnh tạm được",
+    "cut-winners": "Chốt lời quá sớm, gồng lỗ quá lâu – bất đối xứng giết tài khoản",
+    "journal": "Nhật ký giao dịch: cách đơn giản để thấy mình sai ở đâu",
 }
 
 FILE = STATE / "edu_reels.json"
@@ -109,7 +159,7 @@ def next_topic() -> str:
     left = [k for k in TOPICS if k not in st["done"]]
     if not left:
         st["done"], left = [], list(TOPICS)
-    return left[0]
+    return random.choice(left)                 # xen kẽ các mảng; trong 1 vòng không chủ đề nào lặp lại
 
 
 def mark_done(topic: str, title: str = ""):
@@ -150,11 +200,15 @@ def validate(spec: dict) -> dict:
 def write(topic: str | None = None) -> dict:
     topic = topic or next_topic()
     brief = TOPICS.get(topic, topic)
-    old = _state().get("titles", {}).get(topic, [])
+    titles = _state().get("titles", {})
+    old = titles.get(topic, [])
+    recent = [t for k, v in titles.items() if k != topic for t in v][-70:]
     again = ("\nChủ đề này ĐÃ làm các video: " + " | ".join(old[-6:]) +
              "\n→ BẮT BUỘC chọn GÓC MỚI hoàn toàn (sai lầm hay gặp, so sánh đúng/sai, tình huống khác, "
              "chiều ngược lại mua/bán, mẹo nâng cao…): tiêu đề, hook và hình dạng giá khác hẳn.") if old else ""
-    user = (f"Chủ đề: {brief}\nslug: {topic}{again}\nViết kịch bản theo đúng định dạng. Nhớ: phần say là lời đọc "
+    avoid = ("\nCác video gần đây của kênh (KHÔNG lặp lại ý chính, hook, ví dụ của các video này): "
+             + " | ".join(recent)) if recent else ""
+    user = (f"Chủ đề: {brief}\nslug: {topic}{again}{avoid}\nViết kịch bản theo đúng định dạng. Nhớ: phần say là lời đọc "
             "tự nhiên, text là chữ trên màn hình (có thể ngắn gọn hơn say).")
     spec = generate_json(SYSTEM, user, {"type": "object"})
     for c in (spec.get("charts") or {}).values():      # nến minh họa mỗi lần một khác

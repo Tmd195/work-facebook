@@ -1,7 +1,11 @@
 """Việc 'reel' cho Page thương hiệu (CWG…): AI viết kịch bản kiến thức → dựng video thẻ tối + biểu đồ minh họa
 có logo CWG → caption có chữ ký thương hiệu."""
 import json
+import os
+import random
 from pathlib import Path
+
+from src.config import CONFIG
 
 from src.reels import render as old
 from src.reels.edu import build, script
@@ -14,7 +18,7 @@ def folder(out_dir: Path) -> Path:
 def generate(out_dir: Path) -> bool:
     from src.content import cwg_daily
     spec = script.write()
-    music = old.pick_music()
+    music = pick_music()
     res = build.make(spec, folder(out_dir), music=music)
     body = (spec.get("title", "").strip() + "\n\n" + spec.get("caption", "").strip()).strip()
     caption = cwg_daily.caption(body, [t.lstrip("#") for t in spec.get("hashtags") or []])
@@ -23,6 +27,15 @@ def generate(out_dir: Path) -> bool:
         {"topic": spec["topic"], "title": spec.get("title"), "duration": res["duration"],
          "music": music.name if music else None}, ensure_ascii=False), encoding="utf-8")
     return True
+
+
+def pick_music() -> Path | None:
+    """Kho nhạc riêng của Page (reels.music_dir, vd. assets/music/cwg – nhạc Mixkit trap/hip-hop bass nặng)."""
+    sub = (CONFIG.get("reels") or {}).get("music_dir")
+    if not sub or os.environ.get("REEL_MUSIC"):
+        return old.pick_music()
+    tracks = sorted((old.MUSIC / sub).glob("*.mp3"))
+    return random.choice(tracks) if tracks else old.pick_music()
 
 
 def files(out_dir: Path) -> tuple[Path, Path, Path]:
