@@ -67,7 +67,11 @@ def calendar(day: date) -> list[dict]:
         if t.date() == day and e["impact"] in ("High", "Medium") and e["country"] in CCYS:
             out.append({"time": t.strftime("%H:%M"), "ccy": e["country"], "title": e["title"], "impact": e["impact"],
                         "forecast": e.get("forecast", ""), "previous": e.get("previous", "")})
-    return sorted(out, key=lambda e: (e["impact"] != "High", e["time"]))[:8]
+    top = sorted(out, key=lambda e: (e["impact"] != "High", e["time"]))[:8]     # giữ 8 tin quan trọng nhất
+    from src.i18n import EN_MODE
+    if EN_MODE:                                          # Page Global: hiển thị theo thứ tự thời gian (anh chốt 03/10/2026)
+        top.sort(key=lambda e: e["time"])
+    return top
 
 
 def fxtin(day: date, pages: int = 8) -> list[dict]:
