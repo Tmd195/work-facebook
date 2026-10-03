@@ -200,6 +200,12 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         except Exception as exc:
             if type(exc).__name__ == "QAFail":           # đã tự sửa 2 lần vẫn lỗi, đã báo kèm ảnh → không đăng
                 traceback.print_exc()
+                import json                              # khoá lượt hôm nay: bộ điều phối không chạy lại lần 2
+                att_file = STATE / "attempts.json"
+                att = json.loads(att_file.read_text(encoding="utf-8")) if att_file.exists() else {}
+                att[_slot(job, target)] = 99
+                att_file.parent.mkdir(parents=True, exist_ok=True)
+                att_file.write_text(json.dumps(att, ensure_ascii=False, indent=1), encoding="utf-8")
                 return False
             err = f"{type(exc).__name__}: {exc}"
             traceback.print_exc()
