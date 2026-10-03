@@ -8,6 +8,7 @@ from PIL import Image, ImageDraw, ImageFilter
 from src.config import ROOT
 from src.design.common import sans, wrap
 from src.reels.mkt.flags import icon, pair_codes
+from src.reels.qa import clean
 
 W, H, FPS = 1080, 1920, 30
 NAVY = (9, 13, 30)
@@ -119,7 +120,7 @@ def intro(t: float, dur: float, symbol: str, title: str) -> Image.Image:
     size = 118
     while True:                                        # tự thu nhỏ để tiêu đề luôn đủ chữ trong 2 dòng
         f = sans("ExtraBold", size)
-        lines = wrap(ImageDraw.Draw(img), title.upper(), f, 880, max_lines=3)
+        lines = wrap(ImageDraw.Draw(img), clean(title).upper(), f, 880, max_lines=3)
         if len(lines) <= 2 and "…" not in lines[-1] or size <= 70:
             break
         size -= 8
@@ -350,7 +351,7 @@ def subtitle(img: Image.Image, t: float, subs: list, dark: bool = True):
     if not cur:
         return
     txt, st, du = cur
-    txt = txt.replace("~", "").replace("  ", " ")     # font không có "~" (hiện thành "-")
+    txt = clean(txt)                                   # bỏ ký tự font không vẽ được (vd. "~" hiện thành "-")
     words = txt.split()
     if not words:
         return
@@ -449,6 +450,7 @@ def question(t: float, dur: float, symbol: str, text: str, voice_dur: float) -> 
         d.text((80 + sp * t - (300 if sp > 0 else 0), y), text, font=big, fill=(208, 214, 211, 255), anchor="lm")
     pair_icons(img, symbol, W / 2, 790, 110, prog(t, 0.0, 0.4), gap=0.55)
     f = sans("Medium", 54)
+    text = clean(text)
     n = int(len(text) * min(1.0, t / max(0.4, voice_dur * 0.85)))
     lines = wrap(d, text, f, 860, max_lines=4)
     shown, y = n, 900

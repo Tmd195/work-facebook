@@ -11,11 +11,30 @@ def folder(out_dir: Path) -> Path:
     return out_dir / "reel"
 
 
+BANNED = ["India", "Japan", "Korea", "Indonesia", "Malaysia", "buy now", "sell now", "guaranteed", "risk-free",
+          "entry at", "stop loss at", "take profit at"]
+
+
 def generate(out_dir: Path) -> bool:
     from src.content import cwg_daily
-    spec = build.write(build.next_symbol())
-    music = old.pick_music()
-    res = build.make(spec, folder(out_dir), music=music)
+    from src.reels import qa
+    symbol = build.next_symbol()
+    spec, f = build.write(symbol), folder(out_dir)
+    for attempt in range(1, 4):                       # dựng → kiểm tra → tự sửa tối đa 2 lần
+        music = old.pick_music()
+        res = build.make(spec, f, music=music)
+        texts = ([spec.get("hook_text") or spec["hook"]] + [x.get("text") or x["say"] for x in spec["lines"]]
+                 + [spec["title"], spec["question"], spec["caption"]])
+        rep = qa.run(res["video"], f, min_dur=25, max_dur=62, texts=texts, facts=res["facts"], banned=BANNED,
+                     voices=res["voices"], context=f"Video thị trường {symbol} của Page CWG Markets Global (tiếng Anh).")
+        if rep["ok"]:
+            break
+        print(f"  ! kiểm tra lần {attempt} không đạt: {rep['errors']}", flush=True)
+        if attempt == 3:
+            qa.fail_alert(f"Reels CWG Global {symbol}", rep, attempt)
+            raise qa.QAFail("; ".join(rep["errors"][:3]), Path(rep["sheet"]))
+        if rep["fix"]:                                 # cùng kịch bản dựng lại sẽ ra đúng hình cũ → viết mới
+            spec = build.write(symbol)
     caption = cwg_daily.caption(spec["caption"], [t.lstrip("#") for t in spec.get("hashtags") or []])
     (folder(out_dir) / "caption.txt").write_text(caption, encoding="utf-8")
     (folder(out_dir) / "meta.json").write_text(json.dumps(

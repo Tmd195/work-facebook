@@ -116,7 +116,8 @@ def make(s: dict, folder: Path) -> dict:
     thumb = thumbnail(s, thumb_photo, folder / "thumbnail.jpg")
     total = sum(x.duration for x in scenes)
     print(f"  ✓ video {total:.1f}s → {video}", flush=True)
-    return {"video": video, "thumbnail": thumb, "duration": total, "music": music.name if music else None}
+    return {"video": video, "thumbnail": thumb, "duration": total, "music": music.name if music else None,
+            "voices": (wavs, texts)}
 
 
 def main():

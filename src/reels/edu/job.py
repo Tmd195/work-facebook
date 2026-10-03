@@ -17,9 +17,23 @@ def folder(out_dir: Path) -> Path:
 
 def generate(out_dir: Path) -> bool:
     from src.content import cwg_daily
-    spec = script.write()
-    music = pick_music()
-    res = build.make(spec, folder(out_dir), music=music)
+    from src.reels import qa
+    spec, f = script.write(), folder(out_dir)
+    for attempt in range(1, 4):                       # dựng → kiểm tra → tự sửa tối đa 2 lần
+        music = pick_music()
+        res = build.make(spec, f, music=music)
+        texts = [spec.get("title", ""), spec.get("caption", "")] + [sc.get("text", "") for sc in spec["scenes"]]
+        rep = qa.run(res["video"], f, min_dur=30, max_dur=115, texts=texts, banned=["18+"],
+                     voices=res["voices"], context="Video kiến thức tiếng Việt của Page CWG Markets & Partner "
+                                                    "(biểu đồ là dữ liệu minh họa).")
+        if rep["ok"]:
+            break
+        print(f"  ! kiểm tra lần {attempt} không đạt: {rep['errors']}", flush=True)
+        if attempt == 3:
+            qa.fail_alert("Reels CWG VN", rep, attempt)
+            raise qa.QAFail("; ".join(rep["errors"][:3]), Path(rep["sheet"]))
+        if rep["fix"]:                                 # cùng kịch bản dựng lại sẽ ra đúng hình cũ → viết mới
+            spec = script.write(spec.get("topic"))
     body = (spec.get("title", "").strip() + "\n\n" + spec.get("caption", "").strip()).strip()
     caption = cwg_daily.caption(body, [t.lstrip("#") for t in spec.get("hashtags") or []])
     (folder(out_dir) / "caption.txt").write_text(caption, encoding="utf-8")

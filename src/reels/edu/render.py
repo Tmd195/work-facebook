@@ -64,6 +64,8 @@ _TAG = re.compile(r"\[(\w)\](.*?)\[/\1\]")
 def tokens(text: str) -> list[tuple[str, tuple, bool]]:
     """"Đây là [y]3 giai đoạn[/y]." → [(Đây, trắng), (là, trắng), (3, vàng), (giai, vàng), (đoạn, vàng), (., trắng, dính)].
     Phần tử thứ 3 = True khi dính liền chữ trước (dấu câu ngay sau thẻ màu)."""
+    from src.reels.qa import clean
+    text = clean(text)
     out, pos = [], 0
 
     def add(chunk: str, col, before: str):

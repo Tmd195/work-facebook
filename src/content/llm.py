@@ -105,3 +105,42 @@ def _via_api(system: str, user: str, schema: dict, web: bool = False) -> dict:
     if response.stop_reason == "max_tokens":
         raise LLMError("Bài bị cắt do vượt max_tokens")
     return json.loads([b.text for b in response.content if b.type == "text"][-1])
+
+
+# ------------------------------------------------------------------ xem ảnh (duyệt video trước khi đăng)
+
+def review_image(system: str, image, user: str, schema: dict) -> dict:
+    """Cho AI xem 1 ảnh (vd. ảnh ghép các khung hình video) rồi trả JSON theo schema."""
+    from pathlib import Path
+    image = Path(image)
+    if CONFIG["ai"]["backend"] == "api":
+        import anthropic
+        import base64
+        data = base64.b64encode(image.read_bytes()).decode()
+        r = anthropic.Anthropic().messages.create(
+            model=CONFIG["ai"]["model"], max_tokens=4000, system=system,
+            output_config={"format": {"type": "json_schema", "schema": schema}},
+            messages=[{"role": "user", "content": [
+                {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": data}},
+                {"type": "text", "text": user}]}])
+        return json.loads([b.text for b in r.content if b.type == "text"][-1])
+    exe = shutil.which("claude")
+    if not exe:
+        raise LLMError("Chưa cài Claude Code CLI")
+    with tempfile.TemporaryDirectory() as cwd:
+        shutil.copy(image, Path(cwd) / "frames.jpg")
+        prompt = (f"<huong_dan>\n{system}\n</huong_dan>\n\nDùng công cụ Read mở file ảnh frames.jpg trong thư mục hiện tại "
+                  f"và xem kỹ.\n{user}\n\nYÊU CẦU ĐẦU RA: chỉ trả về đúng MỘT object JSON hợp lệ theo JSON Schema:\n"
+                  f"{json.dumps(schema, ensure_ascii=False)}")
+        blocked = [t for t in _BLOCKED_TOOLS.split() if t != "Read"]
+        cmd = [exe, "-p", "--output-format", "json", "--model", CONFIG["ai"]["claude_code_model"],
+               "--allowedTools", "Read", "--disallowed-tools", *blocked]
+        proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, encoding="utf-8",
+                              cwd=cwd, timeout=600, env={**os.environ})
+    try:
+        out = json.loads(proc.stdout)
+    except json.JSONDecodeError:
+        raise LLMError(f"Claude Code lỗi: {(proc.stderr or proc.stdout)[:300]}")
+    if out.get("is_error"):
+        raise LLMError(f"Claude Code lỗi: {out.get('result', '')[:300]}")
+    return _extract_json(out["result"])

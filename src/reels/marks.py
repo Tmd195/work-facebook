@@ -147,14 +147,24 @@ def _label(d: ImageDraw.ImageDraw, x, y, text, color, size, anchor="mm", alpha=2
     lw_, lh_ = d.im.size                                    # giữ nhãn nằm trọn trong sơ đồ
     x = min(max(x, w / 2 + 2), lw_ - w / 2 - 2)
     y = min(max(y, h / 2 + 2), lh_ - h / 2 - 2)
-    # né nhãn đã đặt trước (thứ tự cố định theo mark nên vị trí không nhảy giữa các khung hình)
-    for _ in range(6):
-        hit = next((r for r in _PLACED if abs(r[0] - x) < (r[2] + w) / 2 + 4 and abs(r[1] - y) < (r[3] + h) / 2 + 4), None)
-        if not hit:
-            break
-        down = y >= hit[1] and hit[1] + (hit[3] + h) / 2 + 6 + h / 2 < lh_
-        y = hit[1] + (hit[3] + h) / 2 + 6 if down else hit[1] - (hit[3] + h) / 2 - 6
-        y = min(max(y, h / 2 + 2), lh_ - h / 2 - 2)
+    # né nhãn đã đặt trước (thứ tự cố định theo mark nên vị trí không nhảy giữa các khung hình):
+    # thử lần lượt lên/xuống/trái/phải, chọn chỗ đầu tiên nằm TRỌN trong khung và không đè nhãn nào
+    # (cách cũ dời xuống ở sát đáy bị kẹp lại mép khung → vẫn đè – lỗi do bộ kiểm tra video phát hiện 03/10/2026)
+    def overlap(cx, cy):
+        return sum(max(0.0, (r[2] + w) / 2 + 6 - abs(r[0] - cx)) * max(0.0, (r[3] + h) / 2 + 6 - abs(r[1] - cy))
+                   for r in _PLACED)
+
+    def inside(cx, cy):
+        return w / 2 + 2 <= cx <= lw_ - w / 2 - 2 and h / 2 + 2 <= cy <= lh_ - h / 2 - 2
+
+    step = h + 8
+    cands = [(x, y)] + [(x, y + s * k * step) for k in range(1, 6) for s in (-1, 1)] \
+        + [(x + s * (w + 10), y + dy) for s in (-1, 1) for dy in (0, -step, step)]
+    ok = [(cx, cy) for cx, cy in cands if inside(cx, cy) and overlap(cx, cy) == 0]
+    if ok:
+        x, y = ok[0]
+    else:                                              # chật quá → chỗ ít đè nhất
+        x, y = min(((cx, cy) for cx, cy in cands if inside(cx, cy)), key=lambda c: overlap(*c), default=(x, y))
     _PLACED.append((x, y, w, h))
     d.rounded_rectangle([x - w / 2, y - h / 2, x + w / 2, y + h / 2], radius=h / 2, fill=color + (alpha,))
     d.text((x, y), text, font=f, fill=(255, 255, 255, alpha), anchor="mm")

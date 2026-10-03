@@ -198,6 +198,9 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
                 break
             err = "không tạo được nội dung (AI hoặc dữ liệu không đạt kiểm tra)"
         except Exception as exc:
+            if type(exc).__name__ == "QAFail":           # đã tự sửa 2 lần vẫn lỗi, đã báo kèm ảnh → không đăng
+                traceback.print_exc()
+                return False
             err = f"{type(exc).__name__}: {exc}"
             traceback.print_exc()
         had_error = True

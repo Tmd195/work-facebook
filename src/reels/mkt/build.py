@@ -162,7 +162,8 @@ def make(spec: dict, folder: Path, fast: bool = False, music: Path | None = None
     folder.mkdir(parents=True, exist_ok=True)
     (folder / "script.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
     m = D.load(spec["symbol"])
-    tl = timeline(spec, _voices(spec, folder, fast))
+    vo = _voices(spec, folder, fast)
+    tl = timeline(spec, vo)
     total = tl["intro"] + tl["trans"] + tl["sting"] + tl["chart"] + tl["q"] + tl["end"]
     silent = folder / "reel.video.mp4"
     proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
@@ -186,7 +187,9 @@ def make(spec: dict, folder: Path, fast: bool = False, music: Path | None = None
     # ảnh bìa: khung biểu đồ đầy đủ + tiêu đề
     cover = _cover(spec, m, thumb)
     cover.save(folder / "thumb.jpg", "JPEG", quality=92)
-    return {"video": folder / "reel.mp4", "thumb": folder / "thumb.jpg", "duration": round(total, 1)}
+    texts = [spec["hook"]] + [x["say"] for x in spec["lines"]] + [spec["question"]]
+    return {"video": folder / "reel.mp4", "thumb": folder / "thumb.jpg", "duration": round(total, 1),
+            "voices": ([p for p, _ in vo], texts), "facts": m.facts}
 
 
 def _cover(spec, m, chart_img):

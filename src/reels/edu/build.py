@@ -182,10 +182,12 @@ def mix(silent: Path, voices: list, events: list, total: float, out: Path, music
         filters.append(f"[{m}:a]aresample=48000,loudnorm=I=-14:TP=-1.5,volume=0.5,afade=t=in:d=0.6,"
                        f"afade=t=out:st={total - 2.5:.2f}:d=2.5[bgm]")
         filters.append("[bgm][sc]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=400[duck]")
-        filters.append("[vo][duck][fx]amix=inputs=3:normalize=0:duration=longest[a]")
+        filters.append("[vo][duck][fx]amix=inputs=3:normalize=0:duration=longest,"
+                       "alimiter=limit=0.89:attack=5:release=50:level=disabled[a]")   # chặn vỡ tiếng (đỉnh ≤ -1 dB)
     else:
         filters.append("[sc]anullsink")
-        filters.append("[vo][fx]amix=inputs=2:normalize=0:duration=longest[a]")
+        filters.append("[vo][fx]amix=inputs=2:normalize=0:duration=longest,"
+                       "alimiter=limit=0.89:attack=5:release=50:level=disabled[a]")
     cmd += ["-filter_complex", ";".join(filters), "-map", "0:v", "-map", "[a]", "-c:v", "copy",
             "-c:a", "aac", "-b:a", "192k", "-t", f"{total:.2f}", "-movflags", "+faststart", str(out)]
     if subprocess.run(cmd).returncode:
@@ -234,7 +236,9 @@ def make(spec: dict, folder: Path, fast: bool = False, music: Path | None = None
     events.append((scenes[-1].start + 0.6, "ting", 0.5))
     video = encode(scenes, charts, events, folder / "reel.mp4", music)
     thumb = thumbnail(spec, scenes, charts, folder / "thumb.jpg")
-    return {"video": video, "thumb": thumb, "duration": round(total, 1)}
+    says = [spoken(sc.get("say") or R.plain(sc["text"])) for sc in spec["scenes"]]
+    return {"video": video, "thumb": thumb, "duration": round(total, 1),
+            "voices": ([p for p, _ in voices], says)}
 
 
 def main():

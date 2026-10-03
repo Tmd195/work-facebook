@@ -556,10 +556,12 @@ def encode(scenes: list[Scene], base_bg: Image.Image, out: Path, music: Path | N
         filters.append(f"[{m}:a]aresample=48000,loudnorm=I=-14:TP=-1.5,volume=0.85,afade=t=in:d=0.6,"
                        f"afade=t=out:st={total - 3.2:.2f}:d=3.2[bgm]")
         filters.append("[bgm][sc]sidechaincompress=threshold=0.06:ratio=3.5:attack=20:release=350[duck]")
-        filters.append("[vo][duck][fx]amix=inputs=3:normalize=0:duration=longest[a]")
+        filters.append("[vo][duck][fx]amix=inputs=3:normalize=0:duration=longest,"
+                       "alimiter=limit=0.89:attack=5:release=50:level=disabled[a]")   # chặn vỡ tiếng (đỉnh ≤ -1 dB)
     else:
         filters.append("[sc]anullsink")
-        filters.append("[vo][fx]amix=inputs=2:normalize=0:duration=longest[a]")
+        filters.append("[vo][fx]amix=inputs=2:normalize=0:duration=longest,"
+                       "alimiter=limit=0.89:attack=5:release=50:level=disabled[a]")
     cmd += ["-filter_complex", ";".join(filters), "-map", "0:v", "-map", "[a]", "-c:v", "copy",
             "-c:a", "aac", "-b:a", "192k", "-t", f"{total:.2f}", "-movflags", "+faststart", str(out)]
     if subprocess.run(cmd).returncode:
