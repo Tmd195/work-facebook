@@ -19,7 +19,7 @@ brand:
   lockup: ["MARKETS", "GLOBAL"]
 
 autopost:
-  live: false                          # chờ anh duyệt demo rồi mới bật
+  live: true                           # anh bật đăng thật 03/10/2026 (lỗi khi đăng anh gửi lại để sửa)
 
 design:
   titles_upper: true                   # mọi tiêu đề bài IN HOA (anh chốt 03/10/2026)
@@ -163,7 +163,7 @@ schedule:
   cwg_fx_5:    { time: "08:00", days: [mon, tue, wed, thu, fri] }   # 15:00 VN
   cwg_fx_6:    { time: "08:15", days: [mon, tue, wed, thu, fri] }   # 15:15 VN
   cwg_macro:   { time: "09:15", after_fx: 120, days: [mon, tue, wed, thu, fri] }   # 2 tiếng sau bài đồng tiền cuối cùng
-  cwg_license: { time: "05:30", dates: [] }                         # điền 3 ngày khi bật đăng thật (FCA → FSCA → VFSC)
+  cwg_license: { time: "05:30", dates: ["2026-10-05", "2026-10-06", "2026-10-07"] }   # FCA → FSCA → VFSC (bài ghim)
   # Cuối tuần: giữ như Page VN, giờ UTC
   cwg_wk_recap: { time: "09:00", days: [sat] }   # 16:00 VN
   cwg_wk_top5:  { time: "14:00", days: [sat] }   # 21:00 VN
