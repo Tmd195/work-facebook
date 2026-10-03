@@ -4,6 +4,7 @@ AI chỉ viết LỜI + mô tả HÌNH DẠNG giá (đoạn tích luỹ, quét �
 Chủ đề xoay vòng theo danh sách TOPICS, không lặp lại tới khi hết vòng.
 """
 import json
+import random
 import re
 
 from src.config import STATE
@@ -111,9 +112,11 @@ def next_topic() -> str:
     return left[0]
 
 
-def mark_done(topic: str):
+def mark_done(topic: str, title: str = ""):
     st = _state()
     st["done"] = [t for t in st["done"] if t != topic] + [topic]
+    if title:                                      # nhớ các góc đã làm để vòng sau mỗi chủ đề viết góc khác
+        st.setdefault("titles", {}).setdefault(topic, []).append(title)
     FILE.parent.mkdir(parents=True, exist_ok=True)
     FILE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -147,9 +150,15 @@ def validate(spec: dict) -> dict:
 def write(topic: str | None = None) -> dict:
     topic = topic or next_topic()
     brief = TOPICS.get(topic, topic)
-    user = (f"Chủ đề: {brief}\nslug: {topic}\nViết kịch bản theo đúng định dạng. Nhớ: phần say là lời đọc tự nhiên, "
-            "text là chữ trên màn hình (có thể ngắn gọn hơn say).")
+    old = _state().get("titles", {}).get(topic, [])
+    again = ("\nChủ đề này ĐÃ làm các video: " + " | ".join(old[-6:]) +
+             "\n→ BẮT BUỘC chọn GÓC MỚI hoàn toàn (sai lầm hay gặp, so sánh đúng/sai, tình huống khác, "
+             "chiều ngược lại mua/bán, mẹo nâng cao…): tiêu đề, hook và hình dạng giá khác hẳn.") if old else ""
+    user = (f"Chủ đề: {brief}\nslug: {topic}{again}\nViết kịch bản theo đúng định dạng. Nhớ: phần say là lời đọc "
+            "tự nhiên, text là chữ trên màn hình (có thể ngắn gọn hơn say).")
     spec = generate_json(SYSTEM, user, {"type": "object"})
+    for c in (spec.get("charts") or {}).values():      # nến minh họa mỗi lần một khác
+        c["seed"] = random.randint(1, 10_000)
     spec["slug"] = topic
     spec["topic"] = topic
     return validate(spec)

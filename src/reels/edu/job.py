@@ -35,4 +35,4 @@ def meta(out_dir: Path) -> dict:
 
 
 def mark_done(meta: dict):
-    script.mark_done(meta["topic"])
+    script.mark_done(meta["topic"], meta.get("title") or "")
