@@ -22,6 +22,7 @@ from src.analysis import to_h4
 from src.data.prices import Candle, get_intraday, get_series
 from src.design.diagrams import synth_candles
 from src.design.tvchart import TV, TVChart
+from src.i18n import EN_MODE
 
 DIGITS = {"XAUUSD": 2, "EURUSD": 5, "GBPUSD": 5, "DXY": 3, "AUDUSD": 5, "USDCAD": 5, "USDJPY": 3, "WTI": 2}
 WINDOW = {"H1": 120, "H4": 110, "D1": 120}
@@ -359,7 +360,8 @@ def build_real(spec: dict) -> tuple[TVChart, list[str]]:
         zones = sr_zones(c, sw, a, price)
         for z, cnt in zones[:3]:
             col = TV["down"] if z > price else TV["up"]
-            ch.rect(0, None, z - 0.15 * a, z + 0.15 * a, col, f"{'Kháng cự' if z > price else 'Hỗ trợ'} ({cnt} lần chạm)", 0.15)
+            ch.rect(0, None, z - 0.15 * a, z + 0.15 * a, col, (f"{'Resistance' if z > price else 'Support'} ({cnt} touches)" if EN_MODE else
+                 f"{'Kháng cự' if z > price else 'Hỗ trợ'} ({cnt} lần chạm)"), 0.15)
         res = [z for z, _ in zones if z > price]
         sup = [z for z, _ in zones if z < price]
         if res:

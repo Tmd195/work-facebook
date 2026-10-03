@@ -1,0 +1,175 @@
+# Job 2B – Page "CWG Markets Global" (https://www.facebook.com/CWG.Markets.Global)
+# Tiếng Anh, khách Đông Nam Á (Philippines, Thái Lan…). KHÔNG nhắm Ấn Độ, Nhật, Hàn (anh chốt 03/10/2026 – pháp lý);
+# CWG không nhận khách Indonesia, Malaysia. Chính sách IB giống hệt bản VN.
+# Chạy: JOB=cwg-global python -m src.runner <việc> --dry-run --now
+
+job:
+  id: cwg-global
+  name: "CWG Global"                   # nhãn ở đầu mỗi tin Telegram
+
+lang: en
+timezone: "UTC"                        # anh chốt 03/10/2026: Page Global dùng giờ UTC (lịch đăng + giờ trên ảnh)
+tz_label: "UTC"
+
+brand:
+  name: "CWG MARKETS GLOBAL"
+  handle: "facebook.com/CWG.Markets.Global"
+  logo: "assets/brands/cwg/logo.png"
+  icon: "assets/brands/cwg/icon.png"
+  lockup: ["MARKETS", "GLOBAL"]
+
+autopost:
+  live: false                          # chờ anh duyệt demo rồi mới bật
+
+design:
+  style: block
+  palette: do-cwg
+  chart_theme: light
+
+brandpost:
+  language: en
+  persona: >-
+    The CWG Markets Global partner team – official IB partner of CWG Markets for Southeast Asia. Speaks as "we",
+    addresses readers as "you". Professional, practical, friendly, never hype.
+  audience: >-
+    English-speaking traders and introducing brokers in Southeast Asia (mainly the Philippines and Thailand): community
+    leaders, trading educators, affiliates, finance sales people, IBs at other brokers looking for a better deal.
+  commission_claim: "IBs earn up to 85% of the spread – e.g. XAUUSD spread 5.x pips, IB earns up to $50/lot"
+  cta: "📩 Message the Page for the full partner policy"
+  facts:
+    - "IB commission: up to 85% of the spread."
+    - "Volume bonus: from 5%."
+    - "Example: gold XAUUSD with a 5.x pip spread – the IB earns up to $50/lot."
+    - "Rebates are credited instantly when each trade closes – partner funds are never held."
+    - "No minimum number of clients; no minimum trading volume."
+    - "Registering as an IB partner is free."
+    - "Dedicated English-speaking partner manager; daily training videos and market briefings for partners."
+    - "The CWG Markets group is licensed by FCA (UK, FRN 785129), FSCA (South Africa, FSP 54031) and VFSC (Vanuatu, company no. 41694). Each entity is licensed in its respective jurisdiction."
+    - "WikiFX score of CWG Markets: 8.25/10."
+  # Chữ ký cố định cuối MỌI caption
+  signature: |-
+    💼 CWG MARKETS IS RECRUITING IB PARTNERS
+    💰 Competitive commission – up to 85% of the spread
+    🎓 Daily training videos and market briefings
+    🤝 Dedicated English-speaking partner support
+    📩 Message the Page for the full partner policy
+  policy_card:
+    spread: "85%"
+    bonus: "5%"
+    example: ["XAUUSD spread 5.x pips", "$50/lot"]
+    licenses: [[FCA, "UK", "FRN 785129"], [FSCA, "South Africa", "FSP 54031"], [VFSC, "Vanuatu", "Co. No. 41694"]]
+    score: "8.25"
+  rules:
+    - "Only use numbers in facts. Never add tiers, conditions or other figures."
+    - "When mentioning licenses always say 'the CWG Markets group' and keep 'each entity is licensed in its respective jurisdiction'."
+    - "No income promises, no 'get rich quick', no monthly income examples."
+    - "Never target or mention India, Japan, South Korea, Indonesia or Malaysia."
+    - "No markdown, no bold; moderate emoji as bullets."
+  disclaimer: >-
+    ⚠️ CFD/Forex trading carries a high level of risk and you may lose all of your capital. This content introduces
+    a partner program and is not investment advice.
+
+  licenses_detail:
+    - code: FCA
+      short: "FRN 785129"
+      name: "Financial Conduct Authority"
+      country: "United Kingdom"
+      entity: "CWG Markets Ltd"
+      number_label: "Firm Reference Number"
+      number: "785129"
+      address: "76 Cannon Street, London, EC4N 6AE"
+      status: "Authorised"
+      verify_steps: ["Go to register.fca.org.uk", "Search for 785129", "Check the name CWG Markets Ltd and the address"]
+      caption: |-
+        🇬🇧 FCA LICENSE – UNITED KINGDOM
+        CWG Markets Ltd · FRN 785129
+
+        1️⃣ The FCA is the UK's financial regulator – one of the strictest in the world
+        2️⃣ CWG Markets Ltd is listed on the FCA register, 76 Cannon Street, London
+        3️⃣ Verify it yourself in 30 seconds: register.fca.org.uk → search 785129
+        4️⃣ Note: the FCA has warned about clone websites using the CWG Markets name. Only trust details checked directly on the FCA website
+
+        The CWG Markets group is licensed in 3 jurisdictions: FCA · FSCA · VFSC. Each entity operates under its license in its respective jurisdiction.
+        📩 Message the Page for the full partner policy
+
+        ⚠️ CFD/Forex trading carries a high level of risk and you may lose all of your capital. This content introduces a partner program and is not investment advice.
+
+        #CWGMarkets #CWGGlobal #FCA #Regulation
+    - code: FSCA
+      short: "FSP 54031"
+      name: "Financial Sector Conduct Authority"
+      country: "South Africa"
+      entity: "CWG Markets SA (PTY) LTD"
+      number_label: "FSP number"
+      number: "54031"
+      address: "Authorised financial services provider (FSCA)"
+      status: "Authorised"
+      verify_steps: ["Go to fsca.co.za → FSP search", "Search for 54031", "Check the name CWG Markets SA (PTY) LTD"]
+      caption: |-
+        🇿🇦 FSCA LICENSE – SOUTH AFRICA
+        CWG Markets SA (PTY) LTD · FSP 54031
+
+        1️⃣ The FSCA supervises market conduct in South Africa's financial sector
+        2️⃣ CWG Markets SA (PTY) LTD is an FSCA-authorised financial services provider, FSP 54031
+        3️⃣ Verify it yourself: fsca.co.za → FSP search → 54031
+
+        The CWG Markets group is licensed in 3 jurisdictions: FCA · FSCA · VFSC. Each entity operates under its license in its respective jurisdiction.
+        📩 Message the Page for the full partner policy
+
+        ⚠️ CFD/Forex trading carries a high level of risk and you may lose all of your capital. This content introduces a partner program and is not investment advice.
+
+        #CWGMarkets #CWGGlobal #FSCA #Regulation
+    - code: VFSC
+      short: "Co. No. 41694"
+      name: "Vanuatu Financial Services Commission"
+      country: "Vanuatu"
+      entity: "CWG MARKETS LTD"
+      number_label: "Company / license no."
+      number: "41694"
+      address: "Financial Dealers Licence classes A, B, C · issued 02 Oct 2023"
+      status: "Active"
+      verify_steps: ["Go to vfsc.vu → Financial Dealers Licensee List", "Find 41694", "Check CWG MARKETS LTD, status Active"]
+      caption: |-
+        🇻🇺 VFSC LICENSE – VANUATU
+        CWG MARKETS LTD · No. 41694
+
+        1️⃣ The VFSC (Vanuatu Financial Services Commission) issues Financial Dealers Licences
+        2️⃣ CWG MARKETS LTD was licensed on 02 Oct 2023, classes A, B, C – status Active
+        3️⃣ Verify it yourself: vfsc.vu → Financial Dealers Licensee List → 41694
+
+        The CWG Markets group is licensed in 3 jurisdictions: FCA · FSCA · VFSC. Each entity operates under its license in its respective jurisdiction.
+        📩 Message the Page for the full partner policy
+
+        ⚠️ CFD/Forex trading carries a high level of risk and you may lose all of your capital. This content introduces a partner program and is not investment advice.
+
+        #CWGMarkets #CWGGlobal #VFSC #Regulation
+
+hashtags:
+  brand: ["#CWGMarkets", "#CWGGlobal"]
+
+# Lịch đăng (giờ UTC – anh chốt 03/10/2026). Giờ VN = UTC + 7.
+# Ngày thường: bản tin ngày mới → 4 bài xu hướng riêng (chiều giờ VN, cách 15') → vĩ mô sau 2 tiếng.
+schedule:
+  cwg_morning: { time: "06:00", days: [mon, tue, wed, thu, fri] }   # 13:00 VN – bản tin ngày mới (trước phiên London)
+  cwg_fx_dxy:  { time: "06:30", days: [mon, tue, wed, thu, fri] }   # 13:30 VN – DXY & tác động lên vàng
+  cwg_fx_eur:  { time: "06:45", days: [mon, tue, wed, thu, fri] }   # 13:45 VN – EUR
+  cwg_fx_gbp:  { time: "07:00", days: [mon, tue, wed, thu, fri] }   # 14:00 VN – GBP
+  cwg_fx_oil:  { time: "07:15", days: [mon, tue, wed, thu, fri] }   # 14:15 VN – dầu
+  cwg_macro:   { time: "09:15", days: [mon, tue, wed, thu, fri] }   # 16:15 VN – phân tích vĩ mô (sau 2 tiếng)
+  cwg_license: { time: "05:30", dates: [] }                         # điền 3 ngày khi bật đăng thật (FCA → FSCA → VFSC)
+  # Cuối tuần: giữ như Page VN, giờ UTC
+  cwg_wk_recap: { time: "09:00", days: [sat] }   # 16:00 VN
+  cwg_wk_top5:  { time: "14:00", days: [sat] }   # 21:00 VN
+  cwg_wk_tech:  { time: "20:00", days: [sat] }   # 03:00 VN chủ nhật
+  cwg_wk_cot:   { time: "10:00", days: [sun] }   # 17:00 VN
+  cwg_wk_macro: { time: "15:00", days: [sun] }   # 22:00 VN
+  cwg_wk_ahead: { time: "20:00", days: [sun] }   # 03:00 VN thứ 2
+
+hunter:
+  enabled: true
+  interval: 90            # chậm hơn bản VN để 2 Page không cùng dồn truy vấn vào fxtin
+  batch_minutes: 5
+  min_gap_minutes: 30
+  max_per_day: 1          # Page Global: tối đa 1 bài tin nóng/ngày (anh chốt 03/10/2026)
+  weekend_max_per_day: 1
+  weekend_min_score: 8

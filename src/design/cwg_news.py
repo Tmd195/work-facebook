@@ -5,6 +5,8 @@
 """
 from PIL import Image, ImageDraw
 
+from src.i18n import TZ_LABEL
+from src.i18n import t as tr
 from src.config import CONFIG
 from src.design.brand_carousel import (M, WHITE, _bg_candles, _glow, _icon_shield, _logo, _pill, _shadow)
 from src.design.common import SIZE_4X5, fit, sans, save, wrap
@@ -25,6 +27,10 @@ def _paper() -> Image.Image:
         t = y / H
         d.line([(0, y), (W, y)], fill=tuple(int(a + (b - a) * t) for a, b in zip(PAPER_TOP, PAPER_BOT)) + (255,))
     return img
+
+
+# 2 dòng chữ nhỏ cạnh chữ CWG trong logo (job.yaml brand.lockup), vd. ["MARKETS &", "PARTNER"] / ["MARKETS", "GLOBAL"]
+LOCKUP = (CONFIG.get("brand") or {}).get("lockup") or ["MARKETS &", "PARTNER"]
 
 
 def _brand_header(img: Image.Image, right: str = ""):
@@ -53,7 +59,7 @@ def _brand_footer(img: Image.Image, note: str):
         x += icon.width + 22
     d.text((x, H - 46), "CWG", font=sans("ExtraBold", 34), fill=WHITE, anchor="lm")
     x += d.textlength("CWG", font=sans("ExtraBold", 34)) + 14
-    d.text((x, H - 46), "MARKETS & PARTNER", font=sans("Bold", 22), fill=(255, 220, 224), anchor="lm")
+    d.text((x, H - 46), " ".join(LOCKUP), font=sans("Bold", 22), fill=(255, 220, 224), anchor="lm")
     d.text((W - M, H - 46), CONFIG["brand"]["handle"], font=sans("Bold", 24), fill=WHITE, anchor="rm")
 
 
@@ -63,7 +69,7 @@ def _brand_lockup(img: Image.Image, x: int, y: int):
     icon = _logo("icon", 60)
     fw = sans("ExtraBold", 44)
     fs = sans("Bold", 17)
-    w = (icon.width if icon else 0) + 22 + d.textlength("CWG", font=fw) + 16 + d.textlength("MARKETS &", font=fs) + 40
+    w = (icon.width if icon else 0) + 22 + d.textlength("CWG", font=fw) + 16 + max(d.textlength(x, font=fs) for x in LOCKUP) + 40
     _shadow(img, (x, y, x + w, y + 84), 20, blur=14, offset=(0, 8), alpha=70)
     d = ImageDraw.Draw(img)
     d.rounded_rectangle([x, y, x + w, y + 84], radius=20, fill=WHITE)
@@ -74,8 +80,8 @@ def _brand_lockup(img: Image.Image, x: int, y: int):
     d.text((cx, y + 44), "CWG", font=fw, fill=PRIMARY, anchor="lm")
     cx += d.textlength("CWG", font=fw) + 14
     d.line([(cx - 6, y + 22), (cx - 6, y + 62)], fill=LINE, width=2)
-    d.text((cx + 6, y + 30), "MARKETS &", font=fs, fill=INK, anchor="lm")
-    d.text((cx + 6, y + 54), "PARTNER", font=fs, fill=INK, anchor="lm")
+    d.text((cx + 6, y + 30), LOCKUP[0], font=fs, fill=INK, anchor="lm")
+    d.text((cx + 6, y + 54), LOCKUP[1], font=fs, fill=INK, anchor="lm")
     return w
 
 
@@ -105,7 +111,7 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
     """lic: {code, name, country, entity, number_label, number, address, status, verify_url, verify_steps:[..], note}"""
     img = _paper()
     _glow(img, (W - 140, 430), 300, PRIMARY, 45)
-    _brand_header(img, f"GIẤY PHÉP {index}/{total}")
+    _brand_header(img, tr("GIẤY PHÉP {index}/{total}", index=index, total=total))
     d = ImageDraw.Draw(img)
 
     # khiên lớn mờ phía sau (dấu ấn pháp lý)
@@ -114,15 +120,15 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
     img.alpha_composite(shield, (W - 470, 150))
     d = ImageDraw.Draw(img)
 
-    _pill(d, M, 142, "PHÁP LÝ TẬP ĐOÀN CWG MARKETS", 22, PRIMARY, WHITE, pad=22)
+    _pill(d, M, 142, tr("PHÁP LÝ TẬP ĐOÀN CWG MARKETS"), 22, PRIMARY, WHITE, pad=22)
     d.text((M - 6, 340), lic["code"], font=sans("ExtraBold", 170), fill=PRIMARY, anchor="ls")
     d.text((M, 385), lic["name"], font=sans("Bold", 32), fill=INK, anchor="lm")
     d.text((M, 425), lic["country"], font=sans("SemiBold", 28), fill=MUTED, anchor="lm")
 
     # thẻ thông tin giấy phép
     top = 470
-    rows = [("Pháp nhân", lic["entity"]), (lic["number_label"], lic["number"]), ("Địa chỉ / thông tin", lic["address"]),
-            ("Trạng thái", lic["status"])]
+    rows = [(tr("Pháp nhân"), lic["entity"]), (lic["number_label"], lic["number"]), (tr("Địa chỉ / thông tin"), lic["address"]),
+            (tr("Trạng thái"), lic["status"])]
     ch = 50 + len(rows) * 82
     _shadow(img, (M, top, W - M, top + ch), 28, blur=20, offset=(0, 14), alpha=60)
     d = ImageDraw.Draw(img)
@@ -140,7 +146,7 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
 
     # tự tra cứu
     y = top + ch + 34
-    d.text((M, y), "TỰ TRA CỨU TRONG 30 GIÂY", font=sans("ExtraBold", 26), fill=INK)
+    d.text((M, y), tr("TỰ TRA CỨU TRONG 30 GIÂY"), font=sans("ExtraBold", 26), fill=INK)
     y += 50
     for k, step in enumerate(lic["verify_steps"][:3], 1):
         d.ellipse([M, y, M + 44, y + 44], fill=PRIMARY)
@@ -163,9 +169,9 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
     x0 = M + (n - 1) * (cw + 10)
     d.rounded_rectangle([x0, y, x0 + cw, y + 80], radius=18, fill=(28, 28, 32))
     d.text((x0 + 20, y + 30), score, font=sans("ExtraBold", 30), fill=WHITE, anchor="lm")
-    d.text((x0 + 20, y + 60), "Điểm WikiFX /10", font=sans("SemiBold", 18), fill=(200, 200, 206), anchor="lm")
+    d.text((x0 + 20, y + 60), tr("Điểm WikiFX /10"), font=sans("SemiBold", 18), fill=(200, 200, 206), anchor="lm")
 
-    _brand_footer(img, "Mỗi pháp nhân được cấp phép tại khu vực tương ứng. Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn.")
+    _brand_footer(img, tr("Mỗi pháp nhân được cấp phép tại khu vực tương ứng. Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn."))
     save(img, path)
     return path
 
@@ -184,12 +190,12 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
     # nhãn TIN NÓNG + mức ảnh hưởng
     x = M
     f = sans("ExtraBold", 26)
-    w = d.textlength("TIN NÓNG", font=f) + 92
+    w = d.textlength(tr("TIN NÓNG"), font=f) + 92
     d.rounded_rectangle([x, 132, x + w, 132 + 50], radius=25, fill=PRIMARY)
     d.polygon([(x + 30, 141), (x + 42, 141), (x + 36, 154), (x + 46, 154), (x + 28, 174), (x + 33, 159), (x + 23, 159)],
               fill=WHITE)
-    d.text((x + 58, 157), "TIN NÓNG", font=f, fill=WHITE, anchor="lm")
-    _pill(d, x + w + 14, 132, f"Mức ảnh hưởng: {level}", 22, (253, 234, 236), PRIMARY, pad=22)
+    d.text((x + 58, 157), tr("TIN NÓNG"), font=f, fill=WHITE, anchor="lm")
+    _pill(d, x + w + 14, 132, tr("Mức ảnh hưởng: {level}", level=level), 22, (253, 234, 236), PRIMARY, pad=22)
 
     y = 232
     hl = wrap(d, headline, sans("ExtraBold", 54), W - 2 * M, max_lines=4)
@@ -200,7 +206,7 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
 
     if data:
         bw = (W - 2 * M - 2 * 16) / 3
-        cols = [("THỰC TẾ", data["actual"]), ("DỰ BÁO", data["forecast"]), ("KỲ TRƯỚC", data["previous"])]
+        cols = [(tr("THỰC TẾ"), data["actual"]), (tr("DỰ BÁO"), data["forecast"]), (tr("KỲ TRƯỚC"), data["previous"])]
         for k, (lab, val) in enumerate(cols):
             x0 = M + k * (bw + 16)
             main = k == 0
@@ -215,7 +221,7 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
         y += 186
 
     # bảng tác động
-    d.text((M, y), "TÁC ĐỘNG TỚI THỊ TRƯỜNG", font=sans("ExtraBold", 26), fill=INK)
+    d.text((M, y), tr("TÁC ĐỘNG TỚI THỊ TRƯỜNG"), font=sans("ExtraBold", 26), fill=INK)
     y += 50
     rows = impacts[:5]
     rh = 78
@@ -246,7 +252,7 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
         for k, line in enumerate(sl):
             d.text((M + 40, y + 24 + k * 40), line, font=sans("SemiBold", 28), fill=INK)
 
-    _brand_footer(img, "Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao."))
     save(img, path)
     return path
 
@@ -320,12 +326,12 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
 
     x = M
     f = sans("ExtraBold", 26)
-    w = d.textlength("TIN NÓNG", font=f) + 92
+    w = d.textlength(tr("TIN NÓNG"), font=f) + 92
     d.rounded_rectangle([x, 146, x + w, 196], radius=25, fill=PRIMARY)
     d.polygon([(x + 30, 155), (x + 42, 155), (x + 36, 168), (x + 46, 168), (x + 28, 188), (x + 33, 173), (x + 23, 173)],
               fill=WHITE)
-    d.text((x + 58, 171), "TIN NÓNG", font=f, fill=WHITE, anchor="lm")
-    _pill(d, x + w + 14, 146, f"Mức ảnh hưởng: {level}", 22, WHITE, PRIMARY, pad=22)
+    d.text((x + 58, 171), tr("TIN NÓNG"), font=f, fill=WHITE, anchor="lm")
+    _pill(d, x + w + 14, 146, tr("Mức ảnh hưởng: {level}", level=level), 22, WHITE, PRIMARY, pad=22)
 
     y = 240
     _soft_shadow_text(img, wrap(d, headline, sans("ExtraBold", 56), W - 2 * M, max_lines=4), M, y, 70)
@@ -336,7 +342,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     if data:
         y = max(y + 26, band_h - 170)
         bw = (W - 2 * M - 2 * 16) / 3
-        cols = [("THỰC TẾ", data["actual"]), ("DỰ BÁO", data["forecast"]), ("KỲ TRƯỚC", data["previous"])]
+        cols = [(tr("THỰC TẾ"), data["actual"]), (tr("DỰ BÁO"), data["forecast"]), (tr("KỲ TRƯỚC"), data["previous"])]
         for k, (lab, val) in enumerate(cols):
             x0 = M + k * (bw + 16)
             main = k == 0
@@ -355,7 +361,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
         y = max(y + 20, band_h + 10)
 
     d = ImageDraw.Draw(img)
-    d.text((M, y), "TÁC ĐỘNG TỚI THỊ TRƯỜNG", font=sans("ExtraBold", 26), fill=INK)
+    d.text((M, y), tr("TÁC ĐỘNG TỚI THỊ TRƯỜNG"), font=sans("ExtraBold", 26), fill=INK)
     y += 48
     rows = impacts[:4]
     rh = 74
@@ -386,7 +392,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
             d.text((M + 40, y + 22 + k * 38), line, font=sans("SemiBold", 27), fill=INK)
     if ticker:
         _ticker(img, ty, ticker)
-    _brand_footer(img, "Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao."))
     save(img, path)
     return path
 
@@ -421,7 +427,7 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
     img = _paper()
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
-    y = _kicker(d, 140, "BẢN TIN ĐẦU NGÀY", "Cập nhật trước giờ giao dịch")
+    y = _kicker(d, 140, tr("BẢN TIN ĐẦU NGÀY"), tr("Cập nhật trước giờ giao dịch"))
     for line in wrap(d, title, sans("ExtraBold", 46), W - 2 * M, max_lines=2):
         d.text((M, y), line, font=sans("ExtraBold", 46), fill=INK)
         y += 58
@@ -444,8 +450,8 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
         _spark(d, (x0 + 18, y0 + 112, x0 + tw - 18, y0 + th - 14), t["spark"][-20:], col)
     y += 2 * th + gap + 34
     # lịch tin
-    d.text((M, y), "LỊCH TIN QUAN TRỌNG HÔM NAY", font=sans("ExtraBold", 26), fill=INK)
-    d.text((W - M, y + 14), "giờ Việt Nam", font=sans("Medium", 20), fill=MUTED, anchor="rm")
+    d.text((M, y), tr("LỊCH TIN QUAN TRỌNG HÔM NAY"), font=sans("ExtraBold", 26), fill=INK)
+    d.text((W - M, y + 14), TZ_LABEL, font=sans("Medium", 20), fill=MUTED, anchor="rm")
     y += 48
     rows = events[:6]
     rh = 66
@@ -461,7 +467,7 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
             d.text((M + 52, cy), e["time"], font=sans("ExtraBold", 24), fill=INK, anchor="lm")
             d.rounded_rectangle([M + 136, cy - 17, M + 206, cy + 17], radius=10, fill=(244, 244, 247))
             d.text((M + 171, cy), e["ccy"], font=sans("ExtraBold", 19), fill=INK, anchor="mm")
-            fc = f"DB {e['forecast']}" if e.get("forecast") else ""
+            fc = f"{tr('DB')} {e['forecast']}" if e.get("forecast") else ""
             fcw = d.textlength(fc, font=sans("SemiBold", 20)) if fc else 0
             d.text((M + 222, cy), fit(d, e["title"], sans("SemiBold", 23), W - 2 * M - 250 - fcw), font=sans("SemiBold", 23),
                    fill=(50, 50, 56), anchor="lm")
@@ -472,7 +478,7 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
             yy += rh
         y = yy + 22
     else:
-        d.text((M, y + 10), "Không có tin tác động mạnh trong ngày.", font=sans("SemiBold", 24), fill=MUTED)
+        d.text((M, y + 10), tr("Không có tin tác động mạnh trong ngày."), font=sans("SemiBold", 24), fill=MUTED)
         y += 60
     if note and y + 70 < H - 130:
         sl = wrap(d, note, sans("SemiBold", 25), W - 2 * M - 70, max_lines=2)
@@ -481,7 +487,7 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
         d.rectangle([M, y + 12, M + 8, y + bh - 12], fill=PRIMARY)
         for k, line in enumerate(sl):
             d.text((M + 36, y + 18 + k * 36), line, font=sans("SemiBold", 25), fill=INK)
-    _brand_footer(img, "Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Thông tin thị trường mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao."))
     save(img, path)
     return path
 
@@ -491,7 +497,7 @@ def render_trend(path, time_label: str, title: str, rows: list):
     img = _paper()
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
-    y = _kicker(d, 140, "BẢNG TIN XU HƯỚNG", "Góc nhìn tổng quan trong ngày")
+    y = _kicker(d, 140, tr("BẢNG TIN XU HƯỚNG"), tr("Góc nhìn tổng quan trong ngày"))
     for line in wrap(d, title, sans("ExtraBold", 40), W - 2 * M, max_lines=2):
         d.text((M, y), line, font=sans("ExtraBold", 40), fill=INK)
         y += 52
@@ -499,7 +505,7 @@ def render_trend(path, time_label: str, title: str, rows: list):
     # tiêu đề cột
     cx = [M + 24, M + 200, M + 420, M + 690]
     d.rounded_rectangle([M, y, W - M, y + 50], radius=14, fill=(28, 28, 32))
-    for x, lab in zip(cx, ["SẢN PHẨM", "XU HƯỚNG", "VÙNG HỖ TRỢ", "VÙNG KHÁNG CỰ"]):
+    for x, lab in zip(cx, [tr("SẢN PHẨM"), tr("XU HƯỚNG"), tr("VÙNG HỖ TRỢ"), tr("VÙNG KHÁNG CỰ")]):
         d.text((x, y + 25), lab, font=sans("ExtraBold", 19), fill=WHITE, anchor="lm")
     y += 62
     rh = 96
@@ -507,7 +513,7 @@ def render_trend(path, time_label: str, title: str, rows: list):
     _shadow(img, (M, y, W - M, y + rh * n), 20, blur=14, offset=(0, 8), alpha=30)
     d = ImageDraw.Draw(img)
     d.rounded_rectangle([M, y, W - M, y + rh * n], radius=20, fill=WHITE)
-    lab = {"up": ("TĂNG", UP), "down": ("GIẢM", DOWN), "flat": ("ĐI NGANG", FLAT)}
+    lab = {"up": (tr("TĂNG"), UP), "down": (tr("GIẢM"), DOWN), "flat": (tr("ĐI NGANG"), FLAT)}
     for k, r in enumerate(rows[:8]):
         yy = y + k * rh
         d.text((cx[0], yy + 34), r["code"], font=sans("ExtraBold", 28), fill=INK, anchor="lm")
@@ -525,13 +531,13 @@ def render_trend(path, time_label: str, title: str, rows: list):
                fill=MUTED, anchor="lm")
         if k < n - 1:
             d.line([(M + 20, yy + rh), (W - M - 20, yy + rh)], fill=LINE, width=2)
-    _brand_footer(img, "Góc nhìn tổng quan, không phải tín hiệu giao dịch. Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn.")
+    _brand_footer(img, tr("Góc nhìn tổng quan, không phải tín hiệu giao dịch. Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn."))
     save(img, path)
     return path
 
 
 def render_macro_cover(path, photo, time_label: str, title: str, subtitle: str, headings: list,
-                       kicker: str = "PHÂN TÍCH VĨ MÔ"):
+                       kicker: str = tr("PHÂN TÍCH VĨ MÔ")):
     img = _paper()
     _photo_band(img, photo, 760)
     _c_watermark(img, W + 40, 360, box=(0, 0, W, 700))
@@ -555,14 +561,14 @@ def render_macro_cover(path, photo, time_label: str, title: str, subtitle: str, 
         d.text((M, y + 10), line, font=sans("SemiBold", 30), fill=(255, 225, 228))
         y += 42
     y = 790
-    d.text((M, y), "NỘI DUNG CHÍNH", font=sans("ExtraBold", 24), fill=PRIMARY)
+    d.text((M, y), tr("NỘI DUNG CHÍNH"), font=sans("ExtraBold", 24), fill=PRIMARY)
     y += 48
     for i, h in enumerate(headings[:3]):
         d.text((M, y), f"{i + 1:02d}", font=sans("ExtraBold", 38), fill=PRIMARY)
         d.text((M + 80, y + 6), fit(d, h, sans("Bold", 32), W - 2 * M - 80), font=sans("Bold", 32), fill=INK)
         y += 78
         d.line([(M + 80, y - 18), (W - M, y - 18)], fill=LINE, width=2)
-    _brand_footer(img, "Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao."))
     save(img, path)
     return path
 
@@ -622,7 +628,7 @@ def render_macro_slide(path, idx: int, total: int, heading: str, body: str, poin
         d.text((M + 40, y + 20), fit(d, p, sans("SemiBold", 30), W - 2 * M - 40), font=sans("SemiBold", 30), fill=INK,
                anchor="lm")
         y += 58
-    _brand_footer(img, "Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao."))
     save(img, path)
     return path
 
@@ -634,7 +640,7 @@ def render_week_recap(path, time_label: str, title: str, rows: list, highlights:
     img = _paper()
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
-    y = _kicker(d, 140, "TỔNG KẾT TUẦN", "8 sản phẩm chính")
+    y = _kicker(d, 140, tr("TỔNG KẾT TUẦN"), tr("8 sản phẩm chính"))
     for line in wrap(d, title, sans("ExtraBold", 44), W - 2 * M, max_lines=2):
         d.text((M, y), line, font=sans("ExtraBold", 44), fill=INK)
         y += 56
@@ -653,7 +659,7 @@ def render_week_recap(path, time_label: str, title: str, rows: list, highlights:
         cy = y + 10 + k * rh + rh / 2
         d.text((M + 24, cy - 12), r["code"], font=sans("ExtraBold", 27), fill=INK, anchor="lm")
         dg = r["digits"]
-        d.text((M + 24, cy + 18), f"Mở {r['open']:,.{dg}f} · Đóng {r['close']:,.{dg}f}", font=sans("Medium", 18), fill=MUTED,
+        d.text((M + 24, cy + 18), tr("Mở {o} · Đóng {c}", o=f"{r['open']:,.{dg}f}", c=f"{r['close']:,.{dg}f}"), font=sans("Medium", 18), fill=MUTED,
                anchor="lm")
         col = UP if r["chg"] >= 0 else DOWN
         bw = max(6, abs(r["chg"]) / mx * half)
@@ -664,7 +670,7 @@ def render_week_recap(path, time_label: str, title: str, rows: list, highlights:
             d.rounded_rectangle([mid - bw, cy - 14, mid, cy + 14], radius=7, fill=col)
             d.text((mid - bw - 10, cy), f"{r['chg']:+.2f}%", font=sans("ExtraBold", 22), fill=col, anchor="rm")
     y = box[3] + 28
-    d.text((M, y), "ĐIỂM NHẤN TUẦN", font=sans("ExtraBold", 24), fill=PRIMARY)
+    d.text((M, y), tr("ĐIỂM NHẤN TUẦN"), font=sans("ExtraBold", 24), fill=PRIMARY)
     y += 44
     for h in highlights[:3]:
         if y + 46 > H - 130:
@@ -673,7 +679,7 @@ def render_week_recap(path, time_label: str, title: str, rows: list, highlights:
         d.text((M + 34, y + 18), fit(d, h, sans("SemiBold", 26), W - 2 * M - 34), font=sans("SemiBold", 26), fill=INK,
                anchor="lm")
         y += 48
-    _brand_footer(img, "Số liệu giá đóng cửa tuần (tham khảo). Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn.")
+    _brand_footer(img, tr("Số liệu giá đóng cửa tuần (tham khảo). Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn."))
     save(img, path)
     return path
 
@@ -683,7 +689,7 @@ def render_top5(path, time_label: str, title: str, items: list):
     img = _paper()
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
-    y = _kicker(d, 140, "TOP 5 TIN CỦA TUẦN", "Xếp theo mức tác động")
+    y = _kicker(d, 140, tr("TOP 5 TIN CỦA TUẦN"), tr("Xếp theo mức tác động"))
     for line in wrap(d, title, sans("ExtraBold", 42), W - 2 * M, max_lines=2):
         d.text((M, y), line, font=sans("ExtraBold", 42), fill=INK)
         y += 54
@@ -711,7 +717,7 @@ def render_top5(path, time_label: str, title: str, items: list):
         d.text((x + 28, iy + 12), fit(d, f"{it['asset']}: {it['impact']}", sans("SemiBold", 22), W - M - x - 60),
                font=sans("SemiBold", 22), fill=col, anchor="lm")
         y += ch
-    _brand_footer(img, "Tổng hợp tin từ nhiều nguồn, mang tính tham khảo. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Tổng hợp tin từ nhiều nguồn, mang tính tham khảo. Giao dịch CFD/Forex có rủi ro cao."))
     save(img, path)
     return path
 
@@ -721,7 +727,7 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
     img = _paper()
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
-    y = _kicker(d, 140, "DÒNG TIỀN LỚN · COT", f"CFTC · số liệu tới {report_date}")
+    y = _kicker(d, 140, tr("DÒNG TIỀN LỚN · COT"), tr("CFTC · số liệu tới {d}", d=report_date))
     for line in wrap(d, title, sans("ExtraBold", 42), W - 2 * M, max_lines=2):
         d.text((M, y), line, font=sans("ExtraBold", 42), fill=INK)
         y += 54
@@ -739,8 +745,8 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
         ratio = r["net"] / tot
         col = UP if r["net"] >= 0 else DOWN
         d.text((M + 24, cy - 14), r["name"], font=sans("ExtraBold", 26), fill=INK, anchor="lm")
-        side = "MUA RÒNG" if r["net"] >= 0 else "BÁN RÒNG"
-        d.text((M + 24, cy + 18), f"{side} {abs(r['net']):,} HĐ", font=sans("Bold", 19), fill=col, anchor="lm")
+        side = tr("MUA RÒNG") if r["net"] >= 0 else tr("BÁN RÒNG")
+        d.text((M + 24, cy + 18), tr("{side} {n} HĐ", side=side, n=f"{abs(r['net']):,}"), font=sans("Bold", 19), fill=col, anchor="lm")
         d.line([(mid, cy - 22), (mid, cy + 22)], fill=LINE, width=2)
         bw = max(4, abs(ratio) * half)
         if ratio >= 0:
@@ -750,7 +756,7 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
         dc = UP if r["d_net"] >= 0 else DOWN
         txt = f"{r['d_net']:+,}"
         d.text((W - M - 24, cy - 12), txt, font=sans("ExtraBold", 21), fill=dc, anchor="rm")
-        d.text((W - M - 24, cy + 16), "so với tuần trước", font=sans("Medium", 15), fill=MUTED, anchor="rm")
+        d.text((W - M - 24, cy + 16), tr("so với tuần trước"), font=sans("Medium", 15), fill=MUTED, anchor="rm")
         if k < len(rows) - 1:
             d.line([(M + 20, y + 8 + (k + 1) * rh), (W - M - 20, y + 8 + (k + 1) * rh)], fill=LINE, width=2)
     y = box[3] + 22
@@ -761,7 +767,7 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
         d.rectangle([M, y + 12, M + 8, y + bh - 12], fill=PRIMARY)
         for k, line in enumerate(sl):
             d.text((M + 36, y + 16 + k * 34), line, font=sans("SemiBold", 24), fill=INK)
-    _brand_footer(img, "Nguồn: CFTC Commitments of Traders (nhóm quỹ đầu cơ non-commercial). Thông tin tham khảo, không phải khuyến nghị đầu tư.")
+    _brand_footer(img, tr("Nguồn: CFTC Commitments of Traders (nhóm quỹ đầu cơ non-commercial). Thông tin tham khảo, không phải khuyến nghị đầu tư."))
     save(img, path)
     return path
 
@@ -771,7 +777,7 @@ def render_week_ahead(path, time_label: str, title: str, days: list):
     img = _paper()
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
-    y = _kicker(d, 140, "LỊCH TIN TUẦN MỚI", "giờ Việt Nam")
+    y = _kicker(d, 140, tr("LỊCH TIN TUẦN MỚI"), TZ_LABEL)
     for line in wrap(d, title, sans("ExtraBold", 42), W - 2 * M, max_lines=2):
         d.text((M, y), line, font=sans("ExtraBold", 42), fill=INK)
         y += 54
@@ -792,7 +798,7 @@ def render_week_ahead(path, time_label: str, title: str, days: list):
         d.text((M + 30, y + 26), dd["label"].upper(), font=sans("ExtraBold", 22), fill=PRIMARY, anchor="lm")
         yy = y + 52
         if not evs:
-            d.text((M + 30, yy + lh / 2), "Không có tin tác động mạnh", font=sans("Medium", 21), fill=MUTED, anchor="lm")
+            d.text((M + 30, yy + lh / 2), tr("Không có tin tác động mạnh"), font=sans("Medium", 21), fill=MUTED, anchor="lm")
         for e in evs:
             cy = yy + lh / 2
             dot = PRIMARY if e["impact"] == "High" else ORANGE
@@ -803,7 +809,7 @@ def render_week_ahead(path, time_label: str, title: str, days: list):
                    fill=(50, 50, 56), anchor="lm")
             yy += lh
         y += bh + 12
-    _brand_footer(img, "Lịch có thể thay đổi theo thông báo của cơ quan công bố. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Lịch có thể thay đổi theo thông báo của cơ quan công bố. Giao dịch CFD/Forex có rủi ro cao."))
     save(img, path)
     return path
 
@@ -841,6 +847,59 @@ def render_chart_slide(path, idx: int, total: int, heading: str, body: str, char
         d.text((M + 36, y + 19), fit(d, p, sans("SemiBold", 27), W - 2 * M - 36), font=sans("SemiBold", 27), fill=INK,
                anchor="lm")
         y += 50
-    _brand_footer(img, "Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao.")
+    _brand_footer(img, tr("Phân tích mang tính tham khảo, không phải khuyến nghị đầu tư. Giao dịch CFD/Forex có rủi ro cao."))
+    save(img, path)
+    return path
+
+
+def render_asset(path, time_label: str, kicker: str, code: str, title: str, bias: str, chart_img: Image.Image,
+                 support: str, resistance: str, body: str, points: list):
+    """Bài xu hướng riêng 1 tài sản (Page Global: DXY / EUR / GBP / OIL): biểu đồ thật + vùng giá + nhận định."""
+    img = _paper()
+    _brand_header(img, time_label)
+    d = ImageDraw.Draw(img)
+    y = _kicker(d, 140, kicker)
+    lab = {"up": (tr("TĂNG"), UP), "down": (tr("GIẢM"), DOWN), "flat": (tr("ĐI NGANG"), FLAT)}
+    t_, col = lab.get(bias, lab["flat"])
+    f = sans("ExtraBold", 22)
+    bw = d.textlength(t_, font=f) + 60
+    d.rounded_rectangle([W - M - bw, 140, W - M, 186], radius=22, fill=col)
+    if bias == "flat":
+        d.rectangle([W - M - bw + 16, 161, W - M - bw + 34, 165], fill=WHITE)
+    else:
+        _tri(d, W - M - bw + 16, 154, 18, bias == "up", WHITE)
+    d.text((W - M - bw + 42, 163), t_, font=f, fill=WHITE, anchor="lm")
+    for line in wrap(d, title, sans("ExtraBold", 40), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=sans("ExtraBold", 40), fill=INK)
+        y += 52
+    y += 12
+    cw = W - 2 * M
+    chh = min(int(chart_img.height * cw / chart_img.width), 470)
+    _shadow(img, (M, y, M + cw, y + chh), 16, blur=12, offset=(0, 6), alpha=30)
+    pic = chart_img.convert("RGBA").resize((cw, chh), Image.LANCZOS)
+    img.alpha_composite(pic, (M, y))
+    d = ImageDraw.Draw(img)
+    y += chh + 22
+    # 2 ô vùng giá
+    half = (cw - 20) // 2
+    for k, (lab_, val, c) in enumerate([(tr("VÙNG HỖ TRỢ"), support, UP), (tr("VÙNG KHÁNG CỰ"), resistance, DOWN)]):
+        x0 = M + k * (half + 20)
+        d.rounded_rectangle([x0, y, x0 + half, y + 92], radius=16, fill=WHITE, outline=LINE, width=2)
+        d.rectangle([x0, y + 16, x0 + 6, y + 76], fill=c)
+        d.text((x0 + 26, y + 28), lab_, font=sans("ExtraBold", 18), fill=MUTED, anchor="lm")
+        d.text((x0 + 26, y + 62), val, font=sans("ExtraBold", 28), fill=c, anchor="lm")
+    y += 116
+    for line in wrap(d, body, sans("Medium", 26), W - 2 * M, max_lines=4):
+        d.text((M, y), line, font=sans("Medium", 26), fill=(50, 50, 56))
+        y += 36
+    y += 8
+    for p in points[:3]:
+        if y + 46 > H - 130:
+            break
+        d.ellipse([M, y + 8, M + 22, y + 30], fill=PRIMARY)
+        d.text((M + 36, y + 19), fit(d, p, sans("SemiBold", 25), W - 2 * M - 36), font=sans("SemiBold", 25), fill=INK,
+               anchor="lm")
+        y += 46
+    _brand_footer(img, tr("Góc nhìn tổng quan, không phải tín hiệu giao dịch. Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn."))
     save(img, path)
     return path

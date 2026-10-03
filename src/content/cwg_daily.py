@@ -15,6 +15,9 @@ import requests
 from src.config import CONFIG, OUTPUT, ROOT, TZ
 from src.content import fbtext
 from src.content.llm import generate_json
+from src.i18n import LANG_RULE, TZ_LABEL
+from src.i18n import t as tr
+from src.i18n import day as dlabel
 
 PRODUCTS = [("XAUUSD", 2), ("EURUSD", 5), ("GBPUSD", 5), ("USDJPY", 3), ("AUDUSD", 5), ("USDCAD", 5), ("WTI", 2),
             ("DXY", 3)]
@@ -28,7 +31,7 @@ WRITER = """Bạn là biên tập viên tin tài chính của Page "CWG Markets 
 lên thị trường.
 CAPTION PHẢI THOÁNG, DỄ ĐỌC TRÊN ĐIỆN THOẠI: mỗi đoạn tối đa 1-2 câu, xuống dòng giữa các ý; khi nói nhiều sản phẩm thì
 mỗi sản phẩm (hoặc mỗi nhóm nhỏ) một dòng riêng, có emoji đầu dòng; không viết thành một khối chữ dài. Không hô hào, không hứa lợi nhuận, không đưa điểm vào lệnh / SL / TP. Không dùng markdown, không in đậm,
-không ghi "18+", không kêu gọi comment. Chỉ dùng số liệu được cung cấp; không tự bịa số."""
+không ghi "18+", không kêu gọi comment. Chỉ dùng số liệu được cung cấp; không tự bịa số.""" + LANG_RULE
 
 
 # ------------------------------------------------------------------ dữ liệu
@@ -108,6 +111,13 @@ def caption(body: str, tags: list[str]) -> str:
     return "\n\n".join(p for p in parts if p) + "\n\n" + " ".join(tags)
 
 
+def slot_label(job: str, default: str, day: date) -> str:
+    """Nhãn giờ góc phải ảnh: VN "07:30 · 02/10"; Global (giờ UTC) "06:00 UTC · Oct 02"."""
+    from src.i18n import EN_MODE
+    tm = (CONFIG["schedule"].get(job) or {}).get("time", default)
+    return f"{tm} {TZ_LABEL} · {dlabel(day)}" if EN_MODE else f"{tm} · {dlabel(day)}"
+
+
 CAP = {"type": "string"}
 TAGS = {"type": "array", "items": {"type": "string"}}
 
@@ -121,14 +131,14 @@ def post_morning(day: date, snap: dict, events: list, folder: Path) -> dict:
     r = generate_json(WRITER, f"""Viết BẢN TIN ĐẦU NGÀY {day:%d/%m}.
 Dữ liệu 8 sản phẩm (giá & % thay đổi phiên trước):
 {facts_text(snap)}
-Lịch tin trong ngày (giờ VN):
+Lịch tin trong ngày ({TZ_LABEL}):
 {ev}
 Trả về: title (tiêu đề ảnh ≤ 14 từ, nêu trọng tâm ngày), note (1-2 câu: điều cần theo dõi nhất hôm nay),
 caption (80-140 từ: tóm tắt phiên trước theo nhóm USD/kim loại/dầu, các tin cần chú ý trong ngày theo giờ, xuống dòng thoáng,
 emoji đầu dòng vừa phải), hashtags (2-3).""",
                       {"type": "object", "properties": {"title": CAP, "note": CAP, "caption": CAP, "hashtags": TAGS},
                        "required": ["title", "note", "caption", "hashtags"]})
-    img = cn.render_morning(folder / "01.png", f"07:30 · {day:%d/%m}", r["title"], tiles(snap), events, r["note"])
+    img = cn.render_morning(folder / "01.png", slot_label("cwg_morning", "07:30", day), r["title"], tiles(snap), events, r["note"])
     return {"slot": "07:30", "name": "Bản tin đầu ngày", "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
@@ -154,7 +164,7 @@ caption (70-120 từ: điểm nhấn của bảng, sản phẩm đáng chú ý n
         s, rz = zones(a)
         b = bias.get(c, {"bias": "flat", "reason": ""})
         rows.append({"code": c, "bias": b["bias"], "support": s, "resistance": rz, "reason": b["reason"]})
-    img = cn.render_trend(folder / "01.png", f"08:30 · {day:%d/%m}", r["title"], rows)
+    img = cn.render_trend(folder / "01.png", slot_label("cwg_trend", "08:30", day), r["title"], rows)
     return {"slot": "08:30", "name": "Bảng tin xu hướng", "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
@@ -184,7 +194,7 @@ caption (100-160 từ), hashtags (2-3). Mọi con số trong bài phải lấy t
                               "required": ["heading", "body", "points", "compare"]}}},
                        "required": ["topic", "photo", "title", "subtitle", "slides", "caption", "hashtags"]}, web=True)
     photo = BG / f"{r['photo'] if (BG / (r['photo'] + '-1.jpg')).exists() else 'fed'}-1.jpg"
-    imgs = [cn.render_macro_cover(folder / "01.png", photo, f"10:00 · {day:%d/%m}", r["title"], r["subtitle"],
+    imgs = [cn.render_macro_cover(folder / "01.png", photo, slot_label("cwg_macro", "10:00", day), r["title"], r["subtitle"],
                                   [s["heading"] for s in r["slides"]])]
     colors = [(225, 0, 22), (28, 28, 32), (230, 140, 20)]
     for i, s in enumerate(r["slides"][:3], 1):
@@ -192,7 +202,7 @@ caption (100-160 từ), hashtags (2-3). Mọi con số trong bài phải lấy t
         codes = [c for c in s.get("compare") or [] if c in dict(PRODUCTS)][:3]
         if len(codes) >= 2:
             ser = {c: [x.close for x in get_series(c).candles[-63:]] for c in codes}
-            chart = {"series": ser, "colors": colors, "title": "So sánh biến động 3 tháng (%)"}
+            chart = {"series": ser, "colors": colors, "title": tr("So sánh biến động 3 tháng (%)")}
         imgs.append(cn.render_macro_slide(folder / f"{i + 1:02d}.png", i, 3, s["heading"], s["body"], s["points"], chart))
     return {"slot": "10:00", "name": "Phân tích vĩ mô", "images": imgs, "caption": caption(r["caption"], r["hashtags"])}
 
@@ -246,16 +256,70 @@ summary (1 câu nhận định ≤ 25 từ), photo (fed/gold/oil/japan), caption
             m = re.search(r"[-+]?\d[\d.,]*\s?(%|K|M|B|nghìn|triệu)?", str(data[k]))
             data[k] = (m.group(0).replace(" ", "") if m else str(data[k]))[:8]
     t = group[0]["time"]
-    img = cn.render_breaking_photo(folder / "01.png", photo, f"{t} · {day:%d/%m}", r["headline"], data,
+    img = cn.render_breaking_photo(folder / "01.png", photo, f"{t} · {dlabel(day)}", r["headline"], data,
                                    [(x["asset"], x["direction"], x["reason"]) for x in r["impacts"]], r["summary"],
                                    r["level"], tk)
     return {"slot": t, "name": "Tin nóng", "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
+# Page Global: bảng xu hướng tách thành bài riêng từng tài sản (anh chốt 03/10/2026)
+FX_POSTS = {
+    "cwg_fx_dxy": {"code": "DXY", "ccy": ["USD"], "kicker": "DXY · IMPACT ON GOLD", "also": "XAUUSD",
+                   "brief": "Phân tích chỉ số USD (DXY) và tác động của nó lên vàng XAUUSD (tương quan ngược)."},
+    "cwg_fx_eur": {"code": "EURUSD", "ccy": ["EUR", "USD"], "kicker": "EUR OUTLOOK",
+                   "brief": "Phân tích đồng EUR qua cặp EURUSD."},
+    "cwg_fx_gbp": {"code": "GBPUSD", "ccy": ["GBP", "USD"], "kicker": "GBP OUTLOOK",
+                   "brief": "Phân tích đồng bảng Anh qua cặp GBPUSD."},
+    "cwg_fx_oil": {"code": "WTI", "ccy": ["USD", "CAD"], "kicker": "OIL OUTLOOK",
+                   "brief": "Phân tích dầu thô WTI (cung cầu, OPEC+, tồn kho, địa chính trị nếu có trong tin)."},
+}
+
+
+def _chart(code: str):
+    from src.chart_tools import build
+    ch, _ = build({"mode": "real", "symbol": code, "tf": "H4", "tools": ["structure", "sr_zones", "ema20", "ema50"]})
+    return ch.render(width=640, height=400, scale=3)
+
+
+def post_asset(day: date, job: str, snap: dict, events: list, folder: Path) -> dict:
+    from src.design import cwg_news as cn
+    cfg = FX_POSTS[job]
+    code = cfg["code"]
+    slot = (CONFIG["schedule"].get(job) or {}).get("time", "")
+    codes = [code] + ([cfg["also"]] if cfg.get("also") else [])
+    ev = "\n".join(f"{e['time']} {e['ccy']} {e['title']} ({e['impact']}, dự báo {e['forecast'] or '-'}, trước {e['previous'] or '-'})"
+                   for e in events if e["ccy"] in cfg["ccy"]) or "Không có tin tác động mạnh liên quan."
+    r = generate_json(WRITER, f"""Viết bài XU HƯỚNG RIÊNG cho {code} ngày {day:%d/%m} – {cfg['brief']}
+Góc nhìn tổng quan, KHÔNG tín hiệu vào lệnh, KHÔNG điểm SL/TP. Dữ liệu (vùng giá do hệ thống tính, giữ nguyên):
+{facts_text({c: snap[c] for c in codes if c in snap})}
+Lịch tin liên quan hôm nay ({TZ_LABEL}):
+{ev}
+Trả về: title (≤ 12 từ), bias (up/down/flat cho {code}), body (2-3 câu ≤ 45 từ: cấu trúc giá khung H4/D1, động lực chính),
+points (3 ý ≤ 10 từ, có nhắc vùng hỗ trợ/kháng cự{' và tác động lên XAUUSD' if cfg.get('also') else ''}),
+{'gold_bias (up/down/flat cho XAUUSD), gold_note (tiêu đề ảnh vàng ≤ 10 từ, không ghi số), gold_body (2-3 câu ≤ 45 từ: USD đang tác động lên vàng thế nào), gold_points (3 ý ≤ 10 từ), ' if cfg.get('also') else ''}caption (70-120 từ), hashtags (2-3).""",
+                      {"type": "object", "properties": {
+                          "title": CAP, "bias": {"type": "string", "enum": ["up", "down", "flat"]}, "body": CAP,
+                          "points": TAGS, "caption": CAP, "hashtags": TAGS, "gold_bias": CAP, "gold_note": CAP,
+                          "gold_body": CAP, "gold_points": TAGS},
+                       "required": ["title", "bias", "body", "points", "caption", "hashtags"]})
+    sup, res = zones(snap[code])
+    label = slot_label(job, slot, day)
+    imgs = [cn.render_asset(folder / "01.png", label, cfg["kicker"], code, r["title"], r["bias"], _chart(code),
+                            sup, res, r["body"], r["points"])]
+    if cfg.get("also") and cfg["also"] in snap:
+        g = cfg["also"]
+        gs, gr = zones(snap[g])
+        gb = r.get("gold_bias") if r.get("gold_bias") in ("up", "down", "flat") else "flat"
+        imgs.append(cn.render_asset(folder / "02.png", label, "XAUUSD · GOLD", g, r.get("gold_note") or "Gold vs the dollar",
+                                    gb, _chart(g), gs, gr, r.get("gold_body") or "", r.get("gold_points") or []))
+    return {"slot": slot, "name": f"Xu hướng {code}", "images": imgs, "caption": caption(r["caption"], r["hashtags"])}
+
+
 # ------------------------------------------------------------------ chạy theo lịch (runner gọi)
 
 JOB_NAMES = {"cwg_morning": "Bản tin đầu ngày", "cwg_trend": "Bảng tin xu hướng", "cwg_macro": "Phân tích vĩ mô",
-             "cwg_license": "Bài giấy phép"}
+             "cwg_license": "Bài giấy phép", "cwg_fx_dxy": "Xu hướng DXY & vàng", "cwg_fx_eur": "Xu hướng EUR",
+             "cwg_fx_gbp": "Xu hướng GBP", "cwg_fx_oil": "Xu hướng dầu"}
 
 
 def license_for_today(now: datetime) -> tuple[str, int]:
@@ -285,6 +349,8 @@ def generate(job: str, out_dir: Path) -> bool:
             p = post_morning(now.date(), snap, calendar(now.date()), folder)
         elif job == "cwg_trend":
             p = post_trend(now.date(), snap, calendar(now.date()), folder)
+        elif job in FX_POSTS:
+            p = post_asset(now.date(), job, snap, calendar(now.date()), folder)
         else:
             p = post_macro(now.date(), snap, folder)
     (folder / "caption.txt").write_text(p["caption"], encoding="utf-8")

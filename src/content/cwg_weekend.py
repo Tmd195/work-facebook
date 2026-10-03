@@ -20,15 +20,17 @@ import requests
 from src.config import OUTPUT, STATE, TZ
 from src.content.cwg_daily import (BG, CAP, PRODUCTS, TAGS, WRITER, caption, facts_text, fxtin, snapshot, zones)
 from src.content.llm import generate_json
+from src.i18n import TZ_LABEL, weekday
+from src.i18n import t as tr
+from src.i18n import day as dlabel
 
 JOB_NAMES = {"cwg_wk_recap": "Tổng kết tuần", "cwg_wk_top5": "Top 5 tin của tuần", "cwg_wk_tech": "Phân tích khung tuần",
              "cwg_wk_cot": "Dòng tiền lớn (COT)", "cwg_wk_macro": "Chủ đề vĩ mô tuần tới",
              "cwg_wk_ahead": "Lịch tin & góc nhìn tuần mới"}
 COT_URL = "https://www.cftc.gov/dea/newcot/deafut.txt"
 COT_MARKETS = [("099741", "EUR"), ("096742", "GBP"), ("097741", "JPY"), ("232741", "AUD"), ("090741", "CAD"),
-               ("098662", "USD Index"), ("088691", "Vàng"), ("067651", "Dầu WTI")]
+               ("098662", "USD Index"), ("088691", tr("Vàng")), ("067651", tr("Dầu WTI"))]
 ARCHIVE = STATE / "hunter_archive.json"
-VI_DAYS = ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ nhật"]
 
 
 def last_week(today: date) -> tuple[date, date]:
@@ -106,7 +108,7 @@ Trả về: title (≤ 13 từ, nêu bức tranh chung của tuần), highlights
 caption (90-140 từ, nhóm USD / kim loại / dầu, mỗi nhóm 1 đoạn ngắn), hashtags (2-3).""",
                       {"type": "object", "properties": {"title": CAP, "highlights": TAGS, "caption": CAP, "hashtags": TAGS},
                        "required": ["title", "highlights", "caption", "hashtags"]})
-    img = cn.render_week_recap(folder / "01.png", f"Tuần {mon:%d/%m}–{fri:%d/%m}", r["title"], rows, r["highlights"])
+    img = cn.render_week_recap(folder / "01.png", tr("Tuần {a}–{b}", a=dlabel(mon), b=dlabel(fri)), r["title"], rows, r["highlights"])
     return {"slot": "09:00", "name": JOB_NAMES["cwg_wk_recap"], "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
@@ -143,7 +145,7 @@ hashtags (2-3). Chỉ dùng thông tin có trong danh sách tin.""",
                               "direction": {"type": "string", "enum": ["up", "down", "flat"]}},
                               "required": ["when", "headline", "asset", "impact", "direction"]}}},
                        "required": ["title", "items", "caption", "hashtags"]})
-    img = cn.render_top5(folder / "01.png", f"Tuần {mon:%d/%m}–{fri:%d/%m}", r["title"], r["items"])
+    img = cn.render_top5(folder / "01.png", tr("Tuần {a}–{b}", a=dlabel(mon), b=dlabel(fri)), r["title"], r["items"])
     return {"slot": "14:00", "name": JOB_NAMES["cwg_wk_top5"], "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
@@ -167,8 +169,8 @@ points 2-3 ý ≤ 10 từ (có nhắc vùng hỗ trợ/kháng cự)}}, caption (
                           "slides": {"type": "array", "items": {"type": "object", "properties": {
                               "heading": CAP, "body": CAP, "points": TAGS}, "required": ["heading", "body", "points"]}}},
                        "required": ["title", "subtitle", "slides", "caption", "hashtags"]})
-    imgs = [cn.render_macro_cover(folder / "01.png", _photo("gold"), f"Tuần {mon:%d/%m}–{fri:%d/%m}", r["title"],
-                                  r["subtitle"], [s["heading"] for s in r["slides"]], kicker="PHÂN TÍCH KHUNG TUẦN")]
+    imgs = [cn.render_macro_cover(folder / "01.png", _photo("gold"), tr("Tuần {a}–{b}", a=dlabel(mon), b=dlabel(fri)), r["title"],
+                                  r["subtitle"], [s["heading"] for s in r["slides"]], kicker=tr("PHÂN TÍCH KHUNG TUẦN"))]
     for i, (code, s) in enumerate(zip(picks, r["slides"][:2]), 1):
         ch, _ = build({"mode": "real", "symbol": code, "tf": "D1", "tools": ["structure", "sr_zones", "ema20", "ema50"]})
         chart = ch.render(width=640, height=420, scale=3)
@@ -210,8 +212,9 @@ Trả về: title (≤ 13 từ), note (1 câu ≤ 25 từ: điểm đáng chú �
 vài ngày, dùng để nhìn xu hướng dòng tiền chứ không phải tín hiệu), hashtags (2-3).""",
                       {"type": "object", "properties": {"title": CAP, "note": CAP, "caption": CAP, "hashtags": TAGS},
                        "required": ["title", "note", "caption", "hashtags"]})
-    rd = datetime.fromisoformat(rep).strftime("%d/%m/%Y") if rep else ""
-    img = cn.render_cot(folder / "01.png", f"Chủ nhật · {today:%d/%m}", r["title"], rd, rows, r["note"])
+    from src.i18n import EN_MODE
+    rd = datetime.fromisoformat(rep).strftime("%b %d, %Y" if EN_MODE else "%d/%m/%Y") if rep else ""
+    img = cn.render_cot(folder / "01.png", tr("Chủ nhật · {d}", d=dlabel(today)), r["title"], rd, rows, r["note"])
     return {"slot": "10:00", "name": JOB_NAMES["cwg_wk_cot"], "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
@@ -231,12 +234,12 @@ def week_events(today: date) -> list[dict]:
 def post_macro_week(today: date, folder: Path) -> dict:
     from src.design import cwg_news as cn
     evs = week_events(today)
-    cal = "\n".join(f"{VI_DAYS[e['day'].weekday()]} {e['day']:%d/%m} {e['time']} {e['ccy']} {e['title']} ({e['impact']}, dự báo {e['forecast'] or '-'})"
+    cal = "\n".join(f"{weekday(e['day'])} {dlabel(e['day'])} {e['time']} {e['ccy']} {e['title']} ({e['impact']}, dự báo {e['forecast'] or '-'})"
                     for e in evs if e["impact"] == "High") or "(lịch tuần mới chưa có – tự tìm trên mạng)"
     snap = snapshot()
     r = generate_json(WRITER + "\nĐược phép dùng WebSearch để nắm bối cảnh.", f"""Viết bài CHỦ ĐỀ VĨ MÔ TUẦN TỚI: chọn sự kiện/chủ đề
 lớn nhất tuần mới và phân tích TRƯỚC SỰ KIỆN với kịch bản.
-Lịch tin quan trọng tuần mới (giờ VN):
+Lịch tin quan trọng tuần mới ({TZ_LABEL}):
 {cal}
 Thị trường hiện tại:
 {facts_text(snap)}
@@ -249,8 +252,8 @@ caption (100-150 từ), hashtags (2-3).""",
                           "slides": {"type": "array", "items": {"type": "object", "properties": {
                               "heading": CAP, "body": CAP, "points": TAGS}, "required": ["heading", "body", "points"]}}},
                        "required": ["photo", "title", "subtitle", "slides", "caption", "hashtags"]}, web=True)
-    imgs = [cn.render_macro_cover(folder / "01.png", _photo(r["photo"]), f"Tuần mới · {today:%d/%m}", r["title"],
-                                  r["subtitle"], [s["heading"] for s in r["slides"]], kicker="CHỦ ĐỀ VĨ MÔ TUẦN TỚI")]
+    imgs = [cn.render_macro_cover(folder / "01.png", _photo(r["photo"]), tr("Tuần mới · {d}", d=dlabel(today)), r["title"],
+                                  r["subtitle"], [s["heading"] for s in r["slides"]], kicker=tr("CHỦ ĐỀ VĨ MÔ TUẦN TỚI"))]
     for i, s in enumerate(r["slides"][:3], 1):
         imgs.append(cn.render_macro_slide(folder / f"{i + 1:02d}.png", i, 3, s["heading"], s["body"], s["points"], None))
     return {"slot": "15:00", "name": JOB_NAMES["cwg_wk_macro"], "images": imgs, "caption": caption(r["caption"], r["hashtags"])}
@@ -264,11 +267,11 @@ def post_ahead(today: date, folder: Path) -> dict:
     for k in range(5):
         dd = start + timedelta(days=k)
         dev = sorted([e for e in evs if e["day"] == dd], key=lambda e: (e["impact"] != "High", e["time"]))
-        days.append({"label": f"{VI_DAYS[dd.weekday()]} · {dd:%d/%m}", "events": sorted(dev[:3], key=lambda e: e["time"])})
+        days.append({"label": f"{weekday(dd)} · {dlabel(dd)}", "events": sorted(dev[:3], key=lambda e: e["time"])})
     snap = snapshot()
     cal = "\n".join(f"{d['label']}: " + "; ".join(f"{e['time']} {e['ccy']} {e['title']}" for e in d["events"]) for d in days)
     r = generate_json(WRITER, f"""Viết bài LỊCH TIN & GÓC NHÌN TUẦN MỚI.
-Lịch tin chính (giờ VN):
+Lịch tin chính ({TZ_LABEL}):
 {cal}
 Dữ liệu kỹ thuật (vùng giá do hệ thống tính, giữ nguyên):
 {facts_text(snap)}
@@ -281,14 +284,14 @@ nhắc là góc nhìn tổng quan), hashtags (2-3).""",
                               "code": CAP, "bias": {"type": "string", "enum": ["up", "down", "flat"]}, "reason": CAP},
                               "required": ["code", "bias", "reason"]}}},
                        "required": ["title", "trend_title", "rows", "caption", "hashtags"]})
-    imgs = [cn.render_week_ahead(folder / "01.png", f"Tuần {start:%d/%m}–{start + timedelta(days=4):%d/%m}", r["title"], days)]
+    imgs = [cn.render_week_ahead(folder / "01.png", tr("Tuần {a}–{b}", a=dlabel(start), b=dlabel(start + timedelta(days=4))), r["title"], days)]
     bias = {x["code"]: x for x in r["rows"]}
     rows = []
     for c, a in snap.items():
         s, rz = zones(a)
         b = bias.get(c, {"bias": "flat", "reason": ""})
         rows.append({"code": c, "bias": b["bias"], "support": s, "resistance": rz, "reason": b["reason"]})
-    imgs.append(cn.render_trend(folder / "02.png", "Góc nhìn tuần", r["trend_title"], rows))
+    imgs.append(cn.render_trend(folder / "02.png", tr("Góc nhìn tuần"), r["trend_title"], rows))
     return {"slot": "20:00", "name": JOB_NAMES["cwg_wk_ahead"], "images": imgs, "caption": caption(r["caption"], r["hashtags"])}
 
 

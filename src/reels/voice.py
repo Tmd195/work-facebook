@@ -24,8 +24,9 @@ class VoiceError(RuntimeError):
     pass
 
 
-def _one(text: str, out: Path, session: requests.Session, voice_index: int | None = None) -> Path:
-    body = {"text": text[:2000], "lang": "vi"}
+def _one(text: str, out: Path, session: requests.Session, voice_index: int | None = None,
+         lang: str = "vi", ref: Path = VOICE_REF) -> Path:
+    body = {"text": text[:2000], "lang": lang}
     if voice_index is not None:
         body["voiceIndex"] = str(voice_index)
     r = session.post(f"{BASE}/jobs", json=body, timeout=60)
@@ -36,7 +37,7 @@ def _one(text: str, out: Path, session: requests.Session, voice_index: int | Non
     if voice_index is not None:
         r = session.post(f"{BASE}/jobs/{uid}/start", timeout=60)
     else:
-        with open(VOICE_REF, "rb") as f:
+        with open(ref, "rb") as f:
             r = session.post(f"{BASE}/jobs/{uid}/upload", files={"file": ("voice.mp3", f, "audio/mpeg")}, timeout=180)
     r.raise_for_status()
     t0 = time.time()
@@ -55,11 +56,13 @@ def _one(text: str, out: Path, session: requests.Session, voice_index: int | Non
     raise VoiceError("tạo giọng quá 10 phút")
 
 
-def synth(texts: list[str], folder: Path, voice_index: int | None = None) -> list[Path]:
+def synth(texts: list[str], folder: Path, voice_index: int | None = None, lang: str = "vi",
+          ref: Path | None = None) -> list[Path]:
     """Đọc từng đoạn, trả về danh sách file WAV theo thứ tự. Mỗi đoạn thử tối đa 3 lần.
     voice_index=None → giọng nhân bản từ VOICE_REF; số → giọng mẫu của trang."""
-    if voice_index is None and not VOICE_REF.exists():
-        raise VoiceError(f"Thiếu file giọng mẫu {VOICE_REF.relative_to(ROOT)}")
+    ref = ref or VOICE_REF
+    if voice_index is None and not ref.exists():
+        raise VoiceError(f"Thiếu file giọng mẫu {ref.relative_to(ROOT)}")
     folder.mkdir(parents=True, exist_ok=True)
     session = requests.Session()
     session.headers["User-Agent"] = "Mozilla/5.0"
@@ -68,13 +71,14 @@ def synth(texts: list[str], folder: Path, voice_index: int | None = None) -> lis
     for i, text in enumerate(texts):
         path = folder / f"voice_{i:02d}.wav"
         note = path.with_suffix(".txt")
-        key = text if voice_index is None else f"[{voice_index}] {text}"
+        key = (text if voice_index is None else f"[{voice_index}] {text}") + ("" if lang == "vi" and ref == VOICE_REF
+                                                                              else f" [{lang}:{ref.name}]")
         if path.exists() and note.exists() and note.read_text(encoding="utf-8") == key:
             out.append(path)                          # đã có giọng cho đúng câu này → dùng lại
             continue
         for attempt in range(3):
             try:
-                out.append(_one(text, path, session, voice_index))
+                out.append(_one(text, path, session, voice_index, lang, ref))
                 note.write_text(key, encoding="utf-8")
                 break
             except Exception as exc:
