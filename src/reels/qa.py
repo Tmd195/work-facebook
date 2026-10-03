@@ -159,7 +159,7 @@ def banned_errors(texts: list[str], words: list[str]) -> list[str]:
 
 
 # ------------------------------------------------------------------ 2. AI xem lại hình
-def contact_sheet(video: Path, out: Path, n: int = 10) -> Path:
+def contact_sheet(video: Path, out: Path, n: int = 10, ui: bool = False) -> Path:
     """n khung rải đều video, ghép 5 cột (mỗi khung 432×768) + ghi giây."""
     dur = probe(video)["duration"] or 1
     frames = []
@@ -179,7 +179,8 @@ def contact_sheet(video: Path, out: Path, n: int = 10) -> Path:
     for i, (t, f) in enumerate(frames):
         x, y = (i % cols) * 432, (i // cols) * 800
         from src.reels.safezone import mock          # phủ mô phỏng giao diện Reels (nút, tên Page, caption)
-        sheet.paste(mock(Image.open(f), alpha=110).convert("RGB").resize((432, 768)), (x, y))
+        im = Image.open(f)
+        sheet.paste(mock(im, alpha=110).convert("RGB").resize((432, 768)) if ui else im, (x, y))
         d.text((x + 8, y + 772), f"#{i + 1}  {t:.1f}s", font=sans("Bold", 22), fill=(0, 0, 0))
     sheet.save(out, quality=88)
     for _, f in frames:
@@ -196,13 +197,16 @@ CHECKLIST = """Bạn là người duyệt video Reels trước khi đăng Facebo
 - nến mảnh như sợi chỉ, biểu đồ trống/không có nến khi lẽ ra phải có, hình vỡ/nhiễu
 - phụ đề sai chính tả nặng, dính chữ, quá dài che biểu đồ
 - logo/thương hiệu bị méo, mất; khung đen/trắng trống bất thường giữa video (khung cuối mờ dần là bình thường)
-- Mỗi khung có phủ MÔ PHỎNG giao diện Facebook Reels (vùng xám mờ: thanh trên, cột nút Like/Comment/Share bên phải,
-  tên Page + caption ở đáy). Nội dung QUAN TRỌNG (chữ, nhãn giá, số, phụ đề, logo) bị vùng xám che mất → lỗi major;
-  chỉ nền/trang trí bị che là bình thường.
 Chỉ báo lỗi THẬT nhìn thấy rõ; hiệu ứng đang chuyển cảnh/mờ dần/bật lên là bình thường."""
 
 
-def visual_review(sheet: Path, context: str = "") -> dict:
+UI_RULE = """
+- Mỗi khung có phủ MÔ PHỎNG giao diện Facebook Reels (vùng xám mờ: thanh trên, cột nút Like/Comment/Share bên phải,
+  tên Page + caption ở đáy). Nội dung QUAN TRỌNG (chữ, nhãn giá, số, phụ đề, logo) bị vùng xám che mất → lỗi major;
+  chỉ nền/trang trí bị che là bình thường."""
+
+
+def visual_review(sheet: Path, context: str = "", ui: bool = False) -> dict:
     from src.content.llm import review_image
     schema = {"type": "object", "properties": {
         "ok": {"type": "boolean"},
@@ -211,7 +215,7 @@ def visual_review(sheet: Path, context: str = "") -> dict:
             "severity": {"type": "string", "enum": ["major", "minor"]}},
             "required": ["frame", "problem", "severity"]}}},
         "required": ["ok", "issues"]}
-    return review_image(CHECKLIST + ("\n" + context if context else ""), sheet,
+    return review_image(CHECKLIST + (UI_RULE if ui else "") + ("\n" + context if context else ""), sheet,
                         "Duyệt video. severity=major khi người xem KHÔNG đọc được/hiểu sai (chữ bị che mất, cắt mất, "
                         "đè lên nhau không đọc được, ký tự sai làm đổi nghĩa, khung hỏng); minor khi vẫn đọc được "
                         "nhưng chưa đẹp (sát nhau, hơi chồng). ok=false chỉ khi có lỗi major.", schema)
@@ -220,7 +224,7 @@ def visual_review(sheet: Path, context: str = "") -> dict:
 # ------------------------------------------------------------------ tổng hợp
 def run(video: Path, folder: Path, *, min_dur: float, max_dur: float, texts: list[str] | None = None,
         facts: dict | None = None, banned: list[str] | None = None, voices: tuple | None = None,
-        context: str = "", ai: bool = True) -> dict:
+        context: str = "", ai: bool = True, ui: bool = False) -> dict:
     """Trả {ok, errors, notes, fix, sheet}. errors = lỗi NẶNG (chặn đăng); notes = lỗi nhẹ (vẫn đăng, ghi lại).
     fix luôn là 'rewrite' khi có lỗi: dựng lại cùng kịch bản cho ra đúng hình cũ, phải viết kịch bản/bố cục mới."""
     info = probe(video)
@@ -236,11 +240,11 @@ def run(video: Path, folder: Path, *, min_dur: float, max_dur: float, texts: lis
     if content:
         errors += content
         fix = "rewrite"
-    sheet = contact_sheet(video, folder / "qa_sheet.jpg")
+    sheet = contact_sheet(video, folder / "qa_sheet.jpg", ui=ui)
     notes = []
     if ai:
         try:
-            r = visual_review(sheet, context)
+            r = visual_review(sheet, context, ui)
             for it in r.get("issues") or []:
                 msg = f"[AI xem hình] khung #{it.get('frame')}: {it.get('problem')}"
                 (errors if it.get("severity") == "major" else notes).append(msg)

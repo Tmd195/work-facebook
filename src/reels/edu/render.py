@@ -35,13 +35,11 @@ COLORS = {"y": (255, 196, 46), "o": (255, 150, 52), "r": (255, 86, 98), "g": (46
           "c": (64, 204, 255), "b": (102, 154, 255), "p": (176, 136, 255), "w": TEXT}
 
 VARIANT = 0                       # bố cục thay thế khi bộ kiểm tra thấy nhãn đè/che
-# vùng an toàn giao diện Reels (safezone.py): đáy thẻ ≤ 1545 (tên Page + caption), nội dung dưới y=1000 không
-# vượt x=915 (cột nút Like/Comment/Share)
-CARD_BOX = (40, 165, 1040, 1540)
-PLOT = (84, 600, 810, 1310)          # vùng nến (trái, trên, phải, dưới)
-VOL = (84, 1325, 810, 1390)
-AXIS_X = 822
-HEAD_Y = 290
+CARD_BOX = (40, 116, 1040, 1690)
+PLOT = (84, 600, 908, 1440)          # vùng nến (trái, trên, phải, dưới)
+VOL = (84, 1462, 908, 1540)
+AXIS_X = 924
+HEAD_Y = 262
 HEAD_W = 912
 HEAD_FONT = 50
 HEAD_LH = 66
@@ -169,7 +167,7 @@ def base_frame() -> Image.Image:
     d.rounded_rectangle([CARD_BOX[0] + 300, CARD_BOX[1] - 2, CARD_BOX[2] - 300, CARD_BOX[1] + 3], radius=3, fill=BRAND)
     # logo góc phải trên
     lg = _logo(64, "icon.png")
-    img.paste(lg, (CARD_BOX[2] - 44 - lg.width, 190), lg)
+    img.paste(lg, (CARD_BOX[2] - 44 - lg.width, 160), lg)
     # logo chìm (watermark): cả cụm logo + chữ nằm CHÍNH GIỮA MÀN HÌNH (anh chốt 03/10/2026)
     wm = _logo(260, "icon.png")
     wm.putalpha(wm.getchannel("A").point(lambda v: int(v * 0.07)))
@@ -181,11 +179,11 @@ def base_frame() -> Image.Image:
     d.text((cx, top + wm.height + gap), "CWG MARKETS", font=f, fill=mix(CARD, TEXT, 0.07), anchor="mt")
     # chân thẻ: thương hiệu + ghi chú dữ liệu minh họa
     ic = _logo(40, "icon.png")
-    y = 1442
+    y = 1598
     img.paste(ic, (84, y - 20), ic)
     d.text((84 + ic.width + 14, y), "CWG MARKETS & PARTNER", font=sans("ExtraBold", 26), fill=TEXT, anchor="lm")
-    d.text((84 + ic.width + 14, y + 40), "facebook.com/CWG.Partner", font=sans("Medium", 22), fill=MUTED, anchor="lm")
-    d.text((84, 1508), "Dữ liệu minh họa — không phải giá thực", font=sans("Regular", 20), fill=(92, 101, 120),
+    d.text((996, y), "facebook.com/CWG.Partner", font=sans("Medium", 22), fill=MUTED, anchor="rm")
+    d.text((84, 1646), "Dữ liệu minh họa — không phải giá thực", font=sans("Regular", 20), fill=(92, 101, 120),
            anchor="lm")
     return img
 
@@ -205,8 +203,7 @@ def _pill(d: ImageDraw.ImageDraw, x: float, y: float, text: str, col, anchor: st
         x0 = x - w
     else:
         x0 = x - w / 2
-    right = 915 if y > 990 else CARD_BOX[2] - 24          # dưới y≈1000 chừa cột nút Like/Comment/Share
-    x0 = max(CARD_BOX[0] + 24, min(right - w, x0))
+    x0 = max(CARD_BOX[0] + 24, min(CARD_BOX[2] - 24 - w, x0))
     y0 = y - h / 2
     a = int(255 * alpha)
     if solid:
@@ -514,7 +511,7 @@ def draw_head(d: ImageDraw.ImageDraw, sc: Scene, t: float, total: float, prev: S
     k = 1.0 if prev and prev.tag == sc.tag else prog(t, sc.start, 0.35)
     f = sans("Bold", 24)
     tw = d.textlength(tag, font=f)
-    x0, y0 = 84, 200
+    x0, y0 = 84, 170
     if tag:
         d.rounded_rectangle([x0, y0, x0 + (tw + 36) * (0.4 + 0.6 * k), y0 + 46], radius=10,
                             fill=BRAND + (int(255 * k),))

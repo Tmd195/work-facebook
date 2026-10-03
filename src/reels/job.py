@@ -38,7 +38,8 @@ def generate(out_dir: Path) -> bool:
 
     def check(res):
         return qa.run(res["video"], f, min_dur=10, max_dur=qa.FB_MAX, voices=res["voices"],
-                      context="Video kiến thức vàng tiếng Việt của Page Duy Thái Đặng (có ảnh người thật).")
+                      context="Video kiến thức vàng tiếng Việt của Page Duy Thái Đặng (có ảnh người thật).",
+                      ui=False)                            # bố cục Thái giữ như cũ (anh duyệt) – không xét vùng nút Reels
 
     def fix(errors):                                   # AI sửa đúng chỗ lỗi, giữ nguyên nội dung/hiệu ứng
         st["s"] = qa.edit_spec(st["s"], errors)

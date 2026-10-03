@@ -19,7 +19,7 @@ from src.design.palette import ACCENT, DOWN, INK, MUTED, PRIMARY, UP
 W, H, FPS = 1080, 1920, 30
 PHOTOS = ROOT / "assets" / "private" / "photos"
 MUSIC = ROOT / "assets" / "music"
-CARD_X, CARD_W = 40, 880          # thẻ chừa cột nút Like/Comment/Share bên phải (x ≥ 930) – xem safezone.py
+CARD_X, CARD_W = 56, 1080 - 112
 WHITE = (255, 255, 255)
 RED_SOFT = (253, 236, 234)
 
@@ -303,7 +303,7 @@ def content_scene(slide: dict, idx: int, total: int, duration: float, voice: Pat
     else:                                                   # diagram
         times = _times(len(bullets), duration)
         if visual and visual.get("img") is not None:
-            frame, f = _framed(visual["img"], INNER - 4, 640)
+            frame, f = _framed(visual["img"], INNER - 4, 760)
             parts.append(Part(frame, 46, y, 0.55, "rise"))
             ms = visual.get("marks") or []
             overlays.append(Overlay(48, y + 2, frame.width - 4, frame.height - 4, ms, f, _mark_starts(ms, times)))
@@ -321,8 +321,7 @@ def content_scene(slide: dict, idx: int, total: int, duration: float, voice: Pat
     num = Image.new("RGBA", (130, 50), (0, 0, 0, 0))
     ImageDraw.Draw(num).text((0, 0), f"{idx:02d}/{total:02d}", font=sans("ExtraBold", 28), fill=MUTED)
     parts.append(Part(num, CARD_W - 140, 18, 0.1, "fade"))
-    card_y = max(255, min(330, (H - y) // 2 + 30))
-    card_y = max(255, min(card_y, 1545 - y))             # đáy thẻ trên vùng tên Page + caption của Reels
+    card_y = max(210, min(330, (H - y) // 2 + 30))
     return Scene(duration, voice, ["up", "right", "zoom", "drop"][idx % 4], parts, (card_y, y), voice_at=0.35,
                  overlays=overlays)
 
@@ -345,10 +344,10 @@ def hook_scene(text: str, duration: float, voice: Path, background: Image.Image)
     """Chữ lớn bật lên từng dòng, dòng cuối tô nền màu nhấn."""
     d = ImageDraw.Draw(Image.new("RGB", (1, 1)))
     f = sans("ExtraBold", 100)
-    lines = wrap(d, text.upper(), f, W - 200, max_lines=4)
+    lines = wrap(d, text.upper(), f, W - 140, max_lines=4)
     parts, y = [], 0
     total_h = len(lines) * 132
-    y0 = int(H * 0.44 - total_h / 2)                     # tránh cột nút bên phải + caption dưới đáy
+    y0 = int(H * 0.56 - total_h / 2)
     for i, ln in enumerate(lines):
         tw = int(_measure(ln, f))
         last = i == len(lines) - 1
@@ -390,7 +389,7 @@ def cta_scene(text: str, duration: float, voice: Path, background: Image.Image) 
     ImageDraw.Draw(pill).text((pw / 2, 38), label, font=pf, fill=WHITE, anchor="mm")
     parts.append(Part(pill, 48 + (inner - pw) // 2, y, min(2.0, duration * 0.45), "pop"))
     y += 76 + 60
-    return Scene(duration, voice, "up", parts, (max(255, min((H - y) // 2 + 60, 1545 - y)), y), background, voice_at=0.3)
+    return Scene(duration, voice, "up", parts, ((H - y) // 2 + 60, y), background, voice_at=0.3)
 
 
 # ------------------------------------------------------------------ dựng khung
@@ -503,7 +502,7 @@ def frames(scenes: list[Scene], base_bg: Image.Image, overlay: Image.Image):
                 _draw_scene(frame, prev, prev.duration + t, _exit(scene.style, t / OVER))
             _draw_scene(frame, scene, t)
             frame.alpha_composite(overlay)
-            paste(frame, tag, (W - tag.width) / 2, 168)    # dưới thanh "Reels" trên cùng của Facebook
+            paste(frame, tag, (W - tag.width) / 2, 96)
             d = ImageDraw.Draw(frame)
             d.rectangle([0, 0, W, 10], fill=(255, 255, 255, 60))
             d.rectangle([0, 0, int(W * min(1, gt / (total - 1.2))), 10], fill=ACCENT)
