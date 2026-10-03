@@ -87,9 +87,10 @@ def timeline(spec: dict, voices: list) -> dict:
     """Mốc thời gian các cảnh + thời điểm từng chỉ báo hiện."""
     vi = iter(voices)
     hook = next(vi)
-    t_intro = max(2.6, hook[1] + 0.5)
+    # câu mở đầu đọc vắt qua cả cảnh chuyển + click logo (tiêu đề chỉ ~2s như mẫu); câu dài thì kéo intro
+    t_intro = max(2.2, hook[1] + 0.25 + 0.3 - (0.8 + R.STING))
     t_trans = 0.8
-    c0 = t_intro + t_trans
+    c0 = t_intro + t_trans + R.STING
     t, overlays, clips, sub, sub_t = 0.3, [], [(hook[0], 0.25)], None, None
     for line in spec["lines"]:
         p, dur = next(vi)
@@ -105,13 +106,15 @@ def timeline(spec: dict, voices: list) -> dict:
     q0 = c0 + t_chart
     clips.append((q[0], q0 + 0.3))
     t_q = q[1] + 1.6
-    return {"intro": t_intro, "trans": t_trans, "chart": t_chart, "q": t_q, "end": 3.2, "reveal": reveal,
+    t_end = 3.6
+    return {"intro": t_intro, "trans": t_trans, "sting": R.STING, "chart": t_chart, "q": t_q, "end": t_end, "reveal": reveal,
             "overlays": overlays, "sub": sub, "sub_t": sub_t, "clips": [c for c in clips if c[0]], "q_voice": q[1]}
 
 
 def frames(spec: dict, tl: dict, m):
     ch = R.Chart(m)
-    segs = [("intro", tl["intro"]), ("trans", tl["trans"]), ("chart", tl["chart"]), ("q", tl["q"]), ("end", tl["end"])]
+    segs = [("intro", tl["intro"]), ("trans", tl["trans"]), ("sting", tl["sting"]), ("chart", tl["chart"]),
+            ("q", tl["q"]), ("end", tl["end"])]
     total = sum(x[1] for x in segs)
     for f in range(int(total * R.FPS)):
         t = f / R.FPS
@@ -125,6 +128,8 @@ def frames(spec: dict, tl: dict, m):
             img = R.intro(lt, dur, m.symbol, spec["title"])
         elif name == "trans":
             img = R.transition(lt, dur, m.symbol)
+        elif name == "sting":
+            img = R.sting(lt, dur, m.symbol)
         elif name == "chart":
             img = ch.frame(lt, tl["reveal"], tl["overlays"], tl["sub"], tl["sub_t"], dur)
         elif name == "q":
@@ -144,7 +149,7 @@ def make(spec: dict, folder: Path, fast: bool = False, music: Path | None = None
     (folder / "script.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
     m = D.load(spec["symbol"])
     tl = timeline(spec, _voices(spec, folder, fast))
-    total = tl["intro"] + tl["trans"] + tl["chart"] + tl["q"] + tl["end"]
+    total = tl["intro"] + tl["trans"] + tl["sting"] + tl["chart"] + tl["q"] + tl["end"]
     silent = folder / "reel.video.mp4"
     proc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24",
                              "-s", f"{R.W}x{R.H}", "-r", str(R.FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium",
@@ -152,13 +157,15 @@ def make(spec: dict, folder: Path, fast: bool = False, music: Path | None = None
     thumb = None
     for img, t, name in frames(spec, tl, m):
         proc.stdin.write(img.tobytes())
-        if name == "chart" and thumb is None and t > tl["intro"] + tl["trans"] + tl["chart"] - 0.5:
+        if name == "chart" and thumb is None and t > tl["intro"] + tl["trans"] + tl["sting"] + tl["chart"] - 0.5:
             thumb = img
     proc.stdin.close()
     if proc.wait():
         raise RuntimeError("ffmpeg lỗi khi dựng hình")
-    c0 = tl["intro"] + tl["trans"]
-    events = [(0.05, "whoosh", 0.4), (tl["intro"], "whoosh", 0.45), (c0 + tl["chart"], "whoosh", 0.4),
+    c0 = tl["intro"] + tl["trans"] + tl["sting"]
+    s0 = tl["intro"] + tl["trans"]
+    events = [(0.05, "whoosh", 0.4), (tl["intro"], "whoosh", 0.45), (s0 + R.CLICK, "pop", 0.7),
+              (s0 + R.CLICK + 0.3, "whoosh", 0.5), (c0 + tl["chart"], "whoosh", 0.4),
               (c0 + tl["chart"] + tl["q"], "ting", 0.4)] + [(c0 + s, "pop", 0.4) for _, s in tl["overlays"]]
     mix(silent, tl["clips"], events, total, folder / "reel.mp4", music)
     silent.unlink(missing_ok=True)
