@@ -32,6 +32,40 @@ def hb(size: int):
     return sans("ExtraBold", size)
 
 
+
+def _impact_rows(d, rows, y, rh, size, why_size):
+    """Bảng tác động: cột tên tài sản tự nới rộng + thu nhỏ chữ, dài quá thì xuống 2 dòng – KHÔNG cắt mất chữ
+    (lỗi cũ: "Lợi suất UST 10 năm" đè lên mũi tên ▼ / bị cắt thành "Lợi suấ…")."""
+    col_w = 200
+    for asset, _, _ in rows:                          # cột rộng theo tên dài nhất (tối đa 280px)
+        col_w = max(col_w, min(280, d.textlength(asset, font=hb(size)) + 10))
+    xa = M + 30 + col_w + 34                          # vị trí mũi tên (chừa khoảng thở sau tên tài sản)
+    xw = xa + 60                                      # vị trí lý do
+    yy = y + 8
+    for k, (asset, direction, why) in enumerate(rows):
+        col = UP if direction == "up" else DOWN if direction == "down" else FLAT
+        sz = size
+        while sz > 22 and d.textlength(asset, font=hb(sz)) > col_w:
+            sz -= 1
+        if d.textlength(asset, font=hb(sz)) <= col_w:
+            d.text((M + 30, yy + rh / 2), asset, font=hb(sz), fill=INK, anchor="lm")
+        else:                                         # vẫn dài → 2 dòng
+            lines = wrap(d, asset, hb(24), col_w, max_lines=2)
+            for j, line in enumerate(lines):
+                d.text((M + 30, yy + rh / 2 + (j - (len(lines) - 1) / 2) * 28), line, font=hb(24), fill=INK, anchor="lm")
+        if direction == "flat":
+            d.rectangle([xa, yy + rh / 2 - 4, xa + 32, yy + rh / 2 + 4], fill=col)
+        else:
+            _tri(d, xa, yy + rh / 2 - 15, 30, direction == "up", col)
+        why_lines = wrap(d, why, sans("SemiBold", why_size), W - M - 30 - xw, max_lines=2)
+        for j, line in enumerate(why_lines):
+            d.text((xw, yy + rh / 2 + (j - (len(why_lines) - 1) / 2) * (why_size + 6)), line,
+                   font=sans("SemiBold", why_size if len(why_lines) == 1 else why_size - 2), fill=(60, 60, 66), anchor="lm")
+        if k < len(rows) - 1:
+            d.line([(M + 30, yy + rh), (W - M - 30, yy + rh)], fill=LINE, width=2)
+        yy += rh
+    return yy
+
 def _paper() -> Image.Image:
     img = Image.new("RGBA", (W, H), PAPER_TOP)
     d = ImageDraw.Draw(img)
@@ -249,19 +283,7 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
     _shadow(img, (M, y, W - M, y + rh * len(rows) + 16), 24, blur=16, offset=(0, 10), alpha=40)
     d = ImageDraw.Draw(img)
     d.rounded_rectangle([M, y, W - M, y + rh * len(rows) + 16], radius=24, fill=WHITE)
-    yy = y + 8
-    for k, (asset, direction, why) in enumerate(rows):
-        col = UP if direction == "up" else DOWN if direction == "down" else FLAT
-        d.text((M + 30, yy + rh / 2), fit(d, asset, hb(32), 150), font=hb(32), fill=INK, anchor="lm")
-        if direction == "flat":
-            d.rectangle([M + 230, yy + rh / 2 - 4, M + 262, yy + rh / 2 + 4], fill=col)
-        else:
-            _tri(d, M + 230, yy + rh / 2 - 15, 30, direction == "up", col)
-        d.text((M + 290, yy + rh / 2), fit(d, why, sans("SemiBold", 26), W - 2 * M - 320), font=sans("SemiBold", 26),
-               fill=(60, 60, 66), anchor="lm")
-        if k < len(rows) - 1:
-            d.line([(M + 30, yy + rh), (W - M - 30, yy + rh)], fill=LINE, width=2)
-        yy += rh
+    yy = _impact_rows(d, rows, y, rh, 32, 26)
     y = yy + 40
 
     # nhận định ngắn
@@ -389,19 +411,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     _shadow(img, (M, y, W - M, y + rh * len(rows) + 16), 24, blur=16, offset=(0, 10), alpha=40)
     d = ImageDraw.Draw(img)
     d.rounded_rectangle([M, y, W - M, y + rh * len(rows) + 16], radius=24, fill=WHITE)
-    yy = y + 8
-    for k, (asset, direction, why) in enumerate(rows):
-        col = UP if direction == "up" else DOWN if direction == "down" else FLAT
-        d.text((M + 30, yy + rh / 2), fit(d, asset, hb(31), 150), font=hb(31), fill=INK, anchor="lm")
-        if direction == "flat":
-            d.rectangle([M + 230, yy + rh / 2 - 4, M + 262, yy + rh / 2 + 4], fill=col)
-        else:
-            _tri(d, M + 230, yy + rh / 2 - 15, 30, direction == "up", col)
-        d.text((M + 290, yy + rh / 2), fit(d, why, sans("SemiBold", 25), W - 2 * M - 320), font=sans("SemiBold", 25),
-               fill=(60, 60, 66), anchor="lm")
-        if k < len(rows) - 1:
-            d.line([(M + 30, yy + rh), (W - M - 30, yy + rh)], fill=LINE, width=2)
-        yy += rh
+    yy = _impact_rows(d, rows, y, rh, 31, 25)
     y = yy + 30
     ty = H - 92 - 64 - 36
     if summary and y + 80 < ty:

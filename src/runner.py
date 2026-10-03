@@ -235,6 +235,31 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         telegram.send("✅ Đã sửa xong lỗi, tiếp tục đăng bài.")
 
     caption_file, images = _files(job, out_dir)
+
+    # --- 1b. Soát ẢNH trước khi đăng (chữ đè / tràn / bị cắt…) – lỗi nặng → AI viết lại bài, dựng ảnh mới (tối đa 2 lần);
+    #         vẫn lỗi → đăng bản cuối đúng giờ + báo anh (đăng đều quan trọng). Reels có bộ kiểm tra riêng.
+    if not job.startswith("reel"):
+        from src.design import qa_image
+        for k in range(3):
+            rep = qa_image.check(images, out_dir, job)
+            if rep["ok"]:
+                if rep["minor"]:
+                    print(f"  ~ ảnh: góp ý nhẹ (vẫn đăng): {rep['minor']}", flush=True)
+                break
+            print(f"  ! ảnh lỗi (lần {k + 1}): {rep['major']}", flush=True)
+            if k == 2:
+                telegram.send(f"⚠️ {name} {day}: ảnh vẫn còn lỗi hiển thị sau 2 lần sửa, em vẫn đăng đúng giờ:
+"
+                              + "
+".join(rep["major"]))
+                break
+            try:
+                if not generate(job):
+                    break
+            except Exception:
+                traceback.print_exc()
+                break
+            caption_file, images = _files(job, out_dir)
     caption = caption_file.read_text(encoding="utf-8")
 
     # --- 2. Chờ đúng giờ rồi đăng

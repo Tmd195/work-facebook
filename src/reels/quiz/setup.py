@@ -256,7 +256,7 @@ def find(symbol: str, tf: str = "M5", systems: list | None = None, min_run=4, ma
     Giá chạy tới đỉnh thật của nhịp (không cắt ở TP); TP vẽ ở 80% quãng chạy để giá vọt qua hộp TP như mẫu."""
     key = (symbol, tf)
     if key not in _CACHE:                                # M5 như video mẫu (biểu đồ M1–M5 cho cú chạy dài, SL mỏng)
-        _CACHE[key] = (get_m5(symbol, "1mo") if tf == "M5" else get_intraday(symbol)).candles
+        _CACHE[key] = (get_m5(symbol, "60d") if tf == "M5" else get_intraday(symbol)).candles
     cs = _CACHE[key]
     if tf == "H4":
         cs = to_h4(cs)
@@ -279,7 +279,7 @@ def find(symbol: str, tf: str = "M5", systems: list | None = None, min_run=4, ma
                     continue
                 hit, rr = _run(h, l, k, side, entry, sl_)
                 # bỏ dữ liệu lỗi: nến mở cửa nhảy khoảng trống bất thường (forex M5 giữa phiên gần như không có)
-                if hit is not None and any(abs(o[j] - c[j - 1]) > 0.5 * atr for j in range(k - 20, hit + 1)):
+                if hit is not None and any(abs(o[j] - c[j - 1]) > 1.2 * atr for j in range(k + 1, hit + 1)):
                     continue
                 if hit is not None and rr >= MIN_R and min_run <= hit - k <= max_run and (best is None or rr > best[0]):
                     best = (rr, k, hit, (side, entry, sl_, tp, name, reason, ann))
