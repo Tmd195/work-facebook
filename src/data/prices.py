@@ -155,11 +155,16 @@ def _yahoo_h1(code: str) -> Series:
     return Series(code, candles, last, "Yahoo Finance")
 
 
-def get_m5(code: str, rng: str = "5d") -> Series:
+def get_m1(code: str) -> Series:
+    """Nến M1 ~7 ngày gần nhất (giới hạn của Yahoo) – dự phòng cho Reels quiz khi M5 không có setup đạt chuẩn."""
+    return get_m5(code, "7d", interval="1m")
+
+
+def get_m5(code: str, rng: str = "5d", interval: str = "5m") -> Series:
     """Nến M5 (mặc định ~5 ngày gần nhất; Yahoo cho tối đa 60 ngày). Vàng được quy đổi về giá spot như các khung khác."""
     resp = requests.get(
         f"https://query1.finance.yahoo.com/v8/finance/chart/{YAHOO_SYMBOL[code]}",
-        params={"interval": "5m", "range": rng}, headers=UA, timeout=30,
+        params={"interval": interval, "range": rng}, headers=UA, timeout=30,
     )
     resp.raise_for_status()
     result = resp.json()["chart"]["result"][0]
@@ -176,7 +181,7 @@ def get_m5(code: str, rng: str = "5d") -> Series:
         candles = [Candle(c.date, c.open + basis, c.high + basis, c.low + basis, c.close + basis, c.volume)
                    for c in candles]
         last += basis
-    return Series(code, candles, last, "Yahoo Finance 5m")
+    return Series(code, candles, last, f"Yahoo Finance {interval}")
 
 
 def get_intraday(code: str) -> Series:

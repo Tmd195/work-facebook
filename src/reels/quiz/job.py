@@ -32,11 +32,11 @@ def pick(day: int, skip: set, nth: int = 0):
     order = SYSTEMS[day % len(SYSTEMS):] + SYSTEMS[: day % len(SYSTEMS)]
     syms = SYMBOLS[day % len(SYMBOLS):] + SYMBOLS[: day % len(SYMBOLS)]
     found = 0
-    for fast in (True, False):
+    for fast, tf in ((True, "M5"), (True, "M1"), (False, "M5")):   # M5 trước; không có → M1 (anh dặn); cuối cùng nhịp dài hơn
         for sysname in order:
             for sym in syms:
                 try:
-                    s = find(sym, "M5", [sysname], skip=skip)
+                    s = find(sym, tf, [sysname], skip=skip)
                 except Exception as exc:                 # thiếu dữ liệu 1 cặp → thử cặp khác
                     print(f"  ! {sym}: {exc}", flush=True)
                     continue

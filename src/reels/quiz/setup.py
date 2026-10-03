@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 
 from src.analysis import to_h4
 from src.chart_tools import DIGITS
-from src.data.prices import get_intraday, get_m5
+from src.data.prices import get_intraday, get_m1, get_m5
 
 CONTEXT = 46          # số nến trước điểm vào lệnh (ít nến → nến dày, nhìn rõ như mẫu)
 LOOK = 40             # nến dùng để xác định vùng giao dịch
@@ -221,7 +221,7 @@ def _abcd(o, h, l, c, k, atr):
         return None
     (ia, pa, ta), (ib, pb, tb), (ic, pc, tc) = pv[-3:]
     ab = abs(pa - pb)
-    if ab < 4 * atr or not (0.5 <= abs(pc - pb) / ab <= 0.886):
+    if ab <= 0 or ab < 4 * atr or not (0.5 <= abs(pc - pb) / ab <= 0.886):
         return None
     bull = ta == "H"                                     # A đỉnh, B đáy, C đỉnh → D đáy → Buy
     d = min(l[ic + 1: k + 1]) if bull else max(h[ic + 1: k + 1])
@@ -247,6 +247,7 @@ def _abcd(o, h, l, c, k, atr):
 
 
 _CACHE: dict = {}
+ALL = None          # đặt = [] để đếm toàn bộ kho lệnh (báo cáo nguồn content)
 SCAN = {"range": _range, "double": _double, "fibo": _fibo, "retest": _retest, "abcd": _abcd}
 
 
@@ -256,7 +257,8 @@ def find(symbol: str, tf: str = "M5", systems: list | None = None, min_run=4, ma
     Giá chạy tới đỉnh thật của nhịp (không cắt ở TP); TP vẽ ở 80% quãng chạy để giá vọt qua hộp TP như mẫu."""
     key = (symbol, tf)
     if key not in _CACHE:                                # M5 như video mẫu (biểu đồ M1–M5 cho cú chạy dài, SL mỏng)
-        _CACHE[key] = (get_m5(symbol, "60d") if tf == "M5" else get_intraday(symbol)).candles
+        _CACHE[key] = (get_m5(symbol, "60d") if tf == "M5" else get_m1(symbol) if tf == "M1"
+                       else get_intraday(symbol)).candles
     cs = _CACHE[key]
     if tf == "H4":
         cs = to_h4(cs)
@@ -267,6 +269,8 @@ def find(symbol: str, tf: str = "M5", systems: list | None = None, min_run=4, ma
         cands = []
         for k in range(n - 3, CONTEXT + 12, -1):
             atr = _atr(h, l, c, k)
+            if atr <= 0:                                 # đoạn giá đứng yên (hay gặp ở M1) → bỏ
+                continue
             r = fn(o, h, l, c, k, atr)
             if not r:
                 continue
@@ -285,6 +289,9 @@ def find(symbol: str, tf: str = "M5", systems: list | None = None, min_run=4, ma
                     best = (rr, k, hit, (side, entry, sl_, tp, name, reason, ann))
             if best and f"{symbol}|{entry:.5f}" not in (skip or set()):   # lệnh đã đăng → bỏ (không lặp)
                 cands.append(best)
+        if ALL is not None:
+            ALL.extend((sysname, cs[x[1]].date, x[0], x[2] - x[1]) for x in cands)
+            continue
         if not cands:
             continue
         # ưu tiên lệnh ăn 6–15R (dài như mẫu nhưng vẫn tin được); quá 15R nhìn thiếu thật
