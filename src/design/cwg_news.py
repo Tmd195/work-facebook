@@ -492,12 +492,12 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
     return path
 
 
-def render_trend(path, time_label: str, title: str, rows: list):
+def render_trend(path, time_label: str, title: str, rows: list, kicker: str | None = None, sub: str | None = None):
     """rows: [{"code","bias":"up|down|flat","support","resistance","reason"}] (tối đa 8)"""
     img = _paper()
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
-    y = _kicker(d, 140, tr("BẢNG TIN XU HƯỚNG"), tr("Góc nhìn tổng quan trong ngày"))
+    y = _kicker(d, 140, kicker or tr("BẢNG TIN XU HƯỚNG"), tr("Góc nhìn tổng quan trong ngày") if sub is None else sub)
     for line in wrap(d, title, sans("ExtraBold", 40), W - 2 * M, max_lines=2):
         d.text((M, y), line, font=sans("ExtraBold", 40), fill=INK)
         y += 52

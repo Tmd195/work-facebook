@@ -151,11 +151,17 @@ hashtags:
 # Ngày thường: bản tin ngày mới → 4 bài xu hướng riêng (chiều giờ VN, cách 15') → vĩ mô sau 2 tiếng.
 schedule:
   cwg_morning: { time: "06:00", days: [mon, tue, wed, thu, fri] }   # 13:00 VN – bản tin ngày mới (trước phiên London)
-  cwg_fx_dxy:  { time: "06:30", days: [mon, tue, wed, thu, fri] }   # 13:30 VN – DXY & tác động lên vàng
-  cwg_fx_eur:  { time: "06:45", days: [mon, tue, wed, thu, fri] }   # 13:45 VN – EUR
-  cwg_fx_gbp:  { time: "07:00", days: [mon, tue, wed, thu, fri] }   # 14:00 VN – GBP
-  cwg_fx_oil:  { time: "07:15", days: [mon, tue, wed, thu, fri] }   # 14:15 VN – dầu
-  cwg_macro:   { time: "09:15", days: [mon, tue, wed, thu, fri] }   # 16:15 VN – phân tích vĩ mô (sau 2 tiếng)
+  cwg_fx_dxy:  { time: "06:30", days: [mon, tue, wed, thu, fri] }   # 13:30 VN – DXY & tác động lên vàng (cố định)
+  cwg_fx_oil:  { time: "06:45", days: [mon, tue, wed, thu, fri] }   # 13:45 VN – dầu (cố định)
+  # 6 ô cho EUR/GBP/CAD/AUD/JPY/CHF: có tin đỏ → đủ các đồng có tin đỏ; không có → tối thiểu 2 đồng tin vàng.
+  # Ô không có đồng nào hôm đó tự bỏ qua.
+  cwg_fx_1:    { time: "07:00", days: [mon, tue, wed, thu, fri] }   # 14:00 VN
+  cwg_fx_2:    { time: "07:15", days: [mon, tue, wed, thu, fri] }   # 14:15 VN
+  cwg_fx_3:    { time: "07:30", days: [mon, tue, wed, thu, fri] }   # 14:30 VN
+  cwg_fx_4:    { time: "07:45", days: [mon, tue, wed, thu, fri] }   # 14:45 VN
+  cwg_fx_5:    { time: "08:00", days: [mon, tue, wed, thu, fri] }   # 15:00 VN
+  cwg_fx_6:    { time: "08:15", days: [mon, tue, wed, thu, fri] }   # 15:15 VN
+  cwg_macro:   { time: "09:15", after_fx: 120, days: [mon, tue, wed, thu, fri] }   # 2 tiếng sau bài đồng tiền cuối cùng
   cwg_license: { time: "05:30", dates: [] }                         # điền 3 ngày khi bật đăng thật (FCA → FSCA → VFSC)
   # Cuối tuần: giữ như Page VN, giờ UTC
   cwg_wk_recap: { time: "09:00", days: [sat] }   # 16:00 VN

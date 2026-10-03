@@ -25,6 +25,7 @@ from src.design.tvchart import TV, TVChart
 from src.i18n import EN_MODE
 
 DIGITS = {"XAUUSD": 2, "EURUSD": 5, "GBPUSD": 5, "DXY": 3, "AUDUSD": 5, "USDCAD": 5, "USDJPY": 3, "WTI": 2}
+DIGITS.update({c: 3 if c.endswith("JPY") else 5 for c in ['USDCHF', 'EURGBP', 'EURJPY', 'GBPJPY', 'AUDJPY', 'EURCHF', 'CADJPY', 'CHFJPY', 'GBPCHF', 'EURAUD', 'AUDCAD', 'GBPCAD', 'EURCAD', 'GBPAUD']})
 WINDOW = {"H1": 120, "H4": 110, "D1": 120}
 
 CHART_SPEC = """Trường "chart" mô tả biểu đồ (giao diện TradingView) đi kèm bài, chọn 1 trong 2 chế độ:

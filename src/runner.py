@@ -30,7 +30,18 @@ def target_time(job: str, now: datetime) -> datetime:
     if job == "knowledge":
         slots = [hm(t) for t in sched["knowledge"]["times"]]
         return min(slots, key=lambda t: abs((t - now).total_seconds()))
+    if job == "cwg_macro" and sched[job].get("after_fx"):      # Page Global: vĩ mô sau bài đồng tiền cuối cùng
+        from src.content.cwg_daily import macro_after_fx
+        return macro_after_fx(now)
     return hm(sched[job]["time"])
+
+
+def skip_today(job: str, now: datetime) -> bool:
+    """Ô lịch không có bài hôm nay (vd. Page Global chỉ chọn 2/6 đồng tiền) → bỏ qua, không báo lỗi."""
+    if job.startswith("cwg_fx_"):
+        from src.content.cwg_daily import skip_today as fx_skip
+        return fx_skip(job, now)
+    return False
 
 
 def wait_until(t: datetime):
@@ -168,6 +179,9 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         return True
     if not no_wait and now - target > timedelta(hours=2):
         print(f"Bỏ qua: đã quá giờ đăng {target:%H:%M} hơn 2 tiếng")
+        return True
+    if skip_today(job, now):
+        print(f"Bỏ qua: {job} hôm nay không có bài (ô lịch trống)")
         return True
     if not dry_run and already_posted(job, target):
         print(f"Bỏ qua: {job} {target:%H:%M} hôm nay đã đăng rồi")

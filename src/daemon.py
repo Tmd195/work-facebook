@@ -49,7 +49,7 @@ def save_state(msg: str):
     # chỉ đưa file ĐANG CÓ vào git add – 1 đường dẫn không tồn tại làm cả lệnh thất bại, không lưu được gì
     files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
                                                  "reels_progress", "brand_progress", "hunter", "hunter_archive",
-                                                 "edu_reels") if (STATE / f"{n}.json").exists())
+                                                 "edu_reels", "fx_pick") if (STATE / f"{n}.json").exists())
     if not files:
         return
     sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "
@@ -61,11 +61,16 @@ def _attempts() -> dict:
 
 
 def due_jobs(now: datetime) -> list[tuple[str, datetime]]:
-    from src.runner import _slot, already_posted, target_time
+    from src.runner import _slot, already_posted, skip_today, target_time
     out = []
     for job, cfg in CONFIG["schedule"].items():
         if DAYS[now.weekday()] not in cfg.get("days", DAYS):
             continue
+        try:
+            if skip_today(job, now):
+                continue
+        except Exception as exc:                         # lỗi đọc lịch tin → vẫn thử chạy để runner báo lỗi rõ
+            print(f"! skip_today {job}: {exc}", flush=True)
         if cfg.get("dates") and now.strftime("%Y-%m-%d") not in cfg["dates"]:
             continue
         targets = []

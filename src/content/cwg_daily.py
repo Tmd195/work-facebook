@@ -12,7 +12,7 @@ from zoneinfo import ZoneInfo
 
 import requests
 
-from src.config import CONFIG, OUTPUT, ROOT, TZ
+from src.config import CONFIG, OUTPUT, ROOT, STATE, TZ
 from src.content import fbtext
 from src.content.llm import generate_json
 from src.i18n import LANG_RULE, TZ_LABEL
@@ -262,17 +262,91 @@ summary (1 câu nhận định ≤ 25 từ), photo (fed/gold/oil/japan), caption
     return {"slot": t, "name": "Tin nóng", "images": [img], "caption": caption(r["caption"], r["hashtags"])}
 
 
-# Page Global: bảng xu hướng tách thành bài riêng từng tài sản (anh chốt 03/10/2026)
+# Page Global (anh chốt 03/10/2026): DXY (kèm vàng) + OIL cố định mỗi ngày; 6 đồng EUR/GBP/CAD/AUD/JPY/CHF lên bài
+# theo lịch tin: đồng nào có tin ĐỎ thì lên đủ; không có tin đỏ → tối thiểu 2 đồng có tin VÀNG đáng chú ý nhất.
 FX_POSTS = {
     "cwg_fx_dxy": {"code": "DXY", "ccy": ["USD"], "kicker": "DXY · IMPACT ON GOLD", "also": "XAUUSD",
                    "brief": "Phân tích chỉ số USD (DXY) và tác động của nó lên vàng XAUUSD (tương quan ngược)."},
-    "cwg_fx_eur": {"code": "EURUSD", "ccy": ["EUR", "USD"], "kicker": "EUR OUTLOOK",
-                   "brief": "Phân tích đồng EUR qua cặp EURUSD."},
-    "cwg_fx_gbp": {"code": "GBPUSD", "ccy": ["GBP", "USD"], "kicker": "GBP OUTLOOK",
-                   "brief": "Phân tích đồng bảng Anh qua cặp GBPUSD."},
     "cwg_fx_oil": {"code": "WTI", "ccy": ["USD", "CAD"], "kicker": "OIL OUTLOOK",
                    "brief": "Phân tích dầu thô WTI (cung cầu, OPEC+, tồn kho, địa chính trị nếu có trong tin)."},
 }
+CURRENCIES = {   # đồng tiền → (cặp chính, các cặp liên quan)
+    "EUR": ("EURUSD", ["EURUSD", "EURGBP", "EURJPY", "EURCHF", "EURAUD"]),
+    "GBP": ("GBPUSD", ["GBPUSD", "EURGBP", "GBPJPY", "GBPCHF", "GBPAUD"]),
+    "CAD": ("USDCAD", ["USDCAD", "CADJPY", "EURCAD", "GBPCAD", "AUDCAD"]),
+    "AUD": ("AUDUSD", ["AUDUSD", "AUDJPY", "EURAUD", "GBPAUD", "AUDCAD"]),
+    "JPY": ("USDJPY", ["USDJPY", "EURJPY", "GBPJPY", "AUDJPY", "CADJPY"]),
+    "CHF": ("USDCHF", ["USDCHF", "EURCHF", "GBPCHF", "CHFJPY"]),
+}
+FX_SLOTS = [f"cwg_fx_{k}" for k in range(1, 7)]       # ô lịch cho các đồng được chọn trong ngày (cách 15')
+FX_PICK = STATE / "fx_pick.json"
+
+
+def fx_pick(day: date) -> list[str]:
+    """Đồng tiền lên bài trong ngày – lưu lại để mọi ô lịch dùng chung 1 kết quả.
+    Có tin đỏ → đủ các đồng có tin đỏ; không có → 2-3 đồng nhiều tin vàng nhất (thiếu thì lấy đồng biến động mạnh)."""
+    cache = json.loads(FX_PICK.read_text(encoding="utf-8")) if FX_PICK.exists() else {}
+    if day.isoformat() in cache:
+        return cache[day.isoformat()]
+    from src.data.calendar import fetch_week
+    hi, med = {}, {}
+    for e in fetch_week():
+        t = datetime.fromisoformat(e["date"]).astimezone(TZ)
+        if t.date() != day or e["country"] not in CURRENCIES:
+            continue
+        if e["impact"] == "High":
+            hi.setdefault(e["country"], []).append(e["title"])
+        elif e["impact"] == "Medium":
+            med.setdefault(e["country"], []).append(e["title"])
+    if hi:
+        pick = sorted(hi, key=lambda c: -len(hi[c]))
+    else:
+        pick = sorted(med, key=lambda c: -len(med[c]))[:3]
+        if len(pick) < 2:
+            from src.analysis import analyze
+            from src.data.prices import get_series
+            moves = []
+            for c, (main, _) in CURRENCIES.items():
+                try:
+                    moves.append((abs(analyze(get_series(main), 5)["change_pct"]), c))
+                except Exception:
+                    pass
+            for _, c in sorted(moves, reverse=True):
+                if len(pick) >= 2:
+                    break
+                if c not in pick:
+                    pick.append(c)
+    pick = pick[:len(FX_SLOTS)]
+    cache = {k: v for k, v in cache.items() if k >= (day - timedelta(days=7)).isoformat()}
+    cache[day.isoformat()] = pick
+    FX_PICK.parent.mkdir(parents=True, exist_ok=True)
+    FX_PICK.write_text(json.dumps(cache, ensure_ascii=False), encoding="utf-8")
+    return pick
+
+
+def fx_slot_ccy(job: str, day: date) -> str | None:
+    """cwg_fx_3 → đồng thứ 3 được chọn hôm nay; None nếu hôm nay ô này trống (bỏ qua)."""
+    if job not in FX_SLOTS:
+        return None
+    pick = fx_pick(day)
+    k = int(job.rsplit("_", 1)[1]) - 1
+    return pick[k] if k < len(pick) else None
+
+
+def skip_today(job: str, now: datetime) -> bool:
+    return job in FX_SLOTS and fx_slot_ccy(job, now.date()) is None
+
+
+def macro_after_fx(now: datetime) -> datetime | None:
+    """Giờ vĩ mô = bài đồng tiền cuối cùng trong ngày + after_fx phút (Page Global)."""
+    cfg = CONFIG["schedule"].get("cwg_macro") or {}
+    if not cfg.get("after_fx"):
+        return None
+    n = len(fx_pick(now.date()))
+    last = CONFIG["schedule"].get(FX_SLOTS[n - 1]) if n else None
+    last = last or CONFIG["schedule"]["cwg_fx_oil"]
+    t = now.replace(hour=int(last["time"][:2]), minute=int(last["time"][3:]), second=0, microsecond=0)
+    return t + timedelta(minutes=int(cfg["after_fx"]))
 
 
 def _chart(code: str):
@@ -315,11 +389,73 @@ points (3 ý ≤ 10 từ, có nhắc vùng hỗ trợ/kháng cự{' và tác đ�
     return {"slot": slot, "name": f"Xu hướng {code}", "images": imgs, "caption": caption(r["caption"], r["hashtags"])}
 
 
+def _snap_of(codes: list[str], snap: dict) -> dict:
+    from src.analysis import analyze
+    from src.chart_tools import DIGITS
+    from src.data.prices import get_series
+    out = {}
+    for c in codes:
+        if c in snap:
+            out[c] = snap[c]
+            continue
+        try:
+            a = analyze(get_series(c), DIGITS.get(c, 5))
+            a["digits"] = DIGITS.get(c, 5)
+            out[c] = a
+        except Exception as exc:
+            print(f"  ! {c}: {exc}")
+    return out
+
+
+def post_currency(day: date, job: str, ccy: str, snap: dict, events: list, folder: Path) -> dict:
+    """Bài 1 đồng tiền: ảnh 1 cặp chính (biểu đồ H4 thật + vùng giá), ảnh 2 bảng các cặp liên quan."""
+    from src.design import cwg_news as cn
+    main, pairs = CURRENCIES[ccy]
+    data = _snap_of(pairs, snap)
+    if main not in data:
+        raise RuntimeError(f"Thiếu dữ liệu {main}")
+    slot = (CONFIG["schedule"].get(job) or {}).get("time", "")
+    ev = "\n".join(f"{e['time']} {e['ccy']} {e['title']} ({'TIN ĐỎ' if e['impact'] == 'High' else 'tin vàng'}, "
+                   f"dự báo {e['forecast'] or '-'}, trước {e['previous'] or '-'})"
+                   for e in events if e["ccy"] in (ccy, "USD")) or "Không có tin lớn."
+    others = ", ".join(p for p in pairs if p != main)
+    r = generate_json(WRITER, f"""Viết bài XU HƯỚNG ĐỒNG {ccy} ngày {day:%d/%m}: đồng {ccy} hôm nay có tin đáng chú ý, phân tích
+tác động lên cặp chính {main} và các cặp liên quan {others}.
+Góc nhìn tổng quan, KHÔNG tín hiệu vào lệnh, KHÔNG điểm SL/TP. Dữ liệu (vùng giá do hệ thống tính, giữ nguyên):
+{facts_text(data)}
+Lịch tin {ccy} (và USD) hôm nay ({TZ_LABEL}):
+{ev}
+Trả về: title (≤ 12 từ, nêu tin {ccy} + điểm chính), bias (up/down/flat cho {main}),
+body (2-3 câu ≤ 45 từ: tin hôm nay có thể tác động thế nào, cấu trúc giá H4/D1),
+points (3 ý ≤ 10 từ, có giờ tin và vùng giá), pairs_title (≤ 10 từ),
+rows: mỗi cặp trong {list(data)} {{code, bias up/down/flat, reason ≤ 12 từ}}, caption (80-130 từ), hashtags (2-3).""",
+                      {"type": "object", "properties": {
+                          "title": CAP, "bias": {"type": "string", "enum": ["up", "down", "flat"]}, "body": CAP,
+                          "points": TAGS, "pairs_title": CAP, "caption": CAP, "hashtags": TAGS,
+                          "rows": {"type": "array", "items": {"type": "object", "properties": {
+                              "code": CAP, "bias": {"type": "string", "enum": ["up", "down", "flat"]}, "reason": CAP},
+                              "required": ["code", "bias", "reason"]}}},
+                       "required": ["title", "bias", "body", "points", "pairs_title", "rows", "caption", "hashtags"]})
+    label = slot_label(job, slot, day)
+    sup, res = zones(data[main])
+    imgs = [cn.render_asset(folder / "01.png", label, f"{ccy} OUTLOOK", main, r["title"], r["bias"], _chart(main),
+                            sup, res, r["body"], r["points"])]
+    bias = {x["code"]: x for x in r["rows"]}
+    rows = []
+    for c, a in data.items():
+        s_, rz = zones(a)
+        b = bias.get(c, {"bias": "flat", "reason": ""})
+        rows.append({"code": c, "bias": b["bias"], "support": s_, "resistance": rz, "reason": b["reason"]})
+    imgs.append(cn.render_trend(folder / "02.png", label, r["pairs_title"], rows, kicker=f"{ccy} PAIRS",
+                                sub="Related crosses"))
+    return {"slot": slot, "name": f"Xu hướng {ccy}", "images": imgs, "caption": caption(r["caption"], r["hashtags"])}
+
+
 # ------------------------------------------------------------------ chạy theo lịch (runner gọi)
 
 JOB_NAMES = {"cwg_morning": "Bản tin đầu ngày", "cwg_trend": "Bảng tin xu hướng", "cwg_macro": "Phân tích vĩ mô",
-             "cwg_license": "Bài giấy phép", "cwg_fx_dxy": "Xu hướng DXY & vàng", "cwg_fx_eur": "Xu hướng EUR",
-             "cwg_fx_gbp": "Xu hướng GBP", "cwg_fx_oil": "Xu hướng dầu"}
+             "cwg_license": "Bài giấy phép", "cwg_fx_dxy": "Xu hướng DXY & vàng", "cwg_fx_oil": "Xu hướng dầu",
+             **{f"cwg_fx_{k}": f"Xu hướng đồng tiền #{k}" for k in range(1, 7)}}
 
 
 def license_for_today(now: datetime) -> tuple[str, int]:
@@ -351,6 +487,11 @@ def generate(job: str, out_dir: Path) -> bool:
             p = post_trend(now.date(), snap, calendar(now.date()), folder)
         elif job in FX_POSTS:
             p = post_asset(now.date(), job, snap, calendar(now.date()), folder)
+        elif job in FX_SLOTS:
+            ccy = fx_slot_ccy(job, now.date())
+            if not ccy:
+                raise RuntimeError("Hôm nay không có đồng tiền cho ô lịch này")
+            p = post_currency(now.date(), job, ccy, snap, calendar(now.date()), folder)
         else:
             p = post_macro(now.date(), snap, folder)
     (folder / "caption.txt").write_text(p["caption"], encoding="utf-8")

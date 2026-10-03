@@ -16,6 +16,8 @@ from src.config import env
 UA = {"User-Agent": "Mozilla/5.0"}
 YAHOO_SYMBOL = {"XAUUSD": "GC=F", "EURUSD": "EURUSD=X", "GBPUSD": "GBPUSD=X", "DXY": "DX-Y.NYB",
                 "AUDUSD": "AUDUSD=X", "USDCAD": "USDCAD=X", "USDJPY": "USDJPY=X", "WTI": "CL=F"}
+# cặp chéo cho bài đồng tiền của Page Global
+YAHOO_SYMBOL.update({c: f"{c}=X" for c in ['USDCHF', 'EURGBP', 'EURJPY', 'GBPJPY', 'AUDJPY', 'EURCHF', 'CADJPY', 'CHFJPY', 'GBPCHF', 'EURAUD', 'AUDCAD', 'GBPCAD', 'EURCAD', 'GBPAUD']})
 TWELVE_SYMBOL = {"XAUUSD": "XAU/USD", "EURUSD": "EUR/USD", "GBPUSD": "GBP/USD"}
 
 
