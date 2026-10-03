@@ -201,4 +201,4 @@ reels:
   voice: demo                          # giọng đọc mẫu của trang tạo giọng (không nhân bản người thật)
   voice_index: 1                       # Trung Caha – rõ ràng, chắc chắn (anh chốt 03/10/2026)
   photos: false                        # không dùng ảnh người – nền thương hiệu
-  music_dir: cwg                       # assets/music/cwg: 9 bài trap/hip-hop Mixkit (gần chất phonk, anh duyệt 03/10/2026)
+  music_dirs: [cwg, "."]               # 9 bài trap/hip-hop (assets/music/cwg) + 14 bài EDM chung (assets/music) – anh duyệt 03/10/2026

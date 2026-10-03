@@ -30,11 +30,12 @@ def generate(out_dir: Path) -> bool:
 
 
 def pick_music() -> Path | None:
-    """Kho nhạc riêng của Page (reels.music_dir, vd. assets/music/cwg – nhạc Mixkit trap/hip-hop bass nặng)."""
-    sub = (CONFIG.get("reels") or {}).get("music_dir")
-    if not sub or os.environ.get("REEL_MUSIC"):
+    """Kho nhạc của Page: reels.music_dirs = các thư mục con trong assets/music ("." = 14 bài EDM chung,
+    "cwg" = 9 bài trap/hip-hop). Mỗi video chọn ngẫu nhiên 1 bài trong tất cả."""
+    dirs = (CONFIG.get("reels") or {}).get("music_dirs")
+    if not dirs or os.environ.get("REEL_MUSIC"):
         return old.pick_music()
-    tracks = sorted((old.MUSIC / sub).glob("*.mp3"))
+    tracks = sorted(t for d in dirs for t in (old.MUSIC / d).glob("*.mp3"))
     return random.choice(tracks) if tracks else old.pick_music()
 
 
