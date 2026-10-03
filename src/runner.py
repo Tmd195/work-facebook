@@ -240,8 +240,8 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         series = next(s for s in knowledge.load_series() if s["id"] == meta["series"])
         knowledge.mark_done(series, series["lessons"][meta["part"] - 1])
     if job == "reel":
-        from src.reels import script as reel_script
-        reel_script.mark_done(meta)
+        from src.reels import job as reel
+        reel.mark_done(meta)
 
     telegram.send(f"✅ Đã hoàn thành: {name} {day}\n🔗 Link bài viết: {link}\nAnh kiểm tra nếu cần sửa đổi.")
     return True

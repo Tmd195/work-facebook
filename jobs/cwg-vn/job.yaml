@@ -184,6 +184,8 @@ schedule:
   cwg_wk_cot:   { time: "10:00", days: [sun] }   # Dòng tiền lớn – báo cáo COT của CFTC
   cwg_wk_macro: { time: "15:00", days: [sun] }   # Chủ đề vĩ mô tuần tới (kịch bản trước sự kiện)
   cwg_wk_ahead: { time: "20:00", days: [sun] }   # Lịch tin & góc nhìn tuần mới
+  # Reels kiến thức (form thẻ tối + biểu đồ minh họa, logo CWG) – anh duyệt 03/10/2026
+  reel:         { time: "19:30", days: [mon, tue, wed, thu, fri, sat, sun] }
 
 # Bộ săn tin: quét fxtin, tin đủ mạnh (AI chấm ≥ 7/10) thành bài TIN NÓNG
 hunter:
@@ -197,5 +199,5 @@ hunter:
 
 reels:
   voice: demo                          # giọng đọc mẫu của trang tạo giọng (không nhân bản người thật)
-  voice_index: 0
+  voice_index: 1                       # Trung Caha – rõ ràng, chắc chắn (anh chốt 03/10/2026)
   photos: false                        # không dùng ảnh người – nền thương hiệu

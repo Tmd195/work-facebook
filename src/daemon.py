@@ -46,8 +46,12 @@ def sync():
 def save_state(msg: str):
     if "GITHUB_ACTIONS" not in os.environ:
         return
+    # chỉ đưa file ĐANG CÓ vào git add – 1 đường dẫn không tồn tại làm cả lệnh thất bại, không lưu được gì
     files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
-                                                 "reels_progress", "brand_progress", "hunter", "hunter_archive"))
+                                                 "reels_progress", "brand_progress", "hunter", "hunter_archive",
+                                                 "edu_reels") if (STATE / f"{n}.json").exists())
+    if not files:
+        return
     sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "
        f"(git commit -qm '{msg}' && (git push -q || (git pull --rebase -q && git push -q)))", 180)
 

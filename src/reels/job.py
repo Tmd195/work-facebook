@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 
+from src.config import IS_DEFAULT_JOB
 from src.content import fbtext
 from src.reels import build, script
 
@@ -13,6 +14,9 @@ def folder(out_dir: Path) -> Path:
 
 
 def generate(out_dir: Path) -> bool:
+    if not IS_DEFAULT_JOB:                               # Page thương hiệu → mẫu video kiến thức có logo
+        from src.reels.edu import job as edu
+        return edu.generate(out_dir)
     s = script.write(script.next_brief())
     res = build.make(s, folder(out_dir))
     tags = [BRAND_TAG] + [t if t.startswith("#") else "#" + t for t in s.get("hashtags") or []]
@@ -26,9 +30,22 @@ def generate(out_dir: Path) -> bool:
 
 
 def files(out_dir: Path) -> tuple[Path, Path, Path]:
+    if not IS_DEFAULT_JOB:
+        from src.reels.edu import job as edu
+        return edu.files(out_dir)
     f = folder(out_dir)
     return f / "caption.txt", f / "reel.mp4", f / "thumbnail.jpg"
 
 
 def meta(out_dir: Path) -> dict:
+    if not IS_DEFAULT_JOB:
+        from src.reels.edu import job as edu
+        return edu.meta(out_dir)
     return json.loads((folder(out_dir) / "meta.json").read_text(encoding="utf-8"))
+
+
+def mark_done(meta: dict):
+    if not IS_DEFAULT_JOB:
+        from src.reels.edu import job as edu
+        return edu.mark_done(meta)
+    script.mark_done(meta)

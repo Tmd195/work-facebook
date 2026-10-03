@@ -7,6 +7,13 @@ import re
 
 TERMS = [
     # cụm dài trước
+    ("CWG Markets & Partner", "Xi đắp liu gi Mác kịt và Pát nơ"), ("CWG Markets", "Xi đắp liu gi Mác kịt"),
+    ("CWG", "Xi đắp liu gi"), ("liquidity sweep", "li quí đi ti xuýp"), ("liquidity", "li quí đi ti"),
+    ("accumulation", "ắc kiu mu lây sần"), ("manipulation", "ma ni pu lây sần"), ("distribution", "đít tri biu sần"),
+    ("inducement", "in điu xơ mần"), ("smart money", "sờ mát mơ ni"), ("fair value gap", "phe va liu gáp"),
+    ("market structure", "cấu trúc thị trường"), ("retest", "ri tét"), ("range", "ren"), ("sweep", "xuýp"),
+    ("Power of Three", "pao ơ ọp thờ ri"), ("PO3", "pê ô ba"), ("ICT", "ai xi ti"), ("MSS", "em ét ét"),
+    ("OB", "âu bi"), ("SMC", "ét em xi"),
     ("stop loss", "Ét lờ"), ("stoploss", "Ét lờ"), ("take profit", "Tê pê"),
     ("break even", "hoà vốn"), ("breakeven", "hoà vốn"), ("risk reward", "rủi ro trên lợi nhuận"),
     ("price action", "prai ác sần"), ("order block", "o đơ bờ lốc"), ("smart money", "sờ mát mơ ni"),
