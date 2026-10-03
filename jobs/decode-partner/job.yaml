@@ -19,6 +19,7 @@ autopost:
   live: false                          # chờ anh duyệt bài mẫu
 
 design:
+  titles_upper: true                   # mọi tiêu đề bài IN HOA (anh chốt 03/10/2026)
   style: block
   palette: decode
   theme: decode
