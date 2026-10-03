@@ -171,6 +171,8 @@ schedule:
   cwg_wk_cot:   { time: "10:00", days: [sun] }   # 17:00 VN
   cwg_wk_macro: { time: "15:00", days: [sun] }   # 22:00 VN
   cwg_wk_ahead: { time: "20:00", days: [sun] }   # 03:00 VN thứ 2
+  # Reels thị trường theo khuôn mẫu anh gửi 03/10/2026 (giọng nhân bản tiếng Anh)
+  reel:         { time: "12:00", days: [mon, tue, wed, thu, fri, sat, sun] }   # 19:00 VN
 
 hunter:
   enabled: true
@@ -180,3 +182,7 @@ hunter:
   max_per_day: 1          # Page Global: tối đa 1 bài tin nóng/ngày (anh chốt 03/10/2026)
   weekend_max_per_day: 1
   weekend_min_score: 8
+
+reels:
+  style: market                        # khuôn Reels thị trường (src/reels/mkt) – khác Page VN
+  voice: clone_en                      # giọng anh gửi: assets/private/voice_ref_cwg_global.mp3 (gói mã hoá)
