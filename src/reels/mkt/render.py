@@ -67,19 +67,14 @@ def _logo(h: int, name: str = "icon.png") -> Image.Image:
 
 
 def watermark(img: Image.Image, dark: bool = True):
-    """Dấu thương hiệu nhỏ cố định ở đáy khung (trên vùng nút của Reels)."""
-    d = ImageDraw.Draw(img, "RGBA")
-    ic = _logo(40)
-    x = W // 2 - 150
-    y0 = 1622
-    _put(img, ic, (x, y0))
+    """Dấu thương hiệu cố định ở đáy khung: logo ở trên, chữ ở dưới, cả hai căn đúng tâm màn hình (anh chốt)."""
+    ic = _logo(46)
+    y0 = 1596
+    _put(img, ic, (W // 2 - ic.width // 2, y0))
     col = (255, 255, 255) if dark else (30, 30, 36)
-    if img.mode == "RGBA":
-        lay = Image.new("RGBA", (420, 60), (0, 0, 0, 0))
-        ImageDraw.Draw(lay).text((0, 30), "CWG MARKETS GLOBAL", font=sans("ExtraBold", 26), fill=col + (150,), anchor="lm")
-        img.alpha_composite(lay, (x + 52, y0 - 10))
-    else:
-        d.text((x + 52, y0 + 20), "CWG MARKETS GLOBAL", font=sans("ExtraBold", 26), fill=col + (150,), anchor="lm")
+    lay = Image.new("RGBA", (W, 50), (0, 0, 0, 0))
+    ImageDraw.Draw(lay).text((W / 2, 25), "CWG MARKETS GLOBAL", font=sans("ExtraBold", 24), fill=col + (160,), anchor="mm")
+    _put(img, lay, (0, y0 + ic.height + 4))
 
 
 def pair_icons(img: Image.Image, symbol: str, cx: float, cy: float, size: int, k: float = 1.0, gap: float = 0.62):
