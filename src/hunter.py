@@ -54,6 +54,7 @@ def _archive(items: list):
     arch = json.loads(ARCHIVE.read_text(encoding="utf-8")) if ARCHIVE.exists() else []
     cut = (datetime.now(TZ) - timedelta(days=9)).isoformat()
     arch = [x for x in arch if x["at"] >= cut] + items
+    ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
     ARCHIVE.write_text(json.dumps(arch, ensure_ascii=False), encoding="utf-8")
 
 
