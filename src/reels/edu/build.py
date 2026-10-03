@@ -158,7 +158,9 @@ def encode(scenes, charts, events, out: Path, music: Path | None) -> Path:
     return out
 
 
-def mix(silent: Path, voices: list, events: list, total: float, out: Path, music: Path | None):
+def mix(silent: Path, voices: list, events: list, total: float, out: Path, music: Path | None,
+        music_ss: float | None = None, music_vol: float = 0.5, music_fade: float = 2.5, music_norm: bool = True):
+    """music_ss: giây bắt đầu trong bài nhạc (âm = chèn im lặng trước) – để điểm drop rơi đúng khoảnh khắc mong muốn."""
     fx = sfx.render_track(events, total, out.with_suffix(".sfx.wav"))
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", str(silent)]
     filters, labels = [], []
@@ -177,10 +179,13 @@ def mix(silent: Path, voices: list, events: list, total: float, out: Path, music
         filters.append("anullsrc=r=48000:cl=mono,atrim=0.1,apad,asplit=2[vo][sc]")
     if music:
         m = x + 1
-        cmd += ["-stream_loop", "-1", "-ss", f"{old.music_offset(music):.1f}", "-i", str(music)]
-        # nhạc nhỏ hơn bản Job 1: video kiến thức cần nghe rõ lời
-        filters.append(f"[{m}:a]aresample=48000,loudnorm=I=-14:TP=-1.5,volume=0.5,afade=t=in:d=0.6,"
-                       f"afade=t=out:st={total - 2.5:.2f}:d=2.5[bgm]")
+        ss = old.music_offset(music) if music_ss is None else music_ss
+        cmd += ["-stream_loop", "-1", "-ss", f"{max(0.0, ss):.2f}", "-i", str(music)]
+        pre = f"adelay={int(-ss * 1000)}|{int(-ss * 1000)}," if ss < 0 else ""
+        # nhạc nhỏ hơn bản Job 1: video kiến thức cần nghe rõ lời (video không lời: music_vol cao hơn)
+        norm = "loudnorm=I=-14:TP=-1.5," if music_norm else ""          # nhạc đã dựng sẵn cao trào → giữ nguyên độ vênh
+        filters.append(f"[{m}:a]aresample=48000,{pre}{norm}volume={music_vol},afade=t=in:d=0.6,"
+                       f"afade=t=out:st={total - music_fade:.2f}:d={music_fade}[bgm]")
         filters.append("[bgm][sc]sidechaincompress=threshold=0.05:ratio=4:attack=20:release=400[duck]")
         filters.append("[vo][duck][fx]amix=inputs=3:normalize=0:duration=longest,"
                        "alimiter=limit=0.89:attack=5:release=50:level=disabled[a]")   # chặn vỡ tiếng (đỉnh ≤ -1 dB)

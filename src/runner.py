@@ -36,6 +36,17 @@ def target_time(job: str, now: datetime) -> datetime:
     return hm(sched[job]["time"])
 
 
+def _reel_mod(job: str):
+    """reel = Reels chính của Page; reel_story = Reels kể chuyện (Page Decode, cách ngày)."""
+    if job == "reel_story":
+        from src.reels.story import job as mod
+    elif job == "reel_quiz":                              # Page Decode: Reels "BUY OR SELL?" mỗi ngày
+        from src.reels.quiz import job as mod
+    else:
+        from src.reels import job as mod
+    return mod
+
+
 def skip_today(job: str, now: datetime) -> bool:
     """Ô lịch không có bài hôm nay (vd. Page Global chỉ chọn 2/6 đồng tiền) → bỏ qua, không báo lỗi."""
     if job.startswith("cwg_fx_"):
@@ -76,8 +87,8 @@ def post_meta(job: str, out_dir) -> dict:
         return {"events": ctx["calendar"]}
     if job == "weekly":
         return {}
-    if job == "reel":
-        from src.reels import job as reel
+    if job.startswith("reel"):
+        reel = _reel_mod(job)
         return reel.meta(out_dir)
     if job.startswith("cwg_"):
         return {}
@@ -123,8 +134,8 @@ def _files(job: str, out_dir):
         return out_dir / "knowledge.txt", sorted(out_dir.glob("knowledge_[0-9][0-9].png"))
     if job == "weekly":
         return out_dir / "weekly.txt", sorted(out_dir.glob("weekly_[0-9][0-9].png"))
-    if job == "reel":
-        from src.reels import job as reel
+    if job.startswith("reel"):
+        reel = _reel_mod(job)
         cap, video, thumb = reel.files(out_dir)
         return cap, [video, thumb]
     if job.startswith("cwg_"):
@@ -142,8 +153,8 @@ def generate(job: str):
         return run.run_knowledge()
     if job == "weekly":
         return run.run_weekly()
-    if job == "reel":
-        from src.reels import job as reel
+    if job.startswith("reel"):
+        reel = _reel_mod(job)
         return reel.generate(OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
     if job.startswith("cwg_"):
         from src.content import cwg_daily, cwg_weekend
@@ -161,7 +172,7 @@ def label(job: str) -> str:
         from src.content import knowledge
         nxt = knowledge.next_lesson()
         return f"Kiến thức: {nxt[0]['name']} – Phần {nxt[1]['part']}/{len(nxt[0]['lessons'])}" if nxt else "Kiến thức"
-    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "reel": "Video Reels", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
+    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "reel": "Video Reels", "reel_story": "Reels kể chuyện nghề IB", "reel_quiz": "Reels BUY OR SELL?", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
             "strategy_us": "Chiến lược XAUUSD phiên Mỹ"}[job]
 
 
@@ -174,7 +185,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     day = now.strftime("%d/%m")
     target = (now.replace(hour=int(at[:2]), minute=int(at[3:]), second=0, microsecond=0) if at
               else target_time(job, now))
-    early = timedelta(hours=3, minutes=15) if job == "reel" else MAX_EARLY   # Reels dựng sớm để kịp kiểm tra
+    early = timedelta(hours=3, minutes=15) if job.startswith("reel") else MAX_EARLY   # Reels dựng sớm để kịp kiểm tra
     if not no_wait and target - now > early:
         print(f"Bỏ qua: giờ đăng {target:%H:%M}, còn quá sớm (lịch chạy của mùa khác)")
         return True
@@ -230,9 +241,9 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     if not no_wait and not dry_run:
         wait_until(target)
     meta = post_meta(job, out_dir)
-    if job == "reel":
+    if job.startswith("reel"):
         name = f"Video Reels: {meta.get('topic', '')}"
-    if dry_run and job == "reel":
+    if dry_run and job.startswith("reel"):
         telegram.send(f"🧪 [XEM TRƯỚC - chưa đăng] {name} {day} ({meta.get('duration')}s)\n"
                       f"Video đã dựng xong (chế độ chạy thử, không gửi file cho nhẹ).\n\n{caption}")
         if not already_posted(job, target):
@@ -245,7 +256,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
             mark_posted(job, target, "preview", None, meta, preview=True)
         return True
     try:
-        if job == "reel":
+        if job.startswith("reel"):
             link, post_id = facebook.publish_reel(images[0], caption, images[1])
         else:
             link, post_id = facebook.publish(caption, images)
@@ -263,8 +274,8 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         meta = json.loads((out_dir / "knowledge.json").read_text(encoding="utf-8"))
         series = next(s for s in knowledge.load_series() if s["id"] == meta["series"])
         knowledge.mark_done(series, series["lessons"][meta["part"] - 1])
-    if job == "reel":
-        from src.reels import job as reel
+    if job.startswith("reel"):
+        reel = _reel_mod(job)
         reel.mark_done(meta)
 
     telegram.send(f"✅ Đã hoàn thành: {name} {day}\n🔗 Link bài viết: {link}\nAnh kiểm tra nếu cần sửa đổi.")

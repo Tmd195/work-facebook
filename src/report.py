@@ -61,7 +61,7 @@ def collect(now: datetime) -> dict:
     posts = []
     for slot, e in sorted(posted.items()):
         try:
-            if e["job"] == "reel":
+            if e["job"].startswith("reel"):
                 r = facebook.reel_stats(e["post_id"])
                 st = {"reactions": r.get("likes") or 0, "comments": r.get("comments") or 0, "shares": 0,
                       "views": r.get("plays"), "avg_watch": r.get("avg_watch"), "reach": r.get("reach")}
@@ -146,7 +146,7 @@ def collect(now: datetime) -> dict:
 
 def _reels(posts: list) -> dict:
     """Hiệu quả video Reels: lượt phát, thời gian xem TB, % thời lượng được xem, theo nhóm chủ đề."""
-    rs = [p for p in posts if p["type"] == "reel"]
+    rs = [p for p in posts if p["type"].startswith("reel")]
     rows = []
     for p in rs:
         ratio = round(p["avg_watch"] / p["duration"] * 100) if p.get("avg_watch") and p.get("duration") else None

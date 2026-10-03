@@ -19,8 +19,8 @@ TERMS = [
     ("stop loss", "Ét lờ"), ("stoploss", "Ét lờ"), ("take profit", "Tê pê"),
     ("break even", "hoà vốn"), ("breakeven", "hoà vốn"), ("risk reward", "rủi ro trên lợi nhuận"),
     ("price action", "prai ác sần"), ("order block", "o đơ bờ lốc"), ("smart money", "sờ mát mơ ni"),
-    ("trailing stop", "trây linh ét lờ"), ("buy limit", "bai li mít"), ("sell limit", "seo li mít"),
-    ("buy stop", "bai sờ tóp"), ("sell stop", "seo sờ tóp"), ("supertrend", "su pơ tren"),
+    ("trailing stop", "trây linh ét lờ"), ("buy limit", "bai li mít"), ("sell limit", "xeo li mít"),
+    ("buy stop", "bai sờ tóp"), ("sell stop", "xeo sờ tóp"), ("supertrend", "su pơ tren"),
     ("bollinger", "bô lin giơ"), ("fibonacci", "phi bô na chi"), ("ichimoku", "i chi mô cu"),
     ("backtest", "bách tét"), ("setup", "sét ắp"), ("trading", "trây đinh"), ("trader", "trây đơ"),
     ("trade", "trết"), ("scalping", "sờ cao pinh"), ("scalp", "sờ cao"), ("swing", "xuynh"),
@@ -37,7 +37,7 @@ TERMS = [
     ("H1", "Hát một"), ("H4", "Hát bốn"), ("D1", "Đê một"), ("W1", "Vê kép một"),
     ("M1", "Em một"), ("M5", "Em năm"), ("M15", "Em mười lăm"), ("M30", "Em ba mươi"),
     ("comment", "com men"), ("like", "lai"), ("share", "se"), ("page", "pết"), ("video", "vi đi ô"),
-    ("BUY", "bai"), ("SELL", "seo"), ("Buy", "bai"), ("Sell", "seo"), ("AI", "Ây ai"),
+    ("BUY", "bai"), ("SELL", "xeo"), ("Buy", "bai"), ("Sell", "xeo"), ("AI", "Ây ai"),
 ]
 _PATTERNS = [(re.compile(rf"(?<![\w]){re.escape(a)}(?![\w])", re.I if a.islower() else 0), b) for a, b in TERMS]
 

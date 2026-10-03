@@ -28,6 +28,7 @@ INDIGO, GOLD, WHITE = (26, 22, 72), (247, 205, 15), (255, 255, 255)
 XF = 0.45                     # chuyển cảnh mờ chồng giữa 2 đoạn video nền
 GAP = 0.3                     # nghỉ sau mỗi câu
 END = 3.6                     # đoạn kết logo
+SEED_SHIFT = 0                # đổi bộ video nền khi bộ kiểm tra yêu cầu dựng lại
 _TAG = re.compile(r"\[y\](.*?)\[/y\]")
 TRANS = ["fade", "smoothleft", "circleopen", "dissolve", "zoomin", "smoothup", "radial", "fadeblack"]
 
@@ -295,7 +296,7 @@ def make(spec: dict, folder: Path, music: Path | None = None) -> dict:
     durs = [v + GAP + (0.3 if k == 0 else 0) for k, v in enumerate(vdurs)]
     used, clips = set(), []
     for k, b in enumerate(spec["beats"]):
-        c = stock.fetch(list(b.get("queries") or []) + ["city night", "business people"], used, seed=k)
+        c = stock.fetch(list(b.get("queries") or []) + ["city night", "business people"], used, seed=k + SEED_SHIFT)
         if c is None:
             raise RuntimeError(f"Không tìm được video nền cho câu {k + 1}")
         clips.append(c)

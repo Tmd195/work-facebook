@@ -50,7 +50,7 @@ def save_state(msg: str):
     # chỉ đưa file ĐANG CÓ vào git add – 1 đường dẫn không tồn tại làm cả lệnh thất bại, không lưu được gì
     files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
                                                  "reels_progress", "brand_progress", "hunter", "hunter_archive",
-                                                 "edu_reels", "fx_pick") if (STATE / f"{n}.json").exists())
+                                                 "edu_reels", "fx_pick", "story_reels", "quiz_reels") if (STATE / f"{n}.json").exists())
     if not files:
         return
     sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "
@@ -74,6 +74,8 @@ def due_jobs(now: datetime) -> list[tuple[str, datetime]]:
             print(f"! skip_today {job}: {exc}", flush=True)
         if cfg.get("dates") and now.strftime("%Y-%m-%d") not in cfg["dates"]:
             continue
+        if cfg.get("every") and now.date().toordinal() % int(cfg["every"]) != int(cfg.get("offset", 0)):
+            continue                                     # vd. every: 2 = cách ngày
         targets = []
         if job == "knowledge":
             for t in cfg["times"]:
@@ -82,7 +84,7 @@ def due_jobs(now: datetime) -> list[tuple[str, datetime]]:
             targets.append(target_time(job, now))
         for t in targets:
             slot = _slot(job, t)
-            lead = LEAD_REEL if job == "reel" else LEAD
+            lead = LEAD_REEL if job.startswith("reel") else LEAD
             if t - lead <= now <= t + timedelta(hours=2) and not already_posted(job, t) \
                     and _attempts().get(slot, 0) < 2:
                 out.append((job, t))
@@ -141,7 +143,7 @@ def one_round():
             del REEL_PROCS[slot]
             save_state(f"Đăng Reels {slot}")
     for job, target in due_jobs(now):
-        if job == "reel":
+        if job.startswith("reel"):
             start_reel(job, target, SESSION_END)
             continue
         run_post(job, target)

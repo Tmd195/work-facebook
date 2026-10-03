@@ -67,6 +67,9 @@ schedule:
   cwg_wk_cot:   { time: "10:15", days: [sun] }
   cwg_wk_macro: { time: "15:15", days: [sun] }
   cwg_wk_ahead: { time: "20:15", days: [sun] }
+  # Reels kể chuyện nghề IB – CÁCH NGÀY (anh chốt 03/10/2026)
+  reel_story:   { time: "18:00", every: 2 }
+  reel_quiz:    { time: "19:45" }                   # Reels "BUY OR SELL?" mỗi ngày (khuôn đã chốt 03/10)
 
 hunter:
   enabled: true
