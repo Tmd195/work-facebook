@@ -13,8 +13,9 @@ W, H, FPS = 1080, 1920, 30
 NAVY = (9, 13, 30)
 GRID = (26, 32, 52)
 AXIS = (120, 130, 155)
-CANDLE = (236, 238, 242)
-DOWN = (236, 70, 82)
+CANDLE = (38, 166, 154)          # nến tăng xanh ngọc, thân đặc (kiểu MT5/TradingView)
+DOWN = (239, 83, 80)              # nến giảm đỏ, thân đặc
+VIEW = 62                         # số nến hiện trên màn hình (giống biểu đồ điện thoại – thân nến dày)
 RED = (225, 0, 22)
 LIGHT = (226, 231, 228)
 INK = (24, 26, 32)
@@ -165,7 +166,7 @@ class Chart:
         self.n = len(m.c)
 
     def frame(self, t: float, reveal_end: float, overlays: list, sub: str | None, sub_t: float | None,
-              dur: float = 30.0) -> Image.Image:
+              dur: float = 30.0, cam: list | None = None) -> Image.Image:
         """overlays: [(kind, t_start)]; reveal_end: lúc nến hiện đủ; sub: 'rsi'/'stoch' (khung phụ)."""
         m = self.m
         img = Image.new("RGB", (W, H), NAVY)              # nền RGB: Draw(..,"RGBA") pha màu trong suốt đúng
@@ -174,7 +175,7 @@ class Chart:
         kh = prog(t, 0.0, 0.5)
         pair_icons(img, m.symbol, 118, 190, 76, kh, gap=0.5)
         _text(img, (190 + 30 * (1 - kh), 190), m.symbol, sans("Bold", 46), (255, 255, 255), kh, "lm")
-        _pop_tag(img, 948, 190, "D1", RED, ease_back(prog(t, 0.25, 0.45)), size=24, pad=22)
+        _pop_tag(img, 948, 190, "H4", RED, ease_back(prog(t, 0.25, 0.45)), size=24, pad=22)
         d = ImageDraw.Draw(img, "RGBA")
         # khung phụ (RSI/Stoch) đẩy vùng giá lên
         ks = prog(t, sub_t, 0.6) if sub and sub_t is not None else 0.0
@@ -183,10 +184,12 @@ class Chart:
         # khung nhìn: phóng to về 45 nến cuối khi có "zoom"
         zt = next((s for k_, s in overlays if k_ == "zoom"), None)
         kz = prog(t, zt, 1.0) if zt is not None else 0.0
-        drift = 30 * ease(max(0.0, t - reveal_end) / max(1.0, dur - reveal_end))   # máy quay phóng dần sau khi nến hiện đủ
-        i0 = drift + (self.n - 46 - drift) * kz
-        i1 = self.n - 1 + 4
-        shown = self.n * min(1.0, max(0.0, t / reveal_end)) if reveal_end > 0 else self.n
+        base = self.n - VIEW
+        nb = _cam(cam, t) if cam else VIEW               # số nến trên màn hình (zoom in/out theo câu)
+        nb = nb + (30 - nb) * kz
+        i0 = self.n - nb
+        i1 = self.n - 1 + 4 * nb / VIEW
+        shown = base + (self.n - base) * min(1.0, max(0.0, t / reveal_end)) if reveal_end > 0 else self.n
         last = max(1, int(shown))
         vis = range(int(i0), self.n)                      # khung giá cố định theo toàn bộ nến → nến mọc dần lấp vào
         lo = min(m.l[i] for i in vis) if vis else m.l[0]
@@ -211,6 +214,7 @@ class Chart:
             d.text((x1 + 18, y), f"{p:,.{m.digits}f}", font=f, fill=AXIS, anchor="lm")
             p += step
         # chỉ báo phía sau nến
+        tags = []                                           # nhãn vẽ sau cùng (không bị lớp mờ che)
         for kind, st in overlays:
             k = prog(t, st, 1.0)
             if k <= 0:
@@ -222,17 +226,23 @@ class Chart:
                 mid = lambda i: ch["a"] + ch["b"] * i
                 poly = [(X(ia), Y(mid(ia) + ch["hi"])), (X(ie), Y(mid(ie) + ch["hi"])),
                         (X(ie), Y(mid(ie) + ch["lo"])), (X(ia), Y(mid(ia) + ch["lo"]))]
-                d.polygon(poly, fill=CHAN + (int(46 * k),))
-                d.line(poly[:2], fill=CHAN + (230,), width=3)
-                d.line(poly[2:], fill=CHAN + (230,), width=3)
-                _dash(d, (X(ia), Y(mid(ia))), (X(ie), Y(mid(ie))), CHAN + (160,))
+                lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+                ld = ImageDraw.Draw(lay)
+                ld.polygon(poly, fill=CHAN + (int(46 * k),))
+                ld.line(poly[:2], fill=CHAN + (230,), width=3)
+                ld.line(poly[2:], fill=CHAN + (230,), width=3)
+                _dash(ld, (X(ia), Y(mid(ia))), (X(ie), Y(mid(ie))), CHAN + (160,))
+                ld.rectangle([0, 0, W, top - 6], fill=(0, 0, 0, 0))
+                ld.rectangle([0, bot + 6, W, H], fill=(0, 0, 0, 0))
+                ld.rectangle([x1 + 2, 0, W, H], fill=(0, 0, 0, 0))
+                img.paste(lay, (0, 0), lay)
+                d = ImageDraw.Draw(img, "RGBA")
             elif kind in ("support", "resistance"):
                 lv = m.facts[kind]
                 col = SUP if kind == "support" else RES
                 y = Y(lv)
                 _dash(d, (x0, y), (x0 + (x1 - x0) * k, y), col + (255,), w=3)
-                _pop_tag(img, x0 + 10, y - 27, f"{kind.upper()} {lv:,.{m.digits}f}", col, ease_back(k))
-                d = ImageDraw.Draw(img, "RGBA")
+                tags.append((x0 + 170, y - 27, f"{kind.upper()} {lv:,.{m.digits}f}", col, ease_back(k)))
             elif kind == "lows" and m.ind.get("lows"):
                 lw = m.ind["lows"]
                 y = Y(lw["level"])
@@ -246,8 +256,8 @@ class Chart:
         S = 2
         cl = Image.new("RGBA", (W * S, H * S), (0, 0, 0, 0))
         dc = ImageDraw.Draw(cl)
-        bw = max(2.0, slot * 0.56)
-        for i in range(max(0, int(i0) - 1), last):
+        bw = max(3.0, slot * 0.72)
+        for i in range(max(int(base), int(i0) - 1), last):
             gx = X(i)
             if gx < x0 - bw:
                 continue
@@ -258,13 +268,10 @@ class Chart:
             if grow < 1:                                  # nến mới mọc từ giá mở cửa
                 mid_ = m.o[i]
                 hi_, lo_ = mid_ + (hi_ - mid_) * grow, mid_ - (mid_ - lo_) * grow
-            dc.line([(gx * S, Y(hi_) * S), (gx * S, Y(lo_) * S)], fill=col + (255,), width=2)
+            dc.line([(gx * S, Y(hi_) * S), (gx * S, Y(lo_) * S)], fill=col + (255,), width=4)
             ya, yb = sorted((Y(m.o[i]), Y(m.o[i] + (m.c[i] - m.o[i]) * grow)))
-            box = [(gx - bw / 2) * S, ya * S, (gx + bw / 2) * S, max(yb, ya + 1.5) * S]
-            if up:
-                dc.rectangle(box, fill=NAVY + (255,), outline=col + (255,), width=3)
-            else:
-                dc.rectangle(box, fill=col + (255,))
+            box = [(gx - bw / 2) * S, ya * S, (gx + bw / 2) * S, max(yb, ya + 2) * S]
+            dc.rectangle(box, fill=col + (255,))
         # chỉ báo dạng đường (trên nến)
         for kind, st in overlays:
             k = prog(t, st, 1.2)
@@ -280,13 +287,19 @@ class Chart:
                 if len(pts) > 1:
                     dc.line(pts, fill=col + (255,), width=5, joint="curve")
         # ghép lớp nến: quầng sáng mờ + nét chính, rồi mờ dần ở đáy/trái như máy quay có chiều sâu
+        cd_ = ImageDraw.Draw(cl)                           # cắt đường/ nến tràn ra ngoài khung giá
+        cd_.rectangle([0, 0, W * S, (top - 8) * S], fill=(0, 0, 0, 0))
+        cd_.rectangle([0, (bot + 8) * S, W * S, H * S], fill=(0, 0, 0, 0))
+        cd_.rectangle([(x1 + 4) * S, 0, W * S, H * S], fill=(0, 0, 0, 0))
         img = img.convert("RGBA")
         glow = cl.resize((W // 4, H // 4), Image.BILINEAR).filter(ImageFilter.GaussianBlur(3)).resize((W, H), Image.BILINEAR)
-        glow.putalpha(glow.getchannel("A").point(lambda v: int(v * 0.55)))
+        glow.putalpha(glow.getchannel("A").point(lambda v: int(v * 0.25)))
         img.alpha_composite(glow)
         img.alpha_composite(cl.resize((W, H), Image.LANCZOS))
         _depth_fade(img, x0, top, bot)
         img = img.convert("RGB")
+        for tg in tags:
+            _pop_tag(img, *tg)
         d = ImageDraw.Draw(img, "RGBA")
         # giá hiện tại
         if shown >= self.n - 0.5:
@@ -319,6 +332,63 @@ class Chart:
                     d.line(pts, fill=BB + (a,), width=2, joint="curve")
         watermark(img)
         return img
+
+
+def _cam(keys: list, t: float) -> float:
+    """Nội suy mượt số nến trên màn hình giữa các mốc (chuyển 0.9s, kiểu máy quay đẩy/lùi)."""
+    v = keys[0][1]
+    for (ta, va) in keys:
+        if t >= ta:
+            k = ease((t - ta) / 0.9)
+            v = v + (va - v) * k
+    return v
+
+
+def subtitle(img: Image.Image, t: float, subs: list, dark: bool = True):
+    """Phụ đề tiếng Anh chạy theo giọng: cụm ≤ 6 từ, từ đang đọc tô đỏ CWG."""
+    cur = next(((txt, st, du) for txt, st, du in subs if st <= t < st + du + 0.15), None)
+    if not cur:
+        return
+    txt, st, du = cur
+    txt = txt.replace("~", "").replace("  ", " ")     # font không có "~" (hiện thành "-")
+    words = txt.split()
+    if not words:
+        return
+    weights = [len(w) + 2 + (4 if w[-1] in ",.;:!?" else 0) for w in words]
+    tot = sum(weights)
+    acc, idx = 0.0, len(words) - 1
+    for i, wt in enumerate(weights):
+        if (t - st) / max(0.3, du * 0.95) < (acc + wt) / tot:
+            idx = i
+            break
+        acc += wt
+    g0 = idx // 6 * 6
+    group = words[g0: g0 + 6]
+    f = sans("ExtraBold", 50)
+    d = ImageDraw.Draw(img, "RGBA")
+    space = d.textlength(" ", font=f)
+    widths = [d.textlength(w, font=f) for w in group]
+    lines, cur_l, cw = [], [], 0.0
+    for w, wd in zip(group, widths):
+        if cur_l and cw + space + wd > 900:
+            lines.append(cur_l)
+            cur_l, cw = [], 0.0
+        cur_l.append((w, wd))
+        cw += (space if cw else 0) + wd
+    lines.append(cur_l)
+    y = 1470 - (len(lines) - 1) * 32
+    n = g0
+    for ln in lines:
+        lw = sum(wd for _, wd in ln) + space * (len(ln) - 1)
+        x = W / 2 - lw / 2
+        d.rounded_rectangle([x - 22, y - 38, x + lw + 22, y + 36], radius=16, fill=(0, 0, 0, 150) if dark else (20, 24, 40, 200))
+        for w, wd in ln:
+            col = RED if n == idx else (255, 255, 255)
+            d.text((x + 3, y + 3), w, font=f, fill=(0, 0, 0), anchor="lm")
+            d.text((x, y), w, font=f, fill=col, anchor="lm")
+            x += wd + space
+            n += 1
+        y += 72
 
 
 def _pop_tag(img, x, y, text, col, k, size=22, pad=14):

@@ -1,10 +1,8 @@
-"""Dữ liệu giá THẬT + chỉ báo cho Reels thị trường (Page Global): nến D1, EMA, Bollinger, RSI, Stochastic,
+"""Dữ liệu giá THẬT + chỉ báo cho Reels thị trường (Page Global): nến H4, EMA, Bollinger, RSI, Stochastic,
 kênh hồi quy, hỗ trợ/kháng cự, đáy/đỉnh lặp lại. Mọi con số trong lời đọc lấy từ đây (AI không tự bịa)."""
 from dataclasses import dataclass, field
 
-from src.analysis import analyze
 from src.chart_tools import DIGITS
-from src.data.prices import get_series
 
 BARS = 110
 
@@ -89,9 +87,21 @@ def _equal_lows(l, digits, look=60):
     return {"count": len(best), "level": round(min(l[j] for j in best), digits), "idx": best} if len(best) >= 2 else None
 
 
+def _swing_levels(h, l, price, look=60):
+    """Hỗ trợ = đáy swing gần nhất dưới giá; kháng cự = đỉnh swing gần nhất trên giá (trong `look` nến)."""
+    n = len(h)
+    lows = [l[i] for i in range(n - look, n - 2) if l[i] == min(l[max(0, i - 3): i + 4]) and l[i] < price]
+    highs = [h[i] for i in range(n - look, n - 2) if h[i] == max(h[max(0, i - 3): i + 4]) and h[i] > price]
+    sup = max(lows) if lows else min(l[-look:])
+    res = min(highs) if highs else max(h[-look:])
+    return sup, res
+
+
 def load(symbol: str) -> Market:
-    s = get_series(symbol)
-    cs = s.candles[-BARS:]
+    """Nến H4 thật (gộp từ H1 ~1 tháng) – thân nến rõ như biểu đồ trên điện thoại."""
+    from src.analysis import to_h4
+    from src.data.prices import get_intraday
+    cs = to_h4(get_intraday(symbol).candles)[-BARS:]
     dg = DIGITS.get(symbol, 5)
     o, h, l, c = [x.open for x in cs], [x.high for x in cs], [x.low for x in cs], [x.close for x in cs]
     m = Market(symbol, dg, o, h, l, c)
@@ -100,17 +110,21 @@ def load(symbol: str) -> Market:
     m.ind = {"ema20": _ema(c, 20), "ema50": _ema(c, 50), "bb_up": [x + 2 * y for x, y in zip(mid, sd)],
              "bb_mid": mid, "bb_lo": [x - 2 * y for x, y in zip(mid, sd)], "rsi": _rsi(c), "stoch_k": k, "stoch_d": d,
              "channel": _channel(h, l, c), "lows": _equal_lows(l, dg)}
-    a = analyze(s, dg)
+    if m.ind["lows"] and m.ind["lows"]["level"] > c[-1]:      # đáy lặp lại nằm trên giá hiện tại → không còn là hỗ trợ
+        m.ind["lows"] = None
     ch = m.ind["channel"]
     r = lambda v: round(v, dg)
+    e20, e50 = m.ind["ema20"][-1], m.ind["ema50"][-1]
+    trend = "up" if c[-1] > e20 > e50 else "down" if c[-1] < e20 < e50 else "sideways"
+    sup, res = _swing_levels(h, l, c[-1])
     m.facts = {
-        "symbol": symbol, "price": r(c[-1]), "change_1w_pct": round((c[-1] / c[-6] - 1) * 100, 2),
-        "change_1m_pct": round((c[-1] / c[-22] - 1) * 100, 2), "trend_d1": {"Tăng": "up", "Giảm": "down"}.get(a["trend"], "sideways"),
-        "ema20": r(m.ind["ema20"][-1]), "ema50": r(m.ind["ema50"][-1]), "rsi14": round(m.ind["rsi"][-1], 1),
+        "symbol": symbol, "timeframe": "H4 (4-hour candles)", "price": r(c[-1]),
+        "change_last_5_days_pct": round((c[-1] / c[-31] - 1) * 100, 2),
+        "change_last_10_days_pct": round((c[-1] / c[-61] - 1) * 100, 2), "trend_h4": trend,
+        "ema20": r(e20), "ema50": r(e50), "rsi14": round(m.ind["rsi"][-1], 1),
         "stoch_k": round(k[-1], 1), "bollinger_upper": r(m.ind["bb_up"][-1]), "bollinger_lower": r(m.ind["bb_lo"][-1]),
-        "channel_60d": {"direction": "rising" if ch["b"] > 0 else "falling", "fit_r2": round(ch["r2"], 2)},
-        "support": r(max(a["support"])) if a["support"] else r(a["s1"]),
-        "resistance": r(min(a["resistance"])) if a["resistance"] else r(a["r1"]),
+        "channel_60_bars": {"direction": "rising" if ch["b"] > 0 else "falling", "fit_r2": round(ch["r2"], 2)},
+        "support": r(sup), "resistance": r(res),
         "repeated_lows": ({"times": m.ind["lows"]["count"], "level": m.ind["lows"]["level"]}
                           if m.ind["lows"] else None),
     }

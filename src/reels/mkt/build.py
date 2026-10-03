@@ -14,6 +14,9 @@ from src.reels import render as old, voice
 from src.reels.edu.build import mix
 from src.reels.mkt import data as D, render as R
 
+# số nến trên màn hình theo nội dung câu: nói vùng giá → phóng vào; nói xu hướng → lùi ra
+ZOOM = {"support": 32, "resistance": 32, "lows": 40, "zoom": 30, "ema": 62, "bollinger": 56, "channel": 62,
+        "rsi": 50, "stoch": 50, "none": 48}
 OVERLAYS = ["none", "ema", "bollinger", "channel", "support", "resistance", "lows", "rsi", "stoch", "zoom"]
 SYMBOLS = ["XAUUSD", "EURUSD", "GBPUSD", "USDJPY", "AUDUSD", "USDCAD", "WTI", "USDCHF", "DXY"]
 FILE = STATE / "mkt_reels.json"
@@ -27,16 +30,20 @@ RULES: use ONLY the numbers given in the facts (round sensibly); never invent ne
 no buy/sell signals, no entry/SL/TP, no profit promises; describe what traders watch and possible scenarios
 ("if it holds… if it breaks…"). Spoken lines must sound natural when read aloud: numbers written as people say them
 (e.g. "four thousand one hundred", "zero point six nine"), no symbols like % or $ (say "percent", "dollars").
-Overlays available: none, ema (EMA 20/50), bollinger, channel (60-day regression channel), support, resistance,
+Overlays available: none, ema (EMA 20/50), bollinger, channel (regression channel of the last 60 four-hour bars), support, resistance,
 lows (repeated lows / double-triple bottom – only if facts.repeated_lows exists), rsi, stoch, zoom (zoom to recent bars).
-Use 2-4 different overlays that match what you say. Never mention India, Japan, South Korea, Indonesia or Malaysia."""
+Use 2-4 different overlays that match what you say.
+SUBTITLES: for the hook and every line also give the on-screen subtitle ("hook_text", "text") = the same sentence
+written for reading, with digits and symbols (e.g. "Down 3.4% this month, below the 20 and 50 EMAs.", "0.6905").
+Never use the "~" character (write "about" or just the number). Never mention India, Japan, South Korea, Indonesia or Malaysia."""
 
 SCHEMA = {"type": "object", "properties": {
-    "title": {"type": "string"}, "hook": {"type": "string"},
+    "title": {"type": "string"}, "hook": {"type": "string"}, "hook_text": {"type": "string"},
     "lines": {"type": "array", "items": {"type": "object", "properties": {
-        "say": {"type": "string"}, "overlay": {"type": "string", "enum": OVERLAYS}}, "required": ["say", "overlay"]}},
+        "say": {"type": "string"}, "text": {"type": "string"}, "overlay": {"type": "string", "enum": OVERLAYS}},
+        "required": ["say", "text", "overlay"]}},
     "question": {"type": "string"}, "caption": {"type": "string"}, "hashtags": {"type": "array", "items": {"type": "string"}}},
-    "required": ["title", "hook", "lines", "question", "caption", "hashtags"]}
+    "required": ["title", "hook", "hook_text", "lines", "question", "caption", "hashtags"]}
 
 
 def _state() -> dict:
@@ -61,7 +68,7 @@ def mark_done(symbol: str, title: str = ""):
 def write(symbol: str) -> dict:
     m = D.load(symbol)
     recent = _state().get("titles", [])[-12:]
-    user = (f"Asset: {symbol}\nFacts (real data, D1):\n{json.dumps(m.facts, ensure_ascii=False)}\n"
+    user = (f"Asset: {symbol}\nFacts (real data, H4 chart = 4-hour candles; say 'on the four-hour chart'):\n{json.dumps(m.facts, ensure_ascii=False)}\n"
             f"Recent titles of the channel (do not repeat): {recent}\n"
             "Write the Reel. TOTAL video must stay under 45 seconds: hook ≤ 9 words, exactly 3-4 lines, each ≤ 16 words "
             "(short, punchy, one idea per line), question ≤ 9 words "
@@ -92,9 +99,13 @@ def timeline(spec: dict, voices: list) -> dict:
     t_trans = 0.8
     c0 = t_intro + t_trans + R.STING
     t, overlays, clips, sub, sub_t = 0.3, [], [(hook[0], 0.25)], None, None
+    subs = [(spec.get("hook_text") or spec["hook"], 0.25, hook[1])]              # phụ đề: (câu, giây bắt đầu toàn video, thời lượng)
+    cam = []                                           # máy quay: (giây trong cảnh biểu đồ, số nến hiện)
     for line in spec["lines"]:
         p, dur = next(vi)
         clips.append((p, c0 + t))
+        subs.append((line.get("text") or line["say"], c0 + t, dur))
+        cam.append((t, ZOOM.get(line["overlay"], 48)))
         if line["overlay"] in ("rsi", "stoch") and sub is None:
             sub, sub_t = line["overlay"], t
         elif line["overlay"] not in ("none", "rsi", "stoch"):
@@ -107,7 +118,8 @@ def timeline(spec: dict, voices: list) -> dict:
     clips.append((q[0], q0 + 0.3))
     t_q = q[1] + 1.6
     t_end = 3.6
-    return {"intro": t_intro, "trans": t_trans, "sting": R.STING, "chart": t_chart, "q": t_q, "end": t_end, "reveal": reveal,
+    cam = [(0.0, R.VIEW), (reveal, R.VIEW)] + [(max(reveal, a), b) for a, b in cam[1:]] + [(t_chart, 40)]
+    return {"subs": subs, "cam": cam, "intro": t_intro, "trans": t_trans, "sting": R.STING, "chart": t_chart, "q": t_q, "end": t_end, "reveal": reveal,
             "overlays": overlays, "sub": sub, "sub_t": sub_t, "clips": [c for c in clips if c[0]], "q_voice": q[1]}
 
 
@@ -131,13 +143,15 @@ def frames(spec: dict, tl: dict, m):
         elif name == "sting":
             img = R.sting(lt, dur, m.symbol)
         elif name == "chart":
-            img = ch.frame(lt, tl["reveal"], tl["overlays"], tl["sub"], tl["sub_t"], dur)
+            img = ch.frame(lt, tl["reveal"], tl["overlays"], tl["sub"], tl["sub_t"], dur, tl["cam"])
         elif name == "q":
             img = R.question(lt, dur, m.symbol, spec["question"], tl["q_voice"])
         else:
             img = R.ending(lt, dur)
-        k = min(1.0, t / 0.25, max(0.0, (total - t) / 0.5))
         img = img.convert("RGB")
+        if name in ("intro", "trans", "sting", "chart"):
+            R.subtitle(img, t, tl["subs"], dark=name != "trans")
+        k = min(1.0, t / 0.25, max(0.0, (total - t) / 0.5))
         if k < 1:
             from PIL import Image
             img = Image.blend(Image.new("RGB", img.size), img, k)
