@@ -275,5 +275,19 @@
    "series": "price-action-nhap-mon",
    "part": 5
   }
+ },
+ "2026-10-03 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1415650706658983/",
+  "post_id": "1415650706658983",
+  "posted_at": "2026-10-03T19:15:39.875397+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống MLMA cho XAUUSD: đo xu hướng, tín hiệu vào lệnh, bộ lọc và SL/TP",
+   "pillar": "he-thong",
+   "system": "mlma",
+   "duration": 58.4,
+   "music": "our-ups-and-downs.mp3"
+  }
  }
 }
