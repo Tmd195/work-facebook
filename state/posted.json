@@ -264,5 +264,16 @@
    "price": 4184.43,
    "title": "XAUUSD phiên Mỹ: ưu tiên bán vùng 4192-4200, chờ NFP xác nhận"
   }
+ },
+ "2026-10-03 knowledge 12:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129343050735108",
+  "post_id": "1121396124381014_122129343050735108",
+  "posted_at": "2026-10-03T12:00:12.749649+07:00",
+  "preview": false,
+  "meta": {
+   "series": "price-action-nhap-mon",
+   "part": 5
+  }
  }
 }
