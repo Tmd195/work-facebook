@@ -16,7 +16,7 @@ brand:
   icon: "assets/brands/decode/icon.png"
 
 autopost:
-  live: false                          # chờ anh duyệt bài mẫu
+  live: true                           # anh cho đăng thật từ 03/10/2026 (đăng bù chiều 03/10)
 
 design:
   titles_upper: true                   # mọi tiêu đề bài IN HOA (anh chốt 03/10/2026)

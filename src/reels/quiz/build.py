@@ -330,6 +330,8 @@ def _wipe(layer: Image.Image, k: float) -> Image.Image:
 def frames(s: Setup, t_run0: float, t_peak: float, total: float, lvl, on):
     q = Quiz(s)
     mark = _logo("official/decode_mark_dark_bg.png", 56)
+    wm = _logo("official/decode_mark_dark_bg.png", 420)  # watermark: CHỈ logo (không chữ), giữa màn hình, mờ
+    wm.putalpha(wm.getchannel("A").point(lambda a: int(a * 0.16)))
     run_bars = s.hit - s.k
     side_txt = "SELL!" if s.side == "sell" else "BUY!"
     side_col = T_RED if s.side == "sell" else T_GREEN
@@ -340,6 +342,7 @@ def frames(s: Setup, t_run0: float, t_peak: float, total: float, lvl, on):
         t = fno / FPS
         e_l, e_o = float(lvl[min(fno, len(lvl) - 1)]), float(on[min(fno, len(on) - 1)])
         img = Image.new("RGBA", (W, H), BG + (255,))
+        img.alpha_composite(wm, (W // 2 - wm.width // 2, H // 2 - wm.height // 2))
         # ---- biểu đồ + vùng lời
         if t < t_run0:
             shown, prof = s.k + 1, None
@@ -504,8 +507,9 @@ def main():
     ap.add_argument("--tf", default="M5")
     ap.add_argument("--out")
     ap.add_argument("--music")
+    ap.add_argument("--entry", type=float, help="dựng lại đúng lệnh cũ theo giá vào")
     a = ap.parse_args()
-    s = find(a.symbol, a.tf, [a.system] if a.system else None)
+    s = find(a.symbol, a.tf, [a.system] if a.system else None, want=a.entry)
     if s is None:
         raise SystemExit("Không tìm được setup phù hợp")
     r = make(s, Path(a.out) if a.out else OUTPUT / "reels" / "quiz", Path(a.music) if a.music else None)

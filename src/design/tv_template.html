@@ -94,6 +94,7 @@ class Drawings {
         const Y = p => { const c = self.series.priceToCoordinate(p); return c === null ? null : c * vr; };
         const W = scope.bitmapSize.width;
         const font = (sz, bold) => `${bold ? 'bold ' : ''}${Math.round(sz * vr)}px -apple-system, "Trebuchet MS", Roboto, sans-serif`;
+        const labels = [];
         for (const s of self.shapes) {
           ctx.save();
           if (s.type === 'band') {
@@ -106,18 +107,17 @@ class Drawings {
             const x0 = X(s.i1), x1 = s.i2 == null ? W : X(s.i2), y0 = Y(s.p1), y1 = Y(s.p2);
             ctx.fillStyle = s.fill; ctx.fillRect(Math.min(x0, x1), Math.min(y0, y1), Math.abs(x1 - x0), Math.abs(y1 - y0));
             if (s.border) { ctx.strokeStyle = s.border; ctx.lineWidth = 1 * hr; ctx.strokeRect(Math.min(x0, x1), Math.min(y0, y1), Math.abs(x1 - x0), Math.abs(y1 - y0)); }
-            if (s.label) { ctx.fillStyle = s.labelColor || s.border || '#131722'; ctx.font = font(11, true); ctx.textBaseline = 'middle';
-              ctx.textAlign = s.labelAlign || 'right'; const lx = (s.labelAlign === 'left') ? Math.min(x0, x1) + 6 * hr : Math.max(x0, x1) - 6 * hr;
-              ctx.fillText(s.label, lx, (y0 + y1) / 2); }
+            if (s.label) { const lx = (s.labelAlign === 'left') ? Math.min(x0, x1) + 6 * hr : Math.max(x0, x1) - 6 * hr;
+              labels.push({ text: s.label, color: s.labelColor || s.border || '#131722', x: lx, y: (y0 + y1) / 2,
+                            align: s.labelAlign || 'right' }); }
           } else if (s.type === 'segment') {
             const x0 = X(s.i1), y0 = Y(s.p1), x1 = X(s.i2), y1 = Y(s.p2);
             ctx.strokeStyle = s.color; ctx.lineWidth = (s.width || 1) * hr; if (s.dash) ctx.setLineDash(s.dash.map(v => v * hr));
             ctx.beginPath(); ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.stroke(); ctx.setLineDash([]);
             if (s.arrow) { const a = Math.atan2(y1 - y0, x1 - x0), L = 12 * hr; ctx.fillStyle = s.color; ctx.beginPath();
               ctx.moveTo(x1, y1); ctx.lineTo(x1 - L * Math.cos(a - 0.45), y1 - L * Math.sin(a - 0.45)); ctx.lineTo(x1 - L * Math.cos(a + 0.45), y1 - L * Math.sin(a + 0.45)); ctx.closePath(); ctx.fill(); }
-            if (s.label) { ctx.fillStyle = s.color; ctx.font = font(11, true); ctx.textAlign = s.labelAlign || 'center'; ctx.textBaseline = 'bottom';
-              const lx = s.labelAlign === 'left' ? Math.min(x0, x1) + 4 * hr : s.labelAlign === 'right' ? Math.max(x0, x1) - 4 * hr : (x0 + x1) / 2;
-              ctx.fillText(s.label, lx, (y0 + y1) / 2 - 3 * vr); }
+            if (s.label) { const lx = s.labelAlign === 'left' ? Math.min(x0, x1) + 4 * hr : s.labelAlign === 'right' ? Math.max(x0, x1) - 4 * hr : (x0 + x1) / 2;
+              labels.push({ text: s.label, color: s.color, x: lx, y: (y0 + y1) / 2 - 9 * vr, align: s.labelAlign || 'center' }); }
           } else if (s.type === 'text') {
             ctx.font = font(s.size || 12, true); ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
             const x = X(s.i), y = Y(s.p) + (s.dy || 0) * vr, w = ctx.measureText(s.text).width + 10 * hr, h = (s.size || 12) * 1.6 * vr;
@@ -125,6 +125,47 @@ class Drawings {
             ctx.fillStyle = s.color || '#131722'; ctx.fillText(s.text, x, y);
           }
           ctx.restore();
+        }
+        self.labels = labels;                            // nhãn chữ vẽ ở lớp TRÊN CÙNG (không bị nến/EMA đè)
+      });
+    } }) }, { zOrder: () => 'top', renderer: () => ({ draw(target) {
+      target.useBitmapCoordinateSpace(scope => {
+        const ctx = scope.context, hr = scope.horizontalPixelRatio, vr = scope.verticalPixelRatio;
+        ctx.font = `bold ${Math.round(11 * vr)}px -apple-system, "Trebuchet MS", Roboto, sans-serif`;
+        ctx.textBaseline = 'middle';
+        // vật cản: nhãn sóng HH/HL/LH/LL (marker) – ô nhãn vùng phải né cả chúng
+        const ts = self.chart.timeScale(), byTime = {};
+        for (const c of SPEC.candles) byTime[c.time] = c;
+        const blocks = [];
+        for (const m of (SPEC.markers || [])) {
+          const c = byTime[m.time], xc = ts.timeToCoordinate(m.time);
+          if (!c || xc === null) continue;
+          const yp = self.series.priceToCoordinate(m.position === 'aboveBar' ? c.high : c.low);
+          if (yp === null) continue;
+          const yc = (yp + (m.position === 'aboveBar' ? -24 : 24)) * vr;
+          blocks.push([xc * hr - 18 * hr, yc - 14 * vr, 36 * hr, 28 * vr]);
+        }
+        const overlap = (x0, y0, w, h, r) => !(x0 + w < r[0] || x0 > r[0] + r[2] || y0 + h < r[1] || y0 > r[1] + r[3]);
+        const placed = [];
+        for (const L of (self.labels || [])) {
+          const w = ctx.measureText(L.text).width + 10 * hr, h = 16 * vr;
+          const bx = L.align === 'left' ? L.x - 5 * hr : L.align === 'right' ? L.x - w + 5 * hr : L.x - w / 2;
+          let x0 = bx, y = L.y, best = null;
+          // thử dịch dọc rồi dịch ngang sang trái; chọn chỗ không đè nhãn khác & nhãn sóng
+          const tries = [];
+          for (let k = 0; k < 9; k++) tries.push([0, (k % 2 ? -1 : 1) * Math.ceil(k / 2) * h * 0.75]);
+          for (let j = 1; j < 6; j++) for (const dy of [0, -h * 0.75, h * 0.75]) tries.push([-j * 60 * hr, dy]);
+          for (const [dx, dy] of tries) {
+            const tx = bx + dx, ty = L.y + dy;
+            const n = placed.filter(r => overlap(tx, ty - h / 2, w, h, r)).length * 2 + blocks.filter(r => overlap(tx, ty - h / 2, w, h, r)).length;
+            if (best === null || n < best[0]) best = [n, tx, ty];
+            if (n === 0) break;
+          }
+          x0 = best[1]; y = best[2];
+          placed.push([x0, y - h / 2, w, h]);
+          ctx.fillStyle = SPEC.theme.bg + 'e6'; ctx.beginPath(); ctx.roundRect(x0, y - h / 2, w, h, 3 * hr); ctx.fill();
+          ctx.strokeStyle = L.color; ctx.lineWidth = 1 * hr; ctx.stroke();
+          ctx.fillStyle = L.color; ctx.textAlign = 'left'; ctx.fillText(L.text, x0 + 5 * hr, y);
         }
       });
     } }) }];

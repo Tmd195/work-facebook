@@ -248,10 +248,8 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
                 break
             print(f"  ! ảnh lỗi (lần {k + 1}): {rep['major']}", flush=True)
             if k == 2:
-                telegram.send(f"⚠️ {name} {day}: ảnh vẫn còn lỗi hiển thị sau 2 lần sửa, em vẫn đăng đúng giờ:
-"
-                              + "
-".join(rep["major"]))
+                telegram.send(f"⚠️ {name} {day}: ảnh vẫn còn lỗi hiển thị sau 2 lần sửa, em vẫn đăng đúng giờ:\n"
+                              + "\n".join(rep["major"]))
                 break
             try:
                 if not generate(job):

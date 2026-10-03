@@ -78,7 +78,7 @@ def generate(out_dir: Path) -> bool:
     rr = ((s.entry - s.l[s.hit]) if s.side == "sell" else (s.h[s.hit] - s.entry)) / abs(s.entry - s.sl)
     body = (f"BUY OR SELL? {s.symbol}\n"
             f"Nhìn biểu đồ trước khi lộ đáp án, bạn sẽ vào lệnh nào?\n"
-            f"Đáp án: {side} – {s.name.lower()}, giá chạy +{rr:.1f}R.\n"
+            f"Xem hết video để biết lệnh chạy bao xa.\n"            # KHÔNG ghi đáp án ở caption (lộ trước)
             f"Ví dụ trên dữ liệu quá khứ, không phải tín hiệu giao dịch.")
     caption = cwg_daily.caption(body, ["BuyOrSell", "Forex", s.symbol, "PriceAction"])
     (f / "caption.txt").write_text(caption, encoding="utf-8")

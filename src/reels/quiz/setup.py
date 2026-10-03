@@ -252,7 +252,7 @@ SCAN = {"range": _range, "double": _double, "fibo": _fibo, "retest": _retest, "a
 
 
 def find(symbol: str, tf: str = "M5", systems: list | None = None, min_run=4, max_run=30,
-         skip: set | None = None) -> Setup | None:
+         skip: set | None = None, want: float | None = None) -> Setup | None:
     """Setup có nhịp chạy DÀI NHẤT (≥ MIN_R) trong dữ liệu, theo thứ tự hệ thống ưu tiên.
     Giá chạy tới đỉnh thật của nhịp (không cắt ở TP); TP vẽ ở 80% quãng chạy để giá vọt qua hộp TP như mẫu."""
     key = (symbol, tf)
@@ -287,6 +287,8 @@ def find(symbol: str, tf: str = "M5", systems: list | None = None, min_run=4, ma
                     continue
                 if hit is not None and rr >= MIN_R and min_run <= hit - k <= max_run and (best is None or rr > best[0]):
                     best = (rr, k, hit, (side, entry, sl_, tp, name, reason, ann))
+            if want is not None and abs(entry - want) > 1e-6:   # dựng lại đúng 1 lệnh cũ (theo giá vào)
+                continue
             if best and f"{symbol}|{entry:.5f}" not in (skip or set()):   # lệnh đã đăng → bỏ (không lặp)
                 cands.append(best)
         if ALL is not None:
