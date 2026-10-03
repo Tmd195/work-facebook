@@ -71,14 +71,15 @@ def watermark(img: Image.Image, dark: bool = True):
     d = ImageDraw.Draw(img, "RGBA")
     ic = _logo(40)
     x = W // 2 - 150
-    _put(img, ic, (x, 1622))
+    y0 = 236                                           # dưới đầu khung (đáy là vùng tên Page + caption của Reels)
+    _put(img, ic, (x, y0))
     col = (255, 255, 255) if dark else (30, 30, 36)
     if img.mode == "RGBA":
         lay = Image.new("RGBA", (420, 60), (0, 0, 0, 0))
         ImageDraw.Draw(lay).text((0, 30), "CWG MARKETS GLOBAL", font=sans("ExtraBold", 26), fill=col + (150,), anchor="lm")
-        img.alpha_composite(lay, (x + 52, 1612))
+        img.alpha_composite(lay, (x + 52, y0 - 10))
     else:
-        d.text((x + 52, 1642), "CWG MARKETS GLOBAL", font=sans("ExtraBold", 26), fill=col + (150,), anchor="lm")
+        d.text((x + 52, y0 + 20), "CWG MARKETS GLOBAL", font=sans("ExtraBold", 26), fill=col + (150,), anchor="lm")
 
 
 def pair_icons(img: Image.Image, symbol: str, cx: float, cy: float, size: int, k: float = 1.0, gap: float = 0.62):
@@ -181,8 +182,8 @@ class Chart:
         d = ImageDraw.Draw(img, "RGBA")
         # khung phụ (RSI/Stoch) đẩy vùng giá lên
         ks = prog(t, sub_t, 0.6) if sub and sub_t is not None else 0.0
-        top, bot = 290, 1420 - 260 * ks
-        x0, x1 = 50, 880
+        top, bot = 300, 1400 - 250 * ks
+        x0, x1 = 50, 800                                   # cột giá x 818-915: chừa cột nút Like/Comment/Share
         # khung nhìn: phóng to về 45 nến cuối khi có "zoom"
         zt = next((s for k_, s in overlays if k_ == "zoom"), None)
         kz = prog(t, zt, 1.0) if zt is not None else 0.0
@@ -374,7 +375,7 @@ def subtitle(img: Image.Image, t: float, subs: list, dark: bool = True):
     widths = [d.textlength(w, font=f) for w in group]
     lines, cur_l, cw = [], [], 0.0
     for w, wd in zip(group, widths):
-        if cur_l and cw + space + wd > 900:
+        if cur_l and cw + space + wd > 760:
             lines.append(cur_l)
             cur_l, cw = [], 0.0
         cur_l.append((w, wd))
@@ -384,7 +385,7 @@ def subtitle(img: Image.Image, t: float, subs: list, dark: bool = True):
     n = g0
     for ln in lines:
         lw = sum(wd for _, wd in ln) + space * (len(ln) - 1)
-        x = W / 2 - lw / 2
+        x = 458 - lw / 2                                # giữa vùng an toàn (trái cột nút Reels)
         d.rounded_rectangle([x - 22, y - 38, x + lw + 22, y + 36], radius=16, fill=(0, 0, 0, 150) if dark else (20, 24, 40, 200))
         for w, wd in ln:
             col = RED if n == idx else (255, 255, 255)

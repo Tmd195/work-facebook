@@ -178,7 +178,8 @@ def contact_sheet(video: Path, out: Path, n: int = 10) -> Path:
     d = ImageDraw.Draw(sheet)
     for i, (t, f) in enumerate(frames):
         x, y = (i % cols) * 432, (i // cols) * 800
-        sheet.paste(Image.open(f), (x, y))
+        from src.reels.safezone import mock          # phủ mô phỏng giao diện Reels (nút, tên Page, caption)
+        sheet.paste(mock(Image.open(f), alpha=110).convert("RGB").resize((432, 768)), (x, y))
         d.text((x + 8, y + 772), f"#{i + 1}  {t:.1f}s", font=sans("Bold", 22), fill=(0, 0, 0))
     sheet.save(out, quality=88)
     for _, f in frames:
@@ -195,6 +196,9 @@ CHECKLIST = """Bạn là người duyệt video Reels trước khi đăng Facebo
 - nến mảnh như sợi chỉ, biểu đồ trống/không có nến khi lẽ ra phải có, hình vỡ/nhiễu
 - phụ đề sai chính tả nặng, dính chữ, quá dài che biểu đồ
 - logo/thương hiệu bị méo, mất; khung đen/trắng trống bất thường giữa video (khung cuối mờ dần là bình thường)
+- Mỗi khung có phủ MÔ PHỎNG giao diện Facebook Reels (vùng xám mờ: thanh trên, cột nút Like/Comment/Share bên phải,
+  tên Page + caption ở đáy). Nội dung QUAN TRỌNG (chữ, nhãn giá, số, phụ đề, logo) bị vùng xám che mất → lỗi major;
+  chỉ nền/trang trí bị che là bình thường.
 Chỉ báo lỗi THẬT nhìn thấy rõ; hiệu ứng đang chuyển cảnh/mờ dần/bật lên là bình thường."""
 
 
