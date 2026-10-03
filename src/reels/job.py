@@ -28,19 +28,23 @@ def generate(out_dir: Path) -> bool:
         return edu.generate(out_dir)
     from src.reels import qa
     brief = script.next_brief()
-    s, f = script.write(brief), folder(out_dir)
-    for attempt in range(1, 4):                       # dựng → kiểm tra → tự sửa tối đa 2 lần
-        res = build.make(s, f)
-        rep = qa.run(res["video"], f, min_dur=25, max_dur=110, voices=res["voices"],
-                     context="Video kiến thức vàng tiếng Việt của Page Duy Thái Đặng (có ảnh người thật).")
-        if rep["ok"]:
-            break
-        print(f"  ! kiểm tra lần {attempt} không đạt: {rep['errors']}", flush=True)
-        if attempt == 3:
-            qa.fail_alert("Reels Duy Thái Đặng", rep, attempt)
-            raise qa.QAFail("; ".join(rep["errors"][:3]), Path(rep["sheet"]))
-        if rep["fix"]:                                 # cùng kịch bản dựng lại sẽ ra đúng hình cũ → viết mới
-            s = script.write(brief)
+    f = folder(out_dir)
+    st = {"s": script.write(brief)}
+
+    def make(variant):
+        from src.reels import marks
+        marks.VARIANT = variant
+        return build.make(st["s"], f)
+
+    def check(res):
+        return qa.run(res["video"], f, min_dur=10, max_dur=qa.FB_MAX, voices=res["voices"],
+                      context="Video kiến thức vàng tiếng Việt của Page Duy Thái Đặng (có ảnh người thật).")
+
+    def fix(errors):                                   # AI sửa đúng chỗ lỗi, giữ nguyên nội dung/hiệu ứng
+        st["s"] = qa.edit_spec(st["s"], errors)
+
+    res = qa.produce("Reels Duy Thái Đặng", f, make, check, fix)
+    s = json.loads((f / "script.json").read_text(encoding="utf-8"))
     tags = [BRAND_TAG] + [t if t.startswith("#") else "#" + t for t in s.get("hashtags") or []]
     tags = list(dict.fromkeys(t.replace(" ", "") for t in tags))
     caption = fbtext.render(s["caption"]).strip() + "\n\n" + " ".join(tags[:7])

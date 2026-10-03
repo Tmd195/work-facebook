@@ -19,22 +19,29 @@ def generate(out_dir: Path) -> bool:
     from src.content import cwg_daily
     from src.reels import qa
     symbol = build.next_symbol()
-    spec, f = build.write(symbol), folder(out_dir)
-    for attempt in range(1, 4):                       # dựng → kiểm tra → tự sửa tối đa 2 lần
-        music = old.pick_music()
-        res = build.make(spec, f, music=music)
-        texts = ([spec.get("hook_text") or spec["hook"]] + [x.get("text") or x["say"] for x in spec["lines"]]
-                 + [spec["title"], spec["question"], spec["caption"]])
-        rep = qa.run(res["video"], f, min_dur=25, max_dur=62, texts=texts, facts=res["facts"], banned=BANNED,
-                     voices=res["voices"], context=f"Video thị trường {symbol} của Page CWG Markets Global (tiếng Anh).")
-        if rep["ok"]:
-            break
-        print(f"  ! kiểm tra lần {attempt} không đạt: {rep['errors']}", flush=True)
-        if attempt == 3:
-            qa.fail_alert(f"Reels CWG Global {symbol}", rep, attempt)
-            raise qa.QAFail("; ".join(rep["errors"][:3]), Path(rep["sheet"]))
-        if rep["fix"]:                                 # cùng kịch bản dựng lại sẽ ra đúng hình cũ → viết mới
-            spec = build.write(symbol)
+    f = folder(out_dir)
+    st = {"spec": build.write(symbol), "music": None}
+
+    def make(variant):
+        from src.reels.mkt import render as R
+        R.VARIANT = variant
+        st["music"] = st["music"] or old.pick_music()
+        return build.make(st["spec"], f, music=st["music"])
+
+    def check(res):
+        sp = st["spec"]
+        texts = ([sp.get("hook_text") or sp["hook"]] + [x.get("text") or x["say"] for x in sp["lines"]]
+                 + [sp["title"], sp["question"], sp["caption"]])
+        return qa.run(res["video"], f, min_dur=10, max_dur=qa.FB_MAX, texts=texts, facts=res["facts"], banned=BANNED,
+                      voices=res["voices"], context=f"Video thị trường {symbol} của Page CWG Markets Global (tiếng Anh).")
+
+    def fix(errors):                                   # AI sửa đúng câu lỗi, giữ nguyên phần còn lại
+        st["spec"] = qa.edit_spec(st["spec"], errors, "Số liệu thật (chỉ được dùng các số này): "
+                                  + json.dumps(build.D.load(symbol).facts, ensure_ascii=False))
+
+    res = qa.produce(f"Reels CWG Global {symbol}", f, make, check, fix)
+    spec = json.loads((f / "script.json").read_text(encoding="utf-8"))   # kịch bản của bản được đăng
+    music = st["music"]
     caption = cwg_daily.caption(spec["caption"], [t.lstrip("#") for t in spec.get("hashtags") or []])
     (folder(out_dir) / "caption.txt").write_text(caption, encoding="utf-8")
     (folder(out_dir) / "meta.json").write_text(json.dumps(

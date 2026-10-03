@@ -174,7 +174,8 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     day = now.strftime("%d/%m")
     target = (now.replace(hour=int(at[:2]), minute=int(at[3:]), second=0, microsecond=0) if at
               else target_time(job, now))
-    if not no_wait and target - now > MAX_EARLY:
+    early = timedelta(hours=3, minutes=15) if job == "reel" else MAX_EARLY   # Reels dựng sớm để kịp kiểm tra
+    if not no_wait and target - now > early:
         print(f"Bỏ qua: giờ đăng {target:%H:%M}, còn quá sớm (lịch chạy của mùa khác)")
         return True
     if not no_wait and now - target > timedelta(hours=2):

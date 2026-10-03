@@ -16,6 +16,7 @@ GRID = (26, 32, 52)
 AXIS = (120, 130, 155)
 CANDLE = (38, 166, 154)          # nến tăng xanh ngọc, thân đặc (kiểu MT5/TradingView)
 DOWN = (239, 83, 80)              # nến giảm đỏ, thân đặc
+VARIANT = 0                       # bố cục thay thế khi bộ kiểm tra thấy lỗi hiển thị (dời nhãn, cỡ chữ)
 VIEW = 62                         # số nến hiện trên màn hình (giống biểu đồ điện thoại – thân nến dày)
 RED = (225, 0, 22)
 LIGHT = (226, 231, 228)
@@ -243,7 +244,9 @@ class Chart:
                 col = SUP if kind == "support" else RES
                 y = Y(lv)
                 _dash(d, (x0, y), (x0 + (x1 - x0) * k, y), col + (255,), w=3)
-                tags.append((x0 + 170, y - 27, f"{kind.upper()} {lv:,.{m.digits}f}", col, ease_back(k)))
+                tx = (x0 + 170, x1 - 300, x0 + 20)[VARIANT % 3]          # bố cục khác: nhãn sang phải / sát trái
+                ty = y - 27 if VARIANT % 2 == 0 else y + 27                # bố cục lẻ: nhãn dưới đường
+                tags.append((tx, ty, f"{kind.upper()} {lv:,.{m.digits}f}", col, ease_back(k)))
             elif kind == "lows" and m.ind.get("lows"):
                 lw = m.ind["lows"]
                 y = Y(lw["level"])
@@ -365,7 +368,7 @@ def subtitle(img: Image.Image, t: float, subs: list, dark: bool = True):
         acc += wt
     g0 = idx // 6 * 6
     group = words[g0: g0 + 6]
-    f = sans("ExtraBold", 50)
+    f = sans("ExtraBold", 50 - 4 * min(VARIANT, 3))
     d = ImageDraw.Draw(img, "RGBA")
     space = d.textlength(" ", font=f)
     widths = [d.textlength(w, font=f) for w in group]
@@ -377,7 +380,7 @@ def subtitle(img: Image.Image, t: float, subs: list, dark: bool = True):
         cur_l.append((w, wd))
         cw += (space if cw else 0) + wd
     lines.append(cur_l)
-    y = 1470 - (len(lines) - 1) * 32
+    y = 1515 - (len(lines) - 1) * 36                   # dưới khung chỉ báo phụ (RSI/Stoch), trên logo đáy
     n = g0
     for ln in lines:
         lw = sum(wd for _, wd in ln) + space * (len(ln) - 1)

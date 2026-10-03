@@ -34,6 +34,7 @@ BRAND = (225, 0, 22)
 COLORS = {"y": (255, 196, 46), "o": (255, 150, 52), "r": (255, 86, 98), "g": (46, 214, 152),
           "c": (64, 204, 255), "b": (102, 154, 255), "p": (176, 136, 255), "w": TEXT}
 
+VARIANT = 0                       # bố cục thay thế khi bộ kiểm tra thấy nhãn đè/che
 CARD_BOX = (40, 116, 1040, 1690)
 PLOT = (84, 600, 908, 1440)          # vùng nến (trái, trên, phải, dưới)
 VOL = (84, 1462, 908, 1540)
@@ -192,6 +193,7 @@ def _pill(d: ImageDraw.ImageDraw, x: float, y: float, text: str, col, anchor: st
           size: int = 23, solid: bool = False):
     if alpha <= 0.01:
         return
+    size = max(14, size - 2 * min(VARIANT, 3))
     f = sans("Bold", size)
     tw = d.textlength(text, font=f)
     w, h = tw + 34, size + 22
@@ -376,10 +378,13 @@ def draw_marks(d: ImageDraw.ImageDraw, ch: Chart, v: View, marks: list[Mark], t:
                 _dashed_rect(d, (x0, y0, xe, y1), col, int(220 * k))
             elif label:
                 if typ == "box":
-                    below = m.get("label_pos") == "below"
+                    below = (m.get("label_pos") == "below") != (VARIANT % 2 == 1)
                     _pill(d, (x0 + x1) / 2, (y1 + 34) if below else (y0 - 34), label, col, alpha=k)
                 else:
-                    _pill(d, x1 + 10, (y0 + y1) / 2, label, col, anchor="lm", alpha=k)
+                    if VARIANT % 2 == 1:                     # bố cục lẻ: nhãn FVG/OB đặt phía trên vùng
+                        _pill(d, (x0 + x1) / 2, y0 - 30, label, col, alpha=k)
+                    else:
+                        _pill(d, x1 + 10, (y0 + y1) / 2, label, col, anchor="lm", alpha=k)
         elif typ == "level":
             y = v.y(g["p"])
             x0 = _cx(v.x(g["i0"]) - v.slot / 2)

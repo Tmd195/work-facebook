@@ -29,6 +29,7 @@ MARKS_SPEC = """Sơ đồ minh họa "diagram": {"path":[5-12 điểm đỉnh/đ
   Sơ đồ phải ĐÚNG kỹ thuật: ví dụ Buy thì SL dưới đáy, TP phía trên; dời SL thì SL mới nằm dưới đáy mới cao hơn."""
 
 
+VARIANT = 0                 # bố cục thay thế khi bộ kiểm tra thấy nhãn đè/che (đổi thứ tự né, cỡ chữ)
 _PLACED: list = []          # nhãn đã đặt trong khung hình hiện tại (x, y, w, h)
 
 
@@ -137,6 +138,7 @@ def build(diagram: dict, css_w: int, css_h: int, scale: int = 3):
 def _label(d: ImageDraw.ImageDraw, x, y, text, color, size, anchor="mm", alpha=255):
     if not text or alpha <= 0:
         return
+    size = max(12, int(size * (1 - 0.08 * min(VARIANT, 3))))
     f = _font(size)
     w = d.textlength(text, font=f) + size * 0.9
     h = size * 1.5
@@ -158,8 +160,9 @@ def _label(d: ImageDraw.ImageDraw, x, y, text, color, size, anchor="mm", alpha=2
         return w / 2 + 2 <= cx <= lw_ - w / 2 - 2 and h / 2 + 2 <= cy <= lh_ - h / 2 - 2
 
     step = h + 8
-    cands = [(x, y)] + [(x, y + s * k * step) for k in range(1, 6) for s in (-1, 1)] \
-        + [(x + s * (w + 10), y + dy) for s in (-1, 1) for dy in (0, -step, step)]
+    vert = [(x, y + s * k * step) for k in range(1, 6) for s in ((-1, 1) if VARIANT % 2 == 0 else (1, -1))]
+    side = [(x + s * (w + 10), y + dy) for s in (-1, 1) for dy in (0, -step, step)]
+    cands = [(x, y)] + (side + vert if VARIANT % 3 == 2 else vert + side)
     ok = [(cx, cy) for cx, cy in cands if inside(cx, cy) and overlap(cx, cy) == 0]
     if ok:
         x, y = ok[0]

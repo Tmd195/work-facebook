@@ -24,7 +24,7 @@ VOICE_REF = ROOT / "assets" / "private" / "voice_ref_cwg_global.mp3"
 
 SYSTEM = """You write short market Reels (30-50 seconds) for the Facebook Page "CWG Markets Global" (English, traders in
 Southeast Asia). Style: like a broker's daily chart story – one asset, one clear technical idea, calm and factual.
-STRUCTURE (30-45 seconds total): a punchy title (2-4 words, e.g. "GOLD'S BOUNCE?", "AUDUSD'S UPTREND", "XAUUSD UNDER PRESSURE"), a spoken hook,
+STRUCTURE: a punchy title (2-4 words, e.g. "GOLD'S BOUNCE?", "AUDUSD'S UPTREND", "XAUUSD UNDER PRESSURE"), a spoken hook,
 3-5 short story lines that walk through the REAL chart, each tied to one on-screen overlay, then a closing question.
 RULES: use ONLY the numbers given in the facts (round sensibly); never invent news, prices or probabilities;
 no buy/sell signals, no entry/SL/TP, no profit promises; describe what traders watch and possible scenarios
@@ -70,13 +70,13 @@ def write(symbol: str) -> dict:
     recent = _state().get("titles", [])[-12:]
     user = (f"Asset: {symbol}\nFacts (real data, H4 chart = 4-hour candles; say 'on the four-hour chart'):\n{json.dumps(m.facts, ensure_ascii=False)}\n"
             f"Recent titles of the channel (do not repeat): {recent}\n"
-            "Write the Reel. TOTAL video must stay under 45 seconds: hook ≤ 9 words, exactly 3-4 lines, each ≤ 16 words "
-            "(short, punchy, one idea per line), question ≤ 9 words "
+            "Write the Reel. hook ≤ 12 words, 3-5 lines, each ≤ 22 words (natural, one idea per line), "
+            "question ≤ 10 words "
             "(e.g. 'Would you buy, sell or wait?' or a sharper question about the setup). "
             "caption: 40-80 words, first line = title in CAPS, then 2-4 short lines with emoji bullets; no hashtags inside.")
     s = generate_json(SYSTEM, user, SCHEMA)
     s["symbol"] = symbol
-    s["lines"] = [x for x in s["lines"] if x.get("say")][:4]
+    s["lines"] = [x for x in s["lines"] if x.get("say")][:5]
     if not any(x["overlay"] != "none" for x in s["lines"]):
         s["lines"][-1]["overlay"] = "support"
     return s

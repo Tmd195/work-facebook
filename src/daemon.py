@@ -24,7 +24,8 @@ from src.publish import telegram
 
 SESSION = timedelta(hours=5, minutes=20)
 LEAD = timedelta(minutes=25)               # bắt đầu tạo bài trước giờ đăng
-LEAD_REEL = timedelta(minutes=55)          # video dựng lâu hơn (AI + giọng + dựng hình)
+LEAD_REEL = timedelta(hours=3)             # Reels dựng sớm 3 tiếng (kiểm tra + viết lại nhiều lần vẫn kịp giờ)
+REEL_PROCS: dict = {}                      # Reels chạy tiến trình riêng (không chặn bài khác): slot → Popen
 ATTEMPTS = STATE / "attempts.json"
 ST = STATE.relative_to(ROOT).as_posix()       # state hoặc state/<job>
 DAYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
@@ -107,10 +108,42 @@ def weekly_report_due(now: datetime) -> bool:
     return now.strftime("%Y-%m-%d") not in weekly
 
 
+def start_reel(job: str, target: datetime, session_end: datetime | None):
+    """Dựng + đăng Reels ở tiến trình riêng: dựng sớm, tự chờ đúng giờ đăng, các bài khác vẫn chạy song song."""
+    from src.runner import _slot
+    slot = _slot(job, target)
+    p = REEL_PROCS.get(slot)
+    if p is not None:
+        if p.poll() is None:
+            return                                      # đang dựng / đang chờ giờ
+        del REEL_PROCS[slot]
+        save_state(f"Đăng bài {job} {target:%H:%M}")
+        return
+    now = datetime.now(TZ)
+    if session_end and target + timedelta(minutes=10) > session_end:
+        return                                          # phiên hết trước giờ đăng → để phiên kế tiếp dựng
+    att = _attempts()
+    att[slot] = att.get(slot, 0) + 1
+    ATTEMPTS.parent.mkdir(parents=True, exist_ok=True)
+    ATTEMPTS.write_text(json.dumps(dict(sorted(att.items())[-100:]), ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"$ [nền] python -m src.runner {job} --at {target:%H:%M} (dựng sớm {(target - now).seconds // 60}')", flush=True)
+    REEL_PROCS[slot] = subprocess.Popen([sys.executable, "-m", "src.runner", job, "--at", f"{target:%H:%M}"], cwd=ROOT)
+
+
+SESSION_END = None
+
+
 def one_round():
     sync()
     now = datetime.now(TZ)
+    for slot, p in list(REEL_PROCS.items()):            # Reels nền đã xong → lưu trạng thái
+        if p.poll() is not None:
+            del REEL_PROCS[slot]
+            save_state(f"Đăng Reels {slot}")
     for job, target in due_jobs(now):
+        if job == "reel":
+            start_reel(job, target, SESSION_END)
+            continue
         run_post(job, target)
     if IS_DEFAULT_JOB:                                   # comment theo dõi + báo cáo tuần: riêng Page Thái
         sh("python -m src.followup auto", 2400)
@@ -127,7 +160,9 @@ def main():
     if a.once:
         one_round()
         return
+    global SESSION_END
     start = datetime.now(TZ)
+    SESSION_END = start + SESSION
     print(f"Bộ điều phối [{JOB}] bắt đầu {start:%H:%M %d/%m}, chạy tới {start + SESSION:%H:%M}", flush=True)
     if (CONFIG.get("hunter") or {}).get("enabled"):     # bộ săn tin chạy luồng riêng, không bị bài theo lịch chặn
         import threading
@@ -145,6 +180,13 @@ def main():
             if errors == 3:
                 telegram.need_fix(f"❌ Bộ điều phối lỗi 3 lần liên tiếp: {type(exc).__name__}: {exc}")
         time.sleep(120)
+    for slot, p in REEL_PROCS.items():                  # chờ Reels nền đăng xong rồi mới kết thúc phiên
+        try:
+            p.wait(timeout=1800)
+        except subprocess.TimeoutExpired:
+            print(f"  ! Reels {slot} chưa xong khi hết phiên", flush=True)
+    if REEL_PROCS:
+        save_state("Đăng Reels (cuối phiên)")
     print("Hết phiên - khởi động phiên kế tiếp", flush=True)
 
 
