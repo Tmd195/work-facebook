@@ -74,19 +74,7 @@
   "459343",
   "459344"
  ],
- "pending": [
-  {
-   "id": "459344",
-   "at": "2026-10-03T10:10:34+07:00",
-   "time": "10:10",
-   "text": "Theo Axios: Các thành viên cấp cao trong nội các của Trump đã tập trung nhiều giờ tại Trại David vào thứ Sáu để thảo luận về chiến tranh Iran và các bước tiếp theo trong xung đột Saudi-Houthi.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
