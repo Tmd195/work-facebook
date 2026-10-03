@@ -60,7 +60,30 @@ def pen(dur=0.6, rng=np.random.default_rng(7)):
     return 0.16 * hp * wob * shape
 
 
-KINDS = {"ting": ting, "whoosh": whoosh, "pop": pop, "pen": pen}
+def boom(dur=1.6):
+    """Tiếng 'boom' trầm điện ảnh (bước ngoặt câu chuyện): sin trầm trượt xuống + chút nhiễu đầu."""
+    n = int(SR * dur)
+    t = np.arange(n) / SR
+    f = 95 * np.exp(-t * 2.2) + 38
+    body = np.sin(2 * np.pi * np.cumsum(f) / SR) * _env(n, 0.004, 2.4)
+    click = np.random.default_rng(5).standard_normal(n) * np.exp(-t * 60) * 0.25
+    x = body + click
+    return 0.9 * x / (np.abs(x).max() + 1e-9)
+
+
+def riser(dur=2.2, rng=np.random.default_rng(11)):
+    """Tiếng 'riser' dồn dần trước bước ngoặt: nhiễu + âm cao trượt lên, to dần rồi cắt."""
+    n = int(SR * dur)
+    t = np.arange(n) / SR
+    f = 220 + 1400 * (t / dur) ** 2
+    tone = np.sin(2 * np.pi * np.cumsum(f) / SR)
+    noise = np.diff(rng.standard_normal(n), prepend=0) * 0.5
+    shape = (t / dur) ** 2.2
+    x = (tone * 0.6 + noise) * shape
+    return 0.5 * x / (np.abs(x).max() + 1e-9)
+
+
+KINDS = {"ting": ting, "whoosh": whoosh, "pop": pop, "pen": pen, "boom": boom, "riser": riser}
 _CACHE: dict = {}
 
 
