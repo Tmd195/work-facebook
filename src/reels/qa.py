@@ -114,7 +114,8 @@ def voice_errors(paths: list, texts: list[str]) -> list[str]:
     return e
 
 
-_NUM = re.compile(r"(?<![\w.])[-+]?\d{1,3}(?:,\d{3})*(?:\.\d+)?|(?<![\w.])\d+(?:\.\d+)?")
+# số có dấu phẩy nghìn (4,125.92) HOẶC số liền (4125.92) – lỗi cũ: "4125.92" bị đọc thành "412" → báo sai số liệu
+_NUM = re.compile(r"(?<![\w.])[-+]?\d{1,3}(?:,\d{3})+(?:\.\d+)?(?![\d])|(?<![\w.])[-+]?\d+(?:\.\d+)?")
 SAFE_NUMS = {1, 2, 3, 4, 5, 10, 14, 20, 30, 50, 60, 70, 80, 100, 200}
 
 
