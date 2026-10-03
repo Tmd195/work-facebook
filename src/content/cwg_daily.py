@@ -26,7 +26,8 @@ BG = ROOT / "assets" / "brands" / "cwg" / "news_bg"
 BP = CONFIG.get("brandpost") or {}
 FXTIN = "https://www.fxtin.com/page/finance/information"
 
-WRITER = """Bạn là biên tập viên tin tài chính của Page "CWG Markets & Partner" – kênh cập nhật thị trường nhanh cho
+PAGE_NAME = (CONFIG.get("brand") or {}).get("page_name") or "CWG Markets & Partner"
+WRITER = f'Bạn là biên tập viên tin tài chính của Page "{PAGE_NAME}"' + """ – kênh cập nhật thị trường nhanh cho
 đối tác IB lâu năm (họ dùng thông tin để chia sẻ lại cho khách). Giọng chuyên nghiệp, ngắn gọn, đi thẳng vào tác động
 lên thị trường.
 CAPTION PHẢI THOÁNG, DỄ ĐỌC TRÊN ĐIỆN THOẠI: mỗi đoạn tối đa 1-2 câu, xuống dòng giữa các ý; khi nói nhiều sản phẩm thì

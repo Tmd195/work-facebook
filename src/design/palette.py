@@ -15,6 +15,7 @@ PRESETS = {
     "xanh-duong": {"name": "Xanh dương · Cyan",  "primary": (12, 74, 140), "accent": (120, 220, 255), "bg": (243, 246, 250)},
     # Thương hiệu CWG Markets: đỏ #FF0012 (lấy từ logo), nhấn trắng hồng, nền trắng xám
     "do-cwg":     {"name": "Đỏ CWG · Trắng",     "primary": (225, 0, 22),  "accent": (255, 236, 238), "bg": (246, 246, 247)},
+    "decode":     {"name": "Tím chàm Decode · Vàng", "primary": (34, 28, 92), "accent": (247, 205, 15), "bg": (247, 244, 236)},
 }
 
 

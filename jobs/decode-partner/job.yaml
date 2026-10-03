@@ -1,0 +1,77 @@
+# Job 3 – Page "Decode Global & Partner" (https://web.facebook.com/DecodeFX.Group/)
+# Tiếng Việt, đối tác IB. Nội dung gần giống CWG VN (tin tức + nhận định) nhưng giao diện riêng theo logo Decode:
+# nền ngà, tím chàm, vàng, tiêu đề chữ có chân (design.theme: decode). Chưa có chính sách IB → chưa có số hoa hồng.
+
+job:
+  id: decode-partner
+  name: "Decode Partner"               # nhãn ở đầu mỗi tin Telegram
+
+brand:
+  name: "DECODE GLOBAL & PARTNER"
+  page_name: "Decode Global & Partner"
+  word: "DECODE"                       # chữ lớn trong logo
+  lockup: ["GLOBAL &", "PARTNER"]
+  handle: "facebook.com/DecodeFX.Group"
+  logo: "assets/brands/decode/logo.png"
+  icon: "assets/brands/decode/icon.png"
+
+autopost:
+  live: false                          # chờ anh duyệt bài mẫu
+
+design:
+  style: block
+  palette: decode
+  theme: decode
+  chart_theme: light
+
+brandpost:
+  language: vi
+  persona: >-
+    Đội ngũ Decode Global & Partner – đối tác IB của sàn DecodeFX tại Việt Nam. Xưng "Decode Partner" hoặc "chúng tôi",
+    gọi người đọc là "anh chị" hoặc "bạn". Giọng chuyên nghiệp, điềm tĩnh, sang trọng, không phô trương.
+  audience: >-
+    Người Việt đang hoặc muốn làm đại lý/IB forex-vàng; trader có cộng đồng, chủ group/kênh tài chính.
+  cta: "📩 Inbox Page để trao đổi hợp tác"
+  # CHỈ dữ kiện đã xác minh (WikiFX, anh gửi link 03/10/2026). Chưa có chính sách hoa hồng → KHÔNG nêu số hoa hồng.
+  facts:
+    - "DecodeFX: Decode Global Limited, công ty kinh doanh quốc tế tại Vanuatu (số đăng ký CN700415)."
+    - "Giấy phép: ASIC (Úc, giấy phép tạo lập thị trường) và VFSC (Vanuatu). Mỗi pháp nhân được cấp phép tại khu vực tương ứng."
+    - "Điểm WikiFX của DecodeFX: 8.51/10."
+    - "Nền tảng MT4, MT5 chính thức và ứng dụng DecodeFX."
+  signature: |-
+    💼 DECODE GLOBAL & PARTNER – ĐỐI TÁC IB CỦA DECODEFX
+    📊 Bản tin & nhận định thị trường mỗi ngày cho đối tác
+    🏛 DecodeFX: giấy phép ASIC (Úc) & VFSC (Vanuatu) · WikiFX 8.51/10
+    🤝 Hỗ trợ đối tác bằng tiếng Việt
+    📩 Inbox Page để trao đổi hợp tác IB
+  rules:
+    - "Chưa có chính sách IB: tuyệt đối không nêu % hoa hồng, $/lot, thưởng hay điều kiện."
+    - "Khi nói giấy phép giữ ý 'mỗi pháp nhân được cấp phép tại khu vực tương ứng'; không nói ASIC bảo vệ khách Việt Nam."
+    - "Không hứa thu nhập, không 'làm giàu nhanh'. Không markdown, không in đậm, không 18+, không kêu gọi comment."
+  disclaimer: >-
+    ⚠️ Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Nội dung mang tính tham khảo, không phải lời
+    khuyên đầu tư.
+
+hashtags:
+  brand: ["#DecodeFX", "#DecodePartner"]
+
+# Lịch đăng (giờ VN) – cùng tuyến bài tin tức như CWG VN, lệch 15 phút để 2 Page không đăng cùng lúc
+schedule:
+  cwg_morning: { time: "07:45", days: [mon, tue, wed, thu, fri] }   # Bản tin đầu ngày
+  cwg_trend:   { time: "08:45", days: [mon, tue, wed, thu, fri] }   # Bảng tin xu hướng
+  cwg_macro:   { time: "10:15", days: [mon, tue, wed, thu, fri] }   # Phân tích vĩ mô
+  cwg_wk_recap: { time: "09:15", days: [sat] }
+  cwg_wk_top5:  { time: "14:15", days: [sat] }
+  cwg_wk_tech:  { time: "20:15", days: [sat] }
+  cwg_wk_cot:   { time: "10:15", days: [sun] }
+  cwg_wk_macro: { time: "15:15", days: [sun] }
+  cwg_wk_ahead: { time: "20:15", days: [sun] }
+
+hunter:
+  enabled: true
+  interval: 120           # thưa hơn CWG (60s) và Global (90s) để 3 Page không dồn truy vấn vào fxtin
+  batch_minutes: 5
+  min_gap_minutes: 30
+  max_per_day: 3
+  weekend_max_per_day: 1
+  weekend_min_score: 8

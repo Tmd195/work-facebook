@@ -9,15 +9,27 @@ from src.i18n import TZ_LABEL
 from src.i18n import t as tr
 from src.config import CONFIG
 from src.design.brand_carousel import (M, WHITE, _bg_candles, _glow, _icon_shield, _logo, _pill, _shadow)
-from src.design.common import SIZE_4X5, fit, sans, save, wrap
-from src.design.palette import INK, MUTED, PRIMARY
+from src.design.common import SIZE_4X5, fit, sans, save, serif, wrap
+from src.design.palette import ACCENT, INK, MUTED, PRIMARY
 
 W, H = SIZE_4X5
+# Chủ đề theo Page (job.yaml design.theme): cwg (mặc định – trắng/đỏ) | decode (ngà/tím chàm/vàng, tiêu đề có chân)
+THEME = (CONFIG.get("design") or {}).get("theme", "cwg")
+DECODE = THEME == "decode"
+WORD = (CONFIG.get("brand") or {}).get("word") or "CWG"          # chữ lớn trong logo
 UP = (22, 150, 90)
-DOWN = PRIMARY
+DOWN = (205, 45, 52) if DECODE else PRIMARY                      # giảm luôn là đỏ (Decode không lấy màu thương hiệu)
 FLAT = (120, 120, 128)
-LINE = (232, 232, 236)
-PAPER_TOP, PAPER_BOT = (252, 252, 253), (241, 241, 244)
+LINE = (232, 228, 216) if DECODE else (232, 232, 236)
+PAPER_TOP, PAPER_BOT = ((252, 250, 244), (242, 238, 226)) if DECODE else ((252, 252, 253), (241, 241, 244))
+SOFT = (252, 243, 205) if DECODE else (253, 234, 236)             # nền nhãn nhạt (mức ảnh hưởng…)
+
+
+def hb(size: int):
+    """Font tiêu đề/chữ đậm: Decode dùng chữ có chân cho cỡ lớn (≥ 34), CWG giữ Be Vietnam Pro ExtraBold."""
+    if DECODE and size >= 34:
+        return serif(700, size)
+    return sans("ExtraBold", size)
 
 
 def _paper() -> Image.Image:
@@ -36,13 +48,13 @@ LOCKUP = (CONFIG.get("brand") or {}).get("lockup") or ["MARKETS &", "PARTNER"]
 def _brand_header(img: Image.Image, right: str = ""):
     """Thanh đỏ trên cùng + logo + tên Page; bên phải nhãn nhỏ (vd. giờ tin)."""
     d = ImageDraw.Draw(img)
-    d.rectangle([0, 0, W, 10], fill=PRIMARY)
+    d.rectangle([0, 0, W, 10], fill=ACCENT if DECODE else PRIMARY)
     _brand_lockup(img, M, 26)
     d = ImageDraw.Draw(img)
     if right:
         f = sans("Bold", 22)
         w = d.textlength(right, font=f) + 36
-        d.rounded_rectangle([W - M - w, 48, W - M, 88], radius=20, fill=(244, 244, 247))
+        d.rounded_rectangle([W - M - w, 48, W - M, 88], radius=20, fill=(236, 231, 216) if DECODE else (244, 244, 247))
         d.text((W - M - w / 2, 68), right, font=f, fill=MUTED, anchor="mm")
 
 
@@ -51,15 +63,17 @@ def _brand_footer(img: Image.Image, note: str):
     d = ImageDraw.Draw(img)
     d.text((M, H - 112), note, font=sans("Medium", 15), fill=MUTED, anchor="lm")
     d.rectangle([0, H - 92, W, H], fill=PRIMARY)
+    if DECODE:
+        d.rectangle([0, H - 92, W, H - 87], fill=ACCENT)          # viền vàng trên dải chân
     icon = _logo("icon", 46)
     x = M
     if icon is not None:
         d.rounded_rectangle([x - 4, H - 70, x + icon.width + 4, H - 20], radius=12, fill=WHITE)
         img.alpha_composite(icon, (x, H - 68))
         x += icon.width + 22
-    d.text((x, H - 46), "CWG", font=sans("ExtraBold", 34), fill=WHITE, anchor="lm")
-    x += d.textlength("CWG", font=sans("ExtraBold", 34)) + 14
-    d.text((x, H - 46), " ".join(LOCKUP), font=sans("Bold", 22), fill=(255, 220, 224), anchor="lm")
+    d.text((x, H - 46), WORD, font=hb(34), fill=WHITE, anchor="lm")
+    x += d.textlength(WORD, font=hb(34)) + 14
+    d.text((x, H - 46), " ".join(LOCKUP), font=sans("Bold", 22), fill=ACCENT if DECODE else (255, 220, 224), anchor="lm")
     d.text((W - M, H - 46), CONFIG["brand"]["handle"], font=sans("Bold", 24), fill=WHITE, anchor="rm")
 
 
@@ -67,9 +81,9 @@ def _brand_lockup(img: Image.Image, x: int, y: int):
     """Cụm logo nổi: thẻ trắng + biểu tượng + chữ CWG đỏ lớn + MARKETS & PARTNER."""
     d = ImageDraw.Draw(img)
     icon = _logo("icon", 60)
-    fw = sans("ExtraBold", 44)
+    fw = hb(44)
     fs = sans("Bold", 17)
-    w = (icon.width if icon else 0) + 22 + d.textlength("CWG", font=fw) + 16 + max(d.textlength(x, font=fs) for x in LOCKUP) + 40
+    w = (icon.width if icon else 0) + 22 + d.textlength(WORD, font=fw) + 16 + max(d.textlength(x, font=fs) for x in LOCKUP) + 40
     _shadow(img, (x, y, x + w, y + 84), 20, blur=14, offset=(0, 8), alpha=70)
     d = ImageDraw.Draw(img)
     d.rounded_rectangle([x, y, x + w, y + 84], radius=20, fill=WHITE)
@@ -77,8 +91,8 @@ def _brand_lockup(img: Image.Image, x: int, y: int):
     if icon is not None:
         img.alpha_composite(icon, (int(cx), y + 12))
         cx += icon.width + 18
-    d.text((cx, y + 44), "CWG", font=fw, fill=PRIMARY, anchor="lm")
-    cx += d.textlength("CWG", font=fw) + 14
+    d.text((cx, y + 44), WORD, font=fw, fill=PRIMARY, anchor="lm")
+    cx += d.textlength(WORD, font=fw) + 14
     d.line([(cx - 6, y + 22), (cx - 6, y + 62)], fill=LINE, width=2)
     d.text((cx + 6, y + 30), LOCKUP[0], font=fs, fill=INK, anchor="lm")
     d.text((cx + 6, y + 54), LOCKUP[1], font=fs, fill=INK, anchor="lm")
@@ -86,8 +100,15 @@ def _brand_lockup(img: Image.Image, x: int, y: int):
 
 
 def _c_watermark(img: Image.Image, cx: int, cy: int, radii=(300, 240, 180), alpha: int = 38, box=None):
-    """Hoạ tiết vòng cung chữ C của logo, chìm trên ảnh."""
+    """Hoạ tiết vòng cung chữ C của logo, chìm trên ảnh (Decode: biểu tượng nữ thần chìm)."""
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    if DECODE:
+        mk = _logo("icon", int(radii[0] * 1.6))
+        if mk is not None:
+            mk = Image.merge("RGBA", (*Image.new("RGB", mk.size, (255, 255, 255)).split(),
+                                       mk.getchannel("A").point(lambda v: int(v * alpha / 255 * 1.4))))
+            layer.alpha_composite(mk, (int(cx - mk.width * 0.7), int(cy - mk.height / 2)))
+        radii = ()
     ld = ImageDraw.Draw(layer)
     for r in radii:
         ld.arc([cx - r, cy - r, cx + r, cy + r], 40, 320, fill=(255, 255, 255, alpha), width=18)
@@ -121,7 +142,7 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
     d = ImageDraw.Draw(img)
 
     _pill(d, M, 142, tr("PHÁP LÝ TẬP ĐOÀN CWG MARKETS"), 22, PRIMARY, WHITE, pad=22)
-    d.text((M - 6, 340), lic["code"], font=sans("ExtraBold", 170), fill=PRIMARY, anchor="ls")
+    d.text((M - 6, 340), lic["code"], font=hb(170), fill=PRIMARY, anchor="ls")
     d.text((M, 385), lic["name"], font=sans("Bold", 32), fill=INK, anchor="lm")
     d.text((M, 425), lic["country"], font=sans("SemiBold", 28), fill=MUTED, anchor="lm")
 
@@ -138,7 +159,7 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
     for i, (k, v) in enumerate(rows):
         d.text((M + 44, y + 16), k.upper(), font=sans("Bold", 19), fill=MUTED, anchor="lm")
         strong = i == 1
-        f = sans("ExtraBold", 40 if strong else 28)
+        f = hb(40 if strong else 28)
         d.text((M + 44, y + 52), fit(d, v, f, W - 2 * M - 90), font=f, fill=PRIMARY if strong else INK, anchor="lm")
         y += 82
         if i < len(rows) - 1:
@@ -146,11 +167,11 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
 
     # tự tra cứu
     y = top + ch + 34
-    d.text((M, y), tr("TỰ TRA CỨU TRONG 30 GIÂY"), font=sans("ExtraBold", 26), fill=INK)
+    d.text((M, y), tr("TỰ TRA CỨU TRONG 30 GIÂY"), font=hb(26), fill=INK)
     y += 50
     for k, step in enumerate(lic["verify_steps"][:3], 1):
         d.ellipse([M, y, M + 44, y + 44], fill=PRIMARY)
-        d.text((M + 22, y + 22), str(k), font=sans("ExtraBold", 24), fill=WHITE, anchor="mm")
+        d.text((M + 22, y + 22), str(k), font=hb(24), fill=WHITE, anchor="mm")
         d.text((M + 62, y + 22), fit(d, step, sans("SemiBold", 27), W - 2 * M - 70), font=sans("SemiBold", 27),
                fill=INK, anchor="lm")
         y += 56
@@ -164,11 +185,11 @@ def render_license(path, lic: dict, index: int, total: int, all_licenses: list, 
         active = code == lic["code"]
         d.rounded_rectangle([x0, y, x0 + cw, y + 80], radius=18, fill=PRIMARY if active else WHITE,
                             outline=None if active else LINE, width=2)
-        d.text((x0 + 20, y + 28), code, font=sans("ExtraBold", 26), fill=WHITE if active else INK, anchor="lm")
+        d.text((x0 + 20, y + 28), code, font=hb(26), fill=WHITE if active else INK, anchor="lm")
         d.text((x0 + 20, y + 58), num, font=sans("SemiBold", 18), fill=(255, 220, 224) if active else MUTED, anchor="lm")
     x0 = M + (n - 1) * (cw + 10)
     d.rounded_rectangle([x0, y, x0 + cw, y + 80], radius=18, fill=(28, 28, 32))
-    d.text((x0 + 20, y + 30), score, font=sans("ExtraBold", 30), fill=WHITE, anchor="lm")
+    d.text((x0 + 20, y + 30), score, font=hb(30), fill=WHITE, anchor="lm")
     d.text((x0 + 20, y + 60), tr("Điểm WikiFX /10"), font=sans("SemiBold", 18), fill=(200, 200, 206), anchor="lm")
 
     _brand_footer(img, tr("Mỗi pháp nhân được cấp phép tại khu vực tương ứng. Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn."))
@@ -189,18 +210,18 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
 
     # nhãn TIN NÓNG + mức ảnh hưởng
     x = M
-    f = sans("ExtraBold", 26)
+    f = hb(26)
     w = d.textlength(tr("TIN NÓNG"), font=f) + 92
     d.rounded_rectangle([x, 132, x + w, 132 + 50], radius=25, fill=PRIMARY)
     d.polygon([(x + 30, 141), (x + 42, 141), (x + 36, 154), (x + 46, 154), (x + 28, 174), (x + 33, 159), (x + 23, 159)],
               fill=WHITE)
     d.text((x + 58, 157), tr("TIN NÓNG"), font=f, fill=WHITE, anchor="lm")
-    _pill(d, x + w + 14, 132, tr("Mức ảnh hưởng: {level}", level=level), 22, (253, 234, 236), PRIMARY, pad=22)
+    _pill(d, x + w + 14, 132, tr("Mức ảnh hưởng: {level}", level=level), 22, SOFT, PRIMARY, pad=22)
 
     y = 232
-    hl = wrap(d, headline, sans("ExtraBold", 54), W - 2 * M, max_lines=4)
+    hl = wrap(d, headline, hb(54), W - 2 * M, max_lines=4)
     for line in hl:
-        d.text((M, y), line, font=sans("ExtraBold", 54), fill=INK)
+        d.text((M, y), line, font=hb(54), fill=INK)
         y += 68
     y += 18
 
@@ -216,12 +237,12 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
             d.rounded_rectangle([x0, y, x0 + bw, y + 150], radius=24, fill=WHITE,
                                 outline=col if main else LINE, width=4 if main else 2)
             d.text((x0 + bw / 2, y + 40), lab, font=sans("Bold", 22), fill=MUTED, anchor="mm")
-            d.text((x0 + bw / 2, y + 100), str(val), font=sans("ExtraBold", 56 if main else 46),
+            d.text((x0 + bw / 2, y + 100), str(val), font=hb(56 if main else 46),
                    fill=col if main else INK, anchor="mm")
         y += 186
 
     # bảng tác động
-    d.text((M, y), tr("TÁC ĐỘNG TỚI THỊ TRƯỜNG"), font=sans("ExtraBold", 26), fill=INK)
+    d.text((M, y), tr("TÁC ĐỘNG TỚI THỊ TRƯỜNG"), font=hb(26), fill=INK)
     y += 50
     rows = impacts[:5]
     rh = 78
@@ -231,7 +252,7 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
     yy = y + 8
     for k, (asset, direction, why) in enumerate(rows):
         col = UP if direction == "up" else DOWN if direction == "down" else FLAT
-        d.text((M + 30, yy + rh / 2), asset, font=sans("ExtraBold", 32), fill=INK, anchor="lm")
+        d.text((M + 30, yy + rh / 2), fit(d, asset, hb(32), 150), font=hb(32), fill=INK, anchor="lm")
         if direction == "flat":
             d.rectangle([M + 230, yy + rh / 2 - 4, M + 262, yy + rh / 2 + 4], fill=col)
         else:
@@ -247,7 +268,7 @@ def render_breaking(path, time_label: str, headline: str, data: dict | None, imp
     if summary and y < H - 220:
         sl = wrap(d, summary, sans("SemiBold", 28), W - 2 * M - 70, max_lines=3)
         bh = len(sl) * 40 + 44
-        d.rounded_rectangle([M, y, W - M, y + bh], radius=22, fill=(253, 234, 236))
+        d.rounded_rectangle([M, y, W - M, y + bh], radius=22, fill=SOFT)
         d.rectangle([M, y + 16, M + 8, y + bh - 16], fill=PRIMARY)
         for k, line in enumerate(sl):
             d.text((M + 40, y + 24 + k * 40), line, font=sans("SemiBold", 28), fill=INK)
@@ -282,7 +303,7 @@ def _soft_shadow_text(img: Image.Image, lines: list, x: int, y: int, step: int):
     layer = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ld = ImageDraw.Draw(layer)
     for k, line in enumerate(lines):
-        ld.text((x, y + 4 + k * step), line, font=sans("ExtraBold", 56), fill=(0, 0, 0, 170))
+        ld.text((x, y + 4 + k * step), line, font=hb(56), fill=(0, 0, 0, 170))
     img.alpha_composite(layer.filter(ImageFilter.GaussianBlur(8)))
 
 
@@ -291,7 +312,7 @@ def _ticker(img: Image.Image, y: int, items: list):
     d = ImageDraw.Draw(img)
     d.rectangle([0, y, W, y + 64], fill=(22, 22, 26))
     d.rectangle([0, y, 184, y + 64], fill=PRIMARY)
-    d.text((92, y + 32), "CWG LIVE", font=sans("ExtraBold", 24), fill=WHITE, anchor="mm")
+    d.text((92, y + 32), f"{WORD} LIVE", font=hb(24), fill=WHITE, anchor="mm")
     x = 206
     for sym, price, chg in items:
         up = chg >= 0
@@ -325,7 +346,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     d.text((W - M - w / 2, 68), time_label, font=f, fill=WHITE, anchor="mm")
 
     x = M
-    f = sans("ExtraBold", 26)
+    f = hb(26)
     w = d.textlength(tr("TIN NÓNG"), font=f) + 92
     d.rounded_rectangle([x, 146, x + w, 196], radius=25, fill=PRIMARY)
     d.polygon([(x + 30, 155), (x + 42, 155), (x + 36, 168), (x + 46, 168), (x + 28, 188), (x + 33, 173), (x + 23, 173)],
@@ -334,10 +355,10 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     _pill(d, x + w + 14, 146, tr("Mức ảnh hưởng: {level}", level=level), 22, WHITE, PRIMARY, pad=22)
 
     y = 240
-    _soft_shadow_text(img, wrap(d, headline, sans("ExtraBold", 56), W - 2 * M, max_lines=4), M, y, 70)
+    _soft_shadow_text(img, wrap(d, headline, hb(56), W - 2 * M, max_lines=4), M, y, 70)
     d = ImageDraw.Draw(img)
-    for line in wrap(d, headline, sans("ExtraBold", 56), W - 2 * M, max_lines=4):
-        d.text((M, y), line, font=sans("ExtraBold", 56), fill=WHITE)
+    for line in wrap(d, headline, hb(56), W - 2 * M, max_lines=4):
+        d.text((M, y), line, font=hb(56), fill=WHITE)
         y += 70
     if data:
         y = max(y + 26, band_h - 170)
@@ -353,15 +374,15 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
                                 outline=col if main else LINE, width=4 if main else 2)
             d.text((x0 + bw / 2, y + 40), lab, font=sans("Bold", 22), fill=MUTED, anchor="mm")
             size = 56 if main else 46
-            while size > 24 and d.textlength(str(val), font=sans("ExtraBold", size)) > bw - 30:
+            while size > 24 and d.textlength(str(val), font=hb(size)) > bw - 30:
                 size -= 2
-            d.text((x0 + bw / 2, y + 100), str(val), font=sans("ExtraBold", size), fill=col if main else INK, anchor="mm")
+            d.text((x0 + bw / 2, y + 100), str(val), font=hb(size), fill=col if main else INK, anchor="mm")
         y += 182
     else:
         y = max(y + 20, band_h + 10)
 
     d = ImageDraw.Draw(img)
-    d.text((M, y), tr("TÁC ĐỘNG TỚI THỊ TRƯỜNG"), font=sans("ExtraBold", 26), fill=INK)
+    d.text((M, y), tr("TÁC ĐỘNG TỚI THỊ TRƯỜNG"), font=hb(26), fill=INK)
     y += 48
     rows = impacts[:4]
     rh = 74
@@ -371,7 +392,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     yy = y + 8
     for k, (asset, direction, why) in enumerate(rows):
         col = UP if direction == "up" else DOWN if direction == "down" else FLAT
-        d.text((M + 30, yy + rh / 2), asset, font=sans("ExtraBold", 31), fill=INK, anchor="lm")
+        d.text((M + 30, yy + rh / 2), fit(d, asset, hb(31), 150), font=hb(31), fill=INK, anchor="lm")
         if direction == "flat":
             d.rectangle([M + 230, yy + rh / 2 - 4, M + 262, yy + rh / 2 + 4], fill=col)
         else:
@@ -386,7 +407,7 @@ def render_breaking_photo(path, photo, time_label: str, headline: str, data: dic
     if summary and y + 80 < ty:
         sl = wrap(d, summary, sans("SemiBold", 27), W - 2 * M - 70, max_lines=2)
         bh = len(sl) * 38 + 40
-        d.rounded_rectangle([M, y, W - M, y + bh], radius=22, fill=(253, 234, 236))
+        d.rounded_rectangle([M, y, W - M, y + bh], radius=22, fill=SOFT)
         d.rectangle([M, y + 14, M + 8, y + bh - 14], fill=PRIMARY)
         for k, line in enumerate(sl):
             d.text((M + 40, y + 22 + k * 38), line, font=sans("SemiBold", 27), fill=INK)
@@ -428,8 +449,8 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
     y = _kicker(d, 140, tr("BẢN TIN ĐẦU NGÀY"), tr("Cập nhật trước giờ giao dịch"))
-    for line in wrap(d, title, sans("ExtraBold", 46), W - 2 * M, max_lines=2):
-        d.text((M, y), line, font=sans("ExtraBold", 46), fill=INK)
+    for line in wrap(d, title, hb(46), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=hb(46), fill=INK)
         y += 58
     y += 14
     # lưới 8 sản phẩm 4x2
@@ -444,13 +465,13 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
         d.rounded_rectangle([x0, y0, x0 + tw, y0 + th], radius=18, fill=WHITE)
         up = t["chg"] >= 0
         col = UP if up else DOWN
-        d.text((x0 + 18, y0 + 26), t["code"], font=sans("ExtraBold", 24), fill=INK, anchor="lm")
+        d.text((x0 + 18, y0 + 26), t["code"], font=hb(24), fill=INK, anchor="lm")
         d.text((x0 + 18, y0 + 62), _fmt(t["price"], t["digits"]), font=sans("Bold", 24), fill=INK, anchor="lm")
-        d.text((x0 + 18, y0 + 94), f"{t['chg']:+.2f}%", font=sans("ExtraBold", 22), fill=col, anchor="lm")
+        d.text((x0 + 18, y0 + 94), f"{t['chg']:+.2f}%", font=hb(22), fill=col, anchor="lm")
         _spark(d, (x0 + 18, y0 + 112, x0 + tw - 18, y0 + th - 14), t["spark"][-20:], col)
     y += 2 * th + gap + 34
     # lịch tin
-    d.text((M, y), tr("LỊCH TIN QUAN TRỌNG HÔM NAY"), font=sans("ExtraBold", 26), fill=INK)
+    d.text((M, y), tr("LỊCH TIN QUAN TRỌNG HÔM NAY"), font=hb(26), fill=INK)
     d.text((W - M, y + 14), TZ_LABEL, font=sans("Medium", 20), fill=MUTED, anchor="rm")
     y += 48
     rows = events[:6]
@@ -464,9 +485,9 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
             cy = yy + rh / 2
             dot = PRIMARY if e["impact"] == "High" else ORANGE
             d.ellipse([M + 22, cy - 7, M + 36, cy + 7], fill=dot)
-            d.text((M + 52, cy), e["time"], font=sans("ExtraBold", 24), fill=INK, anchor="lm")
+            d.text((M + 52, cy), e["time"], font=hb(24), fill=INK, anchor="lm")
             d.rounded_rectangle([M + 136, cy - 17, M + 206, cy + 17], radius=10, fill=(244, 244, 247))
-            d.text((M + 171, cy), e["ccy"], font=sans("ExtraBold", 19), fill=INK, anchor="mm")
+            d.text((M + 171, cy), e["ccy"], font=hb(19), fill=INK, anchor="mm")
             fc = f"{tr('DB')} {e['forecast']}" if e.get("forecast") else ""
             fcw = d.textlength(fc, font=sans("SemiBold", 20)) if fc else 0
             d.text((M + 222, cy), fit(d, e["title"], sans("SemiBold", 23), W - 2 * M - 250 - fcw), font=sans("SemiBold", 23),
@@ -483,7 +504,7 @@ def render_morning(path, time_label: str, title: str, tiles: list, events: list,
     if note and y + 70 < H - 130:
         sl = wrap(d, note, sans("SemiBold", 25), W - 2 * M - 70, max_lines=2)
         bh = len(sl) * 36 + 36
-        d.rounded_rectangle([M, y, W - M, y + bh], radius=20, fill=(253, 234, 236))
+        d.rounded_rectangle([M, y, W - M, y + bh], radius=20, fill=SOFT)
         d.rectangle([M, y + 12, M + 8, y + bh - 12], fill=PRIMARY)
         for k, line in enumerate(sl):
             d.text((M + 36, y + 18 + k * 36), line, font=sans("SemiBold", 25), fill=INK)
@@ -498,15 +519,15 @@ def render_trend(path, time_label: str, title: str, rows: list, kicker: str | No
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
     y = _kicker(d, 140, kicker or tr("BẢNG TIN XU HƯỚNG"), tr("Góc nhìn tổng quan trong ngày") if sub is None else sub)
-    for line in wrap(d, title, sans("ExtraBold", 40), W - 2 * M, max_lines=2):
-        d.text((M, y), line, font=sans("ExtraBold", 40), fill=INK)
+    for line in wrap(d, title, hb(40), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=hb(40), fill=INK)
         y += 52
     y += 10
     # tiêu đề cột
     cx = [M + 24, M + 200, M + 420, M + 690]
     d.rounded_rectangle([M, y, W - M, y + 50], radius=14, fill=(28, 28, 32))
     for x, lab in zip(cx, [tr("SẢN PHẨM"), tr("XU HƯỚNG"), tr("VÙNG HỖ TRỢ"), tr("VÙNG KHÁNG CỰ")]):
-        d.text((x, y + 25), lab, font=sans("ExtraBold", 19), fill=WHITE, anchor="lm")
+        d.text((x, y + 25), lab, font=hb(19), fill=WHITE, anchor="lm")
     y += 62
     rh = 96
     n = len(rows[:8])
@@ -516,15 +537,15 @@ def render_trend(path, time_label: str, title: str, rows: list, kicker: str | No
     lab = {"up": (tr("TĂNG"), UP), "down": (tr("GIẢM"), DOWN), "flat": (tr("ĐI NGANG"), FLAT)}
     for k, r in enumerate(rows[:8]):
         yy = y + k * rh
-        d.text((cx[0], yy + 34), r["code"], font=sans("ExtraBold", 28), fill=INK, anchor="lm")
+        d.text((cx[0], yy + 34), r["code"], font=hb(28), fill=INK, anchor="lm")
         t, col = lab.get(r["bias"], lab["flat"])
-        w = d.textlength(t, font=sans("ExtraBold", 20)) + 56
+        w = d.textlength(t, font=hb(20)) + 56
         d.rounded_rectangle([cx[1], yy + 16, cx[1] + w, yy + 52], radius=18, fill=col)
         if r["bias"] == "flat":
             d.rectangle([cx[1] + 14, yy + 32, cx[1] + 30, yy + 36], fill=WHITE)
         else:
             _tri(d, cx[1] + 14, yy + 26, 16, r["bias"] == "up", WHITE)
-        d.text((cx[1] + 38, yy + 34), t, font=sans("ExtraBold", 20), fill=WHITE, anchor="lm")
+        d.text((cx[1] + 38, yy + 34), t, font=hb(20), fill=WHITE, anchor="lm")
         d.text((cx[2], yy + 34), r["support"], font=sans("Bold", 23), fill=UP, anchor="lm")
         d.text((cx[3], yy + 34), r["resistance"], font=sans("Bold", 23), fill=DOWN, anchor="lm")
         d.text((cx[0], yy + 74), fit(d, r["reason"], sans("Medium", 20), W - 2 * M - 48), font=sans("Medium", 20),
@@ -551,20 +572,20 @@ def render_macro_cover(path, photo, time_label: str, title: str, subtitle: str, 
     d.text((W - M - w / 2, 68), time_label, font=f, fill=WHITE, anchor="mm")
     _pill(d, M, 300, kicker, 24, PRIMARY, WHITE, pad=24)
     y = 370
-    lines = wrap(d, title, sans("ExtraBold", 62), W - 2 * M, max_lines=3)
+    lines = wrap(d, title, hb(62), W - 2 * M, max_lines=3)
     _soft_shadow_text(img, lines, M, y, 76)
     d = ImageDraw.Draw(img)
     for line in lines:
-        d.text((M, y), line, font=sans("ExtraBold", 62), fill=WHITE)
+        d.text((M, y), line, font=hb(62), fill=WHITE)
         y += 76
     for line in wrap(d, subtitle, sans("SemiBold", 30), W - 2 * M, max_lines=2):
-        d.text((M, y + 10), line, font=sans("SemiBold", 30), fill=(255, 225, 228))
+        d.text((M, y + 10), line, font=sans("SemiBold", 30), fill=(250, 238, 200) if DECODE else (255, 225, 228))
         y += 42
     y = 790
-    d.text((M, y), tr("NỘI DUNG CHÍNH"), font=sans("ExtraBold", 24), fill=PRIMARY)
+    d.text((M, y), tr("NỘI DUNG CHÍNH"), font=hb(24), fill=PRIMARY)
     y += 48
     for i, h in enumerate(headings[:3]):
-        d.text((M, y), f"{i + 1:02d}", font=sans("ExtraBold", 38), fill=PRIMARY)
+        d.text((M, y), f"{i + 1:02d}", font=hb(38), fill=PRIMARY)
         d.text((M + 80, y + 6), fit(d, h, sans("Bold", 32), W - 2 * M - 80), font=sans("Bold", 32), fill=INK)
         y += 78
         d.line([(M + 80, y - 18), (W - M, y - 18)], fill=LINE, width=2)
@@ -580,7 +601,7 @@ def _compare_chart(img: Image.Image, box, series: dict, colors: list, title: str
     _shadow(img, box, 22, blur=14, offset=(0, 8), alpha=30)
     d = ImageDraw.Draw(img)
     d.rounded_rectangle(box, radius=22, fill=WHITE)
-    d.text((x0 + 24, y0 + 30), title, font=sans("ExtraBold", 22), fill=INK, anchor="lm")
+    d.text((x0 + 24, y0 + 30), title, font=hb(22), fill=INK, anchor="lm")
     norm = {k: [(v / s[0] - 1) * 100 for v in s] for k, s in series.items()}
     allv = [v for s in norm.values() for v in s]
     lo, hi = min(allv), max(allv)
@@ -606,11 +627,11 @@ def render_macro_slide(path, idx: int, total: int, heading: str, body: str, poin
     _brand_header(img, f"{idx:02d}/{total:02d}")
     d = ImageDraw.Draw(img)
     y = 140
-    d.text((M - 4, y - 10), f"{idx:02d}", font=sans("ExtraBold", 96), fill=PRIMARY)
-    lines = wrap(d, heading, sans("ExtraBold", 44), W - 2 * M - 150, max_lines=2)
+    d.text((M - 4, y - 10), f"{idx:02d}", font=hb(96), fill=PRIMARY)
+    lines = wrap(d, heading, hb(44), W - 2 * M - 150, max_lines=2)
     ty = y + 30 - (len(lines) - 1) * 26
     for line in lines:
-        d.text((M + 150, ty), line, font=sans("ExtraBold", 44), fill=INK)
+        d.text((M + 150, ty), line, font=hb(44), fill=INK)
         ty += 54
     y += 140
     for line in wrap(d, body, sans("Medium", 33), W - 2 * M, max_lines=6):
@@ -641,8 +662,8 @@ def render_week_recap(path, time_label: str, title: str, rows: list, highlights:
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
     y = _kicker(d, 140, tr("TỔNG KẾT TUẦN"), tr("8 sản phẩm chính"))
-    for line in wrap(d, title, sans("ExtraBold", 44), W - 2 * M, max_lines=2):
-        d.text((M, y), line, font=sans("ExtraBold", 44), fill=INK)
+    for line in wrap(d, title, hb(44), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=hb(44), fill=INK)
         y += 56
     y += 12
     rows = sorted(rows, key=lambda r: -r["chg"])
@@ -657,7 +678,7 @@ def render_week_recap(path, time_label: str, title: str, rows: list, highlights:
     d.line([(mid, y + 14), (mid, y + rh * len(rows) + 6)], fill=LINE, width=2)
     for k, r in enumerate(rows):
         cy = y + 10 + k * rh + rh / 2
-        d.text((M + 24, cy - 12), r["code"], font=sans("ExtraBold", 27), fill=INK, anchor="lm")
+        d.text((M + 24, cy - 12), r["code"], font=hb(27), fill=INK, anchor="lm")
         dg = r["digits"]
         d.text((M + 24, cy + 18), tr("Mở {o} · Đóng {c}", o=f"{r['open']:,.{dg}f}", c=f"{r['close']:,.{dg}f}"), font=sans("Medium", 18), fill=MUTED,
                anchor="lm")
@@ -665,12 +686,12 @@ def render_week_recap(path, time_label: str, title: str, rows: list, highlights:
         bw = max(6, abs(r["chg"]) / mx * half)
         if r["chg"] >= 0:
             d.rounded_rectangle([mid, cy - 14, mid + bw, cy + 14], radius=7, fill=col)
-            d.text((mid + bw + 10, cy), f"{r['chg']:+.2f}%", font=sans("ExtraBold", 22), fill=col, anchor="lm")
+            d.text((mid + bw + 10, cy), f"{r['chg']:+.2f}%", font=hb(22), fill=col, anchor="lm")
         else:
             d.rounded_rectangle([mid - bw, cy - 14, mid, cy + 14], radius=7, fill=col)
-            d.text((mid - bw - 10, cy), f"{r['chg']:+.2f}%", font=sans("ExtraBold", 22), fill=col, anchor="rm")
+            d.text((mid - bw - 10, cy), f"{r['chg']:+.2f}%", font=hb(22), fill=col, anchor="rm")
     y = box[3] + 28
-    d.text((M, y), tr("ĐIỂM NHẤN TUẦN"), font=sans("ExtraBold", 24), fill=PRIMARY)
+    d.text((M, y), tr("ĐIỂM NHẤN TUẦN"), font=hb(24), fill=PRIMARY)
     y += 44
     for h in highlights[:3]:
         if y + 46 > H - 130:
@@ -690,8 +711,8 @@ def render_top5(path, time_label: str, title: str, items: list):
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
     y = _kicker(d, 140, tr("TOP 5 TIN CỦA TUẦN"), tr("Xếp theo mức tác động"))
-    for line in wrap(d, title, sans("ExtraBold", 42), W - 2 * M, max_lines=2):
-        d.text((M, y), line, font=sans("ExtraBold", 42), fill=INK)
+    for line in wrap(d, title, hb(42), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=hb(42), fill=INK)
         y += 54
     y += 10
     ch = 170
@@ -702,12 +723,12 @@ def render_top5(path, time_label: str, title: str, items: list):
         d.rounded_rectangle(box, radius=20, fill=WHITE)
         d.rounded_rectangle([M, y, M + 96, y + ch - 14], radius=20, fill=PRIMARY if k == 1 else (28, 28, 32))
         d.rectangle([M + 76, y, M + 96, y + ch - 14], fill=PRIMARY if k == 1 else (28, 28, 32))
-        d.text((M + 48, y + (ch - 14) / 2), str(k), font=sans("ExtraBold", 64), fill=WHITE, anchor="mm")
+        d.text((M + 48, y + (ch - 14) / 2), str(k), font=hb(64), fill=WHITE, anchor="mm")
         x = M + 124
         d.text((x, y + 26), it["when"], font=sans("Bold", 19), fill=MUTED, anchor="lm")
-        hl = wrap(d, it["headline"], sans("ExtraBold", 28), W - M - x - 24, max_lines=2)
+        hl = wrap(d, it["headline"], hb(28), W - M - x - 24, max_lines=2)
         for j, line in enumerate(hl):
-            d.text((x, y + 48 + j * 36), line, font=sans("ExtraBold", 28), fill=INK)
+            d.text((x, y + 48 + j * 36), line, font=hb(28), fill=INK)
         iy = y + 48 + len(hl) * 36 + 10
         col = UP if it["direction"] == "up" else DOWN if it["direction"] == "down" else FLAT
         if it["direction"] == "flat":
@@ -728,8 +749,8 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
     y = _kicker(d, 140, tr("DÒNG TIỀN LỚN · COT"), tr("CFTC · số liệu tới {d}", d=report_date))
-    for line in wrap(d, title, sans("ExtraBold", 42), W - 2 * M, max_lines=2):
-        d.text((M, y), line, font=sans("ExtraBold", 42), fill=INK)
+    for line in wrap(d, title, hb(42), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=hb(42), fill=INK)
         y += 54
     y += 8
     rh = 92
@@ -744,7 +765,7 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
         tot = (r["long"] + r["short"]) or 1
         ratio = r["net"] / tot
         col = UP if r["net"] >= 0 else DOWN
-        d.text((M + 24, cy - 14), r["name"], font=sans("ExtraBold", 26), fill=INK, anchor="lm")
+        d.text((M + 24, cy - 14), r["name"], font=hb(26), fill=INK, anchor="lm")
         side = tr("MUA RÒNG") if r["net"] >= 0 else tr("BÁN RÒNG")
         d.text((M + 24, cy + 18), tr("{side} {n} HĐ", side=side, n=f"{abs(r['net']):,}"), font=sans("Bold", 19), fill=col, anchor="lm")
         d.line([(mid, cy - 22), (mid, cy + 22)], fill=LINE, width=2)
@@ -755,7 +776,7 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
             d.rounded_rectangle([mid - bw, cy - 12, mid, cy + 12], radius=6, fill=col)
         dc = UP if r["d_net"] >= 0 else DOWN
         txt = f"{r['d_net']:+,}"
-        d.text((W - M - 24, cy - 12), txt, font=sans("ExtraBold", 21), fill=dc, anchor="rm")
+        d.text((W - M - 24, cy - 12), txt, font=hb(21), fill=dc, anchor="rm")
         d.text((W - M - 24, cy + 16), tr("so với tuần trước"), font=sans("Medium", 15), fill=MUTED, anchor="rm")
         if k < len(rows) - 1:
             d.line([(M + 20, y + 8 + (k + 1) * rh), (W - M - 20, y + 8 + (k + 1) * rh)], fill=LINE, width=2)
@@ -763,7 +784,7 @@ def render_cot(path, time_label: str, title: str, report_date: str, rows: list, 
     if note and y + 60 < H - 130:
         sl = wrap(d, note, sans("SemiBold", 24), W - 2 * M - 70, max_lines=2)
         bh = len(sl) * 34 + 32
-        d.rounded_rectangle([M, y, W - M, y + bh], radius=20, fill=(253, 234, 236))
+        d.rounded_rectangle([M, y, W - M, y + bh], radius=20, fill=SOFT)
         d.rectangle([M, y + 12, M + 8, y + bh - 12], fill=PRIMARY)
         for k, line in enumerate(sl):
             d.text((M + 36, y + 16 + k * 34), line, font=sans("SemiBold", 24), fill=INK)
@@ -778,8 +799,8 @@ def render_week_ahead(path, time_label: str, title: str, days: list):
     _brand_header(img, time_label)
     d = ImageDraw.Draw(img)
     y = _kicker(d, 140, tr("LỊCH TIN TUẦN MỚI"), TZ_LABEL)
-    for line in wrap(d, title, sans("ExtraBold", 42), W - 2 * M, max_lines=2):
-        d.text((M, y), line, font=sans("ExtraBold", 42), fill=INK)
+    for line in wrap(d, title, hb(42), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=hb(42), fill=INK)
         y += 54
     y += 8
     avail = H - 140 - y
@@ -795,7 +816,7 @@ def render_week_ahead(path, time_label: str, title: str, days: list):
         d = ImageDraw.Draw(img)
         d.rounded_rectangle(box, radius=18, fill=WHITE)
         d.rounded_rectangle([M, y, M + 12, y + bh], radius=6, fill=PRIMARY)
-        d.text((M + 30, y + 26), dd["label"].upper(), font=sans("ExtraBold", 22), fill=PRIMARY, anchor="lm")
+        d.text((M + 30, y + 26), dd["label"].upper(), font=hb(22), fill=PRIMARY, anchor="lm")
         yy = y + 52
         if not evs:
             d.text((M + 30, yy + lh / 2), tr("Không có tin tác động mạnh"), font=sans("Medium", 21), fill=MUTED, anchor="lm")
@@ -804,7 +825,7 @@ def render_week_ahead(path, time_label: str, title: str, days: list):
             dot = PRIMARY if e["impact"] == "High" else ORANGE
             d.ellipse([M + 30, cy - 6, M + 42, cy + 6], fill=dot)
             d.text((M + 54, cy), e["time"], font=sans("Bold", 21), fill=INK, anchor="lm")
-            d.text((M + 128, cy), e["ccy"], font=sans("ExtraBold", 19), fill=MUTED, anchor="lm")
+            d.text((M + 128, cy), e["ccy"], font=hb(19), fill=MUTED, anchor="lm")
             d.text((M + 190, cy), fit(d, e["title"], sans("SemiBold", 21), W - 2 * M - 210), font=sans("SemiBold", 21),
                    fill=(50, 50, 56), anchor="lm")
             yy += lh
@@ -820,11 +841,11 @@ def render_chart_slide(path, idx: int, total: int, heading: str, body: str, char
     _brand_header(img, f"{idx:02d}/{total:02d}")
     d = ImageDraw.Draw(img)
     y = 140
-    d.text((M - 4, y - 10), f"{idx:02d}", font=sans("ExtraBold", 96), fill=PRIMARY)
-    lines = wrap(d, heading, sans("ExtraBold", 42), W - 2 * M - 150, max_lines=2)
+    d.text((M - 4, y - 10), f"{idx:02d}", font=hb(96), fill=PRIMARY)
+    lines = wrap(d, heading, hb(42), W - 2 * M - 150, max_lines=2)
     ty = y + 30 - (len(lines) - 1) * 26
     for line in lines:
-        d.text((M + 150, ty), line, font=sans("ExtraBold", 42), fill=INK)
+        d.text((M + 150, ty), line, font=hb(42), fill=INK)
         ty += 52
     y += 140
     cw = W - 2 * M
@@ -861,7 +882,7 @@ def render_asset(path, time_label: str, kicker: str, code: str, title: str, bias
     y = _kicker(d, 140, kicker)
     lab = {"up": (tr("TĂNG"), UP), "down": (tr("GIẢM"), DOWN), "flat": (tr("ĐI NGANG"), FLAT)}
     t_, col = lab.get(bias, lab["flat"])
-    f = sans("ExtraBold", 22)
+    f = hb(22)
     bw = d.textlength(t_, font=f) + 60
     d.rounded_rectangle([W - M - bw, 140, W - M, 186], radius=22, fill=col)
     if bias == "flat":
@@ -869,8 +890,8 @@ def render_asset(path, time_label: str, kicker: str, code: str, title: str, bias
     else:
         _tri(d, W - M - bw + 16, 154, 18, bias == "up", WHITE)
     d.text((W - M - bw + 42, 163), t_, font=f, fill=WHITE, anchor="lm")
-    for line in wrap(d, title, sans("ExtraBold", 40), W - 2 * M, max_lines=2):
-        d.text((M, y), line, font=sans("ExtraBold", 40), fill=INK)
+    for line in wrap(d, title, hb(40), W - 2 * M, max_lines=2):
+        d.text((M, y), line, font=hb(40), fill=INK)
         y += 52
     y += 12
     cw = W - 2 * M
@@ -886,8 +907,8 @@ def render_asset(path, time_label: str, kicker: str, code: str, title: str, bias
         x0 = M + k * (half + 20)
         d.rounded_rectangle([x0, y, x0 + half, y + 92], radius=16, fill=WHITE, outline=LINE, width=2)
         d.rectangle([x0, y + 16, x0 + 6, y + 76], fill=c)
-        d.text((x0 + 26, y + 28), lab_, font=sans("ExtraBold", 18), fill=MUTED, anchor="lm")
-        d.text((x0 + 26, y + 62), val, font=sans("ExtraBold", 28), fill=c, anchor="lm")
+        d.text((x0 + 26, y + 28), lab_, font=hb(18), fill=MUTED, anchor="lm")
+        d.text((x0 + 26, y + 62), val, font=hb(28), fill=c, anchor="lm")
     y += 116
     for line in wrap(d, body, sans("Medium", 26), W - 2 * M, max_lines=4):
         d.text((M, y), line, font=sans("Medium", 26), fill=(50, 50, 56))
