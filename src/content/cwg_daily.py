@@ -14,7 +14,7 @@ import requests
 
 from src.config import CONFIG, OUTPUT, ROOT, STATE, TZ
 from src.content import fbtext
-from src.content.llm import generate_json
+from src.content.llm import generate_json as _llm_json
 from src.i18n import LANG_RULE, TZ_LABEL
 from src.i18n import t as tr
 from src.i18n import day as dlabel
@@ -107,7 +107,11 @@ def facts_text(snap: dict) -> str:
 def caption(body: str, tags: list[str]) -> str:
     brand = (CONFIG.get("hashtags") or {}).get("brand") or []
     tags = list(dict.fromkeys(t.replace(" ", "") for t in brand + [t if t.startswith("#") else "#" + t for t in tags]))[:6]
-    parts = [fbtext.airy(fbtext.render(body).strip()), BP.get("signature", "").strip(), BP.get("disclaimer", "").strip()]
+    body = fbtext.render(body).strip()
+    if UPPER and body:                                   # dòng tiêu đề đầu caption in hoa
+        first, _, rest = body.partition("\n")
+        body = first.upper() + ("\n" + rest if rest else "")
+    parts = [fbtext.airy(body), BP.get("signature", "").strip(), BP.get("disclaimer", "").strip()]
     return "\n\n".join(p for p in parts if p) + "\n\n" + " ".join(tags)
 
 
@@ -116,6 +120,20 @@ def slot_label(job: str, default: str, day: date) -> str:
     from src.i18n import EN_MODE
     tm = (CONFIG["schedule"].get(job) or {}).get("time", default)
     return f"{tm} {TZ_LABEL} · {dlabel(day)}" if EN_MODE else f"{tm} · {dlabel(day)}"
+
+
+# design.titles_upper (Page Global – anh chốt 03/10/2026): mọi tiêu đề bài viết IN HOA (ảnh + dòng đầu caption)
+UPPER = bool((CONFIG.get("design") or {}).get("titles_upper"))
+TITLE_KEYS = ("title", "headline", "trend_title", "pairs_title", "gold_note")
+
+
+def generate_json(system: str, user: str, schema: dict, web: bool = False) -> dict:
+    r = _llm_json(system, user, schema, web)
+    if UPPER and isinstance(r, dict):
+        for k in TITLE_KEYS:
+            if isinstance(r.get(k), str):
+                r[k] = r[k].upper()
+    return r
 
 
 CAP = {"type": "string"}
@@ -133,7 +151,7 @@ Dữ liệu 8 sản phẩm (giá & % thay đổi phiên trước):
 {facts_text(snap)}
 Lịch tin trong ngày ({TZ_LABEL}):
 {ev}
-Trả về: title (tiêu đề ảnh ≤ 14 từ, nêu trọng tâm ngày), note (1-2 câu: điều cần theo dõi nhất hôm nay),
+Trả về: title (tiêu đề ảnh ≤ 14 từ, nêu trọng tâm ngày), note (1-2 câu, TỐI ĐA 24 từ: điều cần theo dõi nhất hôm nay),
 caption (80-140 từ: tóm tắt phiên trước theo nhóm USD/kim loại/dầu, các tin cần chú ý trong ngày theo giờ, xuống dòng thoáng,
 emoji đầu dòng vừa phải), hashtags (2-3).""",
                       {"type": "object", "properties": {"title": CAP, "note": CAP, "caption": CAP, "hashtags": TAGS},

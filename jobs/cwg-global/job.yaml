@@ -22,6 +22,7 @@ autopost:
   live: false                          # chờ anh duyệt demo rồi mới bật
 
 design:
+  titles_upper: true                   # mọi tiêu đề bài IN HOA (anh chốt 03/10/2026)
   style: block
   palette: do-cwg
   chart_theme: light

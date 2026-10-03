@@ -18,8 +18,8 @@ from pathlib import Path
 import requests
 
 from src.config import OUTPUT, STATE, TZ
-from src.content.cwg_daily import (BG, CAP, PRODUCTS, TAGS, WRITER, caption, facts_text, fxtin, snapshot, zones)
-from src.content.llm import generate_json
+from src.content.cwg_daily import (BG, CAP, PRODUCTS, TAGS, WRITER, caption, facts_text, fxtin, generate_json,
+                                   snapshot, zones)
 from src.i18n import TZ_LABEL, weekday
 from src.i18n import t as tr
 from src.i18n import day as dlabel
