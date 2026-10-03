@@ -80,3 +80,5 @@ hunter:
 # Reels storytelling Chủ nhật (nghề IB) – nền video Pixabay/Mixkit, giọng mẫu kể chuyện
 story:
   voice_index: 3                       # Tùng Đặng – Trầm, Ấm áp
+  # slogan cố định cuối mọi Reels storytelling (anh duyệt 03/10/2026) – hiện chữ + đọc
+  slogan: "Decode Global & Partner – Chúng tôi ở đây để những người làm IB tử tế đi được xa hơn."

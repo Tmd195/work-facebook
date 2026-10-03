@@ -223,6 +223,13 @@ def _subtitle(img, t, b):
     y = 1240 - (len(lines) - 1) * 40
     lay = Image.new("RGBA", img.size, (0, 0, 0, 0))
     ld = ImageDraw.Draw(lay)
+    ytop = y - 52
+    ybot = y + (len(lines) - 1) * 80 + 52
+    maxw = max(sum(wd for _, wd in ln) + sp * (len(ln) - 1) for ln in lines)
+    band = Image.new("RGBA", img.size, (0, 0, 0, 0))     # dải nền tối mờ sau phụ đề: rõ chữ trên mọi video nền
+    ImageDraw.Draw(band).rounded_rectangle([W / 2 - maxw / 2 - 40, ytop, W / 2 + maxw / 2 + 40, ybot], radius=34,
+                                           fill=(12, 10, 34, 150))
+    img.alpha_composite(band.filter(ImageFilter.GaussianBlur(10)))
     for ln in lines:
         lw = sum(wd for _, wd in ln) + sp * (len(ln) - 1)
         x = W / 2 - lw / 2
@@ -237,7 +244,7 @@ def _subtitle(img, t, b):
     img.alpha_composite(lay)
 
 
-def end_card(t: float, logo: Image.Image) -> Image.Image:
+def end_card(t: float, logo: Image.Image, slogan: str = "", slogan_at: float = 0.6) -> Image.Image:
     img = Image.new("RGBA", (W, H), INDIGO + (255,))
     k = _ease(t / 0.6)
     lg = logo.copy()
@@ -258,7 +265,17 @@ def end_card(t: float, logo: Image.Image) -> Image.Image:
     y = 560 + lg.height + 70
     _text(img, (W / 2, y), "DECODE GLOBAL & PARTNER", serif(700, 54), WHITE, k2, shadow=False)
     _text(img, (W / 2, y + 70), "Đối tác IB của DecodeFX", sans("Medium", 32), GOLD, k2, shadow=False)
-    _text(img, (W / 2, y + 130), (CONFIG.get("brand") or {}).get("handle", ""), sans("Bold", 30), WHITE, k2 * 0.8,
+    k3 = _ease((t - slogan_at) / 0.7)                 # slogan hiện theo giọng đọc
+    tail = slogan.split("–", 1)[-1].strip() if slogan else ""
+    yy = y + 150
+    if tail:
+        d0 = ImageDraw.Draw(img)
+        sf = serif(500, 40)
+        for ln in wrap(d0, f"“{tail}”", sf, 880, max_lines=3):
+            _text(img, (W / 2, yy + 20 * (1 - k3)), ln, sf, (240, 232, 205), k3, shadow=False)
+            yy += 56
+        yy += 30
+    _text(img, (W / 2, yy + 20), (CONFIG.get("brand") or {}).get("handle", ""), sans("Bold", 30), WHITE, k2 * 0.8,
           shadow=False)
     return img
 
@@ -267,10 +284,14 @@ def end_card(t: float, logo: Image.Image) -> Image.Image:
 def make(spec: dict, folder: Path, music: Path | None = None) -> dict:
     folder.mkdir(parents=True, exist_ok=True)
     (folder / "script.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
-    says = [spoken(b.get("say") or plain(b["text"])) for b in spec["beats"]]
+    slogan = (CONFIG.get("story") or {}).get("slogan", "")
+    says = [spoken(b.get("say") or plain(b["text"])) for b in spec["beats"]] + ([spoken(slogan)] if slogan else [])
     vi = int((CONFIG.get("story") or {}).get("voice_index", 3))
     wavs = voice.synth(says, folder / "voice", voice_index=vi)
     vdurs = [voice.duration(w) for w in wavs]
+    s_wav, s_dur = (wavs[-1], vdurs[-1]) if slogan else (None, 0.0)
+    if slogan:
+        wavs, vdurs = wavs[:-1], vdurs[:-1]
     durs = [v + GAP + (0.3 if k == 0 else 0) for k, v in enumerate(vdurs)]
     used, clips = set(), []
     for k, b in enumerate(spec["beats"]):
@@ -285,7 +306,9 @@ def make(spec: dict, folder: Path, music: Path | None = None) -> dict:
         beats.append({"text": b["text"], "start": t, "dur": d, "voice_at": va, "vdur": vd})
         t += d
     main_len = t
-    total = main_len + END
+    s_at = 0.9                                          # slogan đọc sau khi logo hiện
+    end_len = max(END, s_at + s_dur + 1.6) if slogan else END
+    total = main_len + end_len
     grade, mark = _grade(), _logo("official/decode_mark_dark_bg.png", 86)
     fx = {"grain": _grain(), "leak": _leak()}
     tp = beats[max(1, round(len(beats) * 0.55))]["start"]      # bước ngoặt câu chuyện
@@ -315,9 +338,9 @@ def make(spec: dict, folder: Path, music: Path | None = None) -> dict:
             if thumb is None and t >= 2.4:
                 thumb = img.convert("RGB")
             if t > main_len - 0.5:                         # mờ dần sang đoạn kết
-                img = Image.blend(img, end_card(0, logo_full), (t - (main_len - 0.5)) / 0.5)
+                img = Image.blend(img, end_card(0, logo_full, slogan, s_at), (t - (main_len - 0.5)) / 0.5)
         else:
-            img = end_card(t - main_len, logo_full)
+            img = end_card(t - main_len, logo_full, slogan, s_at)
         k = min(1.0, t / 0.3, (total - t) / 0.4)
         out = img.convert("RGB")
         if k < 1:
@@ -330,7 +353,8 @@ def make(spec: dict, folder: Path, music: Path | None = None) -> dict:
         raise RuntimeError("ffmpeg lỗi khi dựng hình")
     events = ([(b["start"] - 0.2, "whoosh", 0.3) for b in beats[1:]] + [(main_len + 0.4, "ting", 0.35)]
               + [(max(0.0, tp - 2.2), "riser", 0.45), (tp, "boom", 0.7)])
-    mix(silent, [(w, b["voice_at"]) for w, b in zip(wavs, beats)], events, total, folder / "reel.mp4", music)
+    clips_ = [(w, b["voice_at"]) for w, b in zip(wavs, beats)] + ([(s_wav, main_len + s_at)] if s_wav else [])
+    mix(silent, clips_, events, total, folder / "reel.mp4", music)
     silent.unlink(missing_ok=True)
     (thumb or Image.new("RGB", (W, H), INDIGO)).save(folder / "thumb.jpg", quality=92)
     return {"video": folder / "reel.mp4", "thumb": folder / "thumb.jpg", "duration": round(total, 1),

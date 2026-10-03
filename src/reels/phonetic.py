@@ -7,6 +7,8 @@ import re
 
 TERMS = [
     # cụm dài trước
+    ("Decode Global & Partner", "Đi cốt Glô bồ và Pát nơ"), ("DecodeFX", "Đi cốt ép ích"), ("Decode", "Đi cốt"),
+    ("IB", "ai bi"),
     ("CWG Markets & Partner", "Xi đắp liu gi Mác kịt và Pát nơ"), ("CWG Markets", "Xi đắp liu gi Mác kịt"),
     ("CWG", "Xi đắp liu gi"), ("liquidity sweep", "li quí đi ti xuýp"), ("liquidity", "li quí đi ti"),
     ("accumulation", "ắc kiu mu lây sần"), ("manipulation", "ma ni pu lây sần"), ("distribution", "đít tri biu sần"),
