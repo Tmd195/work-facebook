@@ -132,19 +132,7 @@
   "459439",
   "459440"
  ],
- "pending": [
-  {
-   "id": "459439",
-   "at": "2026-10-04T21:26:36+00:00",
-   "time": "21:26",
-   "text": "Aramco: Giá bán chính thức dầu thô Arab Light giao tháng 11 tới châu Á được ấn định ở mức chiết khấu 5 USD/thùng so với giá trung bình dầu thô Oman/Dubai.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
