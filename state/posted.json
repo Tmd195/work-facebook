@@ -300,5 +300,16 @@
    "duration": 58.4,
    "music": "our-ups-and-downs.mp3"
   }
+ },
+ "2026-10-04 knowledge 12:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129507528735108",
+  "post_id": "1121396124381014_122129507528735108",
+  "posted_at": "2026-10-04T12:00:10.353853+07:00",
+  "preview": false,
+  "meta": {
+   "series": "price-action-nhap-mon",
+   "part": 7
+  }
  }
 }
