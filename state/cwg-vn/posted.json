@@ -67,5 +67,18 @@
   "posted_at": "2026-10-04T15:00:10.760524+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-04 reel 19:30": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/39020854534227275/",
+  "post_id": "39020854534227275",
+  "posted_at": "2026-10-04T19:30:42.872480+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "turtle-soup",
+   "title": "Turtle Soup: giao dịch ngược cú phá vỡ đỉnh/đáy cũ thất bại",
+   "duration": 57.5,
+   "music": "mixkit-head-bang.mp3"
+  }
  }
 }
