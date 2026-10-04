@@ -86,9 +86,23 @@
   "459393",
   "459394",
   "459395",
-  "459396"
+  "459396",
+  "459397",
+  "459398"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459397",
+   "at": "2026-10-04T06:46:45+00:00",
+   "time": "06:46",
+   "text": "Đại diện OPEC+ cho biết OPEC+ đã đạt được thỏa thuận về nguyên tắc rằng mục tiêu sản lượng dầu tháng 11 sẽ giữ nguyên không đổi.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
