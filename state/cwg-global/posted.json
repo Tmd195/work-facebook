@@ -30,5 +30,18 @@
   "posted_at": "2026-10-04T10:00:08.258132+00:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-04 reel 12:00": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/2078174976153313/",
+  "post_id": "2078174976153313",
+  "posted_at": "2026-10-04T12:00:56.746689+00:00",
+  "preview": false,
+  "meta": {
+   "topic": "XAUUSD",
+   "title": "GOLD'S FOURTH TEST",
+   "duration": 67.9,
+   "music": "winter-breeze.mp3"
+  }
  }
 }
