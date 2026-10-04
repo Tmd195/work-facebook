@@ -87,9 +87,22 @@
   "459406",
   "459407",
   "459408",
-  "459409"
+  "459409",
+  "459410"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459410",
+   "at": "2026-10-04T18:14:32+07:00",
+   "time": "18:14",
+   "text": "Tuyên bố cho thấy OPEC+ đã quyết định giữ nguyên hạn ngạch sản lượng dầu tháng 11 tại cuộc họp hôm Chủ nhật.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99
  },
