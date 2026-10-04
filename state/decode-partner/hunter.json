@@ -115,19 +115,7 @@
   "459434",
   "459435"
  ],
- "pending": [
-  {
-   "id": "459435",
-   "at": "2026-10-05T00:06:49+07:00",
-   "time": "00:06",
-   "text": "Theo hãng thông tấn Tasnim của Iran: Bộ trưởng Dầu mỏ Iran từ chức.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99
  },
