@@ -1,6 +1,6 @@
 {
   "done": {
-    "price-action-nhap-mon": 7
+    "price-action-nhap-mon": 8
   },
   "history": [
     {
@@ -36,6 +36,11 @@
     {
       "series": "price-action-nhap-mon",
       "part": 7,
+      "date": "2026-10-04"
+    },
+    {
+      "series": "price-action-nhap-mon",
+      "part": 8,
       "date": "2026-10-04"
     }
   ]
