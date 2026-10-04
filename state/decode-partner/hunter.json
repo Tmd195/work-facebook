@@ -126,30 +126,7 @@
   "459446",
   "459445"
  ],
- "pending": [
-  {
-   "id": "459443",
-   "at": "2026-10-05T05:00:00+07:00",
-   "time": "05:00",
-   "text": "Úc S&P Global Services PMI",
-   "important": true,
-   "star": 2,
-   "actual": "51.9",
-   "forecast": "-",
-   "previous": "51.4"
-  },
-  {
-   "id": "459441",
-   "at": "2026-10-05T05:00:00+07:00",
-   "time": "05:00",
-   "text": "Úc S&P Global Composite PMI",
-   "important": true,
-   "star": 2,
-   "actual": "51.3",
-   "forecast": "-",
-   "previous": "50.8"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99
  },
