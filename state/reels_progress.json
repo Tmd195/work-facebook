@@ -1,5 +1,5 @@
 {
- "count": 3,
+ "count": 4,
  "used": [
   "inverted-hammer",
   "mlma"
@@ -7,6 +7,7 @@
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
   "Quản lý vốn vàng XAUUSD: rủi ro 1 phần trăm mỗi lệnh, cách tính khối lượng theo khoảng dừng lỗ, giảm lô sau chuỗi thua và dừng ngày khi lỗ 3 phần trăm",
-  "Hệ thống MLMA cho XAUUSD: đo xu hướng, tín hiệu vào lệnh, bộ lọc và SL/TP"
+  "Hệ thống MLMA cho XAUUSD: đo xu hướng, tín hiệu vào lệnh, bộ lọc và SL/TP",
+  "Dời dừng lỗ về entry khi đạt 1R và chốt lời từng phần cho XAUUSD"
  ]
 }

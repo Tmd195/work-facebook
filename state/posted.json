@@ -311,5 +311,19 @@
    "series": "price-action-nhap-mon",
    "part": 7
   }
+ },
+ "2026-10-04 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1088716110838347/",
+  "post_id": "1088716110838347",
+  "posted_at": "2026-10-04T19:15:58.892198+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Dời dừng lỗ về entry khi đạt 1R và chốt lời từng phần cho XAUUSD",
+   "pillar": "sl-tp",
+   "system": null,
+   "duration": 41.2,
+   "music": "take-this-higher.mp3"
+  }
  }
 }
