@@ -1,4 +1,12 @@
 {
+ "2026-10-03 cwg_wk_recap 09:15": {
+  "job": "cwg_wk_recap",
+  "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
+  "post_id": null,
+  "posted_at": "2026-10-03T19:45:00+07:00",
+  "preview": false,
+  "meta": {}
+ },
  "2026-10-03 cwg_wk_recap 18:45": {
   "job": "cwg_wk_recap",
   "link": "https://www.facebook.com/122099784345498398/posts/122099784327498398",
@@ -15,16 +23,8 @@
   "preview": false,
   "meta": {}
  },
- "2026-10-03 cwg_wk_top5 19:15": {
-  "job": "cwg_wk_top5",
-  "link": "https://www.facebook.com/122099784345498398/posts/122099801493498398",
-  "post_id": "1379542878568858_122099801493498398",
-  "posted_at": "2026-10-03T19:15:08.425413+07:00",
-  "preview": false,
-  "meta": {}
- },
- "2026-10-03 cwg_wk_recap 09:15": {
-  "job": "cwg_wk_recap",
+ "2026-10-03 cwg_wk_tech 20:15": {
+  "job": "cwg_wk_tech",
   "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
   "post_id": null,
   "posted_at": "2026-10-03T19:45:00+07:00",
@@ -39,8 +39,16 @@
   "preview": false,
   "meta": {}
  },
- "2026-10-03 cwg_wk_tech 20:15": {
-  "job": "cwg_wk_tech",
+ "2026-10-03 cwg_wk_top5 19:15": {
+  "job": "cwg_wk_top5",
+  "link": "https://www.facebook.com/122099784345498398/posts/122099801493498398",
+  "post_id": "1379542878568858_122099801493498398",
+  "posted_at": "2026-10-03T19:15:08.425413+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-03 reel_quiz 19:45": {
+  "job": "reel_quiz",
   "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
   "post_id": null,
   "posted_at": "2026-10-03T19:45:00+07:00",
@@ -55,11 +63,11 @@
   "preview": false,
   "meta": {}
  },
- "2026-10-03 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
-  "post_id": null,
-  "posted_at": "2026-10-03T19:45:00+07:00",
+ "2026-10-04 cwg_wk_cot 10:15": {
+  "job": "cwg_wk_cot",
+  "link": "https://www.facebook.com/122099784345498398/posts/122100389007498398",
+  "post_id": "1379542878568858_122100389007498398",
+  "posted_at": "2026-10-04T10:15:02.839037+07:00",
   "preview": false,
   "meta": {}
  }
