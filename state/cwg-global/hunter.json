@@ -167,21 +167,10 @@
   "459471",
   "459476",
   "459475",
-  "459477"
+  "459477",
+  "459478"
  ],
- "pending": [
-  {
-   "id": "459475",
-   "at": "2026-10-05T05:00:20+00:00",
-   "time": "05:00",
-   "text": "Chỉ số niềm tin của người tiêu dùng Nhật Bản",
-   "important": true,
-   "star": 2,
-   "actual": "35.4",
-   "forecast": "-",
-   "previous": "35.5"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
