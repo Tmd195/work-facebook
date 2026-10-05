@@ -210,10 +210,23 @@
   "459479",
   "459480",
   "459481",
-  "459482"
+  "459482",
+  "459483"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459483",
+   "at": "2026-10-05T14:50:00+07:00",
+   "time": "14:50",
+   "text": "PMI tổng hợp Pháp",
+   "important": true,
+   "star": 2,
+   "actual": "51.1",
+   "forecast": "51.2",
+   "previous": "51.2"
+  }
+ ],
  "posts": {},
  "last_post": "",
- "fail": 1
+ "fail": 0
 }
