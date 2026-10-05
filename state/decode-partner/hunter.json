@@ -254,21 +254,11 @@
   "459573",
   "459574",
   "459575",
-  "459576"
+  "459576",
+  "459578",
+  "459577"
  ],
- "pending": [
-  {
-   "id": "459576",
-   "at": "2026-10-05T18:30:21+07:00",
-   "time": "18:30",
-   "text": "Bạc giao ngay vượt 62 USD/ounce, tăng 2,73% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2
