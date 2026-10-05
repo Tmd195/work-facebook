@@ -421,5 +421,51 @@
    "price": 4156.13,
    "title": "XAUUSD: canh bán nhịp hồi tại 4,175-4,178, giữ 4,136 thì còn giằng co"
   }
+ },
+ "2026-10-05 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129722448735108",
+  "post_id": "1121396124381014_122129722448735108",
+  "posted_at": "2026-10-05T18:30:16.611843+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4170.6,
+      4176.77
+     ],
+     "sl": 4199.12,
+     "tp": [
+      4150.0,
+      4139.78,
+      4126.88
+     ],
+     "trigger": "Giá hồi lên 4170.6-4176.77, xuất hiện nến từ chối dưới Kijun/EMA50 H4",
+     "invalidation": "Đóng nến H4 trên 4176.77 hoặc bứt qua 4192"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4135.91,
+      4139.78
+     ],
+     "sl": 4111.8,
+     "tp": [
+      4150.0,
+      4161.1,
+      4170.6
+     ],
+     "trigger": "Giá về 4135.91-4139.78 giữ được, có nến đảo chiều tăng rõ ràng",
+     "invalidation": "Đóng nến H1 dứt khoát dưới 4125.12"
+    }
+   ],
+   "price": 4160.65,
+   "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi 4170-4176, canh trụ 4140"
+  }
  }
 }
