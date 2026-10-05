@@ -256,9 +256,23 @@
   "459563",
   "459564",
   "459565",
-  "459566"
+  "459566",
+  "459568",
+  "459567"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459568",
+   "at": "2026-10-05T10:55:42+00:00",
+   "time": "10:55",
+   "text": "Bạc kỳ hạn tại New York tăng 3,00% trong ngày, hiện ở mức 62,24 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
