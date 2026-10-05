@@ -344,5 +344,25 @@
   "posted_at": "2026-10-04T22:50:48.286574+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-05 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129649500735108",
+  "post_id": "1121396124381014_122129649500735108",
+  "posted_at": "2026-10-05T07:30:03.162482+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "21:00",
+     "datetime": "2026-10-05T21:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "ISM Services PMI",
+     "forecast": "55.1",
+     "previous": "55.4"
+    }
+   ]
+  }
  }
 }
