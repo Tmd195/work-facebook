@@ -364,5 +364,51 @@
     }
    ]
   }
+ },
+ "2026-10-05 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129666516735108",
+  "post_id": "1121396124381014_122129666516735108",
+  "posted_at": "2026-10-05T10:00:12.834350+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4175.37,
+      4178.42
+     ],
+     "sl": 4192.94,
+     "tp": [
+      4150.42,
+      4140.44,
+      4135.91
+     ],
+     "trigger": "Giá hồi lên cụm 4175-4178 (Kijun+EMA50 H4) và xuất hiện nến đảo chiều giảm",
+     "invalidation": "H1 đóng cửa trên 4189, giá lọt vào mây H4"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4135.91,
+      4137.82
+     ],
+     "sl": 4125.5,
+     "tp": [
+      4150.42,
+      4162.4,
+      4175.37
+     ],
+     "trigger": "Giá về cụm hợp lưu 4136-4138 giữ vững, có nến xác nhận tăng",
+     "invalidation": "H1 đóng cửa dưới 4125.5"
+    }
+   ],
+   "price": 4156.13,
+   "title": "XAUUSD: canh bán nhịp hồi tại 4,175-4,178, giữ 4,136 thì còn giằng co"
+  }
  }
 }
