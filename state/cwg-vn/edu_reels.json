@@ -1,7 +1,8 @@
 {
  "done": [
   "drawdown",
-  "turtle-soup"
+  "turtle-soup",
+  "counter-trend"
  ],
  "titles": {
   "drawdown": [
@@ -9,6 +10,9 @@
   ],
   "turtle-soup": [
    "Turtle Soup: giao dịch ngược cú phá vỡ đỉnh/đáy cũ thất bại"
+  ],
+  "counter-trend": [
+   "Bắt đỉnh bắt đáy: 3 điều kiện bắt buộc trước khi vào lệnh ngược xu hướng mạnh"
   ]
  }
 }
