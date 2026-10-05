@@ -115,5 +115,18 @@
   "posted_at": "2026-10-05T06:00:03.972228+00:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-05 reel 12:00": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/957375673585598/",
+  "post_id": "957375673585598",
+  "posted_at": "2026-10-05T12:00:42.011106+00:00",
+  "preview": false,
+  "meta": {
+   "topic": "XAUUSD",
+   "title": "GOLD'S RANGE",
+   "duration": 54.2,
+   "music": "rising-forest.mp3"
+  }
  }
 }
