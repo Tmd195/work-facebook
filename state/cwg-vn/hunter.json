@@ -180,9 +180,36 @@
   "459449",
   "459450",
   "459451",
-  "459452"
+  "459452",
+  "459455",
+  "459454",
+  "459456",
+  "459453"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459456",
+   "at": "2026-10-05T07:30:00+07:00",
+   "time": "07:30",
+   "text": "PMI Dịch vụ Nhật Bản",
+   "important": true,
+   "star": 2,
+   "actual": "51.3",
+   "forecast": "-",
+   "previous": "51.6"
+  },
+  {
+   "id": "459453",
+   "at": "2026-10-05T07:30:00+07:00",
+   "time": "07:30",
+   "text": "PMI toàn diện Nhật Bản",
+   "important": true,
+   "star": 2,
+   "actual": "52.3",
+   "forecast": "-",
+   "previous": "52.5"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
