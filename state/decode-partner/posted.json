@@ -150,6 +150,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-05 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1178788198433905/",
+  "post_id": "1178788198433905",
+  "posted_at": "2026-10-05T19:45:39.540828+07:00",
+  "preview": false,
+  "meta": {
+   "key": "GBPUSD|1.34501",
+   "symbol": "GBPUSD",
+   "system": "abcd",
+   "side": "buy",
+   "rr": 8.5,
+   "duration": 10.3
+  }
+ },
  "2026-10-05 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/1393188089197452/",
