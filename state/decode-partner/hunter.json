@@ -141,19 +141,7 @@
   "459460",
   "459461"
  ],
- "pending": [
-  {
-   "id": "459461",
-   "at": "2026-10-05T09:28:20+07:00",
-   "time": "09:28",
-   "text": "EUR giảm 0,38% xuống 1,1211 so với USD, mức thấp nhất kể từ tháng 5 năm 2025.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99
  },
