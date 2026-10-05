@@ -354,21 +354,10 @@
   "459661",
   "459662",
   "459663",
-  "459664"
+  "459664",
+  "459665"
  ],
- "pending": [
-  {
-   "id": "459664",
-   "at": "2026-10-05T17:03:49+00:00",
-   "time": "17:03",
-   "text": "Lợi suất trái phiếu kho bạc Mỹ kỳ hạn 10 năm tăng lên 5,34%, tiếp tục lập đỉnh cao nhất kể từ năm 2002.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
