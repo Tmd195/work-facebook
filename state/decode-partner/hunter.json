@@ -279,13 +279,41 @@
   "459598",
   "459599",
   "459600",
-  "459601"
+  "459601",
+  "459606",
+  "459605",
+  "459604",
+  "459603",
+  "459602"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459604",
+   "at": "2026-10-05T20:31:48+07:00",
+   "time": "20:31",
+   "text": "Chỉ số PMI tổng hợp toàn cầu của S&P Canada",
+   "important": true,
+   "star": 2,
+   "actual": "48.7",
+   "forecast": "-",
+   "previous": "47.8"
+  },
+  {
+   "id": "459602",
+   "at": "2026-10-05T20:31:43+07:00",
+   "time": "20:31",
+   "text": "Canada S&P Global Services PMI",
+   "important": true,
+   "star": 2,
+   "actual": "48.3",
+   "forecast": "-",
+   "previous": "46.8"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2
  },
  "last_post": "2026-10-05T17:27:32.786997+07:00",
- "fail": 1
+ "fail": 0
 }
