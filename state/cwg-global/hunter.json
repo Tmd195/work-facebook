@@ -240,9 +240,23 @@
   "459547",
   "459548",
   "459549",
-  "459550"
+  "459550",
+  "459552",
+  "459551"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459552",
+   "at": "2026-10-05T10:16:03+00:00",
+   "time": "10:16",
+   "text": "Người phát ngôn Ủy ban châu Âu: Đã sẵn sàng triệu tập cuộc họp của nhóm điều phối dầu mỏ và nhóm công tác an ninh năng lượng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
