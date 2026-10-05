@@ -236,23 +236,11 @@
   "459555",
   "459556"
  ],
- "pending": [
-  {
-   "id": "459555",
-   "at": "2026-10-05T17:22:18+07:00",
-   "time": "17:22",
-   "text": "Cơ quan Hành động Thương mại Hàng hải Vương quốc Anh (UKMTO): Đã nhận được báo cáo về một sự cố xảy ra cách 11 hải lý về phía bắc Khasab, Oman. Một tàu chở dầu đang trên đường vào eo biển Hormuz đã nhận được cuộc gọi vô tuyến từ Lực lượng Vệ binh Cách mạng Iran trong hành trình. Tàu chở dầu được yêu cầu quay đầu, nếu không sẽ trở thành mục tiêu tấn công. Tàu chở dầu đã tuân theo chỉ thị.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
-  "2026-10-05": 1
+  "2026-10-05": 2
  },
- "last_post": "2026-10-05T15:38:57.118299+07:00",
+ "last_post": "2026-10-05T17:27:32.786997+07:00",
  "fail": 0
 }
