@@ -203,9 +203,23 @@
   "459509",
   "459513",
   "459512",
-  "459511"
+  "459511",
+  "459514",
+  "459515"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459515",
+   "at": "2026-10-05T08:36:47+00:00",
+   "time": "08:36",
+   "text": "Tin thị trường: Đường ống dẫn dầu Đông-Tây của Ả Rập Xê Út tạm ngừng hoạt động sau khi bị tấn công lần nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
