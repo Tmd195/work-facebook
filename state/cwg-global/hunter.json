@@ -205,30 +205,7 @@
   "459512",
   "459511"
  ],
- "pending": [
-  {
-   "id": "459509",
-   "at": "2026-10-05T08:30:00+00:00",
-   "time": "08:30",
-   "text": "PMI tổng hợp Anh",
-   "important": true,
-   "star": 2,
-   "actual": "52",
-   "forecast": "51.7",
-   "previous": "51.7"
-  },
-  {
-   "id": "459511",
-   "at": "2026-10-05T08:32:27+00:00",
-   "time": "08:32",
-   "text": "Dự trữ ngân hàng  Anh",
-   "important": true,
-   "star": 2,
-   "actual": "-60.1",
-   "forecast": "-",
-   "previous": "53.28"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
