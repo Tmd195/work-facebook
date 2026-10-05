@@ -376,6 +376,20 @@
    ]
   }
  },
+ "2026-10-05 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1436013128669565/",
+  "post_id": "1436013128669565",
+  "posted_at": "2026-10-05T19:16:12.269483+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống Sigmoid Transition Trailing Stop cho XAUUSD: cách đo biến động bằng ATR, điều kiện vào lệnh Buy/Sell theo nến đóng, bộ lọc nhiễu và cách đặt SL/TP, dời dừng lỗ",
+   "pillar": "he-thong",
+   "system": "sigmoid-transition-trailing-stop",
+   "duration": 58.1,
+   "music": "expressive-courage.mp3"
+  }
+ },
  "2026-10-05 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122129666516735108",
