@@ -244,14 +244,15 @@
   "459552",
   "459551",
   "459554",
-  "459553"
+  "459553",
+  "459555"
  ],
  "pending": [
   {
-   "id": "459552",
-   "at": "2026-10-05T10:16:03+00:00",
-   "time": "10:16",
-   "text": "Người phát ngôn Ủy ban châu Âu: Đã sẵn sàng triệu tập cuộc họp của nhóm điều phối dầu mỏ và nhóm công tác an ninh năng lượng.",
+   "id": "459555",
+   "at": "2026-10-05T10:22:18+00:00",
+   "time": "10:22",
+   "text": "Cơ quan Hành động Thương mại Hàng hải Vương quốc Anh (UKMTO): Đã nhận được báo cáo về một sự cố xảy ra cách 11 hải lý về phía bắc Khasab, Oman. Một tàu chở dầu đang trên đường vào eo biển Hormuz đã nhận được cuộc gọi vô tuyến từ Lực lượng Vệ binh Cách mạng Iran trong hành trình. Tàu chở dầu được yêu cầu quay đầu, nếu không sẽ trở thành mục tiêu tấn công. Tàu chở dầu đã tuân theo chỉ thị.",
    "important": true,
    "star": 0,
    "actual": "null",
