@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459389",
   "459390",
   "459391",
   "459392",
@@ -599,43 +598,10 @@
   "459987",
   "459986",
   "459985",
-  "459984"
+  "459984",
+  "459989"
  ],
- "pending": [
-  {
-   "id": "459980",
-   "at": "2026-10-06T23:00:29+07:00",
-   "time": "23:00",
-   "text": "Theo trang Axios: Thành viên Fed Daly cho biết có thể cần thắt chặt chính sách hơn nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "459985",
-   "at": "2026-10-06T23:03:24+07:00",
-   "time": "23:03",
-   "text": "Cơ quan Thông tin Năng lượng Hoa Kỳ (EIA): Dự báo nhu cầu dầu của Hoa Kỳ năm 2026 là 20,6 triệu thùng/ngày, không đổi so với mức dự báo trước đó là 20,6 triệu thùng/ngày; dự báo nhu cầu năm 2027 là 20,8 triệu thùng/ngày (trước đó là 20,8 triệu thùng/ngày).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "459984",
-   "at": "2026-10-06T23:03:12+07:00",
-   "time": "23:03",
-   "text": "Cơ quan Thông tin Năng lượng Hoa Kỳ (EIA): Dự báo sản lượng dầu của Hoa Kỳ năm 2026 là 13,87 triệu thùng/ngày, được điều chỉnh tăng so với mức dự báo trước đó là 13,83 triệu thùng/ngày; dự báo sản lượng năm 2027 là 14,30 triệu thùng/ngày (trước đó là 14,26 triệu thùng/ngày).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
