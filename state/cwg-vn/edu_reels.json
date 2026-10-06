@@ -1,10 +1,18 @@
 {
  "done": [
-  "drawdown"
+  "drawdown",
+  "turtle-soup",
+  "counter-trend"
  ],
  "titles": {
   "drawdown": [
    "Thua 10 lệnh liên tiếp vẫn không cháy tài khoản — bí mật nằm ở con số 1%"
+  ],
+  "turtle-soup": [
+   "Turtle Soup: giao dịch ngược cú phá vỡ đỉnh/đáy cũ thất bại"
+  ],
+  "counter-trend": [
+   "Bắt đỉnh bắt đáy: 3 điều kiện bắt buộc trước khi vào lệnh ngược xu hướng mạnh"
   ]
  }
 }

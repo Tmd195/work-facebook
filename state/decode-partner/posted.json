@@ -1,4 +1,12 @@
 {
+ "2026-10-03 cwg_wk_recap 09:15": {
+  "job": "cwg_wk_recap",
+  "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
+  "post_id": null,
+  "posted_at": "2026-10-03T19:45:00+07:00",
+  "preview": false,
+  "meta": {}
+ },
  "2026-10-03 cwg_wk_recap 18:45": {
   "job": "cwg_wk_recap",
   "link": "https://www.facebook.com/122099784345498398/posts/122099784327498398",
@@ -15,16 +23,8 @@
   "preview": false,
   "meta": {}
  },
- "2026-10-03 cwg_wk_top5 19:15": {
-  "job": "cwg_wk_top5",
-  "link": "https://www.facebook.com/122099784345498398/posts/122099801493498398",
-  "post_id": "1379542878568858_122099801493498398",
-  "posted_at": "2026-10-03T19:15:08.425413+07:00",
-  "preview": false,
-  "meta": {}
- },
- "2026-10-03 cwg_wk_recap 09:15": {
-  "job": "cwg_wk_recap",
+ "2026-10-03 cwg_wk_tech 20:15": {
+  "job": "cwg_wk_tech",
   "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
   "post_id": null,
   "posted_at": "2026-10-03T19:45:00+07:00",
@@ -39,8 +39,16 @@
   "preview": false,
   "meta": {}
  },
- "2026-10-03 cwg_wk_tech 20:15": {
-  "job": "cwg_wk_tech",
+ "2026-10-03 cwg_wk_top5 19:15": {
+  "job": "cwg_wk_top5",
+  "link": "https://www.facebook.com/122099784345498398/posts/122099801493498398",
+  "post_id": "1379542878568858_122099801493498398",
+  "posted_at": "2026-10-03T19:15:08.425413+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-03 reel_quiz 19:45": {
+  "job": "reel_quiz",
   "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
   "post_id": null,
   "posted_at": "2026-10-03T19:45:00+07:00",
@@ -55,11 +63,153 @@
   "preview": false,
   "meta": {}
  },
- "2026-10-03 reel_quiz 19:45": {
+ "2026-10-04 cwg_wk_ahead 20:15": {
+  "job": "cwg_wk_ahead",
+  "link": "https://www.facebook.com/122099784345498398/posts/122100764433498398",
+  "post_id": "1379542878568858_122100764433498398",
+  "posted_at": "2026-10-04T20:15:06.646355+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-04 cwg_wk_cot 10:15": {
+  "job": "cwg_wk_cot",
+  "link": "https://www.facebook.com/122099784345498398/posts/122100389007498398",
+  "post_id": "1379542878568858_122100389007498398",
+  "posted_at": "2026-10-04T10:15:02.839037+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-04 cwg_wk_macro 15:15": {
+  "job": "cwg_wk_macro",
+  "link": "https://www.facebook.com/122099784345498398/posts/122100584685498398",
+  "post_id": "1379542878568858_122100584685498398",
+  "posted_at": "2026-10-04T15:15:06.869775+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-04 reel_quiz 19:45": {
   "job": "reel_quiz",
-  "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
-  "post_id": null,
-  "posted_at": "2026-10-03T19:45:00+07:00",
+  "link": "https://www.facebook.com/reel/1125323543285490/",
+  "post_id": "1125323543285490",
+  "posted_at": "2026-10-04T19:45:23.439679+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURJPY|185.48500",
+   "symbol": "EURJPY",
+   "system": "retest",
+   "side": "buy",
+   "rr": 10.9,
+   "duration": 10.3
+  }
+ },
+ "2026-10-05 cwg_breaking 15:38": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122101434687498398",
+  "post_id": "1379542878568858_122101434687498398",
+  "posted_at": "2026-10-05T15:39:47.336352+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Tin thị trường: Đường ống dẫn dầu Đông-Tây của Ả Rập Xê Út tạm ngừng hoạt động sau khi bị tấn công lần nữa."
+   ]
+  }
+ },
+ "2026-10-05 cwg_breaking 17:27": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122101515465498398",
+  "post_id": "1379542878568858_122101515465498398",
+  "posted_at": "2026-10-05T17:28:24.257461+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Cơ quan Hành động Thương mại Hàng hải Vương quốc Anh (UKMTO): Đã nhận được báo cáo về một sự cố xảy ra cách 11 hải lý về"
+   ]
+  }
+ },
+ "2026-10-05 cwg_macro 10:15": {
+  "job": "cwg_macro",
+  "link": "https://www.facebook.com/122099784345498398/posts/122101222407498398",
+  "post_id": "1379542878568858_122101222407498398",
+  "posted_at": "2026-10-05T10:15:11.552302+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-05 cwg_morning 07:45": {
+  "job": "cwg_morning",
+  "link": "https://www.facebook.com/122099784345498398/posts/122101159053498398",
+  "post_id": "1379542878568858_122101159053498398",
+  "posted_at": "2026-10-05T07:45:05.628960+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-05 cwg_trend 08:45": {
+  "job": "cwg_trend",
+  "link": "https://www.facebook.com/122099784345498398/posts/122101189929498398",
+  "post_id": "1379542878568858_122101189929498398",
+  "posted_at": "2026-10-05T08:45:06.912544+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-05 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1178788198433905/",
+  "post_id": "1178788198433905",
+  "posted_at": "2026-10-05T19:45:39.540828+07:00",
+  "preview": false,
+  "meta": {
+   "key": "GBPUSD|1.34501",
+   "symbol": "GBPUSD",
+   "system": "abcd",
+   "side": "buy",
+   "rr": 8.5,
+   "duration": 10.3
+  }
+ },
+ "2026-10-05 reel_story 18:00": {
+  "job": "reel_story",
+  "link": "https://www.facebook.com/reel/1393188089197452/",
+  "post_id": "1393188089197452",
+  "posted_at": "2026-10-05T18:00:48.823875+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Từ một nhóm Zalo 30 người thành cộng đồng giao dịch bền vững – nhờ chia sẻ kiến thức đều đặn",
+   "title": "NHÓM ZALO 30 NGƯỜI VÀ CỘNG ĐỒNG BỀN VỮNG",
+   "duration": 59.3
+  }
+ },
+ "2026-10-06 cwg_breaking 00:09": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122101797525498398",
+  "post_id": "1379542878568858_122101797525498398",
+  "posted_at": "2026-10-06T00:09:45.225902+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Lợi suất trái phiếu kho bạc Mỹ kỳ hạn 10 năm tăng lên 5,34%, tiếp tục lập đỉnh cao nhất kể từ năm 2002."
+   ]
+  }
+ },
+ "2026-10-06 cwg_macro 10:15": {
+  "job": "cwg_macro",
+  "link": "https://www.facebook.com/122099784345498398/posts/122102092953498398",
+  "post_id": "1379542878568858_122102092953498398",
+  "posted_at": "2026-10-06T10:15:07.616110+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-06 cwg_morning 07:45": {
+  "job": "cwg_morning",
+  "link": "https://www.facebook.com/122099784345498398/posts/122102027649498398",
+  "post_id": "1379542878568858_122102027649498398",
+  "posted_at": "2026-10-06T07:45:03.091741+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-10-06 cwg_trend 08:45": {
+  "job": "cwg_trend",
+  "link": "https://www.facebook.com/122099784345498398/posts/122102052351498398",
+  "post_id": "1379542878568858_122102052351498398",
+  "posted_at": "2026-10-06T08:45:04.321250+07:00",
   "preview": false,
   "meta": {}
  }
