@@ -590,9 +590,22 @@
   "459897",
   "459898",
   "459899",
-  "459900"
+  "459900",
+  "459901"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459901",
+   "at": "2026-10-06T12:12:16+00:00",
+   "time": "12:12",
+   "text": "Bạc giao ngay tăng 1% trong ngày, hiện ở mức 61,67 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
