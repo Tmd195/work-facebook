@@ -500,9 +500,25 @@
   "459768",
   "459770",
   "459772",
-  "459771"
+  "459771",
+  "459773",
+  "459776",
+  "459775",
+  "459774"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459774",
+   "at": "2026-10-06T13:33:22+07:00",
+   "time": "13:33",
+   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda: sẽ tiếp tục tăng lãi suất chính sách tùy theo diễn biến của kinh tế, giá cả và tình hình tài chính.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2
  },
