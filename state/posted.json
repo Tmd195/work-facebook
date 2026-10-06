@@ -559,5 +559,51 @@
    "price": 4117.91,
    "title": "XAUUSD Á-Âu 06/10: ưu tiên bán nhịp hồi 4136-4146, chừng nào dưới 4152"
   }
+ },
+ "2026-10-06 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129887478735108",
+  "post_id": "1121396124381014_122129887478735108",
+  "posted_at": "2026-10-06T18:30:20.393182+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4187.17,
+      4192.52
+     ],
+     "sl": 4218.99,
+     "tp": [
+      4152.48,
+      4128.03,
+      4114.89
+     ],
+     "trigger": "Giá hồi lên 4187 - 4192 và xuất hiện nến từ chối tại R2/Fibo 0.382 H4.",
+     "invalidation": "H4 đóng cửa trên 4213.7 (vượt mây H4)."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4125.41,
+      4128.03
+     ],
+     "sl": 4099.08,
+     "tp": [
+      4152.48,
+      4170.6,
+      4192.52
+     ],
+     "trigger": "Giá về 4125 - 4128 giữ được và có nến đảo chiều tăng rõ.",
+     "invalidation": "H1 đóng cửa dưới 4107.79 (mất đáy phiên Á)."
+    }
+   ],
+   "price": 4158.03,
+   "title": "XAUUSD phiên Mỹ: canh bán nhịp hồi tại kháng cự, D1 còn giảm"
+  }
  }
 }
