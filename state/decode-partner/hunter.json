@@ -601,19 +601,7 @@
   "460025",
   "460026"
  ],
- "pending": [
-  {
-   "id": "460026",
-   "at": "2026-10-07T02:02:27+07:00",
-   "time": "02:02",
-   "text": "Vàng giao ngay tăng hơn 1,00% trong ngày, hiện ở mức 4.182,01 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
