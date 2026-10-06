@@ -202,8 +202,16 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     out_dir = OUTPUT / now.strftime("%Y-%m-%d")
     had_error = False
 
-    # --- 1. Tạo bài (thử lại tối đa `attempts` lần)
-    for k in range(1, attempts + 1):
+    # --- 1. Tạo bài – SỬA ĐẾN KHI ĐƯỢC (anh chốt 06/10/2026): thử lại liên tục tới hạn chót (giờ đăng + 2 tiếng),
+    #        không bỏ cuộc sau vài lần. Reels: bộ kiểm tra tự sửa tới sát giờ đăng (qa.DEADLINE).
+    upload = timedelta(minutes=12) if job.startswith("reel") else timedelta(minutes=3)
+    if job.startswith("reel"):
+        from src.reels import qa as _qa
+        _qa.DEADLINE = max(target - upload, datetime.now(TZ) + timedelta(minutes=20))
+    give_up = max(target, datetime.now(TZ)) + timedelta(hours=2)
+    k = 0
+    while True:
+        k += 1
         err = None
         try:
             if generate(job):
@@ -223,32 +231,35 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
             traceback.print_exc()
         had_error = True
         if k == 1:
-            telegram.send(f"⚠️ {name} {day} lỗi:\n{err}")
-        if k < attempts:
-            telegram.send(f"🔧 Đang sửa lỗi: thử lại lần {k + 1}/{attempts} (đổi nguồn dữ liệu dự phòng, cho AI viết lại)...")
-            time.sleep(60 * k)
-    else:
-        telegram.need_fix(f"❌ {name} {day} KHÔNG hoàn thành sau {attempts} lần thử.\n"
-                      f"Lỗi cuối: {err}\nBài này sẽ không được đăng. Em cần anh kiểm tra giúp.")
-        return False
+            telegram.send(f"⚠️ {name} {day} lỗi:\n{err}\n🔧 Em tự sửa và thử lại liên tục tới khi được.")
+        wait = min(60 * k, 300)
+        if datetime.now(TZ) + timedelta(seconds=wait) > give_up:
+            telegram.need_fix(f"❌ {name} {day}: đã thử {k} lần tới quá giờ đăng 2 tiếng vẫn lỗi.\n"
+                              f"Lỗi cuối: {err}\nEm cần anh kiểm tra giúp.")
+            return False
+        if k % 5 == 0:
+            telegram.send(f"🔧 {name} {day}: vẫn đang sửa (lần {k}) – lỗi: {err[:200]}")
+        time.sleep(wait)
     if had_error:
         telegram.send("✅ Đã sửa xong lỗi, tiếp tục đăng bài.")
 
     caption_file, images = _files(job, out_dir)
 
-    # --- 1b. Soát ẢNH trước khi đăng (chữ đè / tràn / bị cắt…) – lỗi nặng → AI viết lại bài, dựng ảnh mới (tối đa 2 lần);
+    # --- 1b. Soát ẢNH trước khi đăng (chữ đè / tràn / bị cắt…) – lỗi nặng → AI viết lại bài, dựng ảnh mới, lặp tới sát giờ đăng;
     #         vẫn lỗi → đăng bản cuối đúng giờ + báo anh (đăng đều quan trọng). Reels có bộ kiểm tra riêng.
     if not job.startswith("reel"):
         from src.design import qa_image
-        for k in range(3):
+        k = 0
+        while True:
             rep = qa_image.check(images, out_dir, job)
             if rep["ok"]:
                 if rep["minor"]:
                     print(f"  ~ ảnh: góp ý nhẹ (vẫn đăng): {rep['minor']}", flush=True)
                 break
-            print(f"  ! ảnh lỗi (lần {k + 1}): {rep['major']}", flush=True)
-            if k == 2:
-                telegram.send(f"⚠️ {name} {day}: ảnh vẫn còn lỗi hiển thị sau 2 lần sửa, em vẫn đăng đúng giờ:\n"
+            k += 1
+            print(f"  ! ảnh lỗi (lần {k}): {rep['major']}", flush=True)
+            if datetime.now(TZ) > target - upload - timedelta(minutes=6):   # 1 lượt viết + vẽ lại ~6 phút
+                telegram.send(f"⚠️ {name} {day}: đã sửa ảnh {k} lần tới sát giờ đăng vẫn còn lỗi hiển thị, em đăng đúng giờ:\n"
                               + "\n".join(rep["major"]))
                 break
             try:

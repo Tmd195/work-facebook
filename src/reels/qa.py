@@ -306,13 +306,22 @@ def edit_spec(spec: dict, errors: list[str], rules: str = "") -> dict:
     return fixed
 
 
+DEADLINE = None          # runner đặt = giờ đăng − thời gian tải lên; sửa liên tục tới hạn này (anh yêu cầu 06/10/2026)
+
+
 def produce(name: str, folder: Path, make, check, fix, tries: int = 4) -> dict:
     """Dựng → kiểm tra → SỬA ĐÚNG LỖI rồi dựng lại, giữ nguyên nội dung video:
     - lỗi hiển thị (nhãn đè/che, chữ tràn): giữ kịch bản, dựng lại với BỐ CỤC khác (make(variant) – dời nhãn,
       đổi phía, cỡ chữ); từ lần thứ 3 nếu vẫn lỗi thì AI rút ngắn đúng chữ của nhãn/câu bị lỗi.
     - lỗi nội dung (số sai, từ cấm, quá dài): AI chỉ sửa đúng câu lỗi (fix(errors)); câu không đổi dùng lại giọng cũ.
-    Hết lượt mà chỉ còn lỗi hiển thị → ĐĂNG BẢN TỐT NHẤT đúng giờ + báo anh. Chỉ không đăng khi mọi bản đều
+    SỬA ĐẾN KHI ĐẠT (anh chốt 06/10/2026): không dừng sau vài lần – chỉ dừng khi tới hạn chót DEADLINE (sát giờ đăng).
+    Tới hạn mà chỉ còn lỗi hiển thị → ĐĂNG BẢN TỐT NHẤT đúng giờ + báo anh. Chỉ không đăng khi mọi bản đều
     dính lỗi nghiêm trọng (mất tiếng / sai số liệu / từ cấm)."""
+    from datetime import datetime, timezone
+    def time_left():
+        return DEADLINE is None or datetime.now(timezone.utc) < DEADLINE.astimezone(timezone.utc)
+    if DEADLINE is not None:
+        tries = 60                                      # trần an toàn; thực tế dừng theo hạn chót
     import shutil
     best, variant = None, 0
     for attempt in range(1, tries + 1):
@@ -323,7 +332,7 @@ def produce(name: str, folder: Path, make, check, fix, tries: int = 4) -> dict:
                 print(f"  ~ góp ý nhẹ (vẫn đăng): {rep['notes']}", flush=True)
             return res
         hard = _hard(rep["errors"])
-        print(f"  ! lần {attempt}/{tries} không đạt: {rep['errors']}", flush=True)
+        print(f"  ! lần {attempt} không đạt: {rep['errors']}", flush=True)
         score = (len(hard), len(rep["errors"]))
         if best is None or score < best[0]:             # giữ bản tốt nhất
             keep = folder / "_best"
@@ -335,7 +344,7 @@ def produce(name: str, folder: Path, make, check, fix, tries: int = 4) -> dict:
                 if (folder / extra).exists():
                     shutil.copy(folder / extra, keep / extra)
             best = (score, res, rep)
-        if attempt == tries:
+        if attempt == tries or not time_left():
             break
         content = [e for e in rep["errors"] if any(k in e for k in CONTENT)]
         visual = [e for e in rep["errors"] if e not in content]
@@ -343,8 +352,8 @@ def produce(name: str, folder: Path, make, check, fix, tries: int = 4) -> dict:
             fix(content)                                # sửa đúng câu lỗi, giữ bố cục
         if visual:
             variant += 1                                # dựng lại cùng nội dung với bố cục khác
-            if variant >= 2:
-                fix(visual)                             # vẫn lỗi → rút gọn đúng chữ bị che/tràn
+            if variant >= 2 and variant % 2 == 0:
+                fix(visual)                             # vẫn lỗi → rút gọn đúng chữ bị che/tràn (xen kẽ đổi bố cục)
     score, res, rep = best
     keep = folder / "_best"
     for f in keep.iterdir():                            # khôi phục bản tốt nhất làm bản đăng
@@ -352,10 +361,10 @@ def produce(name: str, folder: Path, make, check, fix, tries: int = 4) -> dict:
     if score[0] == 0:
         from src.publish import telegram
         lines = "\n".join(f"• {e}" for e in rep["errors"][:6])
-        telegram.send_preview(f"⚠️ {name}: sau {tries} lần sửa vẫn còn lỗi hiển thị – đã đăng BẢN TỐT NHẤT đúng giờ.",
+        telegram.send_preview(f"⚠️ {name}: đã sửa {attempt} lần tới sát giờ đăng vẫn còn lỗi hiển thị – đăng BẢN TỐT NHẤT đúng giờ.",
                               f"Lỗi còn lại:\n{lines}\n\nEm sẽ sửa gốc trong code nếu lỗi này lặp lại.",
                               [Path(rep["sheet"])])
         res["qa_warning"] = rep["errors"]
         return res
-    fail_alert(name, rep, tries)
+    fail_alert(name, rep, attempt)
     raise QAFail("; ".join(rep["errors"][:3]), Path(rep["sheet"]))

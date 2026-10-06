@@ -86,7 +86,7 @@ def due_jobs(now: datetime) -> list[tuple[str, datetime]]:
             slot = _slot(job, t)
             lead = LEAD_REEL if job.startswith("reel") else LEAD
             if t - lead <= now <= t + timedelta(hours=2) and not already_posted(job, t) \
-                    and _attempts().get(slot, 0) < 2:
+                    and _attempts().get(slot, 0) < 6:
                 out.append((job, t))
     return sorted(out, key=lambda x: x[1])
 
