@@ -145,6 +145,14 @@ class Drawings {
           const yc = (yp + (m.position === 'aboveBar' ? -24 : 24)) * vr;
           blocks.push([xc * hr - 18 * hr, yc - 14 * vr, 36 * hr, 28 * vr]);
         }
+        // vật cản: nhãn giá của các đường giá (vd. "Then chốt 4152.48") nằm sát mép phải vùng biểu đồ
+        const W_ = scope.bitmapSize.width;
+        for (const pl of (SPEC.priceLines || [])) {
+          const yp = self.series.priceToCoordinate(pl.price);
+          if (yp === null) continue;
+          const tw = ((pl.title || '').length * 7 + 70) * hr;
+          blocks.push([W_ - tw - 10 * hr, yp * vr - 14 * vr, tw + 10 * hr, 28 * vr]);
+        }
         const overlap = (x0, y0, w, h, r) => !(x0 + w < r[0] || x0 > r[0] + r[2] || y0 + h < r[1] || y0 > r[1] + r[3]);
         const placed = [];
         for (const L of (self.labels || [])) {
@@ -154,7 +162,7 @@ class Drawings {
           // thử dịch dọc rồi dịch ngang sang trái; chọn chỗ không đè nhãn khác & nhãn sóng
           const tries = [];
           for (let k = 0; k < 9; k++) tries.push([0, (k % 2 ? -1 : 1) * Math.ceil(k / 2) * h * 0.75]);
-          for (let j = 1; j < 6; j++) for (const dy of [0, -h * 0.75, h * 0.75]) tries.push([-j * 60 * hr, dy]);
+          for (let j = 1; j < 9; j++) for (const dy of [0, -h * 0.75, h * 0.75, -h * 1.5, h * 1.5]) tries.push([-j * 60 * hr, dy]);
           for (const [dx, dy] of tries) {
             const tx = bx + dx, ty = L.y + dy;
             const n = placed.filter(r => overlap(tx, ty - h / 2, w, h, r)).length * 2 + blocks.filter(r => overlap(tx, ty - h / 2, w, h, r)).length;
