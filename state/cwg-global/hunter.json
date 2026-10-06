@@ -1,7 +1,5 @@
 {
  "seen": [
-  "459436",
-  "459437",
   "459438",
   "459439",
   "459440",
@@ -599,9 +597,23 @@
   "460033",
   "460032",
   "460034",
-  "460035"
+  "460035",
+  "460037",
+  "460036"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460037",
+   "at": "2026-10-06T19:28:42+00:00",
+   "time": "19:28",
+   "text": "Tổng thống Mỹ Trump: (khi được hỏi về việc tạm dừng thu thuế xăng dầu liên bang) Đang cân nhắc việc này.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
