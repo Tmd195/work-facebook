@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459434",
   "459435",
   "459436",
   "459437",
@@ -599,21 +598,10 @@
   "460029",
   "460031",
   "460033",
-  "460032"
+  "460032",
+  "460034"
  ],
- "pending": [
-  {
-   "id": "460029",
-   "at": "2026-10-06T19:12:28+00:00",
-   "time": "19:12",
-   "text": "Tổng thống Mỹ Trump: Đồng USD của chúng ta rất mạnh.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
