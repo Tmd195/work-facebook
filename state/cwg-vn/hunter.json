@@ -1,8 +1,5 @@
 {
  "seen": [
-  "459392",
-  "459393",
-  "459394",
   "459395",
   "459396",
   "459397",
@@ -599,9 +596,24 @@
   "459988",
   "459989",
   "459990",
-  "459991"
+  "459991",
+  "459993",
+  "459992",
+  "459994"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "459994",
+   "at": "2026-10-06T23:17:45+07:00",
+   "time": "23:17",
+   "text": "Cơ quan Thông tin Năng lượng Hoa Kỳ (EIA): Dự báo sản lượng dầu thô của Hoa Kỳ năm 2027 sẽ tăng 430.000 thùng/ngày, trước đó là 430.000 thùng/ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2
  },
