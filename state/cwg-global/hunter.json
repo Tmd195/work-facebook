@@ -416,19 +416,7 @@
   "459723",
   "459724"
  ],
- "pending": [
-  {
-   "id": "459723",
-   "at": "2026-10-06T02:36:16+00:00",
-   "time": "02:36",
-   "text": "Vàng giao ngay mất mốc 4.110 USD/oz, giảm hơn 10 USD trong ngắn hạn, mức giảm trong ngày 0,74%. Bạc giao ngay giảm 1,00% trong ngày, hiện báo 60,42 USD/oz.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
