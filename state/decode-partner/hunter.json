@@ -527,21 +527,13 @@
   "459847",
   "459846",
   "459849",
-  "459848"
+  "459848",
+  "459853",
+  "459852",
+  "459851",
+  "459850"
  ],
- "pending": [
-  {
-   "id": "459847",
-   "at": "2026-10-06T16:29:27+07:00",
-   "time": "16:29",
-   "text": "Ngày 6 tháng 10 đưa tin, phía bắc thủ đô Riyadh của Saudi Arabia hôm nay (ngày 6 tháng 10) một lần nữa lại vang lên tiếng nổ. Tối ngày 5 tháng 10 theo giờ địa phương và rạng sáng nay, khu vực gần sân bay Quốc tế King Khalid ở phía bắc Riyadh đã bị lực lượng Houthi ở Yemen tấn công, liên tiếp vang lên những tiếng nổ dữ dội. Lực lượng Houthi ở Yemen hôm nay thông tin mới nhất cho biết đã tấn công sân bay Abha của Saudi Arabia. Phía Saudi Arabia chưa xác nhận thông tin này.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
