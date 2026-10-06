@@ -189,5 +189,18 @@
   "posted_at": "2026-10-06T08:30:02.196965+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-06 reel 19:30": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1127694743029584/",
+  "post_id": "1127694743029584",
+  "posted_at": "2026-10-06T19:30:40.462407+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "retest-entry",
+   "title": "Đừng đuổi cây nến to — hãy vào lệnh khi retest",
+   "duration": 58.3,
+   "music": "winter-breeze.mp3"
+  }
  }
 }
