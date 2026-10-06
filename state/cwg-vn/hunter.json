@@ -1,7 +1,5 @@
 {
  "seen": [
-  "459339",
-  "459338",
   "459337",
   "459336",
   "459335",
@@ -599,21 +597,11 @@
   "459911",
   "459912",
   "459913",
-  "459914"
+  "459914",
+  "459915",
+  "459916"
  ],
- "pending": [
-  {
-   "id": "459913",
-   "at": "2026-10-06T20:00:47+07:00",
-   "time": "20:00",
-   "text": "Ngày 6 tháng 10, Bộ Tư lệnh Trung tâm Hoa Kỳ cho biết, truyền thông chính thức của Iran đã liên tục lan truyền các báo cáo sai sự thật rằng một máy bay trực thăng MH-60R của Hải quân Hoa Kỳ đã rơi xuống Biển Đỏ đêm qua sau khi tuyên bố tình trạng khẩn cấp. Bộ Tư lệnh Trung tâm Hoa Kỳ tuyên bố rằng báo cáo cho rằng \"máy bay trực thăng quân đội Hoa Kỳ rơi xuống Biển Đỏ sau khi tuyên bố tình trạng khẩn cấp\" là không đúng sự thật. Hiện tại, tất cả máy bay và nhân viên quân đội Hoa Kỳ ở khu vực Trung Đông đều an toàn và đã được xác nhận đầy đủ tung tích.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2
  },
