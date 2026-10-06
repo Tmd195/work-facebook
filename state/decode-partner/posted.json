@@ -212,5 +212,20 @@
   "posted_at": "2026-10-06T08:45:04.321250+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-06 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1407920888127690/",
+  "post_id": "1407920888127690",
+  "posted_at": "2026-10-06T19:45:26.595267+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDCAD|1.39003",
+   "symbol": "USDCAD",
+   "system": "range",
+   "side": "sell",
+   "rr": 4.2,
+   "duration": 9.9
+  }
  }
 }
