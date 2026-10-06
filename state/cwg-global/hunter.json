@@ -528,21 +528,10 @@
   "459836",
   "459834",
   "459835",
-  "459838"
+  "459838",
+  "459839"
  ],
- "pending": [
-  {
-   "id": "459838",
-   "at": "2026-10-06T09:05:46+00:00",
-   "time": "09:05",
-   "text": "Bộ trưởng Năng lượng Saudi Arabia: Lượng dầu hiện đang được vận chuyển qua đường ống Đông-Tây đã đạt 5,8 triệu thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
