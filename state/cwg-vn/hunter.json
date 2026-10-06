@@ -521,19 +521,7 @@
   "459790",
   "459791"
  ],
- "pending": [
-  {
-   "id": "459791",
-   "at": "2026-10-06T14:00:00+07:00",
-   "time": "14:00",
-   "text": "Tỷ lệ thất nghiệp(NSA) Thụy Sĩ",
-   "important": true,
-   "star": 2,
-   "actual": "3",
-   "forecast": "-%",
-   "previous": "3.00"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2
  },
