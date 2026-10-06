@@ -5,3 +5,4 @@ PyYAML>=6
 tzdata
 playwright>=1.48
 numpy
+edge-tts
