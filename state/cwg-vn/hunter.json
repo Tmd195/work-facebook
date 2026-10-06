@@ -524,21 +524,12 @@
   "459792",
   "459794",
   "459795",
-  "459796"
+  "459796",
+  "459798",
+  "459797",
+  "459799"
  ],
- "pending": [
-  {
-   "id": "459793",
-   "at": "2026-10-06T14:12:07+07:00",
-   "time": "14:12",
-   "text": "Dầu WTI giảm hơn 1,00% trong ngày, hiện báo 87,59 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2
  },
