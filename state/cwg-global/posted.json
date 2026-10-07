@@ -232,5 +232,18 @@
   "posted_at": "2026-10-07T06:00:07.009315+00:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-07 reel 12:00": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/777420368800165/",
+  "post_id": "777420368800165",
+  "posted_at": "2026-10-07T12:23:38.162088+00:00",
+  "preview": false,
+  "meta": {
+   "topic": "XAUUSD",
+   "title": "XAUUSD HOLDS THE LINE",
+   "duration": 62.2,
+   "music": "take-this-higher.mp3"
+  }
  }
 }
