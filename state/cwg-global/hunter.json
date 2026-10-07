@@ -601,19 +601,7 @@
   "460262",
   "460263"
  ],
- "pending": [
-  {
-   "id": "460261",
-   "at": "2026-10-07T15:03:57+00:00",
-   "time": "15:03",
-   "text": "Cục Dự trữ Liên bang New York: Kỳ vọng lạm phát 1 năm của Cục Dự trữ Liên bang New York trong tháng 9 tại Mỹ là 3,9%, mức cao nhất kể từ tháng 5 năm 2023.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1
  },
