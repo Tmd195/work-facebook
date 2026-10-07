@@ -693,5 +693,51 @@
    "price": 4147.79,
    "title": "XAUUSD: Thiên hướng giảm, ưu tiên canh bán vùng 4169 - 4172"
   }
+ },
+ "2026-10-07 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130068714735108",
+  "post_id": "1121396124381014_122130068714735108",
+  "posted_at": "2026-10-07T18:30:09.745967+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4135.87,
+      4140.35
+     ],
+     "sl": 4163.15,
+     "tp": [
+      4114.89,
+      4101.01,
+      4078.57
+     ],
+     "trigger": "Giá hồi lên 4136–4140, xuất hiện nến H1/M15 từ chối dưới Kijun/EMA, hoặc bán lại sau Biên bản FOMC.",
+     "invalidation": "H1 đóng cửa trên 4156.83, vượt cụm Kijun/EMA50 — đảo cấu trúc ngắn hạn."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4107.79,
+      4114.89
+     ],
+     "sl": 4098.99,
+     "tp": [
+      4127.12,
+      4140.35,
+      4156.83
+     ],
+     "trigger": "Giá giữ 4108–4115 với nến đảo chiều tăng và H1 đóng lại trên 4123; ưu tiên khi Biên bản nghiêng ôn hòa.",
+     "invalidation": "H1 đóng dưới 4107.79, thủng đáy ngày — tiếp diễn giảm."
+    }
+   ],
+   "price": 4118.82,
+   "title": "XAUUSD phiên Mỹ: canh SELL nhịp hồi, chờ Biên bản FOMC"
+  }
  }
 }
