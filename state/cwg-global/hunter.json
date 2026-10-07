@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459655",
   "459656",
   "459657",
   "459658",
@@ -599,9 +598,22 @@
   "460251",
   "460252",
   "460253",
-  "460254"
+  "460254",
+  "460255"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460255",
+   "at": "2026-10-07T14:50:00+00:00",
+   "time": "14:50",
+   "text": "Dự báo lạm phát 1 năm của Fed New York tháng 9 của Mỹ sẽ được công bố sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1
  },
