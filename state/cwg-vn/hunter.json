@@ -601,19 +601,7 @@
   "460325",
   "460326"
  ],
- "pending": [
-  {
-   "id": "460323",
-   "at": "2026-10-08T01:07:38+07:00",
-   "time": "01:07",
-   "text": "Biên bản cuộc họp Fed: Fed New York thay mặt Bộ Tài chính Mỹ can thiệp vào thị trường ngoại hối.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
