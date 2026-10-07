@@ -601,19 +601,7 @@
   "460358",
   "460357"
  ],
- "pending": [
-  {
-   "id": "460357",
-   "at": "2026-10-07T23:50:04+00:00",
-   "time": "23:50",
-   "text": " Tài khoản vãng lai Nhật Bản",
-   "important": true,
-   "star": 2,
-   "actual": "25230.95",
-   "forecast": "21365",
-   "previous": "25231"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1
  },
