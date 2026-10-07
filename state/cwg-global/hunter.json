@@ -1,9 +1,5 @@
 {
  "seen": [
-  "459518",
-  "459519",
-  "459520",
-  "459521",
   "459523",
   "459522",
   "459525",
@@ -599,9 +595,25 @@
   "460116",
   "460115",
   "460114",
-  "460113"
+  "460113",
+  "460121",
+  "460120",
+  "460119",
+  "460118"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460119",
+   "at": "2026-10-07T06:01:42+00:00",
+   "time": "06:01",
+   "text": "Giám đốc IMF Georgieva: Chính sách tiền tệ của các ngân hàng trung ương cần duy trì \"khuynh hướng diều hâu thận trọng\", các động thái tăng lãi suất của Fed, ECB và Ngân hàng Trung ương Nhật Bản là \"rất phù hợp\".",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
