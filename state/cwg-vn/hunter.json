@@ -601,41 +601,7 @@
   "460137",
   "460138"
  ],
- "pending": [
-  {
-   "id": "460136",
-   "at": "2026-10-07T14:52:43+07:00",
-   "time": "14:52",
-   "text": "EUR/USD giảm xuống dưới 1,12, giảm 0,52% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "460137",
-   "at": "2026-10-07T14:53:19+07:00",
-   "time": "14:53",
-   "text": "Tin thị trường: Các quốc gia thành viên EU dự kiến sẽ không có nghĩa vụ giải phóng dầu mới sau khi Nhóm Bảy nước (G7) đạt được thỏa thuận.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "460138",
-   "at": "2026-10-07T14:55:20+07:00",
-   "time": "14:55",
-   "text": "WTI dầu thô tăng ngắn hạn 0,6 USD, báo 89,62 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2
  },
