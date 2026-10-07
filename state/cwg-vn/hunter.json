@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459536",
   "459539",
   "459540",
   "459541",
@@ -599,7 +598,8 @@
   "460134",
   "460135",
   "460136",
-  "460137"
+  "460137",
+  "460138"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-10-07T14:53:19+07:00",
    "time": "14:53",
    "text": "Tin thị trường: Các quốc gia thành viên EU dự kiến sẽ không có nghĩa vụ giải phóng dầu mới sau khi Nhóm Bảy nước (G7) đạt được thỏa thuận.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "460138",
+   "at": "2026-10-07T14:55:20+07:00",
+   "time": "14:55",
+   "text": "WTI dầu thô tăng ngắn hạn 0,6 USD, báo 89,62 USD/thùng.",
    "important": true,
    "star": 0,
    "actual": "null",
