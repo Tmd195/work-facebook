@@ -601,19 +601,7 @@
   "460254",
   "460255"
  ],
- "pending": [
-  {
-   "id": "460255",
-   "at": "2026-10-07T21:50:00+07:00",
-   "time": "21:50",
-   "text": "Dự báo lạm phát 1 năm của Fed New York tháng 9 của Mỹ sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1
