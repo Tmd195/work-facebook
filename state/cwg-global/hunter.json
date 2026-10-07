@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459564",
   "459565",
   "459566",
   "459568",
@@ -599,9 +598,22 @@
   "460160",
   "460161",
   "460162",
-  "460163"
+  "460163",
+  "460164"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460164",
+   "at": "2026-10-07T09:57:04+00:00",
+   "time": "09:57",
+   "text": "Bạc giao ngay trong ngày giảm hơn 2%, hiện báo 60,10 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
