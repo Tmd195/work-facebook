@@ -616,5 +616,25 @@
    "price": 4158.03,
    "title": "XAUUSD phiên Mỹ: canh bán nhịp hồi tại kháng cự, D1 còn giảm"
   }
+ },
+ "2026-10-07 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122129990570735108",
+  "post_id": "1121396124381014_122129990570735108",
+  "posted_at": "2026-10-07T07:30:04.737422+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "01:00",
+     "datetime": "2026-10-08T01:00:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "FOMC Meeting Minutes",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
