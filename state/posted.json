@@ -648,6 +648,20 @@
    ]
   }
  },
+ "2026-10-07 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1081758901287093/",
+  "post_id": "1081758901287093",
+  "posted_at": "2026-10-07T19:16:04.307623+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng, xuống M15 tìm điểm vào theo vùng hỗ trợ và nến xác nhận, checklist 3 bước trước lệnh và kỷ luật backtest 100 lệnh cùng nhật ký giao dịch",
+   "pillar": "setup",
+   "system": null,
+   "duration": 43.8,
+   "music": "digital-clouds.mp3"
+  }
+ },
  "2026-10-07 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122130004094735108",

@@ -1,5 +1,5 @@
 {
- "count": 5,
+ "count": 6,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -10,6 +10,7 @@
   "Quản lý vốn vàng XAUUSD: rủi ro 1 phần trăm mỗi lệnh, cách tính khối lượng theo khoảng dừng lỗ, giảm lô sau chuỗi thua và dừng ngày khi lỗ 3 phần trăm",
   "Hệ thống MLMA cho XAUUSD: đo xu hướng, tín hiệu vào lệnh, bộ lọc và SL/TP",
   "Dời dừng lỗ về entry khi đạt 1R và chốt lời từng phần cho XAUUSD",
-  "Hệ thống Sigmoid Transition Trailing Stop cho XAUUSD: cách đo biến động bằng ATR, điều kiện vào lệnh Buy/Sell theo nến đóng, bộ lọc nhiễu và cách đặt SL/TP, dời dừng lỗ"
+  "Hệ thống Sigmoid Transition Trailing Stop cho XAUUSD: cách đo biến động bằng ATR, điều kiện vào lệnh Buy/Sell theo nến đóng, bộ lọc nhiễu và cách đặt SL/TP, dời dừng lỗ",
+  "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng, xuống M15 tìm điểm vào theo vùng hỗ trợ và nến xác nhận, checklist 3 bước trước lệnh và kỷ luật backtest 100 lệnh cùng nhật ký giao dịch"
  ]
 }
