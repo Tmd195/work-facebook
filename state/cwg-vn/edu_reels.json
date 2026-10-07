@@ -3,7 +3,8 @@
   "drawdown",
   "turtle-soup",
   "counter-trend",
-  "retest-entry"
+  "retest-entry",
+  "fvg-strong"
  ],
  "titles": {
   "drawdown": [
@@ -17,6 +18,9 @@
   ],
   "retest-entry": [
    "Đừng đuổi cây nến to — hãy vào lệnh khi retest"
+  ],
+  "fvg-strong": [
+   "FVG mạnh hay yếu? 3 dấu hiệu nhận ra một FVG đáng tin trước khi vào lệnh"
   ]
  }
 }

@@ -203,6 +203,19 @@
    "music": "winter-breeze.mp3"
   }
  },
+ "2026-10-07 cwg_breaking 19:31": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122096401353502668/posts/122100850041502668",
+  "post_id": "1328754953658881_122100850041502668",
+  "posted_at": "2026-10-07T19:31:53.802671+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ đã tăng lên mức cao nhất kể từ năm 2002, đạt 5,3496%.",
+    "Bạc giao ngay giảm 3% trong ngày, hiện ở mức 59,50 USD/ounce. Vàng giao ngay mở rộng đà giảm ngắn hạn lên gần 30 USD, hi"
+   ]
+  }
+ },
  "2026-10-07 cwg_license 09:00": {
   "job": "cwg_license",
   "link": "https://www.facebook.com/122096401353502668/posts/122100501891502668",
@@ -234,5 +247,18 @@
   "posted_at": "2026-10-07T08:30:05.061411+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-07 reel 19:30": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1411473741192875/",
+  "post_id": "1411473741192875",
+  "posted_at": "2026-10-07T19:30:58.181481+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "fvg-strong",
+   "title": "FVG mạnh hay yếu? 3 dấu hiệu nhận ra một FVG đáng tin trước khi vào lệnh",
+   "duration": 67.1,
+   "music": "expressive-courage.mp3"
+  }
  }
 }
