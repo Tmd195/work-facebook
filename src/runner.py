@@ -245,11 +245,12 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
 
     caption_file, images = _files(job, out_dir)
 
-    # --- 1b. Soát ẢNH trước khi đăng (chữ đè / tràn / bị cắt…) – lỗi nặng → AI viết lại bài, dựng ảnh mới, lặp tới sát giờ đăng;
-    #         vẫn lỗi → đăng bản cuối đúng giờ + báo anh (đăng đều quan trọng). Reels có bộ kiểm tra riêng.
+    # --- 1b. Soát ẢNH trước khi đăng (chữ đè / tràn / bị cắt / biểu đồ trắng…) – lỗi nặng → tạo lại bài + ảnh, lặp tới khi ĐẠT.
+    #         KHÔNG đăng ảnh lỗi (anh chốt 07/10/2026: "đăng ảnh trắng thì đăng làm gì"): quá giờ đăng vẫn sửa tiếp và
+    #         đăng trễ; tới giờ đăng + 2 tiếng vẫn lỗi → không đăng, báo anh. Reels có bộ kiểm tra riêng.
     if not job.startswith("reel"):
         from src.design import qa_image
-        k = 0
+        k, late_note = 0, False
         while True:
             rep = qa_image.check(images, out_dir, job)
             if rep["ok"]:
@@ -258,16 +259,23 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
                 break
             k += 1
             print(f"  ! ảnh lỗi (lần {k}): {rep['major']}", flush=True)
-            if datetime.now(TZ) > target - upload - timedelta(minutes=6):   # 1 lượt viết + vẽ lại ~6 phút
-                telegram.send(f"⚠️ {name} {day}: đã sửa ảnh {k} lần tới sát giờ đăng vẫn còn lỗi hiển thị, em đăng đúng giờ:\n"
-                              + "\n".join(rep["major"]))
-                break
-            try:
-                if not generate(job):
+            if datetime.now(TZ) > give_up:
+                telegram.need_fix(f"❌ {name} {day}: đã sửa ảnh {k} lần tới quá giờ đăng 2 tiếng vẫn lỗi – em KHÔNG đăng ảnh hỏng:\n"
+                                  + "\n".join(rep["major"]))
+                return False
+            if datetime.now(TZ) > target - upload and not late_note:
+                late_note = True
+                telegram.send(f"⏳ {name} {day}: ảnh còn lỗi ({'; '.join(rep['major'])[:300]}) – em sửa tiếp, "
+                              f"đạt mới đăng (sẽ trễ giờ một chút).")
+            while True:                                  # tạo lại bài + ảnh (lỗi dữ liệu/AI → chờ rồi thử tiếp)
+                try:
+                    if generate(job):
+                        break
+                except Exception:
+                    traceback.print_exc()
+                if datetime.now(TZ) > give_up:
                     break
-            except Exception:
-                traceback.print_exc()
-                break
+                time.sleep(60)
             caption_file, images = _files(job, out_dir)
     caption = caption_file.read_text(encoding="utf-8")
 

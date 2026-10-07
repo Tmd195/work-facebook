@@ -39,6 +39,14 @@ class Series:
     source: str
     notes: list[str] = field(default_factory=list)
 
+    def __post_init__(self):
+        # Nguồn dữ liệu đôi khi trả nến TRÙNG thời điểm (07/10/2026: 2 nến D1 ngày 04/10) hoặc lộn thứ tự →
+        # thư viện biểu đồ TradingView từ chối cả chuỗi và vẽ ra ảnh TRẮNG. Sắp xếp + giữ nến cuối của mỗi thời điểm.
+        uniq = {}
+        for c in self.candles:
+            uniq[c.date] = c
+        self.candles = [uniq[k] for k in sorted(uniq)]
+
 
 def _twelve(code: str, key: str) -> Series:
     resp = requests.get(

@@ -43,6 +43,9 @@ class TVChart:
     def __init__(self, symbol: str, tf: str, candles: list, digits: int = 2, right_offset: int = 4):
         """candles: list các object có .date (datetime UTC), .open, .high, .low, .close."""
         self.times = [int(c.date.timestamp()) + VN_OFFSET for c in candles]
+        if len(candles) < 10 or any(a >= b for a, b in zip(self.times, self.times[1:])):
+            # thời gian trùng/lộn → TradingView không vẽ nến nào (ảnh trắng): báo lỗi để tạo lại, KHÔNG ra ảnh hỏng
+            raise ValueError(f"Dữ liệu nến {symbol} {tf} không hợp lệ (trùng/lộn thời gian hoặc quá ít nến)")
         self.spec = {
             "symbol": symbol, "tf": tf, "digits": digits, "theme": TV,
             "candles": [{"time": t, "open": c.open, "high": c.high, "low": c.low, "close": c.close}
