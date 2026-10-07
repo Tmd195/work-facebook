@@ -1,7 +1,5 @@
 {
  "seen": [
-  "459649",
-  "459650",
   "459651",
   "459652",
   "459653",
@@ -599,25 +597,16 @@
   "460245",
   "460246",
   "460247",
-  "460248"
+  "460248",
+  "460249",
+  "460250"
  ],
  "pending": [
   {
-   "id": "460247",
-   "at": "2026-10-07T21:30:05+07:00",
-   "time": "21:30",
-   "text": "Dự trữ dầu thô tại Cushing, Oklahoma của EIA trong tuần từ ngày 2 tháng 10 tại Mỹ là 444.000 thùng, giá trị trước đó là 553.000 thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "460248",
-   "at": "2026-10-07T21:30:03+07:00",
-   "time": "21:30",
-   "text": "Dự trữ dầu thô EIA của Mỹ trong tuần kết thúc ngày 2 tháng 10 là -3,186 triệu thùng, dự kiến 1,722 triệu thùng, giá trị trước đó 0,922 triệu thùng.",
+   "id": "460250",
+   "at": "2026-10-07T21:31:47+07:00",
+   "time": "21:31",
+   "text": "Tuyên bố cho thấy các quốc gia thành viên Cơ quan Năng lượng Quốc tế (IEA) bày tỏ ủng hộ việc đẩy nhanh việc giải phóng kho dự trữ dầu đã được công bố trong hành động tập thể vào tháng Ba, nhằm hoàn thành sớm nhất có thể.",
    "important": true,
    "star": 0,
    "actual": "null",
