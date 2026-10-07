@@ -601,19 +601,7 @@
   "460285",
   "460286"
  ],
- "pending": [
-  {
-   "id": "460284",
-   "at": "2026-10-08T00:09:07+07:00",
-   "time": "00:09",
-   "text": "Cuộc đấu giá trái phiếu kho bạc kỳ hạn 10 năm của Mỹ đạt lợi suất 5,3%, mức cao nhất kể từ tháng 11 năm 2000.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1
