@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459632",
   "459633",
   "459634",
   "459635",
@@ -599,9 +598,22 @@
   "460228",
   "460229",
   "460230",
-  "460231"
+  "460231",
+  "460232"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460232",
+   "at": "2026-10-07T19:58:51+07:00",
+   "time": "19:58",
+   "text": "Vàng giao ngay đã phục hồi hơn 20 USD so với mức thấp trước đó, hiện ở mức 4.087,23 USD/ounce, mức giảm thu hẹp còn 1,89%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1
