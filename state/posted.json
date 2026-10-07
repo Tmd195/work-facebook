@@ -636,5 +636,51 @@
     }
    ]
   }
+ },
+ "2026-10-07 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130004094735108",
+  "post_id": "1121396124381014_122130004094735108",
+  "posted_at": "2026-10-07T10:00:14.014382+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4169.68,
+      4172.26
+     ],
+     "sl": 4191.39,
+     "tp": [
+      4137.47,
+      4123.48,
+      4108.92
+     ],
+     "trigger": "Giá hồi lên 4169 - 4172 (đỉnh phiên Á + cạnh dưới mây H4) và xuất hiện nến đảo chiều giảm trên H1",
+     "invalidation": "H1 đóng cửa dứt khoát trên 4187.17 (đỉnh ngày trước), cấu trúc chuyển tăng"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4123.48,
+      4125.92
+     ],
+     "sl": 4101.13,
+     "tp": [
+      4137.47,
+      4156.83,
+      4169.68
+     ],
+     "trigger": "Giá về 4123 - 4126 (hợp lưu S1 + đáy swing) giữ vững và có nến xác nhận mua",
+     "invalidation": "Đóng H1 dưới 4111.8 (đáy swing), xác nhận phá hỗ trợ"
+    }
+   ],
+   "price": 4147.79,
+   "title": "XAUUSD: Thiên hướng giảm, ưu tiên canh bán vùng 4169 - 4172"
+  }
  }
 }
