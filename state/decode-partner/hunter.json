@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459661",
   "459662",
   "459664",
   "459663",
@@ -599,7 +598,8 @@
   "460260",
   "460259",
   "460257",
-  "460258"
+  "460258",
+  "460261"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-07T22:00:16+07:00",
    "time": "22:00",
    "text": "Dự báo lạm phát 1 năm của Fed New York tháng 9 tại Mỹ là 3,9%, dự báo là 3,64%, giá trị trước đó là 3,58%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "460261",
+   "at": "2026-10-07T22:03:57+07:00",
+   "time": "22:03",
+   "text": "Cục Dự trữ Liên bang New York: Kỳ vọng lạm phát 1 năm của Cục Dự trữ Liên bang New York trong tháng 9 tại Mỹ là 3,9%, mức cao nhất kể từ tháng 5 năm 2023.",
    "important": true,
    "star": 0,
    "actual": "null",
