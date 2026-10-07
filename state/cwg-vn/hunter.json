@@ -601,19 +601,7 @@
   "460075",
   "460076"
  ],
- "pending": [
-  {
-   "id": "460076",
-   "at": "2026-10-07T09:03:19+07:00",
-   "time": "09:03",
-   "text": "Ngày 7 tháng 10, tính đến cuối tháng 9, dự trữ vàng của Trung Quốc đạt 77,47 triệu ounce (khoảng 2.409,59 tấn), tăng 740.000 ounce (khoảng 23,02 tấn) so với tháng trước; cuối tháng 8, dự trữ vàng đạt 76,73 triệu ounce (khoảng 2.386,57 tấn). Ngân hàng Trung ương Trung Quốc đã tăng dự trữ vàng trong tháng thứ 23 liên tiếp.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2
  },
