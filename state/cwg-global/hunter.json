@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459652",
   "459653",
   "459654",
   "459655",
@@ -599,21 +598,10 @@
   "460249",
   "460248",
   "460250",
-  "460251"
+  "460251",
+  "460252"
  ],
- "pending": [
-  {
-   "id": "460250",
-   "at": "2026-10-07T14:31:47+00:00",
-   "time": "14:31",
-   "text": "Tuyên bố cho thấy các quốc gia thành viên Cơ quan Năng lượng Quốc tế (IEA) bày tỏ ủng hộ việc đẩy nhanh việc giải phóng kho dự trữ dầu đã được công bố trong hành động tập thể vào tháng Ba, nhằm hoàn thành sớm nhất có thể.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1
  },
