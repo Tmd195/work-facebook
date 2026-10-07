@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459625",
   "459626",
   "459627",
   "459628",
@@ -599,33 +598,13 @@
   "460220",
   "460223",
   "460222",
-  "460224"
+  "460224",
+  "460225"
  ],
- "pending": [
-  {
-   "id": "460221",
-   "at": "2026-10-07T12:26:04+00:00",
-   "time": "12:26",
-   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ đã tăng lên mức cao nhất kể từ năm 2002, đạt 5,3496%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "460224",
-   "at": "2026-10-07T12:28:44+00:00",
-   "time": "12:28",
-   "text": "Bạc giao ngay giảm 3% trong ngày, hiện ở mức 59,50 USD/ounce. Vàng giao ngay mở rộng đà giảm ngắn hạn lên gần 30 USD, hiện ở mức 4.085,96 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
- "posts": {},
- "last_post": "",
+ "pending": [],
+ "posts": {
+  "2026-10-07": 1
+ },
+ "last_post": "2026-10-07T12:31:54.156267+00:00",
  "fail": 0
 }
