@@ -100,9 +100,22 @@
   "460602",
   "460605",
   "460604",
-  "460603"
+  "460603",
+  "460606"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460606",
+   "at": "2026-10-08T20:23:53+07:00",
+   "time": "20:23",
+   "text": "Theo CNBC: Hồ sơ công bố tài chính mà Tổng thống Mỹ Trump nộp hồi tháng 8 cho thấy ông đã mua cổ phiếu Meta Platforms (META.O) với giá trị lên tới 25 triệu USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
