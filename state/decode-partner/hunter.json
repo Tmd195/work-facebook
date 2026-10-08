@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459823",
   "459822",
   "459825",
   "459826",
@@ -599,28 +598,17 @@
   "460420",
   "460419",
   "460422",
-  "460421"
+  "460421",
+  "460423"
  ],
- "pending": [
-  {
-   "id": "460420",
-   "at": "2026-10-08T13:47:24+07:00",
-   "time": "13:47",
-   "text": "Giá dầu Brent vượt 102 USD/thùng, tăng 2,22% trong ngày do lo ngại các cuộc tấn công vào vận tải biển ở vùng Vịnh và bão tại Mỹ làm gián đoạn sản xuất dầu. Giá dầu WTI mở rộng đà tăng trong ngày lên 1,9%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
   "2026-10-06": 1,
   "2026-10-07": 1,
-  "2026-10-08": 1
+  "2026-10-08": 2
  },
- "last_post": "2026-10-08T01:06:09.221543+07:00",
+ "last_post": "2026-10-08T13:52:27.325823+07:00",
  "fail": 0
 }
