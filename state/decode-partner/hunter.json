@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459763",
   "459765",
   "459764",
   "459766",
@@ -599,7 +598,8 @@
   "460359",
   "460360",
   "460361",
-  "460362"
+  "460362",
+  "460363"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-08T08:01:18+07:00",
    "time": "08:01",
    "text": "Vàng giao ngay tăng ngắn hạn 10 USD, cao nhất lên tới 4.127,2 USD/ounce. Bạc giao ngay mở rộng mức tăng trong ngày lên 1,00%, hiện báo 60,38 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "460363",
+   "at": "2026-10-08T08:02:31+07:00",
+   "time": "08:02",
+   "text": "Vàng giao ngay vượt 4.130 USD/oz, tăng 0,50% trong ngày.",
    "important": true,
    "star": 0,
    "actual": "null",
