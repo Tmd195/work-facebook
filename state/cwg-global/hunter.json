@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460076",
   "460077",
   "460078",
   "460079",
@@ -599,21 +598,10 @@
   "460673",
   "460672",
   "460675",
-  "460674"
+  "460674",
+  "460676"
  ],
- "pending": [
-  {
-   "id": "460672",
-   "at": "2026-10-08T16:44:58+00:00",
-   "time": "16:44",
-   "text": "Theo Financial Times của Anh: Theo các tài liệu tài chính được chia sẻ với nhà đầu tư, doanh thu hàng năm của OpenAI thấp hơn khoảng 20 tỷ USD so với tín hiệu được đưa ra trước đó.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
