@@ -1,13 +1,5 @@
 {
  "seen": [
-  "459858",
-  "459857",
-  "459856",
-  "459855",
-  "459860",
-  "459861",
-  "459862",
-  "459863",
   "459864",
   "459865",
   "459867",
@@ -599,9 +591,51 @@
   "460452",
   "460454",
   "460453",
-  "460455"
+  "460455",
+  "460456",
+  "460463",
+  "460462",
+  "460461",
+  "460460",
+  "460459",
+  "460458",
+  "460457"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460456",
+   "at": "2026-10-08T08:30:20+00:00",
+   "time": "08:30",
+   "text": "Thống đốc Fed Waller: Vẫn cần thêm nhiều đợt tăng lãi suất, nhưng linh hoạt về tốc độ tăng lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "460459",
+   "at": "2026-10-08T08:31:22+00:00",
+   "time": "08:31",
+   "text": "WTI tăng lên trên 91 USD/thùng, lần đầu tiên kể từ ngày 2 tháng 10, mức tăng trong ngày đạt 3,02%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "460458",
+   "at": "2026-10-08T08:31:02+00:00",
+   "time": "08:31",
+   "text": "Thống đốc Fed Waller: Không cần tăng lãi suất liên tiếp tại các cuộc họp.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
