@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460157",
   "460159",
   "460158",
   "460160",
@@ -599,9 +598,22 @@
   "460753",
   "460754",
   "460755",
-  "460756"
+  "460756",
+  "460757"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460757",
+   "at": "2026-10-09T03:25:02+07:00",
+   "time": "03:25",
+   "text": "Ngày 9 tháng 10 đưa tin, Chủ tịch Fed chi nhánh St. Louis của Mỹ, ông Musalem, cho biết Fed cần tăng lãi suất một lần nữa để đưa lạm phát trở lại mục tiêu 2%. Ông nói rằng để đạt được mục tiêu lạm phát trong thời hạn \"kịp thời\", chính sách tiền tệ cần được thắt chặt thêm. Musalem cho biết, nếu \"kịp thời\" có nghĩa là khoảng 18 tháng, thì trong 6 đến 9 tháng tới, lãi suất có thể cần được nâng thêm vào thời điểm thích hợp. Ông nói rằng lạm phát hiện vẫn là vấn đề chính mà nền kinh tế Mỹ phải đối mặt, nhưng tăng trưởng kinh tế mạnh mẽ, thị trường việc làm duy trì ổn định, Fed có thể kéo giảm lạm phát mà không gây tổn hại rõ rệt đến việc làm. Khi được hỏi liệu có nên tăng lãi suất tại cuộc họp chính sách ngày 27 đến 28 tháng 10 hay không, Musalem cho biết bản thân giữ thái độ cởi mở, chưa dự đoán kết quả cuộc họp, nhưng tình hình lạm phát đòi hỏi các nhà hoạch định chính sách tiếp tục cân nhắc thắt chặt chính sách hơn nữa. Musalem cho biết, mặc dù lợi suất trái phiếu kho bạc Mỹ tăng rõ rệt, nhưng điều kiện tài chính vẫn nới lỏng và hỗ trợ tăng trưởng kinh tế. Ông nói rằng lợi suất tăng không có nghĩa là nhà đầu tư mất niềm tin vào Fed, mà phản ánh thị trường dự đoán lãi suất thực sẽ tăng, cũng như cạnh tranh vốn gia tăng trong môi trường kinh tế mạnh mẽ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
