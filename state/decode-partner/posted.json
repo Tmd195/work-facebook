@@ -352,5 +352,20 @@
   "posted_at": "2026-10-08T08:45:03.177436+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-08 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1761913461584385/",
+  "post_id": "1761913461584385",
+  "posted_at": "2026-10-08T19:45:23.205690+07:00",
+  "preview": false,
+  "meta": {
+   "key": "AUDUSD|0.70126",
+   "symbol": "AUDUSD",
+   "system": "fibo",
+   "side": "sell",
+   "rr": 8.5,
+   "duration": 9.9
+  }
  }
 }
