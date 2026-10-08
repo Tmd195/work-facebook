@@ -288,7 +288,7 @@ def label_words(s: SMC) -> list:
     return out + [(lt["sw"][0], sw[0]), (lt["sw"][1], sw[1]), (lt["zone"], zone), (lt["liq"], liq)]
 
 
-CTA_LINE = "Nếu thấy hữu ích, hãy thả tim, chia sẻ và theo dõi Pết, để nhận thêm những hệ thống giao dịch chọn lọc mỗi ngày nhé."
+CTA_LINE = "Nếu thấy hữu ích, hãy thả tim, chia sẻ và theo dõi Pết, để nhận thêm những hệ thống giao dịch chọn lọc mỗi ngày nhá."
 
 
 def narration(s: SMC) -> dict:
@@ -319,7 +319,7 @@ def narration(s: SMC) -> dict:
                 6: "Mục tiêu là thanh khoản nằm dưới đáy.",
                 7: f"Cắt lỗ trên vùng cung, chốt lời tại thanh khoản. Tỷ lệ một ăn {rr}.",
                 8: f"Và giá chạy thẳng về mục tiêu. Lãi {rr} rờ.",
-                "end": "Nếu thấy hữu ích, hãy thả tim, chia sẻ và theo dõi Pết, để nhận thêm những hệ thống giao dịch chọn lọc mỗi ngày nhé."}
+                "end": "Nếu thấy hữu ích, hãy thả tim, chia sẻ và theo dõi Pết, để nhận thêm những hệ thống giao dịch chọn lọc mỗi ngày nhá."}
     return {"hook": "Mua ngược xu hướng là cách nhanh nhất để cháy tài khoản. Đây là mô hình mua của tổ chức.",
             1: "Bước một. Giá phá cấu trúc đỉnh cũ, xác nhận xu hướng tăng.",
             2: "Bước hai. Xác định vùng giao dịch, từ đáy lên đỉnh của nhịp tăng.",
@@ -330,7 +330,7 @@ def narration(s: SMC) -> dict:
             6: "Mục tiêu là thanh khoản nằm trên đỉnh.",
             7: f"Cắt lỗ dưới vùng cầu, chốt lời tại thanh khoản. Tỷ lệ một ăn {rr}.",
             8: f"Và giá chạy thẳng về mục tiêu. Lãi {rr} rờ.",
-            "end": "Nếu thấy hữu ích, hãy thả tim, chia sẻ và theo dõi Pết, để nhận thêm những hệ thống giao dịch chọn lọc mỗi ngày nhé."}
+            "end": "Nếu thấy hữu ích, hãy thả tim, chia sẻ và theo dõi Pết, để nhận thêm những hệ thống giao dịch chọn lọc mỗi ngày nhá."}
 
 
 ORDER = ["hook", "reset", 1, 2, 3, 4, 5, "5b", 6, 7, 8, "end"]

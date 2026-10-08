@@ -44,7 +44,7 @@ MUSIC = ROOT / "assets" / "music" / "cwg"
 SLOGAN = ("1 CHỈ BÁO MIỄN PHÍ", "GIÚP ANH CHỊ EM KIẾM 100PIP MỖI NGÀY")
 SLOGAN_VOICE = "Một chỉ báo miễn phí, giúp anh chị em kiếm một trăm píp mỗi ngày."
 CTA_END = "Liên hệ qua Page để sử dụng miễn phí"
-CTA_VOICE = "Liên hệ qua Pết để sử dụng miễn phí nhé."        # "Pết": giọng đọc tự nhiên, chữ trên video vẫn là "Page"
+CTA_VOICE = "Liên hệ qua Pết để sử dụng miễn phí nhá."        # "Pết": giọng đọc tự nhiên, chữ trên video vẫn là "Page"
 VOICE = ROOT / "assets" / "private" / "voice_ref_decode_trading.mp3"
 NAME = {"V7": "SNIPER AI V7", "V4": "SNIPER AI V4"}
 
