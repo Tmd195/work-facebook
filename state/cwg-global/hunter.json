@@ -1,9 +1,5 @@
 {
  "seen": [
-  "459923",
-  "459926",
-  "459925",
-  "459924",
   "459927",
   "459928",
   "459929",
@@ -599,9 +595,25 @@
   "460521",
   "460520",
   "460519",
-  "460518"
+  "460518",
+  "460526",
+  "460525",
+  "460524",
+  "460523"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460526",
+   "at": "2026-10-08T11:32:59+00:00",
+   "time": "11:32",
+   "text": "Biên bản cuộc họp của Ngân hàng Trung ương châu Âu: Tất cả các thành viên đều cho rằng rủi ro đối với triển vọng lạm phát nghiêng về phía tăng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
