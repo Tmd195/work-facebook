@@ -1,0 +1,35 @@
+# Kho chủ đề ALBUM KIẾN THỨC (form "Sổ tay Trader") – Page DecodeFx Trading.
+# Nguồn cảm hứng chủ đề: Page Jalal Babu (sultanfx55) – anh cho phép dùng làm nguồn (08/10/2026).
+# CHỈ lấy chủ đề & ý kiến thức chung; nội dung viết lại bằng tiếng Việt, hình tự vẽ – không chép ảnh/nguyên văn.
+# Thứ tự = thứ tự đăng; cơ bản và nâng cao đan xen. id "ob" có khuôn dựng riêng (đã duyệt), còn lại dùng khuôn chung.
+
+albums:
+  - { id: ob,              name: "Order Block",                       points: "OB là gì; cách vẽ; OB hợp lệ cần FVG; vào lệnh; checklist" }
+  - { id: timeframes,      name: "Làm chủ khung thời gian",            points: "chỉ cần 2 khung; khung lớn cho hướng & câu chuyện; khung nhỏ để vào lệnh; bảng ghép khung (Tháng–Ngày, Tuần–H4, Ngày–H1, H4–M15, H1–M5, M15–M1)" }
+  - { id: candle_patterns, name: "Các mô hình nến chủ chốt",          points: "nhấn chìm; pin bar/búa; doji; sao mai/sao hôm; inside bar; nến chỉ có ý nghĩa tại vùng quan trọng" }
+  - { id: fvg,             name: "FVG – Khoảng trống giá",            points: "FVG là gì (3 nến); FVG tăng/giảm; giá hay quay lại lấp 50%; dùng FVG làm điểm vào; FVG không hợp lệ" }
+  - { id: trade_checklist, name: "Checklist ý tưởng giao dịch",       points: "khung lớn: hướng đi + câu chuyện (FVG khung lớn); khung nhỏ: mẫu hình vào lệnh (FVG vào – FVG ra); không đủ thì đứng ngoài" }
+  - { id: sweep,           name: "Quét thanh khoản (Liquidity Sweep)", points: "thanh khoản nằm ở đâu (đỉnh/đáy bằng, đỉnh đáy rõ); cú quét râu; đóng cửa quay lại; vào lệnh sau quét + CHoCH" }
+  - { id: supply_demand,   name: "Cung – Cầu (Supply & Demand)",      points: "vùng cung/cầu hình thành ra sao; DBR, RBD, RBR, DBD; vùng tươi vs vùng đã chạm; vào lệnh lần chạm đầu" }
+  - { id: head_shoulders,  name: "Mô hình Vai – Đầu – Vai",          points: "cấu trúc 3 đỉnh; đường cổ; vào lệnh khi phá cổ / retest; mục tiêu = chiều cao đầu; vai đầu vai ngược" }
+  - { id: daily_bias,      name: "Xác định Daily Bias",               points: "đích đến thanh khoản; đảo chiều; tích luỹ; tiếp diễn; mỗi ngày trả lời: hôm nay giá muốn đi đâu" }
+  - { id: breakout_retest, name: "Phá vỡ & Retest",                   points: "phá vỡ thật vs giả; chờ đóng cửa; retest vùng phá; vào lệnh khi giữ được; dời SL" }
+  - { id: ict_entries,     name: "5 mô hình vào lệnh ICT",            points: "OTE; Silver Bullet; Turtle Soup; Unicorn (Breaker + FVG); mô hình 2022 (quét – MSS – FVG)" }
+  - { id: triangle,        name: "Mô hình tam giác",                  points: "tam giác tăng, giảm, cân; nén biến động; vào khi phá + retest; mục tiêu" }
+  - { id: market_structure,name: "Cấu trúc thị trường",               points: "HH HL / LH LL; BOS vs CHoCH; cấu trúc nội bộ vs cấu trúc chính; đừng đánh ngược cấu trúc chính" }
+  - { id: drop_base_rally, name: "Drop – Base – Rally",               points: "giảm – đi ngang – tăng; vẽ vùng base; điều kiện cú tăng mạnh; vào lệnh khi quay lại base" }
+  - { id: ma_filter,       name: "Đường MA làm bộ lọc xu hướng",       points: "giá trên/dưới MA; độ dốc MA; chỉ giao dịch cùng hướng MA; hồi về MA + mẫu hình giá" }
+  - { id: trendline,       name: "Phá Trendline & Retest",             points: "vẽ trendline đúng (≥3 chạm); phá trendline; retest; kết hợp cấu trúc; bẫy phá giả" }
+  - { id: reversal,        name: "Các mô hình đảo chiều",             points: "hai đỉnh/hai đáy; vai đầu vai; nêm; đảo chiều chữ V; cần xác nhận cấu trúc" }
+  - { id: ote_fibo,        name: "Fibonacci: Entry – TP – SL",         points: "kéo Fibo theo con sóng; vùng OTE 62–79%; SL ngoài 100%; TP -27% và -62%" }
+  - { id: channel,         name: "Kênh giá song song",                points: "vẽ kênh; giao dịch trong kênh; phá kênh; mục tiêu sau phá kênh" }
+  - { id: premium_discount,name: "Premium & Discount",               points: "dải giao dịch đỉnh–đáy; mức 50% cân bằng; mua ở vùng rẻ, bán ở vùng đắt; kết hợp OB/FVG" }
+  - { id: island_reversal, name: "Đảo chiều dạng đảo (Island)",       points: "khoảng trống trước & sau; cụm nến cô lập; ý nghĩa đảo chiều mạnh; xác nhận" }
+  - { id: complex_pullback,name: "Nhịp hồi phức tạp",                points: "hồi ABC; hồi nhiều nhịp; không vội bắt đỉnh/đáy; vào lệnh khi hồi kết thúc + phá cấu trúc nhỏ" }
+  - { id: harmonic,        name: "Mô hình Harmonic cơ bản",           points: "Gartley, Bat, Butterfly, Crab – tỉ lệ Fibo; vùng PRZ; xác nhận nến tại PRZ" }
+  - { id: prz,             name: "Vùng đảo chiều tiềm năng (PRZ)",    points: "hội tụ nhiều yếu tố: Fibo, cung cầu, đỉnh đáy cũ; chờ phản ứng; quản lý rủi ro" }
+  - { id: volume_demand,   name: "Khối lượng & Cầu",                  points: "volume xác nhận cú phá; volume cạn khi hồi; đỉnh volume ở đáy = cầu vào" }
+  - { id: ob_variations,   name: "Các biến thể Order Block",          points: "OB thường; Breaker Block; Mitigation Block; Rejection Block; khi nào dùng loại nào" }
+  - { id: trend_shift,     name: "Nhận diện chuyển xu hướng",         points: "mất đỉnh/đáy then chốt; CHoCH; hồi yếu; cấu trúc mới hình thành" }
+  - { id: aggressive_rev,  name: "Đảo chiều mạnh (chữ V)",            points: "cú quét thanh khoản lớn; nến nhấn chìm khung lớn; vào lệnh tấn công vs bảo thủ" }
+  - { id: psychology,      name: "Tâm lý trader – phần chìm tảng băng", points: "người ta chỉ thấy thành công; bên dưới: kỷ luật, quản lý vốn, kiên nhẫn, chịu lỗ, nhật ký giao dịch" }

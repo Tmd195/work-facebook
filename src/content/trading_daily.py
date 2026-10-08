@@ -131,8 +131,12 @@ if __name__ == "__main__":
 
 # ------------------------------------------------------------------ bộ chạy bài (runner gọi các hàm dưới với job "td_…")
 # td_bulletin – bản tin 06:00 · td_album / td_album_wk1 / td_album_wk2 – album kiến thức (form Sổ tay)
-ALBUMS = ["ob"]                                     # chủ đề album đã có khuôn – thêm dần (supply, fvg, …)
-ALBUM_STATE = None
+def album_bank() -> list[dict]:
+    """Kho chủ đề album (jobs/decode-trading/albums.yaml) – thứ tự = thứ tự đăng."""
+    import yaml
+    from src.config import JOB_DIR
+    f = JOB_DIR / "albums.yaml"
+    return (yaml.safe_load(f.read_text(encoding="utf-8")) or {}).get("albums", []) if f.exists() else [{"id": "ob"}]
 
 
 def _album_state_file():
@@ -149,22 +153,81 @@ def _albums_done() -> list:
 
 def next_album():
     done = _albums_done()
-    return next((a for a in ALBUMS if a not in done), None)
+    return next((a for a in album_bank() if a["id"] not in done), None)
 
 
 def skip_today(job: str, now) -> bool:
     return job.startswith("td_album") and next_album() is None   # hết chủ đề album chưa đăng → bỏ ô lịch
 
 
-def _album_caption(topic: str, s) -> str:
-    if topic == "ob":
-        body = ("ORDER BLOCK – SỔ TAY THỰC CHIẾN\n"
-                "Lưu lại 7 trang này trước khi vào lệnh tiếp theo:\n"
-                "📒 Order Block là gì\n✏️ Cách vẽ OB đúng\n🔍 OB hợp lệ phải có FVG\n🎯 Cách vào lệnh – SL – TP\n"
-                "✅ Checklist 6 điều kiện\n📈 Ví dụ thật trên vàng M15\n"
-                "Bạn muốn sổ tay hệ thống nào tiếp theo? Comment để DecodeFx Trading làm cho bạn.")
-        return cd.caption(body, ["SMC", "OrderBlock", "XAUUSD"])
-    raise ValueError(topic)
+DIAG = {"type": OBJ, "properties": {
+    "kind": {"type": "string", "enum": ["candles", "line"]},
+    "candles": {"type": "array", "items": {"type": "array", "items": {"type": "number"}}},
+    "points": {"type": "array", "items": {"type": "array", "items": {"type": "number"}}},
+    "marks": {"type": "array", "items": {"type": OBJ, "properties": {
+        "t": {"type": "string", "enum": ["box", "hline", "label", "circle", "arrow", "highlight"]},
+        "x": {"type": "number"}, "y": {"type": "number"}, "x0": {"type": "number"}, "x1": {"type": "number"},
+        "y0": {"type": "number"}, "y1": {"type": "number"}, "text": CAP,
+        "color": {"type": "string", "enum": ["red", "blue", "green", "ink"]}}, "required": ["t"]}}},
+    "required": ["kind", "marks"]}
+
+ALBUM_WRITER = """Bạn là trader chuyên nghiệp viết SỔ TAY KIẾN THỨC THỰC CHIẾN cho Page "DecodeFx Trading" (nhà đầu tư Việt Nam,
+forex – vàng). Viết tiếng Việt có dấu, ngắn gọn như ghi chép tay, thực chiến – không lý thuyết suông, không hứa lợi nhuận.
+Nội dung là kiến thức chung của nghề, tự viết bằng lời của bạn (không trích dẫn hay dịch nguyên văn nguồn nào)."""
+
+
+def album_spec(topic: dict, number: int) -> dict:
+    return generate_json(ALBUM_WRITER, f"""Soạn album sổ tay #{number:02d} chủ đề: "{topic['name']}".
+Ý chính cần có: {topic.get('points', '')}
+Trả về JSON:
+- cover: kicker ("Sổ tay hệ thống #{number:02d}"), title_lines (ĐÚNG 2 dòng IN HOA, mỗi dòng ≤ 12 ký tự, vd ["ORDER", "BLOCK"]),
+  hook_1 (≤ 7 từ, giọng ghi chép), hook_2 (≤ 9 từ, câu chốt giật nhẹ).
+- slides: ĐÚNG 5 trang, mỗi trang {{title (≤ 7 từ), text (2–3 dòng, mỗi dòng ≤ 44 ký tự), diagram, note (≤ 12 từ, mẹo/cảnh báo)}}.
+  Trang 1 là "X là gì", các trang sau: cách nhận diện / cách vẽ / điều kiện hợp lệ / cách vào lệnh – SL – TP.
+- checklist: 5–6 điều kiện ngắn (≤ 8 từ) trước khi vào lệnh; verdict: 1 câu chốt ≤ 8 từ.
+- caption: 70–120 từ, liệt kê nội dung các trang bằng emoji đầu dòng, kêu gọi lưu lại; hashtags: 2–3.
+QUY TẮC HÌNH (diagram) – hình MINH HOẠ đơn giản, rõ ràng, đúng kiến thức:
+- kind "candles": 10–16 nến [mở, cao, thấp, đóng] thang giá 0–100 (cao ≥ max(mở,đóng), thấp ≤ min(mở,đóng)),
+  nến liền mạch (mở nến sau ≈ đóng nến trước). Toạ độ x của marks = số thứ tự nến (0…n-1).
+- kind "line": 6–12 điểm [x 0–100 tăng dần, y 0–100] vẽ đường giá zigzag (mô hình giá, cấu trúc, sóng).
+- marks: 2–5 chú thích: box {{x0,x1,y0,y1,text}} vùng; hline {{y,x0,x1,text}} mức giá; label {{x,y,text}} nhãn ngắn (≤ 3 từ);
+  circle {{x,y,text}} khoanh điểm quan trọng; arrow {{x0,y0,x1,y1,text}}; highlight {{x0,x1,y0,y1}} tô vàng.
+  color: red (điểm chính), blue (cấu trúc), green (mục tiêu/TP), ink. Chữ trong hình ≤ 3 từ, không đặt nhãn đè lên nhau.""",
+                         {"type": OBJ, "properties": {
+                             "cover": {"type": OBJ, "properties": {"kicker": CAP, "title_lines": {"type": "array", "items": CAP},
+                                                                   "hook_1": CAP, "hook_2": CAP},
+                                       "required": ["kicker", "title_lines", "hook_1", "hook_2"]},
+                             "slides": {"type": "array", "items": {"type": OBJ, "properties": {
+                                 "title": CAP, "text": {"type": "array", "items": CAP}, "diagram": DIAG, "note": CAP},
+                                 "required": ["title", "text", "diagram", "note"]}},
+                             "checklist": {"type": "array", "items": CAP}, "verdict": CAP,
+                             "caption": CAP, "hashtags": {"type": "array", "items": CAP}},
+                          "required": ["cover", "slides", "checklist", "verdict", "caption", "hashtags"]})
+
+
+def _ob_caption() -> str:
+    body = ("ORDER BLOCK – SỔ TAY THỰC CHIẾN\n"
+            "Lưu lại 7 trang này trước khi vào lệnh tiếp theo:\n"
+            "📒 Order Block là gì\n✏️ Cách vẽ OB đúng\n🔍 OB hợp lệ phải có FVG\n🎯 Cách vào lệnh – SL – TP\n"
+            "✅ Checklist 6 điều kiện\n📈 Ví dụ thật trên vàng M15\n"
+            "Bạn muốn sổ tay hệ thống nào tiếp theo? Comment để DecodeFx Trading làm cho bạn.")
+    return cd.caption(body, ["SMC", "OrderBlock", "XAUUSD"])
+
+
+def build_album(topic: dict, folder: Path) -> str:
+    """Dựng album vào folder, trả caption. 'ob' dùng khuôn riêng đã duyệt (có ví dụ lệnh thật); còn lại khuôn chung."""
+    number = next((k for k, a in enumerate(album_bank(), 1) if a["id"] == topic["id"]), 1)
+    if topic["id"] == "ob":
+        from src.design import edu_album
+        from src.reels.smc.setup import find
+        obs = [x for x in find(system="ob") if x.symbol == "XAUUSD"] or find(system="ob")
+        edu_album.build(folder, obs[0])
+        return _ob_caption()
+    from src.design import edu_generic
+    spec = album_spec(topic, number)
+    edu_generic.build(spec, folder, number)
+    (folder / "spec.json").write_text(json.dumps(spec, ensure_ascii=False, indent=1), encoding="utf-8")
+    return cd.caption(spec["caption"], spec["hashtags"])
 
 
 def generate(job: str, out_dir: Path) -> bool:
@@ -175,15 +238,13 @@ def generate(job: str, out_dir: Path) -> bool:
         topic = next_album()
         if topic is None:
             raise RuntimeError("Hết chủ đề album kiến thức chưa đăng")
-        from src.design import edu_album
-        from src.reels.smc.setup import find
         f = out_dir / job
-        if topic == "ob":
-            obs = [x for x in find(system="ob") if x.symbol == "XAUUSD"] or find(system="ob")
-            s = obs[0]
-            edu_album.build(f, s)
-        (f / "caption.txt").write_text(_album_caption(topic, s), encoding="utf-8")
-        (f / "meta.json").write_text(json.dumps({"album": topic}, ensure_ascii=False), encoding="utf-8")
+        f.mkdir(parents=True, exist_ok=True)
+        for old in f.glob("[0-9][0-9].png"):                 # lần dựng lại không để sót trang cũ
+            old.unlink()
+        cap = build_album(topic, f)
+        (f / "caption.txt").write_text(cap, encoding="utf-8")
+        (f / "meta.json").write_text(json.dumps({"album": topic["id"]}, ensure_ascii=False), encoding="utf-8")
         return True
     raise ValueError(job)
 
