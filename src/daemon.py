@@ -51,7 +51,7 @@ def save_state(msg: str):
     files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
                                                  "reels_progress", "brand_progress", "hunter", "hunter_archive",
                                                  "edu_reels", "fx_pick", "story_reels", "quiz_reels",
-                                                 "indi_reels", "smc_reels") if (STATE / f"{n}.json").exists())
+                                                 "indi_reels", "smc_reels", "albums") if (STATE / f"{n}.json").exists())
     if not files:
         return
     sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "

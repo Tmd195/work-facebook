@@ -56,6 +56,9 @@ def skip_today(job: str, now: datetime) -> bool:
     if job.startswith("cwg_fx_"):
         from src.content.cwg_daily import skip_today as fx_skip
         return fx_skip(job, now)
+    if job.startswith("td_"):                             # Page DecodeFx Trading
+        from src.content.trading_daily import skip_today as td_skip
+        return td_skip(job, now)
     return False
 
 
@@ -96,6 +99,9 @@ def post_meta(job: str, out_dir) -> dict:
         return reel.meta(out_dir)
     if job.startswith("cwg_"):
         return {}
+    if job.startswith("td_"):
+        from src.content import trading_daily
+        return trading_daily.meta(job, out_dir)
     if job == "knowledge":
         meta = json.loads((out_dir / "knowledge.json").read_text(encoding="utf-8"))
         return {"series": meta["series"], "part": meta["part"]}
@@ -145,6 +151,9 @@ def _files(job: str, out_dir):
     if job.startswith("cwg_"):
         from src.content import cwg_daily, cwg_weekend
         return (cwg_weekend if job.startswith("cwg_wk_") else cwg_daily).files(job, out_dir)
+    if job.startswith("td_"):
+        from src.content import trading_daily
+        return trading_daily.files(job, out_dir)
     s = job.split("_")[1]
     return out_dir / f"strategy_{s}.txt", sorted(out_dir.glob(f"strategy_{s}_[0-9][0-9].png"))
 
@@ -164,10 +173,16 @@ def generate(job: str):
         from src.content import cwg_daily, cwg_weekend
         mod = cwg_weekend if job.startswith("cwg_wk_") else cwg_daily
         return mod.generate(job, OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
+    if job.startswith("td_"):
+        from src.content import trading_daily
+        return trading_daily.generate(job, OUTPUT / datetime.now(TZ).strftime("%Y-%m-%d"))
     return run.run_strategy(job.split("_")[1])
 
 
 def label(job: str) -> str:
+    if job.startswith("td_"):
+        from src.content.trading_daily import JOB_NAMES as TD
+        return TD.get(job, job)
     if job.startswith("cwg_"):
         from src.content.cwg_daily import JOB_NAMES
         from src.content.cwg_weekend import JOB_NAMES as WK
@@ -323,6 +338,9 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
     if job.startswith("reel"):
         reel = _reel_mod(job)
         reel.mark_done(meta)
+    if job.startswith("td_"):
+        from src.content import trading_daily
+        trading_daily.mark_done(job, meta)
 
     telegram.send(f"✅ Đã hoàn thành: {name} {day}\n🔗 Link bài viết: {link}\nAnh kiểm tra nếu cần sửa đổi.")
     return True

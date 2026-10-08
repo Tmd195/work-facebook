@@ -151,7 +151,11 @@ def tick(dry_run: bool | None = None) -> str:
     folder = OUTPUT / now.strftime("%Y-%m-%d") / f"breaking_{now:%H%M}"
     folder.mkdir(parents=True, exist_ok=True)
     snap = cwg_daily.snapshot()
-    p = cwg_daily.post_breaking(now.date(), group, snap, folder)
+    if ((CONFIG.get("hunter") or {}).get("style")) == "editorial":    # Page DecodeFx Trading: khuôn mẫu 12
+        from src.content import trading_daily
+        p = trading_daily.post_breaking(now.date(), group, snap, folder)
+    else:
+        p = cwg_daily.post_breaking(now.date(), group, snap, folder)
     (folder / "caption.txt").write_text(p["caption"], encoding="utf-8")
     title = f"⚡ Tin nóng {now:%H:%M %d/%m}"
     if dry_run:
