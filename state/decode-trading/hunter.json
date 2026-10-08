@@ -198,21 +198,12 @@
   "460701",
   "460700",
   "460699",
-  "460698"
+  "460698",
+  "460706",
+  "460705",
+  "460704"
  ],
- "pending": [
-  {
-   "id": "460699",
-   "at": "2026-10-09T00:46:28+07:00",
-   "time": "00:46",
-   "text": "Chủ tịch Fed Musalem: Để đưa lạm phát trở lại mức mục tiêu, cần thắt chặt chính sách tiền tệ hơn nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
