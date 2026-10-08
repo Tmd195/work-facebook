@@ -42,9 +42,9 @@ OUTRO = 3.2
 MUSIC = ROOT / "assets" / "music" / "cwg"
 # Slogan + lời kêu gọi (anh chốt 08/10/2026) – hiện chữ VÀ đọc bằng giọng voice 01
 SLOGAN = ("1 CHỈ BÁO MIỄN PHÍ", "GIÚP ANH CHỊ EM KIẾM 100PIP MỖI NGÀY")
-SLOGAN_VOICE = "Một chỉ báo miễn phí, giúp anh chị em kiếm một trăm pip mỗi ngày."
+SLOGAN_VOICE = "Một chỉ báo miễn phí, giúp anh chị em kiếm một trăm píp mỗi ngày."
 CTA_END = "Liên hệ qua Page để sử dụng miễn phí"
-CTA_VOICE = "Liên hệ qua Page để sử dụng miễn phí nhé."
+CTA_VOICE = "Liên hệ qua Pết để sử dụng miễn phí nhé."        # "Pết": giọng đọc tự nhiên, chữ trên video vẫn là "Page"
 VOICE = ROOT / "assets" / "private" / "voice_ref_decode_trading.mp3"
 NAME = {"V7": "SNIPER AI V7", "V4": "SNIPER AI V4"}
 
@@ -350,16 +350,16 @@ def cover(frame: Image.Image, t: boss.Trade) -> Image.Image:
     img = frame.convert("RGBA")
     top = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     dt = ImageDraw.Draw(top)
-    dt.rectangle([0, 0, W, 760], fill=BG + (255,))
+    dt.rectangle([0, 0, W, 800], fill=BG + (255,))
     dt.rounded_rectangle([W / 2 - 200, 170, W / 2 + 200, 236], radius=33, fill=GOLD + (255,))
     img.alpha_composite(top)
     mark = _logo("decode_mark_dark_bg.png", 64)
     img.alpha_composite(mark, (40, 64))
     _txt(img, (40 + mark.width + 14, 96), "DecodeFx Trading", sans("ExtraBold", 34), WHITE, 1, "lm")
     _txt(img, (W / 2, 203), NAME[t.version], sans("ExtraBold", 38), BG, 1)
-    _txt(img, (W / 2, 360), "1 CHỈ BÁO", sans("ExtraBold", 150), GOLD, 1, stroke=6)
-    _txt(img, (W / 2, 505), "MIỄN PHÍ", sans("ExtraBold", 150), GREEN, 1, stroke=6)
-    _txt(img, (W / 2, 640), "KIẾM 100PIP MỖI NGÀY", sans("ExtraBold", 70), WHITE, 1, stroke=4)
+    _txt(img, (W / 2, 365), "1 CHỈ BÁO", sans("ExtraBold", 132), GOLD, 1, stroke=6)   # giãn dòng: dấu Ễ không chạm dòng trên
+    _txt(img, (W / 2, 560), "MIỄN PHÍ", sans("ExtraBold", 132), GREEN, 1, stroke=6)
+    _txt(img, (W / 2, 720), "KIẾM 100PIP MỖI NGÀY", sans("ExtraBold", 68), WHITE, 1, stroke=4)
     return img.convert("RGB")
 
 
