@@ -1,6 +1,5 @@
 {
  "seen": [
-  "459854",
   "459859",
   "459858",
   "459857",
@@ -599,9 +598,22 @@
   "460452",
   "460454",
   "460453",
-  "460455"
+  "460455",
+  "460456"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460456",
+   "at": "2026-10-08T15:30:20+07:00",
+   "time": "15:30",
+   "text": "Thống đốc Fed Waller: Vẫn cần thêm nhiều đợt tăng lãi suất, nhưng linh hoạt về tốc độ tăng lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
