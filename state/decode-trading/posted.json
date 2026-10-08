@@ -1,4 +1,18 @@
 {
+ "2026-10-08 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/2308485449887493/",
+  "post_id": "2308485449887493",
+  "posted_at": "2026-10-08T20:00:22.239194+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V4|2026-08-25T13:00:00+00:00",
+   "version": "V4",
+   "side": "SELL",
+   "pips": 150,
+   "duration": 13.0
+  }
+ },
  "2026-10-08 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/2790855934641433/",
