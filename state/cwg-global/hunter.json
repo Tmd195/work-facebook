@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460093",
   "460092",
   "460094",
   "460096",
@@ -599,14 +598,15 @@
   "460688",
   "460689",
   "460690",
-  "460691"
+  "460691",
+  "460692"
  ],
  "pending": [
   {
-   "id": "460691",
-   "at": "2026-10-08T17:16:26+00:00",
-   "time": "17:16",
-   "text": "Phiên đấu giá trái phiếu kho bạc kỳ hạn 30 năm của Mỹ có lợi suất cao nhất kể từ tháng 8 năm 2000.",
+   "id": "460692",
+   "at": "2026-10-08T17:22:38+00:00",
+   "time": "17:22",
+   "text": "Cục Quản lý Năng lượng Đại dương Hoa Kỳ (MMA): Hiện khoảng 62,89% sản lượng dầu trung bình ngày và 57,35% sản lượng khí đốt tự nhiên trung bình ngày tại Vịnh Mexico đã ngừng sản xuất.",
    "important": true,
    "star": 0,
    "actual": "null",
