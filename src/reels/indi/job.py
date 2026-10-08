@@ -60,11 +60,11 @@ def generate(out_dir: Path) -> bool:
     info = res["info"]
     side = "BUY" if t.side == 1 else "SELL"
     body = (f"{build.NAME[v]} – {side} VÀNG +{info['pips']} PIPS\n"
-            f"Tín hiệu {side} XAUUSD M5 lúc {info['time_vn']}, chạm {info['result']} sau {info['minutes']} phút.\n"
+            f"Tín hiệu {side} XAUUSD M5, chạm {info['result']} sau {info['minutes']} phút.\n"
             f"Indicator Sniper AI tự lọc xu hướng đa khung, báo điểm vào, SL và 3 mức TP ngay trên biểu đồ.\n"
             f"1 chỉ báo miễn phí giúp anh chị em kiếm 100pip mỗi ngày.\n"
             f"📩 Liên hệ qua Page để sử dụng miễn phí.\n"
-            f"Ví dụ trên dữ liệu quá khứ, tín hiệu chọn lọc, không phải lời khuyên đầu tư.")
+            f"Công cụ chỉ báo hỗ trợ, không phải lời khuyên đầu tư.")
     caption = cwg_daily.caption(body, ["SniperAI", "XAUUSD", "Indicator", "TradingView"])
     (f / "caption.txt").write_text(caption, encoding="utf-8")
     (f / "meta.json").write_text(json.dumps({"key": _key(v, d, t), "version": v, "side": side, "pips": info["pips"],
