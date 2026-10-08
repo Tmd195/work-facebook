@@ -601,19 +601,7 @@
   "460433",
   "460434"
  ],
- "pending": [
-  {
-   "id": "460434",
-   "at": "2026-10-08T14:27:21+07:00",
-   "time": "14:27",
-   "text": "Maersk, gã khổng lồ vận tải biển: từ ngày 12 tháng 10 năm 2026, tăng phụ phí nhiên liệu khẩn cấp (EFS) lên 20%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
