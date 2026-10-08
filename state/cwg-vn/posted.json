@@ -309,5 +309,18 @@
   "posted_at": "2026-10-08T08:30:04.641957+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-08 reel 19:30": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1460303962657549/",
+  "post_id": "1460303962657549",
+  "posted_at": "2026-10-08T19:30:39.925337+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "cut-winners",
+   "title": "Chốt lời quá sớm, gồng lỗ quá lâu — sự bất đối xứng âm thầm giết tài khoản",
+   "duration": 42.5,
+   "music": "winter-breeze.mp3"
+  }
  }
 }

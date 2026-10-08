@@ -4,7 +4,8 @@
   "turtle-soup",
   "counter-trend",
   "retest-entry",
-  "fvg-strong"
+  "fvg-strong",
+  "cut-winners"
  ],
  "titles": {
   "drawdown": [
@@ -21,6 +22,9 @@
   ],
   "fvg-strong": [
    "FVG mạnh hay yếu? 3 dấu hiệu nhận ra một FVG đáng tin trước khi vào lệnh"
+  ],
+  "cut-winners": [
+   "Chốt lời quá sớm, gồng lỗ quá lâu — sự bất đối xứng âm thầm giết tài khoản"
   ]
  }
 }
