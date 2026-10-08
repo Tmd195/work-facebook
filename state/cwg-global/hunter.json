@@ -1,8 +1,5 @@
 {
  "seen": [
-  "459843",
-  "459844",
-  "459845",
   "459847",
   "459846",
   "459848",
@@ -599,32 +596,12 @@
   "460439",
   "460441",
   "460440",
-  "460442"
+  "460442",
+  "460444",
+  "460443",
+  "460445"
  ],
- "pending": [
-  {
-   "id": "460439",
-   "at": "2026-10-08T07:55:55+00:00",
-   "time": "07:55",
-   "text": "WTI tăng 3,00% trong ngày, hiện ở mức 90,99 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "460442",
-   "at": "2026-10-08T07:57:04+00:00",
-   "time": "07:57",
-   "text": "Bạc kỳ hạn New York giảm trở lại dưới 59 USD/ounce, giảm 2,15% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
