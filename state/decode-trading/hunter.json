@@ -187,21 +187,10 @@
   "460689",
   "460690",
   "460691",
-  "460692"
+  "460692",
+  "460693"
  ],
- "pending": [
-  {
-   "id": "460692",
-   "at": "2026-10-09T00:22:38+07:00",
-   "time": "00:22",
-   "text": "Cục Quản lý Năng lượng Đại dương Hoa Kỳ (MMA): Hiện khoảng 62,89% sản lượng dầu trung bình ngày và 57,35% sản lượng khí đốt tự nhiên trung bình ngày tại Vịnh Mexico đã ngừng sản xuất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
