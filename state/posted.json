@@ -820,5 +820,51 @@
     }
    ]
   }
+ },
+ "2026-10-08 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130219140735108",
+  "post_id": "1121396124381014_122130219140735108",
+  "posted_at": "2026-10-08T10:00:12.179589+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4168.9,
+      4183.93
+     ],
+     "sl": 4217.47,
+     "tp": [
+      4129.54,
+      4117.56,
+      4101.5
+     ],
+     "trigger": "Giá hồi lên 4168.9-4183.93 xuất hiện nến từ chối, không giữ được trên mây H4.",
+     "invalidation": "H4 đóng cửa trên 4183.93, lấy lại mây H4."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4105.45,
+      4117.56
+     ],
+     "sl": 4081.31,
+     "tp": [
+      4129.54,
+      4159.65,
+      4183.93
+     ],
+     "trigger": "Giá lùi về 4105.45-4117.56 và bật lên với cấu trúc tăng rõ trên H1.",
+     "invalidation": "H1 đóng cửa dưới 4098.88."
+    }
+   ],
+   "price": 4140.81,
+   "title": "Vàng hồi về cản hợp lưu, ưu tiên SELL thuận xu hướng giảm D1"
+  }
  }
 }
