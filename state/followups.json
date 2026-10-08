@@ -260,5 +260,14 @@
  "2026-10-08 knowledge 12:00|examples": {
   "at": "2026-10-08T12:37:15.498712+07:00",
   "count": 3
+ },
+ "2026-10-08 morning 07:30|news|2026-10-08T19:15:00+07:00|GBP": {
+  "at": "2026-10-08T19:53:05.250636+07:00",
+  "impact": "TRUNG LẬP",
+  "sources": [
+   "https://www.fxstreet.com/news/boes-bailey-calls-for-stronger-financial-markets-to-absorb-future-shocks-202610081249",
+   "https://www.newsquawk.com/headlines/boe-governor-bailey-says-we-are-seeing-volatile-markets",
+   "https://www.fxstreet.com/economic-calendar/event/b2c1347b-b57c-4800-bdb6-8bdc627f4e30"
+  ]
  }
 }
