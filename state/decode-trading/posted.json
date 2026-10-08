@@ -1,0 +1,18 @@
+{
+ "2026-10-08 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/2790855934641433/",
+  "post_id": "2790855934641433",
+  "posted_at": "2026-10-08T13:40:28.687308+07:00",
+  "preview": false,
+  "meta": {
+   "key": "ob|XAUUSD|2026-08-10T01:30:00+00:00",
+   "system": "ob",
+   "symbol": "XAUUSD",
+   "side": "buy",
+   "rr": 3.0,
+   "topic": "Order Block",
+   "duration": 45.5
+  }
+ }
+}

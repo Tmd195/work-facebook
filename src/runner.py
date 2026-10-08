@@ -42,6 +42,10 @@ def _reel_mod(job: str):
         from src.reels.story import job as mod
     elif job == "reel_quiz":                              # Page Decode: Reels "BUY OR SELL?" mỗi ngày
         from src.reels.quiz import job as mod
+    elif job == "reel_indi":                              # Page DecodeFx Trading: Reels indicator Sniper AI V4/V7
+        from src.reels.indi import job as mod
+    elif job == "reel_smc":                               # Page DecodeFx Trading: Reels kiến thức hệ thống
+        from src.reels.smc import job as mod
     else:
         from src.reels import job as mod
     return mod
@@ -172,7 +176,7 @@ def label(job: str) -> str:
         from src.content import knowledge
         nxt = knowledge.next_lesson()
         return f"Kiến thức: {nxt[0]['name']} – Phần {nxt[1]['part']}/{len(nxt[0]['lessons'])}" if nxt else "Kiến thức"
-    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "reel": "Video Reels", "reel_story": "Reels kể chuyện nghề IB", "reel_quiz": "Reels BUY OR SELL?", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
+    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "reel": "Video Reels", "reel_story": "Reels kể chuyện nghề IB", "reel_quiz": "Reels BUY OR SELL?", "reel_indi": "Reels Sniper AI", "reel_smc": "Reels kiến thức hệ thống", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
             "strategy_us": "Chiến lược XAUUSD phiên Mỹ"}[job]
 
 

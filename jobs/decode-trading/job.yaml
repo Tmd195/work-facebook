@@ -1,0 +1,52 @@
+# Job 4 – Page "DecodeFx Trading" (https://www.facebook.com/DecodeFx.Trading)
+# Tiếng Việt, hỗ trợ nhà đầu tư – "cho đi nhiều hơn". Anh chốt 07–08/10/2026.
+# ĐỢT 1 (bật 08/10/2026): 2 Reels mỗi ngày – kiến thức hệ thống (12:00) + indicator Sniper AI (20:00).
+# ĐỢT 2 (chưa làm): bản tin 06:00, 4 video plan 07:00–07:45, cập nhật plan trong comment, tổng kết 23:00.
+
+job:
+  id: decode-trading
+  name: "DecodeFx Trading"             # nhãn ở đầu mỗi tin Telegram
+
+brand:
+  name: "DECODEFX TRADING"
+  page_name: "DecodeFx Trading"
+  word: "DECODE"
+  lockup: ["FX", "TRADING"]
+  handle: "facebook.com/DecodeFx.Trading"
+  logo: "assets/brands/decode/logo.png"
+  icon: "assets/brands/decode/icon.png"
+
+autopost:
+  live: true                           # anh cho đăng thật từ 08/10/2026
+
+design:
+  titles_upper: true
+  style: block
+  palette: decode
+  theme: decode
+  chart_theme: light
+
+brandpost:
+  language: vi
+  persona: >-
+    DecodeFx Trading – kênh chia sẻ hệ thống giao dịch thực chiến cho nhà đầu tư Việt Nam. Xưng "DecodeFx Trading" hoặc
+    "chúng tôi", gọi người đọc là "bạn". Giọng gần gũi, thực chiến, cho đi nhiều hơn.
+  audience: >-
+    Nhà đầu tư cá nhân forex – vàng muốn có hệ thống giao dịch rõ ràng, áp dụng được ngay.
+  signature: |-
+    📈 DECODEFX TRADING – Con đường ngắn nhất để trở thành 1 Protrader
+    🎯 Mỗi ngày 1 hệ thống giao dịch chọn lọc trên lệnh thật
+  rules:
+    - "Không hứa lợi nhuận, không 'chắc thắng', không 'làm giàu nhanh'. Không 18+."
+    - "Không nói xấu sàn giao dịch (Page mang thương hiệu sàn DecodeFx)."
+  disclaimer: >-
+    ⚠️ Giao dịch CFD/Forex có rủi ro cao, bạn có thể mất toàn bộ vốn. Nội dung mang tính giáo dục, không phải lời
+    khuyên đầu tư.
+
+hashtags:
+  brand: ["#DecodeFX", "#DecodeFxTrading"]
+
+# Lịch đăng (giờ VN)
+schedule:
+  reel_smc:  { time: "12:00" }        # Reels kiến thức hệ thống (SMC…) – mỗi ngày 1 hệ thống
+  reel_indi: { time: "20:00" }        # Reels indicator Sniper AI V4/V7 – giờ cao điểm xem

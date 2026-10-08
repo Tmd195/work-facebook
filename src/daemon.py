@@ -50,7 +50,8 @@ def save_state(msg: str):
     # chỉ đưa file ĐANG CÓ vào git add – 1 đường dẫn không tồn tại làm cả lệnh thất bại, không lưu được gì
     files = " ".join(f"{ST}/{n}.json" for n in ("posted", "series_progress", "followups", "metrics", "attempts",
                                                  "reels_progress", "brand_progress", "hunter", "hunter_archive",
-                                                 "edu_reels", "fx_pick", "story_reels", "quiz_reels") if (STATE / f"{n}.json").exists())
+                                                 "edu_reels", "fx_pick", "story_reels", "quiz_reels",
+                                                 "indi_reels", "smc_reels") if (STATE / f"{n}.json").exists())
     if not files:
         return
     sh(f"git add {files} 2>/dev/null; git diff --cached --quiet || "

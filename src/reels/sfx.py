@@ -83,7 +83,26 @@ def riser(dur=2.2, rng=np.random.default_rng(11)):
     return 0.5 * x / (np.abs(x).max() + 1e-9)
 
 
-KINDS = {"ting": ting, "whoosh": whoosh, "pop": pop, "pen": pen, "boom": boom, "riser": riser}
+def click(dur=0.05, rng=np.random.default_rng(5)):
+    """Click chuột: 2 tiếng tách rất ngắn (nhấn – nhả)."""
+    n = int(SR * dur)
+    x = rng.standard_normal(n) * _env(n, 0.0005, 160)
+    t = np.arange(n) / SR
+    x += 0.5 * np.sin(2 * np.pi * 2400 * t) * _env(n, 0.0005, 220)
+    m = int(SR * 0.028)
+    x[m:] += 0.5 * x[:n - m]
+    return 0.5 * x
+
+
+def key(dur=0.04, rng=np.random.default_rng(9)):
+    """Tiếng gõ phím: tách gỗ ngắn, cao độ hơi khác nhau mỗi lần."""
+    n = int(SR * dur)
+    t = np.arange(n) / SR
+    f = rng.uniform(1500, 2300)
+    return 0.45 * (0.6 * rng.standard_normal(n) + np.sin(2 * np.pi * f * t)) * _env(n, 0.0005, 120)
+
+
+KINDS = {"ting": ting, "whoosh": whoosh, "pop": pop, "pen": pen, "boom": boom, "riser": riser, "click": click, "key": key}
 _CACHE: dict = {}
 
 
