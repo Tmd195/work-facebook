@@ -310,5 +310,18 @@
   "posted_at": "2026-10-08T06:00:06.268054+00:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-08 reel 12:00": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/2849058972162648/",
+  "post_id": "2849058972162648",
+  "posted_at": "2026-10-08T12:00:43.270879+00:00",
+  "preview": false,
+  "meta": {
+   "topic": "XAUUSD",
+   "title": "XAUUSD UNDER PRESSURE",
+   "duration": 52.4,
+   "music": "electro-dreams.mp3"
+  }
  }
 }
