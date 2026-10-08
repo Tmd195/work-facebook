@@ -1,8 +1,5 @@
 {
  "seen": [
-  "460104",
-  "460105",
-  "460106",
   "460107",
   "460108",
   "460109",
@@ -599,7 +596,10 @@
   "460701",
   "460700",
   "460699",
-  "460703"
+  "460703",
+  "460705",
+  "460704",
+  "460706"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-09T00:46:28+07:00",
    "time": "00:46",
    "text": "Chủ tịch Fed Musalem: Để đưa lạm phát trở lại mức mục tiêu, cần thắt chặt chính sách tiền tệ hơn nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "460704",
+   "at": "2026-10-09T00:48:31+07:00",
+   "time": "00:48",
+   "text": "Fed Musalem: Lãi suất nên được tăng trong 6 đến 9 tháng tới.",
    "important": true,
    "star": 0,
    "actual": "null",
