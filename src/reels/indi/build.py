@@ -287,8 +287,6 @@ def frames(r: Replay, lvl, on, total):
             col = GREEN if fl >= 0 else RED
             _txt(img, (W / 2, 1600), f"{'+' if fl >= 0 else '-'}{pips(fl)} pips", toon(int(104 * (1 + 0.12 * e_o))), col,
                  1, stroke=5)
-        elif s < T_RUN:
-            _txt(img, (W / 2, 1600), f"{dt_vn:%d/%m/%Y · %H:%M}", sans("Bold", 40), (200, 205, 215), 1)
         # ---- huy hiệu TP vừa chạm (chỉ hiện mức mới nhất)
         recent = [(at, name) for name, at in hit_at.items() if name.startswith("TP") and 0 <= s - at < 1.2]
         if recent and s < total - OUTRO:
@@ -297,7 +295,7 @@ def frames(r: Replay, lvl, on, total):
             j = int(name[2]) - 1
             _txt(img, (W / 2, 1730), f"CHẠM {name}  ·  +{pips(boss.TP[j])} PIPS",
                  sans("ExtraBold", int(56 * (0.7 + 0.3 * ease_back(min(1, k * 3))))), GREEN, 1 - max(0, (k - 0.75) / 0.25))
-        _txt(img, (W / 2, 1872), "Dữ liệu quá khứ · tín hiệu chọn lọc · không phải lời khuyên đầu tư",
+        _txt(img, (W / 2, 1872), "Công cụ chỉ báo hỗ trợ · không phải lời khuyên đầu tư",
              sans("Medium", 22), (120, 126, 140), 1)
         # ---- thẻ kết quả cuối video
         if s >= total - OUTRO:
