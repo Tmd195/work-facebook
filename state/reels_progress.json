@@ -1,9 +1,10 @@
 {
- "count": 6,
+ "count": 7,
  "used": [
   "inverted-hammer",
   "mlma",
-  "sigmoid-transition-trailing-stop"
+  "sigmoid-transition-trailing-stop",
+  "ma-of-ma"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -11,6 +12,7 @@
   "Hệ thống MLMA cho XAUUSD: đo xu hướng, tín hiệu vào lệnh, bộ lọc và SL/TP",
   "Dời dừng lỗ về entry khi đạt 1R và chốt lời từng phần cho XAUUSD",
   "Hệ thống Sigmoid Transition Trailing Stop cho XAUUSD: cách đo biến động bằng ATR, điều kiện vào lệnh Buy/Sell theo nến đóng, bộ lọc nhiễu và cách đặt SL/TP, dời dừng lỗ",
-  "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng, xuống M15 tìm điểm vào theo vùng hỗ trợ và nến xác nhận, checklist 3 bước trước lệnh và kỷ luật backtest 100 lệnh cùng nhật ký giao dịch"
+  "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng, xuống M15 tìm điểm vào theo vùng hỗ trợ và nến xác nhận, checklist 3 bước trước lệnh và kỷ luật backtest 100 lệnh cùng nhật ký giao dịch",
+  "Hệ thống MA of MA (EMA 20 của EMA 20) cho XAUUSD: đo xu hướng, tín hiệu cắt, bộ lọc độ dốc và đặt SL/TP theo ATR"
  ]
 }
