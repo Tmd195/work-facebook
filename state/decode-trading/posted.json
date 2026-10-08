@@ -14,5 +14,21 @@
    "topic": "Order Block",
    "duration": 45.5
   }
+ },
+ "2026-10-08 reel_smc 13:50": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/1663545685443892/",
+  "post_id": "1663545685443892",
+  "posted_at": "2026-10-08T13:50:37.233808+07:00",
+  "preview": false,
+  "meta": {
+   "key": "supply|XAUUSD|2026-09-11T06:15:00+00:00",
+   "system": "supply",
+   "symbol": "XAUUSD",
+   "side": "sell",
+   "rr": 2.69,
+   "topic": "Vùng cung SMC",
+   "duration": 44.2
+  }
  }
 }
