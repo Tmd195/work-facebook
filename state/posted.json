@@ -877,5 +877,51 @@
    "price": 4140.81,
    "title": "Vàng hồi về cản hợp lưu, ưu tiên SELL thuận xu hướng giảm D1"
   }
+ },
+ "2026-10-08 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130271244735108",
+  "post_id": "1121396124381014_122130271244735108",
+  "posted_at": "2026-10-08T18:30:07.480913+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4122.83,
+      4131.89
+     ],
+     "sl": 4159.65,
+     "tp": [
+      4100,
+      4063.01,
+      4049.5
+     ],
+     "trigger": "Giá hồi lên 4123-4132 và xuất hiện nến H1 đảo chiều giảm",
+     "invalidation": "H1 đóng cửa vững trên 4159.65"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4100,
+      4114.99
+     ],
+     "sl": 4049.5,
+     "tp": [
+      4122.83,
+      4142.51,
+      4159.65
+     ],
+     "trigger": "Giá về 4100-4115 giữ vững, có nến H1 xác nhận lực cầu",
+     "invalidation": "H1 đóng cửa dưới 4100"
+    }
+   ],
+   "price": 4117.77,
+   "title": "Vàng chịu áp lực USD, ưu tiên bán hồi dưới 4142-4159"
+  }
  }
 }
