@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460088",
   "460093",
   "460092",
   "460094",
@@ -599,9 +598,22 @@
   "460686",
   "460688",
   "460689",
-  "460690"
+  "460690",
+  "460691"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460691",
+   "at": "2026-10-09T00:16:26+07:00",
+   "time": "00:16",
+   "text": "Phiên đấu giá trái phiếu kho bạc kỳ hạn 30 năm của Mỹ có lợi suất cao nhất kể từ tháng 8 năm 2000.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
