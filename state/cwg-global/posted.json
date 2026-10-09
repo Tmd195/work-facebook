@@ -363,5 +363,18 @@
   "posted_at": "2026-10-09T06:00:04.185105+00:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-09 reel 12:00": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1905840347461703/",
+  "post_id": "1905840347461703",
+  "posted_at": "2026-10-09T12:01:16.006417+00:00",
+  "preview": false,
+  "meta": {
+   "topic": "XAUUSD",
+   "title": "GOLD NEAR RESISTANCE",
+   "duration": 58.9,
+   "music": "uplifting-bass.mp3"
+  }
  }
 }
