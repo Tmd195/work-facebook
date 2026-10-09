@@ -502,9 +502,22 @@
   "461005",
   "461004",
   "461007",
-  "461006"
+  "461006",
+  "461008"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461008",
+   "at": "2026-10-10T02:50:00+07:00",
+   "time": "02:50",
+   "text": "Ủy viên bỏ phiếu FOMC năm 2028, Chủ tịch Fed Boston Collins sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1
  },
