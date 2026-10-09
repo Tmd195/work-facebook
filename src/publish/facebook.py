@@ -151,6 +151,7 @@ def publish_reel(video: Path, description: str, thumbnail: Path | None = None, r
     page = env("FB_PAGE_ID")
     last_exc = None
     for attempt in range(retries):
+        vid, finishing = None, False
         try:
             start = _call("POST", f"{page}/video_reels", data={"upload_phase": "start"})
             vid = start["video_id"]
@@ -161,6 +162,7 @@ def publish_reel(video: Path, description: str, thumbnail: Path | None = None, r
                     "Authorization": f"OAuth {env('FB_PAGE_TOKEN')}", "offset": "0", "file_size": str(size)})
             if not r.ok or not r.json().get("success", True):
                 raise FacebookError(f"Tải video lên lỗi: {r.text[:200]}")
+            finishing = True                              # từ đây Reels có thể ĐÃ lên Page – tuyệt đối không tải lại
             _call("POST", f"{page}/video_reels", data={"upload_phase": "finish", "video_id": vid,
                                                        "video_state": state, "description": description})
             for _ in range(40):                            # chờ Facebook xử lý xong (tối đa ~10 phút)
@@ -183,6 +185,17 @@ def publish_reel(video: Path, description: str, thumbnail: Path | None = None, r
             last_exc = exc
         except requests.RequestException as exc:
             last_exc = exc
+        if finishing and vid:
+            # 09/10/2026: lệnh phát hành đã gửi nhưng bước sau lỗi → lượt thử lại đăng thêm 1 Reels trùng.
+            # Giờ: kiểm tra video vừa phát hành; còn tồn tại (không lỗi) thì coi là đã đăng, KHÔNG tải lại.
+            try:
+                st = _call("GET", vid, params={"fields": "status"}).get("status", {})
+                if st.get("video_status") != "error":
+                    print(f"  ! bước sau phát hành lỗi ({last_exc}) – Reels {vid} đã lên, không đăng lại", flush=True)
+                    return reel_link(vid), vid
+            except Exception as exc:
+                print(f"  ! không kiểm tra được Reels {vid}: {exc} – không đăng lại để tránh trùng", flush=True)
+                return reel_link(vid), vid
         time.sleep(30)
     raise FacebookError(f"Đăng Reels thất bại sau {retries} lần: {last_exc}")
 
