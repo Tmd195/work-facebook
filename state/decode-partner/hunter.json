@@ -601,27 +601,15 @@
   "460977",
   "460976"
  ],
- "pending": [
-  {
-   "id": "460977",
-   "at": "2026-10-09T23:33:53+07:00",
-   "time": "23:33",
-   "text": "Cục Quản lý Năng lượng Đại dương Hoa Kỳ: Khoảng 71,51% sản lượng dầu hàng ngày và 58,84% sản lượng khí đốt tự nhiên hàng ngày tại khu vực Vịnh Hoa Kỳ đã tạm dừng sản xuất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
   "2026-10-06": 1,
   "2026-10-07": 1,
   "2026-10-08": 3,
-  "2026-10-09": 1
+  "2026-10-09": 2
  },
- "last_post": "2026-10-09T00:53:27.393894+07:00",
+ "last_post": "2026-10-09T23:39:14.326872+07:00",
  "fail": 0
 }
