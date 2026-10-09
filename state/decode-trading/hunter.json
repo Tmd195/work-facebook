@@ -404,19 +404,7 @@
   "460906",
   "460907"
  ],
- "pending": [
-  {
-   "id": "460907",
-   "at": "2026-10-09T20:42:21+07:00",
-   "time": "20:42",
-   "text": "Giá bạc giao ngay vượt 61 USD/ounce, tăng hơn 3% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
