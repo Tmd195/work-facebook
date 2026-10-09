@@ -601,19 +601,7 @@
   "460797",
   "460799"
  ],
- "pending": [
-  {
-   "id": "460799",
-   "at": "2026-10-09T12:17:56+07:00",
-   "time": "12:17",
-   "text": "Bạch kim giao ngay tăng 3%, lên 1.678,15 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
