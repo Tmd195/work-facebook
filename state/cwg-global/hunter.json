@@ -601,19 +601,7 @@
   "460799",
   "460800"
  ],
- "pending": [
-  {
-   "id": "460800",
-   "at": "2026-10-09T05:25:26+00:00",
-   "time": "05:25",
-   "text": "Bạc giao ngay tăng 2,00% trong ngày, hiện ở mức 60,36 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
