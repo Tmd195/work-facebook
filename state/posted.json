@@ -1034,5 +1034,51 @@
    "price": 4171.82,
    "title": "XAUUSD Á-Âu: ưu tiên mua nhịp chỉnh về 4,132-4,156, giữ trên 4,142"
   }
+ },
+ "2026-10-09 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130449516735108",
+  "post_id": "1121396124381014_122130449516735108",
+  "posted_at": "2026-10-09T18:30:14.041186+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      4142.51,
+      4156.37
+     ],
+     "sl": 4126.21,
+     "tp": [
+      4170.6,
+      4182.77,
+      4199.3
+     ],
+     "trigger": "Giá hồi về 4,142-4,156 và xuất hiện nến đảo chiều tăng trên H1",
+     "invalidation": "Đóng nến H1 dưới 4,133.85 (mất nền hợp lưu, hỏng cấu trúc tăng)"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4205.82,
+      4208.14
+     ],
+     "sl": 4226.81,
+     "tp": [
+      4199.3,
+      4182.77,
+      4170.6
+     ],
+     "trigger": "Giá quét đỉnh phiên Á 4,206.98 rồi bị từ chối, xuất hiện nến giảm H1",
+     "invalidation": "Đóng nến H1 trên 4,226.81"
+    }
+   ],
+   "price": 4179.31,
+   "title": "XAUUSD phiên Mỹ: giữ nền 4,142-4,156, ưu tiên mua hồi thử 4,200-4,225"
+  }
  }
 }
