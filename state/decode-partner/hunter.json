@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460298",
   "460303",
   "460302",
   "460301",
@@ -599,32 +598,10 @@
   "460896",
   "460899",
   "460898",
-  "460897"
+  "460897",
+  "460900"
  ],
- "pending": [
-  {
-   "id": "460899",
-   "at": "2026-10-09T19:41:48+07:00",
-   "time": "19:41",
-   "text": "Dữ liệu thị trường hoán đổi cho thấy sau khi báo cáo việc làm tháng 9 được công bố, khả năng Ngân hàng Trung ương Canada tăng lãi suất vào tháng 10 đã giảm từ 40% xuống 27%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "460898",
-   "at": "2026-10-09T19:41:06+07:00",
-   "time": "19:41",
-   "text": "Các nhà giao dịch đã giảm bớt đặt cược vào việc Ngân hàng Trung ương Canada tăng lãi suất trước cuối năm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
