@@ -601,19 +601,7 @@
   "460986",
   "460985"
  ],
- "pending": [
-  {
-   "id": "460985",
-   "at": "2026-10-09T17:01:34+00:00",
-   "time": "17:01",
-   "text": "Tổng số giếng(dầu thô+khí tự nhiên)  Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "598",
-   "forecast": "-",
-   "previous": "598"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
