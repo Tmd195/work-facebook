@@ -336,9 +336,22 @@
   "460838",
   "460839",
   "460840",
-  "460841"
+  "460841",
+  "460842"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460842",
+   "at": "2026-10-09T15:14:13+07:00",
+   "time": "15:14",
+   "text": "Liên quân do Ả Rập Xê Út dẫn đầu cho biết đã phá hủy ba bệ phóng tên lửa do lực lượng Houthi sử dụng, đồng thời sẽ có phản ứng cứng rắn đối với các cuộc tấn công của lực lượng Houthi nhằm vào dân thường và cơ sở dân sự.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
