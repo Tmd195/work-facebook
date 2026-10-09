@@ -450,21 +450,10 @@
   "460950",
   "460955",
   "460954",
-  "460953"
+  "460953",
+  "460956"
  ],
- "pending": [
-  {
-   "id": "460951",
-   "at": "2026-10-09T22:37:05+07:00",
-   "time": "22:37",
-   "text": "Tổng thống Mỹ Trump: (Về vấn đề Iran) Dù thế nào đi nữa, nó sẽ sớm kết thúc.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
