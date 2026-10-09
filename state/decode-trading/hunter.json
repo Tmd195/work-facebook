@@ -297,21 +297,10 @@
   "460799",
   "460800",
   "460801",
-  "460802"
+  "460802",
+  "460803"
  ],
- "pending": [
-  {
-   "id": "460802",
-   "at": "2026-10-09T12:34:54+07:00",
-   "time": "12:34",
-   "text": "Vàng giao ngay vượt 4.200 USD/oz, lần đầu tiên kể từ ngày 2 tháng 10, tăng hơn 1,6% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {},
  "last_post": "",
  "fail": 0
