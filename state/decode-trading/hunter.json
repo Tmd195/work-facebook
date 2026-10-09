@@ -388,9 +388,22 @@
   "460890",
   "460892",
   "460889",
-  "460888"
+  "460888",
+  "460894"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460894",
+   "at": "2026-10-09T19:33:48+07:00",
+   "time": "19:33",
+   "text": "USD/CAD tăng ngắn hạn hơn 60 điểm, mức tăng trong ngày mở rộng lên 0,50%, hiện báo 1,4295.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {},
  "last_post": "",
  "fail": 0
