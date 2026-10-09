@@ -5,7 +5,8 @@
   "counter-trend",
   "retest-entry",
   "fvg-strong",
-  "cut-winners"
+  "cut-winners",
+  "inside-bar"
  ],
  "titles": {
   "drawdown": [
@@ -25,6 +26,9 @@
   ],
   "cut-winners": [
    "Chốt lời quá sớm, gồng lỗ quá lâu — sự bất đối xứng âm thầm giết tài khoản"
+  ],
+  "inside-bar": [
+   "Inside bar: nén giá trước cú bùng nổ — vào theo hướng nào?"
   ]
  }
 }
