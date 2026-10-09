@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460394",
   "460393",
   "460398",
   "460397",
@@ -599,9 +598,22 @@
   "460991",
   "460992",
   "460993",
-  "460994"
+  "460994",
+  "460995"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460995",
+   "at": "2026-10-10T01:03:05+07:00",
+   "time": "01:03",
+   "text": "Theo The New York Times: Katie Zacharia được chọn làm Thư ký Báo chí Nhà Trắng mới.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
