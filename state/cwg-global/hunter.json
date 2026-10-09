@@ -1,7 +1,5 @@
 {
  "seen": [
-  "460296",
-  "460300",
   "460299",
   "460298",
   "460303",
@@ -599,9 +597,23 @@
   "460888",
   "460894",
   "460895",
-  "460896"
+  "460896",
+  "460898",
+  "460897"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460898",
+   "at": "2026-10-09T12:41:06+00:00",
+   "time": "12:41",
+   "text": "Các nhà giao dịch đã giảm bớt đặt cược vào việc Ngân hàng Trung ương Canada tăng lãi suất trước cuối năm.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
