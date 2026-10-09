@@ -977,5 +977,51 @@
     }
    ]
   }
+ },
+ "2026-10-09 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130393530735108",
+  "post_id": "1121396124381014_122130393530735108",
+  "posted_at": "2026-10-09T10:00:12.885050+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      4132.84,
+      4156.67
+     ],
+     "sl": 4101.57,
+     "tp": [
+      4170.6,
+      4182.58,
+      4199.05
+     ],
+     "trigger": "Giá chỉnh về cụm hợp lưu 4,132-4,156 và giữ được, H1 không đóng cửa dưới 4,142.51",
+     "invalidation": "H1 đóng cửa dưới 4,122.83"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4182.58,
+      4185.28
+     ],
+     "sl": 4201.75,
+     "tp": [
+      4156.67,
+      4132.84,
+      4114.99
+     ],
+     "trigger": "Giá bật lên test 4,182-4,185 rồi xuất hiện nến từ chối, D1 vẫn nằm dưới mây",
+     "invalidation": "Giá đóng cửa trên 4,201.75"
+    }
+   ],
+   "price": 4171.82,
+   "title": "XAUUSD Á-Âu: ưu tiên mua nhịp chỉnh về 4,132-4,156, giữ trên 4,142"
+  }
  }
 }
