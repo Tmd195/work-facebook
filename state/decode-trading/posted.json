@@ -55,6 +55,21 @@
    "album": "ob"
   }
  },
+ "2026-10-09 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/1083978687755172/",
+  "post_id": "1083978687755172",
+  "posted_at": "2026-10-09T12:00:41.486237+07:00",
+  "preview": false,
+  "meta": {
+   "key": "supply|XAUUSD|2026-08-31T11:00:00+00:00",
+   "system": "supply",
+   "symbol": "XAUUSD",
+   "side": "sell",
+   "rr": 3.08,
+   "duration": 44.3
+  }
+ },
  "2026-10-09 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122103733359499355",
