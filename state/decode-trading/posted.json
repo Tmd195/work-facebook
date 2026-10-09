@@ -55,6 +55,20 @@
    "album": "ob"
   }
  },
+ "2026-10-09 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1031341709960219/",
+  "post_id": "1031341709960219",
+  "posted_at": "2026-10-09T20:00:42.149504+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V7|2026-08-27T09:10:00+00:00",
+   "version": "V7",
+   "side": "SELL",
+   "pips": 150,
+   "duration": 13.8
+  }
+ },
  "2026-10-09 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/1083978687755172/",
