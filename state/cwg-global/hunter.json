@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460312",
   "460321",
   "460320",
   "460314",
@@ -599,9 +598,22 @@
   "460910",
   "460909",
   "460912",
-  "460911"
+  "460911",
+  "460913"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460913",
+   "at": "2026-10-09T14:03:22+00:00",
+   "time": "14:03",
+   "text": "Thị trường đưa tin: Chính quyền Tổng thống Mỹ Donald Trump đã áp đặt trừng phạt đối với Tòa án Hình sự Quốc tế.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
