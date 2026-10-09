@@ -405,6 +405,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-09 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1087244520891255/",
+  "post_id": "1087244520891255",
+  "posted_at": "2026-10-09T19:45:25.151914+07:00",
+  "preview": false,
+  "meta": {
+   "key": "AUDUSD|0.69964",
+   "symbol": "AUDUSD",
+   "system": "retest",
+   "side": "buy",
+   "rr": 10.6,
+   "duration": 10.3
+  }
+ },
  "2026-10-09 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/1073933358749416/",
