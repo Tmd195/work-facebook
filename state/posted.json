@@ -948,5 +948,34 @@
    "price": 4117.77,
    "title": "Vàng chịu áp lực USD, ưu tiên bán hồi dưới 4142-4159"
   }
+ },
+ "2026-10-09 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130379244735108",
+  "post_id": "1121396124381014_122130379244735108",
+  "posted_at": "2026-10-09T07:30:03.972985+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "21:00",
+     "datetime": "2026-10-09T21:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Prelim UoM Consumer Sentiment",
+     "forecast": "47.5",
+     "previous": "47.8"
+    },
+    {
+     "time": "21:00",
+     "datetime": "2026-10-09T21:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Prelim UoM Inflation Expectations",
+     "forecast": "",
+     "previous": "4.6%"
+    }
+   ]
+  }
  }
 }
