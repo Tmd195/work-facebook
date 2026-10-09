@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460294",
   "460293",
   "460296",
   "460297",
@@ -599,7 +598,8 @@
   "460889",
   "460888",
   "460893",
-  "460892"
+  "460892",
+  "460894"
  ],
  "pending": [
   {
@@ -612,6 +612,17 @@
    "actual": "64.8",
    "forecast": "65.00%",
    "previous": "65.00"
+  },
+  {
+   "id": "460894",
+   "at": "2026-10-09T19:33:48+07:00",
+   "time": "19:33",
+   "text": "USD/CAD tăng ngắn hạn hơn 60 điểm, mức tăng trong ngày mở rộng lên 0,50%, hiện báo 1,4295.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
   }
  ],
  "posts": {
