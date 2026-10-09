@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460382",
   "460383",
   "460385",
   "460384",
@@ -599,21 +598,10 @@
   "460978",
   "460979",
   "460980",
-  "460981"
+  "460981",
+  "460982"
  ],
- "pending": [
-  {
-   "id": "460981",
-   "at": "2026-10-09T16:50:00+00:00",
-   "time": "16:50",
-   "text": "Tổng số giàn khoan dầu của Mỹ trong tuần tính đến ngày 9 tháng 10 sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
