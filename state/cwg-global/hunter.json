@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460179",
   "460183",
   "460182",
   "460184",
@@ -599,9 +598,22 @@
   "460777",
   "460778",
   "460779",
-  "460780"
+  "460780",
+  "460781"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "460781",
+   "at": "2026-10-09T01:59:50+00:00",
+   "time": "01:59",
+   "text": "Vàng giao ngay tăng 1,00% trong ngày, hiện ở mức 4.175,13 USD/ounce, mức cao nhất trong 3 ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
