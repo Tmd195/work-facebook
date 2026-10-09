@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460293",
   "460296",
   "460297",
   "460299",
@@ -599,32 +598,10 @@
   "460888",
   "460893",
   "460892",
-  "460894"
+  "460894",
+  "460895"
  ],
- "pending": [
-  {
-   "id": "460892",
-   "at": "2026-10-09T19:31:36+07:00",
-   "time": "19:31",
-   "text": "Tỷ lệ tham gia lao động Canada",
-   "important": true,
-   "star": 2,
-   "actual": "64.8",
-   "forecast": "65.00%",
-   "previous": "65.00"
-  },
-  {
-   "id": "460894",
-   "at": "2026-10-09T19:33:48+07:00",
-   "time": "19:33",
-   "text": "USD/CAD tăng ngắn hạn hơn 60 điểm, mức tăng trong ngày mở rộng lên 0,50%, hiện báo 1,4295.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
