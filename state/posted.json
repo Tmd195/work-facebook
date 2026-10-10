@@ -1116,5 +1116,19 @@
    "series": "ho-tro-khang-cu-cung-cau",
    "part": 4
   }
+ },
+ "2026-10-10 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1110728741433848/",
+  "post_id": "1110728741433848",
+  "posted_at": "2026-10-10T19:15:41.127231+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống SuperTrend cho XAUUSD: bộ lọc xu hướng, điểm vào theo nhịp hồi, trailing SL và cách đặt SL/TP",
+   "pillar": "he-thong",
+   "system": "supertrend",
+   "duration": 57.7,
+   "music": "expressive-courage.mp3"
+  }
  }
 }
