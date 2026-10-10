@@ -113,5 +113,15 @@
   "posted_at": "2026-10-09T06:00:07.748686+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-10 td_album_wk1 10:00": {
+  "job": "td_album_wk1",
+  "link": "https://www.facebook.com/122103151269499355/posts/122104844475499355",
+  "post_id": "1411036908756172_122104844475499355",
+  "posted_at": "2026-10-10T10:00:15.372956+07:00",
+  "preview": false,
+  "meta": {
+   "album": "candle_patterns"
+  }
  }
 }
