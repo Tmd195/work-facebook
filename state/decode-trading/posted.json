@@ -114,6 +114,20 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-10 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1644123897113403/",
+  "post_id": "1644123897113403",
+  "posted_at": "2026-10-10T20:00:41.326149+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V4|2026-08-21T01:10:00+00:00",
+   "version": "V4",
+   "side": "BUY",
+   "pips": 150,
+   "duration": 13.1
+  }
+ },
  "2026-10-10 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/2036008590350035/",
