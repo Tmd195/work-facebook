@@ -587,9 +587,23 @@
   "461090",
   "461089",
   "461091",
-  "461092"
+  "461092",
+  "461094",
+  "461093"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461093",
+   "at": "2026-10-11T02:06:01+07:00",
+   "time": "02:06",
+   "text": "Thông tin thị trường: Bộ Năng lượng Hoa Kỳ đã phê duyệt việc hoán đổi khẩn cấp tối đa 4 triệu thùng dầu thô từ Kho Dự trữ Dầu mỏ Chiến lược, nhằm ứng phó với tình trạng gián đoạn nguồn cung do thời tiết khắc nghiệt tại khu vực Vịnh Mexico. Các doanh nghiệp liên quan sẽ hoàn trả lượng dầu thô đã vay vào năm 2027, đồng thời trả thêm một lượng dầu thô nhất định như khoản bồi hoàn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1
  },
