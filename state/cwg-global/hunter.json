@@ -601,19 +601,7 @@
   "461051",
   "461052"
  ],
- "pending": [
-  {
-   "id": "461052",
-   "at": "2026-10-10T02:54:21+00:00",
-   "time": "02:54",
-   "text": "Quyền Bộ trưởng An ninh Nội địa Hoa Kỳ: Do ảnh hưởng của bão Isaias, đã phê duyệt tình trạng khẩn cấp cho bang Florida và bang Alabama.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
