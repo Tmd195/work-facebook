@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460493",
   "460492",
   "460491",
   "460494",
@@ -599,9 +598,22 @@
   "461087",
   "461089",
   "461088",
-  "461090"
+  "461090",
+  "461091"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461091",
+   "at": "2026-10-11T00:13:29+07:00",
+   "time": "00:13",
+   "text": "Theo hãng thông tấn Tasnim của Iran: Bộ phận quan hệ công chúng của Lực lượng Hải quân Vệ binh Cách mạng Iran cho biết, một tàu chở dầu siêu lớn vi phạm quy định chở dầu thô đã cố gắng rời khỏi eo biển Hormuz qua tuyến hàng hải không được chỉ định, và đã trúng mìn phát nổ trên tuyến hàng hải đã được tuyên bố là có rủi ro cao. Tuyên bố của Lực lượng Hải quân Vệ binh Cách mạng Iran nêu rõ, bất kỳ tàu chở dầu vi phạm nào phớt lờ các quy định an toàn và quy tắc liên quan của eo biển Hormuz đều sẽ phải đối mặt với hậu quả là hỏa hoạn dữ dội.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
