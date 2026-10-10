@@ -578,9 +578,23 @@
   "461078",
   "461081",
   "461082",
-  "461083"
+  "461083",
+  "461085",
+  "461084"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461085",
+   "at": "2026-10-10T23:46:35+07:00",
+   "time": "23:46",
+   "text": "Tổng thống Mỹ Trump: Đề nghị Ukraine bổ nhiệm một nhà lãnh đạo mới để thúc đẩy đạt được thỏa thuận. Đã đến lúc Ukraine bổ nhiệm nhà lãnh đạo mới.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1
  },
