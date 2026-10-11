@@ -163,6 +163,21 @@
    "album": "fvg"
   }
  },
+ "2026-10-11 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/1135436169055193/",
+  "post_id": "1135436169055193",
+  "posted_at": "2026-10-11T12:00:42.294236+07:00",
+  "preview": false,
+  "meta": {
+   "key": "supply|GBPUSD|2026-07-22T13:45:00+00:00",
+   "system": "supply",
+   "symbol": "GBPUSD",
+   "side": "sell",
+   "rr": 3.37,
+   "duration": 44.1
+  }
+ },
  "2026-10-11 td_album_wk1 10:00": {
   "job": "td_album_wk1",
   "link": "https://www.facebook.com/122103151269499355/posts/122105773659499355",
