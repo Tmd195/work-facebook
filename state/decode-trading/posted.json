@@ -163,6 +163,20 @@
    "album": "fvg"
   }
  },
+ "2026-10-11 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1140917455523433/",
+  "post_id": "1140917455523433",
+  "posted_at": "2026-10-11T20:00:25.927306+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V7|2026-09-08T05:45:00+00:00",
+   "version": "V7",
+   "side": "SELL",
+   "pips": 150,
+   "duration": 13.8
+  }
+ },
  "2026-10-11 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/1135436169055193/",
