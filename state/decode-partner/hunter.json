@@ -1,7 +1,5 @@
 {
  "seen": [
-  "460544",
-  "460545",
   "460546",
   "460553",
   "460552",
@@ -599,21 +597,11 @@
   "461140",
   "461141",
   "461142",
-  "461143"
+  "461143",
+  "461145",
+  "461144"
  ],
- "pending": [
-  {
-   "id": "461143",
-   "at": "2026-10-11T20:30:58+07:00",
-   "time": "20:30",
-   "text": "Theo ABC News: Tổng thống Ukraine Zelensky, khi phản hồi Tổng thống Mỹ Trump, cho biết nếu Tổng thống Nga Putin đồng ý ngừng bắn 60 ngày, ông sẽ tổ chức bầu cử ở Ukraine.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
