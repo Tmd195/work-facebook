@@ -499,6 +499,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-11 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/2021086311942399/",
+  "post_id": "2021086311942399",
+  "posted_at": "2026-10-11T19:45:38.055911+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDJPY|153.75999",
+   "symbol": "USDJPY",
+   "system": "range",
+   "side": "sell",
+   "rr": 7.5,
+   "duration": 9.9
+  }
+ },
  "2026-10-11 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/3420430648130003/",
