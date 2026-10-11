@@ -601,19 +601,7 @@
   "461141",
   "461142"
  ],
- "pending": [
-  {
-   "id": "461142",
-   "at": "2026-10-11T13:11:07+00:00",
-   "time": "13:11",
-   "text": "Bộ trưởng Tài chính Mỹ Bessent: Tổng thống Mỹ Trump dự kiến sẽ không có bất kỳ xung đột quân sự nào xảy ra trước cuộc bầu cử giữa kỳ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
