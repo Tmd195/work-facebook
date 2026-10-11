@@ -1141,5 +1141,16 @@
    "duration": 57.7,
    "music": "expressive-courage.mp3"
   }
+ },
+ "2026-10-11 knowledge 12:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130775574735108",
+  "post_id": "1121396124381014_122130775574735108",
+  "posted_at": "2026-10-11T12:00:13.447860+07:00",
+  "preview": false,
+  "meta": {
+   "series": "ho-tro-khang-cu-cung-cau",
+   "part": 6
+  }
  }
 }
