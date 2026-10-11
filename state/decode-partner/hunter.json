@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460582",
   "460581",
   "460580",
   "460591",
@@ -599,9 +598,22 @@
   "461179",
   "461181",
   "461182",
-  "461183"
+  "461183",
+  "461184"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461184",
+   "at": "2026-10-12T02:50:59+07:00",
+   "time": "02:50",
+   "text": "Theo Axios: Một quan chức Nhà Trắng cho biết lệnh ngừng bắn năng lượng giữa Nga và Ukraine mà Trump công bố hôm Chủ nhật đề cập đến một thỏa thuận tiềm năng. Trump dự kiến Zelensky sẽ tuân thủ thỏa thuận này. Quan chức Nhà Trắng cảnh báo rằng các cuộc tấn công của Ukraine nhằm vào các nhà máy lọc dầu của Nga gây tổn hại cho mối quan hệ giữa Zelensky và Trump nhiều hơn mức thiệt hại mà chúng gây ra cho Nga.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
