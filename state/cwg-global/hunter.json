@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460531",
   "460533",
   "460535",
   "460534",
@@ -599,9 +598,22 @@
   "461128",
   "461129",
   "461130",
-  "461131"
+  "461131",
+  "461132"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461132",
+   "at": "2026-10-11T09:19:37+00:00",
+   "time": "09:19",
+   "text": "Tổng thống Ukraine Zelensky: Nếu Nga ngừng tấn công cơ sở hạ tầng năng lượng của Ukraine, Ukraine sẵn sàng ngừng tấn công các nhà máy lọc dầu của Nga.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
