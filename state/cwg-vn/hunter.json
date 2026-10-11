@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460511",
   "460510",
   "460513",
   "460514",
@@ -599,9 +598,22 @@
   "461107",
   "461108",
   "461110",
-  "461109"
+  "461109",
+  "461111"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461111",
+   "at": "2026-10-11T07:20:57+07:00",
+   "time": "07:20",
+   "text": "Tổng thống Mỹ Trump: Cuộc tấn công vào Ả Rập Xê Út là khủng khiếp, Ả Rập Xê Út có khả năng tự vệ. Chúng tôi có liên hệ với Houthi, chúng tôi sẽ xem điều gì sẽ xảy ra, nhưng những gì họ làm là rất tồi tệ. Tôi chưa nói chuyện với Thái tử Ả Rập Xê Út, nhưng tôi sẽ làm điều đó, những gì đã xảy ra là không thể chấp nhận được.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
