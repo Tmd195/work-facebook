@@ -483,6 +483,14 @@
    "duration": 9.9
   }
  },
+ "2026-10-11 cwg_wk_ahead 20:15": {
+  "job": "cwg_wk_ahead",
+  "link": "https://www.facebook.com/122099784345498398/posts/122108001633498398",
+  "post_id": "1379542878568858_122108001633498398",
+  "posted_at": "2026-10-11T20:15:04.456434+07:00",
+  "preview": false,
+  "meta": {}
+ },
  "2026-10-11 cwg_wk_cot 10:15": {
   "job": "cwg_wk_cot",
   "link": "https://www.facebook.com/122099784345498398/posts/122107567407498398",
