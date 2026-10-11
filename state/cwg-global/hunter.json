@@ -601,19 +601,7 @@
   "461151",
   "461152"
  ],
- "pending": [
-  {
-   "id": "461152",
-   "at": "2026-10-11T14:17:39+00:00",
-   "time": "14:17",
-   "text": "Tổng thống Mỹ Trump: Có hiệu lực ngay lập tức, chiến tranh Nga-Ukraine đạt được \"lệnh ngừng bắn năng lượng\". Hai bên đã đồng ý, không được phá hoại.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
