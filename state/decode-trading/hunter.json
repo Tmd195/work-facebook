@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460669",
   "460668",
   "460667",
   "460671",
@@ -599,9 +598,22 @@
   "461262",
   "461265",
   "461264",
-  "461266"
+  "461266",
+  "461267"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461267",
+   "at": "2026-10-12T15:24:23+07:00",
+   "time": "15:24",
+   "text": "Thư ký Tổ chức Các nước Xuất khẩu Dầu mỏ cho biết mức tăng nhu cầu dầu năm nay là 400.000 thùng/ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1
  },
