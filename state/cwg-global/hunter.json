@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460838",
   "460839",
   "460840",
   "460841",
@@ -599,9 +598,22 @@
   "461435",
   "461434",
   "461436",
-  "461437"
+  "461437",
+  "461438"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461438",
+   "at": "2026-10-12T18:14:17+00:00",
+   "time": "18:14",
+   "text": "Theo tài liệu định giá, Qatar đã ấn định giá bán chính thức (OSP) cho dầu thô ngoài khơi tháng 11 ở mức chiết khấu 8 USD/thùng so với giá dầu chuẩn Oman/Dubai, và giá bán chính thức cho dầu thô trên bờ ở mức chiết khấu 7,50 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
