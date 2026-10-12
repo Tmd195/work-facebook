@@ -601,19 +601,7 @@
   "461335",
   "461336"
  ],
- "pending": [
-  {
-   "id": "461336",
-   "at": "2026-10-12T20:40:50+07:00",
-   "time": "20:40",
-   "text": "Ngân hàng Trung ương Congo: Congo sẽ nâng dự trữ vàng từ 3 tấn lên 5 tấn trước cuối năm nay.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
