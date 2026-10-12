@@ -601,19 +601,7 @@
   "461409",
   "461410"
  ],
- "pending": [
-  {
-   "id": "461410",
-   "at": "2026-10-13T00:14:06+07:00",
-   "time": "00:14",
-   "text": "Các bộ trưởng OPEC+ đã gặp nhau trong cuộc họp tại Riyadh.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1
