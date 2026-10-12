@@ -1,9 +1,5 @@
 {
  "seen": [
-  "460791",
-  "460792",
-  "460793",
-  "460794",
   "460795",
   "460796",
   "460798",
@@ -599,7 +595,11 @@
   "461387",
   "461389",
   "461388",
-  "461390"
+  "461390",
+  "461394",
+  "461393",
+  "461392",
+  "461391"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-12T16:44:28+00:00",
    "time": "16:44",
    "text": "Fed Harker: Lãi suất cần được tăng lên.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "461391",
+   "at": "2026-10-12T16:47:10+00:00",
+   "time": "16:47",
+   "text": "Fed Hammack: nghiêng về việc tăng lãi suất với biên độ nhỏ hơn và tần suất cao hơn; chính sách hiện tại chưa đủ tính hạn chế.",
    "important": true,
    "star": 0,
    "actual": "null",
