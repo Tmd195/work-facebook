@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460743",
   "460745",
   "460746",
   "460747",
@@ -599,9 +598,22 @@
   "461340",
   "461341",
   "461342",
-  "461343"
+  "461343",
+  "461344"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461344",
+   "at": "2026-10-12T14:16:50+00:00",
+   "time": "14:16",
+   "text": "Tin thị trường: Kazakhstan bắt đầu bán vàng sau khi lợi suất trái phiếu kho bạc Mỹ tăng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
