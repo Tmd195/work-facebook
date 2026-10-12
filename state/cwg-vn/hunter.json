@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460775",
   "460776",
   "460777",
   "460778",
@@ -599,9 +598,22 @@
   "461371",
   "461372",
   "461373",
-  "461374"
+  "461374",
+  "461375"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461375",
+   "at": "2026-10-12T23:00:00+07:00",
+   "time": "23:00",
+   "text": "Ủy viên bỏ phiếu FOMC năm 2026, Chủ tịch Fed Cleveland Hammack sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
