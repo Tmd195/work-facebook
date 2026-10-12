@@ -1252,5 +1252,51 @@
    "price": 4207.01,
    "title": "XAUUSD: giữ trên 4200, canh mua nhịp chỉnh - bán khi chạm 4225"
   }
+ },
+ "2026-10-12 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131003538735108",
+  "post_id": "1121396124381014_122131003538735108",
+  "posted_at": "2026-10-12T18:30:08.686616+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4188.75,
+      4197.11
+     ],
+     "sl": 4207.68,
+     "tp": [
+      4171.09,
+      4160.99,
+      4146.04
+     ],
+     "trigger": "Giá hồi lên vùng 4189–4197 rồi xuất hiện nến đảo chiều giảm",
+     "invalidation": "Đóng nến H1 trên 4197.11"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4142.51,
+      4146.04
+     ],
+     "sl": 4122.83,
+     "tp": [
+      4150.7,
+      4163.03,
+      4171.09
+     ],
+     "trigger": "Giá về vùng 4142–4146 và giữ được với nến xác nhận tăng",
+     "invalidation": "Đóng nến H1 dưới 4122.83"
+    }
+   ],
+   "price": 4174.85,
+   "title": "XAUUSD phiên Mỹ: ưu tiên SELL vùng 4189–4197, chờ CPI"
+  }
  }
 }
