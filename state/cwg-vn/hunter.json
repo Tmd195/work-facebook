@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460741",
   "460740",
   "460742",
   "460743",
@@ -599,21 +598,10 @@
   "461336",
   "461337",
   "461339",
-  "461338"
+  "461338",
+  "461340"
  ],
- "pending": [
-  {
-   "id": "461337",
-   "at": "2026-10-12T20:50:11+07:00",
-   "time": "20:50",
-   "text": "Lực lượng Vệ binh Cách mạng Iran: Sáng thứ Hai, một siêu tàu chở dầu đã bị tấn công tại eo biển Hormuz.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
