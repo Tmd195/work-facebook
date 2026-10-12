@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460603",
   "460605",
   "460604",
   "460606",
@@ -599,9 +598,22 @@
   "461199",
   "461200",
   "461201",
-  "461202"
+  "461202",
+  "461203"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461203",
+   "at": "2026-10-12T00:28:43+00:00",
+   "time": "00:28",
+   "text": "Dầu WTI mất mốc 90 USD/thùng, giảm 1,07% trong ngày, trước đó đã tăng hơn 1%. Dầu Brent giảm 1,00% trong ngày, hiện ở mức 101,71 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
