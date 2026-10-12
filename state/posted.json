@@ -1195,5 +1195,51 @@
   "meta": {
    "events": []
   }
+ },
+ "2026-10-12 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122130936674735108",
+  "post_id": "1121396124381014_122130936674735108",
+  "posted_at": "2026-10-12T10:00:08.768257+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      4192.81,
+      4200.6
+     ],
+     "sl": 4183.93,
+     "tp": [
+      4207.49,
+      4216.21,
+      4225.14
+     ],
+     "trigger": "giá chỉnh về 4192–4200 và có nến H1 xác nhận giữ trên Pivot",
+     "invalidation": "đóng nến H1 dưới 4183.93, mất đáy phiên Á"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4225.14,
+      4230.99
+     ],
+     "sl": 4242.81,
+     "tp": [
+      4216.21,
+      4207.49,
+      4197.11
+     ],
+     "trigger": "giá quét lên 4225–4231 rồi xuất hiện nến đảo chiều từ chối",
+     "invalidation": "đóng nến H1 trên 4238.88"
+    }
+   ],
+   "price": 4207.01,
+   "title": "XAUUSD: giữ trên 4200, canh mua nhịp chỉnh - bán khi chạm 4225"
+  }
  }
 }
