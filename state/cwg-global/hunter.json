@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460736",
   "460738",
   "460737",
   "460739",
@@ -599,9 +598,22 @@
   "461332",
   "461333",
   "461334",
-  "461335"
+  "461335",
+  "461336"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461336",
+   "at": "2026-10-12T13:40:50+00:00",
+   "time": "13:40",
+   "text": "Ngân hàng Trung ương Congo: Congo sẽ nâng dự trữ vàng từ 3 tấn lên 5 tấn trước cuối năm nay.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
