@@ -212,6 +212,20 @@
    "album": "sweep"
   }
  },
+ "2026-10-12 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1511011161081065/",
+  "post_id": "1511011161081065",
+  "posted_at": "2026-10-12T20:03:38.588038+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V4|2026-08-04T12:15:00+00:00",
+   "version": "V4",
+   "side": "BUY",
+   "pips": 150,
+   "duration": 13.0
+  }
+ },
  "2026-10-12 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/1587717069710655/",
