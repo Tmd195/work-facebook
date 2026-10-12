@@ -601,30 +601,7 @@
   "461205",
   "461206"
  ],
- "pending": [
-  {
-   "id": "461205",
-   "at": "2026-10-12T08:01:34+07:00",
-   "time": "08:01",
-   "text": "Dầu WTI giảm 2,00% trong ngày, hiện ở mức 89,14 USD/thùng. Dầu Brent hiện giảm 1,9%, ở mức 100,72 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "461206",
-   "at": "2026-10-12T08:04:36+07:00",
-   "time": "08:04",
-   "text": "Tỷ giá won Hàn Quốc so với đồng USD đã đạt mức cao nhất kể từ ngày 4 tháng 10 năm 2024.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1
  },
