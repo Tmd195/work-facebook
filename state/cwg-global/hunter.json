@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460703",
   "460706",
   "460708",
   "460707",
@@ -599,9 +598,22 @@
   "461301",
   "461302",
   "461303",
-  "461304"
+  "461304",
+  "461305"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461305",
+   "at": "2026-10-12T10:40:03+00:00",
+   "time": "10:40",
+   "text": "Theo TASS: Điện Kremlin cho biết sẵn sàng tạm dừng các cuộc tấn công trong ngày bầu cử ở Ukraine.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
