@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460731",
   "460730",
   "460729",
   "460728",
@@ -599,21 +598,10 @@
   "461324",
   "461326",
   "461327",
-  "461328"
+  "461328",
+  "461329"
  ],
- "pending": [
-  {
-   "id": "461328",
-   "at": "2026-10-12T19:39:33+07:00",
-   "time": "19:39",
-   "text": "Dầu Brent tăng lên mức 105 USD/thùng, mức cao nhất kể từ ngày 15 tháng 9, tăng 2,21% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1
  },
