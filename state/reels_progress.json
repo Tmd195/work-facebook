@@ -1,11 +1,12 @@
 {
- "count": 10,
+ "count": 11,
  "used": [
   "inverted-hammer",
   "mlma",
   "sigmoid-transition-trailing-stop",
   "ma-of-ma",
-  "supertrend"
+  "supertrend",
+  "logistic-signal-calibration"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -17,6 +18,7 @@
   "Hệ thống MA of MA (EMA 20 của EMA 20) cho XAUUSD: đo xu hướng, tín hiệu cắt, bộ lọc độ dốc và đặt SL/TP theo ATR",
   "Giới hạn tổng rủi ro mở khi vào nhiều lệnh vàng cùng lúc: mỗi lệnh tối đa 1 phần trăm, tổng các lệnh đang mở không quá 2 phần trăm, và dời SL lệnh cũ về hòa trước khi thêm lệnh mới cho XAUUSD",
   "Hệ thống SuperTrend cho XAUUSD: bộ lọc xu hướng, điểm vào theo nhịp hồi, trailing SL và cách đặt SL/TP",
-  "Đặt dừng lỗ chống bị quét cho XAUUSD: lùi SL xuống dưới đáy swing cộng đệm biến động theo ATR, tránh mức giá tròn, rồi chốt lời từng phần và kéo SL về entry theo R:R"
+  "Đặt dừng lỗ chống bị quét cho XAUUSD: lùi SL xuống dưới đáy swing cộng đệm biến động theo ATR, tránh mức giá tròn, rồi chốt lời từng phần và kéo SL về entry theo R:R",
+  "Hệ thống Logistic Signal Calibration cho XAUUSD: điểm xác suất 0–1, ngưỡng 0,7/0,3, bộ lọc độ tin cậy và đặt SL/TP theo ATR"
  ]
 }
