@@ -227,6 +227,16 @@
    "duration": 45.6
   }
  },
+ "2026-10-12 td_album 15:00": {
+  "job": "td_album",
+  "link": "https://www.facebook.com/122103151269499355/posts/122107013259499355",
+  "post_id": "1411036908756172_122107013259499355",
+  "posted_at": "2026-10-12T15:00:14.632830+07:00",
+  "preview": false,
+  "meta": {
+   "album": "supply_demand"
+  }
+ },
  "2026-10-12 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122106647325499355",
