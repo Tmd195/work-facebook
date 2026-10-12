@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460620",
   "460619",
   "460618",
   "460622",
@@ -599,9 +598,22 @@
   "461216",
   "461215",
   "461218",
-  "461217"
+  "461217",
+  "461219"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461219",
+   "at": "2026-10-12T10:28:03+07:00",
+   "time": "10:28",
+   "text": "Goldman Sachs: nâng dự báo giá dầu Brent tháng 12 năm 2026 lên 90 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1
  },
