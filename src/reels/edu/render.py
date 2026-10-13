@@ -31,6 +31,7 @@ DN = (236, 78, 94)
 TEXT = (238, 241, 246)
 MUTED = (128, 138, 158)
 BRAND = (225, 0, 22)
+ON_BRAND = (255, 255, 255)        # màu chữ trên nền BRAND (theme sáng như vàng gold → chữ tối)
 COLORS = {"y": (255, 196, 46), "o": (255, 150, 52), "r": (255, 86, 98), "g": (46, 214, 152),
           "c": (64, 204, 255), "b": (102, 154, 255), "p": (176, 136, 255), "w": TEXT}
 
@@ -43,6 +44,8 @@ HEAD_Y = 262
 HEAD_W = 912
 HEAD_FONT = 50
 HEAD_LH = 66
+THUMB_CLEAR = (4, 120)            # ảnh bìa: lề trái/phải vùng xoá chữ (CWG chừa logo góc phải)
+LINE_END = 880                    # điểm cuối thanh tiến trình đầu thẻ (theme có huy hiệu góc phải thì rút ngắn)
 
 
 def ease(t: float) -> float:
@@ -208,7 +211,7 @@ def _pill(d: ImageDraw.ImageDraw, x: float, y: float, text: str, col, anchor: st
     a = int(255 * alpha)
     if solid:
         d.rounded_rectangle([x0, y0, x0 + w, y0 + h], radius=9, fill=col + (a,))
-        d.text((x0 + w / 2, y0 + h / 2), text, font=f, fill=(255, 255, 255, a), anchor="mm")
+        d.text((x0 + w / 2, y0 + h / 2), text, font=f, fill=ON_BRAND + (a,), anchor="mm")
     else:
         d.rounded_rectangle([x0, y0, x0 + w, y0 + h], radius=9, fill=CARD + (int(235 * alpha),),
                             outline=col + (a,), width=2)
@@ -498,7 +501,7 @@ def draw_card(img: Image.Image, card: dict, t: float, t0: float):
         s = 0.85 + 0.15 * kb
         d.rounded_rectangle([cx - bw / 2 * s, y, cx + bw / 2 * s, y + 96 * s], radius=48 * s,
                             fill=BRAND + (int(255 * kb),))
-        d.text((cx, y + 48 * s), bt, font=f, fill=(255, 255, 255, int(255 * kb)), anchor="mm")
+        d.text((cx, y + 48 * s), bt, font=f, fill=ON_BRAND + (int(255 * kb),), anchor="mm")
         y += 140
         d.text((cx, y), "facebook.com/CWG.Partner", font=sans("Bold", 30), fill=COLORS["y"] + (int(255 * kb),),
                anchor="mt")
@@ -515,9 +518,9 @@ def draw_head(d: ImageDraw.ImageDraw, sc: Scene, t: float, total: float, prev: S
     if tag:
         d.rounded_rectangle([x0, y0, x0 + (tw + 36) * (0.4 + 0.6 * k), y0 + 46], radius=10,
                             fill=BRAND + (int(255 * k),))
-        d.text((x0 + 18, y0 + 23), tag, font=f, fill=(255, 255, 255, int(255 * k)), anchor="lm")
+        d.text((x0 + 18, y0 + 23), tag, font=f, fill=ON_BRAND + (int(255 * k),), anchor="lm")
     lx0 = x0 + tw + 56
-    lx1 = 880
+    lx1 = LINE_END
     d.line([(lx0, y0 + 23), (lx1, y0 + 23)], fill=(46, 53, 70, 255), width=3)
     d.line([(lx0, y0 + 23), (lx0 + (lx1 - lx0) * min(1, t / total), y0 + 23)], fill=COLORS["y"] + (255,), width=3)
     # câu thoại: từ hiện dần theo nhịp đọc

@@ -205,7 +205,8 @@ def thumbnail(spec: dict, scenes, charts, path: Path) -> Path:
     s = scenes[best]
     img = frame(scenes, charts, R.base_frame(), s.start + s.dur - 0.05, 1e9, best)
     d = ImageDraw.Draw(img, "RGBA")
-    d.rectangle([R.CARD_BOX[0] + 4, 150, R.CARD_BOX[2] - 120, 590], fill=R.CARD + (255,))   # xoá nhãn + câu thoại
+    d.rectangle([R.CARD_BOX[0] + R.THUMB_CLEAR[0], 140, R.CARD_BOX[2] - R.THUMB_CLEAR[1], 590],
+                fill=R.CARD + (255,))   # xoá nhãn + câu thoại
     d.rectangle([R.CARD_BOX[0] + 4, 590, R.CARD_BOX[2] - 4, 1560], fill=R.CARD + (60,))
     th = spec.get("thumb") or {}
     if th.get("kicker"):
