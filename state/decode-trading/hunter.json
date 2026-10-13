@@ -1,8 +1,5 @@
 {
  "seen": [
-  "460918",
-  "460917",
-  "460916",
   "460915",
   "460919",
   "460920",
@@ -599,21 +596,12 @@
   "461509",
   "461510",
   "461513",
-  "461514"
+  "461514",
+  "461517",
+  "461516",
+  "461515"
  ],
- "pending": [
-  {
-   "id": "461514",
-   "at": "2026-10-13T09:13:07+07:00",
-   "time": "09:13",
-   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ giảm 5 điểm cơ bản xuống 5,1935%; lợi suất trái phiếu kho bạc kỳ hạn 30 năm giảm 4 điểm cơ bản xuống 5,5546%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1
