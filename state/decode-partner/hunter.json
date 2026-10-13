@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460910",
   "460909",
   "460912",
   "460911",
@@ -599,54 +598,10 @@
   "461507",
   "461505",
   "461506",
-  "461504"
+  "461504",
+  "461508"
  ],
- "pending": [
-  {
-   "id": "461500",
-   "at": "2026-10-13T09:01:01+07:00",
-   "time": "09:01",
-   "text": "Triển vọng Kinh tế Thế giới của IMF: dự báo tăng trưởng GDP thực toàn cầu năm 2026 là 3,1%, cao hơn mức 3,0% dự báo hồi tháng 7, nhờ đầu tư vào trí tuệ nhân tạo giúp giảm bớt cú sốc giá năng lượng tại các nền kinh tế chủ chốt; dự báo tăng trưởng kinh tế toàn cầu năm 2027 là 3,4%, không đổi so với dự báo hồi tháng 7.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "461507",
-   "at": "2026-10-13T09:04:21+07:00",
-   "time": "09:04",
-   "text": "IMF Triển vọng Kinh tế Thế giới: dự báo giá dầu thô trung bình năm 2026 là 96 USD/thùng, năm 2027 là 87 USD/thùng (dự báo tháng 7 lần lượt là 89 USD và 78 USD).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "461505",
-   "at": "2026-10-13T09:03:51+07:00",
-   "time": "09:03",
-   "text": "Triển vọng Kinh tế Thế giới của IMF: dự báo giả định eo biển Hormuz sẽ khôi phục lưu thông vào tháng 3 năm 2027 và cơ bản trở lại trạng thái trước chiến tranh trước tháng 10 năm 2027.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "461504",
-   "at": "2026-10-13T09:03:00+07:00",
-   "time": "09:03",
-   "text": "Triển vọng Kinh tế Thế giới của IMF: dự báo lạm phát chung toàn cầu sẽ tăng lên 4,7% vào năm 2026; giảm xuống 4,1% vào năm 2027, tương đương mức của năm 2025.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
