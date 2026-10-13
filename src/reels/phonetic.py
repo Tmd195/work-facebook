@@ -99,4 +99,6 @@ def spoken(text: str) -> str:
         t = pat.sub(rep, t)
     t = t.replace("/", " trên ").replace("&", " và ").replace("+", " cộng ")
     t = re.sub(r"\s*[-–—]\s*", ", ", t)                                 # gạch nối → ngắt hơi
+    # aidancing coi "phẩy" là dấu phẩy và BỎ không đọc (đã nghe kiểm tra 13/10/2026) → anh chốt đọc "chấm"
+    t = re.sub(r"\bphẩy\b", "chấm", t)
     return re.sub(r"\s{2,}", " ", t).strip()
