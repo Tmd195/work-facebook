@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460894",
   "460895",
   "460896",
   "460897",
@@ -599,9 +598,22 @@
   "461491",
   "461490",
   "461492",
-  "461493"
+  "461493",
+  "461494"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461494",
+   "at": "2026-10-13T08:33:38+07:00",
+   "time": "08:33",
+   "text": "Bạc kỳ hạn New York để mất mốc 60 USD/ounce, giảm 0,86% trong ngày; bạc giao ngay giảm 1,00% trong ngày, hiện báo 59,69 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
