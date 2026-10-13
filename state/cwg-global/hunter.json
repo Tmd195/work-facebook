@@ -1,6 +1,5 @@
 {
  "seen": [
-  "460921",
   "460922",
   "460923",
   "460924",
@@ -599,21 +598,10 @@
   "461515",
   "461519",
   "461518",
-  "461520"
+  "461520",
+  "461521"
  ],
- "pending": [
-  {
-   "id": "461516",
-   "at": "2026-10-13T02:18:44+00:00",
-   "time": "02:18",
-   "text": "IMF Triển vọng Kinh tế Thế giới: giữ nguyên dự báo lạm phát của Mỹ năm 2026 ở mức 3,6%, và nâng dự báo năm 2027 từ 2,4% lên 2,8%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
