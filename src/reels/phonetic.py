@@ -91,6 +91,7 @@ def spoken(text: str) -> str:
     t = re.sub(r"\bnhé\b", "nhá", t)
     t = re.sub(r"(\d+)[.,](\d+)\s*%", r"\1 phẩy \2 phần trăm", t)
     t = re.sub(r"(\d+)\s*%", r"\1 phần trăm", t)
+    t = re.sub(r"\b1\s*:\s*(\d{2,4})\b", r"1 trên \1", t)                # đòn bẩy 1:500 → 1 trên 500
     t = re.sub(r"(\d+)\s*:\s*(\d+)", r"\1 ăn \2", t)                    # tỉ lệ 1:2
     t = re.sub(r"(\d+)[.,](\d+)", r"\1 phẩy \2", t)
     t = re.sub(r"(\d+)\s*x\b", r"\1 lần", t)

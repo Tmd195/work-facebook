@@ -46,6 +46,8 @@ def _reel_mod(job: str):
         from src.reels.indi import job as mod
     elif job == "reel_smc":                               # Page DecodeFx Trading: Reels kiến thức hệ thống
         from src.reels.smc import job as mod
+    elif job == "reel_edu":                               # Page Duy Thái Đặng: Reels Education đánh số tập
+        from src.reels.thai_edu import job as mod
     else:
         from src.reels import job as mod
     return mod

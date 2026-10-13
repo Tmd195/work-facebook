@@ -1,0 +1,109 @@
+# Lộ trình REELS EDUCATION – Page Duy Thái Đặng (anh chốt 13/10/2026): mỗi ngày 1 tập, đi từ cơ bản → nâng cao →
+# chuyên sâu → hệ thống → logic lệnh. Thứ tự = thứ tự đăng. Tập 1 đã đăng tay 13/10/2026.
+# Mỗi tập: title (tên tập) + points (ý chính AI phải dạy, đúng kiến thức, ví dụ trên VÀNG).
+levels:
+  - name: Cơ bản
+    episodes:
+      - { title: "1 giá vàng là bao nhiêu tiền?", points: "pip, giá, lot; 1 giá = 10 pip; 1 lot = 100 ounce; 0,1 lot = 10 đô/giá" }
+      - { title: "Đòn bẩy & Margin", points: "đòn bẩy là gì; margin ký quỹ; vì sao đòn bẩy cao không làm lệnh lãi hơn mà chỉ giảm ký quỹ; cháy tài khoản khi free margin hết" }
+      - { title: "Spread & phí qua đêm", points: "giá Bid/Ask; spread là chi phí vào lệnh; spread giãn lúc ra tin; swap qua đêm" }
+      - { title: "Lệnh thị trường & lệnh chờ", points: "Buy/Sell market; Buy Limit, Sell Limit, Buy Stop, Sell Stop; khi nào dùng loại nào" }
+      - { title: "Stop Loss đặt ở đâu?", points: "SL là gì; đặt theo cấu trúc chứ không theo số tiền thích; SL quá sát bị quét" }
+      - { title: "Take Profit & tỉ lệ RR", points: "TP là gì; RR 1:2 nghĩa là gì; thắng 40% vẫn có lãi với RR 1:3" }
+      - { title: "Tính khối lượng theo % rủi ro", points: "rủi ro 1% tài khoản; công thức lot = tiền rủi ro / (khoảng SL theo giá × 100); ví dụ vốn 1000 đô" }
+      - { title: "Cây nến kể chuyện gì?", points: "giá mở, đóng, cao, thấp; thân và râu; nến tăng/giảm; râu dài nghĩa là bị từ chối" }
+      - { title: "Khung thời gian", points: "M5, M15, H1, H4, D1; khung lớn quyết định hướng, khung nhỏ để vào lệnh; đừng nhảy khung lung tung" }
+      - { title: "Phiên Á – Âu – Mỹ của vàng", points: "giờ Việt Nam của 3 phiên; phiên Á đi ngang; Âu mở biến động; Mỹ mạnh nhất" }
+      - { title: "Tin tức nào làm vàng chạy mạnh?", points: "NFP, CPI, lãi suất Fed; vì sao vàng giật 2 chiều lúc ra tin; nên đứng ngoài trước tin" }
+      - { title: "USD và vàng", points: "quan hệ ngược chiều thường gặp; DXY; lợi suất trái phiếu; không phải lúc nào cũng ngược" }
+      - { title: "Xu hướng tăng, giảm, đi ngang", points: "đỉnh cao dần đáy cao dần; đỉnh thấp dần đáy thấp dần; đi ngang thì đánh biên hoặc đứng ngoài" }
+      - { title: "Hỗ trợ & kháng cự", points: "vùng chứ không phải đường; giá chạm nhiều lần; hỗ trợ bị phá thành kháng cự" }
+      - { title: "Vẽ hỗ trợ kháng cự đúng cách", points: "dùng khung lớn; nối thân nến hay râu; vùng càng rõ càng mạnh; đừng vẽ quá nhiều đường" }
+      - { title: "Đường xu hướng (trendline)", points: "nối ít nhất 2 đáy/đỉnh, chạm lần 3 xác nhận; phá trendline chưa chắc đảo chiều" }
+      - { title: "Đọc lịch kinh tế", points: "mức độ quan trọng; số dự báo, kỳ trước, thực tế; thực tế lệch dự báo mới làm giá chạy" }
+      - { title: "Quản lý vốn: quy tắc sống sót", points: "rủi ro 1–2% mỗi lệnh; giới hạn lỗ ngày; chuỗi thua 10 lệnh vẫn còn vốn" }
+      - { title: "Nhật ký giao dịch", points: "ghi lý do vào lệnh, ảnh chart, kết quả; xem lại cuối tuần; tìm lỗi lặp lại" }
+      - { title: "5 sai lầm của người mới", points: "không SL, vào quá to, gồng lỗ, gỡ lệnh, đánh lúc ra tin" }
+  - name: Nâng cao
+    episodes:
+      - { title: "Cấu trúc thị trường", points: "HH HL, LH LL; swing chính và swing nội bộ; cấu trúc khung lớn quan trọng hơn" }
+      - { title: "BOS – phá cấu trúc", points: "BOS là gì; đóng nến qua đỉnh/đáy; BOS xác nhận xu hướng tiếp diễn" }
+      - { title: "CHoCH – đổi tính chất", points: "CHoCH khác BOS; dấu hiệu đảo chiều sớm; cần xác nhận thêm" }
+      - { title: "Nến nhấn chìm", points: "nhấn chìm tăng/giảm; chỉ mạnh khi ở vùng quan trọng; vào lệnh và đặt SL" }
+      - { title: "Nến pin bar", points: "râu dài thân nhỏ; pin bar tại hỗ trợ/kháng cự; pin bar giữa đường thì bỏ" }
+      - { title: "Inside bar", points: "nến mẹ nến con; nén giá; vào theo hướng phá vỡ; SL ở đâu" }
+      - { title: "Doji & nến do dự", points: "thị trường lưỡng lự; doji ở đỉnh/đáy; cần nến xác nhận sau doji" }
+      - { title: "Mô hình 2 đỉnh – 2 đáy", points: "đường cổ; vào khi phá cổ hoặc retest; mục tiêu bằng chiều cao mô hình" }
+      - { title: "Mô hình vai – đầu – vai", points: "3 đỉnh; đường cổ; vai đầu vai ngược; khi nào là bẫy" }
+      - { title: "Tam giác & nêm", points: "tam giác cân, tăng, giảm; nêm; giá nén trước khi bùng nổ" }
+      - { title: "Cờ tăng – cờ giảm", points: "cột cờ và lá cờ; mô hình tiếp diễn; vào lệnh khi phá lá cờ" }
+      - { title: "Phá vỡ thật hay giả?", points: "đóng nến xác nhận; nến phá có thân lớn; fakeout quay lại vùng" }
+      - { title: "Retest – vào lệnh an toàn hơn", points: "chờ giá quay lại vùng vừa phá; nến xác nhận; SL gọn hơn" }
+      - { title: "Fibonacci thoái lui", points: "kéo Fibo đáy lên đỉnh; vùng 0,5 – 0,618; kết hợp hỗ trợ kháng cự" }
+      - { title: "Fibonacci mở rộng để chốt lời", points: "mức 1,272 và 1,618; đặt TP theo Fibo mở rộng" }
+      - { title: "Đường MA lọc xu hướng", points: "EMA 50, EMA 200; giá trên MA ưu tiên mua; MA làm hỗ trợ động" }
+      - { title: "RSI & phân kỳ", points: "quá mua quá bán; phân kỳ thường và ẩn; đừng bán chỉ vì RSI quá mua" }
+      - { title: "MACD", points: "đường MACD, signal, histogram; giao cắt; phân kỳ MACD" }
+      - { title: "Pivot Point", points: "cách tính pivot ngày; R1 R2 S1 S2; dùng pivot trong ngày cho vàng" }
+      - { title: "ATR – đo biến động", points: "ATR là gì; đặt SL theo ATR; vàng biến động bao nhiêu mỗi ngày" }
+      - { title: "Đa khung thời gian", points: "khung lớn tìm hướng, khung giữa tìm vùng, khung nhỏ vào lệnh; ví dụ D1 – H4 – M15" }
+      - { title: "Vùng cung – cầu", points: "DBR, RBD, RBR, DBD; vùng tươi vs vùng đã chạm; vào lệnh lần chạm đầu" }
+      - { title: "Volume nói lên điều gì", points: "volume xác nhận phá vỡ; volume cạn khi hồi; đỉnh volume ở đáy" }
+      - { title: "Đọc biên độ ngày của vàng", points: "đỉnh đáy ngày trước; mở cửa ngày; biên độ trung bình; khi nào hết dư địa" }
+      - { title: "Kênh giá song song", points: "vẽ kênh; mua ở đáy kênh bán ở đỉnh kênh; phá kênh" }
+  - name: Chuyên sâu
+    episodes:
+      - { title: "Thanh khoản nằm ở đâu?", points: "đỉnh/đáy bằng nhau; trên đỉnh và dưới đáy rõ ràng; nơi chứa stop loss" }
+      - { title: "Quét thanh khoản (sweep)", points: "râu quét qua đỉnh/đáy rồi đóng nến quay lại; vì sao SL hay bị quét" }
+      - { title: "Order Block", points: "nến ngược chiều cuối cùng trước cú đẩy; OB hợp lệ phải tạo BOS và FVG" }
+      - { title: "FVG – khoảng trống giá", points: "3 nến; FVG tăng/giảm; giá hay quay lại lấp 50%; FVG làm điểm vào" }
+      - { title: "Premium & Discount", points: "vẽ dải con sóng; mức 50%; mua vùng rẻ, bán vùng đắt" }
+      - { title: "Inducement – đáy mồi", points: "đáy nhỏ trước vùng thật; giá quét mồi rồi mới chạm vùng" }
+      - { title: "Breaker Block", points: "OB bị phá đổi vai; vào lệnh khi giá retest breaker" }
+      - { title: "Mitigation Block", points: "vùng giá quay lại xử lý lệnh treo; khác OB thế nào" }
+      - { title: "OTE – vùng vào tối ưu", points: "Fibo 0,62 – 0,79 sau BOS; kết hợp OB/FVG" }
+      - { title: "Displacement – cú đẩy thật", points: "nến thân lớn liên tiếp để lại FVG; dấu chân dòng tiền lớn" }
+      - { title: "Power of 3 (AMD)", points: "tích luỹ – thao túng – phân phối; áp vào nến ngày vàng" }
+      - { title: "Judas Swing", points: "cú chạy giả đầu phiên; phiên Âu hay quét phiên Á rồi đảo chiều" }
+      - { title: "Killzone London & New York", points: "khung giờ biến động mạnh theo giờ Việt Nam; chỉ tìm lệnh trong killzone" }
+      - { title: "Biên độ phiên Á", points: "đỉnh đáy phiên Á là thanh khoản cho phiên Âu/Mỹ" }
+      - { title: "Daily Bias", points: "xác định hướng ngày từ D1/H4; hôm nay giá muốn đi đâu; chỉ đánh theo bias" }
+      - { title: "SMT – phân kỳ tương quan", points: "vàng và bạc/DXY không cùng tạo đỉnh đáy mới; dấu hiệu bẫy" }
+      - { title: "Wyckoff: tích luỹ", points: "các pha A–E; spring; SOS; vào lệnh sau spring" }
+      - { title: "Wyckoff: phân phối", points: "UTAD; SOW; LPSY; vào lệnh bán ở LPSY" }
+      - { title: "Volume Profile", points: "POC, vùng giá trị VAH VAL; giá hay quay về POC" }
+      - { title: "Supply/Demand nâng cao", points: "vùng gốc của cú phá; độ tươi; tỉ lệ vùng/cú đẩy; vùng lồng nhau" }
+  - name: Hệ thống
+    episodes:
+      - { title: "Một hệ thống cần những gì?", points: "điều kiện vào, SL, TP, quản lý lệnh, quản lý vốn; viết ra giấy; không có thì là đánh bạc" }
+      - { title: "Hệ thống theo xu hướng + hồi", points: "D1 xác định xu hướng; H4 chờ hồi về vùng; M15 nến xác nhận" }
+      - { title: "Hệ thống phá vỡ phiên Âu", points: "biên độ phiên Á; phá vỡ có xác nhận; SL, TP theo biên độ" }
+      - { title: "Hệ thống quét thanh khoản + CHoCH", points: "sweep đỉnh/đáy; CHoCH khung nhỏ; vào ở FVG; SL dưới đáy quét" }
+      - { title: "Hệ thống Order Block + FVG", points: "OB khung H1 có FVG; chờ giá về OB; nến xác nhận M5; RR tối thiểu 1:2" }
+      - { title: "Hệ thống Fibonacci + hỗ trợ kháng cự", points: "vùng 0,618 trùng hỗ trợ cũ; xác nhận nến; TP Fibo mở rộng" }
+      - { title: "Hệ thống EMA 50/200", points: "chỉ mua trên EMA 200; giá hồi về EMA 50; nến xác nhận" }
+      - { title: "Hệ thống cung cầu đa khung", points: "vùng cầu H4; vào lệnh M15 khi có CHoCH trong vùng" }
+      - { title: "Checklist trước khi vào lệnh", points: "6 ô: xu hướng, vùng, thanh khoản, xác nhận, RR, tin tức; thiếu 1 là đứng ngoài" }
+      - { title: "Backtest hệ thống", points: "chọn 100 lệnh quá khứ; ghi winrate, RR, chuỗi thua; đủ mẫu mới tin" }
+      - { title: "Tỉ lệ thắng & kỳ vọng", points: "kỳ vọng = winrate × lãi TB − tỉ lệ thua × lỗ TB; hệ thống thắng ít vẫn có lãi" }
+      - { title: "Chuỗi thua là bình thường", points: "xác suất 6–8 lệnh thua liên tiếp; vốn và tâm lý phải chịu được" }
+      - { title: "Lọc tin tức trong hệ thống", points: "không vào lệnh 30 phút trước/sau tin đỏ; đóng bớt lệnh trước tin" }
+      - { title: "Ghép hệ thống với lịch sinh hoạt", points: "chọn khung giờ bạn ngồi được; hệ thống H4 cho người bận; scalping cần thời gian" }
+      - { title: "Khi nào sửa hệ thống?", points: "đủ mẫu mới sửa; sửa 1 điều kiện mỗi lần; đừng đổi hệ thống sau 3 lệnh thua" }
+  - name: Logic lệnh
+    episodes:
+      - { title: "Vì sao vào lệnh ở đây?", points: "mỗi lệnh phải có lý do: vùng + xác nhận + hướng; không vào vì cảm giác" }
+      - { title: "Logic đặt Stop Loss", points: "SL ở nơi ý tưởng sai; dưới đáy quét chứ không dưới đáy gần nhất; cộng thêm spread" }
+      - { title: "Logic đặt Take Profit", points: "TP tại thanh khoản đối diện; vùng cản gần; không đặt TP theo số tiền thích" }
+      - { title: "Dời SL về hoà vốn khi nào?", points: "sau khi giá phá cấu trúc nhỏ; sớm quá bị quét; muộn quá mất lãi" }
+      - { title: "Chốt lời từng phần", points: "TP1 ở thanh khoản gần, chốt 50%; phần còn lại chạy theo cấu trúc" }
+      - { title: "Trailing stop theo cấu trúc", points: "dời SL dưới mỗi đáy cao dần mới; không dời theo cảm xúc" }
+      - { title: "Khi nào huỷ lệnh chờ?", points: "giá chạy mất mà không khớp; tin tức sắp ra; cấu trúc thay đổi" }
+      - { title: "Cắt lỗ sớm khi nào?", points: "lý do vào lệnh không còn; CHoCH ngược chiều; đừng chờ chạm SL nếu ý tưởng đã sai" }
+      - { title: "Nhồi lệnh đúng cách", points: "chỉ nhồi khi lệnh đầu đã hoà vốn; không nhồi lệnh lỗ; tổng rủi ro không đổi" }
+      - { title: "Lệnh ngược xu hướng", points: "chỉ đánh khi có quét + CHoCH khung lớn; khối lượng nhỏ; TP gần" }
+      - { title: "Giao dịch quanh tin NFP", points: "đứng ngoài khi ra tin; vào sau khi giá quét 2 chiều và có cấu trúc" }
+      - { title: "Không vào lệnh cũng là vị thế", points: "những ngày nên nghỉ; thị trường đi ngang hẹp; trước tin lớn" }
+      - { title: "Mổ xẻ 1 lệnh thắng", points: "đi lại từng bước: bias, vùng, xác nhận, SL, TP, quản lý lệnh" }
+      - { title: "Mổ xẻ 1 lệnh thua đúng quy trình", points: "thua nhưng đúng hệ thống vẫn là lệnh tốt; khác với thua vì phá kỷ luật" }
+      - { title: "Kế hoạch giao dịch 1 ngày", points: "trước phiên: bias, vùng, tin; trong phiên: chờ setup; cuối ngày: ghi nhật ký" }

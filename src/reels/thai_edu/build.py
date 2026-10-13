@@ -38,7 +38,8 @@ def make(spec: dict, folder: Path, theme_name: str = "reu", fast: bool = False, 
     events.append((scenes[-1].start + 0.6, "ting", 0.5))
     video = B.encode(scenes, charts, events, folder / "reel.mp4", music)
     thumb = B.thumbnail(spec, scenes, charts, folder / "thumb.jpg")
-    return {"video": video, "thumb": thumb, "duration": round(total, 1)}
+    says = [spoken(sc.get("say") or R.plain(sc["text"])) for sc in spec["scenes"]]
+    return {"video": video, "thumb": thumb, "duration": round(total, 1), "voices": ([p for p, _ in voices], says)}
 
 
 def main():
