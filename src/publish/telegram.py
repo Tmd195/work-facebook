@@ -25,7 +25,8 @@ def send(text: str) -> bool:
 def share(text: str) -> bool:
     """Kênh chia sẻ cho quản trị đối tác (chỉ tin đã đăng xong + link; KHÔNG gửi lỗi/xem trước).
     Bật cho Page nào thì đặt TELEGRAM_SHARE_CHAT_ID trong workflow của Page đó."""
-    token, chat = env("TELEGRAM_BOT_TOKEN"), env("TELEGRAM_SHARE_CHAT_ID")
+    token = env("TELEGRAM_SHARE_BOT_TOKEN") or env("TELEGRAM_BOT_TOKEN")      # bot riêng cho đối tác (nếu có)
+    chat = env("TELEGRAM_SHARE_CHAT_ID")
     if not token or not chat:
         return False
     try:
@@ -92,9 +93,9 @@ def send_video(text: str, video, thumbnail=None) -> bool:
         return send(text)
 
 
-def find_chat_id() -> str | None:
-    """Lấy chat id từ tin nhắn gần nhất anh gửi cho bot."""
-    r = requests.get(f"https://api.telegram.org/bot{env('TELEGRAM_BOT_TOKEN')}/getUpdates", timeout=30).json()
+def find_chat_id(token_var: str = "TELEGRAM_BOT_TOKEN") -> str | None:
+    """Lấy chat id từ tin nhắn gần nhất gửi cho bot (token_var: biến môi trường chứa token bot)."""
+    r = requests.get(f"https://api.telegram.org/bot{env(token_var)}/getUpdates", timeout=30).json()
     for upd in reversed(r.get("result", [])):
         msg = upd.get("message") or upd.get("edited_message") or upd.get("channel_post") or upd.get("my_chat_member")
         if msg:
