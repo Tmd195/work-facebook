@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461055",
   "461056",
   "461057",
   "461058",
@@ -599,32 +598,10 @@
   "461650",
   "461649",
   "461648",
-  "461654"
+  "461654",
+  "461655"
  ],
- "pending": [
-  {
-   "id": "461652",
-   "at": "2026-10-13T19:00:54+07:00",
-   "time": "19:00",
-   "text": "Báo cáo hàng tháng của OPEC: OPEC đã nâng dự báo tăng trưởng nhu cầu dầu toàn cầu năm 2027 lên 2,55 triệu thùng/ngày (dự báo trước đó là 2,36 triệu thùng/ngày).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "461651",
-   "at": "2026-10-13T19:00:40+07:00",
-   "time": "19:00",
-   "text": "Báo cáo hàng tháng của OPEC: OPEC hạ dự báo tăng trưởng nhu cầu dầu toàn cầu năm 2026 xuống 180.000 thùng/ngày (dự báo trước đó là 380.000 thùng/ngày).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1
