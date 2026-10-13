@@ -601,19 +601,7 @@
   "461671",
   "461673"
  ],
- "pending": [
-  {
-   "id": "461672",
-   "at": "2026-10-13T19:40:09+07:00",
-   "time": "19:40",
-   "text": "Lực lượng Houthi ở Yemen cảnh báo nhân viên và dân thường sơ tán khỏi các khu vực gần cơ sở dầu khí của Saudi Aramco, gọi đây là mục tiêu hợp pháp.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1
