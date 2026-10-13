@@ -609,6 +609,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-13 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/2600999867030614/",
+  "post_id": "2600999867030614",
+  "posted_at": "2026-10-13T19:45:42.116211+07:00",
+  "preview": false,
+  "meta": {
+   "key": "XAUUSD|4418.59990",
+   "symbol": "XAUUSD",
+   "system": "fibo",
+   "side": "buy",
+   "rr": 4.7,
+   "duration": 10.3
+  }
+ },
  "2026-10-13 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/2275204600542347/",
