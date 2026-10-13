@@ -64,6 +64,7 @@ def publish_comment(entry: dict, text: str, image: Path | None, what: str) -> bo
         (telegram.need_fix if exc.needs_user else telegram.send)(f"❌ Comment thất bại: {what}\n{exc}")
         return False
     telegram.send(f"💬 Đã comment: {what}\n🔗 Bài viết: {entry['link']}\nAnh kiểm tra nếu cần sửa đổi.")
+    telegram.share(f"💬 Đã comment: {what}\n🔗 {entry['link']}")
     return True
 
 

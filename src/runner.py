@@ -343,6 +343,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         trading_daily.mark_done(job, meta)
 
     telegram.send(f"✅ Đã hoàn thành: {name} {day}\n🔗 Link bài viết: {link}\nAnh kiểm tra nếu cần sửa đổi.")
+    telegram.share(f"✅ Đã đăng: {name} {day}\n🔗 {link}")
     return True
 
 

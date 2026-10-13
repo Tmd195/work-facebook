@@ -166,6 +166,7 @@ def tick(dry_run: bool | None = None) -> str:
         from src.runner import mark_posted
         mark_posted("cwg_breaking", now, link, post_id, {"news": [x["text"][:120] for x in group]})
         telegram.send(f"✅ Đã hoàn thành: {title}\n🔗 Link bài viết: {link}\nAnh kiểm tra nếu cần sửa đổi.")
+        telegram.share(f"✅ Đã đăng: {title}\n🔗 {link}")
     d = _load()
     d["posts"][today] = done_today + 1
     d["posts"] = dict(sorted(d["posts"].items())[-10:])

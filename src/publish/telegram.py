@@ -22,6 +22,21 @@ def send(text: str) -> bool:
         return False
 
 
+def share(text: str) -> bool:
+    """Kênh chia sẻ cho quản trị đối tác (chỉ tin đã đăng xong + link; KHÔNG gửi lỗi/xem trước).
+    Bật cho Page nào thì đặt TELEGRAM_SHARE_CHAT_ID trong workflow của Page đó."""
+    token, chat = env("TELEGRAM_BOT_TOKEN"), env("TELEGRAM_SHARE_CHAT_ID")
+    if not token or not chat:
+        return False
+    try:
+        r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
+                          data={"chat_id": chat, "text": PREFIX + text, "disable_web_page_preview": "false"}, timeout=30)
+        return r.ok
+    except requests.RequestException as exc:
+        print(f"[Telegram chia sẻ lỗi] {exc}")
+        return False
+
+
 def need_fix(text: str) -> bool:
     """Lỗi hệ thống không tự sửa được - cần anh mở máy để em xử lý."""
     return send(f"{text}\n\n🖥 Bật Máy để sửa đổi")
@@ -81,7 +96,7 @@ def find_chat_id() -> str | None:
     """Lấy chat id từ tin nhắn gần nhất anh gửi cho bot."""
     r = requests.get(f"https://api.telegram.org/bot{env('TELEGRAM_BOT_TOKEN')}/getUpdates", timeout=30).json()
     for upd in reversed(r.get("result", [])):
-        msg = upd.get("message") or upd.get("edited_message")
+        msg = upd.get("message") or upd.get("edited_message") or upd.get("channel_post") or upd.get("my_chat_member")
         if msg:
             return str(msg["chat"]["id"])
     return None

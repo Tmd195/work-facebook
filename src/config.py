@@ -23,7 +23,7 @@ STATE = ROOT / "state" if IS_DEFAULT_JOB else ROOT / "state" / JOB
 STATE.mkdir(parents=True, exist_ok=True)       # Page mới chưa có thư mục trạng thái trên GitHub → tạo sẵn
 
 # Biến môi trường riêng từng Job (các biến khác dùng chung: Claude, Telegram, Twelve Data...)
-JOB_SCOPED_ENV = {"FB_PAGE_ID", "FB_PAGE_TOKEN"}
+JOB_SCOPED_ENV = {"FB_PAGE_ID", "FB_PAGE_TOKEN", "TELEGRAM_SHARE_CHAT_ID"}
 
 
 def _load_dotenv():
