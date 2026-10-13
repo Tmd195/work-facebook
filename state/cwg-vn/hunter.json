@@ -1,8 +1,5 @@
 {
  "seen": [
-  "460916",
-  "460915",
-  "460918",
   "460917",
   "460920",
   "460919",
@@ -599,14 +596,17 @@
   "461512",
   "461511",
   "461513",
-  "461514"
+  "461514",
+  "461517",
+  "461516",
+  "461515"
  ],
  "pending": [
   {
-   "id": "461514",
-   "at": "2026-10-13T09:13:07+07:00",
-   "time": "09:13",
-   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ giảm 5 điểm cơ bản xuống 5,1935%; lợi suất trái phiếu kho bạc kỳ hạn 30 năm giảm 4 điểm cơ bản xuống 5,5546%.",
+   "id": "461516",
+   "at": "2026-10-13T09:18:44+07:00",
+   "time": "09:18",
+   "text": "IMF Triển vọng Kinh tế Thế giới: giữ nguyên dự báo lạm phát của Mỹ năm 2026 ở mức 3,6%, và nâng dự báo năm 2027 từ 2,4% lên 2,8%.",
    "important": true,
    "star": 0,
    "actual": "null",
