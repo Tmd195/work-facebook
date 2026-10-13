@@ -1,7 +1,5 @@
 {
  "seen": [
-  "460987",
-  "460988",
   "460989",
   "460990",
   "460991",
@@ -599,21 +597,11 @@
   "461581",
   "461584",
   "461586",
-  "461585"
+  "461585",
+  "461588",
+  "461587"
  ],
- "pending": [
-  {
-   "id": "461585",
-   "at": "2026-10-13T15:24:03+07:00",
-   "time": "15:24",
-   "text": "Thống đốc Fed Waller: Mối đe dọa của Trump đối với tính độc lập của Fed cho đến nay vẫn chưa thành công.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1
