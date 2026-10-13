@@ -1,7 +1,5 @@
 {
  "seen": [
-  "460900",
-  "460901",
   "460903",
   "460902",
   "460904",
@@ -599,9 +597,23 @@
   "461496",
   "461497",
   "461498",
-  "461499"
+  "461499",
+  "461501",
+  "461500"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461500",
+   "at": "2026-10-13T09:01:01+07:00",
+   "time": "09:01",
+   "text": "Triển vọng Kinh tế Thế giới của IMF: dự báo tăng trưởng GDP thực toàn cầu năm 2026 là 3,1%, cao hơn mức 3,0% dự báo hồi tháng 7, nhờ đầu tư vào trí tuệ nhân tạo giúp giảm bớt cú sốc giá năng lượng tại các nền kinh tế chủ chốt; dự báo tăng trưởng kinh tế toàn cầu năm 2027 là 3,4%, không đổi so với dự báo hồi tháng 7.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-05": 2,
   "2026-10-07": 1,
