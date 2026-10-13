@@ -60,6 +60,23 @@ def _price(m: re.Match) -> str:
     return " ".join(out) + " phẩy " + m.group(2)
 
 
+def _num(n: str) -> str:
+    """0–99 thành chữ (aidancing nuốt chữ "phẩy" khi kẹp giữa 2 con số: "0 phẩy 1" bị đọc "0 1")."""
+    if len(n) > 1 and n.startswith("0"):
+        return " ".join(DIGIT[int(c)] for c in n)          # 0,05 → không phẩy không năm
+    v = int(n)
+    if v < 10:
+        return DIGIT[v]
+    tens, one = divmod(v, 10)
+    head = "mười" if tens == 1 else DIGIT[tens] + " mươi"
+    tail = {0: "", 1: " mốt" if tens > 1 else " một", 4: " tư" if tens > 1 else " bốn", 5: " lăm"}.get(one, " " + DIGIT[one])
+    return head + tail
+
+
+def _small_decimal(m: re.Match) -> str:
+    return f"{_num(m.group(1))} phẩy {_num(m.group(2))}"
+
+
 def spoken(text: str) -> str:
     # Quy tắc đọc anh chốt cho aidancing (13/10/2026): "1 lót", "0 phẩy 1 lót", "Rờ Rờ 1 2",
     # giá "bốn một hai lăm phẩy 85", "2 chấm 7 rờ", "Pết", "píp", "nhá" thay "nhé".
@@ -77,6 +94,7 @@ def spoken(text: str) -> str:
     t = re.sub(r"(\d+)\s*:\s*(\d+)", r"\1 ăn \2", t)                    # tỉ lệ 1:2
     t = re.sub(r"(\d+)[.,](\d+)", r"\1 phẩy \2", t)
     t = re.sub(r"(\d+)\s*x\b", r"\1 lần", t)
+    t = re.sub(r"\b(\d{1,2}) phẩy (\d{1,2})\b", _small_decimal, t)      # 0,1 → không phẩy một (aidancing nuốt "phẩy" giữa 2 số)
     for pat, rep in _PATTERNS:
         t = pat.sub(rep, t)
     t = t.replace("/", " trên ").replace("&", " và ").replace("+", " cộng ")
