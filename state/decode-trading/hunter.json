@@ -1,7 +1,5 @@
 {
  "seen": [
-  "460995",
-  "460996",
   "460997",
   "460998",
   "460999",
@@ -599,9 +597,23 @@
   "461590",
   "461592",
   "461593",
-  "461594"
+  "461594",
+  "461596",
+  "461595"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461596",
+   "at": "2026-10-13T15:48:13+07:00",
+   "time": "15:48",
+   "text": "Được biết, Ngân hàng Trung ương Nhật Bản có xu hướng không tăng lãi suất liên tiếp trong tháng 10.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1
