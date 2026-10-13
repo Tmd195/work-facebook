@@ -1,10 +1,5 @@
 {
  "seen": [
-  "461177",
-  "461180",
-  "461179",
-  "461181",
-  "461182",
   "461183",
   "461184",
   "461185",
@@ -599,9 +594,37 @@
   "461777",
   "461776",
   "461775",
-  "461774"
+  "461774",
+  "461782",
+  "461781",
+  "461780",
+  "461779",
+  "461778"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461781",
+   "at": "2026-10-14T01:08:18+07:00",
+   "time": "01:08",
+   "text": "Chủ tịch Fed Williams: Tôi không thấy áp lực giá trên diện rộng nào ngoài lĩnh vực trí tuệ nhân tạo và năng lượng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "461779",
+   "at": "2026-10-14T01:07:45+07:00",
+   "time": "01:07",
+   "text": "Fed Williams: Việc tăng lãi suất thêm một lần nữa trong năm nay là phù hợp.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
