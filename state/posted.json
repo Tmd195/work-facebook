@@ -1402,5 +1402,51 @@
    "price": 4168.18,
    "title": "XAUUSD phiên Á-Âu: ưu tiên bán vùng 4169-4184, canh CPI"
   }
+ },
+ "2026-10-13 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131216706735108",
+  "post_id": "1121396124381014_122131216706735108",
+  "posted_at": "2026-10-13T18:30:09.788790+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4190.57,
+      4195.75
+     ],
+     "sl": 4206.98,
+     "tp": [
+      4175.48,
+      4163.94,
+      4151.17
+     ],
+     "trigger": "Giá hồi lên 4190-4195, xuất hiện nến từ chối, không đóng trên 4195.75",
+     "invalidation": "Đóng nến H1 trên 4201, mở đường lên 4216"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4172.59,
+      4175.48
+     ],
+     "sl": 4146.04,
+     "tp": [
+      4184.15,
+      4190.57,
+      4199.32
+     ],
+     "trigger": "Giá lùi về 4172-4175 và giữ vững, xuất hiện nến đảo chiều",
+     "invalidation": "Đóng nến H1 dưới 4150, cấu trúc hồi bị bẻ gãy"
+    }
+   ],
+   "price": 4182.91,
+   "title": "Canh bán 4191-4201 chờ CPI; giữ 4172-4175 mới tính mua"
+  }
  }
 }
