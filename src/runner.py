@@ -179,6 +179,24 @@ def generate(job: str):
     return run.run_strategy(job.split("_")[1])
 
 
+REEL_SYSTEMS = {"ob": "Order Block", "supply": "Vùng cung", "double": "Hai đỉnh/đáy", "range": "Vùng đi ngang",
+                "fibo": "Fibonacci", "retest": "Phá vỡ & retest", "abcd": "Mô hình ABCD"}
+
+
+def reel_title(job: str, meta: dict) -> str:
+    """Tên Reels trong thông báo – Reels không có 'topic' thì ghép từ loại + hệ thống + mã."""
+    if meta.get("topic"):
+        return meta["topic"]
+    sym, sysname = meta.get("symbol", ""), REEL_SYSTEMS.get(meta.get("system"), meta.get("system", ""))
+    if job == "reel_indi":
+        return f"Sniper AI {meta.get('version', '')}".strip()
+    if job == "reel_smc":
+        return f"Kiến thức {sysname} {sym}".strip()
+    if job == "reel_quiz":
+        return f"BUY OR SELL {sym}".strip()
+    return " ".join(x for x in (sysname, sym) if x) or job
+
+
 def label(job: str) -> str:
     if job.startswith("td_"):
         from src.content.trading_daily import JOB_NAMES as TD
@@ -303,7 +321,7 @@ def run_job(job: str, dry_run: bool = False, no_wait: bool = False, attempts: in
         wait_until(target)
     meta = post_meta(job, out_dir)
     if job.startswith("reel"):
-        name = f"Video Reels: {meta.get('topic', '')}"
+        name = f"Video Reels: {reel_title(job, meta)}"
     if dry_run and job.startswith("reel"):
         telegram.send(f"🧪 [XEM TRƯỚC - chưa đăng] {name} {day} ({meta.get('duration')}s)\n"
                       f"Video đã dựng xong (chế độ chạy thử, không gửi file cho nhẹ).\n\n{caption}")
