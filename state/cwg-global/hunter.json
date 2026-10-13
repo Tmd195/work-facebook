@@ -601,30 +601,7 @@
   "461542",
   "461541"
  ],
- "pending": [
-  {
-   "id": "461542",
-   "at": "2026-10-13T05:18:39+00:00",
-   "time": "05:18",
-   "text": "Vàng giao ngay vượt 4.200 USD/oz, tăng 0,68% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "461541",
-   "at": "2026-10-13T05:16:56+00:00",
-   "time": "05:16",
-   "text": "Thủ tướng Bulgaria: Hai tàu ở bờ Biển Đen của Bulgaria bị máy bay không người lái tấn công, một trong số đó bị chìm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 1
