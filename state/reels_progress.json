@@ -1,5 +1,5 @@
 {
- "count": 11,
+ "count": 12,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -19,6 +19,7 @@
   "Giới hạn tổng rủi ro mở khi vào nhiều lệnh vàng cùng lúc: mỗi lệnh tối đa 1 phần trăm, tổng các lệnh đang mở không quá 2 phần trăm, và dời SL lệnh cũ về hòa trước khi thêm lệnh mới cho XAUUSD",
   "Hệ thống SuperTrend cho XAUUSD: bộ lọc xu hướng, điểm vào theo nhịp hồi, trailing SL và cách đặt SL/TP",
   "Đặt dừng lỗ chống bị quét cho XAUUSD: lùi SL xuống dưới đáy swing cộng đệm biến động theo ATR, tránh mức giá tròn, rồi chốt lời từng phần và kéo SL về entry theo R:R",
-  "Hệ thống Logistic Signal Calibration cho XAUUSD: điểm xác suất 0–1, ngưỡng 0,7/0,3, bộ lọc độ tin cậy và đặt SL/TP theo ATR"
+  "Hệ thống Logistic Signal Calibration cho XAUUSD: điểm xác suất 0–1, ngưỡng 0,7/0,3, bộ lọc độ tin cậy và đặt SL/TP theo ATR",
+  "Checklist 3 điều kiện vào lệnh vàng XAUUSD: xu hướng H4, vùng hỗ trợ, nến xác nhận; quy tắc chấm điểm đủ 3 mới vào và đặt SL/TP theo R:R 1:2"
  ]
 }
