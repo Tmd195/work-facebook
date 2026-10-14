@@ -1473,5 +1473,88 @@
    "price": 4182.91,
    "title": "Canh bán 4191-4201 chờ CPI; giữ 4172-4175 mới tính mua"
   }
+ },
+ "2026-10-14 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131312970735108",
+  "post_id": "1121396124381014_122131312970735108",
+  "posted_at": "2026-10-14T07:30:04.536023+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "09:10",
+     "datetime": "2026-10-14T09:10:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "12:30",
+     "datetime": "2026-10-14T12:30:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "BOE Gov Bailey Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "15:30",
+     "datetime": "2026-10-14T15:30:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "17:15",
+     "datetime": "2026-10-14T17:15:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "EU Economic Summit",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-14T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Core CPI m/m",
+     "forecast": "0.2%",
+     "previous": "0.3%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-14T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Core CPI y/y",
+     "forecast": "2.5%",
+     "previous": "2.4%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-14T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "CPI m/m",
+     "forecast": "0.6%",
+     "previous": "0.4%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-14T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "CPI y/y",
+     "forecast": "3.6%",
+     "previous": "3.4%"
+    }
+   ]
+  }
  }
 }
