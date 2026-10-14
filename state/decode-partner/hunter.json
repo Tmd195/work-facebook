@@ -601,30 +601,7 @@
   "461927",
   "461929"
  ],
- "pending": [
-  {
-   "id": "461927",
-   "at": "2026-10-14T16:53:51+07:00",
-   "time": "16:53",
-   "text": "Thống đốc Fed Bowman: Hiện tại không cho rằng Fed cần phải vội vàng điều chỉnh thêm lãi suất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "461929",
-   "at": "2026-10-14T16:55:10+07:00",
-   "time": "16:55",
-   "text": "Ngày 14 tháng 10, Thống đốc Fed Bowman: Lạm phát vẫn cao hơn mục tiêu của chúng tôi, (nhưng) hiện tại không cho rằng Fed cần phải vội vàng điều chỉnh lãi suất thêm. Sau lần tăng lãi suất gần nhất, chúng tôi cần một khoảng thời gian để quan sát diễn biến của điều kiện tài chính, rồi mới có hành động tiếp theo.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
