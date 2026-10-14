@@ -33,6 +33,11 @@ def share(text: str) -> bool:
     try:
         r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
                           data={"chat_id": chat, "text": PREFIX + text, "disable_web_page_preview": "false"}, timeout=30)
+        new = (r.json().get("parameters") or {}).get("migrate_to_chat_id") if not r.ok else None
+        if new:                                    # nhóm được Telegram nâng lên siêu nhóm → đổi mã nhóm, gửi lại mã mới
+            print(f"[Telegram chia sẻ] nhóm đã đổi mã → {new} (cần cập nhật secret TELEGRAM_SHARE_CHAT_ID_…)", flush=True)
+            r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
+                              data={"chat_id": new, "text": PREFIX + text, "disable_web_page_preview": "false"}, timeout=30)
         if not r.ok:
             print(f"[Telegram chia sẻ lỗi] {r.status_code} {r.text[:200]}", flush=True)
         return r.ok
