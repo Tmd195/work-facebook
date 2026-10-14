@@ -1613,5 +1613,51 @@
    "price": 4160.49,
    "title": "XAUUSD giằng co trước CPI Mỹ: canh bán 4167-4175, giữ 4141 mới mua lên"
   }
+ },
+ "2026-10-14 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131392596735108",
+  "post_id": "1121396124381014_122131392596735108",
+  "posted_at": "2026-10-14T18:30:12.521051+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4141.13,
+      4150.52
+     ],
+     "sl": 4176.88,
+     "tp": [
+      4125.36,
+      4112.81,
+      4101.22
+     ],
+     "trigger": "Giá hồi lên 4141-4150 và xuất hiện nến H1 từ chối (bấc trên/engulfing giảm)",
+     "invalidation": "Nến H4 đóng cửa trên 4150.52, lấy lại vùng hợp lưu"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4099.2,
+      4101.22
+     ],
+     "sl": 4060.72,
+     "tp": [
+      4118.84,
+      4137.34,
+      4150.52
+     ],
+     "trigger": "CPI dịu, giá về 4099-4101 (4100 tròn) và tạo nến đảo chiều tăng trên H1",
+     "invalidation": "Đóng H1 dưới 4099.2, mất mốc 4100"
+    }
+   ],
+   "price": 4137.38,
+   "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi, CPI Mỹ định hướng"
+  }
  }
 }
