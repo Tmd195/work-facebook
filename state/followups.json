@@ -485,5 +485,14 @@
  "2026-10-14 knowledge 12:00|examples": {
   "at": "2026-10-14T12:27:17.459087+07:00",
   "count": 3
+ },
+ "2026-10-14 morning 07:30|news|2026-10-14T19:30:00+07:00|USD": {
+  "at": "2026-10-14T19:36:55.600504+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.bls.gov/news.release/cpi.nr0.htm",
+   "https://tradingeconomics.com/united-states/inflation-cpi/news/550003",
+   "https://www.bls.gov/news.release/cpi.htm"
+  ]
  }
 }
