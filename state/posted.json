@@ -1556,5 +1556,51 @@
     }
    ]
   }
+ },
+ "2026-10-14 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131332506735108",
+  "post_id": "1121396124381014_122131332506735108",
+  "posted_at": "2026-10-14T10:00:09.642765+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4166.75,
+      4175.19
+     ],
+     "sl": 4185.76,
+     "tp": [
+      4157.48,
+      4150.52,
+      4141.13
+     ],
+     "trigger": "Giá hồi lên 4167-4175, xuất hiện nến đảo chiều giảm H1 tại cụm EMA/Pivot.",
+     "invalidation": "H1 đóng cửa trên 4185.76 (vượt mây H1)."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4141.13,
+      4150.52
+     ],
+     "sl": 4123.32,
+     "tp": [
+      4164.06,
+      4175.19,
+      4181.01
+     ],
+     "trigger": "Giá về 4141-4150 giữ vững, có nến xác nhận tăng H1, nhất là nếu CPI hạ nhiệt.",
+     "invalidation": "H1 đóng cửa dưới 4141 (thủng cụm hỗ trợ)."
+    }
+   ],
+   "price": 4160.49,
+   "title": "XAUUSD giằng co trước CPI Mỹ: canh bán 4167-4175, giữ 4141 mới mua lên"
+  }
  }
 }
