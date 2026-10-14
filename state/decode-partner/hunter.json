@@ -601,19 +601,7 @@
   "462013",
   "462015"
  ],
- "pending": [
-  {
-   "id": "462013",
-   "at": "2026-10-14T19:48:31+07:00",
-   "time": "19:48",
-   "text": "Ngân hàng Mỹ dự kiến đến tháng 6 năm 2027, Cục Dự trữ Liên bang sẽ thực hiện ba lần tăng lãi suất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
