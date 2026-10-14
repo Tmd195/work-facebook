@@ -601,19 +601,7 @@
   "461908",
   "461910"
  ],
- "pending": [
-  {
-   "id": "461910",
-   "at": "2026-10-14T15:42:03+07:00",
-   "time": "15:42",
-   "text": "Lực lượng Houthi ở Yemen cho biết đã tấn công cơ sở của Saudi Aramco tại Dhahran, sân bay Quốc tế King Khalid ở Riyadh và nhà máy lọc dầu của Saudi Aramco tại Riyadh. Các hoạt động nhắm vào sân bay và cơ sở dầu khí sẽ tiếp tục trong những ngày tới.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
