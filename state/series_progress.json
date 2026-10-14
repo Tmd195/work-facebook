@@ -1,7 +1,8 @@
 {
   "done": {
     "price-action-nhap-mon": 15,
-    "ho-tro-khang-cu-cung-cau": 12
+    "ho-tro-khang-cu-cung-cau": 12,
+    "pivot-point": 1
   },
   "history": [
     {
@@ -137,6 +138,11 @@
     {
       "series": "ho-tro-khang-cu-cung-cau",
       "part": 12,
+      "date": "2026-10-14"
+    },
+    {
+      "series": "pivot-point",
+      "part": 1,
       "date": "2026-10-14"
     }
   ]
