@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461426",
   "461428",
   "461427",
   "461429",
@@ -599,32 +598,10 @@
   "462025",
   "462024",
   "462023",
-  "462022"
+  "462022",
+  "462026"
  ],
- "pending": [
-  {
-   "id": "462019",
-   "at": "2026-10-14T19:59:39+07:00",
-   "time": "19:59",
-   "text": "Bạc giao ngay giảm 3,00% trong ngày, hiện ở mức 57,39 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "462025",
-   "at": "2026-10-14T20:02:42+07:00",
-   "time": "20:02",
-   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 5 năm của Mỹ tăng 15 điểm cơ bản trong ngày, đạt mức cao nhất kể từ năm 2007.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
