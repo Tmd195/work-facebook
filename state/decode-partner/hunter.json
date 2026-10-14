@@ -1,7 +1,5 @@
 {
  "seen": [
-  "461398",
-  "461396",
   "461397",
   "461403",
   "461404",
@@ -599,9 +597,34 @@
   "461979",
   "461978",
   "461977",
-  "461976"
+  "461976",
+  "462001",
+  "462000"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462001",
+   "at": "2026-10-14T19:34:27+07:00",
+   "time": "19:34",
+   "text": "Các đồng tiền không phải USD giảm đồng loạt, USD/JPY hiện ở mức 158,73, EUR/USD hiện ở mức 1,1152, NZD/USD mất mốc 0,56, giảm 0,19% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "462000",
+   "at": "2026-10-14T19:34:05+07:00",
+   "time": "19:34",
+   "text": "Thị trường gia tăng đặt cược rằng Fed sẽ tăng lãi suất thêm ba lần trước cuối năm 2027.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
