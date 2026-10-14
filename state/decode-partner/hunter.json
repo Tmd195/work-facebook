@@ -1,7 +1,5 @@
 {
  "seen": [
-  "461243",
-  "461242",
   "461245",
   "461246",
   "461247",
@@ -599,9 +597,23 @@
   "461837",
   "461839",
   "461842",
-  "461841"
+  "461841",
+  "461844",
+  "461843"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461844",
+   "at": "2026-10-14T11:18:43+07:00",
+   "time": "11:18",
+   "text": "Tổng thống Hoa Kỳ Trump: Tại Greenland mới đẹp đẽ của chúng ta, hoạt động thăm dò dầu mỏ, khí đốt và khoáng sản quy mô lớn sắp sửa bắt đầu.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
