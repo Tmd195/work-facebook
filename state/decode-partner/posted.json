@@ -736,5 +736,19 @@
    "rr": 6.8,
    "duration": 10.3
   }
+ },
+ "2026-10-15 cwg_breaking 03:35": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122111022441498398",
+  "post_id": "1379542878568858_122111022441498398",
+  "posted_at": "2026-10-15T03:36:10.217655+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Tồn kho dầu thô API của Mỹ trong tuần tính đến ngày 9 tháng 10 là -11,123 triệu thùng, dự kiến 1,9 triệu thùng, giá trị ",
+    "API - Tồn kho dầu thô Mỹ",
+    "API - Tồn kho dầu thô Cushing Mỹ"
+   ]
+  }
  }
 }
