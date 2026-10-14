@@ -601,19 +601,7 @@
   "461907",
   "461906"
  ],
- "pending": [
-  {
-   "id": "461907",
-   "at": "2026-10-14T15:20:00+07:00",
-   "time": "15:20",
-   "text": "Chủ tịch Ngân hàng Trung ương châu Âu Lagarde sẽ có bài phát biểu về tương lai số hóa của châu Âu sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
