@@ -1,11 +1,5 @@
 {
  "seen": [
-  "461286",
-  "461290",
-  "461289",
-  "461288",
-  "461287",
-  "461291",
   "461292",
   "461293",
   "461298",
@@ -599,9 +593,49 @@
   "461882",
   "461883",
   "461884",
-  "461885"
+  "461885",
+  "461891",
+  "461890",
+  "461889",
+  "461888",
+  "461887",
+  "461886"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461891",
+   "at": "2026-10-14T15:03:26+07:00",
+   "time": "15:03",
+   "text": "Báo cáo hàng tháng của IEA: Nguồn cung dầu toàn cầu sẽ giảm 5,8 triệu thùng/ngày vào năm 2026 (dự báo trước đó là giảm 5,7 triệu thùng/ngày).",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "461888",
+   "at": "2026-10-14T15:02:30+07:00",
+   "time": "15:02",
+   "text": "Báo cáo hàng tháng của IEA: Nhu cầu dầu toàn cầu sẽ giảm 2,6 triệu thùng/ngày vào năm 2026, trước đó dự báo là 2,5 triệu thùng/ngày; dự kiến nhu cầu dầu toàn cầu sẽ tăng 2 triệu thùng/ngày vào năm 2027, trước đó dự báo là 2,6 triệu thùng/ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "461887",
+   "at": "2026-10-14T15:00:40+07:00",
+   "time": "15:00",
+   "text": "Báo cáo hàng tháng của IEA: Dự kiến tổng nguồn cung dầu toàn cầu năm 2026 sẽ thấp hơn nhu cầu 1,73 triệu thùng/ngày (trong báo cáo trước đó dự kiến thấp hơn 1,74 triệu thùng/ngày).",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
