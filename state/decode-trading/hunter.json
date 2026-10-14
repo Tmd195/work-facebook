@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461450",
   "461451",
   "461452",
   "461453",
@@ -599,9 +598,22 @@
   "462045",
   "462048",
   "462047",
-  "462049"
+  "462049",
+  "462050"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462050",
+   "at": "2026-10-14T21:00:29+07:00",
+   "time": "21:00",
+   "text": "Bạc kỳ hạn tại New York giảm mạnh 5,00% trong ngày, hiện báo 56,54 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
