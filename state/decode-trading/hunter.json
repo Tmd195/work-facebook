@@ -1,7 +1,5 @@
 {
  "seen": [
-  "461326",
-  "461327",
   "461328",
   "461329",
   "461330",
@@ -599,9 +597,23 @@
   "461922",
   "461925",
   "461924",
-  "461923"
+  "461923",
+  "461927",
+  "461926"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "461927",
+   "at": "2026-10-14T16:53:51+07:00",
+   "time": "16:53",
+   "text": "Thống đốc Fed Bowman: Hiện tại không cho rằng Fed cần phải vội vàng điều chỉnh thêm lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
