@@ -1,0 +1,29 @@
+name: Thu kenh chia se Telegram (tam)
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - { job: decode-trading, chat: TELEGRAM_SHARE_CHAT_ID_DECODE_TRADING }
+          - { job: decode-partner, chat: TELEGRAM_SHARE_CHAT_ID_DECODE_PARTNER }
+    env:
+      JOB: ${{ matrix.job }}
+      TELEGRAM_SHARE_BOT_TOKEN: ${{ secrets.TELEGRAM_SHARE_BOT_TOKEN }}
+      TELEGRAM_SHARE_CHAT_ID: ${{ secrets[matrix.chat] }}
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q -r requirements.txt
+      - run: |
+          python - <<'EOF'
+          import os
+          print("token len", len(os.environ.get("TELEGRAM_SHARE_BOT_TOKEN", "")), "chat len", len(os.environ.get("TELEGRAM_SHARE_CHAT_ID", "")))
+          from src.publish import telegram
+          from src.config import env
+          print("env token", bool(env("TELEGRAM_SHARE_BOT_TOKEN")), "env chat", bool(env("TELEGRAM_SHARE_CHAT_ID")))
+          print("result", telegram.share("🔧 Kiểm tra kết nối kênh báo cáo (tin thử)."))
+          EOF

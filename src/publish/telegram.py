@@ -28,13 +28,16 @@ def share(text: str) -> bool:
     token = env("TELEGRAM_SHARE_BOT_TOKEN") or env("TELEGRAM_BOT_TOKEN")      # bot riêng cho đối tác (nếu có)
     chat = env("TELEGRAM_SHARE_CHAT_ID")
     if not token or not chat:
+        print(f"[Telegram chia sẻ] bỏ qua – thiếu {'token' if not token else 'chat id'}", flush=True)
         return False
     try:
         r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage",
                           data={"chat_id": chat, "text": PREFIX + text, "disable_web_page_preview": "false"}, timeout=30)
+        if not r.ok:
+            print(f"[Telegram chia sẻ lỗi] {r.status_code} {r.text[:200]}", flush=True)
         return r.ok
     except requests.RequestException as exc:
-        print(f"[Telegram chia sẻ lỗi] {exc}")
+        print(f"[Telegram chia sẻ lỗi] {exc}", flush=True)
         return False
 
 
