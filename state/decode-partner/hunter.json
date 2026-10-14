@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461430",
   "461433",
   "461432",
   "461431",
@@ -599,21 +598,10 @@
   "462026",
   "462027",
   "462029",
-  "462028"
+  "462028",
+  "462030"
  ],
- "pending": [
-  {
-   "id": "462027",
-   "at": "2026-10-14T20:06:39+07:00",
-   "time": "20:06",
-   "text": "Thị trường hoàn toàn dự đoán rằng đến cuối tháng 1 năm sau, Fed sẽ tăng lãi suất thêm hai lần.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
