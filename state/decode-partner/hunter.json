@@ -1,8 +1,5 @@
 {
  "seen": [
-  "461405",
-  "461407",
-  "461406",
   "461408",
   "461409",
   "461410",
@@ -599,54 +596,12 @@
   "462000",
   "462004",
   "462003",
-  "462002"
+  "462002",
+  "462007",
+  "462006",
+  "462005"
  ],
- "pending": [
-  {
-   "id": "462001",
-   "at": "2026-10-14T19:34:27+07:00",
-   "time": "19:34",
-   "text": "Các đồng tiền không phải USD giảm đồng loạt, USD/JPY hiện ở mức 158,73, EUR/USD hiện ở mức 1,1152, NZD/USD mất mốc 0,56, giảm 0,19% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "462000",
-   "at": "2026-10-14T19:34:05+07:00",
-   "time": "19:34",
-   "text": "Thị trường gia tăng đặt cược rằng Fed sẽ tăng lãi suất thêm ba lần trước cuối năm 2027.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "462004",
-   "at": "2026-10-14T19:37:37+07:00",
-   "time": "19:37",
-   "text": "CPI lõi của Mỹ tháng 9 tăng 0,33% so với tháng trước, cao hơn khoảng 0,1 điểm phần trăm so với dự báo của hầu hết các nhà kinh tế. Mức tăng CPI lõi ba tháng tính theo năm đã tăng từ 2% trong tháng 8 lên 3,4%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "462002",
-   "at": "2026-10-14T19:36:24+07:00",
-   "time": "19:36",
-   "text": "Lợi suất trái phiếu kho bạc kỳ hạn hai năm của Mỹ tăng 10 điểm cơ bản, lên mức 4,89%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
