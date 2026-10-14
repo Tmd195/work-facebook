@@ -721,5 +721,20 @@
   "posted_at": "2026-10-14T08:45:03.692558+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-14 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/2510710389448114/",
+  "post_id": "2510710389448114",
+  "posted_at": "2026-10-14T19:45:26.126293+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDCHF|0.81388",
+   "symbol": "USDCHF",
+   "system": "retest",
+   "side": "buy",
+   "rr": 6.8,
+   "duration": 10.3
+  }
  }
 }
