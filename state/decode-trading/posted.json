@@ -331,6 +331,21 @@
    ]
   }
  },
+ "2026-10-14 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/1074001325402072/",
+  "post_id": "1074001325402072",
+  "posted_at": "2026-10-14T12:00:40.724018+07:00",
+  "preview": false,
+  "meta": {
+   "key": "ob|GBPUSD|2026-09-18T04:15:00+00:00",
+   "system": "ob",
+   "symbol": "GBPUSD",
+   "side": "sell",
+   "rr": 3.6,
+   "duration": 45.5
+  }
+ },
  "2026-10-14 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122108683995499355",
