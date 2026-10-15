@@ -1684,5 +1684,97 @@
    "price": 4137.38,
    "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi, CPI Mỹ định hướng"
   }
+ },
+ "2026-10-15 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131502396735108",
+  "post_id": "1121396124381014_122131502396735108",
+  "posted_at": "2026-10-15T07:30:05.094443+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "13:00",
+     "datetime": "2026-10-15T13:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "GDP m/m",
+     "forecast": "-0.1%",
+     "previous": "0.4%"
+    },
+    {
+     "time": "14:30",
+     "datetime": "2026-10-15T14:30:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "BOE Gov Bailey Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "17:15",
+     "datetime": "2026-10-15T17:15:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "EU Economic Summit",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-15T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Core PPI m/m",
+     "forecast": "0.3%",
+     "previous": "0.2%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-15T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Core Retail Sales m/m",
+     "forecast": "0.6%",
+     "previous": "1.4%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-15T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "PPI m/m",
+     "forecast": "0.6%",
+     "previous": "0.4%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-15T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Retail Sales m/m",
+     "forecast": "0.3%",
+     "previous": "1.2%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-15T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Philly Fed Manufacturing Index",
+     "forecast": "28.2",
+     "previous": "37.8"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-15T19:30:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Unemployment Claims",
+     "forecast": "199K",
+     "previous": "197K"
+    }
+   ]
+  }
  }
 }
