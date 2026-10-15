@@ -1,7 +1,5 @@
 {
  "seen": [
-  "461783",
-  "461784",
   "461785",
   "461786",
   "461787",
@@ -599,9 +597,34 @@
   "462378",
   "462380",
   "462382",
-  "462381"
+  "462381",
+  "462384",
+  "462383"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462384",
+   "at": "2026-10-15T23:00:04+07:00",
+   "time": "23:00",
+   "text": "Dự trữ dầu thô tại Cushing, Oklahoma của EIA trong tuần kết thúc ngày 9 tháng 10 tại Mỹ là 1,862 triệu thùng, giá trị trước đó là 444.000 thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "462383",
+   "at": "2026-10-15T23:00:04+07:00",
+   "time": "23:00",
+   "text": "Dự trữ dầu thô EIA của Mỹ trong tuần kết thúc ngày 9 tháng 10 là -8,557 triệu thùng, dự kiến -288.000 thùng, giá trị trước đó -3,186 triệu thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
