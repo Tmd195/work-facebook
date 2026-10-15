@@ -1776,5 +1776,51 @@
     }
    ]
   }
+ },
+ "2026-10-15 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131516856735108",
+  "post_id": "1121396124381014_122131516856735108",
+  "posted_at": "2026-10-15T10:00:12.836774+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4165.54,
+      4172.83
+     ],
+     "sl": 4185.74,
+     "tp": [
+      4123.32,
+      4105.76,
+      4075.29
+     ],
+     "trigger": "giá hồi lên 4165-4172 và xuất hiện nến H1 từ chối, không đóng trên mây H1",
+     "invalidation": "H1 đóng cửa trên 4182"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4105.76,
+      4123.32
+     ],
+     "sl": 4093.32,
+     "tp": [
+      4150.52,
+      4159.97,
+      4172.83
+     ],
+     "trigger": "giá lùi về 4105-4123 giữ vững, có nến H1 xác nhận hoặc PPI/bán lẻ Mỹ hạ nhiệt",
+     "invalidation": "H1 đóng cửa dưới 4100"
+    }
+   ],
+   "price": 4143.56,
+   "title": "XAUUSD: hồi vào kháng cự 4165-4172, ưu tiên canh SELL theo đà giảm"
+  }
  }
 }
