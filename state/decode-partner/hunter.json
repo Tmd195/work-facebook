@@ -601,41 +601,7 @@
   "462326",
   "462327"
  ],
- "pending": [
-  {
-   "id": "462319",
-   "at": "2026-10-15T19:32:24+07:00",
-   "time": "19:32",
-   "text": "Vàng giao ngay giảm 24 USD trong ngắn hạn, hiện báo 4143,36 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "462315",
-   "at": "2026-10-15T19:30:51+07:00",
-   "time": "19:30",
-   "text": "Doanh số bán lẻ Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "7450.21",
-   "forecast": "-",
-   "previous": "7739.47"
-  },
-  {
-   "id": "462322",
-   "at": "2026-10-15T19:34:03+07:00",
-   "time": "19:34",
-   "text": "FED NewYork - Chỉ số đơn đặt hàng mới sản xuất Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "23.2",
-   "forecast": "-",
-   "previous": "2"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
