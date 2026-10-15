@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461700",
   "461703",
   "461704",
   "461705",
@@ -599,9 +598,22 @@
   "462298",
   "462299",
   "462300",
-  "462301"
+  "462301",
+  "462302"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462302",
+   "at": "2026-10-15T19:25:54+07:00",
+   "time": "19:25",
+   "text": "Mỹ thông báo với các nước thành viên Cơ quan Năng lượng Quốc tế rằng họ không hài lòng với việc giải phóng dầu khẩn cấp. Mỹ đề xuất giải phóng thêm 100 triệu thùng dầu thô.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
