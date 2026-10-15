@@ -601,19 +601,7 @@
   "462278",
   "462279"
  ],
- "pending": [
-  {
-   "id": "462278",
-   "at": "2026-10-15T16:43:29+07:00",
-   "time": "16:43",
-   "text": "Các quan chức Ukraine cho biết Ukraine đã tấn công một nhà máy lọc dầu của Nga trong đêm, nhằm đáp trả các cuộc tấn công bằng tên lửa đạn đạo và máy bay không người lái của Nga vi phạm thỏa thuận ngừng bắn năng lượng do Trump làm trung gian.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
