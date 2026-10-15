@@ -1,5 +1,5 @@
 {
- "count": 13,
+ "count": 14,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -22,6 +22,7 @@
   "Đặt dừng lỗ chống bị quét cho XAUUSD: lùi SL xuống dưới đáy swing cộng đệm biến động theo ATR, tránh mức giá tròn, rồi chốt lời từng phần và kéo SL về entry theo R:R",
   "Hệ thống Logistic Signal Calibration cho XAUUSD: điểm xác suất 0–1, ngưỡng 0,7/0,3, bộ lọc độ tin cậy và đặt SL/TP theo ATR",
   "Checklist 3 điều kiện vào lệnh vàng XAUUSD: xu hướng H4, vùng hỗ trợ, nến xác nhận; quy tắc chấm điểm đủ 3 mới vào và đặt SL/TP theo R:R 1:2",
-  "Hệ thống MAMA/FAMA cho XAUUSD: cặp trung bình thích nghi MESA, tín hiệu giao cắt làm tín hiệu xu hướng, bộ lọc hai đường tách rộng và đặt SL/TP theo ATR với R:R 1:2"
+  "Hệ thống MAMA/FAMA cho XAUUSD: cặp trung bình thích nghi MESA, tín hiệu giao cắt làm tín hiệu xu hướng, bộ lọc hai đường tách rộng và đặt SL/TP theo ATR với R:R 1:2",
+  "Toán kỳ vọng trong quản lý vốn XAUUSD: với R:R 1 ăn 2, chỉ cần thắng 4 trên 10 lệnh vẫn có lời, vì sao win rate cao mà R:R tệ vẫn cháy, cách cố định tỉ lệ lời lỗ và ghi nhật ký để lộ win rate thật"
  ]
 }
