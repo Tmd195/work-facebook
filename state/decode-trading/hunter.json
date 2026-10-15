@@ -601,19 +601,7 @@
   "462218",
   "462217"
  ],
- "pending": [
-  {
-   "id": "462217",
-   "at": "2026-10-15T14:25:55+07:00",
-   "time": "14:25",
-   "text": "Dầu Brent giảm hơn 2,00% trong ngày, hiện ở mức 102,38 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
