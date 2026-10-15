@@ -544,5 +544,14 @@
  "2026-10-15 knowledge 12:00|examples": {
   "at": "2026-10-15T12:27:00.892631+07:00",
   "count": 3
+ },
+ "2026-10-15 morning 07:30|news|2026-10-15T13:00:00+07:00|GBP": {
+  "at": "2026-10-15T13:06:02.989230+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.ons.gov.uk/economy/grossdomesticproductgdp/bulletins/gdpmonthlyestimateuk/august2026",
+   "https://tradingeconomics.com/united-kingdom/monthly-gdp-mom",
+   "https://www.investing.com/economic-calendar/united-kingdom-gross-domestic-product-(gdp)-mom-1792"
+  ]
  }
 }
