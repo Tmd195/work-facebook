@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461631",
   "461632",
   "461633",
   "461634",
@@ -599,9 +598,22 @@
   "462226",
   "462230",
   "462229",
-  "462228"
+  "462228",
+  "462231"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462231",
+   "at": "2026-10-15T15:16:11+07:00",
+   "time": "15:16",
+   "text": "UBS: Dự kiến Fed sẽ thực hiện lần tăng lãi suất thứ ba vào tháng 3 năm 2027, dự báo trước đó là chu kỳ tăng lãi suất sẽ kết thúc vào tháng 12.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
