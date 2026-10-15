@@ -1833,5 +1833,51 @@
    "price": 4143.56,
    "title": "XAUUSD: hồi vào kháng cự 4165-4172, ưu tiên canh SELL theo đà giảm"
   }
+ },
+ "2026-10-15 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131563362735108",
+  "post_id": "1121396124381014_122131563362735108",
+  "posted_at": "2026-10-15T18:30:13.521810+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4157.2,
+      4172.83
+     ],
+     "sl": 4181.02,
+     "tp": [
+      4150.52,
+      4131.93,
+      4111.8
+     ],
+     "trigger": "Giá bị từ chối tại 4157-4172, nến H1 đóng cửa dưới 4157.2",
+     "invalidation": "H4 đóng cửa trên 4181.02"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4178.48,
+      4181.02
+     ],
+     "sl": 4157.2,
+     "tp": [
+      4198.95,
+      4214.39,
+      4223.13
+     ],
+     "trigger": "H1/H4 đóng cửa trên 4172.83, retest giữ vùng",
+     "invalidation": "Đóng cửa trở lại dưới 4157.2"
+    }
+   ],
+   "price": 4157.1,
+   "title": "Vàng hồi vào cụm kháng cự mạnh 4157-4172, ưu tiên canh SELL"
+  }
  }
 }
