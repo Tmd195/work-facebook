@@ -553,5 +553,16 @@
    "https://tradingeconomics.com/united-kingdom/monthly-gdp-mom",
    "https://www.investing.com/economic-calendar/united-kingdom-gross-domestic-product-(gdp)-mom-1792"
   ]
+ },
+ "2026-10-15 morning 07:30|news|2026-10-15T19:30:00+07:00|USD": {
+  "at": "2026-10-15T19:51:30.717149+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.cnn.com/2026/10/15/economy/us-retail-sales-wholesale-inflation-ppi-september",
+   "https://investinglive.com/news/us-retails-sales-for-september-0-8-mom-vs-1-1-last-month-0/",
+   "https://www.investing.com/economic-calendar/united-states-core-producer-price-index-(ppi)-mom-62",
+   "https://tradingeconomics.com/united-states/producer-price-inflation-mom",
+   "https://www.forexfactory.com/calendar/87-us-core-ppi-mm"
+  ]
  }
 }
