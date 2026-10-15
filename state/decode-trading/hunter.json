@@ -1,7 +1,5 @@
 {
  "seen": [
-  "461626",
-  "461625",
   "461630",
   "461629",
   "461628",
@@ -599,21 +597,11 @@
   "462222",
   "462221",
   "462225",
-  "462224"
+  "462224",
+  "462227",
+  "462226"
  ],
- "pending": [
-  {
-   "id": "462225",
-   "at": "2026-10-15T15:03:24+07:00",
-   "time": "15:03",
-   "text": "Theo Yonhap: Bộ trưởng Tài chính Hàn Quốc và Nhật Bản đã đạt được thỏa thuận, đồng ý gia hạn hoán đổi tiền tệ trị giá 10 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
