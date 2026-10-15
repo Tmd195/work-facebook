@@ -564,5 +564,9 @@
    "https://tradingeconomics.com/united-states/producer-price-inflation-mom",
    "https://www.forexfactory.com/calendar/87-us-core-ppi-mm"
   ]
+ },
+ "2026-10-15 knowledge 21:00|examples": {
+  "at": "2026-10-15T21:27:50.834739+07:00",
+  "count": 3
  }
 }
