@@ -1990,5 +1990,51 @@
    "price": 4166.34,
    "title": "XAUUSD nghiêng hồi phục khi giữ 4150, trần lớn chờ ở 4180-4200"
   }
+ },
+ "2026-10-16 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131734140735108",
+  "post_id": "1121396124381014_122131734140735108",
+  "posted_at": "2026-10-16T18:30:10.380610+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      4157.2,
+      4164.02
+     ],
+     "sl": 4131.93,
+     "tp": [
+      4186.04,
+      4199.63,
+      4215.01
+     ],
+     "trigger": "Giá hồi về 4157-4164 và có nến H1 xác nhận giữ vùng, USD tiếp tục yếu.",
+     "invalidation": "Đóng nến H1 dưới 4144."
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4199.63,
+      4202.02
+     ],
+     "sl": 4223.13,
+     "tp": [
+      4186.04,
+      4164.02,
+      4150.52
+     ],
+     "trigger": "Giá bật lên 4199-4202 rồi xuất hiện nến từ chối, DXY hồi.",
+     "invalidation": "Đóng nến H1 trên 4217.41."
+    }
+   ],
+   "price": 4175.39,
+   "title": "XAUUSD phiên Mỹ: hồi phục còn dư địa khi USD và lợi suất hạ nhiệt"
+  }
  }
 }
