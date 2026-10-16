@@ -601,30 +601,7 @@
   "462586",
   "462585"
  ],
- "pending": [
-  {
-   "id": "462586",
-   "at": "2026-10-16T16:00:21+07:00",
-   "time": "16:00",
-   "text": "Doanh số bán nhà đang chờ xử lý (m/m) Canada",
-   "important": true,
-   "star": 2,
-   "actual": "-2.3",
-   "forecast": "-%",
-   "previous": "-0.70"
-  },
-  {
-   "id": "462585",
-   "at": "2026-10-16T16:00:01+07:00",
-   "time": "16:00",
-   "text": "CPI cốt lõi (m/m) Eurozone",
-   "important": true,
-   "star": 2,
-   "actual": "0.2",
-   "forecast": "-%",
-   "previous": "0.2"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
