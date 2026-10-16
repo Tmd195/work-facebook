@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461923",
   "461927",
   "461926",
   "461929",
@@ -599,9 +598,22 @@
   "462513",
   "462512",
   "462523",
-  "462524"
+  "462524",
+  "462525"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462525",
+   "at": "2026-10-16T11:26:42+07:00",
+   "time": "11:26",
+   "text": "Thống đốc Ngân hàng Trung ương Canada Macklem: Canada chưa tăng lãi suất, nhưng càng trì hoãn lâu thì càng khó bỏ qua việc giá năng lượng tăng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
