@@ -601,19 +601,7 @@
   "462684",
   "462683"
  ],
- "pending": [
-  {
-   "id": "462682",
-   "at": "2026-10-16T23:21:31+07:00",
-   "time": "23:21",
-   "text": "Giá dầu Brent tăng 2,00% trong ngày, hiện ở mức 106,15 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-05": 2,
   "2026-10-06": 1,
