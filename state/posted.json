@@ -1933,5 +1933,51 @@
     }
    ]
   }
+ },
+ "2026-10-16 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131688030735108",
+  "post_id": "1121396124381014_122131688030735108",
+  "posted_at": "2026-10-16T10:00:12.293047+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      4144.05,
+      4150.52
+     ],
+     "sl": 4120.74,
+     "tp": [
+      4179.75,
+      4199.63,
+      4215.02
+     ],
+     "trigger": "Giá hồi về 4144-4150 và có nến H1 xác nhận giữ vùng",
+     "invalidation": "Đóng nến H1 dưới 4131.93"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4199.63,
+      4202.02
+     ],
+     "sl": 4217.4,
+     "tp": [
+      4179.75,
+      4150.52,
+      4131.93
+     ],
+     "trigger": "Giá bật lên test 4200 rồi xuất hiện nến từ chối tại R1",
+     "invalidation": "Đóng nến H1 trên 4217.4"
+    }
+   ],
+   "price": 4166.34,
+   "title": "XAUUSD nghiêng hồi phục khi giữ 4150, trần lớn chờ ở 4180-4200"
+  }
  }
 }
