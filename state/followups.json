@@ -620,5 +620,15 @@
    "https://www.marketscreener.com/quote/currency/US-DOLLAR-BRITISH-POUND-U-12684800/news/Sterling-briefly-dips-following-remarks-from-BoE-s-Bailey-48520398/",
    "https://investinglive.com/central-banks/boe-bailey-bangkok-what-could-possibly-go-wrong-preview-and-3-questions-for-the-governor/"
   ]
+ },
+ "2026-10-16 morning 07:30|news|2026-10-16T10:30:00+07:00|USD": {
+  "at": "2026-10-16T10:35:44.124542+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.barchart.com/story/news/4326934/hawkish-fed-chair-warsh-boosts-the-dollar-and-sinks-gold",
+   "https://investinglive.com/central-banks/warsh-speaks-in-bangkok-after-hot-cpi-is-a-second-fed-hike-coming-in-october/",
+   "https://www.bloomberg.com/news/live-blog/2026-10-16/imf-world-bank-annual-meetings-bangkok-fed-warsh-bailey",
+   "https://en.sedaily.com/international/2026/10/16/us-rate-path-clouded-as-markets-await-warshs-oct-16-remarks"
+  ]
  }
 }
