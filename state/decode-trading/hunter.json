@@ -1,9 +1,5 @@
 {
  "seen": [
-  "462110",
-  "462113",
-  "462112",
-  "462111",
   "462114",
   "462115",
   "462116",
@@ -599,9 +595,25 @@
   "462709",
   "462708",
   "462707",
-  "462706"
+  "462706",
+  "462713",
+  "462712",
+  "462711",
+  "462710"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462713",
+   "at": "2026-10-17T00:11:26+07:00",
+   "time": "00:11",
+   "text": "Ngày 17 tháng 10 đưa tin, Tổng thống Mỹ Trump có bài phát biểu mới nhất: “Tôi biết một số chi tiết về xung đột Nga-Ukraine, vào một thời điểm nào đó tôi sẽ công bố chúng, tôi hy vọng nó kết thúc. Chính quyền Biden đã làm rất nhiều điều tồi tệ trong vấn đề Ukraine.” Khi được hỏi về vấn đề lạm phát, Trump một lần nữa tuyên bố: “Giá dầu sẽ sớm giảm. Israel đã giúp đỡ Ả Rập Xê Út rất nhiều, Hiệp định Abraham một lần nữa trở thành chủ đề của Ả Rập Xê Út.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
