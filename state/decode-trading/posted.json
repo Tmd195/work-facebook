@@ -470,6 +470,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-16 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/1426378936143373/",
+  "post_id": "1426378936143373",
+  "posted_at": "2026-10-16T12:00:41.381230+07:00",
+  "preview": false,
+  "meta": {
+   "key": "ob|EURUSD|2026-09-11T14:15:00+00:00",
+   "system": "ob",
+   "symbol": "EURUSD",
+   "side": "sell",
+   "rr": 3.81,
+   "duration": 45.5
+  }
+ },
  "2026-10-16 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122110597545499355",
