@@ -1,6 +1,5 @@
 {
  "seen": [
-  "462043",
   "462046",
   "462045",
   "462048",
@@ -599,9 +598,22 @@
   "462640",
   "462641",
   "462643",
-  "462642"
+  "462642",
+  "462644"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462644",
+   "at": "2026-10-16T20:07:57+07:00",
+   "time": "20:07",
+   "text": "Dầu nhiên liệu 2611 tăng 3,12% trong ngày, báo giá mới nhất 5.620 nhân dân tệ/tấn, lượng mở vị thế trong ngày tăng hơn 3.800 lô, thay đổi vị thế rõ rệt.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
