@@ -610,5 +610,15 @@
     "pips_closed": -2382
    }
   ]
+ },
+ "2026-10-16 morning 07:30|news|2026-10-16T09:00:00+07:00|GBP": {
+  "at": "2026-10-16T09:11:02.779125+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.poundsterlinglive.com/gbp-live-today/23730-pound-sterling-bailey-hawkish-november-hike",
+   "https://investing.com/news/economy/bank-of-englands-bailey-vows-to-see-the-job-through-on-inflation-3122655",
+   "https://www.marketscreener.com/quote/currency/US-DOLLAR-BRITISH-POUND-U-12684800/news/Sterling-briefly-dips-following-remarks-from-BoE-s-Bailey-48520398/",
+   "https://investinglive.com/central-banks/boe-bailey-bangkok-what-could-possibly-go-wrong-preview-and-3-questions-for-the-governor/"
+  ]
  }
 }
