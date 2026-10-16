@@ -1,16 +1,5 @@
 {
  "seen": [
-  "461912",
-  "461913",
-  "461914",
-  "461915",
-  "461916",
-  "461917",
-  "461919",
-  "461918",
-  "461920",
-  "461921",
-  "461922",
   "461925",
   "461924",
   "461923",
@@ -599,21 +588,20 @@
   "462506",
   "462509",
   "462511",
-  "462510"
+  "462510",
+  "462522",
+  "462521",
+  "462520",
+  "462519",
+  "462518",
+  "462517",
+  "462516",
+  "462515",
+  "462514",
+  "462513",
+  "462512"
  ],
- "pending": [
-  {
-   "id": "462509",
-   "at": "2026-10-16T11:00:09+07:00",
-   "time": "11:00",
-   "text": "Ngày 16 tháng 10 đưa tin, Chủ tịch Cục Dự trữ Liên bang Kevin Warsh hôm thứ Sáu cho biết ông sẽ không đưa ra phán đoán trước về quyết định lãi suất, cũng không tiết lộ liệu Fed sẽ tiếp tục tăng lãi suất tại cuộc họp chính sách tiền tệ ngày 27-28 tháng 10, hay giữ nguyên lãi suất ngắn hạn như kỳ vọng của thị trường. Phát biểu tại Hội nghị thường niên IMF và Ngân hàng Thế giới năm 2026 tổ chức tại Bangkok, Warsh cho biết khi Fed tăng lãi suất vào tháng 9, \"đã thể hiện rất rõ ràng rằng chúng tôi sẽ đạt được ổn định giá cả, và đã rút lại một mức độ nới lỏng chính sách tiền tệ nhất định\". Ông nhấn mạnh: \"Tôi sẽ không dự đoán trước quyết định của bất kỳ cuộc họp nào. Tôi cho rằng hiện tại không nên tiết lộ trước những hành động mà mình có thể thực hiện tại các cuộc họp còn lại trong năm nay.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
