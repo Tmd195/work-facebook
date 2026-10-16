@@ -1,5 +1,5 @@
 {
- "count": 14,
+ "count": 15,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -7,7 +7,8 @@
   "ma-of-ma",
   "supertrend",
   "logistic-signal-calibration",
-  "mama-fama"
+  "mama-fama",
+  "ehlers-instantaneous-trendline"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -23,6 +24,7 @@
   "Hệ thống Logistic Signal Calibration cho XAUUSD: điểm xác suất 0–1, ngưỡng 0,7/0,3, bộ lọc độ tin cậy và đặt SL/TP theo ATR",
   "Checklist 3 điều kiện vào lệnh vàng XAUUSD: xu hướng H4, vùng hỗ trợ, nến xác nhận; quy tắc chấm điểm đủ 3 mới vào và đặt SL/TP theo R:R 1:2",
   "Hệ thống MAMA/FAMA cho XAUUSD: cặp trung bình thích nghi MESA, tín hiệu giao cắt làm tín hiệu xu hướng, bộ lọc hai đường tách rộng và đặt SL/TP theo ATR với R:R 1:2",
-  "Toán kỳ vọng trong quản lý vốn XAUUSD: với R:R 1 ăn 2, chỉ cần thắng 4 trên 10 lệnh vẫn có lời, vì sao win rate cao mà R:R tệ vẫn cháy, cách cố định tỉ lệ lời lỗ và ghi nhật ký để lộ win rate thật"
+  "Toán kỳ vọng trong quản lý vốn XAUUSD: với R:R 1 ăn 2, chỉ cần thắng 4 trên 10 lệnh vẫn có lời, vì sao win rate cao mà R:R tệ vẫn cháy, cách cố định tỉ lệ lời lỗ và ghi nhật ký để lộ win rate thật",
+  "Hệ thống Ehlers Instantaneous Trendline cho XAUUSD: đường xu hướng tức thời ít trễ, tín hiệu cắt trigger thuận khung lớn, bộ lọc nhiễu và đặt SL/TP theo ATR"
  ]
 }
