@@ -601,19 +601,7 @@
   "462682",
   "462685"
  ],
- "pending": [
-  {
-   "id": "462685",
-   "at": "2026-10-16T23:34:19+07:00",
-   "time": "23:34",
-   "text": "Giá dầu WTI mở rộng đà tăng trong ngày lên 2,00%, hiện ở mức 98,03 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
