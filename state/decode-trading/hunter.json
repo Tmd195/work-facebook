@@ -1,11 +1,5 @@
 {
  "seen": [
-  "461879",
-  "461881",
-  "461882",
-  "461883",
-  "461884",
-  "461885",
   "461891",
   "461890",
   "461889",
@@ -599,7 +593,13 @@
   "462478",
   "462477",
   "462476",
-  "462475"
+  "462475",
+  "462485",
+  "462484",
+  "462483",
+  "462482",
+  "462481",
+  "462480"
  ],
  "pending": [
   {
@@ -618,6 +618,28 @@
    "at": "2026-10-16T10:38:15+07:00",
    "time": "10:38",
    "text": "Chủ tịch Fed Warsh: Tôi có thể quá nhạy cảm với bóng đen do cuộc khủng hoảng tài chính toàn cầu để lại.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "462485",
+   "at": "2026-10-16T10:42:41+07:00",
+   "time": "10:42",
+   "text": "Chủ tịch Fed Warsh: Đừng đoán trước kết quả cuộc họp.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "462484",
+   "at": "2026-10-16T10:42:02+07:00",
+   "time": "10:42",
+   "text": "Chủ tịch Fed Warsh: Tại Fed, chúng tôi đã nói rõ rằng sẽ đạt được ổn định giá cả, tôi không tán thành việc đưa ra kết luận vội vàng về kết quả cuộc họp.",
    "important": true,
    "star": 0,
    "actual": "null",
