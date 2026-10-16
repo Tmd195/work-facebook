@@ -1,10 +1,5 @@
 {
  "seen": [
-  "461879",
-  "461881",
-  "461882",
-  "461883",
-  "461884",
   "461885",
   "461886",
   "461887",
@@ -599,7 +594,12 @@
   "462479",
   "462478",
   "462477",
-  "462476"
+  "462476",
+  "462484",
+  "462483",
+  "462482",
+  "462481",
+  "462480"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-10-16T10:39:44+07:00",
    "time": "10:39",
    "text": "Chủ tịch Fed Warsh: Chúng ta sẽ có thêm vài cuộc họp nữa trong năm nay, đó sẽ là thời điểm then chốt.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "462484",
+   "at": "2026-10-16T10:42:02+07:00",
+   "time": "10:42",
+   "text": "Chủ tịch Fed Warsh: Tại Fed, chúng tôi đã nói rõ rằng sẽ đạt được ổn định giá cả, tôi không tán thành việc đưa ra kết luận vội vàng về kết quả cuộc họp.",
    "important": true,
    "star": 0,
    "actual": "null",
