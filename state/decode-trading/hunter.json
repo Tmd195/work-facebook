@@ -1,10 +1,5 @@
 {
  "seen": [
-  "461875",
-  "461876",
-  "461877",
-  "461878",
-  "461880",
   "461879",
   "461881",
   "461882",
@@ -599,9 +594,37 @@
   "462470",
   "462472",
   "462474",
-  "462473"
+  "462473",
+  "462479",
+  "462478",
+  "462477",
+  "462476",
+  "462475"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462477",
+   "at": "2026-10-16T10:39:44+07:00",
+   "time": "10:39",
+   "text": "Chủ tịch Fed Warsh: Chúng ta sẽ có thêm vài cuộc họp nữa trong năm nay, đó sẽ là thời điểm then chốt.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "462475",
+   "at": "2026-10-16T10:38:15+07:00",
+   "time": "10:38",
+   "text": "Chủ tịch Fed Warsh: Tôi có thể quá nhạy cảm với bóng đen do cuộc khủng hoảng tài chính toàn cầu để lại.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
