@@ -1904,5 +1904,34 @@
    "price": 4157.1,
    "title": "Vàng hồi vào cụm kháng cự mạnh 4157-4172, ưu tiên canh SELL"
   }
+ },
+ "2026-10-16 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122131675442735108",
+  "post_id": "1121396124381014_122131675442735108",
+  "posted_at": "2026-10-16T07:30:03.314190+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "09:00",
+     "datetime": "2026-10-16T09:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "BOE Gov Bailey Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "10:30",
+     "datetime": "2026-10-16T10:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Fed Chairman Warsh Speaks",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
