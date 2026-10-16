@@ -1,6 +1,5 @@
 {
  "seen": [
-  "461875",
   "461876",
   "461877",
   "461878",
@@ -599,9 +598,22 @@
   "462470",
   "462472",
   "462474",
-  "462473"
+  "462473",
+  "462475"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "462475",
+   "at": "2026-10-16T10:38:15+07:00",
+   "time": "10:38",
+   "text": "Chủ tịch Fed Warsh: Tôi có thể quá nhạy cảm với bóng đen do cuộc khủng hoảng tài chính toàn cầu để lại.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-03": 99,
   "2026-10-05": 2,
