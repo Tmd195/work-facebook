@@ -601,19 +601,7 @@
   "462759",
   "462758"
  ],
- "pending": [
-  {
-   "id": "462758",
-   "at": "2026-10-17T07:40:33+07:00",
-   "time": "07:40",
-   "text": "Tổng thống Mỹ Trump trong một sắc lệnh hành pháp cho biết, ông miễn trừ ngay từ hôm nay một số biện pháp trừng phạt, biện pháp hạn chế và thuế quan theo quy định của Đạo luật Graham trừng phạt Nga và Iran.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
