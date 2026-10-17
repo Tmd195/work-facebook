@@ -601,19 +601,7 @@
   "462790",
   "462791"
  ],
- "pending": [
-  {
-   "id": "462791",
-   "at": "2026-10-17T15:27:40+07:00",
-   "time": "15:27",
-   "text": "Đồng sáng lập Anthropic, Jack Clark: Một mô hình kinh tế nội bộ cho thấy, nếu các mô hình trí tuệ nhân tạo thâm nhập vào nền kinh tế trong vòng một năm tới, GDP của Mỹ đến năm 2030 có thể đạt 44 nghìn tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
