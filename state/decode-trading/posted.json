@@ -566,6 +566,20 @@
    "album": "market_structure"
   }
  },
+ "2026-10-18 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1110910341302869/",
+  "post_id": "1110910341302869",
+  "posted_at": "2026-10-18T20:00:40.965214+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V4|2026-08-24T01:50:00+00:00",
+   "version": "V4",
+   "side": "BUY",
+   "pips": 150,
+   "duration": 13.0
+  }
+ },
  "2026-10-18 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/1118435500932737/",
