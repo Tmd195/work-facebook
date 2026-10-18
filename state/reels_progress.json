@@ -1,5 +1,5 @@
 {
- "count": 16,
+ "count": 17,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -8,7 +8,8 @@
   "supertrend",
   "logistic-signal-calibration",
   "mama-fama",
-  "ehlers-instantaneous-trendline"
+  "ehlers-instantaneous-trendline",
+  "chandelier-exit"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -26,6 +27,7 @@
   "Hệ thống MAMA/FAMA cho XAUUSD: cặp trung bình thích nghi MESA, tín hiệu giao cắt làm tín hiệu xu hướng, bộ lọc hai đường tách rộng và đặt SL/TP theo ATR với R:R 1:2",
   "Toán kỳ vọng trong quản lý vốn XAUUSD: với R:R 1 ăn 2, chỉ cần thắng 4 trên 10 lệnh vẫn có lời, vì sao win rate cao mà R:R tệ vẫn cháy, cách cố định tỉ lệ lời lỗ và ghi nhật ký để lộ win rate thật",
   "Hệ thống Ehlers Instantaneous Trendline cho XAUUSD: đường xu hướng tức thời ít trễ, tín hiệu cắt trigger thuận khung lớn, bộ lọc nhiễu và đặt SL/TP theo ATR",
-  "Dời dừng lỗ theo đáy swing để ôm trọn sóng vàng XAUUSD"
+  "Dời dừng lỗ theo đáy swing để ôm trọn sóng vàng XAUUSD",
+  "Hệ thống Chandelier Exit cho XAUUSD: dừng lỗ kéo theo treo từ đỉnh/đáy cao nhất 22 nến trừ 3 ATR, tín hiệu vào lệnh, bộ lọc nhiễu và cách đặt SL/TP"
  ]
 }

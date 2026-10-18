@@ -2108,5 +2108,19 @@
    "series": "pivot-point",
    "part": 8
   }
+ },
+ "2026-10-18 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1886514962316038/",
+  "post_id": "1886514962316038",
+  "posted_at": "2026-10-18T19:15:40.020296+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống Chandelier Exit cho XAUUSD: dừng lỗ kéo theo treo từ đỉnh/đáy cao nhất 22 nến trừ 3 ATR, tín hiệu vào lệnh, bộ lọc nhiễu và cách đặt SL/TP",
+   "pillar": "he-thong",
+   "system": "chandelier-exit",
+   "duration": 59.1,
+   "music": "take-this-higher.mp3"
+  }
  }
 }
