@@ -943,5 +943,20 @@
   "posted_at": "2026-10-18T15:15:06.127871+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-18 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1102292699177596/",
+  "post_id": "1102292699177596",
+  "posted_at": "2026-10-18T19:45:06.071575+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDJPY|158.33600",
+   "symbol": "USDJPY",
+   "system": "fibo",
+   "side": "sell",
+   "rr": 4.1,
+   "duration": 9.9
+  }
  }
 }
