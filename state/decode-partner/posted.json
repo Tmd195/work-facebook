@@ -928,6 +928,14 @@
    "duration": 57.4
   }
  },
+ "2026-10-18 cwg_wk_ahead 20:15": {
+  "job": "cwg_wk_ahead",
+  "link": "https://www.facebook.com/122099784345498398/posts/122112886995498398",
+  "post_id": "1379542878568858_122112886995498398",
+  "posted_at": "2026-10-18T20:15:05.592470+07:00",
+  "preview": false,
+  "meta": {}
+ },
  "2026-10-18 cwg_wk_cot 10:15": {
   "job": "cwg_wk_cot",
   "link": "https://www.facebook.com/122099784345498398/posts/122112673533498398",
