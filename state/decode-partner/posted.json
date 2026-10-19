@@ -1003,6 +1003,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-19 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1093539190237960/",
+  "post_id": "1093539190237960",
+  "posted_at": "2026-10-19T19:45:44.912380+07:00",
+  "preview": false,
+  "meta": {
+   "key": "XAUUSD|4133.49971",
+   "symbol": "XAUUSD",
+   "system": "retest",
+   "side": "sell",
+   "rr": 8.9,
+   "duration": 9.9
+  }
+ },
  "2026-10-19 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/1763783361340861/",
