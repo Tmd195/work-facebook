@@ -2208,5 +2208,51 @@
    "price": 4172.89,
    "title": "XAUUSD giằng co 4164-4200: ưu tiên mua đỡ, canh bán đỉnh trong biên"
   }
+ },
+ "2026-10-19 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132257214735108",
+  "post_id": "1121396124381014_122132257214735108",
+  "posted_at": "2026-10-19T18:30:07.775335+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4188.1,
+      4191.44
+     ],
+     "sl": 4216.21,
+     "tp": [
+      4166.36,
+      4161.84,
+      4151.08
+     ],
+     "trigger": "Giá retest 4188-4191 và bị từ chối, nến H1 đóng dưới 4188",
+     "invalidation": "H1/H4 đóng cửa trên 4200"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4164.14,
+      4166.36
+     ],
+     "sl": 4149.44,
+     "tp": [
+      4176.72,
+      4188.1,
+      4198.87
+     ],
+     "trigger": "Giá quét xuống 4164-4166 giữ vững, H1 đảo chiều tăng",
+     "invalidation": "H1 đóng cửa dưới 4160"
+    }
+   ],
+   "price": 4172.33,
+   "title": "XAUUSD phiên Mỹ: giằng co 4160-4191, giao dịch hai biên range"
+  }
  }
 }
