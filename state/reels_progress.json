@@ -1,5 +1,5 @@
 {
- "count": 17,
+ "count": 18,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -28,6 +28,7 @@
   "Toán kỳ vọng trong quản lý vốn XAUUSD: với R:R 1 ăn 2, chỉ cần thắng 4 trên 10 lệnh vẫn có lời, vì sao win rate cao mà R:R tệ vẫn cháy, cách cố định tỉ lệ lời lỗ và ghi nhật ký để lộ win rate thật",
   "Hệ thống Ehlers Instantaneous Trendline cho XAUUSD: đường xu hướng tức thời ít trễ, tín hiệu cắt trigger thuận khung lớn, bộ lọc nhiễu và đặt SL/TP theo ATR",
   "Dời dừng lỗ theo đáy swing để ôm trọn sóng vàng XAUUSD",
-  "Hệ thống Chandelier Exit cho XAUUSD: dừng lỗ kéo theo treo từ đỉnh/đáy cao nhất 22 nến trừ 3 ATR, tín hiệu vào lệnh, bộ lọc nhiễu và cách đặt SL/TP"
+  "Hệ thống Chandelier Exit cho XAUUSD: dừng lỗ kéo theo treo từ đỉnh/đáy cao nhất 22 nến trừ 3 ATR, tín hiệu vào lệnh, bộ lọc nhiễu và cách đặt SL/TP",
+  "Thiết lập khung giờ giao dịch cho hệ thống vàng XAUUSD: chỉ vào lệnh trong phiên London và overlap London–New York (7–11h tối giờ Việt Nam), tránh phiên Á đi ngang, né mốc tin tức và giới hạn 2 lệnh mỗi ngày"
  ]
 }
