@@ -1,8 +1,5 @@
 {
  "seen": [
-  "462530",
-  "462532",
-  "462531",
   "462533",
   "462536",
   "462535",
@@ -599,21 +596,12 @@
   "463126",
   "463125",
   "463129",
-  "463128"
+  "463128",
+  "463132",
+  "463131",
+  "463130"
  ],
- "pending": [
-  {
-   "id": "463126",
-   "at": "2026-10-20T02:21:41+07:00",
-   "time": "02:21",
-   "text": "Ngày 20 tháng 10, người phát ngôn Lực lượng Vệ binh Cách mạng Iran Hossein Mohebbi trong cuộc phỏng vấn độc quyền với \"Tehran Times\" cho biết Iran chưa huy động toàn bộ năng lực để phong tỏa hoàn toàn eo biển Hormuz. Ông cảnh báo nếu Mỹ một lần nữa tiến hành hành động quân sự, dù chỉ là cuộc tấn công hạn chế, Iran cũng sẽ đáp trả mạnh mẽ hơn, và nói: \"Nếu Mỹ có hành động mới, thế giới sẽ đối mặt với cuộc khủng hoảng năng lượng nghiêm trọng.\" Mohebbi cũng cho biết Iran chưa liên kết tình hình eo biển Hormuz, eo biển Bab-el-Mandeb và kênh đào Suez với nhau, cũng chưa huy động toàn bộ lực lượng trong khu vực và năng lực của \"Trục kháng chiến\".",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-06": 1,
   "2026-10-07": 1,
