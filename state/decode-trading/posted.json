@@ -615,6 +615,20 @@
    "album": "ma_filter"
   }
  },
+ "2026-10-19 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1648843436946566/",
+  "post_id": "1648843436946566",
+  "posted_at": "2026-10-19T20:00:07.206143+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V7|2026-08-13T15:40:00+00:00",
+   "version": "V7",
+   "side": "SELL",
+   "pips": 150,
+   "duration": 15.0
+  }
+ },
  "2026-10-19 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/2894801724225684/",
