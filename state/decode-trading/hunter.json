@@ -601,19 +601,7 @@
   "462981",
   "462982"
  ],
- "pending": [
-  {
-   "id": "462982",
-   "at": "2026-10-19T17:21:29+07:00",
-   "time": "17:21",
-   "text": "Tesla (TSLA.O): Thù lao năm 2025 của Musk bao gồm 158,36 tỷ USD thưởng cổ phiếu.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
