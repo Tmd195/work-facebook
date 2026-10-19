@@ -601,30 +601,7 @@
   "463019",
   "463018"
  ],
- "pending": [
-  {
-   "id": "463019",
-   "at": "2026-10-19T19:30:01+07:00",
-   "time": "19:30",
-   "text": "CPI cốt lõi (y/y) Canada",
-   "important": true,
-   "star": 1,
-   "actual": "2.2",
-   "forecast": "-%",
-   "previous": "2.4"
-  },
-  {
-   "id": "463018",
-   "at": "2026-10-19T19:30:01+07:00",
-   "time": "19:30",
-   "text": "CPI (y/y)  Canada",
-   "important": true,
-   "star": 2,
-   "actual": "3.1",
-   "forecast": "3.20%",
-   "previous": "3.00"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
