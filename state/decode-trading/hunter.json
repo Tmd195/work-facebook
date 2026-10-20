@@ -1,7 +1,5 @@
 {
  "seen": [
-  "462752",
-  "462750",
   "462753",
   "462754",
   "462755",
@@ -599,9 +597,23 @@
   "463348",
   "463346",
   "463347",
-  "463350"
+  "463350",
+  "463352",
+  "463351"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "463352",
+   "at": "2026-10-20T19:39:42+07:00",
+   "time": "19:39",
+   "text": "Khảo sát của Reuters cho thấy toàn bộ 100 nhà kinh tế đều dự báo Cục Dự trữ Liên bang Mỹ (Fed) sẽ tăng lãi suất vào tháng 12 năm 2026.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
