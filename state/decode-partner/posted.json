@@ -1053,5 +1053,20 @@
   "posted_at": "2026-10-20T08:45:03.513283+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-20 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/2290105678479473/",
+  "post_id": "2290105678479473",
+  "posted_at": "2026-10-20T19:45:32.117268+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURJPY|179.44800",
+   "symbol": "EURJPY",
+   "system": "abcd",
+   "side": "sell",
+   "rr": 4.6,
+   "duration": 9.9
+  }
  }
 }
