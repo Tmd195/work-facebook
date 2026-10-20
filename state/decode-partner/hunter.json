@@ -601,19 +601,7 @@
   "463294",
   "463295"
  ],
- "pending": [
-  {
-   "id": "463295",
-   "at": "2026-10-20T16:50:51+07:00",
-   "time": "16:50",
-   "text": "Giám đốc Cơ quan Năng lượng Quốc tế Birol: Nếu cần thiết, sẽ xem xét giải phóng thêm dầu từ kho dự trữ khẩn cấp.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-06": 1,
   "2026-10-07": 1,
