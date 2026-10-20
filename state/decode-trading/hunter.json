@@ -1,6 +1,5 @@
 {
  "seen": [
-  "462892",
   "462894",
   "462893",
   "462897",
@@ -599,9 +598,22 @@
   "463487",
   "463486",
   "463491",
-  "463490"
+  "463490",
+  "463492"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "463492",
+   "at": "2026-10-21T03:20:00+07:00",
+   "time": "03:20",
+   "text": "Dữ liệu tồn kho dầu thô API của Mỹ cho tuần kết thúc ngày 16 tháng 10 sẽ được công bố sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
