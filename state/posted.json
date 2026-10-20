@@ -2279,5 +2279,25 @@
    "price": 4172.33,
    "title": "XAUUSD phiên Mỹ: giằng co 4160-4191, giao dịch hai biên range"
   }
+ },
+ "2026-10-20 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132344598735108",
+  "post_id": "1121396124381014_122132344598735108",
+  "posted_at": "2026-10-20T07:30:04.478518+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "13:00",
+     "datetime": "2026-10-20T13:00:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "Average Earnings Index 3m/y",
+     "forecast": "3.8%",
+     "previous": "3.9%"
+    }
+   ]
+  }
  }
 }
