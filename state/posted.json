@@ -2356,5 +2356,51 @@
    "price": 4136.76,
    "title": "XAUUSD nghiêng giảm, canh bán vùng hồi 4156-4165 phiên Á-Âu"
   }
+ },
+ "2026-10-20 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132396444735108",
+  "post_id": "1121396124381014_122132396444735108",
+  "posted_at": "2026-10-20T18:30:10.900539+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4144.12,
+      4150.52
+     ],
+     "sl": 4172.83,
+     "tp": [
+      4111.84,
+      4100.0,
+      4074.68
+     ],
+     "trigger": "Giá hồi lên 4144-4150 (EMA50 H1, Fibo 0.5 H4, mây H4) và xuất hiện nến H1 đảo chiều giảm",
+     "invalidation": "H1 đóng cửa trên 4160.95 (reclaim vùng Z12/CHoCH)"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4107.42,
+      4111.84
+     ],
+     "sl": 4074.68,
+     "tp": [
+      4123.37,
+      4137.69,
+      4150.52
+     ],
+     "trigger": "Giá về 4107-4111 (đáy phiên Âu, Fibo 0.236 H4) và có nến H1 từ chối giảm rõ",
+     "invalidation": "H1 đóng cửa dưới 4100 (thủng Z5), mở đường về Z4"
+    }
+   ],
+   "price": 4121.43,
+   "title": "XAUUSD phiên Mỹ: ưu tiên SELL khi giá hồi, lợi suất cao tiếp tục đè"
+  }
  }
 }
