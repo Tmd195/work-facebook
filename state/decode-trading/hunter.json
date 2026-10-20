@@ -1,6 +1,5 @@
 {
  "seen": [
-  "462787",
   "462788",
   "462789",
   "462790",
@@ -599,54 +598,10 @@
   "463382",
   "463381",
   "463386",
-  "463385"
+  "463385",
+  "463387"
  ],
- "pending": [
-  {
-   "id": "463384",
-   "at": "2026-10-20T21:26:37+07:00",
-   "time": "21:26",
-   "text": "Giá bạc giao ngay trong ngày mở rộng mức tăng lên 2,00%, hiện ở mức 58,24 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463382",
-   "at": "2026-10-20T21:25:05+07:00",
-   "time": "21:25",
-   "text": "Ngày 20 tháng 10, do ảnh hưởng của việc Mỹ và Iran sơ bộ phê duyệt đề xuất hòa giải, giá dầu quốc tế tiếp tục giảm, dầu Brent trong ngày giảm hơn 2,00%, hiện ở mức 104,78 USD/thùng. Dầu WTI hiện ở mức 96,18 USD/thùng, trong ngày giảm gần 2%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463381",
-   "at": "2026-10-20T21:24:50+07:00",
-   "time": "21:24",
-   "text": "Vàng giao ngay tăng hơn 10 USD trong ngắn hạn, lên 4.144,15 USD/ounce; bạc giao ngay vượt 58 USD/ounce, tăng 1,60% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463385",
-   "at": "2026-10-20T21:27:48+07:00",
-   "time": "21:27",
-   "text": "WTI giảm tiếp, chạm xuống 96 USD/thùng, giảm 2,14% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
