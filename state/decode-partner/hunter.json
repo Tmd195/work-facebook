@@ -1,7 +1,5 @@
 {
  "seen": [
-  "462785",
-  "462786",
   "462787",
   "462788",
   "462789",
@@ -599,7 +597,9 @@
   "463381",
   "463380",
   "463384",
-  "463383"
+  "463383",
+  "463386",
+  "463385"
  ],
  "pending": [
   {
@@ -629,6 +629,17 @@
    "at": "2026-10-20T21:26:37+07:00",
    "time": "21:26",
    "text": "Giá bạc giao ngay trong ngày mở rộng mức tăng lên 2,00%, hiện ở mức 58,24 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "463385",
+   "at": "2026-10-20T21:27:48+07:00",
+   "time": "21:27",
+   "text": "WTI giảm tiếp, chạm xuống 96 USD/thùng, giảm 2,14% trong ngày.",
    "important": true,
    "star": 0,
    "actual": "null",
