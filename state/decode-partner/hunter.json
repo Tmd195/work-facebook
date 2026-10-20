@@ -1,6 +1,5 @@
 {
  "seen": [
-  "462732",
   "462738",
   "462737",
   "462736",
@@ -599,21 +598,10 @@
   "463328",
   "463329",
   "463330",
-  "463331"
+  "463331",
+  "463332"
  ],
- "pending": [
-  {
-   "id": "463329",
-   "at": "2026-10-20T18:36:52+07:00",
-   "time": "18:36",
-   "text": "Dầu thô WTI vượt 101 USD/thùng, tăng 3,01% trong ngày. Dầu thô Brent tăng 2 USD trong ngày, hiện ở mức 108,94 USD/thùng, mức tăng 1,87%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-06": 1,
   "2026-10-07": 1,
