@@ -601,19 +601,7 @@
   "463489",
   "463488"
  ],
- "pending": [
-  {
-   "id": "463484",
-   "at": "2026-10-21T03:06:11+07:00",
-   "time": "03:06",
-   "text": "SpaceX(SPCX.O) doanh thu quý 3 năm 2026 đạt 14,58 tỷ USD, kỳ vọng thị trường là 12,87 tỷ USD,.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-07": 1,
   "2026-10-08": 3,
