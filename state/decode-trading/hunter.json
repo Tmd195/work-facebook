@@ -601,19 +601,7 @@
   "463173",
   "463174"
  ],
- "pending": [
-  {
-   "id": "463174",
-   "at": "2026-10-20T08:19:31+07:00",
-   "time": "08:19",
-   "text": "Vàng giao ngay mất mốc 4.120 USD/ounce, giảm 0,59% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
