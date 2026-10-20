@@ -2299,5 +2299,51 @@
     }
    ]
   }
+ },
+ "2026-10-20 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132355122735108",
+  "post_id": "1121396124381014_122132355122735108",
+  "posted_at": "2026-10-20T10:00:09.960097+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4156.22,
+      4164.86
+     ],
+     "sl": 4185.74,
+     "tp": [
+      4129.13,
+      4116.49,
+      4103.1
+     ],
+     "trigger": "Giá hồi lên 4156-4165 và xuất hiện nến từ chối/đảo chiều giảm trên H1",
+     "invalidation": "H1/H4 đóng cửa dứt khoát trên 4165 (đỉnh vùng cung)"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4100,
+      4103.1
+     ],
+     "sl": 4065.14,
+     "tp": [
+      4116.49,
+      4139.59,
+      4156.22
+     ],
+     "trigger": "Giá về 4100-4103 và cho phản ứng tăng rõ (engulfing/reclaim) trên H1",
+     "invalidation": "Đóng cửa H1 dưới 4073 (gãy đáy hợp lưu)"
+    }
+   ],
+   "price": 4136.76,
+   "title": "XAUUSD nghiêng giảm, canh bán vùng hồi 4156-4165 phiên Á-Âu"
+  }
  }
 }
