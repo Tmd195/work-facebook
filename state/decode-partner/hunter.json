@@ -601,19 +601,7 @@
   "463268",
   "463269"
  ],
- "pending": [
-  {
-   "id": "463268",
-   "at": "2026-10-20T15:50:27+07:00",
-   "time": "15:50",
-   "text": "WTI tăng vượt 100 USD/thùng, lần đầu tiên kể từ ngày 16 tháng 9, tăng 1,98% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-06": 1,
   "2026-10-07": 1,
