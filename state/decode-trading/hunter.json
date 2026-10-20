@@ -1,8 +1,5 @@
 {
  "seen": [
-  "462613",
-  "462612",
-  "462620",
   "462619",
   "462618",
   "462617",
@@ -599,9 +596,24 @@
   "463211",
   "463210",
   "463209",
-  "463212"
+  "463212",
+  "463215",
+  "463214",
+  "463213"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "463214",
+   "at": "2026-10-20T12:50:53+07:00",
+   "time": "12:50",
+   "text": "Những người am hiểu cho biết Ngân hàng Trung ương Nhật Bản dự kiến sẽ giữ nguyên lãi suất trong tháng 10 và ám chỉ khả năng tăng lãi suất sớm nhất vào tháng 12. Ngân hàng Trung ương Nhật Bản có thể sẽ điều chỉnh nhẹ tăng dự báo lạm phát cho năm tài chính 2027 trong báo cáo quý công bố tại cuộc họp ngày 29-30 tháng 10.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
