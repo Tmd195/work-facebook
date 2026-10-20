@@ -1,7 +1,5 @@
 {
  "seen": [
-  "462783",
-  "462784",
   "462785",
   "462786",
   "462787",
@@ -599,7 +597,9 @@
   "463379",
   "463382",
   "463381",
-  "463380"
+  "463380",
+  "463384",
+  "463383"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-10-20T21:24:50+07:00",
    "time": "21:24",
    "text": "Vàng giao ngay tăng hơn 10 USD trong ngắn hạn, lên 4.144,15 USD/ounce; bạc giao ngay vượt 58 USD/ounce, tăng 1,60% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "463384",
+   "at": "2026-10-20T21:26:37+07:00",
+   "time": "21:26",
+   "text": "Giá bạc giao ngay trong ngày mở rộng mức tăng lên 2,00%, hiện ở mức 58,24 USD/ounce.",
    "important": true,
    "star": 0,
    "actual": "null",
