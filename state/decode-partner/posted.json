@@ -1082,6 +1082,24 @@
    "duration": 9.9
   }
  },
+ "2026-10-21 cwg_breaking 13:02": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122114025081498398",
+  "post_id": "1379542878568858_122114025081498398",
+  "posted_at": "2026-10-21T13:03:32.628377+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "CPI (y/y) Anh",
+    "CPI cốt lõi (y/y) Anh",
+    "CPI (m/m) Anh",
+    "CPI cốt lõi (m/m) Anh",
+    "Chỉ số vật giá bán lẻ(m/m) Anh",
+    "Chỉ số vật giá bán lẻ(y/y) Anh",
+    "Chỉ số giá bán lẻ (cốt lõi) (y/y) Anh"
+   ]
+  }
+ },
  "2026-10-21 cwg_macro 10:15": {
   "job": "cwg_macro",
   "link": "https://www.facebook.com/122099784345498398/posts/122113977711498398",
