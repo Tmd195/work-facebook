@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463192",
   "463194",
   "463195",
   "463196",
@@ -599,21 +598,10 @@
   "463789",
   "463790",
   "463791",
-  "463792"
+  "463792",
+  "463793"
  ],
- "pending": [
-  {
-   "id": "463791",
-   "at": "2026-10-21T22:40:04+07:00",
-   "time": "22:40",
-   "text": "Ngày 21 tháng 10 đưa tin, theo Reuters và Axios, Điện Kremlin cho biết Tổng thống Nga Putin hôm thứ Tư đã nói với đặc phái viên Mỹ Witkoff rằng ông \"về nguyên tắc đồng ý\" nối lại đàm phán hòa bình ba bên giữa Nga, Ukraine và Mỹ vào khoảng ngày 10 tháng 11 nhằm chấm dứt xung đột Nga-Ukraine, địa điểm có thể được đặt tại Abu Dhabi. Cùng ngày, Witkoff đã tổ chức cuộc hội đàm kéo dài ba giờ với Putin tại St. Petersburg, trình lên ông phương án mới nhất nhằm chấm dứt xung đột Nga-Ukraine. Đặc phái viên Trump là Kushner tham gia cuộc hội đàm qua hình thức trực tuyến. Witkoff nói với Putin rằng cuộc đàm phán tại Oslo đã đạt được tiến triển, mong hai bên xem xét nối lại đàm phán ba bên Nga-Mỹ-Ukraine và cho phép các chuyên gia kỹ thuật tham gia thảo luận các vấn đề cụ thể. Ông cũng đã trình lên Putin nhiều tài liệu liên quan đến giải pháp hòa bình cho xung đột Nga-Ukraine. Ngoài ra, Putin còn đề nghị với Witkoff rằng mong muốn thảo luận khả năng Nga đóng vai trò trung gian giữa Mỹ và Iran. Putin cho biết Nga và Iran đã xây dựng mối quan hệ tin cậy đặc biệt kéo dài hàng thập kỷ, sẵn sàng cung cấp hỗ trợ nhằm giải quyết cuộc khủng hoảng hiện nay.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-08": 3,
   "2026-10-09": 2,
