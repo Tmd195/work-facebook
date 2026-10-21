@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463227",
   "463228",
   "463229",
   "463230",
@@ -599,21 +598,10 @@
   "463826",
   "463825",
   "463824",
-  "463823"
+  "463823",
+  "463827"
  ],
- "pending": [
-  {
-   "id": "463823",
-   "at": "2026-10-22T02:15:07+07:00",
-   "time": "02:15",
-   "text": "Ngày 22 tháng 10 đưa tin, tối ngày 21 tháng 10 theo giờ địa phương, theo kênh truyền hình Channel 12 của Israel dẫn lời các quan chức Mỹ cho biết, vào đầu tuần này, \"hàng chục máy bay chiến đấu và máy bay tiếp dầu của Israel đã bay qua Syria và Iraq, tiến sát biên giới Iran, lộ trình bay của chúng 'rất giống' với lộ trình tấn công nhằm vào Iran\". Bản tin dẫn lời các nguồn tin Mỹ cho biết, phía Mỹ nghi ngờ hành động này của quân đội Israel \"nhằm mục đích khiêu khích Iran\". Bản tin cho biết, nhóm máy bay chiến đấu này của quân đội Israel \"đã quay đầu trở về Israel ngay trước khi sắp tiến vào không phận Iran\". Phía Israel đã thông báo trước cho Mỹ về hành động này, gọi đây là \"hoạt động diễn tập quân sự và phô trương sức mạnh\", \"nhằm răn đe Iran\". Tuy nhiên bản tin cũng chỉ ra rằng, các nguồn tin liên quan cho rằng, \"một số quan chức Israel thực chất âm mưu dụ Iran nổ súng vào máy bay chiến đấu của quân đội Israel, từ đó tạo cớ để Israel phát động tấn công quân sự nhằm vào Iran\".",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
