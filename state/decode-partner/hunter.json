@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463143",
   "463142",
   "463145",
   "463144",
@@ -599,32 +598,10 @@
   "463738",
   "463741",
   "463740",
-  "463739"
+  "463739",
+  "463742"
  ],
- "pending": [
-  {
-   "id": "463741",
-   "at": "2026-10-21T20:00:36+07:00",
-   "time": "20:00",
-   "text": "Dầu thô WTI giảm 1,00% trong ngày, hiện ở mức 96,88 USD/thùng. Dầu thô Brent giảm 1,00% trong ngày, hiện ở mức 105,21 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463739",
-   "at": "2026-10-21T20:00:01+07:00",
-   "time": "20:00",
-   "text": "Phiên giao dịch đêm mở cửa, các hợp đồng tương lai chủ lực trong nước phần lớn giảm, dầu nhiên liệu giảm hơn 2%, nhựa, khí dầu mỏ hóa lỏng (LPG), dầu nhiên liệu lưu huỳnh thấp (LU), xút, thủy tinh giảm hơn 1%, khô đậu tương, đồng quốc tế giảm gần 1%. Về mức tăng, niken Thượng Hải, thép không gỉ (SS) tăng hơn 1%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-08": 3,
   "2026-10-09": 2,
