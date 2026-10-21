@@ -1,7 +1,5 @@
 {
  "seen": [
-  "463036",
-  "463035",
   "463034",
   "463033",
   "463038",
@@ -599,9 +597,23 @@
   "463633",
   "463632",
   "463631",
-  "463630"
+  "463630",
+  "463635",
+  "463634"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "463634",
+   "at": "2026-10-21T15:24:39+07:00",
+   "time": "15:24",
+   "text": "Lực lượng Houthi ở Yemen tuyên bố đã tấn công bằng tên lửa đạn đạo vào phòng tác chiến của Saudi bên trong trại Badr ở Aden, tên lửa đánh trúng mục tiêu một cách chính xác.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-08": 3,
   "2026-10-09": 2,
