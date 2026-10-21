@@ -1,9 +1,5 @@
 {
  "seen": [
-  "463084",
-  "463085",
-  "463088",
-  "463087",
   "463086",
   "463089",
   "463090",
@@ -599,7 +595,11 @@
   "463683",
   "463682",
   "463681",
-  "463680"
+  "463680",
+  "463687",
+  "463686",
+  "463685",
+  "463684"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-21T17:15:59+07:00",
    "time": "17:15",
    "text": "Giá dầu WTI tăng lên chạm 100 USD/thùng, tăng 2,16% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "463684",
+   "at": "2026-10-21T17:17:24+07:00",
+   "time": "17:17",
+   "text": "Do Iran phủ nhận đạt được bất kỳ tiến triển nào trong đàm phán ngoại giao, cùng với việc dự trữ dầu thô của Mỹ giảm, dầu thô WTI đã tăng lên chạm mốc 100 USD/thùng, dầu Brent tăng 2 USD trong ngày, hiện ở mức 108,28 USD/thùng, tăng 1,88%.",
    "important": true,
    "star": 0,
    "actual": "null",
