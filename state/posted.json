@@ -2427,5 +2427,34 @@
    "price": 4121.43,
    "title": "XAUUSD phiên Mỹ: ưu tiên SELL khi giá hồi, lợi suất cao tiếp tục đè"
   }
+ },
+ "2026-10-21 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132494466735108",
+  "post_id": "1121396124381014_122132494466735108",
+  "posted_at": "2026-10-21T07:30:05.962251+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "13:00",
+     "datetime": "2026-10-21T13:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "CPI y/y",
+     "forecast": "3.4%",
+     "previous": "3.1%"
+    },
+    {
+     "time": "20:00",
+     "datetime": "2026-10-21T20:00:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "BOE Gov Bailey Speaks",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
