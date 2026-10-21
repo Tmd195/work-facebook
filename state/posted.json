@@ -2513,5 +2513,51 @@
    "price": 4117.96,
    "title": "XAUUSD phiên Á-Âu: ưu tiên bán hồi, 4145 là ranh giới"
   }
+ },
+ "2026-10-21 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132566136735108",
+  "post_id": "1121396124381014_122132566136735108",
+  "posted_at": "2026-10-21T18:30:10.024676+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4128.21,
+      4131.55
+     ],
+     "sl": 4155.9,
+     "tp": [
+      4117.6,
+      4106.88,
+      4100.0
+     ],
+     "trigger": "H1 từ chối tại 4128-4131, nến giảm xác nhận, mất mốc 4117.6",
+     "invalidation": "Đóng cửa H1 trên 4155.9, giành lại EMA50 và mây H4"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4106.88,
+      4111.84
+     ],
+     "sl": 4100.0,
+     "tp": [
+      4117.6,
+      4128.21,
+      4138.94
+     ],
+     "trigger": "Giá về cụm 4106-4111 và bật tăng với nến đảo chiều rõ",
+     "invalidation": "Đóng cửa H1 dưới mốc tròn 4100"
+    }
+   ],
+   "price": 4128.26,
+   "title": "Vàng hồi vào kháng cự 4128-4131, ưu tiên canh bán theo xu hướng giảm"
+  }
  }
 }
