@@ -1,7 +1,5 @@
 {
  "seen": [
-  "463095",
-  "463099",
   "463098",
   "463097",
   "463096",
@@ -599,9 +597,23 @@
   "463690",
   "463694",
   "463693",
-  "463692"
+  "463692",
+  "463695",
+  "463696"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "463696",
+   "at": "2026-10-21T17:33:48+07:00",
+   "time": "17:33",
+   "text": "Ngày 21 tháng 10 đưa tin, Ngoại trưởng Iran Araghchi đăng bài trên Financial Times của Anh cho biết, tháng trước trong khuôn khổ Đại hội đồng Liên Hợp Quốc, ông đã gặp gỡ nhiều ngoại trưởng và truyền đi một thông điệp nhất quán: Iran tìm kiếm một thỏa thuận công bằng và đàng hoàng với Hoa Kỳ. Để đạt được mục tiêu này, Nhà Trắng phải thể hiện thiện chí và ý chí thực sự nhằm chấm dứt hoàn toàn hành vi xâm lược. Ông cho biết Iran kiên định theo đuổi giải pháp hòa bình cho xung đột một cách có phẩm giá, nhưng cũng đã chuẩn bị đầy đủ để tự vệ. Araghchi chỉ ra rằng Trump phát động cuộc chiến này dựa trên những giả định sai lầm căn bản về thực lực của Iran, đồng thời Iran hoàn toàn không có niềm tin vào thiện chí chung sống hòa bình với Iran mà chính quyền Hoa Kỳ tuyên bố. Xét thấy Nhà Trắng không những không thể hiện ý muốn đạt được đồng thuận mà còn đe dọa viện đến nhiều bạo lực hơn, hiện nay gần như không có lý do để kỳ vọng vào tiến triển. Tuy nhiên, dù vậy, với tư cách một nhà ngoại giao, Araghchi nói rằng ông vẫn có nghĩa vụ làm hết sức mình, kể cả khi hy vọng thành công mong manh, cũng phải nỗ lực thử các biện pháp ngoại giao.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
