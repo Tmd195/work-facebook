@@ -2456,5 +2456,51 @@
     }
    ]
   }
+ },
+ "2026-10-21 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132506358735108",
+  "post_id": "1121396124381014_122132506358735108",
+  "posted_at": "2026-10-21T10:00:16.276467+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4145.01,
+      4155.9
+     ],
+     "sl": 4172.83,
+     "tp": [
+      4111.84,
+      4100,
+      4074.68
+     ],
+     "trigger": "Giá hồi lên 4145-4156 (hợp lưu dày 12) và xuất hiện nến từ chối trên H1",
+     "invalidation": "H4 đóng cửa trên 4164.58, cấu trúc giảm bị phá"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4106.88,
+      4111.84
+     ],
+     "sl": 4086.5,
+     "tp": [
+      4125.1,
+      4131.55,
+      4145.01
+     ],
+     "trigger": "Giá về test 4107-4112 (hợp lưu 6) và giữ vững, có nến đảo chiều H1",
+     "invalidation": "H1 đóng cửa dưới 4100, mở đường về 4074"
+    }
+   ],
+   "price": 4117.96,
+   "title": "XAUUSD phiên Á-Âu: ưu tiên bán hồi, 4145 là ranh giới"
+  }
  }
 }
