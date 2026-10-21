@@ -800,5 +800,13 @@
  "2026-10-21 knowledge 12:00|examples": {
   "at": "2026-10-21T12:27:36.656145+07:00",
   "count": 3
+ },
+ "2026-10-21 morning 07:30|news|2026-10-21T13:00:00+07:00|GBP": {
+  "at": "2026-10-21T13:06:36.277670+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/latest",
+   "https://moneyweek.com/economy/news/live/inflation-cpi-september-2026-report"
+  ]
  }
 }
