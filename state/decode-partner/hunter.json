@@ -1,7 +1,5 @@
 {
  "seen": [
-  "463236",
-  "463237",
   "463239",
   "463238",
   "463240",
@@ -599,54 +597,11 @@
   "463831",
   "463830",
   "463835",
-  "463834"
+  "463834",
+  "463837",
+  "463836"
  ],
- "pending": [
-  {
-   "id": "463833",
-   "at": "2026-10-22T03:03:22+07:00",
-   "time": "03:03",
-   "text": "Doanh thu quý 3 năm 2026 của Tesla (TSLA.O) đạt 28 tỷ USD, cùng kỳ năm ngoái là 28,1 tỷ USD, kỳ vọng thị trường là 27,883 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463832",
-   "at": "2026-10-22T03:03:10+07:00",
-   "time": "03:03",
-   "text": "Meta Platforms (META.O) dự kiến doanh thu quý 4 từ 73 tỷ đến 76 tỷ USD, kỳ vọng thị trường là 73,73 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463831",
-   "at": "2026-10-22T03:02:07+07:00",
-   "time": "03:02",
-   "text": "Meta Platforms (META.O) có dòng tiền tự do quý 3 năm 2026 âm 2,12 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463830",
-   "at": "2026-10-22T03:01:25+07:00",
-   "time": "03:01",
-   "text": "Meta Platforms (META.O) quý 3 năm 2026 doanh thu 64,6 tỷ USD, cùng kỳ năm ngoái 51,242 tỷ USD, thị trường dự kiến 63,334 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-08": 3,
   "2026-10-09": 2,
