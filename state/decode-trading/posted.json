@@ -755,6 +755,16 @@
    "duration": 44.1
   }
  },
+ "2026-10-21 td_album 15:00": {
+  "job": "td_album",
+  "link": "https://www.facebook.com/122103151269499355/posts/122115735465499355",
+  "post_id": "1411036908756172_122115735465499355",
+  "posted_at": "2026-10-21T15:00:09.981539+07:00",
+  "preview": false,
+  "meta": {
+   "album": "ote_fibo"
+  }
+ },
  "2026-10-21 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122115577725499355",
