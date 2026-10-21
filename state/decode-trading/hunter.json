@@ -601,19 +601,7 @@
   "463794",
   "463795"
  ],
- "pending": [
-  {
-   "id": "463794",
-   "at": "2026-10-21T22:50:00+07:00",
-   "time": "22:50",
-   "text": "Thống đốc Ngân hàng Trung ương châu Âu Lagarde sẽ phát biểu sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
