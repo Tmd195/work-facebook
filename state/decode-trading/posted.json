@@ -827,6 +827,16 @@
    "duration": 44.0
   }
  },
+ "2026-10-22 td_album 15:00": {
+  "job": "td_album",
+  "link": "https://www.facebook.com/122103151269499355/posts/122116268157499355",
+  "post_id": "1411036908756172_122116268157499355",
+  "posted_at": "2026-10-22T15:00:13.791521+07:00",
+  "preview": false,
+  "meta": {
+   "album": "channel"
+  }
+ },
  "2026-10-22 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122116116861499355",
