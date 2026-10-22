@@ -601,27 +601,16 @@
   "463936",
   "463935"
  ],
- "pending": [
-  {
-   "id": "463936",
-   "at": "2026-10-22T11:44:42+07:00",
-   "time": "11:44",
-   "text": "Ngày 22 tháng 10, Hải quân Vệ binh Cách mạng Iran cho biết bốn tàu tham gia vận chuyển dầu trái phép ở phía bắc Vịnh Ba Tư đã đồng thời bị tấn công và bốc cháy sau khi bị lực lượng của họ theo dõi. Vệ binh Cách mạng cũng cho biết thêm ba tàu khác đã trúng mìn ở phía tây eo biển Hormuz. Vệ binh Cách mạng Iran cảnh báo quân đội Mỹ rằng nếu tiếp tục khiêu khích, có thể sẽ dẫn đến phản ứng quy mô lớn hơn nhắm vào các căn cứ khu vực của họ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
   "2026-10-14": 2,
   "2026-10-15": 2,
   "2026-10-20": 1,
-  "2026-10-21": 2
+  "2026-10-21": 2,
+  "2026-10-22": 1
  },
- "last_post": "2026-10-21T17:21:25.913175+07:00",
+ "last_post": "2026-10-22T11:51:36.933289+07:00",
  "fail": 0
 }
