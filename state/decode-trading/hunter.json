@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463450",
   "463451",
   "463452",
   "463454",
@@ -599,9 +598,22 @@
   "464045",
   "464046",
   "464048",
-  "464049"
+  "464049",
+  "464050"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464050",
+   "at": "2026-10-22T19:50:00+07:00",
+   "time": "19:50",
+   "text": "Thống đốc Ngân hàng Trung ương Anh Bailey sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
