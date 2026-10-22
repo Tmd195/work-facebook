@@ -601,30 +601,7 @@
   "463886",
   "463887"
  ],
- "pending": [
-  {
-   "id": "463888",
-   "at": "2026-10-22T07:50:31+07:00",
-   "time": "07:50",
-   "text": "Ngày 22 tháng 10, Ngân hàng Trung ương Hàn Quốc giữ nguyên lãi suất chính sách ở mức 3%, phù hợp với dự báo của thị trường. Trước đó, Hàn Quốc đã tăng lãi suất trong hai cuộc họp liên tiếp vào tháng 7 và tháng 8.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463887",
-   "at": "2026-10-22T07:50:04+07:00",
-   "time": "07:50",
-   "text": "Quyết định lãi suất  Hàn Quốc",
-   "important": true,
-   "star": 2,
-   "actual": "3",
-   "forecast": "3.00%",
-   "previous": "3.00"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
