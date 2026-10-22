@@ -601,19 +601,7 @@
   "463901",
   "463903"
  ],
- "pending": [
-  {
-   "id": "463903",
-   "at": "2026-10-22T09:05:44+07:00",
-   "time": "09:05",
-   "text": "Bạc giao ngay giảm 2,00% trong ngày, hiện ở mức 56,80 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-08": 3,
   "2026-10-09": 2,
