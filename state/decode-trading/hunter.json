@@ -1,7 +1,5 @@
 {
  "seen": [
-  "463347",
-  "463350",
   "463352",
   "463351",
   "463353",
@@ -599,7 +597,9 @@
   "463945",
   "463946",
   "463947",
-  "463948"
+  "463948",
+  "463950",
+  "463949"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-22T13:19:55+07:00",
    "time": "13:19",
    "text": "Lợi suất trái phiếu chính phủ Pháp kỳ hạn 10 năm tăng 4 điểm cơ bản, chạm 5,039%, mức cao nhất trong 24 năm.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "463949",
+   "at": "2026-10-22T13:20:53+07:00",
+   "time": "13:20",
+   "text": "Chênh lệch lợi suất trái phiếu chính phủ kỳ hạn 10 năm của Pháp so với trái phiếu chính phủ Đức đã mở rộng lên 161 điểm cơ bản, mức rộng nhất kể từ tháng 11 năm 2011.",
    "important": true,
    "star": 0,
    "actual": "null",
