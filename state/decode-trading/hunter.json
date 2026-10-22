@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463437",
   "463436",
   "463439",
   "463438",
@@ -599,9 +598,22 @@
   "464032",
   "464034",
   "464033",
-  "464035"
+  "464035",
+  "464036"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464036",
+   "at": "2026-10-22T18:24:34+07:00",
+   "time": "18:24",
+   "text": "Vàng giao ngay giảm ngắn hạn, lùi xuống dưới 4.060 USD/ounce, giảm 1,95% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
