@@ -1,8 +1,5 @@
 {
  "seen": [
-  "463370",
-  "463369",
-  "463372",
   "463374",
   "463373",
   "463375",
@@ -599,7 +596,10 @@
   "463969",
   "463968",
   "463967",
-  "463966"
+  "463966",
+  "463972",
+  "463971",
+  "463970"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-22T14:08:28+07:00",
    "time": "14:08",
    "text": "USD/JPY giảm dưới 157, giảm 0,72% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "463971",
+   "at": "2026-10-22T14:11:28+07:00",
+   "time": "14:11",
+   "text": "Giám đốc điều hành Aramco: Trong thời kỳ khủng hoảng, giá dầu lẽ ra có thể đạt mức cao hơn, một trong những yếu tố cản trở giá dầu tăng thêm là đường ống Đông-Tây.",
    "important": true,
    "star": 0,
    "actual": "null",
