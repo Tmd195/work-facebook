@@ -601,30 +601,7 @@
   "464097",
   "464094"
  ],
- "pending": [
-  {
-   "id": "464098",
-   "at": "2026-10-22T22:01:25+07:00",
-   "time": "22:01",
-   "text": "FED Kansas - Chỉ số sản lượng nghiệp sản xuất Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "16",
-   "forecast": "-",
-   "previous": "20"
-  },
-  {
-   "id": "464097",
-   "at": "2026-10-22T22:01:24+07:00",
-   "time": "22:01",
-   "text": "FED Kansas - Chỉ số tổng hợp nghiệp sản xuất Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "11",
-   "forecast": "-",
-   "previous": "14"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 2,
   "2026-10-12": 1,
