@@ -601,19 +601,7 @@
   "464075",
   "464079"
  ],
- "pending": [
-  {
-   "id": "464079",
-   "at": "2026-10-22T21:07:27+07:00",
-   "time": "21:07",
-   "text": "Vàng giao ngay mất mốc 4.050 USD/ounce, lần đầu tiên kể từ ngày 4 tháng 8, giảm 2,19% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
