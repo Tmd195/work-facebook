@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463567",
   "463568",
   "463569",
   "463570",
@@ -599,9 +598,22 @@
   "464163",
   "464165",
   "464164",
-  "464166"
+  "464166",
+  "464167"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464167",
+   "at": "2026-10-23T03:28:49+07:00",
+   "time": "03:28",
+   "text": "Tổng thống Mỹ Trump: (Về Iran) Chúng tôi đã giáng cho họ đòn rất mạnh, có thể sẽ tiến thêm một bước nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 2,
   "2026-10-12": 1,
