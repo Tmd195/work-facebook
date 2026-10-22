@@ -601,41 +601,7 @@
   "464177",
   "464176"
  ],
- "pending": [
-  {
-   "id": "464175",
-   "at": "2026-10-23T05:01:46+07:00",
-   "time": "05:01",
-   "text": "Úc S&P Global Services PMI",
-   "important": true,
-   "star": 2,
-   "actual": "47.8",
-   "forecast": "-",
-   "previous": "51.9"
-  },
-  {
-   "id": "464174",
-   "at": "2026-10-23T05:01:40+07:00",
-   "time": "05:01",
-   "text": "Chỉ số PMI sản xuất toàn cầu của S&P Úc",
-   "important": true,
-   "star": 2,
-   "actual": "49.7",
-   "forecast": "-",
-   "previous": "49.6"
-  },
-  {
-   "id": "464172",
-   "at": "2026-10-23T05:01:34+07:00",
-   "time": "05:01",
-   "text": "Úc S&P Global Composite PMI",
-   "important": true,
-   "star": 2,
-   "actual": "47.7",
-   "forecast": "-",
-   "previous": "51.3"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
