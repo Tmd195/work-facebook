@@ -601,19 +601,7 @@
   "463883",
   "463884"
  ],
- "pending": [
-  {
-   "id": "463884",
-   "at": "2026-10-22T07:14:51+07:00",
-   "time": "07:14",
-   "text": "Tin thị trường: SpaceX và Tesla dự kiến hoàn tất thương vụ sáp nhập trước khi nhiệm kỳ của Trump kết thúc, phấn đấu đạt thỏa thuận sáp nhập trong nửa đầu năm 2027.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
