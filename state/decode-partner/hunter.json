@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463532",
   "463533",
   "463534",
   "463535",
@@ -599,7 +598,8 @@
   "464128",
   "464130",
   "464129",
-  "464131"
+  "464131",
+  "464132"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-22T23:43:56+07:00",
    "time": "23:43",
    "text": "Lợi suất trái phiếu kho bạc kỳ hạn 5 năm của Mỹ giảm 15 điểm cơ bản, xuống 4,8%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "464132",
+   "at": "2026-10-22T23:47:00+07:00",
+   "time": "23:47",
+   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 30 năm của Mỹ giảm 10 điểm cơ bản, xuống 5,3%.",
    "important": true,
    "star": 0,
    "actual": "null",
