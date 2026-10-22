@@ -601,30 +601,7 @@
   "464054",
   "464053"
  ],
- "pending": [
-  {
-   "id": "464052",
-   "at": "2026-10-22T20:00:01+07:00",
-   "time": "20:00",
-   "text": "Phiên giao dịch đêm mở cửa, các hợp đồng tương lai chủ lực trong nước biến động trái chiều, dầu nhiên liệu lưu huỳnh thấp (LU) tăng hơn 3%, dầu nhiên liệu tăng gần 3%, dầu thô SC, khí dầu mỏ hóa lỏng (LPG), propylene tăng hơn 2%, polypropylene, methanol, benzen nguyên chất tăng hơn 1%. Về mức giảm, bạc Thượng Hải giảm hơn 2%, thiếc Thượng Hải, giấy offset, đồng quốc tế, kẽm Thượng Hải, xút ăn da, than cốc giảm hơn 1%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "464054",
-   "at": "2026-10-22T20:02:06+07:00",
-   "time": "20:02",
-   "text": "Bạc giao ngay giảm ngắn 0,3 USD, trong ngày lao dốc 4%, hiện ở mức 55,65 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
