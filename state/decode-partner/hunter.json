@@ -1,8 +1,5 @@
 {
  "seen": [
-  "463510",
-  "463508",
-  "463509",
   "463511",
   "463514",
   "463513",
@@ -599,7 +596,10 @@
   "464107",
   "464106",
   "464105",
-  "464104"
+  "464104",
+  "464110",
+  "464109",
+  "464108"
  ],
  "pending": [
   {
@@ -607,6 +607,28 @@
    "at": "2026-10-22T22:41:40+07:00",
    "time": "22:41",
    "text": "Tổng thống Mỹ Trump: Iran đã bịa đặt các vụ tấn công giả, rải mìn và nhiều sự kiện khác nhằm đẩy giá dầu lên cao.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "464110",
+   "at": "2026-10-22T22:43:42+07:00",
+   "time": "22:43",
+   "text": "Ngày 22 tháng 10, Tổng thống Mỹ Trump mới đây đăng bài viết: \"Iran đang cố gắng hết sức để đẩy giá dầu lên trước cuộc bầu cử giữa kỳ của Mỹ. Họ thậm chí còn bịa ra các vụ tấn công giả, rải mìn và đủ loại sự kiện khác, bởi vì hiện nay lượng dầu vận chuyển qua eo biển Hormuz còn nhiều hơn trước khi xung đột nổ ra. Đây thực sự là một chế độ tà ác, tôi chỉ mong người dân Mỹ và cả thế giới đều nhận ra họ tà ác đến mức nào! Điều đáng kinh ngạc là cả thế giới và 'đảng Dân chủ ngu ngốc' dường như đều thờ ơ với điều này. Iran tuyệt đối không được có vũ khí hạt nhân, và họ sẽ không bao giờ có vũ khí hạt nhân!",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "464108",
+   "at": "2026-10-22T22:42:21+07:00",
+   "time": "22:42",
+   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ giảm xuống dưới 5%, lần đầu tiên kể từ ngày 23 tháng 9, giảm 14,97 điểm cơ bản trong ngày.",
    "important": true,
    "star": 0,
    "actual": "null",
