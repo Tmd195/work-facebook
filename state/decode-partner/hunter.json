@@ -601,19 +601,7 @@
   "464135",
   "464136"
  ],
- "pending": [
-  {
-   "id": "464136",
-   "at": "2026-10-23T00:03:21+07:00",
-   "time": "00:03",
-   "text": "Các nhà giao dịch không còn đặt cược hoàn toàn vào việc Cục Dự trữ Liên bang sẽ tăng lãi suất trước cuối năm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 2,
   "2026-10-12": 1,
