@@ -601,41 +601,7 @@
   "463944",
   "463943"
  ],
- "pending": [
-  {
-   "id": "463940",
-   "at": "2026-10-22T12:15:04+07:00",
-   "time": "12:15",
-   "text": "Giá bạc giao ngay trong ngày giảm 3,00%, hiện ở mức 56,23 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463942",
-   "at": "2026-10-22T12:41:22+07:00",
-   "time": "12:41",
-   "text": "Vàng giao ngay giảm xuống dưới 4.080 USD/ounce, giảm 1,50% trong ngày; bạc giao ngay mất mốc 56 USD/ounce, giảm 3,40% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "463943",
-   "at": "2026-10-22T12:45:26+07:00",
-   "time": "12:45",
-   "text": "Bạc kỳ hạn New York giảm 3,00% trong ngày, hiện ở mức 55,97 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
