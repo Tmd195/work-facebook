@@ -3,7 +3,7 @@
     "price-action-nhap-mon": 15,
     "ho-tro-khang-cu-cung-cau": 12,
     "pivot-point": 10,
-    "fibonacci": 6
+    "fibonacci": 7
   },
   "history": [
     {
@@ -219,6 +219,11 @@
     {
       "series": "fibonacci",
       "part": 6,
+      "date": "2026-10-22"
+    },
+    {
+      "series": "fibonacci",
+      "part": 7,
       "date": "2026-10-22"
     }
   ]
