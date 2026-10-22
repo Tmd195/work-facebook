@@ -1199,5 +1199,20 @@
   "posted_at": "2026-10-22T08:45:03.912695+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-22 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1438069437748135/",
+  "post_id": "1438069437748135",
+  "posted_at": "2026-10-22T19:45:05.597542+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDCHF|0.82407",
+   "symbol": "USDCHF",
+   "system": "fibo",
+   "side": "buy",
+   "rr": 3.8,
+   "duration": 10.3
+  }
  }
 }
