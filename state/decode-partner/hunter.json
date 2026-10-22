@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463388",
   "463390",
   "463391",
   "463392",
@@ -599,9 +598,22 @@
   "463985",
   "463987",
   "463986",
-  "463988"
+  "463988",
+  "463989"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "463989",
+   "at": "2026-10-22T14:52:52+07:00",
+   "time": "14:52",
+   "text": "Lợi suất trái phiếu chính phủ kỳ hạn 10 năm của Pháp hiện ở mức 5,084%, lần đầu tiên vượt lợi suất trái phiếu chính phủ Mỹ kể từ năm 2013.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 2,
   "2026-10-12": 1,
