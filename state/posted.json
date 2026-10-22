@@ -2604,5 +2604,51 @@
     }
    ]
   }
+ },
+ "2026-10-22 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132657420735108",
+  "post_id": "1121396124381014_122132657420735108",
+  "posted_at": "2026-10-22T10:00:08.810058+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4142.03,
+      4150.99
+     ],
+     "sl": 4164.58,
+     "tp": [
+      4113.61,
+      4093.91,
+      4074.68
+     ],
+     "trigger": "Giá hồi lên 4142-4151 (Fibo 0.5 H4 + Kijun/EMA50 H4) rồi xuất hiện nến từ chối giảm",
+     "invalidation": "H4 đóng cửa trên 4160.95 (mức CHoCH) làm gãy cấu trúc giảm"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4106.88,
+      4113.61
+     ],
+     "sl": 4091.43,
+     "tp": [
+      4121.84,
+      4131.81,
+      4142.03
+     ],
+     "trigger": "Giá test vùng 4107-4113 (hợp lưu rất mạnh) và bật lên với nến đảo chiều rõ",
+     "invalidation": "H1 đóng cửa dưới 4106.88 xác nhận thủng vùng đáy"
+    }
+   ],
+   "price": 4121.8,
+   "title": "XAUUSD phiên Á-Âu: ưu tiên SELL nhịp hồi 4142-4151, canh mốc 4113-4107"
+  }
  }
 }
