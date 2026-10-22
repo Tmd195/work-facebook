@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463363",
   "463362",
   "463366",
   "463365",
@@ -599,21 +598,10 @@
   "463955",
   "463959",
   "463957",
-  "463961"
+  "463961",
+  "463962"
  ],
- "pending": [
-  {
-   "id": "463961",
-   "at": "2026-10-22T13:53:51+07:00",
-   "time": "13:53",
-   "text": "Ngày 22 tháng 10, theo Nikkei đưa tin, Ngân hàng Trung ương Nhật Bản dự kiến sẽ giữ nguyên lãi suất chính sách ở mức 1,25% tại cuộc họp chính sách tiền tệ diễn ra từ ngày 29 đến 30 tháng 10. Tại cuộc họp trước đó vào tháng 9, Ngân hàng Trung ương Nhật Bản đã quyết định tăng lãi suất, và lần này sẽ theo dõi tác động của việc tăng lãi suất. Ngân hàng Trung ương Nhật Bản nhiều khả năng sẽ cho biết tỷ lệ lạm phát cơ bản sau khi loại trừ các yếu tố biến động tạm thời trên thực tế đã đạt mục tiêu 2%. Trong thời gian tới, Ngân hàng Trung ương Nhật Bản sẽ tập trung chính sách vào việc kiềm chế lạm phát tăng cao hơn nữa so với mức 2%, giữ cho lạm phát ổn định, đồng thời tìm kiếm thời điểm thích hợp để tiếp tục tăng lãi suất. Dự kiến 9 thành viên Ủy ban Chính sách sẽ quyết định giữ nguyên lãi suất chính sách với đa số phiếu tán thành.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
