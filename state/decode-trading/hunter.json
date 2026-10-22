@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463452",
   "463454",
   "463453",
   "463459",
@@ -599,9 +598,22 @@
   "464048",
   "464049",
   "464050",
-  "464051"
+  "464051",
+  "464052"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464052",
+   "at": "2026-10-22T20:00:01+07:00",
+   "time": "20:00",
+   "text": "Phiên giao dịch đêm mở cửa, các hợp đồng tương lai chủ lực trong nước biến động trái chiều, dầu nhiên liệu lưu huỳnh thấp (LU) tăng hơn 3%, dầu nhiên liệu tăng gần 3%, dầu thô SC, khí dầu mỏ hóa lỏng (LPG), propylene tăng hơn 2%, polypropylene, methanol, benzen nguyên chất tăng hơn 1%. Về mức giảm, bạc Thượng Hải giảm hơn 2%, thiếc Thượng Hải, giấy offset, đồng quốc tế, kẽm Thượng Hải, xút ăn da, than cốc giảm hơn 1%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
