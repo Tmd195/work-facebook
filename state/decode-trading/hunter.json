@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463880",
   "463881",
   "463882",
   "463883",
@@ -599,9 +598,22 @@
   "464475",
   "464477",
   "464478",
-  "464479"
+  "464479",
+  "464480"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464480",
+   "at": "2026-10-24T01:59:50+07:00",
+   "time": "01:59",
+   "text": "Thủ tướng Iraq: Iraq có kế hoạch tăng dần sản lượng dầu lên 10 triệu thùng/ngày vào năm 2032.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
