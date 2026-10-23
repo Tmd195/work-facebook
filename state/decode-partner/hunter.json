@@ -1,7 +1,5 @@
 {
  "seen": [
-  "463841",
-  "463843",
   "463842",
   "463846",
   "463845",
@@ -599,7 +597,9 @@
   "464437",
   "464436",
   "464435",
-  "464440"
+  "464440",
+  "464442",
+  "464441"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-23T22:05:51+07:00",
    "time": "22:05",
    "text": "Ngày 23 tháng 10, Tổng thống Mỹ Trump mới đây có bài phát biểu: \"Chúng ta có thể sẽ sớm kết thúc chiến tranh Iran. Thành thật mà nói, chúng ta có thể chiếm toàn bộ dầu mỏ của Iran, và chúng ta thực sự đang vận chuyển ra ngoài tất cả lượng dầu mà chúng ta muốn, eo biển Hormuz hoàn toàn nằm trong tầm kiểm soát của tôi, chúng ta thực sự có thể tiếp quản toàn bộ Iran.\" Trump cũng đề cập đến đàm phán thương mại: \"Gần đạt được thỏa thuận với Mexico, Canada cũng đang nỗ lực đạt thỏa thuận với Mỹ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "464441",
+   "at": "2026-10-23T22:06:11+07:00",
+   "time": "22:06",
+   "text": "Văn phòng Hoạt động Thương mại Hàng hải Vương quốc Anh: Một tàu chở dầu bị vật thể bay không xác định đánh trúng tại eo biển Hormuz gần Oman.",
    "important": true,
    "star": 0,
    "actual": "null",
