@@ -1,7 +1,5 @@
 {
  "seen": [
-  "463705",
-  "463704",
   "463708",
   "463707",
   "463706",
@@ -599,9 +597,23 @@
   "464298",
   "464301",
   "464302",
-  "464303"
+  "464303",
+  "464305",
+  "464304"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464305",
+   "at": "2026-10-23T15:15:32+07:00",
+   "time": "15:15",
+   "text": "Tin nguồn: Dự kiến Ngân hàng Trung ương Nhật Bản sẽ tiếp tục tăng lãi suất nhanh, tập trung vào tháng 12. Ngân hàng Trung ương Nhật Bản cho biết mức lãi suất hiện tại vẫn còn cách khá xa lãi suất trung tính. Ngân hàng Trung ương Nhật Bản cho rằng lạm phát cần ổn định quanh mục tiêu.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-13": 1,
