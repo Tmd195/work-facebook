@@ -601,19 +601,7 @@
   "464205",
   "464207"
  ],
- "pending": [
-  {
-   "id": "464207",
-   "at": "2026-10-23T08:08:59+07:00",
-   "time": "08:08",
-   "text": "WTI dầu thô tăng hơn 1,00% trong ngày, hiện ở mức 99,66 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
