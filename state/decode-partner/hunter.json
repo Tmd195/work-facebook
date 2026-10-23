@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463890",
   "463892",
   "463891",
   "463895",
@@ -599,9 +598,22 @@
   "464487",
   "464486",
   "464485",
-  "464489"
+  "464489",
+  "464490"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464490",
+   "at": "2026-10-24T02:51:46+07:00",
+   "time": "02:51",
+   "text": "Ngày 24 tháng 10, Tổng thống Mỹ Trump: \"Chúng ta có thể sẽ lại tiến hành một chiến dịch 'Cơn thịnh nộ sử thi' quy mô nhỏ, hoặc cũng có thể Iran sẽ đồng ý (đạt được thỏa thuận). Nếu họ đủ thông minh, họ sẽ nói thẳng: 'Hãy bắt đầu bàn chuyện chính đi.' Nhưng tôi nghi ngờ họ sẽ làm vậy, bởi vì có lẽ họ không thông minh đến thế.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-13": 1,
