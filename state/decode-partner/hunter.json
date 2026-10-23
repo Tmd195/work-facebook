@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463858",
   "463859",
   "463860",
   "463861",
@@ -599,9 +598,22 @@
   "464453",
   "464455",
   "464456",
-  "464457"
+  "464457",
+  "464458"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464458",
+   "at": "2026-10-23T23:50:00+07:00",
+   "time": "23:50",
+   "text": "Số lượng giàn khoan dầu của Mỹ trong tuần tính đến ngày 23 tháng 10 sẽ được công bố sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-13": 1,
