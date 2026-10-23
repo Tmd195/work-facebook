@@ -2899,5 +2899,51 @@
    "price": 4018.87,
    "title": "XAUUSD giảm sâu: ưu tiên bán hồi, 3987 là mốc then chốt phiên"
   }
+ },
+ "2026-10-23 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132830922735108",
+  "post_id": "1121396124381014_122132830922735108",
+  "posted_at": "2026-10-23T18:30:07.206671+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4028.68,
+      4032.26
+     ],
+     "sl": 4048.58,
+     "tp": [
+      4010.53,
+      4001.42,
+      3987.72
+     ],
+     "trigger": "Giá hồi vào 4028-4042 và xuất hiện nến H1 từ chối (bóng trên/nến giảm), không đóng H1 trên 4042.",
+     "invalidation": "Giá đóng nến H1 trên 4048 (vượt Kijun H1), cấu trúc giảm ngắn hạn bị phá."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3983.81,
+      3987.72
+     ],
+     "sl": 3948.58,
+     "tp": [
+      4001.42,
+      4010.53,
+      4022.12
+     ],
+     "trigger": "Giá thủng về 3983-3987 rồi bật lại, giành lại mốc 4000 bằng nến H1 xác nhận.",
+     "invalidation": "Đóng nến H1 dưới 3983 (mất S1 và đáy phiên Á), đà giảm tiếp diễn."
+    }
+   ],
+   "price": 4025.15,
+   "title": "XAUUSD phiên Mỹ: ưu tiên SELL hồi, canh vùng 4028-4042"
+  }
  }
 }
