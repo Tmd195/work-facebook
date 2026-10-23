@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463883",
   "463884",
   "463885",
   "463888",
@@ -599,9 +598,22 @@
   "464479",
   "464480",
   "464481",
-  "464482"
+  "464482",
+  "464483"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464483",
+   "at": "2026-10-24T02:37:14+07:00",
+   "time": "02:37",
+   "text": "Tổng thống Mỹ Trump: Chúng tôi có thể có một hành động khác đối với Iran.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-13": 1,
