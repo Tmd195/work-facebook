@@ -1,8 +1,5 @@
 {
  "seen": [
-  "463831",
-  "463830",
-  "463835",
   "463834",
   "463837",
   "463836",
@@ -599,7 +596,10 @@
   "464425",
   "464429",
   "464431",
-  "464430"
+  "464430",
+  "464434",
+  "464433",
+  "464432"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-23T21:56:30+07:00",
    "time": "21:56",
    "text": "Tổng thống Mỹ Trump: Chúng ta có thể sẽ sớm kết thúc chiến tranh Iran.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "464432",
+   "at": "2026-10-23T21:58:06+07:00",
+   "time": "21:58",
+   "text": "Tổng thống Mỹ Trump: Chúng ta có thể chiếm toàn bộ dầu mỏ của Iran.",
    "important": true,
    "star": 0,
    "actual": "null",
