@@ -601,30 +601,7 @@
   "464456",
   "464455"
  ],
- "pending": [
-  {
-   "id": "464450",
-   "at": "2026-10-23T22:37:50+07:00",
-   "time": "22:37",
-   "text": "Dầu Brent tăng mạnh 3,00% trong ngày, hiện ở mức 112,37 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "464452",
-   "at": "2026-10-23T22:44:12+07:00",
-   "time": "22:44",
-   "text": "WTI dầu thô tăng mạnh 4,00% trong ngày, hiện báo 102,62 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
@@ -633,8 +610,8 @@
   "2026-10-20": 1,
   "2026-10-21": 2,
   "2026-10-22": 2,
-  "2026-10-23": 1
+  "2026-10-23": 2
  },
- "last_post": "2026-10-23T22:14:35.810909+07:00",
+ "last_post": "2026-10-23T23:16:02.868930+07:00",
  "fail": 0
 }
