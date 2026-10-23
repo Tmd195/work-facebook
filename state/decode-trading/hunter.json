@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463624",
   "463623",
   "463625",
   "463626",
@@ -599,32 +598,10 @@
   "464217",
   "464220",
   "464221",
-  "464222"
+  "464222",
+  "464223"
  ],
- "pending": [
-  {
-   "id": "464221",
-   "at": "2026-10-23T08:58:35+07:00",
-   "time": "08:58",
-   "text": "Bạc giao ngay giảm mạnh 1,01 USD trong ngày, hiện ở mức 53,57 USD/ounce, giảm 1,85%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "464222",
-   "at": "2026-10-23T09:01:14+07:00",
-   "time": "09:01",
-   "text": "Bạc giao ngay giảm 2,00% trong ngày, hiện ở mức 53,48 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
