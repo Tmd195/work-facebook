@@ -601,30 +601,7 @@
   "464244",
   "464243"
  ],
- "pending": [
-  {
-   "id": "464244",
-   "at": "2026-10-23T12:00:00+07:00",
-   "time": "12:00",
-   "text": "PMI Dịch vụ Ấn Độ",
-   "important": true,
-   "star": 2,
-   "actual": "56.2",
-   "forecast": "55.5",
-   "previous": "55.2"
-  },
-  {
-   "id": "464243",
-   "at": "2026-10-23T12:00:00+07:00",
-   "time": "12:00",
-   "text": "PMI Sản xuất Ấn Độ",
-   "important": true,
-   "star": 2,
-   "actual": "54.9",
-   "forecast": "55",
-   "previous": "55.1"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
