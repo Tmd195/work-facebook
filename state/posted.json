@@ -2732,5 +2732,115 @@
    "price": 4076.66,
    "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi, canh vùng kháng cự 4100-4116"
   }
+ },
+ "2026-10-23 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122132776310735108",
+  "post_id": "1121396124381014_122132776310735108",
+  "posted_at": "2026-10-23T07:30:02.895407+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "13:00",
+     "datetime": "2026-10-23T13:00:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "Retail Sales m/m",
+     "forecast": "-0.1%",
+     "previous": "0.5%"
+    },
+    {
+     "time": "14:15",
+     "datetime": "2026-10-23T14:15:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "French Flash Manufacturing PMI",
+     "forecast": "50.5",
+     "previous": "50.3"
+    },
+    {
+     "time": "14:15",
+     "datetime": "2026-10-23T14:15:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "French Flash Services PMI",
+     "forecast": "50.7",
+     "previous": "51.4"
+    },
+    {
+     "time": "14:30",
+     "datetime": "2026-10-23T14:30:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "German Flash Manufacturing PMI",
+     "forecast": "53.5",
+     "previous": "53.8"
+    },
+    {
+     "time": "14:30",
+     "datetime": "2026-10-23T14:30:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "German Flash Services PMI",
+     "forecast": "52.5",
+     "previous": "52.9"
+    },
+    {
+     "time": "15:30",
+     "datetime": "2026-10-23T15:30:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "Flash Manufacturing PMI",
+     "forecast": "51.8",
+     "previous": "52.0"
+    },
+    {
+     "time": "15:30",
+     "datetime": "2026-10-23T15:30:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "Flash Services PMI",
+     "forecast": "51.8",
+     "previous": "51.7"
+    },
+    {
+     "time": "20:45",
+     "datetime": "2026-10-23T20:45:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Flash Manufacturing PMI",
+     "forecast": "55.4",
+     "previous": "57.0"
+    },
+    {
+     "time": "20:45",
+     "datetime": "2026-10-23T20:45:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Flash Services PMI",
+     "forecast": "57.9",
+     "previous": "58.7"
+    },
+    {
+     "time": "21:00",
+     "datetime": "2026-10-23T21:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Revised UoM Consumer Sentiment",
+     "forecast": "46.3",
+     "previous": "46.3"
+    },
+    {
+     "time": "21:00",
+     "datetime": "2026-10-23T21:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Revised UoM Inflation Expectations",
+     "forecast": "",
+     "previous": "4.7%"
+    }
+   ]
+  }
  }
 }
