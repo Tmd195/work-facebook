@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463754",
   "463755",
   "463756",
   "463757",
@@ -599,9 +598,22 @@
   "464350",
   "464351",
   "464352",
-  "464353"
+  "464353",
+  "464354"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464354",
+   "at": "2026-10-23T19:12:22+07:00",
+   "time": "19:12",
+   "text": "Theo hãng thông tấn quốc gia Jordan: một nhà thờ ở Jordan đã bị tấn công trong lễ tang.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-13": 1,
