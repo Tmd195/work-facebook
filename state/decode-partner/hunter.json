@@ -601,19 +601,7 @@
   "464408",
   "464407"
  ],
- "pending": [
-  {
-   "id": "464407",
-   "at": "2026-10-23T21:00:27+07:00",
-   "time": "21:00",
-   "text": "Chỉ số năng lượng S&P 500 tăng 1,9%, lập mức cao kỷ lục, do giá dầu thô không ngừng leo cao.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-12": 1,
   "2026-10-13": 1,
