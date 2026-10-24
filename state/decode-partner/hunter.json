@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463985",
   "463987",
   "463986",
   "463988",
@@ -599,9 +598,22 @@
   "464581",
   "464583",
   "464582",
-  "464584"
+  "464584",
+  "464585"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464585",
+   "at": "2026-10-25T03:38:58+07:00",
+   "time": "03:38",
+   "text": "Ngày 25 tháng 10, Tổng thống Mỹ Trump có bài phát biểu mới nhất: “Tôi có thể sẽ phải giải quyết triệt để vấn đề Iran, cũng có thể đạt được thỏa thuận với Iran. Dù theo cách nào, chúng ta đều sẽ thắng. Tôi có thể phát động tấn công nhằm vào Iran, cũng có thể đạt được một thỏa thuận lớn và có lợi với Iran. Phía Iran mong muốn đạt được thỏa thuận.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-13": 1,
   "2026-10-14": 3,
