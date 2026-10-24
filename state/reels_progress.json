@@ -1,5 +1,5 @@
 {
- "count": 22,
+ "count": 23,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -11,7 +11,8 @@
   "ehlers-instantaneous-trendline",
   "chandelier-exit",
   "jma",
-  "rahul-mohindar-oscillator"
+  "rahul-mohindar-oscillator",
+  "structure-invalidation"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -35,6 +36,7 @@
   "Hệ thống JMA cho XAUUSD: đường trung bình thích nghi Jurik tô màu theo độ dốc làm bộ lọc hướng, giá cắt JMA làm tín hiệu vào lệnh, đặt SL theo ATR và TP theo R:R 1:2",
   "Quản lý vốn XAUUSD: giới hạn lỗ ngày 3 phần trăm và giảm khối lượng theo chuỗi thua — mỗi lệnh rủi ro 1 phần trăm, thua 3 lệnh liên tiếp thì tắt máy nghỉ hoặc giảm lot còn một nửa, ghi nhật ký để giữ tâm lý và bảo toàn vốn",
   "Hệ thống Rahul Mohindar Oscillator (RMO) cho XAUUSD: SwingTrd 2 cắt SwingTrd 3 cùng phía RMO so với mốc 0, lọc chế độ, đặt SL theo ATR và vùng hỗ trợ kháng cự",
-  "Chốt lời từng phần theo R:R cho XAUUSD: tại một R đóng 50 phần trăm và dời SL về hòa vốn, tại hai R đóng thêm 30 phần trăm, 20 phần trăm còn lại trail theo đáy swing để ôm trọn sóng"
+  "Chốt lời từng phần theo R:R cho XAUUSD: tại một R đóng 50 phần trăm và dời SL về hòa vốn, tại hai R đóng thêm 30 phần trăm, 20 phần trăm còn lại trail theo đáy swing để ôm trọn sóng",
+  "Structure Invalidation cho XAUUSD: đáy bảo vệ luận điểm, nến đóng vượt là vô hiệu, lọc dịch chuyển thật giả bằng ATR"
  ]
 }

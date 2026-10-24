@@ -2981,5 +2981,19 @@
    "series": "fibonacci",
    "part": 10
   }
+ },
+ "2026-10-24 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1146971231614612/",
+  "post_id": "1146971231614612",
+  "posted_at": "2026-10-24T19:15:54.692315+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Structure Invalidation cho XAUUSD: đáy bảo vệ luận điểm, nến đóng vượt là vô hiệu, lọc dịch chuyển thật giả bằng ATR",
+   "pillar": "he-thong",
+   "system": "structure-invalidation",
+   "duration": 57.6,
+   "music": "our-ups-and-downs.mp3"
+  }
  }
 }
