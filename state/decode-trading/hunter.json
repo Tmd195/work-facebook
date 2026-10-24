@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463984",
   "463983",
   "463985",
   "463987",
@@ -599,32 +598,10 @@
   "464579",
   "464581",
   "464580",
-  "464582"
+  "464582",
+  "464583"
  ],
- "pending": [
-  {
-   "id": "464580",
-   "at": "2026-10-25T03:24:21+07:00",
-   "time": "03:24",
-   "text": "Tổng thống Mỹ Trump: Tôi có thể sẽ phải giải quyết triệt để vấn đề Iran, cũng có thể đạt được thỏa thuận với Iran. Dù theo cách nào, chúng ta đều thắng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "464582",
-   "at": "2026-10-25T03:27:54+07:00",
-   "time": "03:27",
-   "text": "Tổng thống Mỹ Trump: Tôi có thể sẽ phát động cuộc tấn công vào Iran.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
