@@ -1342,5 +1342,20 @@
   "posted_at": "2026-10-24T14:15:03.953449+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-24 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1153112770540678/",
+  "post_id": "1153112770540678",
+  "posted_at": "2026-10-24T19:45:24.844540+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURUSD|1.12208",
+   "symbol": "EURUSD",
+   "system": "retest",
+   "side": "buy",
+   "rr": 7.0,
+   "duration": 10.3
+  }
  }
 }
