@@ -1,6 +1,5 @@
 {
  "seen": [
-  "463981",
   "463980",
   "463984",
   "463983",
@@ -599,9 +598,22 @@
   "464576",
   "464577",
   "464578",
-  "464579"
+  "464579",
+  "464580"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464580",
+   "at": "2026-10-25T03:24:21+07:00",
+   "time": "03:24",
+   "text": "Tổng thống Mỹ Trump: Tôi có thể sẽ phải giải quyết triệt để vấn đề Iran, cũng có thể đạt được thỏa thuận với Iran. Dù theo cách nào, chúng ta đều thắng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-13": 1,
