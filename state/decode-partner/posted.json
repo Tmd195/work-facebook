@@ -1395,6 +1395,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-10-25 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1607380807027581/",
+  "post_id": "1607380807027581",
+  "posted_at": "2026-10-25T19:45:25.865498+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDCHF|0.83036",
+   "symbol": "USDCHF",
+   "system": "abcd",
+   "side": "sell",
+   "rr": 4.1,
+   "duration": 9.9
+  }
+ },
  "2026-10-25 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/1135400582288777/",
