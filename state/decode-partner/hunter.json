@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464048",
   "464047",
   "464049",
   "464050",
@@ -599,21 +598,10 @@
   "464643",
   "464645",
   "464644",
-  "464646"
+  "464646",
+  "464647"
  ],
- "pending": [
-  {
-   "id": "464646",
-   "at": "2026-10-25T18:01:04+07:00",
-   "time": "18:01",
-   "text": "Ngày 25/10, Phó Thống đốc Ngân hàng Dự trữ Australia (RBA) Hunter cho biết quá trình chống lạm phát của ngân hàng này \"vẫn chưa kết thúc\". Điều này phát đi tín hiệu rằng tại cuộc họp chính sách vào đầu tháng tới, RBA nhiều khả năng sẽ tăng lãi suất một lần nữa. Trong cuộc phỏng vấn chương trình ngày Chủ nhật, Hunter đã đề cập đến tác động của lãi suất cao đối với người tiêu dùng và giá nhà. Bà cho biết: \"Để ứng phó bền bỉ với thách thức này, Hội đồng đã thực hiện bốn lần tăng lãi suất trong năm nay.\" Khi được hỏi liệu RBA đã thực hiện đủ biện pháp để kiềm chế lạm phát hay chưa, bà trả lời: \"Rất tiếc là chưa.\" Đầu tuần này, kỳ vọng của thị trường về việc tăng lãi suất một lần nữa tại cuộc họp ngày 3/11 đã gia tăng. Trước đó, Phó Thống đốc RBA Hauser hôm thứ Tư cho biết triển vọng lạm phát hiện tại đã \"xấu đi rõ rệt\" so với kết quả đánh giá hồi tháng 8 của ngân hàng này. Cuối tháng 9, RBA đã nâng lãi suất lên 4,6%, mức cao nhất trong 15 năm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-13": 1,
   "2026-10-14": 3,
