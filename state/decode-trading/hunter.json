@@ -601,19 +601,7 @@
   "464673",
   "464672"
  ],
- "pending": [
-  {
-   "id": "464673",
-   "at": "2026-10-25T23:00:59+07:00",
-   "time": "23:00",
-   "text": "Tổng thống Mỹ Trump: Hôm nay chúng ta sẽ không tấn công Iran.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
