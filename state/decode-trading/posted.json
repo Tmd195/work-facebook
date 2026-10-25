@@ -965,5 +965,15 @@
   "meta": {
    "album": "complex_pullback"
   }
+ },
+ "2026-10-25 td_album_wk1 10:00": {
+  "job": "td_album_wk1",
+  "link": "https://www.facebook.com/122103151269499355/posts/122117327745499355",
+  "post_id": "1411036908756172_122117327745499355",
+  "posted_at": "2026-10-25T10:00:13.877985+07:00",
+  "preview": false,
+  "meta": {
+   "album": "harmonic"
+  }
  }
 }
