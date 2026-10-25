@@ -4,7 +4,7 @@
     "ho-tro-khang-cu-cung-cau": 12,
     "pivot-point": 10,
     "fibonacci": 10,
-    "ma-ema": 2
+    "ma-ema": 3
   },
   "history": [
     {
@@ -250,6 +250,11 @@
     {
       "series": "ma-ema",
       "part": 2,
+      "date": "2026-10-25"
+    },
+    {
+      "series": "ma-ema",
+      "part": 3,
       "date": "2026-10-25"
     }
   ]
