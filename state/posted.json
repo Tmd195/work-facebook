@@ -3017,5 +3017,19 @@
    "series": "ma-ema",
    "part": 2
   }
+ },
+ "2026-10-25 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1378967064038970/",
+  "post_id": "1378967064038970",
+  "posted_at": "2026-10-25T19:15:07.974831+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Cách backtest một hệ thống giao dịch vàng XAUUSD trước khi dùng tiền thật: chốt cứng quy tắc vào lệnh, lấy dữ liệu 6 tháng, kéo từng nến ghi tối thiểu 100 lệnh, đọc win rate, kỳ vọng và max drawdown, test đủ cả tăng giảm đi ngang.",
+   "pillar": "setup",
+   "system": null,
+   "duration": 43.2,
+   "music": "golden-storm.mp3"
+  }
  }
 }
