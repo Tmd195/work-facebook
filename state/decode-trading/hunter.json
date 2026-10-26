@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464266",
   "464269",
   "464268",
   "464267",
@@ -599,21 +598,10 @@
   "464858",
   "464857",
   "464865",
-  "464864"
+  "464864",
+  "464866"
  ],
- "pending": [
-  {
-   "id": "464865",
-   "at": "2026-10-26T20:28:26+07:00",
-   "time": "20:28",
-   "text": "Tổng chi phí vận hành của Anthropic trong nửa đầu năm tính đến ngày 30 tháng 6 là 16,98 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
