@@ -601,19 +601,7 @@
   "464833",
   "464832"
  ],
- "pending": [
-  {
-   "id": "464833",
-   "at": "2026-10-26T19:53:05+07:00",
-   "time": "19:53",
-   "text": "Lợi suất trái phiếu chính phủ Pháp kỳ hạn 10 năm trong ngày có lúc giảm 10,56 điểm cơ bản, xuống 4,9158%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,

@@ -1012,6 +1012,20 @@
    ]
   }
  },
+ "2026-10-26 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/28834482319542667/",
+  "post_id": "28834482319542667",
+  "posted_at": "2026-10-26T20:00:50.028358+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V4|2026-08-25T07:45:00+00:00",
+   "version": "V4",
+   "side": "SELL",
+   "pips": 150,
+   "duration": 13.1
+  }
+ },
  "2026-10-26 reel_smc 12:00": {
   "job": "reel_smc",
   "link": "https://www.facebook.com/reel/2165439524330110/",
