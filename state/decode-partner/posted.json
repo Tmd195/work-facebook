@@ -1465,5 +1465,20 @@
   "posted_at": "2026-10-26T08:45:03.353253+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-26 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1651673613277119/",
+  "post_id": "1651673613277119",
+  "posted_at": "2026-10-26T19:45:35.724943+07:00",
+  "preview": false,
+  "meta": {
+   "key": "GBPUSD|1.34073",
+   "symbol": "GBPUSD",
+   "system": "range",
+   "side": "sell",
+   "rr": 12.5,
+   "duration": 9.9
+  }
  }
 }
