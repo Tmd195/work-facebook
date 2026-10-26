@@ -1,7 +1,5 @@
 {
  "seen": [
-  "464268",
-  "464267",
   "464269",
   "464271",
   "464270",
@@ -599,9 +597,23 @@
   "464864",
   "464863",
   "464865",
-  "464866"
+  "464866",
+  "464868",
+  "464867"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464867",
+   "at": "2026-10-26T20:34:57+07:00",
+   "time": "20:34",
+   "text": "Anthropic dự kiến chi 125 tỷ đến 150 tỷ USD cho các thỏa thuận liên quan đến năng lực tính toán và cơ sở hạ tầng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-14": 3,
   "2026-10-15": 3,
