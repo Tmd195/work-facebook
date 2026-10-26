@@ -1,7 +1,5 @@
 {
  "seen": [
-  "464235",
-  "464237",
   "464236",
   "464238",
   "464239",
@@ -599,9 +597,34 @@
   "464831",
   "464833",
   "464832",
-  "464834"
+  "464834",
+  "464836",
+  "464835"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464836",
+   "at": "2026-10-26T20:06:28+07:00",
+   "time": "20:06",
+   "text": "Doanh thu nửa đầu năm của Anthropic đạt 16,3 tỷ USD, cùng kỳ năm trước là 1,2 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "464835",
+   "at": "2026-10-26T20:06:12+07:00",
+   "time": "20:06",
+   "text": "Anthropic lỗ ròng 80,7 tỷ USD trong sáu tháng tính đến ngày 30 tháng 6 năm 2026, và Anthropic có thể sẽ không thể đạt được hoặc duy trì lợi nhuận trong tương lai.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
