@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464193",
   "464195",
   "464194",
   "464199",
@@ -599,9 +598,22 @@
   "464791",
   "464788",
   "464789",
-  "464792"
+  "464792",
+  "464793"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "464793",
+   "at": "2026-10-26T16:26:14+07:00",
+   "time": "16:26",
+   "text": "Theo Reuters: Hình ảnh vệ tinh cho thấy vệt dầu tràn ngoài khơi UAE đang lan rộng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-14": 3,
   "2026-10-15": 3,
