@@ -601,19 +601,7 @@
   "464752",
   "464753"
  ],
- "pending": [
-  {
-   "id": "464753",
-   "at": "2026-10-26T11:05:51+07:00",
-   "time": "11:05",
-   "text": "Ngày 26 tháng 10, hai quan chức Mỹ cho biết lực lượng quân đội Mỹ tại khu vực Trung Đông đã sẵn sàng, một khi nhận được lệnh của Tổng thống Donald Trump, sẽ tiến hành một đợt hành động quân sự mới nhằm vào Iran trong vòng 96 giờ, quy mô của hành động có thể khá lớn. Các nguồn tin cho biết lực lượng quân đội Mỹ hiện đang triển khai tại khu vực này đã đủ để thực hiện các nhiệm vụ tấn công tiềm tàng. Các nguồn tin cũng cho biết phạm vi của đợt hành động quân sự mới của Mỹ có thể không còn giới hạn ở việc tấn công các hệ thống radar, bệ phóng tên lửa và các tài sản quân sự khác của Iran có khả năng phục hồi nhanh chóng. Những hành động như vậy thường được mô tả là \"cắt cỏ\", nhằm mục đích định kỳ làm suy yếu năng lực quân sự của đối thủ. Kể từ khi ông Trump đình chỉ các hoạt động tác chiến toàn diện vào đầu năm nay, quân đội Mỹ đã liên tục áp dụng cách làm tương tự. Một quan chức Mỹ cho biết: \"Đây sẽ là một chiến dịch quy mô lớn.\" Các quan chức đương nhiệm và cựu quan chức khác am hiểu các cuộc thảo luận về quy hoạch tác chiến nội bộ của quân đội Mỹ cũng bày tỏ quan điểm tương tự. Một số người trong đó cho rằng vấn đề không phải là liệu ông Trump có ra lệnh tấn công hay không, mà là khi nào ra lệnh. Họ cho rằng mệnh lệnh có thể được đưa ra bất cứ lúc nào trước cuối năm nay, nhưng nhiều khả năng là sau khi cuộc bầu cử giữa nhiệm kỳ của Mỹ kết thúc.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
@@ -622,8 +610,9 @@
   "2026-10-20": 1,
   "2026-10-21": 2,
   "2026-10-22": 2,
-  "2026-10-23": 2
+  "2026-10-23": 2,
+  "2026-10-26": 1
  },
- "last_post": "2026-10-23T23:16:02.868930+07:00",
+ "last_post": "2026-10-26T11:12:11.804028+07:00",
  "fail": 0
 }
