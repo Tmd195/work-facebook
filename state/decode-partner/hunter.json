@@ -601,19 +601,7 @@
   "464901",
   "464903"
  ],
- "pending": [
-  {
-   "id": "464903",
-   "at": "2026-10-26T22:56:45+07:00",
-   "time": "22:56",
-   "text": "Dầu Brent chuyển sang tăng, vượt 112 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 3,
   "2026-10-15": 3,
