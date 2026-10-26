@@ -1012,6 +1012,31 @@
    ]
   }
  },
+ "2026-10-26 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/2165439524330110/",
+  "post_id": "2165439524330110",
+  "posted_at": "2026-10-26T14:37:18.463391+07:00",
+  "preview": false,
+  "meta": {
+   "key": "ob|GBPUSD|2026-10-26T01:30:00+00:00",
+   "system": "ob",
+   "symbol": "GBPUSD",
+   "side": "sell",
+   "rr": 4.05,
+   "duration": 45.6
+  }
+ },
+ "2026-10-26 td_album 15:00": {
+  "job": "td_album",
+  "link": "https://www.facebook.com/122103151269499355/posts/122118258537499355",
+  "post_id": "1411036908756172_122118258537499355",
+  "posted_at": "2026-10-26T15:00:16.772392+07:00",
+  "preview": false,
+  "meta": {
+   "album": "volume_demand"
+  }
+ },
  "2026-10-26 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122118060693499355",
