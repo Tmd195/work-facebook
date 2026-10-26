@@ -601,30 +601,7 @@
   "464962",
   "464959"
  ],
- "pending": [
-  {
-   "id": "464963",
-   "at": "2026-10-27T06:00:00+07:00",
-   "time": "06:00",
-   "text": "GDP (y/y) Hàn Quốc",
-   "important": true,
-   "star": 2,
-   "actual": "3.4",
-   "forecast": "3%",
-   "previous": "3.70"
-  },
-  {
-   "id": "464962",
-   "at": "2026-10-27T06:00:00+07:00",
-   "time": "06:00",
-   "text": "GDP (q/q) Hàn Quốc",
-   "important": true,
-   "star": 1,
-   "actual": "1",
-   "forecast": "0.7%",
-   "previous": "0.60"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
