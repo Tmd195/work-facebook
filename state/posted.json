@@ -3060,5 +3060,51 @@
   "meta": {
    "events": []
   }
+ },
+ "2026-10-26 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133205700735108",
+  "post_id": "1121396124381014_122133205700735108",
+  "posted_at": "2026-10-26T10:00:14.480407+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      3975.83,
+      3977.58
+     ],
+     "sl": 3949.43,
+     "tp": [
+      3993.18,
+      4003.86,
+      4027.89
+     ],
+     "trigger": "Giá hồi về 3975.83-3977.58 (đáy phiên Á + swing D1/H4), xuất hiện nến đảo chiều tăng, RSI bật từ quá bán",
+     "invalidation": "H4 đóng cửa dưới 3975.83"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4003.86,
+      4005.25
+     ],
+     "sl": 4035.25,
+     "tp": [
+      3993.18,
+      3977.58,
+      3950.57
+     ],
+     "trigger": "Giá hồi lên 4003.86-4005.25 bị từ chối dưới mây H1, nến giảm, động lượng H1 suy yếu",
+     "invalidation": "H1 đóng cửa trên 4005.25 (vượt mây + đỉnh phiên Á)"
+    }
+   ],
+   "price": 3993.58,
+   "title": "XAUUSD: ghim quanh 3993 trước Fed, canh mua nhịp hồi về 3975-3977"
+  }
  }
 }
