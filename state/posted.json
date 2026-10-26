@@ -3117,5 +3117,51 @@
    "price": 3993.58,
    "title": "XAUUSD: ghim quanh 3993 trước Fed, canh mua nhịp hồi về 3975-3977"
   }
+ },
+ "2026-10-26 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133256208735108",
+  "post_id": "1121396124381014_122133256208735108",
+  "posted_at": "2026-10-26T18:30:08.179629+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      4003.26,
+      4005.25
+     ],
+     "sl": 3989.72,
+     "tp": [
+      4018.57,
+      4027.7,
+      4038.1
+     ],
+     "trigger": "Giá chỉnh về 4003-4005, xuất hiện nến H1 từ chối giảm và giữ trên mây H1.",
+     "invalidation": "H1 đóng cửa dưới 3994."
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4033.92,
+      4035.44
+     ],
+     "sl": 4050.76,
+     "tp": [
+      4018.57,
+      4000.7,
+      3994.51
+     ],
+     "trigger": "Giá tăng chạm 4034-4035 rồi bị từ chối, H1 mất động lượng tăng.",
+     "invalidation": "H1 đóng cửa trên 4050."
+    }
+   ],
+   "price": 4016.34,
+   "title": "XAUUSD phiên Mỹ: hồi kỹ thuật, canh mua khi giá giữ trên 3994"
+  }
  }
 }
