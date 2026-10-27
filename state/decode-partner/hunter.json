@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464588",
   "464589",
   "464590",
   "464591",
@@ -599,9 +598,22 @@
   "465184",
   "465185",
   "465186",
-  "465187"
+  "465187",
+  "465188"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465188",
+   "at": "2026-10-28T02:10:31+07:00",
+   "time": "02:10",
+   "text": "Theo Financial Times của Anh: Các nguồn tin cho biết Mỹ và Nga đang thảo luận về việc đưa các doanh nghiệp năng lượng Mỹ trở lại thị trường Nga như một phần của các cuộc đàm phán hòa bình về Ukraine, bao gồm việc khôi phục sự tham gia của các ông lớn dầu mỏ Mỹ vào các dự án dầu khí ở vùng Viễn Đông Nga, và khôi phục việc Nga bán dầu cho châu Âu thông qua đường ống dẫn dầu \"Druzhba\".",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 3,
   "2026-10-16": 1,
