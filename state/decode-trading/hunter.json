@@ -1,7 +1,5 @@
 {
  "seen": [
-  "464494",
-  "464498",
   "464497",
   "464496",
   "464499",
@@ -599,9 +597,23 @@
   "465091",
   "465093",
   "465092",
-  "465094"
+  "465094",
+  "465096",
+  "465095"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465096",
+   "at": "2026-10-27T18:56:29+07:00",
+   "time": "18:56",
+   "text": "Tổng thống Nga Putin: Chúng ta cần xem xét việc chấm dứt xung đột kéo dài và dỡ bỏ các lệnh trừng phạt.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
