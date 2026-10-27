@@ -1,8 +1,5 @@
 {
  "seen": [
-  "464541",
-  "464542",
-  "464543",
   "464544",
   "464545",
   "464546",
@@ -599,9 +596,24 @@
   "465137",
   "465138",
   "465139",
-  "465140"
+  "465140",
+  "465143",
+  "465142",
+  "465141"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465143",
+   "at": "2026-10-27T21:41:35+07:00",
+   "time": "21:41",
+   "text": "Tin thị trường: Đợt phát hành cổ phiếu trị giá 25 tỷ USD của Meta Platforms (META.O) cuối cùng đã nhận được mức đăng ký vượt mức gấp năm lần.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 3,
   "2026-10-16": 1,
