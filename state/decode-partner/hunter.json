@@ -601,19 +601,7 @@
   "465012",
   "465013"
  ],
- "pending": [
-  {
-   "id": "465013",
-   "at": "2026-10-27T13:34:51+07:00",
-   "time": "13:34",
-   "text": "Vàng giao ngay giảm xuống dưới 4.000 USD/ounce, giảm 0,42% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 3,
   "2026-10-15": 3,
