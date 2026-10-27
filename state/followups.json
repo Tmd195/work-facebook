@@ -986,5 +986,47 @@
  "2026-10-27 knowledge 21:00|examples": {
   "at": "2026-10-27T21:27:29.894049+07:00",
   "count": 3
+ },
+ "2026-10-27 strategy_ae 10:00|track": {
+  "at": "2026-10-27T22:02:19.550953+07:00",
+  "result": [
+   {
+    "side": "BUY",
+    "filled": true,
+    "tp_hit": 3,
+    "closed": "TP3",
+    "floating_pips": null,
+    "pips_closed": 3573
+   },
+   {
+    "side": "SELL",
+    "filled": true,
+    "tp_hit": 2,
+    "closed": "BE",
+    "floating_pips": null,
+    "pips_closed": 0
+   }
+  ]
+ },
+ "2026-10-27 strategy_us 18:30|track": {
+  "at": "2026-10-27T22:02:49.479223+07:00",
+  "result": [
+   {
+    "side": "BUY",
+    "filled": false,
+    "tp_hit": 0,
+    "closed": null,
+    "floating_pips": null,
+    "pips_closed": null
+   },
+   {
+    "side": "SELL",
+    "filled": true,
+    "tp_hit": 0,
+    "closed": "SL",
+    "floating_pips": null,
+    "pips_closed": -2202
+   }
+  ]
  }
 }
