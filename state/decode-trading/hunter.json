@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464548",
   "464549",
   "464550",
   "464551",
@@ -599,9 +598,22 @@
   "465144",
   "465145",
   "465146",
-  "465147"
+  "465147",
+  "465148"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465148",
+   "at": "2026-10-27T22:23:56+07:00",
+   "time": "22:23",
+   "text": "Tổng thống Mỹ Trump: Niềm tin người tiêu dùng tăng 7,5%, đây là mức tăng rất lớn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
