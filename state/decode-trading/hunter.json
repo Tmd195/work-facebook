@@ -601,19 +601,7 @@
   "465197",
   "465198"
  ],
- "pending": [
-  {
-   "id": "465198",
-   "at": "2026-10-28T03:20:00+07:00",
-   "time": "03:20",
-   "text": "Dữ liệu tồn kho dầu thô API của Mỹ cho tuần kết thúc ngày 23 tháng 10 sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-09": 1,
   "2026-10-12": 1,
