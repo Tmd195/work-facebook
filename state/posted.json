@@ -3208,5 +3208,51 @@
     }
    ]
   }
+ },
+ "2026-10-27 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133353882735108",
+  "post_id": "1121396124381014_122133353882735108",
+  "posted_at": "2026-10-27T10:00:08.751147+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      4000,
+      4008.66
+     ],
+     "sl": 3982.99,
+     "tp": [
+      4022.2,
+      4030.25,
+      4044.39
+     ],
+     "trigger": "Giá hồi về 4,000 - 4,008.66 và xuất hiện nến H1 từ chối giảm/đảo chiều tăng.",
+     "invalidation": "Đóng nến H1 dưới 4,000, đánh mất vùng Z6 (hợp lưu 9)."
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4028.19,
+      4030.25
+     ],
+     "sl": 4044.39,
+     "tp": [
+      4019.99,
+      4008.66,
+      3993.8
+     ],
+     "trigger": "Giá bật lên 4,028.19 - 4,030.25 và phản ứng giảm, không đóng trên 4,036.42.",
+     "invalidation": "Đóng nến H1 trên 4,036.42, vượt Z9 hướng 4,044."
+    }
+   ],
+   "price": 4017.46,
+   "title": "Vàng bám mốc 4,000 chờ FOMC - hồi kỹ thuật, xu hướng lớn vẫn giảm"
+  }
  }
 }
