@@ -3188,5 +3188,25 @@
    "price": 4016.34,
    "title": "XAUUSD phiên Mỹ: hồi kỹ thuật, canh mua khi giá giữ trên 3994"
   }
+ },
+ "2026-10-27 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133335012735108",
+  "post_id": "1121396124381014_122133335012735108",
+  "posted_at": "2026-10-27T07:30:04.904978+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "21:00",
+     "datetime": "2026-10-27T21:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "CB Consumer Confidence",
+     "forecast": "81.2",
+     "previous": "81.9"
+    }
+   ]
+  }
  }
 }
