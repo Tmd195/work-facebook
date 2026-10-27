@@ -1,5 +1,5 @@
 {
- "count": 25,
+ "count": 26,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -40,6 +40,7 @@
   "Chốt lời từng phần theo R:R cho XAUUSD: tại một R đóng 50 phần trăm và dời SL về hòa vốn, tại hai R đóng thêm 30 phần trăm, 20 phần trăm còn lại trail theo đáy swing để ôm trọn sóng",
   "Structure Invalidation cho XAUUSD: đáy bảo vệ luận điểm, nến đóng vượt là vô hiệu, lọc dịch chuyển thật giả bằng ATR",
   "Cách backtest một hệ thống giao dịch vàng XAUUSD trước khi dùng tiền thật: chốt cứng quy tắc vào lệnh, lấy dữ liệu 6 tháng, kéo từng nến ghi tối thiểu 100 lệnh, đọc win rate, kỳ vọng và max drawdown, test đủ cả tăng giảm đi ngang.",
-  "Hệ thống False Breakout cho XAUUSD: bắt bẫy phá vỡ giả, lọc xu hướng khung lớn và đặt SL sau cực trị"
+  "Hệ thống False Breakout cho XAUUSD: bắt bẫy phá vỡ giả, lọc xu hướng khung lớn và đặt SL sau cực trị",
+  "Công thức tính khối lượng lot chuẩn theo rủi ro cố định cho XAUUSD: cùng một phần trăm rủi ro, dừng lỗ càng rộng thì lot càng nhỏ, lot bằng số tiền rủi ro chia cho khoảng dừng lỗ nhân một trăm"
  ]
 }
