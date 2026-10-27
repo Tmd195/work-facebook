@@ -1,7 +1,5 @@
 {
  "seen": [
-  "464452",
-  "464454",
   "464453",
   "464455",
   "464456",
@@ -599,9 +597,23 @@
   "465048",
   "465049",
   "465050",
-  "465051"
+  "465051",
+  "465053",
+  "465052"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465053",
+   "at": "2026-10-27T16:19:51+07:00",
+   "time": "16:19",
+   "text": "Các nguồn tin cho biết OPEC+ sẽ giữ nguyên mục tiêu sản lượng dầu tại cuộc họp vào Chủ nhật.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-14": 3,
   "2026-10-15": 3,
