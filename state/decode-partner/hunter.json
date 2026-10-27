@@ -601,19 +601,7 @@
   "465033",
   "465032"
  ],
- "pending": [
-  {
-   "id": "465032",
-   "at": "2026-10-27T14:58:13+07:00",
-   "time": "14:58",
-   "text": "Ngày 27 tháng 10 đưa tin, dầu thô WTI trong ngày tăng hơn 1,00%, hiện báo 101,57 USD/thùng. Dầu thô Brent hiện tăng 0,8%, báo 111,31 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 3,
   "2026-10-15": 3,
