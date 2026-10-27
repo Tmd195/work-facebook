@@ -3265,5 +3265,51 @@
    "price": 4017.46,
    "title": "Vàng bám mốc 4,000 chờ FOMC - hồi kỹ thuật, xu hướng lớn vẫn giảm"
   }
+ },
+ "2026-10-27 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133416468735108",
+  "post_id": "1121396124381014_122133416468735108",
+  "posted_at": "2026-10-27T18:30:07.935499+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      3993.8,
+      4009.33
+     ],
+     "sl": 3975.83,
+     "tp": [
+      4016.54,
+      4029.98,
+      4044.22
+     ],
+     "trigger": "Giá lùi về vùng 3993.8-4009.33 giữ được 4000, H1 đóng nến tăng xác nhận từ chối giá thấp",
+     "invalidation": "H1 đóng cửa dưới 3987 (mất Z6), triệt tiêu CHoCH tăng H4"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      4022.2,
+      4029.98
+     ],
+     "sl": 4044.22,
+     "tp": [
+      4009.33,
+      3993.8,
+      3977.58
+     ],
+     "trigger": "Giá hồi lên kiểm tra kháng cự 4022-4030 và xuất hiện nến H1 từ chối theo xu hướng D1 giảm",
+     "invalidation": "H1 đóng cửa trên 4036 (vượt Z10), xác nhận phá kháng cự"
+    }
+   ],
+   "price": 4011.39,
+   "title": "Vàng giằng co quanh 4.000 chờ Fed, canh tín hiệu đảo chiều ngắn hạn"
+  }
  }
 }
