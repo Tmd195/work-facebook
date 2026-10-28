@@ -1,11 +1,5 @@
 {
  "seen": [
-  "465137",
-  "465138",
-  "465139",
-  "465140",
-  "465143",
-  "465142",
   "465141",
   "465144",
   "465145",
@@ -599,7 +593,13 @@
   "465733",
   "465732",
   "465731",
-  "465730"
+  "465730",
+  "465742",
+  "465741",
+  "465740",
+  "465739",
+  "465738",
+  "465737"
  ],
  "pending": [
   {
@@ -684,6 +684,39 @@
    "at": "2026-10-29T01:37:04+07:00",
    "time": "01:37",
    "text": "Chủ tịch Fed Warsh: Dự kiến sẽ có 6 cuộc họp hoạch định chính sách vào năm 2028.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465739",
+   "at": "2026-10-29T01:38:37+07:00",
+   "time": "01:38",
+   "text": "Chủ tịch Fed Warsh: Tôi dự kiến sẽ có 2 cuộc họp không bỏ phiếu về lãi suất vào năm 2028.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465738",
+   "at": "2026-10-29T01:38:30+07:00",
+   "time": "01:38",
+   "text": "Chủ tịch Fed Warsh: Vào năm 2027, một trong các cuộc họp sẽ không bỏ phiếu về lãi suất và tuyên bố.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465737",
+   "at": "2026-10-29T01:38:11+07:00",
+   "time": "01:38",
+   "text": "Chủ tịch Fed Warsh: Chúng tôi cho rằng 8 cuộc họp mỗi năm là số lần phù hợp.",
    "important": true,
    "star": 0,
    "actual": "null",
