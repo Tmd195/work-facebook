@@ -601,30 +601,7 @@
   "465577",
   "465576"
  ],
- "pending": [
-  {
-   "id": "465551",
-   "at": "2026-10-28T20:47:22+07:00",
-   "time": "20:47",
-   "text": "USD/CAD biến động ngắn hạn 38 điểm, hiện báo 1,4042.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465555",
-   "at": "2026-10-28T20:48:45+07:00",
-   "time": "20:48",
-   "text": "Ngân hàng Trung ương Canada: dự báo lạm phát trung bình năm 2026 là 2,9% (tháng 7 là 2,5%), năm 2027 là 3,1% (tháng 7 là 2,0%), năm 2028 là 2,2% (tháng 7 là 2,1%).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-16": 1,
   "2026-10-19": 1,
@@ -635,8 +612,8 @@
   "2026-10-25": 1,
   "2026-10-26": 1,
   "2026-10-27": 1,
-  "2026-10-28": 1
+  "2026-10-28": 2
  },
- "last_post": "2026-10-28T20:41:31.867199+07:00",
+ "last_post": "2026-10-28T21:12:40.685818+07:00",
  "fail": 0
 }
