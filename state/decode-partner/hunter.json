@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464748",
   "464750",
   "464749",
   "464752",
@@ -599,9 +598,22 @@
   "465344",
   "465345",
   "465346",
-  "465347"
+  "465347",
+  "465348"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465348",
+   "at": "2026-10-28T11:37:29+07:00",
+   "time": "11:37",
+   "text": "Tổng thống Mỹ Trump: (khi được hỏi liệu có tiến hành thêm các cuộc tấn công vào Iran sau bầu cử giữa nhiệm kỳ hay không) Bất cứ điều gì cũng có thể xảy ra.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 3,
   "2026-10-16": 1,
