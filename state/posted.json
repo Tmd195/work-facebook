@@ -3336,5 +3336,61 @@
    "price": 4011.39,
    "title": "Vàng giằng co quanh 4.000 chờ Fed, canh tín hiệu đảo chiều ngắn hạn"
   }
+ },
+ "2026-10-28 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133506528735108",
+  "post_id": "1121396124381014_122133506528735108",
+  "posted_at": "2026-10-28T07:30:03.732022+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "19:30",
+     "datetime": "2026-10-28T19:30:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "Annual Budget Release",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-10-28T19:30:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "Autumn Forecast Statement",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "01:00",
+     "datetime": "2026-10-29T01:00:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Federal Funds Rate",
+     "forecast": "4.00%",
+     "previous": "4.00%"
+    },
+    {
+     "time": "01:00",
+     "datetime": "2026-10-29T01:00:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "FOMC Statement",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "01:30",
+     "datetime": "2026-10-29T01:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "FOMC Press Conference",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
