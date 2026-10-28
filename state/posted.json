@@ -3392,5 +3392,51 @@
     }
    ]
   }
+ },
+ "2026-10-28 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133516962735108",
+  "post_id": "1121396124381014_122133516962735108",
+  "posted_at": "2026-10-28T10:00:11.312393+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4070.17,
+      4073.44
+     ],
+     "sl": 4096.65,
+     "tp": [
+      4030.26,
+      4012.34,
+      3989.87
+     ],
+     "trigger": "Giá hồi lên 4070-4073 xuất hiện nến H1 từ chối, đóng dưới, USD giữ vững.",
+     "invalidation": "H1 đóng cửa trên 4089."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4028.18,
+      4030.26
+     ],
+     "sl": 4002.73,
+     "tp": [
+      4059.99,
+      4070.17,
+      4087.08
+     ],
+     "trigger": "Giá hồi về 4028-4030 giữ vững, nến H1 xác nhận, RSI không thủng.",
+     "invalidation": "H1 đóng cửa dưới 4008."
+    }
+   ],
+   "price": 4046.87,
+   "title": "XAUUSD: giằng co dưới 4073, canh bán cản - mua hỗ trợ mạnh, chờ Fed"
+  }
  }
 }
