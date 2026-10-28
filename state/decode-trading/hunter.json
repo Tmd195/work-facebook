@@ -1,11 +1,5 @@
 {
  "seen": [
-  "465141",
-  "465144",
-  "465145",
-  "465146",
-  "465147",
-  "465148",
   "465149",
   "465150",
   "465151",
@@ -599,7 +593,13 @@
   "465740",
   "465739",
   "465738",
-  "465737"
+  "465737",
+  "465748",
+  "465747",
+  "465746",
+  "465745",
+  "465744",
+  "465743"
  ],
  "pending": [
   {
@@ -717,6 +717,28 @@
    "at": "2026-10-29T01:38:11+07:00",
    "time": "01:38",
    "text": "Chủ tịch Fed Warsh: Chúng tôi cho rằng 8 cuộc họp mỗi năm là số lần phù hợp.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465747",
+   "at": "2026-10-29T01:42:28+07:00",
+   "time": "01:42",
+   "text": "Chủ tịch Fed Warsh: Trong bối cảnh tình hình thế giới đầy biến động và bất ổn, kỳ vọng lạm phát đã phát triển theo đúng hướng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465744",
+   "at": "2026-10-29T01:40:48+07:00",
+   "time": "01:40",
+   "text": "Tin ngày 29 tháng 10, chỉ số đô la Mỹ DXY mở rộng đà giảm ngắn hạn lên hơn 30 điểm, hiện ở mức 102,18. Các đồng tiền không phải USD đồng loạt tăng, EUR/USD và GBP/USD tăng khoảng 40 điểm trong ngắn hạn, USD/JPY giảm gần 40 điểm.",
    "important": true,
    "star": 0,
    "actual": "null",
