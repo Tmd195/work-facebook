@@ -1,8 +1,5 @@
 {
  "seen": [
-  "465068",
-  "465067",
-  "465070",
   "465071",
   "465072",
   "465074",
@@ -599,9 +596,35 @@
   "465664",
   "465665",
   "465666",
-  "465667"
+  "465667",
+  "465669",
+  "465670",
+  "465668"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465669",
+   "at": "2026-10-29T00:50:06+07:00",
+   "time": "00:50",
+   "text": "[Lưu ý] Sau 10 phút nữa Cục Dự trữ Liên bang Mỹ ấn định trần lãi suất sẽ được công bố.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465670",
+   "at": "2026-10-29T00:50:00+07:00",
+   "time": "00:50",
+   "text": "Cuộc họp FOMC của Cục Dự trữ Liên bang sẽ công bố quyết định lãi suất sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-16": 1,
   "2026-10-19": 1,
