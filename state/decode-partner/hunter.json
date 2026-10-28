@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465207",
   "465206",
   "465209",
   "465210",
@@ -599,21 +598,10 @@
   "465803",
   "465805",
   "465804",
-  "465806"
+  "465806",
+  "465807"
  ],
- "pending": [
-  {
-   "id": "465804",
-   "at": "2026-10-29T02:19:18+07:00",
-   "time": "02:19",
-   "text": "Ngày 29 tháng 10 đưa tin, Chủ tịch Cục Dự trữ Liên bang Warsh tại cuộc họp báo một lần nữa cho biết, ông không tán thành việc Cục Dự trữ Liên bang thông qua cách gọi thông thường là \"hướng dẫn triển vọng\" để phát tín hiệu tới thị trường về lộ trình lãi suất trong tương lai và xu hướng chính sách tiền tệ. Ông cho biết: \"Trừ khi xảy ra tình huống khẩn cấp hoặc khủng hoảng, nếu không tôi không đồng tình với hướng dẫn triển vọng.\" Ông bổ sung: \"Tôi phải thêm điều kiện giới hạn này, bởi vì trong thời kỳ đen tối nhất của cuộc khủng hoảng tài chính năm 2008, sau khi phần nào tham khảo nghiên cứu và quan điểm của một học giả vừa đoạt giải Nobel, hướng dẫn triển vọng này thực sự đã phát huy tác dụng khá lớn. Nhưng trong thời kỳ bình thường, thông thường, đặc biệt là khi các yếu tố cơ bản của nền kinh tế hiện nay mạnh mẽ như vậy, tôi không đồng tình với cách làm này, cũng không tán thành việc áp dụng hướng dẫn triển vọng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-19": 1,
   "2026-10-20": 1,
