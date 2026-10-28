@@ -1,9 +1,5 @@
 {
  "seen": [
-  "464695",
-  "464697",
-  "464696",
-  "464698",
   "464700",
   "464699",
   "464704",
@@ -599,32 +595,13 @@
   "465287",
   "465294",
   "465293",
-  "465292"
+  "465292",
+  "465298",
+  "465297",
+  "465296",
+  "465295"
  ],
- "pending": [
-  {
-   "id": "465291",
-   "at": "2026-10-28T08:03:34+07:00",
-   "time": "08:03",
-   "text": "Ngân hàng Dự trữ New Zealand: Lãi suất tiền mặt chính thức dự kiến sẽ tăng thêm, nhưng phụ thuộc vào triển vọng kinh tế.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465287",
-   "at": "2026-10-28T08:01:34+07:00",
-   "time": "08:01",
-   "text": "Đô la New Zealand so với đô la Mỹ NZD/USD giảm mạnh 94 điểm trong ngắn hạn, hiện ở mức 0,5611.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-15": 3,
   "2026-10-16": 1,
