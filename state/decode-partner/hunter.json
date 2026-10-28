@@ -1,8 +1,5 @@
 {
  "seen": [
-  "465097",
-  "465100",
-  "465099",
   "465101",
   "465102",
   "465103",
@@ -599,7 +596,10 @@
   "465680",
   "465679",
   "465697",
-  "465696"
+  "465696",
+  "465700",
+  "465699",
+  "465698"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-29T01:05:42+07:00",
    "time": "01:05",
    "text": "Theo Axios: Cuộc tấn công vào Iran sau bầu cử giữa kỳ của Mỹ có thể nhắm vào giới lãnh đạo.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465698",
+   "at": "2026-10-29T01:18:30+07:00",
+   "time": "01:18",
+   "text": "Ngày 29 tháng 10 đưa tin, theo Axios dẫn lời các nguồn tin từ Mỹ, Israel và khu vực, Qatar và các nước khác đang thúc đẩy Iran cho phép các thanh sát viên Liên Hợp Quốc kiểm tra các cơ sở hạt nhân bị tấn công, để đổi lấy việc Mỹ nới lỏng một phần các biện pháp trừng phạt, cho phép bán dầu và giải phóng một phần tài sản bị phong tỏa. Các nguồn tin khu vực cho biết, Iran sẽ tìm kiếm sự phê chuẩn của Lãnh tụ Tối cao Mojtaba Khamenei đối với phương án liên quan. Các quan chức Mỹ và Israel cho biết, nếu đàm phán thất bại, Mỹ và Israel có thể tiến hành một cuộc tấn công quy mô lớn kéo dài một tuần nhằm vào giới lãnh đạo, năng lượng, cơ sở hạt nhân và cơ sở hạ tầng của Iran sau cuộc bầu cử giữa kỳ của Mỹ; Tổng Tham mưu trưởng Lực lượng Phòng vệ Israel Zamir hôm thứ Hai đã phối hợp các hành động tiềm tàng với Tư lệnh Bộ Chỉ huy Trung tâm Mỹ Cooper. Trump trước đó cho biết, Mỹ và Iran đang đàm phán thông qua các bên trung gian, nhưng liệu có đạt được thỏa thuận hay không vẫn chưa chắc chắn.",
    "important": true,
    "star": 0,
    "actual": "null",
