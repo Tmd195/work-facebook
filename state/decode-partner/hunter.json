@@ -1,15 +1,5 @@
 {
  "seen": [
-  "465118",
-  "465121",
-  "465122",
-  "465123",
-  "465129",
-  "465131",
-  "465126",
-  "465125",
-  "465124",
-  "465130",
   "465128",
   "465127",
   "465132",
@@ -599,7 +589,17 @@
   "465717",
   "465716",
   "465715",
-  "465714"
+  "465714",
+  "465729",
+  "465728",
+  "465727",
+  "465726",
+  "465725",
+  "465724",
+  "465723",
+  "465722",
+  "465721",
+  "465720"
  ],
  "pending": [
   {
@@ -618,6 +618,61 @@
    "at": "2026-10-29T01:18:30+07:00",
    "time": "01:18",
    "text": "Ngày 29 tháng 10 đưa tin, theo Axios dẫn lời các nguồn tin từ Mỹ, Israel và khu vực, Qatar và các nước khác đang thúc đẩy Iran cho phép các thanh sát viên Liên Hợp Quốc kiểm tra các cơ sở hạt nhân bị tấn công, để đổi lấy việc Mỹ nới lỏng một phần các biện pháp trừng phạt, cho phép bán dầu và giải phóng một phần tài sản bị phong tỏa. Các nguồn tin khu vực cho biết, Iran sẽ tìm kiếm sự phê chuẩn của Lãnh tụ Tối cao Mojtaba Khamenei đối với phương án liên quan. Các quan chức Mỹ và Israel cho biết, nếu đàm phán thất bại, Mỹ và Israel có thể tiến hành một cuộc tấn công quy mô lớn kéo dài một tuần nhằm vào giới lãnh đạo, năng lượng, cơ sở hạt nhân và cơ sở hạ tầng của Iran sau cuộc bầu cử giữa kỳ của Mỹ; Tổng Tham mưu trưởng Lực lượng Phòng vệ Israel Zamir hôm thứ Hai đã phối hợp các hành động tiềm tàng với Tư lệnh Bộ Chỉ huy Trung tâm Mỹ Cooper. Trump trước đó cho biết, Mỹ và Iran đang đàm phán thông qua các bên trung gian, nhưng liệu có đạt được thỏa thuận hay không vẫn chưa chắc chắn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465728",
+   "at": "2026-10-29T01:34:53+07:00",
+   "time": "01:34",
+   "text": "Vàng giao ngay giảm ngắn hạn sau đó nhanh chóng tăng trở lại, biên độ dao động đạt 25 USD, hiện báo 4047,13 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465727",
+   "at": "2026-10-29T01:34:40+07:00",
+   "time": "01:34",
+   "text": "Chủ tịch Fed Warsh: Không muốn và cũng không thể khẳng định điều kiện tài chính đang thắt chặt.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465725",
+   "at": "2026-10-29T01:33:58+07:00",
+   "time": "01:33",
+   "text": "Vàng giao ngay giảm gần 15 USD trong ngắn hạn, hiện ở mức 4027,37 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465724",
+   "at": "2026-10-29T01:33:55+07:00",
+   "time": "01:33",
+   "text": "Chủ tịch Fed Warsh: Thảo luận chủ yếu tập trung vào vấn đề lạm phát.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465722",
+   "at": "2026-10-29T01:33:34+07:00",
+   "time": "01:33",
+   "text": "Chủ tịch Fed Warsh: GDP quý 3 có thể cao hơn 3%.",
    "important": true,
    "star": 0,
    "actual": "null",
