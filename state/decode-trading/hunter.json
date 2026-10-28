@@ -601,19 +601,7 @@
   "465816",
   "465818"
  ],
- "pending": [
-  {
-   "id": "465818",
-   "at": "2026-10-29T03:03:37+07:00",
-   "time": "03:03",
-   "text": "Alphabet(GOOGL.O) quý 3 năm 2026 doanh thu 127,58 tỷ USD, cùng kỳ năm ngoái 102,346 tỷ USD, thị trường dự kiến 128,175 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
