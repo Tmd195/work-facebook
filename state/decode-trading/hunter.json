@@ -1,11 +1,5 @@
 {
  "seen": [
-  "465149",
-  "465150",
-  "465151",
-  "465153",
-  "465152",
-  "465154",
   "465156",
   "465155",
   "465157",
@@ -599,7 +593,13 @@
   "465746",
   "465745",
   "465744",
-  "465743"
+  "465743",
+  "465754",
+  "465753",
+  "465752",
+  "465751",
+  "465750",
+  "465749"
  ],
  "pending": [
   {
@@ -739,6 +739,17 @@
    "at": "2026-10-29T01:40:48+07:00",
    "time": "01:40",
    "text": "Tin ngày 29 tháng 10, chỉ số đô la Mỹ DXY mở rộng đà giảm ngắn hạn lên hơn 30 điểm, hiện ở mức 102,18. Các đồng tiền không phải USD đồng loạt tăng, EUR/USD và GBP/USD tăng khoảng 40 điểm trong ngắn hạn, USD/JPY giảm gần 40 điểm.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465750",
+   "at": "2026-10-29T01:44:02+07:00",
+   "time": "01:44",
+   "text": "Ngày 29 tháng 10 đưa tin, Chủ tịch Cục Dự trữ Liên bang Warsh cho biết, chúng tôi đã quyết định bắt đầu điều chỉnh lịch họp của Ủy ban Thị trường Mở Liên bang (FOMC) từ mùa thu năm sau. Việc tổ chức 8 cuộc họp mỗi năm là phù hợp. Năm 2027, Cục Dự trữ Liên bang vẫn sẽ tổ chức 8 cuộc họp theo kế hoạch, nhưng một trong số đó sẽ không bỏ phiếu về lãi suất chính sách tiền tệ, mà dành riêng để thảo luận về chiến lược chính sách. Năm 2028, trong 8 cuộc họp sẽ có hai cuộc họp dành riêng để thảo luận về chiến lược chính sách và sẽ không bỏ phiếu về lãi suất chính sách. Những cuộc họp này sẽ không thuộc các cuộc họp ra quyết định chính sách chính thức.",
    "important": true,
    "star": 0,
    "actual": "null",
