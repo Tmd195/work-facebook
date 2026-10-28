@@ -1,11 +1,5 @@
 {
  "seen": [
-  "464931",
-  "464932",
-  "464933",
-  "464934",
-  "464935",
-  "464938",
   "464937",
   "464936",
   "464939",
@@ -599,32 +593,15 @@
   "465530",
   "465529",
   "465528",
-  "465527"
+  "465527",
+  "465535",
+  "465536",
+  "465534",
+  "465533",
+  "465532",
+  "465531"
  ],
- "pending": [
-  {
-   "id": "465522",
-   "at": "2026-10-28T20:35:00+07:00",
-   "time": "20:35",
-   "text": "Ngân hàng Trung ương Canada sẽ công bố quyết định lãi suất và báo cáo chính sách tiền tệ sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465521",
-   "at": "2026-10-28T20:34:37+07:00",
-   "time": "20:34",
-   "text": "Ngân hàng Thế giới: dự báo nguồn cung dầu toàn cầu năm 2026 sẽ giảm 5,2%, mức giảm lớn nhất trong hơn 40 năm ngoài cuộc suy thoái toàn cầu năm 2020.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-12": 1,
   "2026-10-14": 2,
