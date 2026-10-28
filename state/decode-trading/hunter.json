@@ -1,21 +1,5 @@
 {
  "seen": [
-  "465111",
-  "465116",
-  "465115",
-  "465117",
-  "465119",
-  "465118",
-  "465121",
-  "465120",
-  "465122",
-  "465123",
-  "465132",
-  "465133",
-  "465129",
-  "465131",
-  "465126",
-  "465125",
   "465124",
   "465130",
   "465128",
@@ -599,7 +583,23 @@
   "465713",
   "465712",
   "465711",
-  "465710"
+  "465710",
+  "465729",
+  "465728",
+  "465727",
+  "465726",
+  "465725",
+  "465724",
+  "465723",
+  "465722",
+  "465721",
+  "465720",
+  "465718",
+  "465719",
+  "465717",
+  "465716",
+  "465715",
+  "465714"
  ],
  "pending": [
   {
@@ -623,6 +623,61 @@
    "actual": "null",
    "forecast": "null",
    "previous": "null"
+  },
+  {
+   "id": "465728",
+   "at": "2026-10-29T01:34:53+07:00",
+   "time": "01:34",
+   "text": "Vàng giao ngay giảm ngắn hạn sau đó nhanh chóng tăng trở lại, biên độ dao động đạt 25 USD, hiện báo 4047,13 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465727",
+   "at": "2026-10-29T01:34:40+07:00",
+   "time": "01:34",
+   "text": "Chủ tịch Fed Warsh: Không muốn và cũng không thể khẳng định điều kiện tài chính đang thắt chặt.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465725",
+   "at": "2026-10-29T01:33:58+07:00",
+   "time": "01:33",
+   "text": "Vàng giao ngay giảm gần 15 USD trong ngắn hạn, hiện ở mức 4027,37 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465724",
+   "at": "2026-10-29T01:33:55+07:00",
+   "time": "01:33",
+   "text": "Chủ tịch Fed Warsh: Thảo luận chủ yếu tập trung vào vấn đề lạm phát.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465722",
+   "at": "2026-10-29T01:33:34+07:00",
+   "time": "01:33",
+   "text": "Chủ tịch Fed Warsh: GDP quý 3 có thể cao hơn 3%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
   }
  ],
  "posts": {
@@ -638,5 +693,5 @@
   "2026-10-29": 1
  },
  "last_post": "2026-10-29T01:05:29.343305+07:00",
- "fail": 1
+ "fail": 0
 }
