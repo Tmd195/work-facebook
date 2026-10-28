@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464717",
   "464718",
   "464719",
   "464720",
@@ -599,9 +598,22 @@
   "465314",
   "465313",
   "465315",
-  "465316"
+  "465316",
+  "465317"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465317",
+   "at": "2026-10-28T08:53:00+07:00",
+   "time": "08:53",
+   "text": "Dầu Brent tăng 1,00% trong ngày, hiện ở mức 110,85 USD/thùng. Dầu WTI hiện tăng 0,9%, ở mức 100,43 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-14": 2,
