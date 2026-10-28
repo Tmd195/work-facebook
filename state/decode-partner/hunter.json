@@ -1,9 +1,5 @@
 {
  "seen": [
-  "465188",
-  "465189",
-  "465190",
-  "465191",
   "465192",
   "465193",
   "465194",
@@ -599,7 +595,11 @@
   "465783",
   "465782",
   "465781",
-  "465780"
+  "465780",
+  "465791",
+  "465790",
+  "465789",
+  "465788"
  ],
  "pending": [
   {
@@ -684,6 +684,17 @@
    "at": "2026-10-29T02:02:20+07:00",
    "time": "02:02",
    "text": "Chủ tịch Fed Warsh: Tác động của việc Fed tăng lãi suất (tháng 9) đối với thị trường cơ bản phù hợp với kỳ vọng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465791",
+   "at": "2026-10-29T02:04:13+07:00",
+   "time": "02:04",
+   "text": "Chủ tịch Fed Warsh: Tăng trưởng kinh tế đã tăng tốc phần nào, nhưng điều đó không có nghĩa là nó đang gây ra lạm phát.",
    "important": true,
    "star": 0,
    "actual": "null",
