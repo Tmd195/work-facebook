@@ -1,9 +1,5 @@
 {
  "seen": [
-  "465167",
-  "465168",
-  "465169",
-  "465170",
   "465171",
   "465172",
   "465173",
@@ -599,7 +595,11 @@
   "465764",
   "465763",
   "465766",
-  "465765"
+  "465765",
+  "465770",
+  "465769",
+  "465768",
+  "465767"
  ],
  "pending": [
   {
@@ -662,6 +662,17 @@
    "at": "2026-10-29T01:42:28+07:00",
    "time": "01:42",
    "text": "Chủ tịch Fed Warsh: Trong bối cảnh tình hình thế giới đầy biến động và bất ổn, kỳ vọng lạm phát đã phát triển theo đúng hướng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465767",
+   "at": "2026-10-29T01:54:25+07:00",
+   "time": "01:54",
+   "text": "Chủ tịch Fed Warsh: Khi giá dầu tiếp tục tăng, lãi suất đã giảm trở lại.",
    "important": true,
    "star": 0,
    "actual": "null",
