@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465095",
-  "465098",
   "465097",
   "465100",
   "465099",
@@ -599,9 +597,23 @@
   "465675",
   "465682",
   "465680",
-  "465679"
+  "465679",
+  "465697",
+  "465696"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465696",
+   "at": "2026-10-29T01:05:42+07:00",
+   "time": "01:05",
+   "text": "Theo Axios: Cuộc tấn công vào Iran sau bầu cử giữa kỳ của Mỹ có thể nhắm vào giới lãnh đạo.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-19": 1,
   "2026-10-20": 1,
