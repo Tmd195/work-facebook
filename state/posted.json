@@ -3449,5 +3449,51 @@
    "price": 4046.87,
    "title": "XAUUSD: giằng co dưới 4073, canh bán cản - mua hỗ trợ mạnh, chờ Fed"
   }
+ },
+ "2026-10-28 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133571736735108",
+  "post_id": "1121396124381014_122133571736735108",
+  "posted_at": "2026-10-28T18:30:11.364497+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4070.17,
+      4073.44
+     ],
+     "sl": 4095.7,
+     "tp": [
+      4042.48,
+      4023.88,
+      4004.72
+     ],
+     "trigger": "Giá hồi lên 4.070-4.073, lợi suất giữ cao, xuất hiện nến từ chối H1",
+     "invalidation": "H1 đóng cửa vững trên 4.088 (R1/mép mây H4)"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4023.88,
+      4034.68
+     ],
+     "sl": 3999.05,
+     "tp": [
+      4050.34,
+      4064.85,
+      4073.44
+     ],
+     "trigger": "Giá về 4.024-4.035 giữ vững, có nến đảo chiều H1 sau tin",
+     "invalidation": "H4 đóng cửa dưới 4.011 (S1)"
+    }
+   ],
+   "price": 4043.81,
+   "title": "XAUUSD nén dưới 4.070 chờ FOMC — ưu tiên bán hồi theo xu hướng D1"
+  }
  }
 }
