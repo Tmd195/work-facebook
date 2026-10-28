@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464700",
   "464699",
   "464704",
   "464703",
@@ -599,21 +598,10 @@
   "465298",
   "465297",
   "465296",
-  "465295"
+  "465295",
+  "465299"
  ],
- "pending": [
-  {
-   "id": "465291",
-   "at": "2026-10-28T08:03:34+07:00",
-   "time": "08:03",
-   "text": "Ngân hàng Dự trữ New Zealand: Lãi suất tiền mặt chính thức dự kiến sẽ tăng thêm, nhưng phụ thuộc vào triển vọng kinh tế.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-12": 1,
   "2026-10-14": 2,
