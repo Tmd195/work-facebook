@@ -1567,5 +1567,20 @@
   "posted_at": "2026-10-28T08:45:02.444785+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-28 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1419584993656249/",
+  "post_id": "1419584993656249",
+  "posted_at": "2026-10-28T19:45:26.747071+07:00",
+  "preview": false,
+  "meta": {
+   "key": "XAUUSD|4142.79971",
+   "symbol": "XAUUSD",
+   "system": "retest",
+   "side": "sell",
+   "rr": 8.9,
+   "duration": 9.9
+  }
  }
 }
