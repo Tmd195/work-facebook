@@ -1,9 +1,5 @@
 {
  "seen": [
-  "464986",
-  "464988",
-  "464987",
-  "464989",
   "464991",
   "464990",
   "464992",
@@ -599,32 +595,13 @@
   "465581",
   "465584",
   "465583",
-  "465585"
+  "465585",
+  "465587",
+  "465586",
+  "465589",
+  "465588"
  ],
- "pending": [
-  {
-   "id": "465581",
-   "at": "2026-10-28T21:15:46+07:00",
-   "time": "21:15",
-   "text": "Giá dầu WTI tăng 2,00% trong ngày, hiện ở mức 101,50 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465584",
-   "at": "2026-10-28T21:20:01+07:00",
-   "time": "21:20",
-   "text": "[Lưu ý] Sau 10 phút nữa EIA - Tồn kho dầu thô Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-16": 1,
   "2026-10-19": 1,
