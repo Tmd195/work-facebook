@@ -1,12 +1,5 @@
 {
  "seen": [
-  "465188",
-  "465189",
-  "465190",
-  "465191",
-  "465192",
-  "465193",
-  "465194",
   "465195",
   "465196",
   "465197",
@@ -599,164 +592,16 @@
   "465783",
   "465782",
   "465781",
-  "465780"
+  "465780",
+  "465794",
+  "465793",
+  "465792",
+  "465791",
+  "465790",
+  "465789",
+  "465788"
  ],
- "pending": [
-  {
-   "id": "465728",
-   "at": "2026-10-29T01:34:53+07:00",
-   "time": "01:34",
-   "text": "Vàng giao ngay giảm ngắn hạn sau đó nhanh chóng tăng trở lại, biên độ dao động đạt 25 USD, hiện báo 4047,13 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465727",
-   "at": "2026-10-29T01:34:40+07:00",
-   "time": "01:34",
-   "text": "Chủ tịch Fed Warsh: Không muốn và cũng không thể khẳng định điều kiện tài chính đang thắt chặt.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465725",
-   "at": "2026-10-29T01:33:58+07:00",
-   "time": "01:33",
-   "text": "Vàng giao ngay giảm gần 15 USD trong ngắn hạn, hiện ở mức 4027,37 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465724",
-   "at": "2026-10-29T01:33:55+07:00",
-   "time": "01:33",
-   "text": "Chủ tịch Fed Warsh: Thảo luận chủ yếu tập trung vào vấn đề lạm phát.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465722",
-   "at": "2026-10-29T01:33:34+07:00",
-   "time": "01:33",
-   "text": "Chủ tịch Fed Warsh: GDP quý 3 có thể cao hơn 3%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465735",
-   "at": "2026-10-29T01:37:04+07:00",
-   "time": "01:37",
-   "text": "Chủ tịch Fed Warsh: Dự kiến sẽ có 6 cuộc họp hoạch định chính sách vào năm 2028.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465739",
-   "at": "2026-10-29T01:38:37+07:00",
-   "time": "01:38",
-   "text": "Chủ tịch Fed Warsh: Tôi dự kiến sẽ có 2 cuộc họp không bỏ phiếu về lãi suất vào năm 2028.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465738",
-   "at": "2026-10-29T01:38:30+07:00",
-   "time": "01:38",
-   "text": "Chủ tịch Fed Warsh: Vào năm 2027, một trong các cuộc họp sẽ không bỏ phiếu về lãi suất và tuyên bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465737",
-   "at": "2026-10-29T01:38:11+07:00",
-   "time": "01:38",
-   "text": "Chủ tịch Fed Warsh: Chúng tôi cho rằng 8 cuộc họp mỗi năm là số lần phù hợp.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465747",
-   "at": "2026-10-29T01:42:28+07:00",
-   "time": "01:42",
-   "text": "Chủ tịch Fed Warsh: Trong bối cảnh tình hình thế giới đầy biến động và bất ổn, kỳ vọng lạm phát đã phát triển theo đúng hướng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465744",
-   "at": "2026-10-29T01:40:48+07:00",
-   "time": "01:40",
-   "text": "Tin ngày 29 tháng 10, chỉ số đô la Mỹ DXY mở rộng đà giảm ngắn hạn lên hơn 30 điểm, hiện ở mức 102,18. Các đồng tiền không phải USD đồng loạt tăng, EUR/USD và GBP/USD tăng khoảng 40 điểm trong ngắn hạn, USD/JPY giảm gần 40 điểm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465750",
-   "at": "2026-10-29T01:44:02+07:00",
-   "time": "01:44",
-   "text": "Ngày 29 tháng 10 đưa tin, Chủ tịch Cục Dự trữ Liên bang Warsh cho biết, chúng tôi đã quyết định bắt đầu điều chỉnh lịch họp của Ủy ban Thị trường Mở Liên bang (FOMC) từ mùa thu năm sau. Việc tổ chức 8 cuộc họp mỗi năm là phù hợp. Năm 2027, Cục Dự trữ Liên bang vẫn sẽ tổ chức 8 cuộc họp theo kế hoạch, nhưng một trong số đó sẽ không bỏ phiếu về lãi suất chính sách tiền tệ, mà dành riêng để thảo luận về chiến lược chính sách. Năm 2028, trong 8 cuộc họp sẽ có hai cuộc họp dành riêng để thảo luận về chiến lược chính sách và sẽ không bỏ phiếu về lãi suất chính sách. Những cuộc họp này sẽ không thuộc các cuộc họp ra quyết định chính sách chính thức.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465767",
-   "at": "2026-10-29T01:54:25+07:00",
-   "time": "01:54",
-   "text": "Chủ tịch Fed Warsh: Khi giá dầu tiếp tục tăng, lãi suất đã giảm trở lại.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "465787",
-   "at": "2026-10-29T02:02:20+07:00",
-   "time": "02:02",
-   "text": "Chủ tịch Fed Warsh: Tác động của việc Fed tăng lãi suất (tháng 9) đối với thị trường cơ bản phù hợp với kỳ vọng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
