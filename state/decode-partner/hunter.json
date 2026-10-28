@@ -1,7 +1,5 @@
 {
  "seen": [
-  "464779",
-  "464781",
   "464780",
   "464782",
   "464783",
@@ -599,21 +597,11 @@
   "465376",
   "465375",
   "465377",
-  "465378"
+  "465378",
+  "465380",
+  "465379"
  ],
- "pending": [
-  {
-   "id": "465378",
-   "at": "2026-10-28T14:15:54+07:00",
-   "time": "14:15",
-   "text": "GBP/USD giảm xuống mức thấp nhất trong 12 ngày, ở mức 1,3270. EUR/USD giảm xuống mức thấp nhất trong 17 tháng, ở mức 1,1111.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-15": 3,
   "2026-10-16": 1,
