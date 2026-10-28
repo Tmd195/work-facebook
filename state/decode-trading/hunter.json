@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464865",
   "464864",
   "464866",
   "464868",
@@ -599,21 +598,10 @@
   "465461",
   "465460",
   "465463",
-  "465462"
+  "465462",
+  "465464"
  ],
- "pending": [
-  {
-   "id": "465460",
-   "at": "2026-10-28T19:44:21+07:00",
-   "time": "19:44",
-   "text": "Bộ trưởng Tài chính Anh Healey: Dự báo của Văn phòng Trách nhiệm Ngân sách Anh cho thấy GDP năm 2026 tăng 1,2% (dự báo tháng 3 là 1,1%); năm 2027 tăng 1,0% (dự báo tháng 3 là 1,6%); năm 2028 tăng 1,6% (dự báo tháng 3 là 1,6%); năm 2029 tăng 1,8% (dự báo tháng 3 là 1,5%); năm 2030 tăng 1,7% (dự báo tháng 3 là 1,5%).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-12": 1,
   "2026-10-14": 2,
