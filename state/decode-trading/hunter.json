@@ -1,6 +1,5 @@
 {
  "seen": [
-  "464749",
   "464751",
   "464752",
   "464753",
@@ -599,9 +598,22 @@
   "465347",
   "465346",
   "465348",
-  "465349"
+  "465349",
+  "465350"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465350",
+   "at": "2026-10-28T11:58:52+07:00",
+   "time": "11:58",
+   "text": "Bạc giao ngay trong ngày giảm hơn 1,00%, hiện ở mức 53,86 USD/ounce. Bạc kỳ hạn New York trong ngày giảm 1,00%, hiện ở mức 53,97 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-12": 1,
   "2026-10-14": 2,
