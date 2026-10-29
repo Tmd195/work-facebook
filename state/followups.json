@@ -1122,5 +1122,15 @@
    "https://euribor-rates.info/en/ecb-interest-rates/",
    "https://euronews.com/2026/10/29/ecb-president-christine-lagarde-to-step-down-in-february-months-before-her-term-ends"
   ]
+ },
+ "2026-10-29 morning 07:30|news|2026-10-29T20:45:00+07:00|EUR": {
+  "at": "2026-10-29T21:01:19.680298+07:00",
+  "impact": "GIẢM",
+  "sources": [
+   "https://www.globalbankingandfinance.com/ecb-keeps-rates-unchanged-euro-slips/",
+   "https://www.indexbox.io/blog/ecb-holds-key-rates-steady-as-energy-shock-clouds-outlook/",
+   "https://swedenherald.com/article/ecb-holds-key-interest-rates-steady-deposit-rate-remains-at-250",
+   "https://www.investing.com/news/economy-news/ecb-to-hold-rates-as-investors-focus-on-french-bondslagardes-future-4981183"
+  ]
  }
 }
