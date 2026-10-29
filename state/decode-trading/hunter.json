@@ -1,12 +1,5 @@
 {
  "seen": [
-  "465508",
-  "465512",
-  "465511",
-  "465510",
-  "465516",
-  "465515",
-  "465514",
   "465513",
   "465519",
   "465518",
@@ -599,7 +592,14 @@
   "466104",
   "466103",
   "466102",
-  "466101"
+  "466101",
+  "466115",
+  "466114",
+  "466113",
+  "466112",
+  "466111",
+  "466110",
+  "466109"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-29T20:54:18+07:00",
    "time": "20:54",
    "text": "Thống đốc Ngân hàng Trung ương châu Âu Lagarde: Mức tăng giá năng lượng đã vượt quá mức cơ sở. Trong trung hạn, năng lượng sẽ tiếp tục đẩy lạm phát tăng cao hơn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466114",
+   "at": "2026-10-29T20:55:32+07:00",
+   "time": "20:55",
+   "text": "Bộ trưởng Tài chính Mỹ Bessent: Dữ liệu GDP rất xuất sắc.",
    "important": true,
    "star": 0,
    "actual": "null",
