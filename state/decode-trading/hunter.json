@@ -601,19 +601,7 @@
   "466005",
   "466006"
  ],
- "pending": [
-  {
-   "id": "466006",
-   "at": "2026-10-29T19:20:01+07:00",
-   "time": "19:20",
-   "text": "[Lưu ý] Sau 10 phút nữa Số người nộp đơn xin trợ cấp thất nghiệp lần đầu Mỹ,PCE cốt lõi (y/y)  Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
