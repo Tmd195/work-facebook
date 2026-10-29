@@ -1,9 +1,5 @@
 {
  "seen": [
-  "465453",
-  "465452",
-  "465451",
-  "465450",
   "465449",
   "465460",
   "465459",
@@ -599,9 +595,36 @@
   "466044",
   "466050",
   "466051",
-  "466052"
+  "466052",
+  "466056",
+  "466055",
+  "466054",
+  "466053"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466054",
+   "at": "2026-10-29T20:05:02+07:00",
+   "time": "20:05",
+   "text": "[Lưu ý] Sau 10 phút nữa ECB lãi suất cơ sở tiền gửi Eurozone sẽ được công bố.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466053",
+   "at": "2026-10-29T20:05:00+07:00",
+   "time": "20:05",
+   "text": "Ngân hàng Trung ương châu Âu sẽ công bố quyết định lãi suất sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-19": 1,
   "2026-10-20": 1,
