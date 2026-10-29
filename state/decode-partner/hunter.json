@@ -601,19 +601,7 @@
   "466186",
   "466185"
  ],
- "pending": [
-  {
-   "id": "466184",
-   "at": "2026-10-29T22:36:32+07:00",
-   "time": "22:36",
-   "text": "Thông tin thị trường: Các quan chức Ngân hàng Trung ương châu Âu sẵn sàng tăng lãi suất vào tháng 12.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-19": 1,
   "2026-10-20": 1,
