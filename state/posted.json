@@ -3621,5 +3621,51 @@
     }
    ]
   }
+ },
+ "2026-10-29 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133666638735108",
+  "post_id": "1121396124381014_122133666638735108",
+  "posted_at": "2026-10-29T10:00:10.852381+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4066.06,
+      4073.44
+     ],
+     "sl": 4096.65,
+     "tp": [
+      4044.14,
+      4023.88,
+      4001.64
+     ],
+     "trigger": "Giá hồi lên 4066-4073 (đỉnh phiên Á/đỉnh hôm qua) và có nến H1 từ chối giảm",
+     "invalidation": "H1 đóng cửa trên 4085, mở đường lên Kijun D1 4097"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4011.91,
+      4015.19
+     ],
+     "sl": 3993.8,
+     "tp": [
+      4044.14,
+      4066.06,
+      4081.97
+     ],
+     "trigger": "Giá về 4012-4015 (S2) và xuất hiện nến H1 xác nhận hồi phục",
+     "invalidation": "H1 đóng cửa dưới 3994, mất đáy mở đường về 3975"
+    }
+   ],
+   "price": 4044.14,
+   "title": "XAUUSD nghiêng giảm sau khi Fed giữ lãi suất diều hâu, canh bán 4066-4073"
+  }
  }
 }
