@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465632",
   "465634",
   "465636",
   "465635",
@@ -599,9 +598,22 @@
   "466230",
   "466229",
   "466231",
-  "466232"
+  "466232",
+  "466233"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466233",
+   "at": "2026-10-30T01:48:42+07:00",
+   "time": "01:48",
+   "text": "Theo Newsmax: Các quan chức đương nhiệm và cựu quan chức Mỹ cho biết chính quyền Trump dự định tiến hành cuộc tấn công vào Iran sau khi cuộc bầu cử giữa kỳ của Mỹ kết thúc vào tuần tới, máy bay quân đội Mỹ đang được điều động đến các vị trí liên quan, dự kiến sẽ sử dụng bom nổ lớn MOAB (\"mẹ của các loại bom\").",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
