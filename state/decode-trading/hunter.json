@@ -1,8 +1,5 @@
 {
  "seen": [
-  "465542",
-  "465556",
-  "465555",
   "465554",
   "465553",
   "465552",
@@ -599,21 +596,12 @@
   "466141",
   "466140",
   "466139",
-  "466145"
+  "466145",
+  "466148",
+  "466147",
+  "466146"
  ],
- "pending": [
-  {
-   "id": "466143",
-   "at": "2026-10-29T21:16:15+07:00",
-   "time": "21:16",
-   "text": "Thống đốc Ngân hàng Trung ương châu Âu Lagarde: Nếu diễn biến thị trường đe dọa đến cơ chế truyền dẫn, chúng tôi có các công cụ để ứng phó.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
