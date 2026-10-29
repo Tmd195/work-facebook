@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465548",
   "465547",
   "465564",
   "465563",
@@ -599,21 +598,10 @@
   "466152",
   "466151",
   "466150",
-  "466149"
+  "466149",
+  "466155"
  ],
- "pending": [
-  {
-   "id": "466149",
-   "at": "2026-10-29T21:22:21+07:00",
-   "time": "21:22",
-   "text": "Chênh lệch lợi suất trái phiếu chính phủ kỳ hạn 10 năm giữa Pháp và Đức lại mở rộng, hiện ở mức 157 điểm cơ bản.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
