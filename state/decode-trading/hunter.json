@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465365",
-  "465366",
   "465363",
   "465364",
   "465367",
@@ -599,9 +597,23 @@
   "465964",
   "465963",
   "465962",
-  "465966"
+  "465966",
+  "465968",
+  "465967"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465967",
+   "at": "2026-10-29T16:58:40+07:00",
+   "time": "16:58",
+   "text": "Thống đốc Ngân hàng Trung ương châu Âu Lagarde nói với nhân viên rằng bà dự định từ chức vào ngày 7 tháng 2.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
