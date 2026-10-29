@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465346",
-  "465347",
   "465348",
   "465349",
   "465350",
@@ -599,9 +597,34 @@
   "465942",
   "465943",
   "465945",
-  "465944"
+  "465944",
+  "465947",
+  "465946"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "465947",
+   "at": "2026-10-29T15:58:30+07:00",
+   "time": "15:58",
+   "text": "Theo Semafor, trang truyền thông tài chính của Mỹ: Chính quyền Trump đang tiến hành đàm phán liên tục về một thỏa thuận hòa bình tạm thời giữa Mỹ và Iran.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "465946",
+   "at": "2026-10-29T15:57:48+07:00",
+   "time": "15:57",
+   "text": "WTI giảm xuống dưới 100 USD/thùng, giảm 1,23% trong ngày. Vàng giao ngay tăng ngắn hạn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-19": 1,
   "2026-10-20": 1,
