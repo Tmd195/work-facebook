@@ -601,41 +601,7 @@
   "466092",
   "466091"
  ],
- "pending": [
-  {
-   "id": "466090",
-   "at": "2026-10-29T20:33:54+07:00",
-   "time": "20:33",
-   "text": "Alphabet(GOOG.O) mở rộng đà giảm lên 13%, vốn hóa thị trường sẽ bốc hơi gần 490 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466092",
-   "at": "2026-10-29T20:35:24+07:00",
-   "time": "20:35",
-   "text": "USD/JPY giảm khoảng 30 pip trong ngắn hạn, hiện ở mức 157,76.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466091",
-   "at": "2026-10-29T20:35:00+07:00",
-   "time": "20:35",
-   "text": "Thống đốc Ngân hàng Trung ương châu Âu Lagarde sẽ tổ chức họp báo về chính sách tiền tệ sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
