@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465610",
   "465609",
   "465613",
   "465612",
@@ -599,21 +598,10 @@
   "466204",
   "466206",
   "466207",
-  "466208"
+  "466208",
+  "466209"
  ],
- "pending": [
-  {
-   "id": "466208",
-   "at": "2026-10-30T00:23:36+07:00",
-   "time": "00:23",
-   "text": "Tổng thống Mỹ Trump: Cục Dự trữ Liên bang không muốn giảm lãi suất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-19": 1,
   "2026-10-20": 1,
