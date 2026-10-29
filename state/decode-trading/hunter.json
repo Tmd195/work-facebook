@@ -1,9 +1,5 @@
 {
  "seen": [
-  "465482",
-  "465481",
-  "465480",
-  "465491",
   "465490",
   "465489",
   "465488",
@@ -599,7 +595,11 @@
   "466079",
   "466078",
   "466077",
-  "466076"
+  "466076",
+  "466084",
+  "466082",
+  "466083",
+  "466081"
  ],
  "pending": [
   {
@@ -607,6 +607,39 @@
    "at": "2026-10-29T20:17:16+07:00",
    "time": "20:17",
    "text": "Ngân hàng Trung ương châu Âu: Quy mô và thời gian kéo dài của cú sốc năng lượng có thể đẩy lạm phát tăng cao.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466084",
+   "at": "2026-10-29T20:20:55+07:00",
+   "time": "20:20",
+   "text": "Lợi suất trái phiếu chính phủ kỳ hạn 10 năm của Pháp giảm 9,5 điểm cơ bản trong ngày xuống 4,845%, trước đó là 4,880%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466082",
+   "at": "2026-10-29T20:19:32+07:00",
+   "time": "20:19",
+   "text": "Thị trường cắt giảm đặt cược vào việc Ngân hàng Trung ương châu Âu tăng lãi suất; dự kiến đến cuối năm 2027 sẽ tăng lũy kế 68 điểm cơ bản.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466083",
+   "at": "2026-10-29T20:19:31+07:00",
+   "time": "20:19",
+   "text": "Ngày 29/10 đưa tin, Ngân hàng Trung ương châu Âu giữ nguyên lãi suất ở mức 2,5%, phù hợp với dự báo của thị trường. Cùng lúc đó, thông tin Thống đốc Lagarde sẽ rời nhiệm sở sớm càng làm gia tăng lo ngại của thị trường về chi phí năng lượng và tình hình nước Pháp. Về chính sách lãi suất, Ngân hàng Trung ương châu Âu chọn cách tạm thời quan sát. Kể từ khi cuộc chiến Iran gây chấn động thị trường năng lượng, Ngân hàng Trung ương châu Âu đã tăng lãi suất hai lần. Các quan chức lo ngại tỷ lệ lạm phát có thể tăng lên gấp đôi mục tiêu 2%, nhưng hiện chưa phát hiện dấu hiệu giá dầu khí tăng lan sang các lĩnh vực khác. Cùng lúc đó, đà tăng trưởng kinh tế châu Âu trước đó được cho là kiên cường một cách bất ngờ đang suy yếu. Thị trường nhìn chung dự báo các nhà hoạch định chính sách sẽ tăng lãi suất một lần nữa vào tháng 12. Khi đó, Ngân hàng Trung ương châu Âu sẽ công bố dự báo kinh tế mới nhất để đánh giá mức độ nghiêm trọng của áp lực lạm phát. Tình hình nước Pháp làm trầm trọng thêm điều kiện tài chính thắt chặt, đang tiếp tục kìm hãm nhu cầu. Các nhà phân tích dự báo việc tăng lãi suất cuối năm sẽ là lần cuối cùng trong chu kỳ tăng lãi suất này của Ngân hàng Trung ương châu Âu. Tuy nhiên, nhà đầu tư đặt cược sẽ còn hai lần tăng lãi suất nữa vào năm 2027.",
    "important": true,
    "star": 0,
    "actual": "null",
