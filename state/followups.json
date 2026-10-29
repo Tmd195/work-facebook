@@ -1101,5 +1101,15 @@
  "2026-10-29 knowledge 12:00|examples": {
   "at": "2026-10-29T12:27:31.974423+07:00",
   "count": 3
+ },
+ "2026-10-29 morning 07:30|news|2026-10-29T19:30:00+07:00|USD": {
+  "at": "2026-10-29T19:42:20.262578+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.fxstreet.com/news/united-states-economy-grows-34-in-third-quarter-vs-32-expected-202610291232",
+   "https://www.stocktitan.net/articles/q3-2026-gdp-report",
+   "https://panews.io/articles/01a187a7-7141-774b-9fab-8e2f5d31dab7",
+   "https://tradingeconomics.com/united-states/pce-price-index-monthly-change"
+  ]
  }
 }
