@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465637",
   "465639",
   "465638",
   "465641",
@@ -599,9 +598,22 @@
   "466233",
   "466234",
   "466235",
-  "466236"
+  "466236",
+  "466237"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466237",
+   "at": "2026-10-30T02:53:24+07:00",
+   "time": "02:53",
+   "text": "Ngày 30 tháng 10, lực lượng vũ trang Houthi của Yemen tuyên bố đã sử dụng tên lửa đạn đạo và máy bay không người lái để tấn công nhà máy lọc dầu Ras Tanura của Ả Rập Xê Út, cơ sở Abqaiq của Saudi Aramco, sân bay King Khalid ở Riyadh, sân bay quốc tế King Fahd ở Dammam, nhà máy lọc dầu Rabigh và sở chỉ huy tập kết quân sự khu vực Najran, đồng thời cho biết các cuộc tấn công đã gây gián đoạn hoạt động hàng không tại sân bay và thương vong cho nhân viên quân đội Ả Rập Xê Út.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
