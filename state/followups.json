@@ -1111,5 +1111,16 @@
    "https://panews.io/articles/01a187a7-7141-774b-9fab-8e2f5d31dab7",
    "https://tradingeconomics.com/united-states/pce-price-index-monthly-change"
   ]
+ },
+ "2026-10-29 morning 07:30|news|2026-10-29T20:15:00+07:00|EUR": {
+  "at": "2026-10-29T20:21:47.114181+07:00",
+  "impact": "TRUNG LẬP",
+  "sources": [
+   "https://www.investing.com/news/economy-news/ecb-to-hold-rates-as-investors-focus-on-french-bondslagardes-future-4981183",
+   "https://www.fxstreet.com/news/european-central-bank-is-expected-to-hold-interest-rates-despite-high-inflation-pressures-202610290800",
+   "https://tradingeconomics.com/euro-area/interest-rate",
+   "https://euribor-rates.info/en/ecb-interest-rates/",
+   "https://euronews.com/2026/10/29/ecb-president-christine-lagarde-to-step-down-in-february-months-before-her-term-ends"
+  ]
  }
 }
