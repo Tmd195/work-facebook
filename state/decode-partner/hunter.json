@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465647",
   "465650",
   "465652",
   "465651",
@@ -599,9 +598,22 @@
   "466245",
   "466246",
   "466247",
-  "466248"
+  "466248",
+  "466249"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466249",
+   "at": "2026-10-30T05:09:50+07:00",
+   "time": "05:09",
+   "text": "Ngày 30 tháng 10 đưa tin, để chuẩn bị khởi động lại chiến dịch quân sự nhằm vào Iran, ngày 28, 10 máy bay vận tải cỡ lớn của quân đội Mỹ đã khẩn cấp bay đến hai căn cứ không quân Ovda và Nevatim ở miền nam Israel, vận chuyển một lượng lớn tên lửa phòng không và tên lửa đánh chặn cho quân đội Israel, nhằm bổ sung kho vũ khí của quân đội Israel. Được biết, lô vật tư quân sự này đến từ căn cứ không quân Fort Bliss ở bang Texas, Mỹ. Giới phân tích cho rằng, động thái này của quân đội Mỹ nhằm bổ sung số đạn dược đã tiêu hao cho Israel, và trong tương lai quân đội Mỹ không loại trừ khả năng trực tiếp điều động bổ sung theo địa điểm các đơn vị tên lửa phòng không \"Patriot\" tới Israel. Theo nguồn tin từ giới chức chính thức Israel, hiện nay Israel đang duy trì phối hợp chiến lược hết sức chặt chẽ với phía Mỹ. Mặc dù hành động cuối cùng vẫn chưa được xác định, nhưng quân đội hai nước Mỹ và Israel đang chuẩn bị nghiêm ngặt, sẵn sàng thực hiện bất kỳ quyết định quân sự nào mà Tổng thống Mỹ Trump sắp đưa ra. Theo tiết lộ, ngoài Israel, một lượng lớn máy bay vận tải của quân đội Mỹ cũng đồng thời hạ cánh xuống các căn cứ quân sự ở Jordan, Saudi Arabia và Qatar.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
