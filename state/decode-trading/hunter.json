@@ -601,19 +601,7 @@
   "465952",
   "465953"
  ],
- "pending": [
-  {
-   "id": "465953",
-   "at": "2026-10-29T16:07:28+07:00",
-   "time": "16:07",
-   "text": "Dầu Brent mở rộng đà giảm trong ngày lên 1%, hiện ở mức 109,27 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-14": 2,
   "2026-10-15": 2,
