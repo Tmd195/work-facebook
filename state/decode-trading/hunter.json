@@ -1,8 +1,5 @@
 {
  "seen": [
-  "465871",
-  "465870",
-  "465872",
   "465873",
   "465874",
   "465877",
@@ -599,9 +596,24 @@
   "466466",
   "466465",
   "466464",
-  "466469"
+  "466469",
+  "466472",
+  "466471",
+  "466470"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466472",
+   "at": "2026-10-30T16:50:00+07:00",
+   "time": "16:50",
+   "text": "Tỷ lệ thất nghiệp tháng 9 của khu vực đồng euro và GDP quý III so với cùng kỳ năm trước (giá trị sơ bộ) sẽ được công bố sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
