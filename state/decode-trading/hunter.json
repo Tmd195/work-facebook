@@ -1,11 +1,5 @@
 {
  "seen": [
-  "465698",
-  "465704",
-  "465703",
-  "465702",
-  "465701",
-  "465700",
   "465699",
   "465706",
   "465705",
@@ -599,9 +593,49 @@
   "466296",
   "466295",
   "466293",
-  "466294"
+  "466294",
+  "466303",
+  "466302",
+  "466301",
+  "466300",
+  "466299",
+  "466298"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466303",
+   "at": "2026-10-30T10:05:17+07:00",
+   "time": "10:05",
+   "text": "Ngân hàng Trung ương Nhật Bản: Phải đặc biệt chú ý đến rủi ro lạm phát tăng cao lệch khỏi dự báo trở thành hiện thực, sau đó gây tác động bất lợi đối với nền kinh tế.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466301",
+   "at": "2026-10-30T10:04:36+07:00",
+   "time": "10:04",
+   "text": "Ngày 30 tháng 10, Ngân hàng Trung ương Nhật Bản: dự báo trung vị CPI lõi cho các năm tài chính 2026-2028 lần lượt là 2,5%, 2,6%, 2,0%. (Dự báo tháng 7 lần lượt là 2,5%, 2,4%, 2,0%).",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466299",
+   "at": "2026-10-30T10:03:30+07:00",
+   "time": "10:03",
+   "text": "Thành viên Hội đồng Chính sách Ngân hàng Trung ương Nhật Bản Takata Hajime phản đối quyết định lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
