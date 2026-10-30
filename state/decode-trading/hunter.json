@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465949",
   "465948",
   "465952",
   "465953",
@@ -599,9 +598,22 @@
   "466545",
   "466547",
   "466548",
-  "466549"
+  "466549",
+  "466550"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466550",
+   "at": "2026-10-30T20:34:24+07:00",
+   "time": "20:34",
+   "text": "Ngày 30 tháng 10, bạc giao ngay giảm mạnh 5% trong ngày, hiện ở mức 49,49 USD/ounce. Vàng giao ngay giảm xuống chạm 3.930 USD/ounce, giảm 2,29% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
