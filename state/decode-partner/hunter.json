@@ -1,10 +1,5 @@
 {
  "seen": [
-  "465780",
-  "465791",
-  "465790",
-  "465789",
-  "465788",
   "465796",
   "465795",
   "465794",
@@ -599,7 +594,12 @@
   "466382",
   "466386",
   "466385",
-  "466384"
+  "466384",
+  "466391",
+  "466390",
+  "466389",
+  "466388",
+  "466387"
  ],
  "pending": [
   {
@@ -618,6 +618,39 @@
    "at": "2026-10-30T13:49:47+07:00",
    "time": "13:49",
    "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda: sẽ thảo luận về sự cần thiết của việc tăng lãi suất tại mỗi cuộc họp.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466390",
+   "at": "2026-10-30T13:52:00+07:00",
+   "time": "13:52",
+   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda: Ngân hàng Trung ương Nhật Bản không có ý định chính thức tuyên bố đã đạt được mục tiêu giá cả vào một thời điểm nào đó.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466388",
+   "at": "2026-10-30T13:51:20+07:00",
+   "time": "13:51",
+   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda: Chưa tuyên bố đã đạt được mục tiêu lạm phát, vì chúng tôi cho rằng việc duy trì lạm phát ổn định, bền vững quanh mức 2% là rất quan trọng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466387",
+   "at": "2026-10-30T13:51:13+07:00",
+   "time": "13:51",
+   "text": "Ngày 30/10, Ngân hàng Quốc gia Thụy Sĩ công bố kết quả kinh doanh 9 tháng đầu năm với diễn biến tổng thể vững vàng, trong đó danh mục đầu tư ngoại tệ và lượng vàng nắm giữ mang lại lợi nhuận đáng kể. Theo tuyên bố công bố hôm thứ Sáu, từ tháng 1 đến tháng 9 năm nay, ngân hàng này đạt lợi nhuận 44,2 tỷ franc Thụy Sĩ (khoảng 54 tỷ USD). Danh mục tài sản ngoại tệ do Ngân hàng Quốc gia Thụy Sĩ nắm giữ (bao gồm danh mục cổ phiếu quy mô lớn) đóng góp 43,3 tỷ franc Thụy Sĩ lợi nhuận. Giá trị vàng do ngân hàng nắm giữ tăng thêm 1,2 tỷ franc Thụy Sĩ. Các vị thế định giá bằng franc Thụy Sĩ mang lại 1 tỷ franc Thụy Sĩ lợi nhuận, phần lợi nhuận này bao gồm khoản thu từ lãi suất âm mà Ngân hàng Quốc gia Thụy Sĩ áp dụng đối với tiền gửi dự trữ vượt mức của các ngân hàng thương mại tại ngân hàng này.",
    "important": true,
    "star": 0,
    "actual": "null",
