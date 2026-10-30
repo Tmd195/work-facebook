@@ -601,19 +601,7 @@
   "466567",
   "466568"
  ],
- "pending": [
-  {
-   "id": "466567",
-   "at": "2026-10-30T21:23:35+07:00",
-   "time": "21:23",
-   "text": "Vàng giao ngay giảm mạnh 3,00% trong ngày, hiện ở mức 3.900,39 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
