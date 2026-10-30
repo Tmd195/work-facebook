@@ -1,11 +1,5 @@
 {
  "seen": [
-  "465952",
-  "465951",
-  "465950",
-  "465953",
-  "465954",
-  "465956",
   "465955",
   "465958",
   "465957",
@@ -599,9 +593,49 @@
   "466545",
   "466547",
   "466548",
-  "466549"
+  "466549",
+  "466555",
+  "466554",
+  "466553",
+  "466552",
+  "466551",
+  "466550"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466555",
+   "at": "2026-10-30T20:35:17+07:00",
+   "time": "20:35",
+   "text": "Cục Dự trữ Liên bang Barkin: Việc điều chỉnh lãi suất từng bước là cách làm khả thi.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466551",
+   "at": "2026-10-30T20:34:51+07:00",
+   "time": "20:34",
+   "text": "Chủ tịch Fed Barkin: Định hướng chính sách của Fed là “rõ ràng”, vấn đề nằm ở nhịp độ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466550",
+   "at": "2026-10-30T20:34:24+07:00",
+   "time": "20:34",
+   "text": "Ngày 30 tháng 10, bạc giao ngay giảm mạnh 5% trong ngày, hiện ở mức 49,49 USD/ounce. Vàng giao ngay giảm xuống chạm 3.930 USD/ounce, giảm 2,29% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
