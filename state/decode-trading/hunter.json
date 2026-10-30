@@ -1,12 +1,5 @@
 {
  "seen": [
-  "465710",
-  "465729",
-  "465728",
-  "465727",
-  "465726",
-  "465725",
-  "465724",
   "465723",
   "465722",
   "465721",
@@ -599,76 +592,16 @@
   "466307",
   "466306",
   "466305",
-  "466304"
+  "466304",
+  "466319",
+  "466318",
+  "466317",
+  "466316",
+  "466315",
+  "466314",
+  "466313"
  ],
- "pending": [
-  {
-   "id": "466303",
-   "at": "2026-10-30T10:05:17+07:00",
-   "time": "10:05",
-   "text": "Ngân hàng Trung ương Nhật Bản: Phải đặc biệt chú ý đến rủi ro lạm phát tăng cao lệch khỏi dự báo trở thành hiện thực, sau đó gây tác động bất lợi đối với nền kinh tế.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466301",
-   "at": "2026-10-30T10:04:36+07:00",
-   "time": "10:04",
-   "text": "Ngày 30 tháng 10, Ngân hàng Trung ương Nhật Bản: dự báo trung vị CPI lõi cho các năm tài chính 2026-2028 lần lượt là 2,5%, 2,6%, 2,0%. (Dự báo tháng 7 lần lượt là 2,5%, 2,4%, 2,0%).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466299",
-   "at": "2026-10-30T10:03:30+07:00",
-   "time": "10:03",
-   "text": "Thành viên Hội đồng Chính sách Ngân hàng Trung ương Nhật Bản Takata Hajime phản đối quyết định lãi suất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466309",
-   "at": "2026-10-30T10:07:18+07:00",
-   "time": "10:07",
-   "text": "Ngân hàng Trung ương Nhật Bản: Việc neo tỷ lệ lạm phát cơ bản quanh mục tiêu 2% là vô cùng quan trọng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466305",
-   "at": "2026-10-30T10:06:12+07:00",
-   "time": "10:06",
-   "text": "Ngân hàng Trung ương Nhật Bản: sẽ tiếp tục tăng lãi suất dựa trên diễn biến kinh tế và giá cả cũng như tình hình tài chính.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466304",
-   "at": "2026-10-30T10:06:08+07:00",
-   "time": "10:06",
-   "text": "Ngày 30 tháng 10, Ngân hàng Trung ương Nhật Bản: dự báo trung vị tăng trưởng GDP thực tế cho các năm tài chính 2026-2028 lần lượt là 0,7%, 0,7%, 0,8% (dự báo tháng 7 lần lượt là 0,6%, 0,8%, 0,8%).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
