@@ -601,19 +601,7 @@
   "466289",
   "466290"
  ],
- "pending": [
-  {
-   "id": "466290",
-   "at": "2026-10-30T08:37:14+07:00",
-   "time": "08:37",
-   "text": "WTI dầu thô tăng lên chạm 102 USD/thùng, trong ngày tăng 0,26%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
