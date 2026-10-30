@@ -601,19 +601,7 @@
   "466290",
   "466291"
  ],
- "pending": [
-  {
-   "id": "466291",
-   "at": "2026-10-30T08:52:50+07:00",
-   "time": "08:52",
-   "text": "Dầu Brent tăng 2,00% trong ngày, hiện ở mức 113,32 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
