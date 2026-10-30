@@ -1,6 +1,5 @@
 {
  "seen": [
-  "465804",
   "465806",
   "465807",
   "465808",
@@ -599,9 +598,22 @@
   "466401",
   "466400",
   "466404",
-  "466403"
+  "466403",
+  "466405"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466405",
+   "at": "2026-10-30T14:10:03+07:00",
+   "time": "14:10",
+   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda: Cho rằng chính sách tiền tệ siêu nới lỏng đã cho thấy một số hiệu quả tích cực, nhưng chưa đủ để đẩy lạm phát lên 2% trong vòng hai năm như kỳ vọng ban đầu.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
