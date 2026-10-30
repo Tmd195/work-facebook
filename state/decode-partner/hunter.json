@@ -601,19 +601,7 @@
   "466666",
   "466667"
  ],
- "pending": [
-  {
-   "id": "466667",
-   "at": "2026-10-31T02:20:29+07:00",
-   "time": "02:20",
-   "text": "Theo Axios: Một nguồn tin ngoại giao cho biết các nhà đàm phán Qatar đã có cuộc hội đàm kéo dài 12 giờ với phía Iran tại Tehran, cuộc đàm phán hiện vẫn đang diễn ra. Nguồn tin này bổ sung rằng các nhà trung gian hòa giải Qatar trong ngày cũng đã duy trì liên lạc định kỳ với Nhà Trắng, và cho biết: \"Các bên vẫn đang tiếp tục đàm phán, nỗ lực thúc đẩy Mỹ và Iran đạt được thỏa thuận.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
