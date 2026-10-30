@@ -1771,5 +1771,20 @@
   "posted_at": "2026-10-30T08:45:03.544593+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-10-30 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1142892848175917/",
+  "post_id": "1142892848175917",
+  "posted_at": "2026-10-30T19:45:31.370192+07:00",
+  "preview": false,
+  "meta": {
+   "key": "GBPJPY|208.92300",
+   "symbol": "GBPJPY",
+   "system": "range",
+   "side": "sell",
+   "rr": 9.2,
+   "duration": 9.9
+  }
  }
 }
