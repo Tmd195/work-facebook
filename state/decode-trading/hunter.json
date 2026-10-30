@@ -1,14 +1,5 @@
 {
  "seen": [
-  "465699",
-  "465706",
-  "465705",
-  "465709",
-  "465708",
-  "465707",
-  "465713",
-  "465712",
-  "465711",
   "465710",
   "465729",
   "465728",
@@ -599,7 +590,16 @@
   "466301",
   "466300",
   "466299",
-  "466298"
+  "466298",
+  "466312",
+  "466311",
+  "466310",
+  "466309",
+  "466308",
+  "466307",
+  "466306",
+  "466305",
+  "466304"
  ],
  "pending": [
   {
@@ -629,6 +629,39 @@
    "at": "2026-10-30T10:03:30+07:00",
    "time": "10:03",
    "text": "Thành viên Hội đồng Chính sách Ngân hàng Trung ương Nhật Bản Takata Hajime phản đối quyết định lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466309",
+   "at": "2026-10-30T10:07:18+07:00",
+   "time": "10:07",
+   "text": "Ngân hàng Trung ương Nhật Bản: Việc neo tỷ lệ lạm phát cơ bản quanh mục tiêu 2% là vô cùng quan trọng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466305",
+   "at": "2026-10-30T10:06:12+07:00",
+   "time": "10:06",
+   "text": "Ngân hàng Trung ương Nhật Bản: sẽ tiếp tục tăng lãi suất dựa trên diễn biến kinh tế và giá cả cũng như tình hình tài chính.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466304",
+   "at": "2026-10-30T10:06:08+07:00",
+   "time": "10:06",
+   "text": "Ngày 30 tháng 10, Ngân hàng Trung ương Nhật Bản: dự báo trung vị tăng trưởng GDP thực tế cho các năm tài chính 2026-2028 lần lượt là 0,7%, 0,7%, 0,8% (dự báo tháng 7 lần lượt là 0,6%, 0,8%, 0,8%).",
    "important": true,
    "star": 0,
    "actual": "null",
