@@ -3787,5 +3787,51 @@
     }
    ]
   }
+ },
+ "2026-10-30 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133814646735108",
+  "post_id": "1121396124381014_122133814646735108",
+  "posted_at": "2026-10-30T10:00:11.062762+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4026.06,
+      4041.52
+     ],
+     "sl": 4066.06,
+     "tp": [
+      4000,
+      3978.08,
+      3951.38
+     ],
+     "trigger": "Giá hồi lên 4026–4041 và xuất hiện nến từ chối hoặc CHoCH giảm trên H1",
+     "invalidation": "H4 đóng cửa trên 4041.52 (lấy lại EMA50 và mây H4)"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3975.33,
+      3978.08
+     ],
+     "sl": 3948.62,
+     "tp": [
+      4000,
+      4018.15,
+      4026.06
+     ],
+     "trigger": "Giá quét về 3975–3978 (đáy ngày/đáy swing D1) và tạo nến đảo chiều tăng trên H1",
+     "invalidation": "H4 đóng cửa dưới 3975.33"
+    }
+   ],
+   "price": 4002.78,
+   "title": "XAUUSD nghiêng bán dưới 4000, canh short vùng cung 4026–4041"
+  }
  }
 }
