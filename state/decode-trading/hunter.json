@@ -1,9 +1,5 @@
 {
  "seen": [
-  "465922",
-  "465927",
-  "465926",
-  "465925",
   "465924",
   "465923",
   "465928",
@@ -599,9 +595,25 @@
   "466519",
   "466518",
   "466521",
-  "466520"
+  "466520",
+  "466525",
+  "466524",
+  "466523",
+  "466522"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466523",
+   "at": "2026-10-30T19:25:03+07:00",
+   "time": "19:25",
+   "text": "Lực lượng Vệ binh Cách mạng Iran: Một siêu tàu chở dầu đã va phải thủy lôi và phát nổ trong vùng cấm hàng hải ở eo biển Hormuz. Đây là tàu chở dầu thứ ba phát nổ và bốc cháy trong ngày hôm nay do vi phạm quy định hàng hải.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
