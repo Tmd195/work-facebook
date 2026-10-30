@@ -601,19 +601,7 @@
   "466340",
   "466339"
  ],
- "pending": [
-  {
-   "id": "466338",
-   "at": "2026-10-30T11:00:11+07:00",
-   "time": "11:00",
-   "text": "Bộ trưởng Tài chính Nhật Bản Katayama Satsuki: Dự kiến Ngân hàng Trung ương Nhật Bản sẽ phối hợp chặt chẽ với chính phủ để đạt được mục tiêu lạm phát 2%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
