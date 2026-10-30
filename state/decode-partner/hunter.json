@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465691",
-  "465690",
   "465689",
   "465688",
   "465687",
@@ -599,7 +597,9 @@
   "466275",
   "466277",
   "466276",
-  "466278"
+  "466278",
+  "466280",
+  "466279"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-30T07:57:54+07:00",
    "time": "07:57",
    "text": "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ giảm 8,5 điểm cơ bản xuống mức thấp nhất trong bảy tuần là 4,902%, lợi suất trái phiếu kho bạc kỳ hạn 2 năm giảm 8,7 điểm cơ bản xuống mức thấp nhất trong bảy tuần là 4,5648%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466280",
+   "at": "2026-10-30T08:00:25+07:00",
+   "time": "08:00",
+   "text": "Bạc giao ngay giảm 1,00% trong ngày, hiện ở mức 51,63 USD/ounce.",
    "important": true,
    "star": 0,
    "actual": "null",
