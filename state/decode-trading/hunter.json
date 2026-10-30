@@ -1,9 +1,5 @@
 {
  "seen": [
-  "465723",
-  "465722",
-  "465721",
-  "465720",
   "465718",
   "465719",
   "465717",
@@ -599,9 +595,25 @@
   "466316",
   "466315",
   "466314",
-  "466313"
+  "466313",
+  "466323",
+  "466322",
+  "466321",
+  "466320"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466320",
+   "at": "2026-10-30T10:10:45+07:00",
+   "time": "10:10",
+   "text": "Ngân hàng Trung ương Nhật Bản: Khác với trước đây khi cần chú ý đến rủi ro giảm giá, Nhật Bản đã bước vào giai đoạn mới, cần chú ý đến rủi ro lạm phát vượt mức.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
