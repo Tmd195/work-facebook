@@ -1,8 +1,5 @@
 {
  "seen": [
-  "465783",
-  "465782",
-  "465781",
   "465780",
   "465791",
   "465790",
@@ -599,7 +596,10 @@
   "466381",
   "466380",
   "466383",
-  "466382"
+  "466382",
+  "466386",
+  "466385",
+  "466384"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-30T13:48:19+07:00",
    "time": "13:48",
    "text": "Tin ngày 30 tháng 10, vàng giao ngay giảm 1,00% trong ngày, hiện ở mức 3.980,06 USD/ounce. Bạc giao ngay giảm gần 3% trong ngày, ở mức 50,7 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466386",
+   "at": "2026-10-30T13:49:47+07:00",
+   "time": "13:49",
+   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda: sẽ thảo luận về sự cần thiết của việc tăng lãi suất tại mỗi cuộc họp.",
    "important": true,
    "star": 0,
    "actual": "null",
