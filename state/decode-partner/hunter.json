@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465767",
-  "465775",
   "465774",
   "465773",
   "465772",
@@ -599,9 +597,23 @@
   "466363",
   "466360",
   "466368",
-  "466369"
+  "466369",
+  "466371",
+  "466370"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466371",
+   "at": "2026-10-30T13:36:00+07:00",
+   "time": "13:36",
+   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Ueda Kazuo: Mức lạm phát CPI cơ bản nhìn chung phù hợp với mục tiêu ổn định giá cả 2%, dự kiến sẽ duy trì quanh mức này.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
