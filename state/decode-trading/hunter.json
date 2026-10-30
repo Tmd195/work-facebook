@@ -1,7 +1,5 @@
 {
  "seen": [
-  "466044",
-  "466050",
   "466051",
   "466052",
   "466056",
@@ -599,32 +597,11 @@
   "466647",
   "466646",
   "466645",
-  "466644"
+  "466644",
+  "466650",
+  "466649"
  ],
- "pending": [
-  {
-   "id": "466641",
-   "at": "2026-10-31T00:30:18+07:00",
-   "time": "00:30",
-   "text": "Cục Dự trữ Liên bang Logan: Fed cần tăng lãi suất ít nhất hai lần nữa, mỗi lần 25 điểm cơ bản.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466644",
-   "at": "2026-10-31T00:31:11+07:00",
-   "time": "00:31",
-   "text": "Cục Dự trữ Liên bang Logan: Sau khi tăng lãi suất 50 điểm cơ bản, việc tạm dừng tăng lãi suất sẽ là hợp lý để xác định hành động tiếp theo nào là phù hợp.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
