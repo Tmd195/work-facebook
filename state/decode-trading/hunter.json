@@ -601,19 +601,7 @@
   "466358",
   "466357"
  ],
- "pending": [
-  {
-   "id": "466358",
-   "at": "2026-10-30T13:20:00+07:00",
-   "time": "13:20",
-   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda sẽ tổ chức họp báo về chính sách tiền tệ sau mười phút nữa; GDP quý III của Pháp so với cùng kỳ năm trước, chỉ số sơ bộ, sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
