@@ -3844,5 +3844,51 @@
    "price": 4002.78,
    "title": "XAUUSD nghiêng bán dưới 4000, canh short vùng cung 4026–4041"
   }
+ },
+ "2026-10-30 strategy_us 18:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122133870710735108",
+  "post_id": "1121396124381014_122133870710735108",
+  "posted_at": "2026-10-30T18:30:15.698478+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4015.37,
+      4040.54
+     ],
+     "sl": 4061.39,
+     "tp": [
+      3988.99,
+      3971.5,
+      3951.47
+     ],
+     "trigger": "Giá hồi vào 4015–4040 và xuất hiện nến H1 từ chối (bấc trên/nến giảm).",
+     "invalidation": "Đóng nến H1 trên 4040."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3971.5,
+      3977.58
+     ],
+     "sl": 3951.47,
+     "tp": [
+      3988.99,
+      4006.15,
+      4028.01
+     ],
+     "trigger": "Giá giữ vùng 3971–3977 và có phản ứng mua rõ (nến đảo chiều H1).",
+     "invalidation": "Đóng nến H1 dưới 3960.94."
+    }
+   ],
+   "price": 3980.9,
+   "title": "XAUUSD phiên Mỹ: ưu tiên bán nhịp hồi dưới 4040, mục tiêu 3970–3950"
+  }
  }
 }
