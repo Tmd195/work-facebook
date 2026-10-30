@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465944",
-  "465947",
   "465946",
   "465949",
   "465948",
@@ -599,9 +597,34 @@
   "466540",
   "466543",
   "466542",
-  "466539"
+  "466539",
+  "466546",
+  "466545"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466546",
+   "at": "2026-10-30T20:07:15+07:00",
+   "time": "20:07",
+   "text": "Vàng giao ngay giảm mạnh 2% trong ngày, hiện ở mức 3.940,22 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466545",
+   "at": "2026-10-30T20:07:07+07:00",
+   "time": "20:07",
+   "text": "Vàng kỳ hạn New York giảm mạnh 2% trong ngày, hiện ở mức 3.950,70 USD/ounce. Bạc kỳ hạn New York giảm mạnh 5% trong ngày, hiện ở mức 49,76 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
