@@ -601,19 +601,7 @@
   "466333",
   "466334"
  ],
- "pending": [
-  {
-   "id": "466320",
-   "at": "2026-10-30T10:10:45+07:00",
-   "time": "10:10",
-   "text": "Ngân hàng Trung ương Nhật Bản: Khác với trước đây khi cần chú ý đến rủi ro giảm giá, Nhật Bản đã bước vào giai đoạn mới, cần chú ý đến rủi ro lạm phát vượt mức.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
