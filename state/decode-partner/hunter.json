@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465757",
-  "465756",
   "465762",
   "465761",
   "465760",
@@ -599,9 +597,23 @@
   "466353",
   "466354",
   "466355",
-  "466356"
+  "466356",
+  "466358",
+  "466357"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466358",
+   "at": "2026-10-30T13:20:00+07:00",
+   "time": "13:20",
+   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Kazuo Ueda sẽ tổ chức họp báo về chính sách tiền tệ sau mười phút nữa; GDP quý III của Pháp so với cùng kỳ năm trước, chỉ số sơ bộ, sẽ được công bố sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
