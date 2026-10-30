@@ -1,5 +1,5 @@
 {
- "count": 28,
+ "count": 29,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -14,7 +14,8 @@
   "rahul-mohindar-oscillator",
   "structure-invalidation",
   "false-breakout",
-  "significant-breakout-levels-fvg"
+  "significant-breakout-levels-fvg",
+  "marubozu"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -44,6 +45,7 @@
   "Hệ thống False Breakout cho XAUUSD: bắt bẫy phá vỡ giả, lọc xu hướng khung lớn và đặt SL sau cực trị",
   "Công thức tính khối lượng lot chuẩn theo rủi ro cố định cho XAUUSD: cùng một phần trăm rủi ro, dừng lỗ càng rộng thì lot càng nhỏ, lot bằng số tiền rủi ro chia cho khoảng dừng lỗ nhân một trăm",
   "Hệ thống Significant Breakout Levels (FVG) cho XAUUSD: vẽ hỗ trợ kháng cự từ pivot, vào lệnh khi thân nến phá ngưỡng vượt một ATR kèm FVG cùng chiều xác nhận, lọc thuận xu hướng H4, đặt SL dưới mức vừa phá một ATR và TP theo R:R 1:2",
-  "Đặt dừng lỗ tránh bị quét: lùi SL ra sau đáy swing và cộng đệm bằng nửa ATR cho vàng XAUUSD"
+  "Đặt dừng lỗ tránh bị quét: lùi SL ra sau đáy swing và cộng đệm bằng nửa ATR cho vàng XAUUSD",
+  "Hệ thống nến Marubozu cho XAUUSD: nhận diện thân nến lớn, điều kiện vào lệnh thuận xu hướng, bộ lọc khối lượng và cách đặt SL theo đáy/mức giữa nến"
  ]
 }
