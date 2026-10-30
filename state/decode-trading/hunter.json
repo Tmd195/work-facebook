@@ -601,41 +601,7 @@
   "466598",
   "466609"
  ],
- "pending": [
-  {
-   "id": "466600",
-   "at": "2026-10-30T23:30:55+07:00",
-   "time": "23:30",
-   "text": "Cục Dự trữ Liên bang Musalem: Lạm phát vẫn còn quá cao, khó có thể giảm bớt nếu không có hành động của Fed.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466599",
-   "at": "2026-10-30T23:30:43+07:00",
-   "time": "23:30",
-   "text": "Cục Dự trữ Liên bang Mỹ (Fed) - ông Musalem: Hiện tại chính sách tiền tệ là nới lỏng, môi trường tài chính tổng thể vẫn duy trì trạng thái nới lỏng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "466598",
-   "at": "2026-10-30T23:30:29+07:00",
-   "time": "23:30",
-   "text": "Cục Dự trữ Liên bang Mỹ (Fed) - ông Musalem: Fed sẽ cần tăng lãi suất một lần nữa trong \"thời gian tới\".",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-15": 2,
   "2026-10-20": 1,
