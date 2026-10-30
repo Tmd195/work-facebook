@@ -601,19 +601,7 @@
   "466619",
   "466622"
  ],
- "pending": [
-  {
-   "id": "466619",
-   "at": "2026-10-30T23:50:00+07:00",
-   "time": "23:50",
-   "text": "Số lượng giàn khoan dầu của Mỹ trong tuần kết thúc ngày 30 tháng 10 sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
