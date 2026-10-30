@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466100",
   "466099",
   "466109",
   "466108",
@@ -599,9 +598,22 @@
   "466691",
   "466697",
   "466699",
-  "466698"
+  "466698",
+  "466700"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466700",
+   "at": "2026-10-31T04:29:37+07:00",
+   "time": "04:29",
+   "text": "Theo MS NOW: Theo tiết lộ của ba quan chức cấp cao các nước vùng Vịnh, chính quyền Trump đã thông báo tình hình cho các đồng minh vùng Vịnh, chuẩn bị tiến hành cuộc không kích ngắn nhưng dữ dội sớm nhất vào ngày 4 tháng 11 (ngày thứ hai sau cuộc bầu cử giữa kỳ).",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
