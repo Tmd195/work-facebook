@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465785",
-  "465784",
   "465783",
   "465782",
   "465781",
@@ -599,9 +597,23 @@
   "466379",
   "466378",
   "466381",
-  "466380"
+  "466380",
+  "466383",
+  "466382"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466382",
+   "at": "2026-10-30T13:48:19+07:00",
+   "time": "13:48",
+   "text": "Tin ngày 30 tháng 10, vàng giao ngay giảm 1,00% trong ngày, hiện ở mức 3.980,06 USD/ounce. Bạc giao ngay giảm gần 3% trong ngày, ở mức 50,7 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
