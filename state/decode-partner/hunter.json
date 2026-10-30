@@ -1,7 +1,5 @@
 {
  "seen": [
-  "465903",
-  "465902",
   "465904",
   "465905",
   "465906",
@@ -599,7 +597,9 @@
   "466496",
   "466499",
   "466500",
-  "466501"
+  "466501",
+  "466503",
+  "466502"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-30T18:38:12+07:00",
    "time": "18:38",
    "text": "Tổng thống Mỹ Trump: Chiến tranh Iran sẽ sớm kết thúc, bằng bất kỳ cách nào.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466503",
+   "at": "2026-10-30T18:42:16+07:00",
+   "time": "18:42",
+   "text": "Tổng thống Mỹ Trump: Iran phải đạt được thỏa thuận.",
    "important": true,
    "star": 0,
    "actual": "null",
