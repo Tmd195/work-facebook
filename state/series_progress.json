@@ -5,7 +5,7 @@
     "pivot-point": 10,
     "fibonacci": 10,
     "ma-ema": 10,
-    "rsi-macd-phan-ky": 3
+    "rsi-macd-phan-ky": 4
   },
   "history": [
     {
@@ -307,6 +307,11 @@
       "series": "rsi-macd-phan-ky",
       "part": 3,
       "date": "2026-10-30"
+    },
+    {
+      "series": "rsi-macd-phan-ky",
+      "part": 4,
+      "date": "2026-10-31"
     }
   ]
 }
