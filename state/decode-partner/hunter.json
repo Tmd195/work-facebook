@@ -1,7 +1,5 @@
 {
  "seen": [
-  "466160",
-  "466159",
   "466158",
   "466165",
   "466164",
@@ -599,7 +597,9 @@
   "466757",
   "466756",
   "466758",
-  "466759"
+  "466759",
+  "466761",
+  "466760"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-10-31T23:35:24+07:00",
    "time": "23:35",
    "text": "Các nguồn tin cho biết OPEC+ đã đạt được thỏa thuận về nguyên tắc, giữ nguyên mục tiêu sản lượng trong tháng 12.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "466760",
+   "at": "2026-10-31T23:37:48+07:00",
+   "time": "23:37",
+   "text": "Ngoại trưởng Hoa Kỳ Rubio: Tổng thống Hoa Kỳ Trump chưa đưa ra quyết định về hành động quân sự nhằm vào Iran.",
    "important": true,
    "star": 0,
    "actual": "null",
