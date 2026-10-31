@@ -601,19 +601,7 @@
   "466744",
   "466743"
  ],
- "pending": [
-  {
-   "id": "466743",
-   "at": "2026-10-31T20:16:11+07:00",
-   "time": "20:16",
-   "text": "Ngoại trưởng Iran: Chúng tôi không loại trừ khả năng bùng phát chiến tranh, và đã chuẩn bị cho mọi tình huống, chúng tôi đã nâng cấp vũ khí trang bị, khắc phục các điểm yếu, thử nghiệm vũ khí mới, các lực lượng đã ở trạng thái sẵn sàng chiến đấu cao nhất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
