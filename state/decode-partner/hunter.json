@@ -601,19 +601,7 @@
   "466711",
   "466712"
  ],
- "pending": [
-  {
-   "id": "466712",
-   "at": "2026-10-31T08:32:18+07:00",
-   "time": "08:32",
-   "text": "PMI Tổng hợp Trung Quốc",
-   "important": true,
-   "star": 2,
-   "actual": "49.7",
-   "forecast": "-",
-   "previous": "50.7"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
