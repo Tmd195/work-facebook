@@ -3926,5 +3926,19 @@
    "series": "rsi-macd-phan-ky",
    "part": 4
   }
+ },
+ "2026-10-31 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/2226563714557464/",
+  "post_id": "2226563714557464",
+  "posted_at": "2026-10-31T19:15:39.016121+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng chính bằng cấu trúc đỉnh đáy, rồi hạ xuống M15 chờ giá hồi về vùng hỗ trợ và có nến xác nhận mới vào lệnh, đặt SL dưới đáy swing và TP theo R:R 1:2, chỉ vào khi hai khung cùng hướng.",
+   "pillar": "setup",
+   "system": null,
+   "duration": 42.5,
+   "music": "feast-from-the-east.mp3"
+  }
  }
 }

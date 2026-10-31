@@ -1,5 +1,5 @@
 {
- "count": 29,
+ "count": 30,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -46,6 +46,7 @@
   "Công thức tính khối lượng lot chuẩn theo rủi ro cố định cho XAUUSD: cùng một phần trăm rủi ro, dừng lỗ càng rộng thì lot càng nhỏ, lot bằng số tiền rủi ro chia cho khoảng dừng lỗ nhân một trăm",
   "Hệ thống Significant Breakout Levels (FVG) cho XAUUSD: vẽ hỗ trợ kháng cự từ pivot, vào lệnh khi thân nến phá ngưỡng vượt một ATR kèm FVG cùng chiều xác nhận, lọc thuận xu hướng H4, đặt SL dưới mức vừa phá một ATR và TP theo R:R 1:2",
   "Đặt dừng lỗ tránh bị quét: lùi SL ra sau đáy swing và cộng đệm bằng nửa ATR cho vàng XAUUSD",
-  "Hệ thống nến Marubozu cho XAUUSD: nhận diện thân nến lớn, điều kiện vào lệnh thuận xu hướng, bộ lọc khối lượng và cách đặt SL theo đáy/mức giữa nến"
+  "Hệ thống nến Marubozu cho XAUUSD: nhận diện thân nến lớn, điều kiện vào lệnh thuận xu hướng, bộ lọc khối lượng và cách đặt SL theo đáy/mức giữa nến",
+  "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng chính bằng cấu trúc đỉnh đáy, rồi hạ xuống M15 chờ giá hồi về vùng hỗ trợ và có nến xác nhận mới vào lệnh, đặt SL dưới đáy swing và TP theo R:R 1:2, chỉ vào khi hai khung cùng hướng."
  ]
 }
