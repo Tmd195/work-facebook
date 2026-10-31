@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466167",
   "466168",
   "466169",
   "466170",
@@ -599,9 +598,22 @@
   "466763",
   "466764",
   "466765",
-  "466766"
+  "466766",
+  "466767"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466767",
+   "at": "2026-11-01T00:02:56+07:00",
+   "time": "00:02",
+   "text": "Ngoại trưởng Hoa Kỳ Rubio: Tổng thống Trump không cho rằng đàm phán hay gặp gỡ ai đó là một sự nhượng bộ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
