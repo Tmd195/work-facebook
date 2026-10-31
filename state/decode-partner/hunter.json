@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466180",
   "466182",
   "466183",
   "466184",
@@ -599,21 +598,10 @@
   "466778",
   "466777",
   "466779",
-  "466780"
+  "466780",
+  "466781"
  ],
- "pending": [
-  {
-   "id": "466779",
-   "at": "2026-11-01T01:54:31+07:00",
-   "time": "01:54",
-   "text": "Thư ký Hội đồng An ninh Quốc gia Tối cao Iran Rezaei: Chiến tranh nên kết thúc vĩnh viễn, không quốc gia nào nên \"dám\" tấn công Iran nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
