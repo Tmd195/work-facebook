@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466163",
   "466166",
   "466167",
   "466168",
@@ -599,9 +598,22 @@
   "466760",
   "466762",
   "466763",
-  "466764"
+  "466764",
+  "466765"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466765",
+   "at": "2026-10-31T23:53:22+07:00",
+   "time": "23:53",
+   "text": "Ngày 1 tháng 11, Ngoại trưởng Hoa Kỳ Rubio cho biết tại một cuộc họp báo hôm thứ Bảy rằng Tổng thống Hoa Kỳ Trump vẫn chưa quyết định có khôi phục hành động quân sự chống Iran hay không. Rubio nói rằng ông không rõ liệu cuộc đàm phán do Qatar dẫn dắt nhằm giải quyết tình trạng thù địch giữa Hoa Kỳ và Iran có ấn định thời gian biểu cụ thể hay không. Reuters đưa tin vào sáng sớm thứ Bảy rằng các quan chức Iran đang tổ chức hội đàm với các nhà trung gian Qatar tại Doha.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
