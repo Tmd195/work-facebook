@@ -1312,5 +1312,19 @@
     "Bạc giao ngay giảm 6,00% trong ngày, hiện ở mức 49,03 USD/ounce. Vàng giao ngay giảm xuống dưới 3.880 USD/ounce, giảm 3,"
    ]
   }
+ },
+ "2026-10-31 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1434264868907055/",
+  "post_id": "1434264868907055",
+  "posted_at": "2026-10-31T20:00:30.214103+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V7|2026-09-08T18:00:00+00:00",
+   "version": "V7",
+   "side": "SELL",
+   "pips": 150,
+   "duration": 15.0
+  }
  }
 }
