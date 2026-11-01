@@ -3951,5 +3951,16 @@
    "duration": 42.5,
    "music": "feast-from-the-east.mp3"
   }
+ },
+ "2026-11-01 knowledge 12:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134159586735108",
+  "post_id": "1121396124381014_122134159586735108",
+  "posted_at": "2026-11-01T12:00:14.572462+07:00",
+  "preview": false,
+  "meta": {
+   "series": "rsi-macd-phan-ky",
+   "part": 6
+  }
  }
 }
