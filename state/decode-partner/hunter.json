@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466202",
   "466203",
   "466205",
   "466204",
@@ -599,9 +598,22 @@
   "466798",
   "466799",
   "466800",
-  "466801"
+  "466801",
+  "466802"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466802",
+   "at": "2026-11-01T18:10:36+07:00",
+   "time": "18:10",
+   "text": "Một quan chức am hiểu tình hình đàm phán nói với Reuters rằng các nhà đàm phán Iran đã có mặt ngày thứ ba liên tiếp tại thủ đô Doha của Qatar để hội đàm với các bên trung gian Qatar, nhằm thúc đẩy đạt được thỏa thuận chấm dứt chiến tranh giữa Mỹ và Iran.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
