@@ -601,19 +601,7 @@
   "466829",
   "466830"
  ],
- "pending": [
-  {
-   "id": "466829",
-   "at": "2026-11-02T01:07:22+07:00",
-   "time": "01:07",
-   "text": "Ngày 2 tháng 11, theo Axios đưa tin, một nguồn tin Israel và một nguồn tin Mỹ cho biết Tổng thống Mỹ Trump hôm thứ Bảy đã có cuộc điện đàm thẳng thắn với Thủ tướng Israel Netanyahu, thảo luận về tiến triển đàm phán Mỹ-Iran và thời điểm nhanh chóng khôi phục trạng thái giao tranh. Các nguồn tin cho biết Netanyahu đang thúc giục Trump tiến hành tấn công Iran ngay sau khi cuộc bầu cử giữa nhiệm kỳ kết thúc vào thứ Ba. Nhưng hiện tại Trump muốn để các cuộc đàm phán tiếp tục tiến triển, chiến lược này khiến Netanyahu lo ngại. Nguồn tin Israel cho biết cuộc điện đàm có \"không khí cứng rắn\"; nguồn tin Mỹ mô tả cuộc điện đàm là \"trực diện\". Nhà Trắng và Văn phòng Thủ tướng Israel đều từ chối bình luận.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
