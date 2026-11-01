@@ -3962,5 +3962,19 @@
    "series": "rsi-macd-phan-ky",
    "part": 6
   }
+ },
+ "2026-11-01 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1433120769021165/",
+  "post_id": "1433120769021165",
+  "posted_at": "2026-11-01T19:15:06.985725+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống Bollinger Band Tag Reversion cho XAUUSD: chạm dải ngoài đóng ngược vào trong, lọc đi ngang bằng Choppiness, SL sau đáy và TP về dải giữa",
+   "pillar": "he-thong",
+   "system": "bollinger-band-tag-reversion",
+   "duration": 64.2,
+   "music": "uplifting-bass.mp3"
+  }
  }
 }
