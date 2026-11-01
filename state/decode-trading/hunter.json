@@ -601,19 +601,7 @@
   "466848",
   "466849"
  ],
- "pending": [
-  {
-   "id": "466849",
-   "at": "2026-11-02T05:00:00+07:00",
-   "time": "05:00",
-   "text": "Chỉ số PMI sản xuất toàn cầu của S&P Úc",
-   "important": true,
-   "star": 2,
-   "actual": "49.6",
-   "forecast": "-",
-   "previous": "49.7"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
