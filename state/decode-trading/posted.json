@@ -1326,5 +1326,19 @@
    "pips": 150,
    "duration": 15.0
   }
+ },
+ "2026-11-01 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/970398272350131/",
+  "post_id": "970398272350131",
+  "posted_at": "2026-11-01T20:00:41.263733+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V4|2026-09-02T05:10:00+00:00",
+   "version": "V4",
+   "side": "BUY",
+   "pips": 150,
+   "duration": 13.0
+  }
  }
 }
