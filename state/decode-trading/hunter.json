@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466207",
   "466208",
   "466210",
   "466209",
@@ -599,21 +598,10 @@
   "466803",
   "466804",
   "466805",
-  "466806"
+  "466806",
+  "466807"
  ],
- "pending": [
-  {
-   "id": "466806",
-   "at": "2026-11-01T19:26:51+07:00",
-   "time": "19:26",
-   "text": "OPEC+ ra tuyên bố, tại cuộc họp vào Chủ nhật đã quyết định giữ nguyên hạn ngạch sản lượng dầu thô của tháng 12.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
