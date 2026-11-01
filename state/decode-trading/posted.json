@@ -1340,5 +1340,13 @@
    "pips": 150,
    "duration": 13.0
   }
+ },
+ "2026-11-02 td_bulletin 06:00": {
+  "job": "td_bulletin",
+  "link": "https://www.facebook.com/122103151269499355/posts/122122627461499355",
+  "post_id": "1411036908756172_122122627461499355",
+  "posted_at": "2026-11-02T06:00:04.681227+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
