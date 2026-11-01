@@ -1865,5 +1865,20 @@
   "posted_at": "2026-11-01T15:15:09.984258+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-01 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/2668002726956747/",
+  "post_id": "2668002726956747",
+  "posted_at": "2026-11-01T19:45:41.861426+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDCHF|0.81676",
+   "symbol": "USDCHF",
+   "system": "retest",
+   "side": "sell",
+   "rr": 5.8,
+   "duration": 9.9
+  }
  }
 }
