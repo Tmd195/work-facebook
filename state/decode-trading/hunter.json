@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466231",
   "466232",
   "466233",
   "466234",
@@ -599,9 +598,22 @@
   "466827",
   "466828",
   "466829",
-  "466830"
+  "466830",
+  "466831"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466831",
+   "at": "2026-11-02T01:19:32+07:00",
+   "time": "01:19",
+   "text": "Ngày 2 tháng 11, theo tờ The Jerusalem Post đưa tin, nếu Trump yêu cầu Lực lượng Phòng vệ Israel (IDF) tham gia vào chiến dịch quân sự của không quân Mỹ nhằm vào Iran sau cuộc bầu cử giữa kỳ của Mỹ ngày 3 tháng 11, quân đội Israel đã sẵn sàng tấn công, nhưng hiện tình hình vẫn bao trùm bởi nhiều bất định. Trước đó, Trump đã từng rút lại các đe dọa tấn công Iran vào tháng 8, đầu tháng 10 năm nay và nhiều thời điểm khác, trong khi hiện nay khả năng tấn công lại gia tăng, một phần do các bên đã cố gắng thông qua các kênh khác để giành nhượng bộ từ Iran, và một số thành viên trong nhóm của Trump cũng đang quay trở lại ủng hộ tấn công quân sự. Trong tuần qua, hơn 10 máy bay vận tải quân sự Mỹ đã đến căn cứ không quân Nevatim và căn cứ không quân Ovda ở miền nam Israel, dường như đang chuẩn bị cho một chiến dịch quân sự lớn. Có báo cáo khác cho biết, Mỹ đang điều chuyển hệ thống phòng không và tên lửa đánh chặn đến Israel và các đồng minh Ả Rập khác. Tuy nhiên, hiện lực lượng của Mỹ trong khu vực vẫn ít hơn quy mô triển khai ở một số thời kỳ trước đây. Nhưng đây có thể chỉ là khởi đầu của việc triển khai. Mỹ và Israel vẫn còn bất đồng về mục tiêu cụ thể của các chiến dịch quân sự như vậy.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
