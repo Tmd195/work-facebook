@@ -4027,6 +4027,20 @@
    ]
   }
  },
+ "2026-11-02 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/984304280892939/",
+  "post_id": "984304280892939",
+  "posted_at": "2026-11-02T19:15:07.973435+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Quy tắc chống gỡ gạc (revenge trading) cho XAUUSD: sau lệnh thua không gấp đôi lot, giữ rủi ro cố định 1 phần trăm, nghỉ 15 phút xem lại, thua 2 lệnh liên tiếp thì dừng ngày để bảo toàn vốn và tâm lý",
+   "pillar": "quan-ly-von",
+   "system": null,
+   "duration": 43.6,
+   "music": "positive-energy.mp3"
+  }
+ },
  "2026-11-02 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122134288562735108",
@@ -4071,6 +4085,52 @@
    ],
    "price": 3907.57,
    "title": "XAUUSD hồi từ đáy 12 tháng - giữ 3875 mua hồi, mất thì bán"
+  }
+ },
+ "2026-11-02 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134336952735108",
+  "post_id": "1121396124381014_122134336952735108",
+  "posted_at": "2026-11-02T19:30:14.226204+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      3890.69,
+      3894.85
+     ],
+     "sl": 3865.2,
+     "tp": [
+      3906.5,
+      3917.87,
+      3934.14
+     ],
+     "trigger": "Giá hồi về 3,890-3,895 và giữ trên 3,875, H1 cho nến xác nhận tăng",
+     "invalidation": "Đóng nến H1 dưới 3,875"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      3914.2,
+      3919.51
+     ],
+     "sl": 3935.78,
+     "tp": [
+      3900.82,
+      3894.85,
+      3876.24
+     ],
+     "trigger": "Giá bật lên 3,914-3,919 và bị từ chối, xuất hiện nến đảo chiều",
+     "invalidation": "Đóng nến H1 trên 3,934"
+    }
+   ],
+   "price": 3900.4,
+   "title": "XAUUSD phiên Mỹ: canh hồi kỹ thuật từ 3,890, giữ mốc 3,875"
   }
  }
 }
