@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466419",
   "466423",
   "466426",
   "466425",
@@ -599,7 +598,8 @@
   "467017",
   "467021",
   "467020",
-  "467019"
+  "467019",
+  "467022"
  ],
  "pending": [
   {
@@ -640,6 +640,17 @@
    "at": "2026-11-02T20:37:39+07:00",
    "time": "20:37",
    "text": "Giá bạc giao ngay trong ngày mở rộng đà tăng lên 3,00%, hiện ở mức 50,61 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467022",
+   "at": "2026-11-02T20:40:29+07:00",
+   "time": "20:40",
+   "text": "Bạc giao ngay tăng mạnh 4,00% trong ngày, hiện ở mức 51,11 USD/ounce.",
    "important": true,
    "star": 0,
    "actual": "null",
