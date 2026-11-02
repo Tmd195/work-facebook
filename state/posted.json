@@ -3995,5 +3995,25 @@
   "posted_at": "2026-11-01T22:18:55.352089+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-02 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134269164735108",
+  "post_id": "1121396124381014_122134269164735108",
+  "posted_at": "2026-11-02T07:30:04.070078+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "22:00",
+     "datetime": "2026-11-02T22:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "ISM Manufacturing PMI",
+     "forecast": "54.5",
+     "previous": "54.5"
+    }
+   ]
+  }
  }
 }
