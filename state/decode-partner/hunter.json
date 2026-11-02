@@ -1,10 +1,5 @@
 {
  "seen": [
-  "466544",
-  "466541",
-  "466540",
-  "466543",
-  "466542",
   "466539",
   "466546",
   "466545",
@@ -599,7 +594,12 @@
   "467134",
   "467136",
   "467137",
-  "467138"
+  "467138",
+  "467143",
+  "467142",
+  "467141",
+  "467140",
+  "467139"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-03T04:30:26+07:00",
    "time": "04:30",
    "text": "Apple (AAPL.O) doanh thu quý 4 năm tài chính 2026 đạt 114,48 tỷ USD, cùng kỳ năm ngoái 102,47 tỷ USD, kỳ vọng thị trường 113,377 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467139",
+   "at": "2026-11-03T04:30:49+07:00",
+   "time": "04:30",
+   "text": "Apple (AAPL.O) doanh thu mảng kinh doanh iPhone quý 4 năm tài chính 2026 đạt 57,583 tỷ USD, kỳ vọng thị trường là 56,537 tỷ USD.",
    "important": true,
    "star": 0,
    "actual": "null",
