@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466419",
   "466425",
   "466424",
   "466428",
@@ -599,65 +598,10 @@
   "467019",
   "467018",
   "467017",
-  "467022"
+  "467022",
+  "467023"
  ],
- "pending": [
-  {
-   "id": "467021",
-   "at": "2026-11-02T20:38:33+07:00",
-   "time": "20:38",
-   "text": "Vàng giao ngay tăng lên chạm 3.930 USD/ounce, tăng 1,38% trong ngày. Bạc giao ngay tăng lên chạm 51 USD/ounce, tăng 3,84% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467020",
-   "at": "2026-11-02T20:38:14+07:00",
-   "time": "20:38",
-   "text": "Dầu Brent giảm mạnh 5,00% trong ngày, hiện ở mức 106,10 USD/thùng. Dầu WTI mất mốc 97 USD/thùng, giảm 4,97% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467019",
-   "at": "2026-11-02T20:37:39+07:00",
-   "time": "20:37",
-   "text": "Giá bạc giao ngay trong ngày mở rộng đà tăng lên 3,00%, hiện ở mức 50,61 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467018",
-   "at": "2026-11-02T20:37:34+07:00",
-   "time": "20:37",
-   "text": "Dầu Brent giảm dưới 107 USD/thùng, giảm 4,21% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467022",
-   "at": "2026-11-02T20:40:29+07:00",
-   "time": "20:40",
-   "text": "Bạc giao ngay tăng mạnh 4,00% trong ngày, hiện ở mức 51,11 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
