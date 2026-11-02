@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466373",
   "466372",
   "466376",
   "466375",
@@ -599,9 +598,22 @@
   "466969",
   "466970",
   "466972",
-  "466971"
+  "466971",
+  "466973"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "466973",
+   "at": "2026-11-02T18:08:59+07:00",
+   "time": "18:08",
+   "text": "Lực lượng Vệ binh Cách mạng Hồi giáo Iran cho biết kể từ ngày 25 tháng 10, đã có 11 tàu chở dầu bốc cháy tại khu vực Hormuz.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 3,
