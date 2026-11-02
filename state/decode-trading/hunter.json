@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466536",
   "466537",
   "466538",
   "466539",
@@ -599,21 +598,10 @@
   "467132",
   "467133",
   "467134",
-  "467135"
+  "467135",
+  "467136"
  ],
- "pending": [
-  {
-   "id": "467134",
-   "at": "2026-11-03T03:48:00+07:00",
-   "time": "03:48",
-   "text": "Ngày 3 tháng 11, Tổng thống Mỹ Trump: Giá dầu đang lao dốc như đá rơi, giảm gần 10 USD/thùng, mức giảm kỷ lục, vì mọi người cho rằng sẽ không xảy ra chiến tranh với Iran. Iran mong muốn đạt được giải pháp sớm nhất có thể. Điều này có thể sẽ xảy ra!",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 2,
