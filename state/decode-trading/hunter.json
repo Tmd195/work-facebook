@@ -601,19 +601,7 @@
   "467057",
   "467058"
  ],
- "pending": [
-  {
-   "id": "467058",
-   "at": "2026-11-02T21:53:30+07:00",
-   "time": "21:53",
-   "text": "Giá dầu WTI giảm xuống dưới 96 USD/thùng, mức thấp nhất kể từ ngày 20 tháng 10, giảm 5,95% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 2,
