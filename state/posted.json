@@ -4015,5 +4015,51 @@
     }
    ]
   }
+ },
+ "2026-11-02 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134288562735108",
+  "post_id": "1121396124381014_122134288562735108",
+  "posted_at": "2026-11-02T10:00:13.785232+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      3890.52,
+      3891.73
+     ],
+     "sl": 3865.51,
+     "tp": [
+      3914.51,
+      3931.26,
+      3948.72
+     ],
+     "trigger": "Giá hồi về 3890 và giữ trên 3875, xuất hiện nến xác nhận cầu",
+     "invalidation": "Đóng nến H1 dưới 3875"
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      3948.72,
+      3950
+     ],
+     "sl": 3977.58,
+     "tp": [
+      3931.26,
+      3915.53,
+      3900.51
+     ],
+     "trigger": "Giá tăng vào 3948-3950 rồi bị từ chối, xuất hiện nến đảo chiều",
+     "invalidation": "Đóng nến H1 trên 3974"
+    }
+   ],
+   "price": 3907.57,
+   "title": "XAUUSD hồi từ đáy 12 tháng - giữ 3875 mua hồi, mất thì bán"
+  }
  }
 }
