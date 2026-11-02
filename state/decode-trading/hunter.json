@@ -601,41 +601,7 @@
   "466860",
   "466856"
  ],
- "pending": [
-  {
-   "id": "466861",
-   "at": "2026-11-02T07:30:01+07:00",
-   "time": "07:30",
-   "text": "Giấy phép xây dựng (m/m) Úc",
-   "important": true,
-   "star": 2,
-   "actual": "5.1",
-   "forecast": "-%",
-   "previous": "-6.10"
-  },
-  {
-   "id": "466860",
-   "at": "2026-11-02T07:30:00+07:00",
-   "time": "07:30",
-   "text": "PMI nghiệp sản xuất Nhật Bản",
-   "important": true,
-   "star": 2,
-   "actual": "53.3",
-   "forecast": "-",
-   "previous": "53.3"
-  },
-  {
-   "id": "466856",
-   "at": "2026-11-02T07:30:00+07:00",
-   "time": "07:30",
-   "text": "HSBC - PMI nghiệp sản xuất Hàn Quốc",
-   "important": true,
-   "star": 2,
-   "actual": "51.3",
-   "forecast": "-",
-   "previous": "53.9"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
