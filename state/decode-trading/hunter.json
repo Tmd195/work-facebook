@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466350",
   "466351",
   "466352",
   "466354",
@@ -599,21 +598,10 @@
   "466946",
   "466949",
   "466948",
-  "466947"
+  "466947",
+  "466950"
  ],
- "pending": [
-  {
-   "id": "466948",
-   "at": "2026-11-02T16:18:54+07:00",
-   "time": "16:18",
-   "text": "Dầu Brent giảm xuống dưới 108 USD/thùng, lần đầu tiên kể từ ngày 22 tháng 10, mức giảm trong ngày đạt 3,3%. Dầu WTI hiện giảm 3,3%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-20": 1,
   "2026-10-21": 2,
