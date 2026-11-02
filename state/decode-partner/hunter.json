@@ -1,9 +1,5 @@
 {
  "seen": [
-  "466430",
-  "466433",
-  "466432",
-  "466434",
   "466435",
   "466438",
   "466437",
@@ -599,7 +595,11 @@
   "467028",
   "467027",
   "467029",
-  "467030"
+  "467030",
+  "467034",
+  "467033",
+  "467032",
+  "467031"
  ],
  "pending": [
   {
@@ -607,6 +607,39 @@
    "at": "2026-11-02T21:25:51+07:00",
    "time": "21:25",
    "text": "Dự trữ dầu thô trong Kho Dự trữ Dầu mỏ Chiến lược của Mỹ đã giảm xuống còn 282,2 triệu thùng trong tuần trước, mức thấp nhất kể từ năm 1982.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467033",
+   "at": "2026-11-02T21:28:42+07:00",
+   "time": "21:28",
+   "text": "Doanh thu quý 3 của Anthropic đạt 16,9 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467032",
+   "at": "2026-11-02T21:28:22+07:00",
+   "time": "21:28",
+   "text": "Anthropic: Tính đến ngày 30 tháng 9, tổng cam kết chi tiêu khoảng 895,4 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467031",
+   "at": "2026-11-02T21:27:13+07:00",
+   "time": "21:27",
+   "text": "Anthropic lỗ ròng 23,3 tỷ USD trong quý III, so với 12,1 tỷ USD cùng kỳ năm trước.",
    "important": true,
    "star": 0,
    "actual": "null",
