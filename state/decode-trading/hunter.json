@@ -1,7 +1,5 @@
 {
  "seen": [
-  "466431",
-  "466430",
   "466434",
   "466433",
   "466432",
@@ -599,9 +597,34 @@
   "467026",
   "467028",
   "467027",
-  "467029"
+  "467029",
+  "467031",
+  "467030"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467031",
+   "at": "2026-11-02T21:27:13+07:00",
+   "time": "21:27",
+   "text": "Anthropic lỗ ròng 23,3 tỷ USD trong quý III, so với 12,1 tỷ USD cùng kỳ năm trước.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467030",
+   "at": "2026-11-02T21:25:51+07:00",
+   "time": "21:25",
+   "text": "Dự trữ dầu thô trong Kho Dự trữ Dầu mỏ Chiến lược của Mỹ đã giảm xuống còn 282,2 triệu thùng trong tuần trước, mức thấp nhất kể từ năm 1982.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-21": 2,
   "2026-10-22": 2,
