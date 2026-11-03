@@ -1,13 +1,5 @@
 {
  "seen": [
-  "466599",
-  "466598",
-  "466609",
-  "466608",
-  "466607",
-  "466606",
-  "466605",
-  "466604",
   "466603",
   "466602",
   "466601",
@@ -599,9 +591,40 @@
   "467193",
   "467195",
   "467192",
-  "467191"
+  "467191",
+  "467206",
+  "467205",
+  "467204",
+  "467203",
+  "467202",
+  "467201",
+  "467200",
+  "467199"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467203",
+   "at": "2026-11-03T10:32:21+07:00",
+   "time": "10:32",
+   "text": "Ngân hàng Dự trữ Úc: Do triển vọng lạm phát được điều chỉnh tăng và các rủi ro tăng vẫn tiếp diễn, Ủy ban quyết định cần thiết phải thắt chặt thêm các điều kiện tài chính để hỗ trợ đưa lạm phát trở lại mức mục tiêu.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467202",
+   "at": "2026-11-03T10:32:05+07:00",
+   "time": "10:32",
+   "text": "RBA: Dự kiến CPI quý 4/2026 là 4,5%, quý 2/2027 là 3,7%, quý 4/2027 là 2,7%, quý 4/2028 là 2,4%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-23": 3,
   "2026-10-25": 1,
