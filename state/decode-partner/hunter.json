@@ -1,8 +1,5 @@
 {
  "seen": [
-  "466907",
-  "466908",
-  "466909",
   "466910",
   "466911",
   "466914",
@@ -599,7 +596,10 @@
   "467502",
   "467505",
   "467504",
-  "467506"
+  "467506",
+  "467509",
+  "467508",
+  "467507"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-11-04T04:15:31+07:00",
    "time": "04:15",
    "text": "AMD(AMD.O) quý 3 năm 2026 doanh thu 13,377 tỷ USD, cùng kỳ năm trước 9,246 tỷ USD, thị trường dự kiến 13,09 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467509",
+   "at": "2026-11-04T04:20:00+07:00",
+   "time": "04:20",
+   "text": "Dữ liệu tồn kho dầu thô API của Mỹ cho tuần kết thúc ngày 30 tháng 10 sẽ được công bố sau mười phút nữa.",
    "important": true,
    "star": 0,
    "actual": "null",
