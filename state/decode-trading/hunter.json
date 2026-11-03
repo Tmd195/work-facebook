@@ -1,7 +1,5 @@
 {
  "seen": [
-  "466665",
-  "466666",
   "466667",
   "466668",
   "466670",
@@ -599,7 +597,9 @@
   "467261",
   "467262",
   "467264",
-  "467263"
+  "467263",
+  "467266",
+  "467265"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-03T13:43:43+07:00",
    "time": "13:43",
    "text": "Quan chức cấp cao Iran: Iran và Mỹ còn cách rất xa một thỏa thuận chấm dứt chiến tranh. Iran sẵn sàng đáp trả mạnh mẽ các cuộc tấn công của Mỹ trong khu vực và xa hơn nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467266",
+   "at": "2026-11-03T13:46:59+07:00",
+   "time": "13:46",
+   "text": "Bạc giao ngay tiếp tục đà giảm, mức giảm trong ngày đạt 3%, hiện ở mức 49,12 USD/ounce.",
    "important": true,
    "star": 0,
    "actual": "null",
