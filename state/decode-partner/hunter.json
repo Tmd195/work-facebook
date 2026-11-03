@@ -601,19 +601,7 @@
   "467546",
   "467547"
  ],
- "pending": [
-  {
-   "id": "467545",
-   "at": "2026-11-04T06:36:22+07:00",
-   "time": "06:36",
-   "text": "Theo Financial Times của Anh: Trump cho biết Mỹ hiện không có kế hoạch tấn công Iran ngay lập tức.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-23": 3,
   "2026-10-25": 1,
