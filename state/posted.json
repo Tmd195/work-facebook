@@ -4143,5 +4143,34 @@
    "price": 3900.4,
    "title": "XAUUSD phiên Mỹ: canh hồi kỹ thuật từ 3,890, giữ mốc 3,875"
   }
+ },
+ "2026-11-03 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134416980735108",
+  "post_id": "1121396124381014_122134416980735108",
+  "posted_at": "2026-11-03T07:30:05.850537+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "22:00",
+     "datetime": "2026-11-03T22:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "JOLTS Job Openings",
+     "forecast": "7.15M",
+     "previous": "7.08M"
+    },
+    {
+     "time": "22:16",
+     "datetime": "2026-11-03T22:16:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Congressional Elections",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
