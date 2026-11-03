@@ -2040,5 +2040,20 @@
   "posted_at": "2026-11-03T08:45:04.463890+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-03 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1151180840897323/",
+  "post_id": "1151180840897323",
+  "posted_at": "2026-11-03T19:45:23.332953+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURUSD|1.11882",
+   "symbol": "EURUSD",
+   "system": "retest",
+   "side": "sell",
+   "rr": 4.0,
+   "duration": 9.9
+  }
  }
 }
