@@ -601,30 +601,7 @@
   "467178",
   "467179"
  ],
- "pending": [
-  {
-   "id": "467175",
-   "at": "2026-11-03T09:00:36+07:00",
-   "time": "09:00",
-   "text": "CPI (y/y) Việt Nam",
-   "important": false,
-   "star": 2,
-   "actual": "5.09",
-   "forecast": "-%",
-   "previous": "5.08"
-  },
-  {
-   "id": "467179",
-   "at": "2026-11-03T09:03:52+07:00",
-   "time": "09:03",
-   "text": "Bán lẻ (y/y) Việt Nam",
-   "important": false,
-   "star": 2,
-   "actual": "14.7",
-   "forecast": "-%",
-   "previous": "14.10"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-22": 2,
   "2026-10-23": 2,
