@@ -1,8 +1,5 @@
 {
  "seen": [
-  "466817",
-  "466818",
-  "466819",
   "466821",
   "466820",
   "466823",
@@ -599,9 +596,24 @@
   "467414",
   "467413",
   "467415",
-  "467416"
+  "467416",
+  "467419",
+  "467418",
+  "467417"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467418",
+   "at": "2026-11-03T20:46:48+07:00",
+   "time": "20:46",
+   "text": "Dầu Brent giảm 3,00% trong ngày, hiện ở mức 100,43 USD/thùng. Trước đó, Trump tuyên bố dừng khoản viện trợ 4 tỷ USD cho Israel.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-22": 2,
   "2026-10-23": 2,
