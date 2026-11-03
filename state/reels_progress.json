@@ -1,5 +1,5 @@
 {
- "count": 32,
+ "count": 33,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -16,7 +16,8 @@
   "false-breakout",
   "significant-breakout-levels-fvg",
   "marubozu",
-  "bollinger-band-tag-reversion"
+  "bollinger-band-tag-reversion",
+  "morning-star"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -50,6 +51,7 @@
   "Hệ thống nến Marubozu cho XAUUSD: nhận diện thân nến lớn, điều kiện vào lệnh thuận xu hướng, bộ lọc khối lượng và cách đặt SL theo đáy/mức giữa nến",
   "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng chính bằng cấu trúc đỉnh đáy, rồi hạ xuống M15 chờ giá hồi về vùng hỗ trợ và có nến xác nhận mới vào lệnh, đặt SL dưới đáy swing và TP theo R:R 1:2, chỉ vào khi hai khung cùng hướng.",
   "Hệ thống Bollinger Band Tag Reversion cho XAUUSD: chạm dải ngoài đóng ngược vào trong, lọc đi ngang bằng Choppiness, SL sau đáy và TP về dải giữa",
-  "Quy tắc chống gỡ gạc (revenge trading) cho XAUUSD: sau lệnh thua không gấp đôi lot, giữ rủi ro cố định 1 phần trăm, nghỉ 15 phút xem lại, thua 2 lệnh liên tiếp thì dừng ngày để bảo toàn vốn và tâm lý"
+  "Quy tắc chống gỡ gạc (revenge trading) cho XAUUSD: sau lệnh thua không gấp đôi lot, giữ rủi ro cố định 1 phần trăm, nghỉ 15 phút xem lại, thua 2 lệnh liên tiếp thì dừng ngày để bảo toàn vốn và tâm lý",
+  "Hệ thống nến Sao Mai (Morning Star) cho XAUUSD: nhận diện mẫu ba nến đảo chiều tăng, lọc xu hướng bằng SMA 50 và vùng hỗ trợ/order block, vào lệnh Buy Stop trên đỉnh nến ba, đặt SL dưới đáy nến giữa và TP theo R:R 1:2"
  ]
 }
