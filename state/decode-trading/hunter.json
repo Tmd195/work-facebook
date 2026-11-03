@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466909",
   "466910",
   "466912",
   "466911",
@@ -599,32 +598,10 @@
   "467504",
   "467508",
   "467507",
-  "467506"
+  "467506",
+  "467509"
  ],
- "pending": [
-  {
-   "id": "467505",
-   "at": "2026-11-04T04:16:09+07:00",
-   "time": "04:16",
-   "text": "Triển vọng doanh thu quý 4 năm 2026 của AMD (AMD.O) là 17 tỷ USD, kỳ vọng thị trường là 16,234 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467504",
-   "at": "2026-11-04T04:15:31+07:00",
-   "time": "04:15",
-   "text": "AMD(AMD.O) quý 3 năm 2026 doanh thu 13,377 tỷ USD, cùng kỳ năm trước 9,246 tỷ USD, thị trường dự kiến 13,09 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-22": 2,
   "2026-10-23": 2,
