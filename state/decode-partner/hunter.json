@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466948",
   "466947",
   "466950",
   "466952",
@@ -599,9 +598,22 @@
   "467545",
   "467544",
   "467546",
-  "467547"
+  "467547",
+  "467548"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467548",
+   "at": "2026-11-04T06:45:15+07:00",
+   "time": "06:45",
+   "text": "Ngày 4 tháng 11, theo Financial Times đưa tin, Trump cho biết Mỹ hiện không có kế hoạch tấn công Iran ngay lập tức. Ông đã làm nhẹ đi những đồn đoán về việc chuẩn bị leo thang xung đột với Iran sau cuộc bầu cử giữa nhiệm kỳ. Trong cuộc phỏng vấn với Financial Times vào thứ Ba theo giờ địa phương, Trump ngụ ý rằng ông hài lòng với tình trạng bế tắc hiện tại với Iran. Mặc dù ông cũng nói rằng nếu cần thiết, ông đã sẵn sàng cho một cuộc chiến tranh tiếp theo. Trump cho biết trong cuộc phỏng vấn qua điện thoại kéo dài sáu phút: \"Chúng ta dường như đang có được mọi thứ mình muốn.\" Khi được hỏi về việc Thủ tướng Israel Netanyahu ám chỉ mạnh mẽ rằng sẽ phát động cuộc tấn công vào cuối tuần này, Trump nói: \"Tôi đã sẵn sàng, chúng tôi đã sẵn sàng. Nếu cần hành động, chúng tôi có thể xuất kích bất cứ lúc nào, nhưng có lẽ không cần thiết phải làm vậy.\" Trump tuyên bố rằng giá năng lượng sẽ giảm mạnh sau cuộc bầu cử giữa nhiệm kỳ, hiện nay lượng dầu qua eo biển Hormuz nhiều hơn trước chiến tranh, và việc Mỹ phong tỏa các cảng của Iran đang thành công trong việc bóp nghẹt nền kinh tế Tehran. Trump nói: \"Đây là một tình thế tuyệt vời.\" Trump nhấn mạnh rằng ông sẽ không chia sẻ trước bất kỳ kế hoạch tấn công nào, nhưng cho biết các cuộc đàm phán gián tiếp với Iran về vấn đề hạt nhân vẫn đang tiếp diễn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-23": 3,
   "2026-10-25": 1,
