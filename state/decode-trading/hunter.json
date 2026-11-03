@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466618",
   "466617",
   "466616",
   "466615",
@@ -599,65 +598,10 @@
   "467213",
   "467212",
   "467211",
-  "467210"
+  "467210",
+  "467214"
  ],
- "pending": [
-  {
-   "id": "467209",
-   "at": "2026-11-03T10:33:52+07:00",
-   "time": "10:33",
-   "text": "Ngân hàng Dự trữ Úc: Ủy ban sẽ thực hiện các hành động cần thiết để đưa tỷ lệ lạm phát đạt mức mục tiêu.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467203",
-   "at": "2026-11-03T10:32:21+07:00",
-   "time": "10:32",
-   "text": "Ngân hàng Dự trữ Úc: Do triển vọng lạm phát được điều chỉnh tăng và các rủi ro tăng vẫn tiếp diễn, Ủy ban quyết định cần thiết phải thắt chặt thêm các điều kiện tài chính để hỗ trợ đưa lạm phát trở lại mức mục tiêu.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467202",
-   "at": "2026-11-03T10:32:05+07:00",
-   "time": "10:32",
-   "text": "RBA: Dự kiến CPI quý 4/2026 là 4,5%, quý 2/2027 là 3,7%, quý 4/2027 là 2,7%, quý 4/2028 là 2,4%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467213",
-   "at": "2026-11-03T10:36:27+07:00",
-   "time": "10:36",
-   "text": "RBA: Ủy ban đã quyết định với kết quả bỏ phiếu 6 phiếu thuận 3 phiếu chống nâng mục tiêu lãi suất tiền mặt thêm 25 điểm cơ bản lên 4,85%, trong khi 3 thành viên khác có xu hướng giữ nguyên lãi suất ở mức 4,60%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467211",
-   "at": "2026-11-03T10:34:48+07:00",
-   "time": "10:34",
-   "text": "RBA: Dự kiến GDP quý IV/2026 tăng 1,6%, quý II/2027 tăng 1,6%, quý IV/2027 tăng 1,3%, quý IV/2028 tăng 1,5%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-22": 2,
   "2026-10-23": 2,
@@ -668,8 +612,8 @@
   "2026-10-30": 2,
   "2026-10-31": 1,
   "2026-11-02": 2,
-  "2026-11-03": 1
+  "2026-11-03": 2
  },
- "last_post": "2026-11-03T03:53:33.498143+07:00",
+ "last_post": "2026-11-03T10:39:18.031809+07:00",
  "fail": 0
 }
