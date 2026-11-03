@@ -4229,5 +4229,51 @@
    "price": 3943.76,
    "title": "Vàng hồi kỹ thuật trong xu hướng D1 giảm, ưu tiên mua hồi 3915-3931"
   }
+ },
+ "2026-11-03 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134488542735108",
+  "post_id": "1121396124381014_122134488542735108",
+  "posted_at": "2026-11-03T19:30:12.860748+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "BUY",
+     "role": "chính",
+     "entry": [
+      3890.69,
+      3900.0
+     ],
+     "sl": 3851.16,
+     "tp": [
+      3912.02,
+      3947.23,
+      3963.05
+     ],
+     "trigger": "Giá về 3890-3900, nến xác nhận giữ trên mây H1 sau khi tin bầu cử lắng lại.",
+     "invalidation": "Đóng nến H1 dưới 3864, phủ nhận CHoCH tăng H4 tại 3875.53."
+    },
+    {
+     "side": "SELL",
+     "role": "phụ",
+     "entry": [
+      3912.02,
+      3918.69
+     ],
+     "sl": 3939.41,
+     "tp": [
+      3900.0,
+      3884.72,
+      3867.18
+     ],
+     "trigger": "Bật lên 3912-3918 rồi bị từ chối bằng nến giảm, động lượng yếu.",
+     "invalidation": "Đóng nến H1 trên 3939, lấy lại Kijun và CHoCH 3938.25."
+    }
+   ],
+   "price": 3903.69,
+   "title": "XAUUSD phiên Mỹ: canh đảo chiều mua quanh 3900, rủi ro bầu cử Mỹ"
+  }
  }
 }
