@@ -601,19 +601,7 @@
   "467518",
   "467517"
  ],
- "pending": [
-  {
-   "id": "467517",
-   "at": "2026-11-04T04:45:01+07:00",
-   "time": "04:45",
-   "text": "Tỷ lệ thất nghiệp New Zealand",
-   "important": true,
-   "star": 2,
-   "actual": "5.7",
-   "forecast": "5.50%",
-   "previous": "5.60"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-22": 2,
   "2026-10-23": 2,
