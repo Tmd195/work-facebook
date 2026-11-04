@@ -601,19 +601,7 @@
   "467846",
   "467847"
  ],
- "pending": [
-  {
-   "id": "467846",
-   "at": "2026-11-04T22:20:01+07:00",
-   "time": "22:20",
-   "text": "[Lưu ý] Sau 10 phút nữa EIA - Tồn kho dầu thô Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
