@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466963",
   "466964",
   "466965",
   "466966",
@@ -599,9 +598,22 @@
   "467560",
   "467559",
   "467561",
-  "467562"
+  "467562",
+  "467563"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467563",
+   "at": "2026-11-04T08:51:09+07:00",
+   "time": "08:51",
+   "text": "Ngày 4 tháng 11, theo truyền thông Mỹ đưa tin, ngày 3 tháng 11 theo giờ địa phương, cựu Thống đốc bang North Carolina thuộc Đảng Dân chủ Roy Cooper đã đánh bại ứng viên Đảng Cộng hòa Michael Whatley - người được Tổng thống Mỹ Trump ủng hộ - trong cuộc bầu cử Thượng viện liên bang, giành về cho Đảng Dân chủ một ghế Thượng viện then chốt. Chiến thắng lần này của Cooper đã phá vỡ chuỗi thắng 18 năm liên tiếp của Đảng Cộng hòa trong các cuộc bầu cử Thượng viện liên bang tại bang North Carolina, đưa ông trở thành người thuộc Đảng Dân chủ đầu tiên trong 18 năm qua giành thắng lợi trong cuộc bầu cử Thượng viện liên bang tại bang này.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-22": 2,
   "2026-10-23": 2,
