@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467013",
   "467014",
   "467015",
   "467016",
@@ -599,43 +598,10 @@
   "467608",
   "467605",
   "467612",
-  "467611"
+  "467611",
+  "467613"
  ],
- "pending": [
-  {
-   "id": "467610",
-   "at": "2026-11-04T12:01:16+07:00",
-   "time": "12:01",
-   "text": "Tổng thống Mỹ Trump: Đảng Dân chủ sẽ đệ trình những dự luật điên rồ, tôi sẽ phủ quyết chúng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467608",
-   "at": "2026-11-04T12:00:00+07:00",
-   "time": "12:00",
-   "text": "PMI Dịch vụ Ấn Độ",
-   "important": true,
-   "star": 2,
-   "actual": "55.8",
-   "forecast": "56.2",
-   "previous": "56.2"
-  },
-  {
-   "id": "467605",
-   "at": "2026-11-04T11:59:43+07:00",
-   "time": "11:59",
-   "text": "Tổng thống Mỹ Trump: Bất ngờ với kết quả bầu cử giữa nhiệm kỳ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
