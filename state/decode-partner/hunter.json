@@ -1,9 +1,5 @@
 {
  "seen": [
-  "467217",
-  "467219",
-  "467220",
-  "467221",
   "467223",
   "467222",
   "467225",
@@ -599,7 +595,11 @@
   "467815",
   "467814",
   "467817",
-  "467816"
+  "467816",
+  "467820",
+  "467821",
+  "467818",
+  "467819"
  ],
  "pending": [
   {
@@ -612,6 +612,28 @@
    "actual": "null",
    "forecast": "null",
    "previous": "null"
+  },
+  {
+   "id": "467821",
+   "at": "2026-11-04T21:30:46+07:00",
+   "time": "21:30",
+   "text": "Chỉ số PMI tổng hợp toàn cầu của S&P Canada",
+   "important": true,
+   "star": 2,
+   "actual": "48.1",
+   "forecast": "-",
+   "previous": "48.7"
+  },
+  {
+   "id": "467819",
+   "at": "2026-11-04T21:30:35+07:00",
+   "time": "21:30",
+   "text": "Canada S&P Global Services PMI",
+   "important": true,
+   "star": 2,
+   "actual": "48.1",
+   "forecast": "-",
+   "previous": "48.3"
   }
  ],
  "posts": {
