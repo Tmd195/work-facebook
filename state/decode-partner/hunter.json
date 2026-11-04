@@ -1,7 +1,5 @@
 {
  "seen": [
-  "467027",
-  "467029",
   "467030",
   "467034",
   "467033",
@@ -599,7 +597,9 @@
   "467626",
   "467625",
   "467624",
-  "467623"
+  "467623",
+  "467629",
+  "467628"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-04T12:12:04+07:00",
    "time": "12:12",
    "text": "Tổng thống Mỹ Trump: Nếu Iran hành xử tốt, chúng ta có thể ký một số thỏa thuận.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467628",
+   "at": "2026-11-04T12:13:41+07:00",
+   "time": "12:13",
+   "text": "Ngày 4 tháng 11, theo Fox News đưa tin, Tổng thống Mỹ Trump đã bắt đầu gửi lời cảnh báo tới đảng Dân chủ, bằng cách dùng một chiếc mũ màu đỏ tươi, trên đó chỉ có một từ: \"Phủ quyết\" (VETO). Khi đảng Dân chủ tìm cách giành lại quyền kiểm soát Quốc hội, Trump phát đi tín hiệu rằng ông dự định sử dụng một trong những quyền lực mạnh nhất của tổng thống — phủ quyết các dự luật mà ông phản đối. Trump cho biết trong cuộc phỏng vấn với Fox News: \"Họ sẽ đệ trình một số dự luật cực kỳ vô lý, và tôi sẽ phủ quyết chúng.\" Ông dự đoán rằng việc liên tục thực thi quyền phủ quyết cuối cùng có thể buộc đảng Dân chủ quay lại bàn đàm phán. Tuy nhiên, Trump cho biết các cuộc tiếp xúc giữa hai bên có thể đã bắt đầu. Ông tiết lộ rằng kể từ sau khi cuộc bầu cử kết thúc, đã có vài nghị sĩ đảng Dân chủ chủ động liên lạc với ông.",
    "important": true,
    "star": 0,
    "actual": "null",
