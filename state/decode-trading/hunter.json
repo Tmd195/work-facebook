@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467037",
   "467047",
   "467046",
   "467045",
@@ -599,9 +598,22 @@
   "467635",
   "467636",
   "467637",
-  "467638"
+  "467638",
+  "467639"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467639",
+   "at": "2026-11-04T12:46:31+07:00",
+   "time": "12:46",
+   "text": "Bạc giao ngay tiếp tục phục hồi, trong ngày tăng hơn 2%, hiện ở mức 50,79 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-23": 2,
   "2026-10-26": 1,
