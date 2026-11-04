@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466978",
   "466977",
   "466980",
   "466979",
@@ -599,9 +598,22 @@
   "467573",
   "467574",
   "467575",
-  "467576"
+  "467576",
+  "467577"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467577",
+   "at": "2026-11-04T10:00:24+07:00",
+   "time": "10:00",
+   "text": "Ngày 4 tháng 11, theo số liệu thống kê mới nhất của Hiệp hội Vàng Trung Quốc, trong ba quý đầu năm 2026, Trung Quốc đã tăng dự trữ vàng lũy kế 103,26 tấn; tính đến cuối tháng 9, dự trữ vàng của Trung Quốc đạt 2.409,59 tấn, đứng thứ 5 toàn cầu. Từ tháng 11 năm 2024 đến tháng 9 năm 2026, Trung Quốc đã tăng dự trữ vàng 23 tháng liên tiếp.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-22": 2,
   "2026-10-23": 2,
