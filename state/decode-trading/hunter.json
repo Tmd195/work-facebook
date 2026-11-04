@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467213",
   "467212",
   "467211",
   "467210",
@@ -599,21 +598,10 @@
   "467806",
   "467805",
   "467808",
-  "467809"
+  "467809",
+  "467810"
  ],
- "pending": [
-  {
-   "id": "467809",
-   "at": "2026-11-04T21:03:32+07:00",
-   "time": "21:03",
-   "text": "Lực lượng Houthi ở Yemen tuyên bố đã tấn công sân bay quốc tế King Khalid ở Riyadh, Ả Rập Xê Út; phía Ả Rập Xê Út chưa xác nhận.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-23": 2,
   "2026-10-26": 1,
