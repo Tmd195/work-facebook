@@ -4338,5 +4338,51 @@
     }
    ]
   }
+ },
+ "2026-11-04 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134562522735108",
+  "post_id": "1121396124381014_122134562522735108",
+  "posted_at": "2026-11-04T10:00:07.055928+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3960.2,
+      3976.58
+     ],
+     "sl": 4001.88,
+     "tp": [
+      3938.25,
+      3900.0,
+      3875.53
+     ],
+     "trigger": "Giá lên test 3,960 - 3,976 và xuất hiện nến từ chối (bấc trên dài hoặc engulfing giảm).",
+     "invalidation": "Đóng nến H4 trên 3,976.58, đặc biệt là vượt dứt khoát 4,000."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3916.98,
+      3938.25
+     ],
+     "sl": 3896.21,
+     "tp": [
+      3950.0,
+      3976.58,
+      3998.79
+     ],
+     "trigger": "Giá lùi về 3,917 - 3,938 và giữ được với nến đảo chiều tăng rõ ràng.",
+     "invalidation": "Đóng nến H1 dưới 3,896.21, mất cụm hỗ trợ dưới."
+    }
+   ],
+   "price": 3942.38,
+   "title": "Vàng kẹt dưới 4,000: ưu tiên canh bán ở kháng cự 3,960 - 3,976"
+  }
  }
 }
