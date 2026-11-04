@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467194",
   "467193",
   "467195",
   "467192",
@@ -599,21 +598,10 @@
   "467789",
   "467793",
   "467792",
-  "467791"
+  "467791",
+  "467794"
  ],
- "pending": [
-  {
-   "id": "467789",
-   "at": "2026-11-04T20:32:28+07:00",
-   "time": "20:32",
-   "text": "Kho bạc Hoa Kỳ công bố quy mô tái cấp vốn hàng quý là 125 tỷ USD, phù hợp với dự báo. Bộ Tài chính Hoa Kỳ sẽ đấu giá 42 tỷ USD trái phiếu kỳ hạn 10 năm. Bộ Tài chính Hoa Kỳ sẽ đấu giá 25 tỷ USD trái phiếu kỳ hạn 30 năm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
