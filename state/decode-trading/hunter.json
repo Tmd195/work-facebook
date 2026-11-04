@@ -601,19 +601,7 @@
   "467733",
   "467732"
  ],
- "pending": [
-  {
-   "id": "467733",
-   "at": "2026-11-04T17:26:31+07:00",
-   "time": "17:26",
-   "text": "Dầu Brent giảm trở lại xuống dưới 101 USD/thùng, giảm 2,65% trong ngày. Dầu WTI giảm xuống chạm 94 USD/thùng, giảm 2,09% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-23": 2,
   "2026-10-26": 1,
