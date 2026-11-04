@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467287",
   "467290",
   "467289",
   "467288",
@@ -599,9 +598,22 @@
   "467883",
   "467882",
   "467885",
-  "467886"
+  "467886",
+  "467887"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467887",
+   "at": "2026-11-05T00:29:27+07:00",
+   "time": "00:29",
+   "text": "Tổng thống Mỹ Trump: Thị trường chứng khoán lại lập đỉnh lịch sử mới! Chỉ trong một thời gian ngắn, đã tích lũy lập 91 lần đỉnh lịch sử mới, và tất cả những điều này chưa đến hai năm. Tài sản trong tài khoản hưu trí 401(k) của các bạn đã tăng mạnh, đồng loạt phá kỷ lục!",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
