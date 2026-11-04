@@ -1,7 +1,5 @@
 {
  "seen": [
-  "466992",
-  "466993",
   "466995",
   "466994",
   "466996",
@@ -599,7 +597,9 @@
   "467588",
   "467587",
   "467590",
-  "467591"
+  "467591",
+  "467593",
+  "467592"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-04T10:50:19+07:00",
    "time": "10:50",
    "text": "Theo New York Times: Tổng thống Mỹ Trump trong một cuộc phỏng vấn cho biết ông sẽ chấp nhận kết quả bầu cử giữa nhiệm kỳ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "467592",
+   "at": "2026-11-04T11:01:00+07:00",
+   "time": "11:01",
+   "text": "Ngày 4 tháng 11, theo đưa tin của New York Times, Tổng thống Mỹ Trump trong một cuộc phỏng vấn đã quy thất bại của đảng Cộng hòa cho việc bản thân ông không tham gia tranh cử, ông sẽ chấp nhận kết quả bầu cử giữa kỳ, đồng thời bày tỏ sẵn sàng hợp tác với đảng Dân chủ. Trump nói: \"Tôi tuyệt đối sẵn sàng chấp nhận những kết quả này. Chúng tôi sẽ hợp tác với những người Dân chủ, và mong đợi được làm việc cùng họ. Có lẽ chúng tôi có thể đạt được một số thỏa thuận.\" Trump cho biết không hối hận vì đã ủng hộ các ứng cử viên như Thượng nghị sĩ đảng Cộng hòa bang South Carolina Darlene Graham và Tổng chưởng lý đảng Cộng hòa bang Texas Ken Paxton. Hiện nay, đảng Dân chủ đang có triển vọng giành quyền kiểm soát cả Hạ viện và Thượng viện. Graham đã thất bại trong cuộc bầu cử, còn Paxton tạm thời đang bị dẫn trước trong cuộc bầu cử Thượng viện. Trump cho rằng, Thượng nghị sĩ Lindsey Graham, người đã qua đời vào tháng 7, nếu tham gia tranh cử thì rất có thể sẽ giành chiến thắng.",
    "important": true,
    "star": 0,
    "actual": "null",
