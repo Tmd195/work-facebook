@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466984",
   "466986",
   "466985",
   "466990",
@@ -599,34 +598,11 @@
   "467579",
   "467581",
   "467582",
-  "467583"
+  "467583",
+  "467584"
  ],
- "pending": [
-  {
-   "id": "467581",
-   "at": "2026-11-04T10:36:44+07:00",
-   "time": "10:36",
-   "text": "Lực lượng Vệ binh Cách mạng Hồi giáo Iran: Bốn tàu chở dầu chìm sau khi trúng mìn ở phía nam eo biển Hormuz, hai tàu khác bị giữ lại.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467583",
-   "at": "2026-11-04T10:39:50+07:00",
-   "time": "10:39",
-   "text": "Tổng thống Mỹ Trump: Tôi không tranh cử. Nếu tôi tranh cử, chúng ta sẽ thắng áp đảo!",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
-  "2026-10-23": 3,
   "2026-10-25": 1,
   "2026-10-26": 1,
   "2026-10-27": 1,
@@ -635,8 +611,9 @@
   "2026-10-30": 3,
   "2026-10-31": 1,
   "2026-11-02": 3,
-  "2026-11-03": 3
+  "2026-11-03": 3,
+  "2026-11-04": 1
  },
- "last_post": "2026-11-03T10:40:59.317862+07:00",
+ "last_post": "2026-11-04T10:43:22.532845+07:00",
  "fail": 0
 }
