@@ -601,19 +601,7 @@
   "467946",
   "467945"
  ],
- "pending": [
-  {
-   "id": "467944",
-   "at": "2026-11-05T04:06:26+07:00",
-   "time": "04:06",
-   "text": "Arm(ARM.O) doanh thu quý 2 năm tài chính 2027 đạt 1,44 tỷ USD, cùng kỳ năm ngoái 1,14 tỷ USD, kỳ vọng thị trường 1,376 tỷ USD.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
