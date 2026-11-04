@@ -601,30 +601,7 @@
   "467871",
   "467872"
  ],
- "pending": [
-  {
-   "id": "467871",
-   "at": "2026-11-04T23:40:56+07:00",
-   "time": "23:40",
-   "text": "Ngày 5 tháng 11, dầu Brent giảm hơn 8% trong phiên, hiện ở mức 95,20 USD/thùng; dầu WTI giảm hơn 7%, hiện ở mức 89,27 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467872",
-   "at": "2026-11-04T23:42:23+07:00",
-   "time": "23:42",
-   "text": "Vàng giao ngay vượt 4.060 USD/ounce, tăng 3,31% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
