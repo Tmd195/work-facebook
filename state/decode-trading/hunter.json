@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466998",
   "467000",
   "466999",
   "467001",
@@ -599,20 +598,10 @@
   "467593",
   "467595",
   "467596",
-  "467597"
+  "467597",
+  "467598"
  ],
  "pending": [
-  {
-   "id": "467587",
-   "at": "2026-11-04T10:50:19+07:00",
-   "time": "10:50",
-   "text": "Theo New York Times: Tổng thống Mỹ Trump trong một cuộc phỏng vấn cho biết ông sẽ chấp nhận kết quả bầu cử giữa nhiệm kỳ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
   {
    "id": "467592",
    "at": "2026-11-04T11:01:00+07:00",
