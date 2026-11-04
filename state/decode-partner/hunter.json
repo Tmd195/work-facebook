@@ -1,7 +1,5 @@
 {
  "seen": [
-  "467216",
-  "467218",
   "467217",
   "467219",
   "467220",
@@ -599,9 +597,23 @@
   "467813",
   "467812",
   "467815",
-  "467814"
+  "467814",
+  "467817",
+  "467816"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467816",
+   "at": "2026-11-04T21:26:25+07:00",
+   "time": "21:26",
+   "text": "Các Tiểu vương quốc Ả Rập Thống nhất đang xem xét xây dựng tuyến đường ống dẫn dầu thô thứ ba để tránh eo biển Hormuz.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
