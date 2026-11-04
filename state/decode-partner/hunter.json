@@ -1,8 +1,5 @@
 {
  "seen": [
-  "467362",
-  "467361",
-  "467366",
   "467365",
   "467364",
   "467363",
@@ -599,9 +596,24 @@
   "467957",
   "467958",
   "467959",
-  "467960"
+  "467960",
+  "467963",
+  "467962",
+  "467961"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467961",
+   "at": "2026-11-05T06:50:00+07:00",
+   "time": "06:50",
+   "text": "Lệ Logan, Ủy viên bỏ phiếu FOMC năm 2026 kiêm Chủ tịch Cục Dự trữ Liên bang Dallas, sẽ chủ trì phần hỏi đáp trước sự kiện sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
