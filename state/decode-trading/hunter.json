@@ -601,19 +601,7 @@
   "467915",
   "467916"
  ],
- "pending": [
-  {
-   "id": "467901",
-   "at": "2026-11-05T01:10:25+07:00",
-   "time": "01:10",
-   "text": "Tổng thống Mỹ Trump: (Về bầu cử) Thất bại trong bầu cử phần lớn là kết quả của cuộc chiến tranh Iran, nhận định này cơ bản là đúng. Điều này là đáng giá.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
