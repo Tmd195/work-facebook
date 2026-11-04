@@ -1,6 +1,5 @@
 {
  "seen": [
-  "466981",
   "466982",
   "466983",
   "466984",
@@ -599,9 +598,22 @@
   "467577",
   "467578",
   "467580",
-  "467579"
+  "467579",
+  "467581"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467581",
+   "at": "2026-11-04T10:36:44+07:00",
+   "time": "10:36",
+   "text": "Lực lượng Vệ binh Cách mạng Hồi giáo Iran: Bốn tàu chở dầu chìm sau khi trúng mìn ở phía nam eo biển Hormuz, hai tàu khác bị giữ lại.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-23": 3,
   "2026-10-25": 1,
