@@ -601,19 +601,7 @@
   "467602",
   "467601"
  ],
- "pending": [
-  {
-   "id": "467600",
-   "at": "2026-11-04T11:42:53+07:00",
-   "time": "11:42",
-   "text": "Theo CBS: Tổng thống Mỹ Trump chúc mừng đảng Dân chủ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
