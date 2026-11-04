@@ -1463,6 +1463,20 @@
    ]
   }
  },
+ "2026-11-04 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1802526534411977/",
+  "post_id": "1802526534411977",
+  "posted_at": "2026-11-04T20:00:42.920216+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V7|2026-11-04T05:05:00+00:00",
+   "version": "V7",
+   "side": "BUY",
+   "pips": 150,
+   "duration": 13.8
+  }
+ },
  "2026-11-04 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122124180747499355",
