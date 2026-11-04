@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467291",
   "467293",
   "467292",
   "467296",
@@ -599,9 +598,22 @@
   "467887",
   "467888",
   "467890",
-  "467889"
+  "467889",
+  "467891"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467891",
+   "at": "2026-11-05T00:35:12+07:00",
+   "time": "00:35",
+   "text": "Tin ngày 5 tháng 11, giá dầu quốc tế tiếp tục giảm, dầu Brent trong ngày giảm hơn 10%, hiện ở mức 93,27 USD/thùng; dầu WTI giảm hơn 9%, hiện ở mức 87,05 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
