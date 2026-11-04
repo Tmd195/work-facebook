@@ -1,7 +1,5 @@
 {
  "seen": [
-  "467253",
-  "467252",
   "467259",
   "467260",
   "467261",
@@ -599,9 +597,23 @@
   "467853",
   "467854",
   "467855",
-  "467856"
+  "467856",
+  "467858",
+  "467857"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467857",
+   "at": "2026-11-04T22:41:49+07:00",
+   "time": "22:41",
+   "text": "Phó Tổng thống Hoa Kỳ Vance: Mọi người đều biết tại sao chúng ta thua. Nguyên nhân thất bại của chúng ta là chiến tranh.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-23": 2,
   "2026-10-26": 1,
