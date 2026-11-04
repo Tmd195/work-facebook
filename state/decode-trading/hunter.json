@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467036",
   "467037",
   "467047",
   "467046",
@@ -599,21 +598,10 @@
   "467632",
   "467635",
   "467636",
-  "467637"
+  "467637",
+  "467638"
  ],
- "pending": [
-  {
-   "id": "467636",
-   "at": "2026-11-04T12:35:18+07:00",
-   "time": "12:35",
-   "text": "Vàng giao ngay mở rộng mức tăng trong ngày lên 1%, vượt 3.970 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-23": 2,
   "2026-10-26": 1,
