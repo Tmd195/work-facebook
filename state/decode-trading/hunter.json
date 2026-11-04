@@ -601,19 +601,7 @@
   "467719",
   "467718"
  ],
- "pending": [
-  {
-   "id": "467718",
-   "at": "2026-11-04T16:50:00+07:00",
-   "time": "16:50",
-   "text": "Tỷ lệ lạm phát CPI hàng năm và hàng tháng sơ bộ của khu vực đồng euro trong tháng 10 sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-23": 2,
   "2026-10-26": 1,
