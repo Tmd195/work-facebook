@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467223",
   "467222",
   "467225",
   "467224",
@@ -599,43 +598,10 @@
   "467820",
   "467821",
   "467818",
-  "467819"
+  "467819",
+  "467822"
  ],
- "pending": [
-  {
-   "id": "467816",
-   "at": "2026-11-04T21:26:25+07:00",
-   "time": "21:26",
-   "text": "Các Tiểu vương quốc Ả Rập Thống nhất đang xem xét xây dựng tuyến đường ống dẫn dầu thô thứ ba để tránh eo biển Hormuz.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "467821",
-   "at": "2026-11-04T21:30:46+07:00",
-   "time": "21:30",
-   "text": "Chỉ số PMI tổng hợp toàn cầu của S&P Canada",
-   "important": true,
-   "star": 2,
-   "actual": "48.1",
-   "forecast": "-",
-   "previous": "48.7"
-  },
-  {
-   "id": "467819",
-   "at": "2026-11-04T21:30:35+07:00",
-   "time": "21:30",
-   "text": "Canada S&P Global Services PMI",
-   "important": true,
-   "star": 2,
-   "actual": "48.1",
-   "forecast": "-",
-   "previous": "48.3"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
