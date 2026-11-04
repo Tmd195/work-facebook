@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467044",
   "467043",
   "467042",
   "467048",
@@ -599,21 +598,10 @@
   "467641",
   "467640",
   "467643",
-  "467644"
+  "467644",
+  "467645"
  ],
- "pending": [
-  {
-   "id": "467644",
-   "at": "2026-11-04T12:55:29+07:00",
-   "time": "12:55",
-   "text": "Vàng giao ngay tiếp tục tăng mạnh, mức tăng trong ngày mở rộng lên 2%, hiện báo 4.009,10 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-25": 1,
   "2026-10-26": 1,
