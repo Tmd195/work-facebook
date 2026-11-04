@@ -4300,5 +4300,43 @@
    "price": 3903.69,
    "title": "XAUUSD phiên Mỹ: canh đảo chiều mua quanh 3900, rủi ro bầu cử Mỹ"
   }
+ },
+ "2026-11-04 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134552100735108",
+  "post_id": "1121396124381014_122134552100735108",
+  "posted_at": "2026-11-04T07:30:04.529052+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "17:00",
+     "datetime": "2026-11-04T17:00:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "Core CPI Flash Estimate y/y",
+     "forecast": "2.5%",
+     "previous": "2.5%"
+    },
+    {
+     "time": "17:00",
+     "datetime": "2026-11-04T17:00:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "CPI Flash Estimate y/y",
+     "forecast": "4.0%",
+     "previous": "3.8%"
+    },
+    {
+     "time": "22:00",
+     "datetime": "2026-11-04T22:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "ISM Services PMI",
+     "forecast": "54.8",
+     "previous": "54.9"
+    }
+   ]
+  }
  }
 }
