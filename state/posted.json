@@ -4350,6 +4350,20 @@
    ]
   }
  },
+ "2026-11-04 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1672154194485013/",
+  "post_id": "1672154194485013",
+  "posted_at": "2026-11-04T19:15:38.904603+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Đặt chốt lời TP cho XAUUSD: lùi TP vào trước đỉnh cũ / vùng kháng cự khoảng 1 ATR để khớp lệnh trước khi giá quay đầu",
+   "pillar": "sl-tp",
+   "system": null,
+   "duration": 42.8,
+   "music": "uplifting-bass.mp3"
+  }
+ },
  "2026-11-04 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122134562522735108",
@@ -4394,6 +4408,52 @@
    ],
    "price": 3942.38,
    "title": "Vàng kẹt dưới 4,000: ưu tiên canh bán ở kháng cự 3,960 - 3,976"
+  }
+ },
+ "2026-11-04 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134616132735108",
+  "post_id": "1121396124381014_122134616132735108",
+  "posted_at": "2026-11-04T19:30:07.506230+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4047.85,
+      4051.22
+     ],
+     "sl": 4066.06,
+     "tp": [
+      4030.16,
+      4002.02,
+      3976.58
+     ],
+     "trigger": "H1 xuất hiện nến từ chối tại 4,048-4,051, quét đỉnh phiên Âu rồi đóng xuống.",
+     "invalidation": "H1 đóng cửa trên 4,066 (vượt fibo 0.236 D1)."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3998.65,
+      4002.02
+     ],
+     "sl": 3936.57,
+     "tp": [
+      4030.16,
+      4051.22,
+      4066.06
+     ],
+     "trigger": "Giá điều chỉnh về vùng 4,000 và giữ được, xuất hiện nến đảo chiều tăng.",
+     "invalidation": "H1 đóng cửa dưới 3,948 (mất chân hợp lưu mạnh)."
+    }
+   ],
+   "price": 4040.32,
+   "title": "Vàng bật lên 4,050 nhờ USD giảm; ưu tiên canh bán tại kháng cự"
   }
  }
 }
