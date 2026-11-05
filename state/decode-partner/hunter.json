@@ -1,11 +1,5 @@
 {
  "seen": [
-  "467553",
-  "467554",
-  "467555",
-  "467556",
-  "467557",
-  "467558",
   "467559",
   "467560",
   "467561",
@@ -599,54 +593,15 @@
   "468150",
   "468149",
   "468148",
-  "468147"
+  "468147",
+  "468158",
+  "468157",
+  "468156",
+  "468155",
+  "468154",
+  "468153"
  ],
- "pending": [
-  {
-   "id": "468146",
-   "at": "2026-11-05T19:05:01+07:00",
-   "time": "19:05",
-   "text": "Ngân hàng Trung ương Anh ám chỉ có thể sẽ tăng lãi suất thêm một lần nữa, nhưng ngưỡng để có hành động tiếp theo sẽ cao hơn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468143",
-   "at": "2026-11-05T19:03:56+07:00",
-   "time": "19:03",
-   "text": "Các nhà giao dịch đã tăng cược vào việc Ngân hàng Trung ương Anh tăng lãi suất, cho rằng khả năng tăng lãi suất vào tháng 12 là 35%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468142",
-   "at": "2026-11-05T19:03:14+07:00",
-   "time": "19:03",
-   "text": "Thống đốc Ngân hàng Trung ương Anh Bailey: Trừ khi chiến tranh Iran được giải quyết, nếu không đây khó có thể là lần tăng lãi suất cuối cùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468140",
-   "at": "2026-11-05T19:02:50+07:00",
-   "time": "19:02",
-   "text": "Dự báo cơ sở của Ngân hàng Trung ương Anh cho thấy CPI quý I/2027 là 4,4%, quý I/2028 là 3,1%, quý I/2029 là 1,9% (dự báo hồi tháng 7 là: quý I/2027 3,2%, quý I/2028 1,7%, quý I/2029 1,9%).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
