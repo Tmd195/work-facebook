@@ -1,11 +1,5 @@
 {
  "seen": [
-  "467543",
-  "467544",
-  "467546",
-  "467545",
-  "467547",
-  "467548",
   "467549",
   "467550",
   "467552",
@@ -599,7 +593,13 @@
   "468138",
   "468137",
   "468136",
-  "468135"
+  "468135",
+  "468148",
+  "468147",
+  "468146",
+  "468145",
+  "468144",
+  "468143"
  ],
  "pending": [
   {
@@ -640,6 +640,28 @@
    "at": "2026-11-05T19:01:06+07:00",
    "time": "19:01",
    "text": "Thống đốc Ngân hàng Trung ương Anh Bailey: Tôi cho rằng có lý do để tăng lãi suất thêm.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "468146",
+   "at": "2026-11-05T19:05:01+07:00",
+   "time": "19:05",
+   "text": "Ngân hàng Trung ương Anh ám chỉ có thể sẽ tăng lãi suất thêm một lần nữa, nhưng ngưỡng để có hành động tiếp theo sẽ cao hơn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "468143",
+   "at": "2026-11-05T19:03:56+07:00",
+   "time": "19:03",
+   "text": "Các nhà giao dịch đã tăng cược vào việc Ngân hàng Trung ương Anh tăng lãi suất, cho rằng khả năng tăng lãi suất vào tháng 12 là 35%.",
    "important": true,
    "star": 0,
    "actual": "null",
