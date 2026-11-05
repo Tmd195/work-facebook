@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467406",
   "467405",
   "467412",
   "467411",
@@ -599,21 +598,10 @@
   "468003",
   "468002",
   "468004",
-  "468005"
+  "468005",
+  "468006"
  ],
- "pending": [
-  {
-   "id": "468004",
-   "at": "2026-11-05T12:14:54+07:00",
-   "time": "12:14",
-   "text": "Lợi suất trái phiếu kho bạc Mỹ kỳ hạn 10 năm giảm hơn 4 điểm cơ bản trong ngày, xuống 4,845%, mức thấp nhất kể từ đầu tháng 9.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
