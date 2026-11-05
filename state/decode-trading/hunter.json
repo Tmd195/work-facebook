@@ -601,19 +601,7 @@
   "468162",
   "468161"
  ],
- "pending": [
-  {
-   "id": "468162",
-   "at": "2026-11-05T19:20:00+07:00",
-   "time": "19:20",
-   "text": "Thống đốc Ngân hàng Trung ương Anh Bailey sẽ tổ chức họp báo về chính sách tiền tệ sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
