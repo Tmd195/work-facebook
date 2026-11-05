@@ -601,19 +601,7 @@
   "468101",
   "468100"
  ],
- "pending": [
-  {
-   "id": "468099",
-   "at": "2026-11-05T17:19:02+07:00",
-   "time": "17:19",
-   "text": "Ngân hàng Trung ương châu Âu Zigman: khả năng tăng lãi suất vào tháng 12 là \"khá lớn\".",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
