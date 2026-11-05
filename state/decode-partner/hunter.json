@@ -1,7 +1,5 @@
 {
  "seen": [
-  "467532",
-  "467531",
   "467530",
   "467535",
   "467534",
@@ -599,9 +597,23 @@
   "468126",
   "468127",
   "468129",
-  "468128"
+  "468128",
+  "468131",
+  "468130"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468131",
+   "at": "2026-11-05T19:00:12+07:00",
+   "time": "19:00",
+   "text": "Ngày 5 tháng 11, Ngân hàng Trung ương Anh tăng lãi suất thêm 25 điểm cơ bản lên 4,00%, đây là lần tăng lãi suất đầu tiên kể từ tháng 8 năm 2023, phù hợp với kỳ vọng của thị trường.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
