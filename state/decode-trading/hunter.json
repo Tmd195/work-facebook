@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467788",
   "467787",
   "467785",
   "467786",
@@ -599,9 +598,22 @@
   "468378",
   "468377",
   "468383",
-  "468384"
+  "468384",
+  "468385"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468385",
+   "at": "2026-11-06T04:39:28+07:00",
+   "time": "04:39",
+   "text": "Goldman Sachs: hạ dự báo giá vàng cuối năm 2026 xuống 4.150 USD/ounce, hạ dự báo cuối năm 2027 xuống 4.800 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
