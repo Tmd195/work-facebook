@@ -1,12 +1,4 @@
 {
- "2026-10-03 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
-  "post_id": null,
-  "posted_at": "2026-10-03T19:45:00+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-03 reel_story 18:00": {
   "job": "reel_story",
   "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
@@ -2117,6 +2109,23 @@
   "meta": {
    "news": [
     "Lực lượng Vệ binh Cách mạng Iran: Hai tàu chở dầu và một tàu kéo đã bốc cháy do đi qua tuyến đường bất hợp pháp ở eo biể"
+   ]
+  }
+ },
+ "2026-11-05 cwg_breaking 19:02": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122120459745498398",
+  "post_id": "1379542878568858_122120459745498398",
+  "posted_at": "2026-11-05T19:03:10.843555+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Ngày 5 tháng 11, Ngân hàng Trung ương Anh tăng lãi suất thêm 25 điểm cơ bản lên 4,00%, đây là lần tăng lãi suất đầu tiên",
+    "Ngân hàng Trung ương Anh nâng dự báo tăng trưởng GDP: dự kiến năm 2026 là 1,6%, năm 2027 là 1,3%, năm 2028 là 1,2% (dự b",
+    "Thống đốc Ngân hàng Trung ương Anh Bailey: Tôi cho rằng có lý do để tăng lãi suất thêm.",
+    "Ngân hàng Trung ương Anh tăng lãi suất lần đầu tiên sau ba năm, tỷ giá GBP/USD tăng ngắn hạn hơn 30 điểm, hiện ở mức 1,3",
+    "Ngân hàng Trung ương Anh: 9/9 thành viên bỏ phiếu ủng hộ tăng lãi suất.",
+    "Quyết định lãi suất ngân hàng Anh"
    ]
   }
  },
