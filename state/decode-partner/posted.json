@@ -1,12 +1,4 @@
 {
- "2026-10-03 reel_story 18:00": {
-  "job": "reel_story",
-  "link": "đăng bù thủ công 03/10 (lịch riêng hôm nay)",
-  "post_id": null,
-  "posted_at": "2026-10-03T19:45:00+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-04 cwg_wk_ahead 20:15": {
   "job": "cwg_wk_ahead",
   "link": "https://www.facebook.com/122099784345498398/posts/122100764433498398",
@@ -2152,5 +2144,20 @@
   "posted_at": "2026-11-05T08:45:04.261891+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-05 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1705465197818147/",
+  "post_id": "1705465197818147",
+  "posted_at": "2026-11-05T19:45:42.388912+07:00",
+  "preview": false,
+  "meta": {
+   "key": "AUDUSD|0.72187",
+   "symbol": "AUDUSD",
+   "system": "range",
+   "side": "buy",
+   "rr": 3.7,
+   "duration": 10.3
+  }
  }
 }
