@@ -1,11 +1,5 @@
 {
  "seen": [
-  "467618",
-  "467617",
-  "467616",
-  "467615",
-  "467622",
-  "467621",
   "467627",
   "467626",
   "467625",
@@ -599,9 +593,27 @@
   "468216",
   "468215",
   "468214",
-  "468213"
+  "468213",
+  "468222",
+  "468221",
+  "468220",
+  "468219",
+  "468218",
+  "468217"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468218",
+   "at": "2026-11-05T20:50:22+07:00",
+   "time": "20:50",
+   "text": "Cục Dự trữ Liên bang Hammack: Chính sách tiền tệ cần chuyển sang lập trường hạn chế. Lạm phát luôn ở mức quá cao và đang diễn biến theo hướng sai lầm.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
