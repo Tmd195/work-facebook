@@ -601,30 +601,7 @@
   "468214",
   "468213"
  ],
- "pending": [
-  {
-   "id": "468212",
-   "at": "2026-11-05T20:40:00+07:00",
-   "time": "20:40",
-   "text": "Ủy viên bỏ phiếu FOMC năm 2026, Chủ tịch Fed Cleveland Hammack sẽ có bài phát biểu sau mười phút về vấn đề stablecoin và tỷ giá hối đoái của đồng tiền trú ẩn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468216",
-   "at": "2026-11-05T20:43:47+07:00",
-   "time": "20:43",
-   "text": "Hiệp hội Vàng Thế giới: Giai đoạn thị trường ảm đạm sau năm 2011 không có nhiều điểm tương đồng để so sánh với tình hình hiện tại khi giá vàng giảm 25% so với mức đỉnh tháng 1/2026. Các điều kiện để vàng phục hồi hiện nay vững chắc hơn nhiều. Theo khung phân tích của chúng tôi, giá vàng có thể đang tiến gần đến một đáy tạm thời.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
