@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467800",
   "467799",
   "467798",
   "467797",
@@ -599,9 +598,22 @@
   "468391",
   "468394",
   "468393",
-  "468395"
+  "468395",
+  "468396"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468396",
+   "at": "2026-11-06T06:20:07+07:00",
+   "time": "06:20",
+   "text": "Tổng thống Mỹ Trump: Thị trường chứng khoán trải qua một trong những phiên giao dịch tồi tệ nhất trong lịch sử do kết quả bầu cử. Dù bằng cách nào, chúng ta sẽ sớm trở nên mạnh mẽ hơn bao giờ hết.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
