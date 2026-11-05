@@ -4466,5 +4466,79 @@
    "price": 4040.32,
    "title": "Vàng bật lên 4,050 nhờ USD giảm; ưu tiên canh bán tại kháng cự"
   }
+ },
+ "2026-11-05 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134686560735108",
+  "post_id": "1121396124381014_122134686560735108",
+  "posted_at": "2026-11-05T07:30:06.057590+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "19:00",
+     "datetime": "2026-11-05T19:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "BOE Monetary Policy Report",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "19:00",
+     "datetime": "2026-11-05T19:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "Monetary Policy Summary",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "19:00",
+     "datetime": "2026-11-05T19:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "MPC Official Bank Rate Votes",
+     "forecast": "7-0-2",
+     "previous": "3-0-6"
+    },
+    {
+     "time": "19:00",
+     "datetime": "2026-11-05T19:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "Official Bank Rate",
+     "forecast": "4.00%",
+     "previous": "3.75%"
+    },
+    {
+     "time": "19:30",
+     "datetime": "2026-11-05T19:30:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "BOE Gov Bailey Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-05T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Unemployment Claims",
+     "forecast": "197K",
+     "previous": "194K"
+    },
+    {
+     "time": "01:00",
+     "datetime": "2026-11-06T01:00:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
