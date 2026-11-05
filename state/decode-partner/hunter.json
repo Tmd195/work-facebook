@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467699",
   "467701",
   "467702",
   "467703",
@@ -599,32 +598,10 @@
   "468295",
   "468299",
   "468298",
-  "468297"
+  "468297",
+  "468300"
  ],
- "pending": [
-  {
-   "id": "468298",
-   "at": "2026-11-05T22:54:51+07:00",
-   "time": "22:54",
-   "text": "Thống đốc Ngân hàng Trung ương châu Âu Lagarde: Không kỳ vọng vấn đề thuế quan của Mỹ sẽ được xem xét lại ngay lập tức.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468297",
-   "at": "2026-11-05T22:54:30+07:00",
-   "time": "22:54",
-   "text": "Bạc giao ngay giảm 1,00% trong ngày, hiện ở mức 51,68 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
