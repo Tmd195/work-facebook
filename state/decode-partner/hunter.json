@@ -1,8 +1,5 @@
 {
  "seen": [
-  "467589",
-  "467588",
-  "467587",
   "467590",
   "467591",
   "467593",
@@ -599,21 +596,12 @@
   "468182",
   "468181",
   "468185",
-  "468186"
+  "468186",
+  "468189",
+  "468188",
+  "468187"
  ],
- "pending": [
-  {
-   "id": "468185",
-   "at": "2026-11-05T20:00:01+07:00",
-   "time": "20:00",
-   "text": "Phiên giao dịch đêm mở cửa, các hợp đồng tương lai chủ lực trong nước tăng nhiều giảm ít, niken Thượng Hải, than cốc tăng hơn 2%, dầu nhiên liệu lưu huỳnh thấp (LU), khô dầu cải, bột giấy, thiếc Thượng Hải, than luyện cốc tăng hơn 1%. Về mức giảm, khí dầu mỏ hóa lỏng (LPG), propylen giảm hơn 3%, nhựa giảm hơn 2%, polypropylen, mảnh chai, ethylene glycol (EG) giảm gần 2%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
