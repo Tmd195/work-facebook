@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467803",
   "467807",
   "467806",
   "467805",
@@ -599,21 +598,10 @@
   "468400",
   "468402",
   "468401",
-  "468403"
+  "468403",
+  "468404"
  ],
- "pending": [
-  {
-   "id": "468403",
-   "at": "2026-11-06T06:50:00+07:00",
-   "time": "06:50",
-   "text": "Chủ tịch Fed Dallas Logan, ủy viên bỏ phiếu FOMC năm 2026, sẽ phát biểu sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
