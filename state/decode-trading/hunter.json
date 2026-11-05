@@ -601,19 +601,7 @@
   "468086",
   "468087"
  ],
- "pending": [
-  {
-   "id": "468086",
-   "at": "2026-11-05T16:40:20+07:00",
-   "time": "16:40",
-   "text": "Truyền thông địa phương Bulgaria dẫn lời các quan chức đưa tin, ba máy bay đã hạ cánh khẩn cấp do bị đe dọa đánh bom.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
