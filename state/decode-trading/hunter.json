@@ -1,7 +1,5 @@
 {
  "seen": [
-  "467661",
-  "467663",
   "467664",
   "467666",
   "467665",
@@ -599,32 +597,11 @@
   "468258",
   "468260",
   "468259",
-  "468261"
+  "468261",
+  "468263",
+  "468262"
  ],
- "pending": [
-  {
-   "id": "468260",
-   "at": "2026-11-05T21:45:35+07:00",
-   "time": "21:45",
-   "text": "Bạc giao ngay giảm xuống chạm 52 USD/ounce, giảm 0,44% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468259",
-   "at": "2026-11-05T21:44:55+07:00",
-   "time": "21:44",
-   "text": "Dầu Brent tăng 3,00% trong ngày, hiện ở mức 96,72 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
