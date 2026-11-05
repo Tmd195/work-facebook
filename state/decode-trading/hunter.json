@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467791",
   "467790",
   "467789",
   "467794",
@@ -599,9 +598,22 @@
   "468389",
   "468388",
   "468387",
-  "468386"
+  "468386",
+  "468390"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468390",
+   "at": "2026-11-06T05:04:19+07:00",
+   "time": "05:04",
+   "text": "Ngày 6 tháng 11, theo CME \"FedWatch\": xác suất Fed giữ nguyên lãi suất trong tháng 12 là 31,3%, xác suất tăng 25 điểm cơ bản là 68,7%. Xác suất Fed giữ nguyên lãi suất đến tháng 1 năm sau là 27,0%, xác suất tăng lũy kế 25 điểm cơ bản là 63,6%, xác suất tăng lũy kế 50 điểm cơ bản là 9,5%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
