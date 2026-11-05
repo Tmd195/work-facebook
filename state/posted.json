@@ -4540,5 +4540,51 @@
     }
    ]
   }
+ },
+ "2026-11-05 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134702088735108",
+  "post_id": "1121396124381014_122134702088735108",
+  "posted_at": "2026-11-05T10:00:13.390046+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4148.16,
+      4151.84
+     ],
+     "sl": 4185.55,
+     "tp": [
+      4125.86,
+      4101.84,
+      4073.72
+     ],
+     "trigger": "Giá hồi lên 4148-4152, xuất hiện nến từ chối/phân kỳ trên H1, ưu tiên sau khi quét mốc 4150",
+     "invalidation": "H1 đóng cửa trên 4170 (R2), mở đường lên Fibo 0.382 D1 vùng 4184"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4058.44,
+      4073.72
+     ],
+     "sl": 4013.46,
+     "tp": [
+      4098.16,
+      4125.86,
+      4148.16
+     ],
+     "trigger": "Giá về 4058-4074 giữ được với phản ứng mua rõ trên H1, lý tưởng sau cú quét phiên Âu",
+     "invalidation": "H1 đóng cửa dưới 4058, rủi ro giảm tiếp về 4028"
+    }
+   ],
+   "price": 4125.1,
+   "title": "XAUUSD bùng nổ sau bầu cử Mỹ nhưng quá mua - canh fade về hỗ trợ"
+  }
  }
 }
