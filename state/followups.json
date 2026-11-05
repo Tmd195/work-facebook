@@ -1425,5 +1425,47 @@
  "2026-11-05 knowledge 21:00|examples": {
   "at": "2026-11-05T21:26:28.887639+07:00",
   "skipped": "không có ví dụ phù hợp trên giá thật"
+ },
+ "2026-11-05 strategy_ae 10:00|track": {
+  "at": "2026-11-05T22:01:18.423130+07:00",
+  "result": [
+   {
+    "side": "SELL",
+    "filled": true,
+    "tp_hit": 1,
+    "closed": "BE",
+    "floating_pips": null,
+    "pips_closed": 0
+   },
+   {
+    "side": "BUY",
+    "filled": false,
+    "tp_hit": 0,
+    "closed": null,
+    "floating_pips": null,
+    "pips_closed": null
+   }
+  ]
+ },
+ "2026-11-05 strategy_us 19:30|track": {
+  "at": "2026-11-05T22:01:43.971131+07:00",
+  "result": [
+   {
+    "side": "BUY",
+    "filled": true,
+    "tp_hit": 0,
+    "closed": null,
+    "floating_pips": -16,
+    "pips_closed": null
+   },
+   {
+    "side": "SELL",
+    "filled": false,
+    "tp_hit": 0,
+    "closed": null,
+    "floating_pips": null,
+    "pips_closed": null
+   }
+  ]
  }
 }
