@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467641",
   "467640",
   "467643",
   "467644",
@@ -599,32 +598,10 @@
   "468240",
   "468239",
   "468238",
-  "468237"
+  "468237",
+  "468241"
  ],
- "pending": [
-  {
-   "id": "468236",
-   "at": "2026-11-05T21:16:01+07:00",
-   "time": "21:16",
-   "text": "Cục Dự trữ Liên bang Barkin: Dự kiến lạm phát sẽ không tăng tốc, nhưng hiện tại cũng không thấy nó sẽ giảm xuống.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468237",
-   "at": "2026-11-05T21:17:53+07:00",
-   "time": "21:17",
-   "text": "Cục Dự trữ Liên bang Barkin: Việc tăng lãi suất từng bước vẫn là hợp lý đối với tôi.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
