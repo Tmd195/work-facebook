@@ -1,9 +1,5 @@
 {
  "seen": [
-  "467613",
-  "467620",
-  "467619",
-  "467618",
   "467617",
   "467616",
   "467615",
@@ -599,21 +595,13 @@
   "468206",
   "468210",
   "468211",
-  "468212"
+  "468212",
+  "468216",
+  "468215",
+  "468214",
+  "468213"
  ],
- "pending": [
-  {
-   "id": "468212",
-   "at": "2026-11-05T20:40:00+07:00",
-   "time": "20:40",
-   "text": "Ủy viên bỏ phiếu FOMC năm 2026, Chủ tịch Fed Cleveland Hammack sẽ có bài phát biểu sau mười phút về vấn đề stablecoin và tỷ giá hối đoái của đồng tiền trú ẩn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
