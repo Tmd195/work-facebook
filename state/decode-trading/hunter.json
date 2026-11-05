@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467384",
   "467386",
   "467389",
   "467388",
@@ -599,9 +598,22 @@
   "467981",
   "467982",
   "467983",
-  "467984"
+  "467984",
+  "467985"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "467985",
+   "at": "2026-11-05T08:51:09+07:00",
+   "time": "08:51",
+   "text": "Giá bạc giao ngay trong ngày mở rộng đà tăng lên 2%, hiện ở mức 53,26 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
