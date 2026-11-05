@@ -1398,5 +1398,16 @@
  "2026-11-05 knowledge 12:00|examples": {
   "at": "2026-11-05T12:25:35.100924+07:00",
   "skipped": "không có ví dụ phù hợp trên giá thật"
+ },
+ "2026-11-05 morning 07:30|news|2026-11-05T19:00:00+07:00|GBP": {
+  "at": "2026-11-05T19:07:13.965475+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026",
+   "https://tradingeconomics.com/united-kingdom/interest-rate/news/598537",
+   "https://tradingeconomics.com/united-kingdom/interest-rate",
+   "https://www.mpamag.com/uk/mortgage-industry/market-trends/live-blog-boe-to-reveal-latest-rate-decision/596302",
+   "https://www.fxstreet.com/news/boe-expected-to-hike-interest-rate-to-400-202611050700"
+  ]
  }
 }
