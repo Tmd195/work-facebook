@@ -601,19 +601,7 @@
   "467985",
   "467986"
  ],
- "pending": [
-  {
-   "id": "467985",
-   "at": "2026-11-05T08:51:09+07:00",
-   "time": "08:51",
-   "text": "Giá bạc giao ngay trong ngày mở rộng đà tăng lên 2%, hiện ở mức 53,26 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-26": 1,
   "2026-10-27": 1,
