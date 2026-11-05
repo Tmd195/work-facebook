@@ -1,9 +1,5 @@
 {
  "seen": [
-  "467627",
-  "467626",
-  "467625",
-  "467624",
   "467623",
   "467629",
   "467628",
@@ -599,7 +595,11 @@
   "468220",
   "468219",
   "468218",
-  "468217"
+  "468217",
+  "468226",
+  "468224",
+  "468225",
+  "468223"
  ],
  "pending": [
   {
@@ -607,6 +607,28 @@
    "at": "2026-11-05T20:50:22+07:00",
    "time": "20:50",
    "text": "Cục Dự trữ Liên bang Hammack: Chính sách tiền tệ cần chuyển sang lập trường hạn chế. Lạm phát luôn ở mức quá cao và đang diễn biến theo hướng sai lầm.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "468226",
+   "at": "2026-11-05T20:52:38+07:00",
+   "time": "20:52",
+   "text": "Ngày 5 tháng 11, theo tin đưa, quan chức Fed Hammack có bài phát biểu mới nhất: “Tăng lãi suất từng bước ít gây gián đoạn cho nền kinh tế và hệ thống tài chính, xu hướng là thực hiện điều chỉnh lãi suất thường xuyên với biên độ nhỏ. Chính sách tiền tệ cần chuyển sang lập trường thắt chặt. Lạm phát luôn ở mức quá cao và đang diễn biến theo hướng sai lầm. Đồng USD vẫn là đồng tiền dự trữ số một thế giới, khó có thể tưởng tượng đồng USD sẽ mất vị thế đồng tiền dự trữ. Vị thế của đồng USD nhờ vào hệ thống thể chế và pháp luật của nước Mỹ. Fed đã giành được uy tín thông qua các hành động của mình. Tính độc lập của Fed là then chốt để đưa tỷ lệ lạm phát xuống 2%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "468224",
+   "at": "2026-11-05T20:51:45+07:00",
+   "time": "20:51",
+   "text": "Cục Dự trữ Liên bang Hamack: Có xu hướng thực hiện điều chỉnh lãi suất thường xuyên và với biên độ nhỏ.",
    "important": true,
    "star": 0,
    "actual": "null",
