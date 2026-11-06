@@ -1,16 +1,4 @@
 {
- "2026-10-05 cwg_breaking 17:27": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122101515465498398",
-  "post_id": "1379542878568858_122101515465498398",
-  "posted_at": "2026-10-05T17:28:24.257461+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Cơ quan Hành động Thương mại Hàng hải Vương quốc Anh (UKMTO): Đã nhận được báo cáo về một sự cố xảy ra cách 11 hải lý về"
-   ]
-  }
- },
  "2026-10-05 cwg_macro 10:15": {
   "job": "cwg_macro",
   "link": "https://www.facebook.com/122099784345498398/posts/122101222407498398",
@@ -2144,6 +2132,21 @@
   "posted_at": "2026-11-06T08:45:03.076904+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-06 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/2183098388999576/",
+  "post_id": "2183098388999576",
+  "posted_at": "2026-11-06T19:45:41.041918+07:00",
+  "preview": false,
+  "meta": {
+   "key": "XAUUSD|4144.79980",
+   "symbol": "XAUUSD",
+   "system": "retest",
+   "side": "sell",
+   "rr": 8.9,
+   "duration": 9.9
+  }
  },
  "2026-11-06 reel_story 18:00": {
   "job": "reel_story",
