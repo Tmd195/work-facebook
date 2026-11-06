@@ -1,16 +1,5 @@
 {
  "seen": [
-  "467940",
-  "467941",
-  "467939",
-  "467944",
-  "467943",
-  "467947",
-  "467946",
-  "467945",
-  "467948",
-  "467949",
-  "467950",
   "467951",
   "467953",
   "467952",
@@ -599,7 +588,18 @@
   "468532",
   "468538",
   "468537",
-  "468539"
+  "468539",
+  "468550",
+  "468548",
+  "468547",
+  "468546",
+  "468545",
+  "468543",
+  "468544",
+  "468542",
+  "468549",
+  "468541",
+  "468540"
  ],
  "pending": [
   {
@@ -612,6 +612,28 @@
    "actual": "null",
    "forecast": "null",
    "previous": "null"
+  },
+  {
+   "id": "468550",
+   "at": "2026-11-06T20:30:19+07:00",
+   "time": "20:30",
+   "text": "Ngày 6 tháng 11, số liệu cho thấy việc làm phi nông nghiệp của Mỹ trong tháng 10 sau điều chỉnh theo mùa đạt 165.000 người, mức cao nhất kể từ tháng 3, cao hơn nhiều so với mức dự báo 65.000 người của thị trường.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "468549",
+   "at": "2026-11-06T20:30:00+07:00",
+   "time": "20:30",
+   "text": "Tỷ lệ thất nghiệp Canada",
+   "important": true,
+   "star": 2,
+   "actual": "6.7",
+   "forecast": "6.5%",
+   "previous": "6.50"
   }
  ],
  "posts": {
