@@ -601,30 +601,7 @@
   "468602",
   "468604"
  ],
- "pending": [
-  {
-   "id": "468603",
-   "at": "2026-11-06T22:00:00+07:00",
-   "time": "22:00",
-   "text": "Ivey - PMI  Canada",
-   "important": true,
-   "star": 2,
-   "actual": "58.3",
-   "forecast": "-",
-   "previous": "58.2"
-  },
-  {
-   "id": "468602",
-   "at": "2026-11-06T22:00:00+07:00",
-   "time": "22:00",
-   "text": "Đại học Michigan - Chỉ số dự kiến Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "50.9",
-   "forecast": "49.5",
-   "previous": "48.8"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
