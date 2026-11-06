@@ -4745,6 +4745,20 @@
    ]
   }
  },
+ "2026-11-06 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/2530928610723662/",
+  "post_id": "2530928610723662",
+  "posted_at": "2026-11-06T19:15:42.455436+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Nhật ký giao dịch XAUUSD: ghi 5 cột mỗi lệnh, chấm điểm tuân thủ, review cuối tuần lọc setup kỳ vọng dương",
+   "pillar": "setup",
+   "system": null,
+   "duration": 41.7,
+   "music": "digital-clouds.mp3"
+  }
+ },
  "2026-11-06 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122134833446735108",
@@ -4789,6 +4803,52 @@
    ],
    "price": 4064.75,
    "title": "XAUUSD giằng co dưới 4100, chờ NFP định hướng phiên Á-Âu"
+  }
+ },
+ "2026-11-06 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134890644735108",
+  "post_id": "1121396124381014_122134890644735108",
+  "posted_at": "2026-11-06T19:30:14.220810+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4073.44,
+      4081.97
+     ],
+     "sl": 4101.7,
+     "tp": [
+      4050.0,
+      4036.73,
+      4021.9
+     ],
+     "trigger": "Giá hồi lên 4,073-4,082 và xuất hiện nến H1 đảo chiều giảm, không đóng trên 4,090",
+     "invalidation": "H1 đóng cửa dứt khoát trên 4,090 thì hủy lệnh bán"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      4036.73,
+      4041.75
+     ],
+     "sl": 4015.66,
+     "tp": [
+      4066.06,
+      4073.44,
+      4081.97
+     ],
+     "trigger": "Giá lùi về 4,037-4,042 giữ vững và có nến H1 xác nhận tăng",
+     "invalidation": "H1 đóng cửa dưới 4,027 thì hủy lệnh mua"
+    }
+   ],
+   "price": 4064.92,
+   "title": "XAUUSD chờ NFP: bán hồi dưới 4,082, mua lại tại 4,037-4,042"
   }
  }
 }

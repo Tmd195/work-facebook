@@ -1,5 +1,5 @@
 {
- "count": 35,
+ "count": 36,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -55,6 +55,7 @@
   "Quy tắc chống gỡ gạc (revenge trading) cho XAUUSD: sau lệnh thua không gấp đôi lot, giữ rủi ro cố định 1 phần trăm, nghỉ 15 phút xem lại, thua 2 lệnh liên tiếp thì dừng ngày để bảo toàn vốn và tâm lý",
   "Hệ thống nến Sao Mai (Morning Star) cho XAUUSD: nhận diện mẫu ba nến đảo chiều tăng, lọc xu hướng bằng SMA 50 và vùng hỗ trợ/order block, vào lệnh Buy Stop trên đỉnh nến ba, đặt SL dưới đáy nến giữa và TP theo R:R 1:2",
   "Đặt chốt lời TP cho XAUUSD: lùi TP vào trước đỉnh cũ / vùng kháng cự khoảng 1 ATR để khớp lệnh trước khi giá quay đầu",
-  "Hệ thống Squeeze Release Direction cho XAUUSD: chờ Bollinger bung khỏi Keltner, bỏ phiếu 5 yếu tố chấm hướng, bỏ tín hiệu mơ hồ, SL theo ATR và TP theo bội số R"
+  "Hệ thống Squeeze Release Direction cho XAUUSD: chờ Bollinger bung khỏi Keltner, bỏ phiếu 5 yếu tố chấm hướng, bỏ tín hiệu mơ hồ, SL theo ATR và TP theo bội số R",
+  "Nhật ký giao dịch XAUUSD: ghi 5 cột mỗi lệnh, chấm điểm tuân thủ, review cuối tuần lọc setup kỳ vọng dương"
  ]
 }
