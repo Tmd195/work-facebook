@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467931",
   "467930",
   "467933",
   "467934",
@@ -599,9 +598,22 @@
   "468528",
   "468527",
   "468530",
-  "468529"
+  "468529",
+  "468531"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468531",
+   "at": "2026-11-06T20:15:32+07:00",
+   "time": "20:15",
+   "text": "Phó Thống đốc Ngân hàng Trung ương Kazakhstan: Dự kiến trong trung hạn sẽ giảm tỷ trọng vàng trong dự trữ xuống dưới 75%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
