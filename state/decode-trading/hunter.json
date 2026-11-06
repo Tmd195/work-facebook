@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468083",
-  "468084",
   "468085",
   "468086",
   "468087",
@@ -599,32 +597,11 @@
   "468672",
   "468682",
   "468681",
-  "468680"
+  "468680",
+  "468684",
+  "468683"
  ],
- "pending": [
-  {
-   "id": "468677",
-   "at": "2026-11-07T01:07:26+07:00",
-   "time": "01:07",
-   "text": "Cục Dự trữ Liên bang Daly: Sẵn sàng tăng lãi suất nếu cần thiết.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468672",
-   "at": "2026-11-07T01:05:59+07:00",
-   "time": "01:05",
-   "text": "Cục Dự trữ Liên bang Daly: Thị trường lao động mạnh mẽ, tạo dư địa cho Fed hoàn thành nhiệm vụ kiềm chế lạm phát.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
