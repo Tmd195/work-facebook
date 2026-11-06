@@ -4733,5 +4733,51 @@
     }
    ]
   }
+ },
+ "2026-11-06 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134833446735108",
+  "post_id": "1121396124381014_122134833446735108",
+  "posted_at": "2026-11-06T10:00:10.803613+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      4100,
+      4111.49
+     ],
+     "sl": 4137.63,
+     "tp": [
+      4081.97,
+      4050,
+      4026.81
+     ],
+     "trigger": "Giá hồi lên 4100-4111 và xuất hiện nến từ chối (pin/engulfing giảm) trên H1",
+     "invalidation": "H1 đóng cửa dứt khoát trên 4123.18, mở đường test 4147-4155"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3996.05,
+      4006.81
+     ],
+     "sl": 3952.15,
+     "tp": [
+      4050,
+      4081.97,
+      4100
+     ],
+     "trigger": "Giá về 3996-4007, phản ứng tại Fibo 0.5 H4 kèm nến đảo chiều tăng H1",
+     "invalidation": "H4 đóng dưới 3964, mất cụm hỗ trợ mạnh thì hủy kịch bản mua"
+    }
+   ],
+   "price": 4064.75,
+   "title": "XAUUSD giằng co dưới 4100, chờ NFP định hướng phiên Á-Âu"
+  }
  }
 }
