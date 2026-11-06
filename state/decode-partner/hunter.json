@@ -1,13 +1,5 @@
 {
  "seen": [
-  "467951",
-  "467953",
-  "467952",
-  "467954",
-  "467956",
-  "467955",
-  "467957",
-  "467958",
   "467959",
   "467960",
   "467963",
@@ -599,43 +591,17 @@
   "468542",
   "468549",
   "468541",
-  "468540"
+  "468540",
+  "468558",
+  "468553",
+  "468557",
+  "468556",
+  "468555",
+  "468554",
+  "468552",
+  "468551"
  ],
- "pending": [
-  {
-   "id": "468538",
-   "at": "2026-11-06T20:24:43+07:00",
-   "time": "20:24",
-   "text": "Ngày 6 tháng 11, trước khi công bố số liệu việc làm phi nông nghiệp tháng 10 của Mỹ, theo CME \"FedWatch\": xác suất Fed giữ nguyên lãi suất vào tháng 12 là 27,2%, xác suất tăng 25 điểm cơ bản là 72,8%. Xác suất Fed giữ nguyên lãi suất đến tháng 1 năm sau là 21,6%, xác suất tăng lũy kế 25 điểm cơ bản là 63,4%, xác suất tăng lũy kế 50 điểm cơ bản là 15,1%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468550",
-   "at": "2026-11-06T20:30:19+07:00",
-   "time": "20:30",
-   "text": "Ngày 6 tháng 11, số liệu cho thấy việc làm phi nông nghiệp của Mỹ trong tháng 10 sau điều chỉnh theo mùa đạt 165.000 người, mức cao nhất kể từ tháng 3, cao hơn nhiều so với mức dự báo 65.000 người của thị trường.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468549",
-   "at": "2026-11-06T20:30:00+07:00",
-   "time": "20:30",
-   "text": "Tỷ lệ thất nghiệp Canada",
-   "important": true,
-   "star": 2,
-   "actual": "6.7",
-   "forecast": "6.5%",
-   "previous": "6.50"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
@@ -646,8 +612,8 @@
   "2026-11-03": 3,
   "2026-11-04": 3,
   "2026-11-05": 3,
-  "2026-11-06": 2
+  "2026-11-06": 3
  },
- "last_post": "2026-11-06T20:21:34.319754+07:00",
+ "last_post": "2026-11-06T20:32:23.287901+07:00",
  "fail": 0
 }

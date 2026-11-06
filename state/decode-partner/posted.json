@@ -1,12 +1,4 @@
 {
- "2026-10-05 cwg_morning 07:45": {
-  "job": "cwg_morning",
-  "link": "https://www.facebook.com/122099784345498398/posts/122101159053498398",
-  "post_id": "1379542878568858_122101159053498398",
-  "posted_at": "2026-10-05T07:45:05.628960+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-05 cwg_trend 08:45": {
   "job": "cwg_trend",
   "link": "https://www.facebook.com/122099784345498398/posts/122101189929498398",
@@ -2111,6 +2103,22 @@
    "news": [
     "[Lưu ý] Sau 10 phút nữa Tỷ lệ thất nghiệp Mỹ,Bảng lương phi nông nghiệp được điều chỉnh theo mùa của Hoa Kỳ,Lương trung ",
     "Dữ liệu việc làm phi nông nghiệp và tỷ lệ thất nghiệp của Mỹ tháng 10 đã điều chỉnh theo mùa, cùng với mức lương trung b"
+   ]
+  }
+ },
+ "2026-11-06 cwg_breaking 20:32": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122120842599498398",
+  "post_id": "1379542878568858_122120842599498398",
+  "posted_at": "2026-11-06T20:33:08.609636+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Ngày 6 tháng 11, số liệu cho thấy việc làm phi nông nghiệp của Mỹ trong tháng 10 sau điều chỉnh theo mùa đạt 165.000 ngư",
+    "Bảng lương phi nông nghiệp được điều chỉnh theo mùa của Hoa Kỳ",
+    "Tỷ lệ thất nghiệp Mỹ",
+    "Lương trung bình mỗi giờ(m/m) Mỹ",
+    "Tỷ lệ tham gia lực lượng lao động của Hoa Kỳ"
    ]
   }
  },
