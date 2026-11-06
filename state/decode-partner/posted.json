@@ -1,16 +1,4 @@
 {
- "2026-10-05 cwg_breaking 15:38": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122101434687498398",
-  "post_id": "1379542878568858_122101434687498398",
-  "posted_at": "2026-10-05T15:39:47.336352+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Tin thị trường: Đường ống dẫn dầu Đông-Tây của Ả Rập Xê Út tạm ngừng hoạt động sau khi bị tấn công lần nữa."
-   ]
-  }
- },
  "2026-10-05 cwg_breaking 17:27": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122101515465498398",
@@ -2156,5 +2144,17 @@
   "posted_at": "2026-11-06T08:45:03.076904+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-06 reel_story 18:00": {
+  "job": "reel_story",
+  "link": "https://www.facebook.com/reel/4672396836327891/",
+  "post_id": "4672396836327891",
+  "posted_at": "2026-11-06T18:00:48.266498+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Chọn sàn cho khách: câu chuyện về pháp lý và sự an tâm",
+   "title": "KHI KHÁCH HỎI SÀN NÀY CÓ HỢP PHÁP",
+   "duration": 56.5
+  }
  }
 }
