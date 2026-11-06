@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468094",
   "468093",
   "468096",
   "468095",
@@ -599,9 +598,22 @@
   "468689",
   "468691",
   "468692",
-  "468693"
+  "468693",
+  "468694"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468694",
+   "at": "2026-11-07T01:41:22+07:00",
+   "time": "01:41",
+   "text": "Elon Musk: SpaceX (SPCX.O) dự kiến đạt doanh thu hàng năm 100 tỷ USD vào tháng 12.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
