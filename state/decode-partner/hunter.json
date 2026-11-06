@@ -1,6 +1,5 @@
 {
  "seen": [
-  "467916",
   "467915",
   "467917",
   "467918",
@@ -599,9 +598,22 @@
   "468511",
   "468513",
   "468512",
-  "468514"
+  "468514",
+  "468515"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468515",
+   "at": "2026-11-06T19:02:47+07:00",
+   "time": "19:02",
+   "text": "Tổng thống Hoa Kỳ Trump: Với tư cách là tổng thống, tôi ủng hộ một trăm phần trăm \"trí tuệ siêu việt\" (SI). Tôi sẽ hợp tác với nhiều bang trên lãnh thổ Hoa Kỳ mong muốn trở nên \"giàu có\" nhờ sở hữu nó. Chúng đúng là \"mỏ vàng\"; chỉ những nhà lãnh đạo ngu ngốc mới nói \"không\" với sự giàu có mà chúng mang lại.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
