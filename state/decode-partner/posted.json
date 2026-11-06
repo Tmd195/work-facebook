@@ -1,12 +1,4 @@
 {
- "2026-10-04 cwg_wk_macro 15:15": {
-  "job": "cwg_wk_macro",
-  "link": "https://www.facebook.com/122099784345498398/posts/122100584685498398",
-  "post_id": "1379542878568858_122100584685498398",
-  "posted_at": "2026-10-04T15:15:06.869775+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-04 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/1125323543285490/",
@@ -2143,6 +2135,14 @@
    "rr": 3.7,
    "duration": 10.3
   }
+ },
+ "2026-11-06 cwg_macro 10:15": {
+  "job": "cwg_macro",
+  "link": "https://www.facebook.com/122099784345498398/posts/122120680767498398",
+  "post_id": "1379542878568858_122120680767498398",
+  "posted_at": "2026-11-06T10:15:08.103226+07:00",
+  "preview": false,
+  "meta": {}
  },
  "2026-11-06 cwg_morning 07:45": {
   "job": "cwg_morning",
