@@ -4668,5 +4668,70 @@
    "price": 4126.04,
    "title": "Vàng giữ đà tăng sau bầu cử Mỹ, ưu tiên mua hồi - thận trọng vùng 4150"
   }
+ },
+ "2026-11-06 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122134821794735108",
+  "post_id": "1121396124381014_122134821794735108",
+  "posted_at": "2026-11-06T07:30:04.781842+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "01:00",
+     "datetime": "2026-11-06T01:00:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-06T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Average Hourly Earnings m/m",
+     "forecast": "0.3%",
+     "previous": "0.1%"
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-06T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Non-Farm Employment Change",
+     "forecast": "65K",
+     "previous": "29K"
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-06T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Unemployment Rate",
+     "forecast": "4.2%",
+     "previous": "4.2%"
+    },
+    {
+     "time": "22:00",
+     "datetime": "2026-11-06T22:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Prelim UoM Consumer Sentiment",
+     "forecast": "48.1",
+     "previous": "46.3"
+    },
+    {
+     "time": "22:00",
+     "datetime": "2026-11-06T22:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Prelim UoM Inflation Expectations",
+     "forecast": "",
+     "previous": "4.7%"
+    }
+   ]
+  }
  }
 }
