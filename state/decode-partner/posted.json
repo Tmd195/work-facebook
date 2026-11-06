@@ -1,12 +1,4 @@
 {
- "2026-10-05 cwg_macro 10:15": {
-  "job": "cwg_macro",
-  "link": "https://www.facebook.com/122099784345498398/posts/122101222407498398",
-  "post_id": "1379542878568858_122101222407498398",
-  "posted_at": "2026-10-05T10:15:11.552302+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-05 cwg_morning 07:45": {
   "job": "cwg_morning",
   "link": "https://www.facebook.com/122099784345498398/posts/122101159053498398",
@@ -2106,6 +2098,19 @@
   "meta": {
    "news": [
     "Lực lượng Vệ binh Cách mạng Iran: Hai tàu chở dầu bốc cháy tại eo biển Hormuz."
+   ]
+  }
+ },
+ "2026-11-06 cwg_breaking 20:21": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122120838981498398",
+  "post_id": "1379542878568858_122120838981498398",
+  "posted_at": "2026-11-06T20:22:12.399395+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "[Lưu ý] Sau 10 phút nữa Tỷ lệ thất nghiệp Mỹ,Bảng lương phi nông nghiệp được điều chỉnh theo mùa của Hoa Kỳ,Lương trung ",
+    "Dữ liệu việc làm phi nông nghiệp và tỷ lệ thất nghiệp của Mỹ tháng 10 đã điều chỉnh theo mùa, cùng với mức lương trung b"
    ]
   }
  },
