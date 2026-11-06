@@ -1,10 +1,5 @@
 {
  "seen": [
-  "467931",
-  "467930",
-  "467934",
-  "467935",
-  "467938",
   "467937",
   "467936",
   "467943",
@@ -599,9 +594,48 @@
   "468526",
   "468531",
   "468530",
-  "468529"
+  "468529",
+  "468536",
+  "468535",
+  "468533",
+  "468534",
+  "468532"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468535",
+   "at": "2026-11-06T20:20:30+07:00",
+   "time": "20:20",
+   "text": "Giá bạc giao ngay trong ngày mở rộng mức tăng lên 1,00%, hiện báo 52,32 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "468533",
+   "at": "2026-11-06T20:20:04+07:00",
+   "time": "20:20",
+   "text": "[Lưu ý] Sau 10 phút nữa Tỷ lệ thất nghiệp Mỹ,Bảng lương phi nông nghiệp được điều chỉnh theo mùa của Hoa Kỳ,Lương trung bình mỗi giờ(m/m) Mỹ sẽ được công bố.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "468534",
+   "at": "2026-11-06T20:20:00+07:00",
+   "time": "20:20",
+   "text": "Dữ liệu việc làm phi nông nghiệp và tỷ lệ thất nghiệp của Mỹ tháng 10 đã điều chỉnh theo mùa, cùng với mức lương trung bình theo giờ hàng tháng và hàng năm, và số người có việc làm của Canada tháng 10 sẽ được công bố sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
