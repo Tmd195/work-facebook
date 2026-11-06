@@ -601,19 +601,7 @@
   "468575",
   "468574"
  ],
- "pending": [
-  {
-   "id": "468574",
-   "at": "2026-11-06T21:00:00+07:00",
-   "time": "21:00",
-   "text": "Chủ tịch Fed St. Louis Musalem, ủy viên bỏ phiếu FOMC năm 2028, sẽ phát biểu sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
