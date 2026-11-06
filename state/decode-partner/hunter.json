@@ -1,7 +1,5 @@
 {
  "seen": [
-  "467923",
-  "467928",
   "467927",
   "467926",
   "467929",
@@ -599,9 +597,23 @@
   "468521",
   "468522",
   "468523",
-  "468524"
+  "468524",
+  "468526",
+  "468525"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468525",
+   "at": "2026-11-06T20:10:12+07:00",
+   "time": "20:10",
+   "text": "Theo tờ The New York Times đưa tin, SoftBank đang đàm phán để đầu tư hàng trăm triệu USD vào OpenAI.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
