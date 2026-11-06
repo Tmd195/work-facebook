@@ -1480,5 +1480,9 @@
    "https://tradingeconomics.com/united-states/non-farm-payrolls",
    "https://www.investing.com/economic-calendar/nonfarm-payrolls-227"
   ]
+ },
+ "2026-11-06 knowledge 21:00|examples": {
+  "at": "2026-11-06T21:27:30.921422+07:00",
+  "count": 3
  }
 }
