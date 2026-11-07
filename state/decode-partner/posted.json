@@ -1,12 +1,4 @@
 {
- "2026-10-05 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122101189929498398",
-  "post_id": "1379542878568858_122101189929498398",
-  "posted_at": "2026-10-05T08:45:06.912544+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-05 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/1178788198433905/",
@@ -2172,5 +2164,13 @@
    "title": "KHI KHÁCH HỎI SÀN NÀY CÓ HỢP PHÁP",
    "duration": 56.5
   }
+ },
+ "2026-11-07 cwg_wk_recap 09:15": {
+  "job": "cwg_wk_recap",
+  "link": "https://www.facebook.com/122099784345498398/posts/122121021969498398",
+  "post_id": "1379542878568858_122121021969498398",
+  "posted_at": "2026-11-07T09:15:03.573066+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
