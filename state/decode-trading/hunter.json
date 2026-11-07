@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468125",
-  "468124",
   "468126",
   "468127",
   "468129",
@@ -599,9 +597,23 @@
   "468720",
   "468721",
   "468722",
-  "468723"
+  "468723",
+  "468725",
+  "468724"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468724",
+   "at": "2026-11-07T07:55:46+07:00",
+   "time": "07:55",
+   "text": "Ngày 7 tháng 11, Tổng thống Mỹ Trump ngày 6 nói với báo giới rằng phía Mỹ đã thực hiện \"một cuộc tấn công quy mô nhỏ\" nhằm vào Iran, phá hủy \"một thiết bị phòng không cỡ nhỏ\" do Iran sản xuất. Theo đưa tin trước đó của hãng thông tấn Tasnim của Iran, theo báo cáo sơ bộ, hai tên lửa đã đánh trúng đảo Qeshm của Iran.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
