@@ -1,16 +1,4 @@
 {
- "2026-10-06 cwg_breaking 00:09": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122101797525498398",
-  "post_id": "1379542878568858_122101797525498398",
-  "posted_at": "2026-10-06T00:09:45.225902+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Lợi suất trái phiếu kho bạc Mỹ kỳ hạn 10 năm tăng lên 5,34%, tiếp tục lập đỉnh cao nhất kể từ năm 2002."
-   ]
-  }
- },
  "2026-10-06 cwg_macro 10:15": {
   "job": "cwg_macro",
   "link": "https://www.facebook.com/122099784345498398/posts/122102092953498398",
@@ -2143,6 +2131,14 @@
   "link": "https://www.facebook.com/122099784345498398/posts/122121021969498398",
   "post_id": "1379542878568858_122121021969498398",
   "posted_at": "2026-11-07T09:15:03.573066+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-07 cwg_wk_tech 20:15": {
+  "job": "cwg_wk_tech",
+  "link": "https://www.facebook.com/122099784345498398/posts/122121162579498398",
+  "post_id": "1379542878568858_122121162579498398",
+  "posted_at": "2026-11-07T20:15:05.031956+07:00",
   "preview": false,
   "meta": {}
  },
