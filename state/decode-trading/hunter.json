@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468158",
   "468157",
   "468160",
   "468159",
@@ -599,32 +598,10 @@
   "468754",
   "468753",
   "468755",
-  "468756"
+  "468756",
+  "468757"
  ],
- "pending": [
-  {
-   "id": "468755",
-   "at": "2026-11-07T17:00:54+07:00",
-   "time": "17:00",
-   "text": "Theo hãng thông tấn Tasnim của Iran: Hải quân Iran cho biết một tàu chở dầu vi phạm đã bốc cháy ở phía đông eo biển Hormuz.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "468756",
-   "at": "2026-11-07T17:02:45+07:00",
-   "time": "17:02",
-   "text": "Ngày 7 tháng 11, theo hãng thông tấn Tasnim của Iran đưa tin, Hải quân Iran cho biết, sáng nay, một tàu chở dầu vi phạm ở phía đông eo biển Hormuz, sau khi phớt lờ nhiều lần cảnh báo, tắt hệ thống định vị và hành trình trong vùng cấm hàng hải và vùng nước nguy hiểm, đã va phải thủy lôi, bốc cháy và mất khả năng hoạt động. Đây là kết cục tất yếu mà mọi tàu vi phạm phớt lờ cảnh báo, hành trình trong vùng cấm hàng hải sẽ phải đối mặt.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
