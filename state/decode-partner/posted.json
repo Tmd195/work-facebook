@@ -1,16 +1,4 @@
 {
- "2026-10-05 reel_story 18:00": {
-  "job": "reel_story",
-  "link": "https://www.facebook.com/reel/1393188089197452/",
-  "post_id": "1393188089197452",
-  "posted_at": "2026-10-05T18:00:48.823875+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Từ một nhóm Zalo 30 người thành cộng đồng giao dịch bền vững – nhờ chia sẻ kiến thức đều đặn",
-   "title": "NHÓM ZALO 30 NGƯỜI VÀ CỘNG ĐỒNG BỀN VỮNG",
-   "duration": 59.3
-  }
- },
  "2026-10-06 cwg_breaking 00:09": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122101797525498398",
@@ -2165,5 +2153,20 @@
   "posted_at": "2026-11-07T14:15:02.734054+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-07 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/2426208034814639/",
+  "post_id": "2426208034814639",
+  "posted_at": "2026-11-07T19:45:40.827189+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDJPY|156.74600",
+   "symbol": "USDJPY",
+   "system": "retest",
+   "side": "sell",
+   "rr": 4.7,
+   "duration": 9.9
+  }
  }
 }
