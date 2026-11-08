@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468249",
   "468255",
   "468254",
   "468253",
@@ -599,9 +598,22 @@
   "468848",
   "468849",
   "468850",
-  "468851"
+  "468851",
+  "468852"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468852",
+   "at": "2026-11-09T00:55:09+07:00",
+   "time": "00:55",
+   "text": "Ngày 9 tháng 11, theo kênh tin tức Al-Hadath thuộc Đài truyền hình Al Arabiya của Ả Rập Xê Út đưa tin ngày 8, một phái đoàn Iraq đã đến thăm thủ đô Tehran của Iran, tổ chức hội đàm với các quan chức Iran và chuyển đạt thông điệp của phía Mỹ. Bản tin dẫn lời các nguồn tin giấu tên cho biết, chuyến thăm lần này của phái đoàn Iraq kéo dài khoảng 8 giờ. Chuyến thăm diễn ra sau khi đặc phái viên Mỹ Tom Barrack đến thăm thủ đô Baghdad của Iraq, cũng như sau cuộc điện đàm giữa Tổng thống Mỹ Trump và Thủ tướng Iraq al-Zaidi. Bản tin không tiết lộ danh tính các thành viên phái đoàn Iraq và các quan chức Iran được gặp, cũng không công bố nội dung cụ thể của thông điệp phía Mỹ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
