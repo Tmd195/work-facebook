@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468232",
   "468231",
   "468230",
   "468229",
@@ -599,9 +598,22 @@
   "468824",
   "468826",
   "468827",
-  "468828"
+  "468828",
+  "468829"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468829",
+   "at": "2026-11-08T20:42:47+07:00",
+   "time": "20:42",
+   "text": "Lực lượng Houthi Yemen: đã tấn công sân bay quốc tế Khalid ở Riyadh, các bồn chứa dầu và trung tâm tài chính của Saudi Aramco, đồng thời tấn công các cơ sở của Saudi Aramco tại Buqayq.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
