@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468249",
   "468248",
   "468252",
   "468251",
@@ -599,9 +598,22 @@
   "468844",
   "468846",
   "468847",
-  "468848"
+  "468848",
+  "468849"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468849",
+   "at": "2026-11-09T00:35:08+07:00",
+   "time": "00:35",
+   "text": "Theo CNN: Tổng thống Mỹ Trump tuyên bố về vấn đề Iran rằng nếu đàm phán tiếp tục đạt tiến triển, ông \"cực kỳ khó có thể\" ra lệnh đưa Mỹ quay lại cuộc chiến với Iran.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
