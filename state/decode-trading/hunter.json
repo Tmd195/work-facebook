@@ -601,19 +601,7 @@
   "468857",
   "468858"
  ],
- "pending": [
-  {
-   "id": "468857",
-   "at": "2026-11-09T03:16:56+07:00",
-   "time": "03:16",
-   "text": "Các nguồn tin: Mỏ khí đốt Khor Mor tại khu vực Kurdistan của Iraq đã bị tấn công bằng máy bay không người lái, khói bốc lên có thể nhìn thấy gần mỏ khí này.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
