@@ -601,19 +601,7 @@
   "468844",
   "468846"
  ],
- "pending": [
-  {
-   "id": "468846",
-   "at": "2026-11-08T23:28:12+07:00",
-   "time": "23:28",
-   "text": "Theo truyền thông Iran: Hải quân Iran cho biết một tàu chở dầu đã trúng mìn và bốc cháy ở phía đông eo biển Hormuz.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
