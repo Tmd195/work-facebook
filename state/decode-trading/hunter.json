@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468231",
   "468230",
   "468229",
   "468233",
@@ -599,9 +598,22 @@
   "468826",
   "468827",
   "468828",
-  "468829"
+  "468829",
+  "468830"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "468830",
+   "at": "2026-11-08T22:11:22+07:00",
+   "time": "22:11",
+   "text": "Liên quân do Ả Rập Xê Út dẫn đầu cho biết đã phá hủy hai bệ phóng tên lửa đạn đạo của lực lượng Houthi tại Saada, Yemen, được sử dụng để tấn công Riyadh.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
