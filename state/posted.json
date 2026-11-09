@@ -4908,5 +4908,25 @@
    "series": "quan-ly-von",
    "part": 8
   }
+ },
+ "2026-11-09 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122135243918735108",
+  "post_id": "1121396124381014_122135243918735108",
+  "posted_at": "2026-11-09T07:30:03.503036+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "00:25",
+     "datetime": "2026-11-10T00:25:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "BOE Gov Bailey Speaks",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
