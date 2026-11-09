@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468342",
-  "468347",
   "468348",
   "468346",
   "468345",
@@ -599,21 +597,11 @@
   "468940",
   "468942",
   "468941",
-  "468943"
+  "468943",
+  "468945",
+  "468944"
  ],
- "pending": [
-  {
-   "id": "468940",
-   "at": "2026-11-09T19:52:41+07:00",
-   "time": "19:52",
-   "text": "Theo kênh truyền hình Al Arabiya của Saudi Arabia: Các nguồn tin cho biết, Thủ tướng Iraq trong cuộc điện đàm với Tổng thống Mỹ Trump đã đưa ra đề xuất chấm dứt chiến tranh Iran. Trump bày tỏ sự tán thành với đề xuất mà Thủ tướng Iraq đưa ra trong cuộc điện đàm. Trump yêu cầu Thủ tướng Iraq đóng vai trò trung gian hòa giải về vấn đề Iran.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
