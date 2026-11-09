@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468497",
-  "468498",
   "468499",
   "468501",
   "468500",
@@ -599,9 +597,23 @@
   "469091",
   "469094",
   "469095",
-  "469096"
+  "469096",
+  "469098",
+  "469097"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469097",
+   "at": "2026-11-10T03:18:33+07:00",
+   "time": "03:18",
+   "text": "Theo Reuters: Sau cuộc hội đàm với các nhà lãnh đạo Qatar, Trump cho biết Qatar mong muốn đạt được một giải pháp hòa bình với Iran hơn, nhưng Mỹ — nếu cần thiết đã sẵn sàng tiến hành các cuộc tấn công.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
