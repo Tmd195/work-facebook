@@ -1,8 +1,5 @@
 {
  "seen": [
-  "468492",
-  "468491",
-  "468493",
   "468495",
   "468494",
   "468496",
@@ -599,9 +596,35 @@
   "469089",
   "469088",
   "469087",
-  "469090"
+  "469090",
+  "469093",
+  "469092",
+  "469091"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469093",
+   "at": "2026-11-10T02:42:32+07:00",
+   "time": "02:42",
+   "text": "Theo kênh truyền hình Al Arabiya: Các nguồn tin Ả Rập cho biết, một khi đạt được thỏa thuận, Mỹ sẽ giải phóng khối tài sản của Iran trị giá từ 6 tỷ đến 9 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469092",
+   "at": "2026-11-10T02:42:11+07:00",
+   "time": "02:42",
+   "text": "Báo chí Trung Đông đưa tin Mỹ và Iran đạt tiến triển về vấn đề hạt nhân, chỉ số Nasdaq mở rộng đà tăng lên 3%, vàng bạc giao ngay tăng ngắn hạn, giá dầu giảm nhanh.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
