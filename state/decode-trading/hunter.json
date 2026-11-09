@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468429",
   "468431",
   "468430",
   "468432",
@@ -599,21 +598,10 @@
   "469025",
   "469026",
   "469027",
-  "469028"
+  "469028",
+  "469029"
  ],
- "pending": [
-  {
-   "id": "469027",
-   "at": "2026-11-09T23:50:00+07:00",
-   "time": "23:50",
-   "text": "Tổng thống Mỹ Trump sẽ gặp Thủ tướng Qatar sau mười phút nữa để thảo luận về lệnh ngừng bắn với Iran và đàm phán hạt nhân.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
