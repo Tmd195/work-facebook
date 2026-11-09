@@ -1,11 +1,5 @@
 {
  "seen": [
-  "468430",
-  "468432",
-  "468433",
-  "468434",
-  "468436",
-  "468435",
   "468437",
   "468438",
   "468439",
@@ -599,9 +593,38 @@
   "469027",
   "469028",
   "469029",
-  "469030"
+  "469030",
+  "469036",
+  "469035",
+  "469034",
+  "469033",
+  "469032",
+  "469031"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469033",
+   "at": "2026-11-10T00:05:00+07:00",
+   "time": "00:05",
+   "text": "Chủ tịch Fed Richmond Barkin, ủy viên bỏ phiếu FOMC năm 2027, sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469031",
+   "at": "2026-11-10T00:04:48+07:00",
+   "time": "00:04",
+   "text": "Cục Dự trữ Liên bang Barkin: Rủi ro đối với nhiệm vụ kép của Cục Dự trữ Liên bang chủ yếu tập trung ở lạm phát.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
