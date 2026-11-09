@@ -1,8 +1,5 @@
 {
  "seen": [
-  "468524",
-  "468525",
-  "468528",
   "468527",
   "468526",
   "468531",
@@ -599,9 +596,24 @@
   "469118",
   "469117",
   "469123",
-  "469122"
+  "469122",
+  "469126",
+  "469125",
+  "469124"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469124",
+   "at": "2026-11-10T04:52:54+07:00",
+   "time": "04:52",
+   "text": "Ngày 10 tháng 11, Tổng thống Mỹ Trump: Iran sẽ không bao giờ có vũ khí hạt nhân, điều này tuyệt đối không có chỗ để thương lượng. Họ hiểu điều đó. Họ đã chấp nhận điều đó, chỉ là ngoài miệng không thừa nhận mà thôi. Họ có thể sẽ nói với bạn rằng họ không chấp nhận, nhưng thực tế họ hoàn toàn chấp nhận — thậm chí có thể nói là chấp nhận một cách triệt để.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
