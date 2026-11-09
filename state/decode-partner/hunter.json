@@ -1,8 +1,5 @@
 {
  "seen": [
-  "468512",
-  "468514",
-  "468515",
   "468516",
   "468517",
   "468518",
@@ -599,9 +596,35 @@
   "469109",
   "469112",
   "469111",
-  "469110"
+  "469110",
+  "469115",
+  "469114",
+  "469113"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469114",
+   "at": "2026-11-10T04:44:20+07:00",
+   "time": "04:44",
+   "text": "Tổng thống Mỹ Trump: (Về Iran) Có vẻ không cần thiết phải hành động quân sự.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469113",
+   "at": "2026-11-10T04:42:44+07:00",
+   "time": "04:42",
+   "text": "Theo Fox News: Tổng thống Trump bất ngờ đến phòng họp báo Nhà Trắng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
