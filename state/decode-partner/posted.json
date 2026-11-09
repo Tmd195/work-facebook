@@ -1,12 +1,4 @@
 {
- "2026-10-06 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122102052351498398",
-  "post_id": "1379542878568858_122102052351498398",
-  "posted_at": "2026-10-06T08:45:04.321250+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-06 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/1407920888127690/",
@@ -2169,6 +2161,21 @@
    "system": "retest",
    "side": "sell",
    "rr": 7.6,
+   "duration": 9.9
+  }
+ },
+ "2026-11-09 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1813467793033062/",
+  "post_id": "1813467793033062",
+  "posted_at": "2026-11-09T19:45:23.301157+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURJPY|179.42000",
+   "symbol": "EURJPY",
+   "system": "range",
+   "side": "sell",
+   "rr": 16.7,
    "duration": 9.9
   }
  }
