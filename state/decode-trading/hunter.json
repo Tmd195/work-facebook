@@ -1,8 +1,5 @@
 {
  "seen": [
-  "468510",
-  "468511",
-  "468514",
   "468513",
   "468512",
   "468515",
@@ -599,9 +596,24 @@
   "469106",
   "469108",
   "469107",
-  "469109"
+  "469109",
+  "469112",
+  "469111",
+  "469110"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469110",
+   "at": "2026-11-10T04:31:33+07:00",
+   "time": "04:31",
+   "text": "Tổng thống Mỹ Trump: Đã có cuộc trò chuyện rất tốt với Thủ tướng Qatar, cho rằng động lực tích cực về việc xung đột Iran có triển vọng kết thúc đang dần xuất hiện.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
