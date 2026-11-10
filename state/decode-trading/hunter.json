@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468891",
-  "468890",
   "468894",
   "468893",
   "468892",
@@ -599,21 +597,11 @@
   "469481",
   "469488",
   "469487",
-  "469489"
+  "469489",
+  "469491",
+  "469490"
  ],
- "pending": [
-  {
-   "id": "469489",
-   "at": "2026-11-11T01:40:27+07:00",
-   "time": "01:40",
-   "text": "Theo báo Jerusalem: Thủ tướng Qatar tại Paris nói với các ngoại trưởng G7 rằng Doha đã giành được ít nhất hai tuần để thúc đẩy đàm phán ngoại giao Mỹ-Iran, nhằm tránh một cuộc tấn công quân sự mới của Mỹ vào Iran.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
