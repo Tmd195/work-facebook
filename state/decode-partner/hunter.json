@@ -1,8 +1,5 @@
 {
  "seen": [
-  "468633",
-  "468639",
-  "468638",
   "468640",
   "468641",
   "468647",
@@ -599,54 +596,12 @@
   "469231",
   "469230",
   "469229",
-  "469236"
+  "469236",
+  "469239",
+  "469238",
+  "469237"
  ],
- "pending": [
-  {
-   "id": "469228",
-   "at": "2026-11-10T16:00:56+07:00",
-   "time": "16:00",
-   "text": "Thống đốc Fed Waller: Ngay cả khi CPI tháng 10 cải thiện so với tháng 9, vẫn sẽ ủng hộ việc tăng lãi suất 25 điểm cơ bản vào tháng 12.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469235",
-   "at": "2026-11-10T16:03:14+07:00",
-   "time": "16:03",
-   "text": "Tin ngày 10 tháng 11, vàng giao ngay giảm ngắn hạn hơn 20 USD, xuống dưới 4.090 USD/ounce, trong ngày giảm 1,23%. Bạc giao ngay giảm ngắn hạn 0,5 USD, mức giảm trong ngày đạt 2,00%, hiện báo 52,35 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469233",
-   "at": "2026-11-10T16:02:12+07:00",
-   "time": "16:02",
-   "text": "Ngày 10 tháng 11, Thống đốc Fed Waller mới đây có bài phát biểu: “Fed sẽ cần thắt chặt chính sách hơn nữa. Mức lạm phát của Mỹ quá cao, dữ liệu lạm phát tháng 9 diễn biến tồi tệ. Tôi đặc biệt lo ngại về xu hướng giá cả tăng lan rộng. Ngay cả khi CPI tháng 10 cải thiện so với tháng 9, tôi vẫn sẽ ủng hộ việc tăng lãi suất 25 điểm cơ bản vào tháng 12. Nếu mức tăng CPI lõi tháng 10 ở khoảng 0,3% hoặc cao hơn, Fed có thể sẽ cần tăng lãi suất 50 điểm cơ bản vào tháng 12.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469229",
-   "at": "2026-11-10T16:01:38+07:00",
-   "time": "16:01",
-   "text": "Thống đốc Fed Waller: Sẵn sàng tạm hoãn việc thắt chặt chính sách trong tháng 10; điểm mấu chốt là các đợt tăng lãi suất đã cam kết cần được thực hiện trong thời gian hợp lý.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
