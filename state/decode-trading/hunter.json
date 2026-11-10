@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468935",
-  "468936",
   "468937",
   "468938",
   "468939",
@@ -599,9 +597,23 @@
   "469531",
   "469534",
   "469533",
-  "469532"
+  "469532",
+  "469536",
+  "469535"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469535",
+   "at": "2026-11-11T04:10:08+07:00",
+   "time": "04:10",
+   "text": "Theo The Information: Doanh thu quý 3 của OpenAI tăng vọt lên 10 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
