@@ -601,19 +601,7 @@
   "469548",
   "469549"
  ],
- "pending": [
-  {
-   "id": "469549",
-   "at": "2026-11-11T04:48:45+07:00",
-   "time": "04:48",
-   "text": "API - Tồn kho dầu thô Cushing Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "18.2",
-   "forecast": "-",
-   "previous": "51.1"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
