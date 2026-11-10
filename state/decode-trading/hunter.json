@@ -1,15 +1,5 @@
 {
  "seen": [
-  "468827",
-  "468828",
-  "468829",
-  "468830",
-  "468834",
-  "468833",
-  "468832",
-  "468831",
-  "468835",
-  "468837",
   "468836",
   "468838",
   "468840",
@@ -599,9 +589,42 @@
   "469422",
   "469424",
   "469425",
-  "469426"
+  "469426",
+  "469436",
+  "469435",
+  "469434",
+  "469433",
+  "469432",
+  "469431",
+  "469430",
+  "469429",
+  "469428",
+  "469427"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469428",
+   "at": "2026-11-10T22:50:40+07:00",
+   "time": "22:50",
+   "text": "Cục Dự trữ Liên bang Logan: Mùa đông năm nay Fed có thể tăng lãi suất với tốc độ nhanh hơn so với từ trước đến nay. Rõ ràng Fed cần ít nhất hai lần tăng lãi suất nữa, mỗi lần 25 điểm cơ bản.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469427",
+   "at": "2026-11-10T22:50:12+07:00",
+   "time": "22:50",
+   "text": "Cục Dự trữ Liên bang Logan: Lạm phát quá mức là không thể chấp nhận được.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
