@@ -1,15 +1,4 @@
 {
- "2026-10-01 knowledge 16:15": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129058248735108",
-  "post_id": "1121396124381014_122129058248735108",
-  "posted_at": "2026-10-01T16:15:14.613709+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 1
-  }
- },
  "2026-10-01 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129093870735108",
@@ -4925,6 +4914,53 @@
      "title": "BOE Gov Bailey Speaks",
      "forecast": "",
      "previous": ""
+    }
+   ]
+  }
+ },
+ "2026-11-10 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122135397068735108",
+  "post_id": "1121396124381014_122135397068735108",
+  "posted_at": "2026-11-10T07:30:05.278038+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "00:25",
+     "datetime": "2026-11-10T00:25:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "BOE Gov Bailey Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "16:00",
+     "datetime": "2026-11-10T16:00:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "FOMC Member Waller Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-10T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Core CPI m/m",
+     "forecast": "0.2%",
+     "previous": "0.3%"
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-10T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "CPI m/m",
+     "forecast": "0.3%",
+     "previous": "0.6%"
     }
    ]
   }
