@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468943",
   "468945",
   "468944",
   "468947",
@@ -599,43 +598,10 @@
   "469538",
   "469542",
   "469541",
-  "469540"
+  "469540",
+  "469543"
  ],
- "pending": [
-  {
-   "id": "469542",
-   "at": "2026-11-11T04:21:13+07:00",
-   "time": "04:21",
-   "text": "Thống đốc Fed Bowman: Fed đã từng bước cắt giảm lãi suất trong năm ngoái, sau đó tạm dừng, rồi lại tiếp tục cắt giảm lãi suất; trong những tháng tới, chúng ta có thể ứng phó với lạm phát theo cách tương tự.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469541",
-   "at": "2026-11-11T04:20:02+07:00",
-   "time": "04:20",
-   "text": "[Lưu ý] Sau 10 phút nữa API - Tồn kho dầu thô Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469540",
-   "at": "2026-11-11T04:20:00+07:00",
-   "time": "04:20",
-   "text": "Dữ liệu tồn kho dầu thô API của Mỹ cho tuần kết thúc ngày 6 tháng 11 sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
