@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468670",
   "468669",
   "468668",
   "468667",
@@ -599,7 +598,8 @@
   "469262",
   "469266",
   "469265",
-  "469264"
+  "469264",
+  "469267"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-10T17:08:14+07:00",
    "time": "17:08",
    "text": "Thống đốc Fed Waller: Chúng ta cần ít nhất phải thu hồi ba lần cắt giảm lãi suất phòng ngừa trước đó.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469267",
+   "at": "2026-11-10T17:10:24+07:00",
+   "time": "17:10",
+   "text": "Ngày 10 tháng 11, Thống đốc Cục Dự trữ Liên bang Waller phát biểu: \"Chúng ta cần ít nhất thu hồi ba lần cắt giảm lãi suất phòng ngừa trước đó. Chúng ta không phải là siêu diều hâu, chúng ta chỉ không muốn gây tổn hại nặng nề cho nền kinh tế, không muốn để nền kinh tế suy giảm mạnh. Chúng ta sẽ không tăng lãi suất thêm 150 hoặc 200 điểm cơ bản.",
    "important": true,
    "star": 0,
    "actual": "null",
