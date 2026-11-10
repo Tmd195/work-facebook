@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468788",
-  "468789",
   "468791",
   "468790",
   "468792",
@@ -599,9 +597,23 @@
   "469385",
   "469384",
   "469387",
-  "469386"
+  "469386",
+  "469389",
+  "469388"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469388",
+   "at": "2026-11-10T21:12:00+07:00",
+   "time": "21:12",
+   "text": "Lực lượng Houthi: đã tấn công trạm bơm dầu trên tuyến đường ống dẫn dầu đông-tây của Ả Rập Xê Út, tấn công sân bay quốc tế King Khalid ở Riyadh, Ả Rập Xê Út.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
