@@ -601,30 +601,7 @@
   "469576",
   "469575"
  ],
- "pending": [
-  {
-   "id": "469569",
-   "at": "2026-11-11T06:30:56+07:00",
-   "time": "06:30",
-   "text": "Cục Dự trữ Liên bang Paulson: Nếu tình hình lạm phát xấu đi, Fed sẽ có hành động quyết liệt hơn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469571",
-   "at": "2026-11-11T06:31:34+07:00",
-   "time": "06:31",
-   "text": "Cục Dự trữ Liên bang Paulson: Trước tình trạng lạm phát cao, việc tiếp tục tăng lãi suất \"từng bước\" là phù hợp.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
