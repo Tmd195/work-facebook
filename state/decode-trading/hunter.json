@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468786",
-  "468787",
   "468788",
   "468789",
   "468791",
@@ -599,21 +597,11 @@
   "469382",
   "469381",
   "469385",
-  "469384"
+  "469384",
+  "469387",
+  "469386"
  ],
- "pending": [
-  {
-   "id": "469381",
-   "at": "2026-11-10T20:59:12+07:00",
-   "time": "20:59",
-   "text": "Ngày 10 tháng 11, sau khi dữ liệu lạm phát tháng 10 của Mỹ được công bố, theo CME \"FedWatch\": xác suất Fed giữ nguyên lãi suất trong tháng 12 vẫn là 0%, xác suất tăng 25 điểm cơ bản là 84,7%, xác suất tăng lũy kế 50 điểm cơ bản là 15,3% (trước đó là 1,1%). Xác suất Fed giữ nguyên lãi suất đến tháng 1 năm sau là 0%, xác suất tăng lũy kế 25 điểm cơ bản là 43,9%, xác suất tăng lũy kế 50 điểm cơ bản là 48,8%, xác suất tăng lũy kế 75 điểm cơ bản là 7,4%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
