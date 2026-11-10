@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468742",
-  "468743",
   "468744",
   "468745",
   "468746",
@@ -599,54 +597,11 @@
   "469337",
   "469341",
   "469340",
-  "469339"
+  "469339",
+  "469343",
+  "469342"
  ],
- "pending": [
-  {
-   "id": "469338",
-   "at": "2026-11-10T20:20:06+07:00",
-   "time": "20:20",
-   "text": "[Lưu ý] Sau 10 phút nữa CPI (m/m) Mỹ,CPI cốt lõi (m/m) Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469337",
-   "at": "2026-11-10T20:20:00+07:00",
-   "time": "20:20",
-   "text": "Tỷ lệ CPI hàng tháng và tỷ lệ CPI lõi hàng tháng của Mỹ tháng 10 sau điều chỉnh theo mùa sẽ được công bố sau mười phút.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469341",
-   "at": "2026-11-10T20:22:59+07:00",
-   "time": "20:22",
-   "text": "Ngày 10 tháng 11, trước khi công bố dữ liệu lạm phát tháng 10 của Mỹ, theo CME \"FedWatch\": xác suất Fed giữ nguyên lãi suất trong tháng 12 là 0%, xác suất tăng 25 điểm cơ bản là 98,9%, xác suất tăng lũy kế 50 điểm cơ bản là 1,1%. Xác suất Fed giữ nguyên lãi suất đến tháng 1 năm sau là 0%, xác suất tăng lũy kế 25 điểm cơ bản là 64,9%, xác suất tăng lũy kế 50 điểm cơ bản là 34,8%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469339",
-   "at": "2026-11-10T20:22:37+07:00",
-   "time": "20:22",
-   "text": "Phó Thống đốc Ngân hàng Trung ương Anh Lombardelli: Tôi không loại trừ khả năng (tăng lãi suất) vào tháng 12 hoặc tháng 2.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
