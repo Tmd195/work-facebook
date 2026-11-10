@@ -1,8 +1,5 @@
 {
  "seen": [
-  "468766",
-  "468767",
-  "468768",
   "468769",
   "468770",
   "468771",
@@ -599,43 +596,12 @@
   "469357",
   "469365",
   "469364",
-  "469363"
+  "469363",
+  "469368",
+  "469367",
+  "469366"
  ],
- "pending": [
-  {
-   "id": "469357",
-   "at": "2026-11-10T20:33:32+07:00",
-   "time": "20:33",
-   "text": "Sau khi dữ liệu CPI được công bố, thị trường vẫn 100% kỳ vọng Fed sẽ tăng lãi suất vào tháng 12.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469364",
-   "at": "2026-11-10T20:36:27+07:00",
-   "time": "20:36",
-   "text": "Người phát ngôn của Fed” Nick Timiraos: Mức tăng thực tế của CPI lõi tháng 10 tại Mỹ là 0,296%, duy trì quanh mức 0,3% trong tháng thứ ba liên tiếp. Tính theo năm, mức tăng CPI lõi của ba tháng là 3,75%, cao hơn mức 1,6% của tháng 7.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469363",
-   "at": "2026-11-10T20:35:51+07:00",
-   "time": "20:35",
-   "text": "Sau khi dữ liệu CPI được công bố, thị trường càng gia tăng đặt cược rằng Fed sẽ tăng lãi suất ít nhất hai lần trước giữa năm 2027.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
