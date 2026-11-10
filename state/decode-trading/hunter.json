@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468842",
-  "468843",
   "468845",
   "468844",
   "468846",
@@ -599,43 +597,11 @@
   "469440",
   "469439",
   "469438",
-  "469437"
+  "469437",
+  "469443",
+  "469442"
  ],
- "pending": [
-  {
-   "id": "469428",
-   "at": "2026-11-10T22:50:40+07:00",
-   "time": "22:50",
-   "text": "Cục Dự trữ Liên bang Logan: Mùa đông năm nay Fed có thể tăng lãi suất với tốc độ nhanh hơn so với từ trước đến nay. Rõ ràng Fed cần ít nhất hai lần tăng lãi suất nữa, mỗi lần 25 điểm cơ bản.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469427",
-   "at": "2026-11-10T22:50:12+07:00",
-   "time": "22:50",
-   "text": "Cục Dự trữ Liên bang Logan: Lạm phát quá mức là không thể chấp nhận được.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "469439",
-   "at": "2026-11-10T22:53:12+07:00",
-   "time": "22:53",
-   "text": "Ngày 10 tháng 11, theo tin: Fed Logan mới đây có bài phát biểu: \"Lạm phát quá mức là không thể chấp nhận được. Mùa đông năm nay Fed có thể tăng lãi suất với tốc độ nhanh hơn so với từ trước đến nay. Rõ ràng Fed cần tăng lãi suất ít nhất hai lần nữa, mỗi lần 25 điểm cơ bản. Sau hai lần tăng lãi suất nữa, việc tạm dừng và đánh giá các hành động tiếp theo có thể cần thực hiện là hợp lý. Hiện tại lãi suất chính sách của Fed ít nhất thấp hơn 50 điểm cơ bản so với mức hạn chế vừa phải. Việc điều chỉnh chính sách từng bước có thể giảm thiểu rủi ro hoạt động kinh tế suy thoái vượt quá mức cần thiết. Gián đoạn năng lượng thời chiến không phải là nguồn gốc duy nhất của áp lực giá cả, nguồn gốc của áp lực tăng giá cũng không chỉ giới hạn ở thuế quan, và xu hướng tăng giá trên diện rộng này có thể sẽ tiếp diễn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
