@@ -1,8 +1,5 @@
 {
  "seen": [
-  "468628",
-  "468627",
-  "468626",
   "468630",
   "468632",
   "468631",
@@ -599,9 +596,35 @@
   "469223",
   "469225",
   "469224",
-  "469226"
+  "469226",
+  "469229",
+  "469228",
+  "469227"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469229",
+   "at": "2026-11-10T16:01:38+07:00",
+   "time": "16:01",
+   "text": "Thống đốc Fed Waller: Sẵn sàng tạm hoãn việc thắt chặt chính sách trong tháng 10; điểm mấu chốt là các đợt tăng lãi suất đã cam kết cần được thực hiện trong thời gian hợp lý.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469228",
+   "at": "2026-11-10T16:00:56+07:00",
+   "time": "16:00",
+   "text": "Thống đốc Fed Waller: Ngay cả khi CPI tháng 10 cải thiện so với tháng 9, vẫn sẽ ủng hộ việc tăng lãi suất 25 điểm cơ bản vào tháng 12.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
