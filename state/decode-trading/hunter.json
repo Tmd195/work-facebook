@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468922",
-  "468921",
   "468920",
   "468923",
   "468925",
@@ -599,21 +597,11 @@
   "469518",
   "469515",
   "469516",
-  "469514"
+  "469514",
+  "469520",
+  "469521"
  ],
- "pending": [
-  {
-   "id": "469511",
-   "at": "2026-11-11T03:30:20+07:00",
-   "time": "03:30",
-   "text": "Thống đốc Fed Bowman: Điều kiện tài chính đã thắt chặt, Fed phải cân nhắc chi phí của việc thắt chặt chính sách hơn nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
