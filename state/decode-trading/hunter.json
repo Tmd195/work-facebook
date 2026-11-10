@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468689",
   "468691",
   "468692",
   "468693",
@@ -599,9 +598,22 @@
   "469285",
   "469287",
   "469289",
-  "469288"
+  "469288",
+  "469290"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469290",
+   "at": "2026-11-10T18:31:34+07:00",
+   "time": "18:31",
+   "text": "Anthropic: Dự kiến phát hành 825 triệu cổ phiếu phổ thông loại A thông qua đợt chào bán cổ phiếu lần đầu ra công chúng (IPO). Giá chào bán IPO dự kiến từ 70 đến 78 USD mỗi cổ phiếu.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
