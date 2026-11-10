@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468889",
   "468892",
   "468891",
   "468894",
@@ -599,7 +598,8 @@
   "469483",
   "469482",
   "469481",
-  "469489"
+  "469489",
+  "469490"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-11T01:40:27+07:00",
    "time": "01:40",
    "text": "Theo báo Jerusalem: Thủ tướng Qatar tại Paris nói với các ngoại trưởng G7 rằng Doha đã giành được ít nhất hai tuần để thúc đẩy đàm phán ngoại giao Mỹ-Iran, nhằm tránh một cuộc tấn công quân sự mới của Mỹ vào Iran.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469490",
+   "at": "2026-11-11T01:43:53+07:00",
+   "time": "01:43",
+   "text": "Ngày 11/11, theo tờ The Jerusalem Post dẫn lời các nguồn tin ngoại giao, Thủ tướng Qatar Mohammed bin Abdulrahman Al Thani tại Paris đã nói với các ngoại trưởng Nhóm Bảy nước (G7) rằng Doha đã giành được ít nhất hai tuần để tiếp tục thúc đẩy Mỹ và Iran đạt được thấu hiểu, nhằm tránh việc Mỹ một lần nữa phát động tấn công Iran. Tuy nhiên, hai bên vẫn còn những bất đồng lớn, các vấn đề then chốt chưa được giải quyết, bao gồm lộ trình dỡ bỏ phong tỏa trên biển, vấn đề hạt nhân và việc giải phóng tài sản của Iran. Al Thani nhấn mạnh Mỹ và Iran cần xây dựng lại lòng tin lẫn nhau mới có thể quay trở lại bàn đàm phán. Trước đó, Al Thani đã gặp Trump và Phó Tổng thống Vance tại Nhà Trắng.",
    "important": true,
    "star": 0,
    "actual": "null",
