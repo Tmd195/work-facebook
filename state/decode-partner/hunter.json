@@ -601,19 +601,7 @@
   "469193",
   "469194"
  ],
- "pending": [
-  {
-   "id": "469194",
-   "at": "2026-11-10T13:00:40+07:00",
-   "time": "13:00",
-   "text": "Nhôm giao ngay trên Sàn giao dịch kim loại Luân Đôn giảm 2,00% trong ngày, hiện ở mức 3.020,00 USD/tấn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
