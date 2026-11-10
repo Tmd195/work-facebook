@@ -1,7 +1,5 @@
 {
  "seen": [
-  "468736",
-  "468735",
   "468741",
   "468740",
   "468739",
@@ -599,9 +597,34 @@
   "469334",
   "469333",
   "469332",
-  "469336"
+  "469336",
+  "469338",
+  "469337"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469338",
+   "at": "2026-11-10T20:20:06+07:00",
+   "time": "20:20",
+   "text": "[Lưu ý] Sau 10 phút nữa CPI (m/m) Mỹ,CPI cốt lõi (m/m) Mỹ sẽ được công bố.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469337",
+   "at": "2026-11-10T20:20:00+07:00",
+   "time": "20:20",
+   "text": "Tỷ lệ CPI hàng tháng và tỷ lệ CPI lõi hàng tháng của Mỹ tháng 10 sau điều chỉnh theo mùa sẽ được công bố sau mười phút.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
