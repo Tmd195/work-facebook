@@ -1,19 +1,4 @@
 {
- "2026-10-06 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "https://www.facebook.com/reel/1407920888127690/",
-  "post_id": "1407920888127690",
-  "posted_at": "2026-10-06T19:45:26.595267+07:00",
-  "preview": false,
-  "meta": {
-   "key": "USDCAD|1.39003",
-   "symbol": "USDCAD",
-   "system": "range",
-   "side": "sell",
-   "rr": 4.2,
-   "duration": 9.9
-  }
- },
  "2026-10-07 cwg_breaking 19:31": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122103475989498398",
@@ -2176,6 +2161,21 @@
    "system": "range",
    "side": "sell",
    "rr": 16.7,
+   "duration": 9.9
+  }
+ },
+ "2026-11-10 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1451625460273740/",
+  "post_id": "1451625460273740",
+  "posted_at": "2026-11-10T19:45:27.717572+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDCHF|0.81772",
+   "symbol": "USDCHF",
+   "system": "range",
+   "side": "sell",
+   "rr": 8.3,
    "duration": 9.9
   }
  }
