@@ -1,9 +1,5 @@
 {
  "seen": [
-  "468926",
-  "468928",
-  "468929",
-  "468932",
   "468931",
   "468930",
   "468933",
@@ -599,9 +595,25 @@
   "469523",
   "469525",
   "469524",
-  "469526"
+  "469526",
+  "469530",
+  "469529",
+  "469528",
+  "469527"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469528",
+   "at": "2026-11-11T04:01:58+07:00",
+   "time": "04:01",
+   "text": "Thống đốc Fed Bowman: Kỳ vọng lạm phát là một dữ liệu quan trọng, nhưng không nhất thiết quyết định quan điểm của tôi về mọi thứ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
