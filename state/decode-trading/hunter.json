@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468864",
   "468865",
   "468866",
   "468867",
@@ -599,9 +598,22 @@
   "469461",
   "469460",
   "469463",
-  "469462"
+  "469462",
+  "469464"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469464",
+   "at": "2026-11-10T23:55:58+07:00",
+   "time": "23:55",
+   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 2 năm của Mỹ tăng 20 điểm cơ bản trong ngày, lên 4,77%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
