@@ -1,11 +1,5 @@
 {
  "seen": [
-  "468758",
-  "468759",
-  "468760",
-  "468761",
-  "468762",
-  "468764",
   "468763",
   "468765",
   "468766",
@@ -599,7 +593,13 @@
   "469345",
   "469357",
   "469356",
-  "469355"
+  "469355",
+  "469363",
+  "469362",
+  "469361",
+  "469360",
+  "469359",
+  "469358"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-10T20:33:32+07:00",
    "time": "20:33",
    "text": "Sau khi dữ liệu CPI được công bố, thị trường vẫn 100% kỳ vọng Fed sẽ tăng lãi suất vào tháng 12.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "469363",
+   "at": "2026-11-10T20:35:51+07:00",
+   "time": "20:35",
+   "text": "Sau khi dữ liệu CPI được công bố, thị trường càng gia tăng đặt cược rằng Fed sẽ tăng lãi suất ít nhất hai lần trước giữa năm 2027.",
    "important": true,
    "star": 0,
    "actual": "null",
