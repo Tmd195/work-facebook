@@ -1,6 +1,5 @@
 {
  "seen": [
-  "468799",
   "468800",
   "468801",
   "468802",
@@ -599,21 +598,10 @@
   "469396",
   "469395",
   "469398",
-  "469397"
+  "469397",
+  "469399"
  ],
- "pending": [
-  {
-   "id": "469396",
-   "at": "2026-11-10T21:25:00+07:00",
-   "time": "21:25",
-   "text": "Ủy viên bỏ phiếu FOMC năm 2026, Chủ tịch Cục Dự trữ Liên bang Dallas Logan sẽ phát biểu sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
