@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469019",
   "469021",
   "469020",
   "469022",
@@ -599,9 +598,22 @@
   "469615",
   "469616",
   "469617",
-  "469618"
+  "469618",
+  "469619"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "469619",
+   "at": "2026-11-11T10:44:34+07:00",
+   "time": "10:44",
+   "text": "Goldman Sachs dự báo Fed sẽ tăng lãi suất thêm 25 điểm cơ bản vào tháng 12 năm nay và tháng 3 năm 2027, so với dự báo trước đó là tăng lãi suất vào tháng 12 năm nay.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
