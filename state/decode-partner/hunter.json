@@ -601,19 +601,7 @@
   "469821",
   "469823"
  ],
- "pending": [
-  {
-   "id": "469823",
-   "at": "2026-11-11T21:02:52+07:00",
-   "time": "21:02",
-   "text": "Ngày 11/11, chỉ số đô la Mỹ DXY tăng 0,6% trong ngày, hiện ở mức 102,86, mức cao nhất kể từ ngày 14/10. Cặp EUR/USD để mất mốc 1,11, lần đầu tiên kể từ tháng 5/2025, giảm 0,56% trong ngày. Cặp GBP/USD giảm hơn 0,50% trong ngày, hiện ở mức 1,3274.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
