@@ -1,15 +1,4 @@
 {
- "2026-10-01 knowledge 21:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129093870735108",
-  "post_id": "1121396124381014_122129093870735108",
-  "posted_at": "2026-10-01T21:00:11.607780+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 2
-  }
- },
  "2026-10-01 reel 19:15": {
   "job": "reel",
   "link": "https://www.facebook.com/reel/1405428164894310/",
@@ -4961,6 +4950,26 @@
      "title": "CPI m/m",
      "forecast": "0.3%",
      "previous": "0.6%"
+    }
+   ]
+  }
+ },
+ "2026-11-11 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122135553944735108",
+  "post_id": "1121396124381014_122135553944735108",
+  "posted_at": "2026-11-11T07:30:07.140290+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "16:45",
+     "datetime": "2026-11-11T16:45:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
     }
    ]
   }
