@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469063",
   "469062",
   "469061",
   "469067",
@@ -599,21 +598,10 @@
   "469658",
   "469657",
   "469659",
-  "469660"
+  "469660",
+  "469661"
  ],
- "pending": [
-  {
-   "id": "469659",
-   "at": "2026-11-11T16:35:00+07:00",
-   "time": "16:35",
-   "text": "Thống đốc Ngân hàng Trung ương châu Âu Lagarde sẽ tham dự Diễn đàn Hòa bình Paris lần thứ chín sau mười phút nữa, tham gia thảo luận nhóm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
