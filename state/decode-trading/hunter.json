@@ -1,8 +1,5 @@
 {
  "seen": [
-  "469231",
-  "469230",
-  "469238",
   "469237",
   "469239",
   "469240",
@@ -599,21 +596,12 @@
   "469833",
   "469832",
   "469831",
-  "469834"
+  "469834",
+  "469837",
+  "469836",
+  "469835"
  ],
- "pending": [
-  {
-   "id": "469832",
-   "at": "2026-11-11T21:28:44+07:00",
-   "time": "21:28",
-   "text": "Thư ký Hội đồng An ninh Quốc gia Tối cao Iran Rezaei: Nếu máy bay Mỹ cất cánh từ căn cứ tại các nước châu Âu để tấn công Iran, Tehran sẽ coi các căn cứ quân đội Mỹ tại những nước này là mục tiêu tấn công.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
