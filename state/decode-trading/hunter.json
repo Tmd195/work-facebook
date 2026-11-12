@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469615",
-  "469616",
   "469617",
   "469618",
   "469619",
@@ -599,9 +597,23 @@
   "470212",
   "470211",
   "470213",
-  "470214"
+  "470214",
+  "470216",
+  "470215"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470216",
+   "at": "2026-11-12T21:29:37+07:00",
+   "time": "21:29",
+   "text": "Ngày 12 tháng 11, Tổng thống Mexico Sheinbaum cho biết kể từ khi Tổng thống Mỹ Trump nhậm chức, không có đoàn người di cư nào đến biên giới Mỹ. Trước đó, ông Trump đã đe dọa sẽ tăng gấp đôi thuế quan đối với Mexico vì vấn đề nhập cư.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
