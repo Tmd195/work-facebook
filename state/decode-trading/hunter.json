@@ -601,19 +601,7 @@
   "470296",
   "470295"
  ],
- "pending": [
-  {
-   "id": "470294",
-   "at": "2026-11-12T23:50:02+07:00",
-   "time": "23:50",
-   "text": "[Lưu ý] Sau 10 phút nữa EIA - Tồn kho dầu thô Mỹ,EIA - Tồn kho dầu thô Cushing Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
