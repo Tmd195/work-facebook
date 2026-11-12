@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469432",
-  "469431",
   "469430",
   "469429",
   "469428",
@@ -599,9 +597,23 @@
   "470027",
   "470029",
   "470028",
-  "470030"
+  "470030",
+  "470032",
+  "470031"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470032",
+   "at": "2026-11-12T15:53:52+07:00",
+   "time": "15:53",
+   "text": "Bạc giao ngay giảm xuống dưới 51 USD/ounce, lần đầu tiên kể từ ngày 4 tháng 11, giảm 1,43% trong ngày. Bạc kỳ hạn New York giảm 2,00% trong ngày, hiện ở mức 50,96 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
