@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469637",
-  "469636",
   "469638",
   "469639",
   "469640",
@@ -599,32 +597,11 @@
   "470232",
   "470231",
   "470229",
-  "470230"
+  "470230",
+  "470237",
+  "470236"
  ],
- "pending": [
-  {
-   "id": "470228",
-   "at": "2026-11-12T21:57:46+07:00",
-   "time": "21:57",
-   "text": "Tin ngày 12 tháng 11, vàng giao ngay giảm mạnh 3,00% trong ngày, hiện ở mức 3.868,08 USD/ounce. Đây là mức thấp nhất kể từ tháng 10 năm ngoái. Bạc giao ngay mất mốc 50 USD/ounce, giảm 3,23% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470230",
-   "at": "2026-11-12T22:00:00+07:00",
-   "time": "22:00",
-   "text": "Bán nhà đang chờ xử lý (m/m) Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "-5.5",
-   "forecast": "-%",
-   "previous": "1.50"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
