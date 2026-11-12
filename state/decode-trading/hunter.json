@@ -1,8 +1,5 @@
 {
  "seen": [
-  "469598",
-  "469597",
-  "469600",
   "469599",
   "469602",
   "469601",
@@ -599,7 +596,10 @@
   "470194",
   "470193",
   "470192",
-  "470191"
+  "470191",
+  "470199",
+  "470198",
+  "470197"
  ],
  "pending": [
   {
@@ -618,6 +618,28 @@
    "at": "2026-11-12T20:43:29+07:00",
    "time": "20:43",
    "text": "Fed's Hammack: Fed đã thiếu trách nhiệm về lạm phát trong nhiều năm. Dữ liệu lạm phát mới nhất cho thấy nó đang đi sai hướng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470199",
+   "at": "2026-11-12T20:46:08+07:00",
+   "time": "20:46",
+   "text": "Ngày 12 tháng 11, theo tin: Hammack của Cục Dự trữ Liên bang mới đây đã có bài phát biểu: “Cục Dự trữ Liên bang đã thực hiện rất tốt trách nhiệm về việc làm, nhưng trong nhiều năm qua Cục Dự trữ Liên bang đã thiếu vắng trong trách nhiệm về lạm phát. Dữ liệu lạm phát mới nhất cho thấy nó đang phát triển theo hướng sai lầm. Chúng ta cần chuyển sang chính sách tiền tệ thắt chặt để giảm lạm phát. Tôi lo ngại nền kinh tế Mỹ có thể hình thành mô thức tư duy lạm phát.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470197",
+   "at": "2026-11-12T20:45:25+07:00",
+   "time": "20:45",
+   "text": "Tin ngày 12 tháng 11, vàng giao ngay giảm xuống dưới 3.900 USD/ounce, giảm 2,2% trong ngày.",
    "important": true,
    "star": 0,
    "actual": "null",
