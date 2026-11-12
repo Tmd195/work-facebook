@@ -1,10 +1,5 @@
 {
  "seen": [
-  "469507",
-  "469506",
-  "469509",
-  "469513",
-  "469512",
   "469511",
   "469510",
   "469519",
@@ -599,7 +594,12 @@
   "470101",
   "470100",
   "470106",
-  "470105"
+  "470105",
+  "470111",
+  "470110",
+  "470109",
+  "470108",
+  "470107"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-12T19:05:47+07:00",
    "time": "19:05",
    "text": "Tổng thống Mỹ Trump: Mexico phải ngăn chặn ngay đoàn người di cư. Nếu Mexico không hành động, thuế quan áp lên Mexico sẽ ngay lập tức tăng gấp đôi.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470109",
+   "at": "2026-11-12T19:08:33+07:00",
+   "time": "19:08",
+   "text": "Theo Interfax: Tổng thống Nga Putin bắt đầu hội đàm với Đặc phái viên Tổng thống Mỹ Witkoff và con rể ông Trump, Kushner.",
    "important": true,
    "star": 0,
    "actual": "null",
