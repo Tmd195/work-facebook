@@ -1,12 +1,4 @@
 {
- "2026-10-07 cwg_macro 10:15": {
-  "job": "cwg_macro",
-  "link": "https://www.facebook.com/122099784345498398/posts/122103086583498398",
-  "post_id": "1379542878568858_122103086583498398",
-  "posted_at": "2026-10-07T10:15:11.674011+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-07 cwg_morning 07:45": {
   "job": "cwg_morning",
   "link": "https://www.facebook.com/122099784345498398/posts/122103004887498398",
@@ -2179,6 +2171,21 @@
    "side": "sell",
    "rr": 3.6,
    "duration": 9.9
+  }
+ },
+ "2026-11-12 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1853483479314478/",
+  "post_id": "1853483479314478",
+  "posted_at": "2026-11-12T19:45:27.197667+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURUSD|1.12233",
+   "symbol": "EURUSD",
+   "system": "retest",
+   "side": "buy",
+   "rr": 3.5,
+   "duration": 10.3
   }
  }
 }
