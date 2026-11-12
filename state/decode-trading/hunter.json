@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469628",
-  "469627",
   "469626",
   "469630",
   "469633",
@@ -599,9 +597,23 @@
   "470223",
   "470222",
   "470225",
-  "470226"
+  "470226",
+  "470228",
+  "470227"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470228",
+   "at": "2026-11-12T21:57:46+07:00",
+   "time": "21:57",
+   "text": "Tin ngày 12 tháng 11, vàng giao ngay giảm mạnh 3,00% trong ngày, hiện ở mức 3.868,08 USD/ounce. Đây là mức thấp nhất kể từ tháng 10 năm ngoái. Bạc giao ngay mất mốc 50 USD/ounce, giảm 3,23% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
