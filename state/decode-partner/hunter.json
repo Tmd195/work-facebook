@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469504",
-  "469508",
   "469507",
   "469506",
   "469509",
@@ -599,9 +597,23 @@
   "470102",
   "470101",
   "470100",
-  "470099"
+  "470099",
+  "470106",
+  "470105"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470106",
+   "at": "2026-11-12T19:05:47+07:00",
+   "time": "19:05",
+   "text": "Tổng thống Mỹ Trump: Mexico phải ngăn chặn ngay đoàn người di cư. Nếu Mexico không hành động, thuế quan áp lên Mexico sẽ ngay lập tức tăng gấp đôi.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
