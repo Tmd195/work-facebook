@@ -1,10 +1,5 @@
 {
  "seen": [
-  "469601",
-  "469604",
-  "469603",
-  "469609",
-  "469608",
   "469607",
   "469606",
   "469605",
@@ -599,9 +594,37 @@
   "470198",
   "470197",
   "470201",
-  "470200"
+  "470200",
+  "470206",
+  "470205",
+  "470204",
+  "470203",
+  "470202"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470204",
+   "at": "2026-11-12T21:01:25+07:00",
+   "time": "21:01",
+   "text": "Cục Dự trữ Liên bang Hammack: Không cho rằng Fed tụt hậu so với tình hình, nếu xảy ra trường hợp này sẽ cân nhắc thực hiện các hành động quyết liệt hơn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470202",
+   "at": "2026-11-12T21:00:33+07:00",
+   "time": "21:00",
+   "text": "Fed's Hammack: Có xu hướng ủng hộ việc Fed điều chỉnh lãi suất với biên độ nhỏ hơn và ổn định hơn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
