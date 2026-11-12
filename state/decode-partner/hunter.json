@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469675",
   "469679",
   "469678",
   "469677",
@@ -599,21 +598,10 @@
   "470270",
   "470274",
   "470273",
-  "470275"
+  "470275",
+  "470276"
  ],
- "pending": [
-  {
-   "id": "470273",
-   "at": "2026-11-12T23:19:34+07:00",
-   "time": "23:19",
-   "text": "Cục Dự trữ Liên bang Goolsbee: Báo cáo lạm phát nóng bỏng không phải là hiện tượng nhất thời.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
