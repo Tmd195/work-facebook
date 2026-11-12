@@ -1,8 +1,5 @@
 {
  "seen": [
-  "469570",
-  "469569",
-  "469576",
   "469575",
   "469592",
   "469591",
@@ -599,7 +596,10 @@
   "470169",
   "470168",
   "470171",
-  "470172"
+  "470172",
+  "470175",
+  "470174",
+  "470173"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-12T20:15:31+07:00",
    "time": "20:15",
    "text": "Bạc giao ngay giảm 2,00% trong ngày, hiện ở mức 50,63 USD/ounce. Vàng giao ngay giảm 1,5% trong ngày, hiện ở mức 3.925,28 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470175",
+   "at": "2026-11-12T20:20:00+07:00",
+   "time": "20:20",
+   "text": "Số người xin trợ cấp thất nghiệp lần đầu của Mỹ trong tuần kết thúc ngày 7 tháng 11 sẽ được công bố sau mười phút nữa; Ủy viên bỏ phiếu FOMC năm 2026, Chủ tịch Fed Cleveland Hammack sẽ phát biểu sau mười phút nữa.",
    "important": true,
    "star": 0,
    "actual": "null",
