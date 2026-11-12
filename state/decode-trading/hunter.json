@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469571",
   "469570",
   "469569",
   "469576",
@@ -599,9 +598,22 @@
   "470170",
   "470169",
   "470168",
-  "470171"
+  "470171",
+  "470172"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470172",
+   "at": "2026-11-12T20:15:31+07:00",
+   "time": "20:15",
+   "text": "Bạc giao ngay giảm 2,00% trong ngày, hiện ở mức 50,63 USD/ounce. Vàng giao ngay giảm 1,5% trong ngày, hiện ở mức 3.925,28 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
