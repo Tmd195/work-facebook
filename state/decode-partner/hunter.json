@@ -601,19 +601,7 @@
   "470240",
   "470242"
  ],
- "pending": [
-  {
-   "id": "470241",
-   "at": "2026-11-12T22:23:14+07:00",
-   "time": "22:23",
-   "text": "AUD/USD giảm xuống chạm 0,68, mức thấp nhất kể từ ngày 22 tháng 1, giảm 0,67% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
