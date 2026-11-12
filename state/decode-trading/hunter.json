@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469712",
   "469711",
   "469710",
   "469709",
@@ -599,7 +598,8 @@
   "470308",
   "470309",
   "470311",
-  "470310"
+  "470310",
+  "470312"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-13T00:58:55+07:00",
    "time": "00:58",
    "text": "WTI dầu thô tăng hơn 2% trong ngày, hiện ở mức 88,15 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470312",
+   "at": "2026-11-13T00:59:25+07:00",
+   "time": "00:59",
+   "text": "Dầu Brent tăng lên chạm 95 USD/thùng, tăng 2,59% trong ngày.",
    "important": true,
    "star": 0,
    "actual": "null",
