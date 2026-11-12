@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469572",
   "469571",
   "469570",
   "469569",
@@ -599,32 +598,10 @@
   "470163",
   "470170",
   "470169",
-  "470168"
+  "470168",
+  "470171"
  ],
- "pending": [
-  {
-   "id": "470164",
-   "at": "2026-11-12T20:08:30+07:00",
-   "time": "20:08",
-   "text": "Tổng thống Mỹ Trump: Chúng tôi không cần đạt được thỏa thuận với Iran.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470168",
-   "at": "2026-11-12T20:11:06+07:00",
-   "time": "20:11",
-   "text": "Ngày 12 tháng 11 đưa tin, Tổng thống Mỹ Trump mới đây đăng bài: \"Tôi đã yêu cầu Phó Tổng thống Vance tập trung toàn bộ tinh lực vào các hoạt động tham nhũng và tội phạm quy mô lớn đang diễn ra tại các thành phố và bang do Đảng Dân chủ điều hành trên khắp nước Mỹ. Các bang do Đảng Dân chủ điều hành như Minnesota, California, Illinois quản trị kém cỏi, tham nhũng tràn lan, đúng là một thảm họa. Mỗi tháng có hàng chục tỷ đô la bị đánh cắp. Chỉ cần sửa chữa hoạt động tội phạm quy mô lớn này, ngân sách của chúng ta sẽ nhanh chóng đạt được cân bằng. Tham nhũng đã thấm vào máu của giới lãnh đạo Đảng Dân chủ! Hiện tại chúng ta không cần đạt được thỏa thuận với Iran, thời đại đó đã qua từ lâu. Chúng ta đang nắm giữ hàng trăm tỷ đô la của họ (Iran), còn kiểm soát eo biển của họ! Cảm ơn mọi người đã quan tâm đến vấn đề này.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
