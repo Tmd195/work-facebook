@@ -601,19 +601,7 @@
   "469971",
   "469972"
  ],
- "pending": [
-  {
-   "id": "469972",
-   "at": "2026-11-12T13:50:04+07:00",
-   "time": "13:50",
-   "text": "[Lưu ý] Sau 10 phút nữa GDP (y/y) Anh,Sản lượng ngành sản xuất (m/m) Anh,GDP(3tháng) (m/m) Anh sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
