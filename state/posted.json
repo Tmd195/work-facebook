@@ -1,18 +1,4 @@
 {
- "2026-10-01 reel 19:15": {
-  "job": "reel",
-  "link": "https://www.facebook.com/reel/1405428164894310/",
-  "post_id": "1405428164894310",
-  "posted_at": "2026-10-01T19:11:59.254829+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
-   "pillar": "he-thong",
-   "system": "inverted-hammer",
-   "duration": 60.5,
-   "music": "golden-storm.mp3"
-  }
- },
  "2026-10-01 strategy_us 18:30": {
   "job": "strategy_us",
   "link": "https://www.facebook.com/122129058266735108/posts/122129075816735108",
@@ -4965,6 +4951,53 @@
     {
      "time": "16:45",
      "datetime": "2026-11-11T16:45:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
+ },
+ "2026-11-12 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122135696450735108",
+  "post_id": "1121396124381014_122135696450735108",
+  "posted_at": "2026-11-12T07:30:04.922604+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "14:00",
+     "datetime": "2026-11-12T14:00:00+07:00",
+     "currency": "GBP",
+     "impact": "High",
+     "title": "GDP m/m",
+     "forecast": "0.0%",
+     "previous": "0.1%"
+    },
+    {
+     "time": "14:00",
+     "datetime": "2026-11-12T14:00:00+07:00",
+     "currency": "GBP",
+     "impact": "Medium",
+     "title": "Prelim GDP q/q",
+     "forecast": "0.7%",
+     "previous": "0.5%"
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-12T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Unemployment Claims",
+     "forecast": "194K",
+     "previous": "189K"
+    },
+    {
+     "time": "02:30",
+     "datetime": "2026-11-13T02:30:00+07:00",
      "currency": "EUR",
      "impact": "Medium",
      "title": "ECB President Lagarde Speaks",
