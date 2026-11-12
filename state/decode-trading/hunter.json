@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469620",
   "469621",
   "469622",
   "469623",
@@ -599,9 +598,22 @@
   "470215",
   "470219",
   "470218",
-  "470217"
+  "470217",
+  "470220"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470220",
+   "at": "2026-11-12T21:42:33+07:00",
+   "time": "21:42",
+   "text": "Theo TASS: Tổng thống Nga Putin đã kết thúc cuộc gặp với Đặc phái viên Tổng thống Mỹ Witkoff và con rể ông Trump, Kushner.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
