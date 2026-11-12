@@ -601,19 +601,7 @@
   "470242",
   "470243"
  ],
- "pending": [
-  {
-   "id": "470243",
-   "at": "2026-11-12T22:30:13+07:00",
-   "time": "22:30",
-   "text": "Tổng thống Mỹ Trump: Jensen Huang đã làm rất xuất sắc, nhưng ông ấy đã từ chức, hiện chỉ có một người có thể thay thế vị trí của ông ấy — Cook của Apple (AAPL.O).",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
