@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469585",
   "469584",
   "469583",
   "469582",
@@ -599,9 +598,22 @@
   "470178",
   "470179",
   "470181",
-  "470180"
+  "470180",
+  "470182"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470182",
+   "at": "2026-11-12T20:33:37+07:00",
+   "time": "20:33",
+   "text": "Chính phủ Anh: Anh trừng phạt 10 nhà sản xuất dầu lớn nhất của Nga.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
