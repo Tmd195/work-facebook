@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469782",
   "469783",
   "469784",
   "469785",
@@ -599,9 +598,22 @@
   "470378",
   "470379",
   "470381",
-  "470380"
+  "470380",
+  "470382"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470382",
+   "at": "2026-11-13T06:20:00+07:00",
+   "time": "06:20",
+   "text": "Ủy viên thường trực FOMC, Chủ tịch Fed New York Williams sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
