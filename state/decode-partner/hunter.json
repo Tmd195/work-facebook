@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469600",
-  "469599",
   "469611",
   "469610",
   "469612",
@@ -599,32 +597,11 @@
   "470206",
   "470205",
   "470204",
-  "470207"
+  "470207",
+  "470209",
+  "470208"
  ],
- "pending": [
-  {
-   "id": "470202",
-   "at": "2026-11-12T21:00:33+07:00",
-   "time": "21:00",
-   "text": "Fed's Hammack: Có xu hướng ủng hộ việc Fed điều chỉnh lãi suất với biên độ nhỏ hơn và ổn định hơn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470204",
-   "at": "2026-11-12T21:01:25+07:00",
-   "time": "21:01",
-   "text": "Cục Dự trữ Liên bang Hammack: Không cho rằng Fed tụt hậu so với tình hình, nếu xảy ra trường hợp này sẽ cân nhắc thực hiện các hành động quyết liệt hơn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
