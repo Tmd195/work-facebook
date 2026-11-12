@@ -1,8 +1,5 @@
 {
  "seen": [
-  "469597",
-  "469598",
-  "469609",
   "469608",
   "469607",
   "469606",
@@ -599,9 +596,35 @@
   "470195",
   "470194",
   "470193",
-  "470192"
+  "470192",
+  "470199",
+  "470198",
+  "470197"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470199",
+   "at": "2026-11-12T20:46:08+07:00",
+   "time": "20:46",
+   "text": "Ngày 12 tháng 11, theo tin: Hammack của Cục Dự trữ Liên bang mới đây đã có bài phát biểu: “Cục Dự trữ Liên bang đã thực hiện rất tốt trách nhiệm về việc làm, nhưng trong nhiều năm qua Cục Dự trữ Liên bang đã thiếu vắng trong trách nhiệm về lạm phát. Dữ liệu lạm phát mới nhất cho thấy nó đang phát triển theo hướng sai lầm. Chúng ta cần chuyển sang chính sách tiền tệ thắt chặt để giảm lạm phát. Tôi lo ngại nền kinh tế Mỹ có thể hình thành mô thức tư duy lạm phát.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470197",
+   "at": "2026-11-12T20:45:25+07:00",
+   "time": "20:45",
+   "text": "Tin ngày 12 tháng 11, vàng giao ngay giảm xuống dưới 3.900 USD/ounce, giảm 2,2% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
