@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469987",
   "469986",
   "469985",
   "469984",
@@ -599,7 +598,8 @@
   "470582",
   "470585",
   "470584",
-  "470586"
+  "470586",
+  "470587"
  ],
  "pending": [
   {
@@ -640,6 +640,17 @@
    "at": "2026-11-13T20:51:46+07:00",
    "time": "20:51",
    "text": "Vàng giao ngay giảm 20 USD trong ngắn hạn, đã xóa toàn bộ mức tăng sau khi dữ liệu PPI được công bố, hiện ở mức 3.874,89 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470587",
+   "at": "2026-11-13T21:00:00+07:00",
+   "time": "21:00",
+   "text": "Chủ tịch Fed Boston Collins, ủy viên bỏ phiếu FOMC năm 2028, sẽ có bài phát biểu khai mạc tại Hội nghị Kinh tế lần thứ 70 do Fed Boston tổ chức sau mười phút nữa.",
    "important": true,
    "star": 0,
    "actual": "null",
