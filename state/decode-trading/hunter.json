@@ -1,8 +1,5 @@
 {
  "seen": [
-  "469951",
-  "469952",
-  "469953",
   "469954",
   "469955",
   "469956",
@@ -599,7 +596,10 @@
   "470547",
   "470550",
   "470549",
-  "470548"
+  "470548",
+  "470552",
+  "470553",
+  "470551"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-13T20:17:26+07:00",
    "time": "20:17",
    "text": "Bộ trưởng Tài chính Mỹ Bessent: Lạm phát cơ bản vẫn đang trong trạng thái có thể kiểm soát.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470553",
+   "at": "2026-11-13T20:20:02+07:00",
+   "time": "20:20",
+   "text": "Bộ trưởng Tài chính Mỹ Bessent: Fed nên tập trung vào tương lai.",
    "important": true,
    "star": 0,
    "actual": "null",
