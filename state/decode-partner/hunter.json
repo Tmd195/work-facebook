@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469981",
   "469980",
   "469979",
   "469978",
@@ -599,7 +598,8 @@
   "470570",
   "470572",
   "470573",
-  "470574"
+  "470574",
+  "470575"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-13T20:35:52+07:00",
    "time": "20:35",
    "text": "Sau khi dữ liệu PPI tháng 10 của Mỹ được công bố, thị trường đã hạ thấp kỳ vọng về việc Fed tăng lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470575",
+   "at": "2026-11-13T20:40:03+07:00",
+   "time": "20:40",
+   "text": "Cục Dự trữ Liên bang Goolsbee: Lạm phát đang lan rộng và đang đi sai hướng.",
    "important": true,
    "star": 0,
    "actual": "null",
