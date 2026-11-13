@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469996",
   "469997",
   "469999",
   "469998",
@@ -599,7 +598,8 @@
   "470591",
   "470593",
   "470594",
-  "470595"
+  "470595",
+  "470596"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-13T21:07:44+07:00",
    "time": "21:07",
    "text": "BofA Global Research đã đưa việc Fed tăng lãi suất 25 điểm cơ bản vào tháng 1/2027 vào dự báo, hiện dự kiến Fed sẽ tăng lãi suất 25 điểm cơ bản lần lượt vào tháng 12/2026, tháng 1/2027 và tháng 3.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470596",
+   "at": "2026-11-13T21:30:00+07:00",
+   "time": "21:30",
+   "text": "Chủ tịch Fed Dallas Logan, ủy viên bỏ phiếu FOMC năm 2026, sẽ có bài phát biểu khai mạc tại Hội nghị Tài trợ Ngân hàng 2026 sau mười phút nữa.",
    "important": true,
    "star": 0,
    "actual": "null",
