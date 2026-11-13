@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470032",
   "470031",
   "470033",
   "470034",
@@ -599,32 +598,10 @@
   "470624",
   "470623",
   "470630",
-  "470629"
+  "470629",
+  "470631"
  ],
- "pending": [
-  {
-   "id": "470626",
-   "at": "2026-11-13T22:39:05+07:00",
-   "time": "22:39",
-   "text": "Bạc giao ngay giảm 2% trong ngày, hiện ở mức 49,04 USD/ounce. Bạc kỳ hạn New York giảm xuống dưới 49 USD/ounce, giảm 2,14% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470629",
-   "at": "2026-11-13T22:40:18+07:00",
-   "time": "22:40",
-   "text": "Cục Dự trữ Liên bang Collins: Fed có thể sẽ phải tăng lãi suất nhiều hơn dự kiến.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
