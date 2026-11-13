@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469974",
-  "469991",
   "469990",
   "469989",
   "469988",
@@ -599,7 +597,9 @@
   "470576",
   "470581",
   "470580",
-  "470579"
+  "470579",
+  "470583",
+  "470582"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-11-13T20:40:03+07:00",
    "time": "20:40",
    "text": "Cục Dự trữ Liên bang Goolsbee: Lạm phát đang lan rộng và đang đi sai hướng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470582",
+   "at": "2026-11-13T20:47:07+07:00",
+   "time": "20:47",
+   "text": "Cục Dự trữ Liên bang Goolsbee: Tôi đồng ý rằng Fed vẫn \"còn việc phải làm\" về mặt lạm phát.",
    "important": true,
    "star": 0,
    "actual": "null",
