@@ -601,19 +601,7 @@
   "470512",
   "470513"
  ],
- "pending": [
-  {
-   "id": "470512",
-   "at": "2026-11-13T17:34:23+07:00",
-   "time": "17:34",
-   "text": "WTI dầu thô giảm 1,00% trong ngày, hiện ở mức 87,98 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
