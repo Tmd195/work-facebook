@@ -1,10 +1,5 @@
 {
  "seen": [
-  "469956",
-  "469955",
-  "469954",
-  "469953",
-  "469958",
   "469959",
   "469960",
   "469961",
@@ -599,7 +594,12 @@
   "470548",
   "470552",
   "470553",
-  "470551"
+  "470551",
+  "470558",
+  "470557",
+  "470556",
+  "470555",
+  "470554"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-11-13T20:20:02+07:00",
    "time": "20:20",
    "text": "Bộ trưởng Tài chính Mỹ Bessent: Fed nên tập trung vào tương lai.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470555",
+   "at": "2026-11-13T20:20:47+07:00",
+   "time": "20:20",
+   "text": "Bộ trưởng Tài chính Mỹ Bessent: Sẽ là không thích hợp nếu tăng lãi suất quá mức vào thời điểm cú sốc nguồn cung năng lượng sắp qua đi.",
    "important": true,
    "star": 0,
    "actual": "null",
