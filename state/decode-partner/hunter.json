@@ -1,13 +1,5 @@
 {
  "seen": [
-  "469870",
-  "469869",
-  "469868",
-  "469867",
-  "469873",
-  "469872",
-  "469871",
-  "469874",
   "469875",
   "469877",
   "469876",
@@ -599,32 +591,17 @@
   "470466",
   "470465",
   "470464",
-  "470463"
+  "470463",
+  "470474",
+  "470473",
+  "470472",
+  "470471",
+  "470470",
+  "470469",
+  "470468",
+  "470467"
  ],
- "pending": [
-  {
-   "id": "470461",
-   "at": "2026-11-13T16:01:46+07:00",
-   "time": "16:01",
-   "text": "Báo cáo hàng tháng của IEA: Thị trường dầu mỏ toàn cầu đang cho thấy các dấu hiệu tái cân bằng, lần đầu tiên kể từ khi chiến tranh Iran bùng nổ, nguồn cung đã vượt nhu cầu.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470463",
-   "at": "2026-11-13T16:04:40+07:00",
-   "time": "16:04",
-   "text": "Báo cáo hàng tháng của IEA: Dự báo nhu cầu dầu toàn cầu năm 2026 sẽ giảm 2,7 triệu thùng/ngày, xuống còn 102,3 triệu thùng/ngày. Dự báo nhu cầu dầu toàn cầu năm 2027 sẽ phục hồi 2 triệu thùng/ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
