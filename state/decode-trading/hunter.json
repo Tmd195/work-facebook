@@ -1,7 +1,5 @@
 {
  "seen": [
-  "469973",
-  "469982",
   "469981",
   "469980",
   "469979",
@@ -599,9 +597,23 @@
   "470569",
   "470570",
   "470568",
-  "470567"
+  "470567",
+  "470574",
+  "470573"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470574",
+   "at": "2026-11-13T20:35:52+07:00",
+   "time": "20:35",
+   "text": "Sau khi dữ liệu PPI tháng 10 của Mỹ được công bố, thị trường đã hạ thấp kỳ vọng về việc Fed tăng lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
