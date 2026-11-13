@@ -1,8 +1,5 @@
 {
  "seen": [
-  "469959",
-  "469960",
-  "469961",
   "469962",
   "469963",
   "469964",
@@ -599,43 +596,12 @@
   "470557",
   "470556",
   "470555",
-  "470554"
+  "470554",
+  "470561",
+  "470560",
+  "470559"
  ],
- "pending": [
-  {
-   "id": "470549",
-   "at": "2026-11-13T20:17:26+07:00",
-   "time": "20:17",
-   "text": "Bộ trưởng Tài chính Mỹ Bessent: Lạm phát cơ bản vẫn đang trong trạng thái có thể kiểm soát.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470553",
-   "at": "2026-11-13T20:20:02+07:00",
-   "time": "20:20",
-   "text": "Bộ trưởng Tài chính Mỹ Bessent: Fed nên tập trung vào tương lai.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470555",
-   "at": "2026-11-13T20:20:47+07:00",
-   "time": "20:20",
-   "text": "Bộ trưởng Tài chính Mỹ Bessent: Sẽ là không thích hợp nếu tăng lãi suất quá mức vào thời điểm cú sốc nguồn cung năng lượng sắp qua đi.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
