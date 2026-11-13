@@ -1,12 +1,4 @@
 {
- "2026-10-07 cwg_morning 07:45": {
-  "job": "cwg_morning",
-  "link": "https://www.facebook.com/122099784345498398/posts/122103004887498398",
-  "post_id": "1379542878568858_122103004887498398",
-  "posted_at": "2026-10-07T07:45:07.274351+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-07 cwg_trend 08:45": {
   "job": "cwg_trend",
   "link": "https://www.facebook.com/122099784345498398/posts/122103035247498398",
@@ -2185,6 +2177,21 @@
    "system": "retest",
    "side": "buy",
    "rr": 3.5,
+   "duration": 10.3
+  }
+ },
+ "2026-11-13 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1809151776990305/",
+  "post_id": "1809151776990305",
+  "posted_at": "2026-11-13T19:45:26.765899+07:00",
+  "preview": false,
+  "meta": {
+   "key": "GBPUSD|1.33917",
+   "symbol": "GBPUSD",
+   "system": "retest",
+   "side": "buy",
+   "rr": 7.7,
    "duration": 10.3
   }
  }
