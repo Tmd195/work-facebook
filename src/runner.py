@@ -211,7 +211,7 @@ def label(job: str) -> str:
         from src.content import knowledge
         nxt = knowledge.next_lesson()
         return f"Kiến thức: {nxt[0]['name']} – Phần {nxt[1]['part']}/{len(nxt[0]['lessons'])}" if nxt else "Kiến thức"
-    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "reel": "Video Reels", "reel_story": "Reels kể chuyện nghề IB", "reel_quiz": "Reels BUY OR SELL?", "reel_indi": "Reels Sniper AI", "reel_smc": "Reels kiến thức hệ thống", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
+    return {"morning": "Bản tin sáng", "weekly": "Tổng quan tuần mới", "reel": "Video Reels", "reel_story": "Reels kể chuyện nghề IB", "reel_quiz": "Reels BUY OR SELL?", "reel_indi": "Reels Sniper AI", "reel_smc": "Reels kiến thức hệ thống", "reel_edu": "Reels Education", "strategy_ae": "Chiến lược XAUUSD phiên Á – Âu",
             "strategy_us": "Chiến lược XAUUSD phiên Mỹ"}[job]
 
 
