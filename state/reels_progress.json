@@ -1,5 +1,5 @@
 {
- "count": 37,
+ "count": 38,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -58,6 +58,7 @@
   "Đặt chốt lời TP cho XAUUSD: lùi TP vào trước đỉnh cũ / vùng kháng cự khoảng 1 ATR để khớp lệnh trước khi giá quay đầu",
   "Hệ thống Squeeze Release Direction cho XAUUSD: chờ Bollinger bung khỏi Keltner, bỏ phiếu 5 yếu tố chấm hướng, bỏ tín hiệu mơ hồ, SL theo ATR và TP theo bội số R",
   "Nhật ký giao dịch XAUUSD: ghi 5 cột mỗi lệnh, chấm điểm tuân thủ, review cuối tuần lọc setup kỳ vọng dương",
-  "Hệ thống Classic Bar Setups cho XAUUSD: nhận diện mẫu Oops, gimmee bar và đảo chiều 80-20 theo phiên, vào bằng lệnh chờ, SL bảo vệ sau cực trị và dừng theo thời gian"
+  "Hệ thống Classic Bar Setups cho XAUUSD: nhận diện mẫu Oops, gimmee bar và đảo chiều 80-20 theo phiên, vào bằng lệnh chờ, SL bảo vệ sau cực trị và dừng theo thời gian",
+  "Giới hạn lỗ ngày cho XAUUSD: mỗi lệnh rủi ro 1 phần trăm, chốt trần lỗ ngày 3 phần trăm, chạm trần là tắt máy để tránh gỡ gạc cháy tài khoản"
  ]
 }

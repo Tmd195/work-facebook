@@ -1,26 +1,4 @@
 {
- "2026-10-02 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129188850735108",
-  "post_id": "1121396124381014_122129188850735108",
-  "posted_at": "2026-10-02T12:00:06.962182+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 3
-  }
- },
- "2026-10-02 knowledge 21:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129250452735108",
-  "post_id": "1121396124381014_122129250452735108",
-  "posted_at": "2026-10-02T21:00:11.685433+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 4
-  }
- },
  "2026-10-02 morning 07:30": {
   "job": "morning",
   "link": "https://www.facebook.com/122129058266735108/posts/122129160326735108",
@@ -4997,6 +4975,66 @@
      "previous": "1.3%"
     }
    ]
+  }
+ },
+ "2026-11-13 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/2152314012043659/",
+  "post_id": "2152314012043659",
+  "posted_at": "2026-11-13T19:15:42.272559+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Giới hạn lỗ ngày cho XAUUSD: mỗi lệnh rủi ro 1 phần trăm, chốt trần lỗ ngày 3 phần trăm, chạm trần là tắt máy để tránh gỡ gạc cháy tài khoản",
+   "pillar": "quan-ly-von",
+   "system": null,
+   "duration": 43.5,
+   "music": "super-strong.mp3"
+  }
+ },
+ "2026-11-13 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136003320735108",
+  "post_id": "1121396124381014_122136003320735108",
+  "posted_at": "2026-11-13T19:30:09.519678+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3900,
+      3905.03
+     ],
+     "sl": 3936.13,
+     "tp": [
+      3885.67,
+      3872.37,
+      3853.27
+     ],
+     "trigger": "Giá hồi lên 3900-3905 (số tròn, Kijun H1, đỉnh Âu) và xuất hiện nến từ chối giảm.",
+     "invalidation": "H1 đóng cửa trên 3925 (vượt vùng hợp lưu 3922-3925)."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3850,
+      3853.27
+     ],
+     "sl": 3801.44,
+     "tp": [
+      3864.58,
+      3875.22,
+      3900
+     ],
+     "trigger": "Giá về 3850-3853 (hợp lưu mạnh) và bật lên với nến đảo chiều rõ.",
+     "invalidation": "H1 đóng cửa dưới 3850, mở đường về 3800."
+    }
+   ],
+   "price": 3894.73,
+   "title": "Vàng dưới 3900: ưu tiên bán theo xu hướng, tâm điểm PPI 20h30"
   }
  }
 }
