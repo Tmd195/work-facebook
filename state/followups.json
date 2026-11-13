@@ -1561,5 +1561,26 @@
  "2026-11-13 knowledge 21:00|examples": {
   "at": "2026-11-13T21:25:27.985251+07:00",
   "skipped": "không có ví dụ phù hợp trên giá thật"
+ },
+ "2026-11-13 strategy_us 19:30|track": {
+  "at": "2026-11-13T22:02:11.697435+07:00",
+  "result": [
+   {
+    "side": "SELL",
+    "filled": true,
+    "tp_hit": 1,
+    "closed": "BE",
+    "floating_pips": null,
+    "pips_closed": 0
+   },
+   {
+    "side": "BUY",
+    "filled": false,
+    "tp_hit": 0,
+    "closed": null,
+    "floating_pips": null,
+    "pips_closed": null
+   }
+  ]
  }
 }
