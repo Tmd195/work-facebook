@@ -1662,5 +1662,20 @@
    "pips": 150,
    "duration": 13.8
   }
+ },
+ "2026-11-13 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/2208119650050465/",
+  "post_id": "2208119650050465",
+  "posted_at": "2026-11-13T12:00:47.319417+07:00",
+  "preview": false,
+  "meta": {
+   "key": "supply|GBPUSD|2026-11-12T10:30:00+00:00",
+   "system": "supply",
+   "symbol": "GBPUSD",
+   "side": "sell",
+   "rr": 2.77,
+   "duration": 45.6
+  }
  }
 }
