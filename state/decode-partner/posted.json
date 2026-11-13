@@ -1,19 +1,4 @@
 {
- "2026-10-07 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "https://www.facebook.com/reel/1128141133101570/",
-  "post_id": "1128141133101570",
-  "posted_at": "2026-10-07T19:45:25.051518+07:00",
-  "preview": false,
-  "meta": {
-   "key": "USDJPY|159.08701",
-   "symbol": "USDJPY",
-   "system": "double",
-   "side": "sell",
-   "rr": 6.2,
-   "duration": 9.9
-  }
- },
  "2026-10-07 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/2364101394362657/",
@@ -2182,6 +2167,19 @@
    "news": [
     "PPI (y/y) Mỹ",
     "Sau khi dữ liệu được công bố, vàng giao ngay tăng ngắn hạn khoảng 20 USD, hiện ở mức 3.894,43 USD/ounce."
+   ]
+  }
+ },
+ "2026-11-13 cwg_breaking 21:04": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122122938843498398",
+  "post_id": "1379542878568858_122122938843498398",
+  "posted_at": "2026-11-13T21:05:39.511546+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Sau khi dữ liệu PPI tháng 10 của Mỹ được công bố, thị trường đã hạ thấp kỳ vọng về việc Fed tăng lãi suất.",
+    "Vàng giao ngay giảm 20 USD trong ngắn hạn, đã xóa toàn bộ mức tăng sau khi dữ liệu PPI được công bố, hiện ở mức 3.874,89"
    ]
   }
  },

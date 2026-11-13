@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469984",
   "469983",
   "469991",
   "469990",
@@ -599,54 +598,10 @@
   "470583",
   "470584",
   "470585",
-  "470586"
+  "470586",
+  "470587"
  ],
- "pending": [
-  {
-   "id": "470574",
-   "at": "2026-11-13T20:35:52+07:00",
-   "time": "20:35",
-   "text": "Sau khi dữ liệu PPI tháng 10 của Mỹ được công bố, thị trường đã hạ thấp kỳ vọng về việc Fed tăng lãi suất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470575",
-   "at": "2026-11-13T20:40:03+07:00",
-   "time": "20:40",
-   "text": "Cục Dự trữ Liên bang Goolsbee: Lạm phát đang lan rộng và đang đi sai hướng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470582",
-   "at": "2026-11-13T20:47:07+07:00",
-   "time": "20:47",
-   "text": "Cục Dự trữ Liên bang Goolsbee: Tôi đồng ý rằng Fed vẫn \"còn việc phải làm\" về mặt lạm phát.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470584",
-   "at": "2026-11-13T20:51:46+07:00",
-   "time": "20:51",
-   "text": "Vàng giao ngay giảm 20 USD trong ngắn hạn, đã xóa toàn bộ mức tăng sau khi dữ liệu PPI được công bố, hiện ở mức 3.874,89 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 3,
@@ -657,8 +612,8 @@
   "2026-11-04": 3,
   "2026-11-05": 3,
   "2026-11-06": 3,
-  "2026-11-13": 1
+  "2026-11-13": 2
  },
- "last_post": "2026-11-13T20:32:51.099072+07:00",
+ "last_post": "2026-11-13T21:04:54.060032+07:00",
  "fail": 0
 }
