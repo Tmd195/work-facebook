@@ -1,50 +1,4 @@
 {
- "2026-10-01 strategy_us 18:30": {
-  "job": "strategy_us",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129075816735108",
-  "post_id": "1121396124381014_122129075816735108",
-  "posted_at": "2026-10-01T18:30:13.124447+07:00",
-  "preview": false,
-  "meta": {
-   "session": "us",
-   "scenarios": [
-    {
-     "side": "SELL",
-     "role": "chính",
-     "entry": [
-      4215.98,
-      4220.15
-     ],
-     "sl": 4254.78,
-     "tp": [
-      4165.63,
-      4150.03,
-      4117.48
-     ],
-     "trigger": "Giá hồi lên 4,216-4,220 (0.382 H4 + đỉnh ngày trước) và cho phản ứng bán rõ trên H1",
-     "invalidation": "H1/H4 đóng cửa trên 4,254.78, lấy lại cụm kháng cự mạnh Z13"
-    },
-    {
-     "side": "BUY",
-     "role": "phụ",
-     "entry": [
-      4147.23,
-      4150.03
-     ],
-     "sl": 4127.65,
-     "tp": [
-      4165.63,
-      4184.31,
-      4199.6
-     ],
-     "trigger": "Giá về vùng hỗ trợ mạnh 4,147-4,150 và xuất hiện nến đảo chiều, giữ vững trên H1",
-     "invalidation": "H1 đóng cửa dưới 4,138, mở đường về 4,113"
-    }
-   ],
-   "price": 4173.74,
-   "title": "Vàng nghiêng giảm, ưu tiên canh bán nhịp hồi lên 4,216 - 4,220"
-  }
- },
  "2026-10-02 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129188850735108",
@@ -5003,6 +4957,44 @@
      "title": "ECB President Lagarde Speaks",
      "forecast": "",
      "previous": ""
+    }
+   ]
+  }
+ },
+ "2026-11-13 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122135836994735108",
+  "post_id": "1121396124381014_122135836994735108",
+  "posted_at": "2026-11-13T07:30:02.458044+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "02:30",
+     "datetime": "2026-11-13T02:30:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-13T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Core PPI m/m",
+     "forecast": "0.3%",
+     "previous": "0.7%"
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-13T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "PPI m/m",
+     "forecast": "0.4%",
+     "previous": "1.3%"
     }
    ]
   }
