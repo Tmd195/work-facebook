@@ -1546,5 +1546,16 @@
  "2026-11-12 morning 07:30|news|2026-11-12T14:00:00+07:00|GBP": {
   "at": "2026-11-12T17:01:25.140045+07:00",
   "skipped": "quá 3 giờ không có số liệu"
+ },
+ "2026-11-13 morning 07:30|news|2026-11-13T20:30:00+07:00|USD": {
+  "at": "2026-11-13T21:01:16.750320+07:00",
+  "impact": "GIẢM",
+  "sources": [
+   "https://www.actionforex.com/live-comments/660801-us-ppi-slows-sharply-to-0-3-but-underlying-price-pressures-stay-firm/",
+   "https://www.connectmoney.com/stories/producer-prices-rise-0-3-in-october-as-annual-inflation-hits-6-5/",
+   "https://www.tokenpost.com/news/investing/56705",
+   "https://www.xtb.com/int/market-analysis/news-and-research/us-ppi-lower-than-expected-markets-react-to-macro-data",
+   "https://tradingeconomics.com/united-states/producer-price-inflation-mom"
+  ]
  }
 }
