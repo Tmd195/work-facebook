@@ -1,6 +1,5 @@
 {
  "seen": [
-  "469790",
   "469792",
   "469794",
   "469793",
@@ -599,9 +598,22 @@
   "470387",
   "470390",
   "470389",
-  "470388"
+  "470388",
+  "470391"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470391",
+   "at": "2026-11-13T07:16:39+07:00",
+   "time": "07:16",
+   "text": "Theo New York Times: Tổng thống Mỹ Trump từng thúc giục Jensen Huang đấu tranh để giữ vị trí.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-27": 1,
   "2026-10-28": 2,
