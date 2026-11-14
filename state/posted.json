@@ -1,50 +1,4 @@
 {
- "2026-10-02 strategy_us 18:30": {
-  "job": "strategy_us",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129227904735108",
-  "post_id": "1121396124381014_122129227904735108",
-  "posted_at": "2026-10-02T18:30:11.767672+07:00",
-  "preview": false,
-  "meta": {
-   "session": "us",
-   "scenarios": [
-    {
-     "side": "SELL",
-     "role": "chính",
-     "entry": [
-      4192.52,
-      4200.05
-     ],
-     "sl": 4222.66,
-     "tp": [
-      4178.15,
-      4150.53,
-      4134.45
-     ],
-     "trigger": "Giá hồi lên 4192-4200 và xuất hiện nến từ chối giảm sau khi NFP ổn định",
-     "invalidation": "H4 đóng cửa trên 4200, hướng lên vùng 4216-4222"
-    },
-    {
-     "side": "BUY",
-     "role": "phụ",
-     "entry": [
-      4165.33,
-      4178.15
-     ],
-     "sl": 4147.31,
-     "tp": [
-      4192.52,
-      4200.05,
-      4215.98
-     ],
-     "trigger": "Giá chỉnh về 4165-4178 giữ vững, H1 còn trên mây; NFP yếu kéo lợi suất xuống",
-     "invalidation": "H1 đóng cửa dưới 4165, thủng vùng hỗ trợ mạnh Z8"
-    }
-   ],
-   "price": 4184.43,
-   "title": "XAUUSD phiên Mỹ: ưu tiên bán vùng 4192-4200, chờ NFP xác nhận"
-  }
- },
  "2026-10-03 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129343050735108",
@@ -4941,6 +4895,20 @@
   "meta": {
    "series": "quan-ly-von",
    "part": 10
+  }
+ },
+ "2026-11-14 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1453013282963244/",
+  "post_id": "1453013282963244",
+  "posted_at": "2026-11-14T19:15:41.224349+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống Volume Signature per Pattern cho XAUUSD: phát hiện vùng nén theo ATR, lọc phá vỡ Confirmed cùng chiều xu hướng khung lớn, SL mép vùng TP 1:2",
+   "pillar": "he-thong",
+   "system": "volume-signature-per-pattern",
+   "duration": 61.0,
+   "music": "getting-older.mp3"
   }
  },
  "2026-11-14 reel_edu 12:30": {
