@@ -601,30 +601,7 @@
   "470731",
   "470737"
  ],
- "pending": [
-  {
-   "id": "470732",
-   "at": "2026-11-14T21:33:18+07:00",
-   "time": "21:33",
-   "text": "Cục Dự trữ Liên bang Collins: Cách tốt nhất để đối phó với chi phí sinh hoạt cao là khôi phục ổn định lạm phát.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470731",
-   "at": "2026-11-14T21:32:59+07:00",
-   "time": "21:32",
-   "text": "Cục Dự trữ Liên bang Collins: Trong bối cảnh rủi ro hai chiều cùng tồn tại, việc áp dụng cách thức tăng lãi suất ổn định và dần dần là phù hợp. Xét đến dữ liệu lạm phát và việc làm, Cục Dự trữ Liên bang có thể cần nâng lãi suất lên trên mức dự báo gần đây.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
