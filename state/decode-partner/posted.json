@@ -1,12 +1,4 @@
 {
- "2026-10-08 cwg_macro 10:15": {
-  "job": "cwg_macro",
-  "link": "https://www.facebook.com/122099784345498398/posts/122104123263498398",
-  "post_id": "1379542878568858_122104123263498398",
-  "posted_at": "2026-10-08T10:15:08.078544+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-08 cwg_morning 07:45": {
   "job": "cwg_morning",
   "link": "https://www.facebook.com/122099784345498398/posts/122104029831498398",
@@ -2176,6 +2168,21 @@
   "posted_at": "2026-11-14T14:15:04.664323+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-14 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1164800166229402/",
+  "post_id": "1164800166229402",
+  "posted_at": "2026-11-14T19:45:24.017298+07:00",
+  "preview": false,
+  "meta": {
+   "key": "GBPJPY|211.80299",
+   "symbol": "GBPJPY",
+   "system": "abcd",
+   "side": "buy",
+   "rr": 4.7,
+   "duration": 10.3
+  }
  },
  "2026-11-14 reel_story 18:00": {
   "job": "reel_story",
