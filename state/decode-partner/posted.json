@@ -1,12 +1,4 @@
 {
- "2026-10-08 cwg_morning 07:45": {
-  "job": "cwg_morning",
-  "link": "https://www.facebook.com/122099784345498398/posts/122104029831498398",
-  "post_id": "1379542878568858_122104029831498398",
-  "posted_at": "2026-10-08T07:45:05.339946+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-08 cwg_trend 08:45": {
   "job": "cwg_trend",
   "link": "https://www.facebook.com/122099784345498398/posts/122104068879498398",
@@ -2158,6 +2150,14 @@
   "link": "https://www.facebook.com/122099784345498398/posts/122123092479498398",
   "post_id": "1379542878568858_122123092479498398",
   "posted_at": "2026-11-14T09:15:04.891142+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-14 cwg_wk_tech 20:15": {
+  "job": "cwg_wk_tech",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123192901498398",
+  "post_id": "1379542878568858_122123192901498398",
+  "posted_at": "2026-11-14T20:15:07.095257+07:00",
   "preview": false,
   "meta": {}
  },
