@@ -1,16 +1,4 @@
 {
- "2026-10-08 cwg_breaking 13:52": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122104307217498398",
-  "post_id": "1379542878568858_122104307217498398",
-  "posted_at": "2026-10-08T13:53:04.349361+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Giá dầu Brent vượt 102 USD/thùng, tăng 2,22% trong ngày do lo ngại các cuộc tấn công vào vận tải biển ở vùng Vịnh và bão"
-   ]
-  }
- },
  "2026-10-08 cwg_breaking 15:02": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122104358799498398",
@@ -2191,6 +2179,14 @@
   "link": "https://www.facebook.com/122099784345498398/posts/122123092479498398",
   "post_id": "1379542878568858_122123092479498398",
   "posted_at": "2026-11-14T09:15:04.891142+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-14 cwg_wk_top5 14:15": {
+  "job": "cwg_wk_top5",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123133225498398",
+  "post_id": "1379542878568858_122123133225498398",
+  "posted_at": "2026-11-14T14:15:04.664323+07:00",
   "preview": false,
   "meta": {}
  }
