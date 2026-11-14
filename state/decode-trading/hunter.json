@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470113",
   "470112",
   "470115",
   "470122",
@@ -599,9 +598,22 @@
   "470708",
   "470710",
   "470711",
-  "470712"
+  "470712",
+  "470713"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470713",
+   "at": "2026-11-14T13:53:22+07:00",
+   "time": "13:53",
+   "text": "Ngày 14 tháng 11 đưa tin, ngày 13 tháng 11, hai bên Trung Quốc và Hoa Kỳ đã tổ chức cuộc họp đầu tiên của Hội đồng Thương mại thuộc cơ chế tham vấn kinh tế và thương mại Trung Quốc - Hoa Kỳ thông qua hình thức hội nghị trực tuyến. Hai bên lấy đồng thuận quan trọng của nguyên thủ hai nước Trung Quốc - Hoa Kỳ làm định hướng, xoay quanh việc thực hiện các kết quả tham vấn kinh tế và thương mại Trung Quốc - Hoa Kỳ giai đoạn trước, đã tiến hành trao đổi thẳng thắn, sâu sắc và mang tính xây dựng về thuế quan, thỏa thuận giảm thuế đối ứng \"30 tỷ đổi 30 tỷ\", thương mại nông sản cũng như các chủ đề khác mà mỗi bên quan tâm. Hai bên sẽ thông qua Hội đồng Thương mại tiếp tục tăng cường trao đổi, thúc đẩy giải quyết các quan ngại kinh tế và thương mại của mỗi bên, không ngừng kéo dài danh sách hợp tác, thu hẹp danh sách vấn đề, góp phần xây dựng quan hệ ổn định chiến lược mang tính xây dựng giữa Trung Quốc và Hoa Kỳ dựa trên tôn trọng, công bằng và đối đẳng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
