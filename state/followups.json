@@ -1586,5 +1586,9 @@
  "2026-11-14 knowledge 12:00|examples": {
   "at": "2026-11-14T12:26:36.130982+07:00",
   "count": 3
+ },
+ "2026-11-14 knowledge 21:00|examples": {
+  "at": "2026-11-14T21:26:26.541517+07:00",
+  "skipped": "không có ví dụ phù hợp trên giá thật"
  }
 }
