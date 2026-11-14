@@ -6,7 +6,7 @@
     "fibonacci": 10,
     "ma-ema": 10,
     "rsi-macd-phan-ky": 12,
-    "quan-ly-von": 10
+    "quan-ly-von": 11
   },
   "history": [
     {
@@ -402,6 +402,11 @@
     {
       "series": "quan-ly-von",
       "part": 10,
+      "date": "2026-11-14"
+    },
+    {
+      "series": "quan-ly-von",
+      "part": 11,
       "date": "2026-11-14"
     }
   ]

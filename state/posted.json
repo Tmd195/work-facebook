@@ -1,15 +1,4 @@
 {
- "2026-10-03 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129343050735108",
-  "post_id": "1121396124381014_122129343050735108",
-  "posted_at": "2026-10-03T12:00:12.749649+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 5
-  }
- },
  "2026-10-03 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129413040735108",
@@ -4895,6 +4884,17 @@
   "meta": {
    "series": "quan-ly-von",
    "part": 10
+  }
+ },
+ "2026-11-14 knowledge 21:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136146090735108",
+  "post_id": "1121396124381014_122136146090735108",
+  "posted_at": "2026-11-14T21:00:11.865972+07:00",
+  "preview": false,
+  "meta": {
+   "series": "quan-ly-von",
+   "part": 11
   }
  },
  "2026-11-14 reel 19:15": {
