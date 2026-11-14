@@ -1718,5 +1718,20 @@
    "rr": 2.77,
    "duration": 45.6
   }
+ },
+ "2026-11-14 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/1154419533589616/",
+  "post_id": "1154419533589616",
+  "posted_at": "2026-11-14T12:00:45.316556+07:00",
+  "preview": false,
+  "meta": {
+   "key": "ob|GBPUSD|2026-11-12T10:30:00+00:00",
+   "system": "ob",
+   "symbol": "GBPUSD",
+   "side": "sell",
+   "rr": 2.77,
+   "duration": 45.5
+  }
  }
 }
