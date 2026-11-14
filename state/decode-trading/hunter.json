@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470123",
   "470128",
   "470130",
   "470129",
@@ -599,9 +598,22 @@
   "470723",
   "470724",
   "470726",
-  "470725"
+  "470725",
+  "470727"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470727",
+   "at": "2026-11-14T18:17:16+07:00",
+   "time": "18:17",
+   "text": "Ngày 14 tháng 11, theo Reuters dẫn lời ba nguồn tin thân cận, Tổng thống Mỹ Trump gần đây đã nói với các cố vấn cấp cao rằng nếu Iran và lực lượng Houthi ở Yemen do nước này hậu thuẫn không còn thực hiện các hành động khiêu khích mới nhằm vào Mỹ, ông có thể tạm hoãn phát động tấn công quân sự vào Iran. Thời gian gần đây, Trump liên tục dao động giữa việc leo thang chiến tranh, phát động một đợt tấn công mới và từng bước chấm dứt các hành động thù địch, hiện dường như vẫn chưa quyết định cách giải quyết cuộc xung đột do Mỹ và Israel khởi xướng vào tháng 2 năm nay. Sau cuộc họp với các cố vấn an ninh quốc gia và nghe một loạt báo cáo tình báo, Trump cho biết đang cân nhắc tạm hoãn tấn công quân sự. Ngoài ra, Trump cũng thể hiện sự đồng tình nhất định với lập trường của các đồng minh Trung Đông về việc yêu cầu tránh rơi lại vào một cuộc chiến tranh toàn diện.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
