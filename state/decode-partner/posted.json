@@ -1,19 +1,4 @@
 {
- "2026-10-08 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "https://www.facebook.com/reel/1761913461584385/",
-  "post_id": "1761913461584385",
-  "posted_at": "2026-10-08T19:45:23.205690+07:00",
-  "preview": false,
-  "meta": {
-   "key": "AUDUSD|0.70126",
-   "symbol": "AUDUSD",
-   "system": "fibo",
-   "side": "sell",
-   "rr": 8.5,
-   "duration": 9.9
-  }
- },
  "2026-10-09 cwg_breaking 00:53": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122104887195498398",
@@ -2193,6 +2178,14 @@
   "link": "https://www.facebook.com/122099784345498398/posts/122123340579498398",
   "post_id": "1379542878568858_122123340579498398",
   "posted_at": "2026-11-15T10:15:05.075346+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-15 cwg_wk_macro 15:15": {
+  "job": "cwg_wk_macro",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123401023498398",
+  "post_id": "1379542878568858_122123401023498398",
+  "posted_at": "2026-11-15T15:15:08.922657+07:00",
   "preview": false,
   "meta": {}
  }
