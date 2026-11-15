@@ -1,7 +1,5 @@
 {
  "seen": [
-  "470164",
-  "470170",
   "470169",
   "470168",
   "470171",
@@ -599,9 +597,23 @@
   "470763",
   "470764",
   "470765",
-  "470766"
+  "470766",
+  "470768",
+  "470767"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470768",
+   "at": "2026-11-15T11:20:40+07:00",
+   "time": "11:20",
+   "text": "Theo hãng thông tấn Fars của Iran: Lực lượng Vệ binh Cách mạng Hồi giáo Iran (IRGC) đã tiến hành cuộc tấn công vào căn cứ quân sự của Mỹ tại Bahrain, nhằm đáp trả hành động \"thù địch\" của Mỹ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 3,
