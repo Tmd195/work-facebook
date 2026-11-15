@@ -1,17 +1,4 @@
 {
- "2026-10-09 cwg_breaking 00:53": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122104887195498398",
-  "post_id": "1379542878568858_122104887195498398",
-  "posted_at": "2026-10-09T00:54:18.854797+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Chủ tịch Fed Musalem: Để đưa lạm phát trở lại mức mục tiêu, cần thắt chặt chính sách tiền tệ hơn nữa.",
-    "Fed Musalem: Lãi suất nên được tăng trong 6 đến 9 tháng tới."
-   ]
-  }
- },
  "2026-10-09 cwg_breaking 23:39": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122106010689498398",
@@ -2188,5 +2175,20 @@
   "posted_at": "2026-11-15T15:15:08.922657+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-15 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1892696394947131/",
+  "post_id": "1892696394947131",
+  "posted_at": "2026-11-15T19:45:27.577168+07:00",
+  "preview": false,
+  "meta": {
+   "key": "XAUUSD|4072.60015",
+   "symbol": "XAUUSD",
+   "system": "range",
+   "side": "buy",
+   "rr": 14.7,
+   "duration": 10.3
+  }
  }
 }
