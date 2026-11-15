@@ -1,18 +1,4 @@
 {
- "2026-10-03 reel 19:15": {
-  "job": "reel",
-  "link": "https://www.facebook.com/reel/1415650706658983/",
-  "post_id": "1415650706658983",
-  "posted_at": "2026-10-03T19:15:39.875397+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Hệ thống MLMA cho XAUUSD: đo xu hướng, tín hiệu vào lệnh, bộ lọc và SL/TP",
-   "pillar": "he-thong",
-   "system": "mlma",
-   "duration": 58.4,
-   "music": "our-ups-and-downs.mp3"
-  }
- },
  "2026-10-04 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129507528735108",
@@ -4923,6 +4909,20 @@
   "meta": {
    "series": "quan-ly-von",
    "part": 12
+  }
+ },
+ "2026-11-15 reel_edu 12:30": {
+  "job": "reel_edu",
+  "link": "https://www.facebook.com/reel/2352920608806651/",
+  "post_id": "2352920608806651",
+  "posted_at": "2026-11-15T12:30:54.959702+07:00",
+  "preview": false,
+  "meta": {
+   "episode": 3,
+   "topic": "Tập 03: Spread & phí qua đêm",
+   "title": "Spread & phí qua đêm",
+   "duration": 65.5,
+   "music": "talent-in-the-air.mp3"
   }
  }
 }
