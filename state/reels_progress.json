@@ -1,5 +1,5 @@
 {
- "count": 39,
+ "count": 40,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -61,6 +61,7 @@
   "Nhật ký giao dịch XAUUSD: ghi 5 cột mỗi lệnh, chấm điểm tuân thủ, review cuối tuần lọc setup kỳ vọng dương",
   "Hệ thống Classic Bar Setups cho XAUUSD: nhận diện mẫu Oops, gimmee bar và đảo chiều 80-20 theo phiên, vào bằng lệnh chờ, SL bảo vệ sau cực trị và dừng theo thời gian",
   "Giới hạn lỗ ngày cho XAUUSD: mỗi lệnh rủi ro 1 phần trăm, chốt trần lỗ ngày 3 phần trăm, chạm trần là tắt máy để tránh gỡ gạc cháy tài khoản",
-  "Hệ thống Volume Signature per Pattern cho XAUUSD: phát hiện vùng nén theo ATR, lọc phá vỡ Confirmed cùng chiều xu hướng khung lớn, SL mép vùng TP 1:2"
+  "Hệ thống Volume Signature per Pattern cho XAUUSD: phát hiện vùng nén theo ATR, lọc phá vỡ Confirmed cùng chiều xu hướng khung lớn, SL mép vùng TP 1:2",
+  "Chốt lời từng phần và dời SL về entry cho XAUUSD: chốt 50 phần trăm ở 1R, kéo dừng lỗ về hòa vốn, để phần còn lại chạy tới 2-3R nhằm biến lệnh thắng thành lệnh không thể thua"
  ]
 }

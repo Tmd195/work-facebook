@@ -1,15 +1,4 @@
 {
- "2026-10-04 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129507528735108",
-  "post_id": "1121396124381014_122129507528735108",
-  "posted_at": "2026-10-04T12:00:10.353853+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 7
-  }
- },
  "2026-10-04 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129573690735108",
@@ -4909,6 +4898,20 @@
   "meta": {
    "series": "quan-ly-von",
    "part": 12
+  }
+ },
+ "2026-11-15 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/990885954094016/",
+  "post_id": "990885954094016",
+  "posted_at": "2026-11-15T19:15:42.331467+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Chốt lời từng phần và dời SL về entry cho XAUUSD: chốt 50 phần trăm ở 1R, kéo dừng lỗ về hòa vốn, để phần còn lại chạy tới 2-3R nhằm biến lệnh thắng thành lệnh không thể thua",
+   "pillar": "sl-tp",
+   "system": null,
+   "duration": 41.3,
+   "music": "positive-energy.mp3"
   }
  },
  "2026-11-15 reel_edu 12:30": {
