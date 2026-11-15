@@ -601,19 +601,7 @@
   "470800",
   "470801"
  ],
- "pending": [
-  {
-   "id": "470801",
-   "at": "2026-11-16T01:03:11+07:00",
-   "time": "01:03",
-   "text": "Lực lượng Houthi cho biết đã sử dụng hai tên lửa đạn đạo để tấn công Sân bay Quốc tế King Khalid và trung tâm tài chính ở thủ đô Riyadh của Saudi Arabia. Phía Saudi Arabia chưa xác nhận tuyên bố trên của lực lượng Houthi.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
