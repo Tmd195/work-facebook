@@ -1,18 +1,4 @@
 {
- "2026-10-04 reel 19:15": {
-  "job": "reel",
-  "link": "https://www.facebook.com/reel/1088716110838347/",
-  "post_id": "1088716110838347",
-  "posted_at": "2026-10-04T19:15:58.892198+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Dời dừng lỗ về entry khi đạt 1R và chốt lời từng phần cho XAUUSD",
-   "pillar": "sl-tp",
-   "system": null,
-   "duration": 41.2,
-   "music": "take-this-higher.mp3"
-  }
- },
  "2026-10-04 weekly 22:00": {
   "job": "weekly",
   "link": "https://www.facebook.com/122129058266735108/posts/122129590094735108",
@@ -4927,5 +4913,13 @@
    "duration": 65.5,
    "music": "talent-in-the-air.mp3"
   }
+ },
+ "2026-11-15 weekly 22:00": {
+  "job": "weekly",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136290972735108",
+  "post_id": "1121396124381014_122136290972735108",
+  "posted_at": "2026-11-15T22:00:09.029662+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
