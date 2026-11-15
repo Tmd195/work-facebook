@@ -1,12 +1,4 @@
 {
- "2026-10-08 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122104068879498398",
-  "post_id": "1379542878568858_122104068879498398",
-  "posted_at": "2026-10-08T08:45:03.177436+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-08 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/1761913461584385/",
@@ -2195,5 +2187,13 @@
    "title": "KÊNH NỘI DUNG VÀ NGÀY KHÁCH NHẮN TRƯỚC",
    "duration": 54.5
   }
+ },
+ "2026-11-15 cwg_wk_cot 10:15": {
+  "job": "cwg_wk_cot",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123340579498398",
+  "post_id": "1379542878568858_122123340579498398",
+  "posted_at": "2026-11-15T10:15:05.075346+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
