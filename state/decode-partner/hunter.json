@@ -1,7 +1,5 @@
 {
  "seen": [
-  "470203",
-  "470202",
   "470206",
   "470205",
   "470204",
@@ -599,9 +597,23 @@
   "470798",
   "470799",
   "470800",
-  "470801"
+  "470801",
+  "470803",
+  "470802"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470802",
+   "at": "2026-11-16T01:38:34+07:00",
+   "time": "01:38",
+   "text": "Ngày 16 tháng 11, người phát ngôn của lực lượng Houthi: Lực lượng vũ trang của chúng tôi đã sử dụng hai máy bay không người lái, tấn công thành công các trạm bơm dầu số 5 và số 6 dọc tuyến đường ống dẫn dầu Đông-Tây ở khu vực Riyadh, Saudi Arabia. Chiến dịch này đã đạt được mục tiêu đề ra.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 3,
