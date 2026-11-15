@@ -1,7 +1,5 @@
 {
  "seen": [
-  "470208",
-  "470210",
   "470212",
   "470211",
   "470213",
@@ -599,32 +597,11 @@
   "470807",
   "470806",
   "470805",
-  "470804"
+  "470804",
+  "470810",
+  "470809"
  ],
- "pending": [
-  {
-   "id": "470802",
-   "at": "2026-11-16T01:38:34+07:00",
-   "time": "01:38",
-   "text": "Ngày 16 tháng 11, người phát ngôn của lực lượng Houthi: Lực lượng vũ trang của chúng tôi đã sử dụng hai máy bay không người lái, tấn công thành công các trạm bơm dầu số 5 và số 6 dọc tuyến đường ống dẫn dầu Đông-Tây ở khu vực Riyadh, Saudi Arabia. Chiến dịch này đã đạt được mục tiêu đề ra.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470804",
-   "at": "2026-11-16T01:41:33+07:00",
-   "time": "01:41",
-   "text": "Fed Schmid: Kể từ khi Chủ tịch Fed Warsh phát biểu tại hội nghị Jackson Hole, công việc kiềm chế lạm phát đã trở nên khó khăn hơn. Lạm phát ở mức quá cao, Fed vẫn còn việc phải làm trong việc kiểm soát lạm phát.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 3,
