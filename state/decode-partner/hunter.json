@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470275",
   "470276",
   "470277",
   "470278",
@@ -599,9 +598,22 @@
   "470869",
   "470872",
   "470873",
-  "470874"
+  "470874",
+  "470875"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470875",
+   "at": "2026-11-16T13:09:57+07:00",
+   "time": "13:09",
+   "text": "Đồng rupiah Indonesia giảm xuống 18.260 so với đồng USD, mức thấp nhất trong lịch sử.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 3,
