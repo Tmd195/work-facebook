@@ -1,16 +1,4 @@
 {
- "2026-10-09 reel_story 18:00": {
-  "job": "reel_story",
-  "link": "https://www.facebook.com/reel/1073933358749416/",
-  "post_id": "1073933358749416",
-  "posted_at": "2026-10-09T18:01:19.411959+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Đại lý mới: 90 ngày đầu nên làm gì để không bỏ cuộc",
-   "title": "90 NGÀY ĐẦU VÀ LÝ DO ANH SUÝT BỎ CUỘC",
-   "duration": 63.2
-  }
- },
  "2026-10-10 cwg_wk_recap 09:15": {
   "job": "cwg_wk_recap",
   "link": "https://www.facebook.com/122099784345498398/posts/122106439413498398",
@@ -2171,6 +2159,21 @@
   "posted_at": "2026-11-16T08:45:05.937828+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-16 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1476025554705539/",
+  "post_id": "1476025554705539",
+  "posted_at": "2026-11-16T19:45:29.625106+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDJPY|157.98100",
+   "symbol": "USDJPY",
+   "system": "double",
+   "side": "sell",
+   "rr": 5.9,
+   "duration": 9.9
+  }
  },
  "2026-11-16 reel_story 18:00": {
   "job": "reel_story",
