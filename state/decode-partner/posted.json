@@ -1,12 +1,4 @@
 {
- "2026-10-10 cwg_wk_tech 20:15": {
-  "job": "cwg_wk_tech",
-  "link": "https://www.facebook.com/122099784345498398/posts/122106947769498398",
-  "post_id": "1379542878568858_122106947769498398",
-  "posted_at": "2026-10-10T20:15:07.527734+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-10 cwg_wk_top5 14:15": {
   "job": "cwg_wk_top5",
   "link": "https://www.facebook.com/122099784345498398/posts/122106638007498398",
@@ -2190,6 +2182,18 @@
    "topic": "Bài học từ đại lý hứa lợi nhuận với khách – và cái giá phải trả",
    "title": "CÁI GIÁ CỦA MỘT LỜI HỨA LỢI NHUẬN",
    "duration": 57.5
+  }
+ },
+ "2026-11-17 cwg_breaking 01:51": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123845077498398",
+  "post_id": "1379542878568858_122123845077498398",
+  "posted_at": "2026-11-17T01:52:27.784415+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Dầu Brent giảm mạnh 4,00% trong ngày, hiện ở mức 92,47 USD/thùng; dầu WTI giảm 3,9% trong ngày, hiện ở mức 85,6 USD/thùn"
+   ]
   }
  }
 }
