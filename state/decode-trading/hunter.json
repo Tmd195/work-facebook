@@ -1,9 +1,5 @@
 {
  "seen": [
-  "470364",
-  "470365",
-  "470366",
-  "470367",
   "470369",
   "470368",
   "470370",
@@ -599,9 +595,36 @@
   "470959",
   "470958",
   "470962",
-  "470963"
+  "470963",
+  "470967",
+  "470966",
+  "470965",
+  "470964"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470966",
+   "at": "2026-11-16T19:18:56+07:00",
+   "time": "19:18",
+   "text": "Goldman Sachs: hạ dự báo giá dầu WTI quý IV/2026 từ 96 USD/thùng xuống 91 USD/thùng; hạ dự báo giá dầu WTI quý I/2027 từ 87 USD/thùng xuống 85 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470964",
+   "at": "2026-11-16T19:18:17+07:00",
+   "time": "19:18",
+   "text": "Goldman Sachs: hạ dự báo giá dầu Brent quý IV/2026 từ 108 USD/thùng xuống 103 USD/thùng; hạ dự báo giá dầu Brent quý I/2027 từ 98 USD/thùng xuống 96 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
