@@ -1,5 +1,5 @@
 {
- "count": 40,
+ "count": 41,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -20,7 +20,8 @@
   "morning-star",
   "squeeze-release-direction",
   "classic-bar-setups",
-  "volume-signature-per-pattern"
+  "volume-signature-per-pattern",
+  "inversion-fair-value-gaps-ifvg"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -62,6 +63,7 @@
   "Hệ thống Classic Bar Setups cho XAUUSD: nhận diện mẫu Oops, gimmee bar và đảo chiều 80-20 theo phiên, vào bằng lệnh chờ, SL bảo vệ sau cực trị và dừng theo thời gian",
   "Giới hạn lỗ ngày cho XAUUSD: mỗi lệnh rủi ro 1 phần trăm, chốt trần lỗ ngày 3 phần trăm, chạm trần là tắt máy để tránh gỡ gạc cháy tài khoản",
   "Hệ thống Volume Signature per Pattern cho XAUUSD: phát hiện vùng nén theo ATR, lọc phá vỡ Confirmed cùng chiều xu hướng khung lớn, SL mép vùng TP 1:2",
-  "Chốt lời từng phần và dời SL về entry cho XAUUSD: chốt 50 phần trăm ở 1R, kéo dừng lỗ về hòa vốn, để phần còn lại chạy tới 2-3R nhằm biến lệnh thắng thành lệnh không thể thua"
+  "Chốt lời từng phần và dời SL về entry cho XAUUSD: chốt 50 phần trăm ở 1R, kéo dừng lỗ về hòa vốn, để phần còn lại chạy tới 2-3R nhằm biến lệnh thắng thành lệnh không thể thua",
+  "Hệ thống Inversion Fair Value Gaps (IFVG) cho XAUUSD: FVG đảo vai khi giá đóng xuyên ngược hướng, vào lệnh khi test lại xác nhận, lọc thuận H4 và phiên lớn, SL ngoài vùng FVG đảo chiều và TP theo R:R 1:2"
  ]
 }
