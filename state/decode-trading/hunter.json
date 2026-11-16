@@ -601,19 +601,7 @@
   "470836",
   "470837"
  ],
- "pending": [
-  {
-   "id": "470836",
-   "at": "2026-11-16T08:04:37+07:00",
-   "time": "08:04",
-   "text": "Vàng giao ngay giảm 15 USD trong ngắn hạn, báo 3.867 USD/ounce; bạc giao ngay giảm 0,4 USD trong ngắn hạn, giảm hơn 1,00% trong ngày, hiện báo 48,20 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
