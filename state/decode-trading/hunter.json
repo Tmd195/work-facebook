@@ -1,9 +1,5 @@
 {
  "seen": [
-  "470397",
-  "470402",
-  "470401",
-  "470400",
   "470399",
   "470398",
   "470403",
@@ -599,9 +595,25 @@
   "470993",
   "470995",
   "470994",
-  "470996"
+  "470996",
+  "471000",
+  "470999",
+  "470998",
+  "470997"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470997",
+   "at": "2026-11-16T21:01:09+07:00",
+   "time": "21:01",
+   "text": "Điện Kremlin: (về cuộc gặp giữa Tổng thống Nga Putin và Tổng thống Mỹ Trump) đang sắp xếp cuộc hội đàm ngày 19 tháng 11, Tổng thống Nga Putin và Tổng thống Mỹ Trump xác nhận sẽ gặp nhau, hình thức và địa điểm vẫn đang được hoàn thiện.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
