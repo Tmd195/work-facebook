@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470551",
   "470558",
   "470557",
   "470556",
@@ -599,21 +598,10 @@
   "471150",
   "471149",
   "471148",
-  "471147"
+  "471147",
+  "471153"
  ],
- "pending": [
-  {
-   "id": "471152",
-   "at": "2026-11-17T06:00:00+07:00",
-   "time": "06:00",
-   "text": "Chủ tịch Fed Richmond Barkin, ủy viên bỏ phiếu FOMC năm 2027, sẽ phát biểu sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-29": 2,
   "2026-10-30": 2,
