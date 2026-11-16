@@ -1,12 +1,4 @@
 {
- "2026-10-09 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122105238867498398",
-  "post_id": "1379542878568858_122105238867498398",
-  "posted_at": "2026-10-09T08:45:03.171020+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-09 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/1087244520891255/",
@@ -2170,6 +2162,14 @@
    "rr": 14.7,
    "duration": 10.3
   }
+ },
+ "2026-11-16 cwg_macro 10:15": {
+  "job": "cwg_macro",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123601399498398",
+  "post_id": "1379542878568858_122123601399498398",
+  "posted_at": "2026-11-16T10:15:08.497340+07:00",
+  "preview": false,
+  "meta": {}
  },
  "2026-11-16 cwg_morning 07:45": {
   "job": "cwg_morning",
