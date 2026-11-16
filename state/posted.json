@@ -1,50 +1,4 @@
 {
- "2026-10-05 strategy_us 18:30": {
-  "job": "strategy_us",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129722448735108",
-  "post_id": "1121396124381014_122129722448735108",
-  "posted_at": "2026-10-05T18:30:16.611843+07:00",
-  "preview": false,
-  "meta": {
-   "session": "us",
-   "scenarios": [
-    {
-     "side": "SELL",
-     "role": "chính",
-     "entry": [
-      4170.6,
-      4176.77
-     ],
-     "sl": 4199.12,
-     "tp": [
-      4150.0,
-      4139.78,
-      4126.88
-     ],
-     "trigger": "Giá hồi lên 4170.6-4176.77, xuất hiện nến từ chối dưới Kijun/EMA50 H4",
-     "invalidation": "Đóng nến H4 trên 4176.77 hoặc bứt qua 4192"
-    },
-    {
-     "side": "BUY",
-     "role": "phụ",
-     "entry": [
-      4135.91,
-      4139.78
-     ],
-     "sl": 4111.8,
-     "tp": [
-      4150.0,
-      4161.1,
-      4170.6
-     ],
-     "trigger": "Giá về 4135.91-4139.78 giữ được, có nến đảo chiều tăng rõ ràng",
-     "invalidation": "Đóng nến H1 dứt khoát dưới 4125.12"
-    }
-   ],
-   "price": 4160.65,
-   "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi 4170-4176, canh trụ 4140"
-  }
- },
  "2026-10-06 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129841590735108",
@@ -4821,6 +4775,17 @@
   "meta": {
    "series": "tam-ly-giao-dich",
    "part": 2
+  }
+ },
+ "2026-11-16 knowledge 21:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136435074735108",
+  "post_id": "1121396124381014_122136435074735108",
+  "posted_at": "2026-11-16T21:00:06.179412+07:00",
+  "preview": false,
+  "meta": {
+   "series": "tam-ly-giao-dich",
+   "part": 3
   }
  },
  "2026-11-16 morning 07:30": {
