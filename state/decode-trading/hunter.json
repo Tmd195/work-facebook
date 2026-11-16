@@ -601,19 +601,7 @@
   "470841",
   "470840"
  ],
- "pending": [
-  {
-   "id": "470840",
-   "at": "2026-11-16T08:34:43+07:00",
-   "time": "08:34",
-   "text": "Giá bạc giao ngay trong ngày giảm 2,00%, hiện ở mức 47,70 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
