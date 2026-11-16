@@ -601,19 +601,7 @@
   "471046",
   "471048"
  ],
- "pending": [
-  {
-   "id": "471048",
-   "at": "2026-11-16T22:59:21+07:00",
-   "time": "22:59",
-   "text": "EUR/USD giảm xuống dưới 1,10 lần đầu tiên kể từ tháng 4/2025.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-29": 2,
   "2026-10-30": 2,
