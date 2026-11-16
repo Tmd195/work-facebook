@@ -1,8 +1,5 @@
 {
  "seen": [
-  "470360",
-  "470362",
-  "470361",
   "470363",
   "470364",
   "470365",
@@ -599,21 +596,12 @@
   "470951",
   "470957",
   "470959",
-  "470958"
+  "470958",
+  "470962",
+  "470961",
+  "470960"
  ],
- "pending": [
-  {
-   "id": "470958",
-   "at": "2026-11-16T18:45:45+07:00",
-   "time": "18:45",
-   "text": "Morgan Stanley: nâng dự báo giá dầu Brent năm 2026 từ 94 USD/thùng lên 96,70 USD/thùng; nâng dự báo giá dầu Brent năm 2027 từ 86 USD/thùng lên 86,30 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 3,
