@@ -601,19 +601,7 @@
   "471071",
   "471075"
  ],
- "pending": [
-  {
-   "id": "471075",
-   "at": "2026-11-17T01:07:01+07:00",
-   "time": "01:07",
-   "text": "Giá dầu WTI giảm xuống dưới 86 USD/thùng, giảm 3,47% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-29": 2,
   "2026-10-30": 2,
