@@ -1,12 +1,4 @@
 {
- "2026-10-10 cwg_wk_recap 09:15": {
-  "job": "cwg_wk_recap",
-  "link": "https://www.facebook.com/122099784345498398/posts/122106439413498398",
-  "post_id": "1379542878568858_122106439413498398",
-  "posted_at": "2026-10-10T09:15:05.746353+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-10 cwg_wk_tech 20:15": {
   "job": "cwg_wk_tech",
   "link": "https://www.facebook.com/122099784345498398/posts/122106947769498398",
@@ -2134,6 +2126,19 @@
    "side": "buy",
    "rr": 14.7,
    "duration": 10.3
+  }
+ },
+ "2026-11-16 cwg_breaking 22:27": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123774259498398",
+  "post_id": "1379542878568858_122123774259498398",
+  "posted_at": "2026-11-16T22:27:34.225618+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Giá dầu Brent giảm xuống dưới 93 USD/thùng, giảm 3,46% trong ngày.",
+    "WTI dầu thô giảm mạnh 3,00% trong ngày, hiện ở mức 86,39 USD/thùng."
+   ]
   }
  },
  "2026-11-16 cwg_macro 10:15": {
