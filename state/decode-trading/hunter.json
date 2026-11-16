@@ -1,9 +1,5 @@
 {
  "seen": [
-  "470358",
-  "470359",
-  "470361",
-  "470360",
   "470363",
   "470362",
   "470364",
@@ -599,9 +595,36 @@
   "470950",
   "470956",
   "470955",
-  "470957"
+  "470957",
+  "470961",
+  "470960",
+  "470959",
+  "470958"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "470961",
+   "at": "2026-11-16T18:46:50+07:00",
+   "time": "18:46",
+   "text": "Morgan Stanley: hạ dự báo giá dầu thô WTI năm 2026 từ 86 USD/thùng xuống 85,80 USD/thùng; nâng dự báo giá dầu thô WTI năm 2027 từ 79 USD/thùng lên 80,50 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "470958",
+   "at": "2026-11-16T18:45:45+07:00",
+   "time": "18:45",
+   "text": "Morgan Stanley: nâng dự báo giá dầu Brent năm 2026 từ 94 USD/thùng lên 96,70 USD/thùng; nâng dự báo giá dầu Brent năm 2027 từ 86 USD/thùng lên 86,30 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
