@@ -601,41 +601,7 @@
   "471040",
   "471039"
  ],
- "pending": [
-  {
-   "id": "471037",
-   "at": "2026-11-16T22:21:32+07:00",
-   "time": "22:21",
-   "text": "Giá dầu Brent giảm xuống dưới 93 USD/thùng, giảm 3,46% trong ngày.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "471036",
-   "at": "2026-11-16T22:21:19+07:00",
-   "time": "22:21",
-   "text": "Bạc giao ngay giảm mạnh 2,01 USD trong ngày, hiện ở mức 46,68 USD/ounce, giảm 4,12%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "471040",
-   "at": "2026-11-16T22:24:56+07:00",
-   "time": "22:24",
-   "text": "WTI dầu thô giảm mạnh 3,00% trong ngày, hiện ở mức 86,39 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 3,
