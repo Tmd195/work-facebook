@@ -1,15 +1,4 @@
 {
- "2026-10-05 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129678822735108",
-  "post_id": "1121396124381014_122129678822735108",
-  "posted_at": "2026-10-05T12:00:16.584517+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 9
-  }
- },
  "2026-10-05 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129744420735108",
@@ -4932,6 +4921,52 @@
      "previous": ""
     }
    ]
+  }
+ },
+ "2026-11-16 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136372368735108",
+  "post_id": "1121396124381014_122136372368735108",
+  "posted_at": "2026-11-16T10:00:11.817412+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3881.63,
+      3883.31
+     ],
+     "sl": 3901.18,
+     "tp": [
+      3866.21,
+      3853.96,
+      3800.69
+     ],
+     "trigger": "Giá hồi lên 3.882-3.883 (Kijun/EMA50 H1, R1) xuất hiện nến H1 từ chối, đóng lại dưới 3.880",
+     "invalidation": "H1 đóng cửa trên 3.901 (đỉnh phiên Á), lấy lại vùng Z10 bền vững"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3874.37,
+      3876.05
+     ],
+     "sl": 3864.84,
+     "tp": [
+      3883.31,
+      3896.96,
+      3901.18
+     ],
+     "trigger": "Giá về Z8 3.874-3.876 giữ vững, nến H1 đảo chiều tăng đóng lại trên 3.876",
+     "invalidation": "H1 đóng dưới 3.865 (đáy phiên Á), xác nhận thủng hỗ trợ Z8"
+    }
+   ],
+   "price": 3879.8,
+   "title": "XAUUSD: Lợi suất thực tăng, ưu tiên canh bán hồi dưới 3.900"
   }
  }
 }
