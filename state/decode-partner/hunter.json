@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470491",
   "470490",
   "470492",
   "470501",
@@ -599,9 +598,22 @@
   "471087",
   "471086",
   "471085",
-  "471089"
+  "471089",
+  "471090"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471090",
+   "at": "2026-11-17T01:46:08+07:00",
+   "time": "01:46",
+   "text": "Dầu Brent giảm mạnh 4,00% trong ngày, hiện ở mức 92,47 USD/thùng; dầu WTI giảm 3,9% trong ngày, hiện ở mức 85,6 USD/thùng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-29": 3,
   "2026-10-30": 3,
