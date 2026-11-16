@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470451",
   "470452",
   "470453",
   "470455",
@@ -599,9 +598,22 @@
   "471046",
   "471048",
   "471049",
-  "471050"
+  "471050",
+  "471051"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471051",
+   "at": "2026-11-16T23:59:02+07:00",
+   "time": "23:59",
+   "text": "Một bên là áp lực tăng lãi suất, một bên là cuộc cách mạng năng suất AI. Chủ tịch Cục Dự trữ Liên bang Warsh đã có phát biểu quan trọng, phán đoán truyền thống về việc tăng lãi suất đang đối mặt với thử thách... Hãy nhanh chóng theo dõi!",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-29": 2,
   "2026-10-30": 2,
