@@ -1,7 +1,5 @@
 {
  "seen": [
-  "470438",
-  "470437",
   "470441",
   "470442",
   "470443",
@@ -599,7 +597,9 @@
   "471034",
   "471038",
   "471037",
-  "471036"
+  "471036",
+  "471040",
+  "471039"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-11-16T22:21:19+07:00",
    "time": "22:21",
    "text": "Bạc giao ngay giảm mạnh 2,01 USD trong ngày, hiện ở mức 46,68 USD/ounce, giảm 4,12%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "471040",
+   "at": "2026-11-16T22:24:56+07:00",
+   "time": "22:24",
+   "text": "WTI dầu thô giảm mạnh 3,00% trong ngày, hiện ở mức 86,39 USD/thùng.",
    "important": true,
    "star": 0,
    "actual": "null",
