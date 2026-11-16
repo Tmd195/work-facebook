@@ -601,30 +601,7 @@
   "470910",
   "470909"
  ],
- "pending": [
-  {
-   "id": "470908",
-   "at": "2026-11-16T15:30:04+07:00",
-   "time": "15:30",
-   "text": "Lợi suất trái phiếu chính phủ kỳ hạn 2 năm của Anh tăng lên mức cao nhất kể từ tháng 10 năm 2023, tăng 4 điểm cơ bản trong ngày lên 5,012%",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "470907",
-   "at": "2026-11-16T15:29:00+07:00",
-   "time": "15:29",
-   "text": "Giá trái phiếu chính phủ Anh giảm, lợi suất trái phiếu kỳ hạn 2 năm lần đầu tiên chạm mức 5% kể từ năm 2023.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-28": 2,
   "2026-10-29": 2,
