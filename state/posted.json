@@ -1,12 +1,4 @@
 {
- "2026-10-04 weekly 22:00": {
-  "job": "weekly",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129590094735108",
-  "post_id": "1121396124381014_122129590094735108",
-  "posted_at": "2026-10-04T22:50:48.286574+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-05 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122129678822735108",
@@ -4921,5 +4913,25 @@
   "posted_at": "2026-11-15T22:00:09.029662+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-16 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136361412735108",
+  "post_id": "1121396124381014_122136361412735108",
+  "posted_at": "2026-11-16T07:30:06.125833+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "00:00",
+     "datetime": "2026-11-17T00:00:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "Fed Chairman Warsh Speaks",
+     "forecast": "",
+     "previous": ""
+    }
+   ]
+  }
  }
 }
