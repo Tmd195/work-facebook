@@ -1,50 +1,4 @@
 {
- "2026-10-06 strategy_ae 10:00": {
-  "job": "strategy_ae",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129828408735108",
-  "post_id": "1121396124381014_122129828408735108",
-  "posted_at": "2026-10-06T10:00:10.413989+07:00",
-  "preview": false,
-  "meta": {
-   "session": "ae",
-   "scenarios": [
-    {
-     "side": "SELL",
-     "role": "chính",
-     "entry": [
-      4135.91,
-      4145.69
-     ],
-     "sl": 4159.9,
-     "tp": [
-      4111.8,
-      4101.4,
-      4051.16
-     ],
-     "trigger": "Giá hồi lên cụm 4136-4146 gặp EMA50/Kijun H1, xuất hiện nến từ chối giảm",
-     "invalidation": "H1 đóng cửa trên 4152.48 (đỉnh phiên Á)"
-    },
-    {
-     "side": "BUY",
-     "role": "phụ",
-     "entry": [
-      4111.8,
-      4113.76
-     ],
-     "sl": 4099.09,
-     "tp": [
-      4121.93,
-      4135.91,
-      4150
-     ],
-     "trigger": "Nến đảo chiều tăng quanh đáy phiên Á kèm phân kỳ RSI H1",
-     "invalidation": "H1 đóng cửa dưới 4099.09 (thủng vùng 4100)"
-    }
-   ],
-   "price": 4117.91,
-   "title": "XAUUSD Á-Âu 06/10: ưu tiên bán nhịp hồi 4136-4146, chừng nào dưới 4152"
-  }
- },
  "2026-10-06 strategy_us 18:30": {
   "job": "strategy_us",
   "link": "https://www.facebook.com/122129058266735108/posts/122129887478735108",
@@ -4952,6 +4906,20 @@
      "previous": "0.8%"
     }
    ]
+  }
+ },
+ "2026-11-17 reel_edu 12:30": {
+  "job": "reel_edu",
+  "link": "https://www.facebook.com/reel/29158571397133113/",
+  "post_id": "29158571397133113",
+  "posted_at": "2026-11-17T12:30:40.767093+07:00",
+  "preview": false,
+  "meta": {
+   "episode": 5,
+   "topic": "Tập 05: Stop Loss đặt ở đâu?",
+   "title": "Stop Loss đặt ở đâu?",
+   "duration": 64.0,
+   "music": "uplifting-bass.mp3"
   }
  },
  "2026-11-17 strategy_ae 10:00": {
