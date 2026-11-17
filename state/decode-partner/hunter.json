@@ -1,12 +1,5 @@
 {
  "seen": [
-  "470732",
-  "470731",
-  "470737",
-  "470739",
-  "470738",
-  "470740",
-  "470742",
   "470741",
   "470743",
   "470744",
@@ -599,54 +592,16 @@
   "471332",
   "471331",
   "471330",
-  "471329"
+  "471329",
+  "471341",
+  "471340",
+  "471339",
+  "471338",
+  "471337",
+  "471336",
+  "471335"
  ],
- "pending": [
-  {
-   "id": "471324",
-   "at": "2026-11-17T19:28:29+07:00",
-   "time": "19:28",
-   "text": "Tổng thống Mỹ Trump: Thái Lan sẽ dỡ bỏ tất cả thuế quan đối với hàng hóa Mỹ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "471333",
-   "at": "2026-11-17T19:32:39+07:00",
-   "time": "19:32",
-   "text": "Cục Dự trữ Liên bang Mỹ (Fed) - ông Musalem: Lãi suất chính sách thực tế cần tăng khoảng 1 điểm phần trăm.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "471330",
-   "at": "2026-11-17T19:31:24+07:00",
-   "time": "19:31",
-   "text": "Cục Dự trữ Liên bang Mỹ (Fed) - ông Musalem: Có thể cần \"vài lần\" tăng lãi suất trước mùa xuân.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "471329",
-   "at": "2026-11-17T19:30:43+07:00",
-   "time": "19:30",
-   "text": "Tổng thống Mỹ Trump: Thái Lan sẽ dỡ bỏ rào cản phi thuế quan đối với dược phẩm của Mỹ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
