@@ -1,61 +1,4 @@
 {
- "2026-10-06 strategy_us 18:30": {
-  "job": "strategy_us",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129887478735108",
-  "post_id": "1121396124381014_122129887478735108",
-  "posted_at": "2026-10-06T18:30:20.393182+07:00",
-  "preview": false,
-  "meta": {
-   "session": "us",
-   "scenarios": [
-    {
-     "side": "SELL",
-     "role": "chính",
-     "entry": [
-      4187.17,
-      4192.52
-     ],
-     "sl": 4218.99,
-     "tp": [
-      4152.48,
-      4128.03,
-      4114.89
-     ],
-     "trigger": "Giá hồi lên 4187 - 4192 và xuất hiện nến từ chối tại R2/Fibo 0.382 H4.",
-     "invalidation": "H4 đóng cửa trên 4213.7 (vượt mây H4)."
-    },
-    {
-     "side": "BUY",
-     "role": "phụ",
-     "entry": [
-      4125.41,
-      4128.03
-     ],
-     "sl": 4099.08,
-     "tp": [
-      4152.48,
-      4170.6,
-      4192.52
-     ],
-     "trigger": "Giá về 4125 - 4128 giữ được và có nến đảo chiều tăng rõ.",
-     "invalidation": "H1 đóng cửa dưới 4107.79 (mất đáy phiên Á)."
-    }
-   ],
-   "price": 4158.03,
-   "title": "XAUUSD phiên Mỹ: canh bán nhịp hồi tại kháng cự, D1 còn giảm"
-  }
- },
- "2026-10-07 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130017444735108",
-  "post_id": "1121396124381014_122130017444735108",
-  "posted_at": "2026-10-07T12:00:16.431627+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 13
-  }
- },
  "2026-10-07 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122130090794735108",
@@ -4908,6 +4851,20 @@
    ]
   }
  },
+ "2026-11-17 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1103730022529733/",
+  "post_id": "1103730022529733",
+  "posted_at": "2026-11-17T19:15:42.328392+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Backtest 100 lệnh và forward test demo trước khi dựng hệ thống XAUUSD vào tiền thật",
+   "pillar": "setup",
+   "system": null,
+   "duration": 44.8,
+   "music": "winter-breeze.mp3"
+  }
+ },
  "2026-11-17 reel_edu 12:30": {
   "job": "reel_edu",
   "link": "https://www.facebook.com/reel/29158571397133113/",
@@ -4966,6 +4923,52 @@
    ],
    "price": 3870.79,
    "title": "XAUUSD nghiêng giảm: canh bán nhịp hồi về 3,900 theo xu hướng D1/H4"
+  }
+ },
+ "2026-11-17 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136568172735108",
+  "post_id": "1121396124381014_122136568172735108",
+  "posted_at": "2026-11-17T19:30:13.049130+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3885.79,
+      3888.23
+     ],
+     "sl": 3909.27,
+     "tp": [
+      3853.27,
+      3833.62,
+      3800.64
+     ],
+     "trigger": "Giá hồi lên 3,886-3,888 và xuất hiện nến từ chối H1; không vào lúc tin ra",
+     "invalidation": "H1 đóng cửa trên 3,901 (vượt R1)"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3850,
+      3853.27
+     ],
+     "sl": 3831.64,
+     "tp": [
+      3875.42,
+      3888.23,
+      3901.18
+     ],
+     "trigger": "Doanh số bán lẻ yếu, giá giữ 3,850-3,853 kèm nến đảo chiều tăng H1",
+     "invalidation": "H1 đóng cửa dưới 3,832 (thủng đáy ngày trước)"
+    }
+   ],
+   "price": 3867.83,
+   "title": "XAUUSD phiên Mỹ: ưu tiên canh bán nhịp hồi, chờ nến xác nhận sau bán lẻ"
   }
  }
 }
