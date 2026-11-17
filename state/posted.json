@@ -1,15 +1,4 @@
 {
- "2026-10-06 knowledge 21:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129915390735108",
-  "post_id": "1121396124381014_122129915390735108",
-  "posted_at": "2026-10-06T21:00:13.361330+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 12
-  }
- },
  "2026-10-06 morning 07:30": {
   "job": "morning",
   "link": "https://www.facebook.com/122129058266735108/posts/122129813534735108",
@@ -4962,6 +4951,52 @@
      "previous": "0.8%"
     }
    ]
+  }
+ },
+ "2026-11-17 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136510866735108",
+  "post_id": "1121396124381014_122136510866735108",
+  "posted_at": "2026-11-17T10:07:29.523901+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3899.2,
+      3901.18
+     ],
+     "sl": 3932.19,
+     "tp": [
+      3853.27,
+      3843.64,
+      3833.62
+     ],
+     "trigger": "Giá hồi lên 3,899-3,901 xuất hiện nến đảo giảm H1 (pin/engulfing), ưu tiên sau khi USD mạnh lại",
+     "invalidation": "H1 đóng cửa trên 3,909, hoặc bứt lên EMA50 H4 vùng 3,932"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3831.64,
+      3833.62
+     ],
+     "sl": 3798.15,
+     "tp": [
+      3850,
+      3862.24,
+      3883.11
+     ],
+     "trigger": "Giá về 3,831-3,833 giữ được, xuất hiện nến từ chối giảm rõ trên H1",
+     "invalidation": "H1 đóng cửa dưới 3,831, mở đường về 3,800"
+    }
+   ],
+   "price": 3870.79,
+   "title": "XAUUSD nghiêng giảm: canh bán nhịp hồi về 3,900 theo xu hướng D1/H4"
   }
  }
 }
