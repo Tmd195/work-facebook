@@ -601,19 +601,7 @@
   "471506",
   "471508"
  ],
- "pending": [
-  {
-   "id": "471508",
-   "at": "2026-11-18T02:50:01+07:00",
-   "time": "02:50",
-   "text": "Ngày 18 tháng 11, Chủ tịch Fed New York Williams cho biết, khi nền kinh tế Mỹ mạnh lên và diễn biến lạm phát xấu đi, Fed vẫn còn nhiều việc phải làm, nhưng ông cho rằng tình hình hiện tại chưa cần đến các hành động chính sách quyết liệt. Williams nói rằng lạm phát vẫn \"cố chấp ở mức cao\", và đã thấy dấu hiệu thuế quan và cú sốc năng lượng lan truyền sang dữ liệu lạm phát rộng hơn. Đồng thời, ông chỉ ra rằng môi trường tài chính hiện vẫn khá thuận lợi cho tăng trưởng kinh tế, và hoạt động của thị trường tài chính cũng duy trì tốt.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
