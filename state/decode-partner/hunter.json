@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470883",
   "470882",
   "470881",
   "470884",
@@ -599,9 +598,22 @@
   "471478",
   "471477",
   "471476",
-  "471480"
+  "471480",
+  "471481"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471481",
+   "at": "2026-11-18T02:15:00+07:00",
+   "time": "02:15",
+   "text": "Chủ tịch Fed New York Williams, ủy viên thường trực có quyền biểu quyết của FOMC, sẽ tham gia một cuộc trò chuyện không chính thức sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
