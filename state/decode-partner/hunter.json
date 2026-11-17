@@ -601,19 +601,7 @@
   "471363",
   "471365"
  ],
- "pending": [
-  {
-   "id": "471365",
-   "at": "2026-11-17T20:23:09+07:00",
-   "time": "20:23",
-   "text": "Dầu Brent tăng 2,00% trong ngày, hiện ở mức 93,70 USD/thùng; dầu WTI tăng ngắn 0,4 USD, ở mức 86,67 USD/thùng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
