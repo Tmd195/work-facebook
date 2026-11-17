@@ -1,15 +1,4 @@
 {
- "2026-10-07 knowledge 21:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130090794735108",
-  "post_id": "1121396124381014_122130090794735108",
-  "posted_at": "2026-10-07T21:00:05.263943+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 14
-  }
- },
  "2026-10-07 morning 07:30": {
   "job": "morning",
   "link": "https://www.facebook.com/122129058266735108/posts/122129990570735108",
@@ -4802,6 +4791,17 @@
   "meta": {
    "series": "tam-ly-giao-dich",
    "part": 4
+  }
+ },
+ "2026-11-17 knowledge 21:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136577556735108",
+  "post_id": "1121396124381014_122136577556735108",
+  "posted_at": "2026-11-17T21:00:09.138996+07:00",
+  "preview": false,
+  "meta": {
+   "series": "tam-ly-giao-dich",
+   "part": 5
   }
  },
  "2026-11-17 morning 07:30": {
