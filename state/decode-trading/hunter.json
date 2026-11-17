@@ -1,9 +1,5 @@
 {
  "seen": [
-  "470668",
-  "470669",
-  "470667",
-  "470666",
   "470665",
   "470664",
   "470663",
@@ -599,7 +595,11 @@
   "471257",
   "471262",
   "471260",
-  "471261"
+  "471261",
+  "471266",
+  "471265",
+  "471264",
+  "471263"
  ],
  "pending": [
   {
@@ -612,6 +612,28 @@
    "actual": "0.3",
    "forecast": "-%",
    "previous": "-2.30"
+  },
+  {
+   "id": "471264",
+   "at": "2026-11-17T17:04:43+07:00",
+   "time": "17:04",
+   "text": "Ủy ban châu Âu: dự báo tỷ lệ lạm phát khu vực đồng euro năm 2026 là 3,2%, cao hơn mức 2,1% của năm 2025, dự báo năm 2027 sẽ giảm xuống 3,1%, năm 2028 giảm xuống 2,1%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "471263",
+   "at": "2026-11-17T17:04:27+07:00",
+   "time": "17:04",
+   "text": "Ủy ban châu Âu: dự báo GDP khu vực đồng euro năm 2026 tăng 1,2%, ngang bằng năm 2025; năm 2027 dự báo tăng 1,2%, năm 2028 dự báo tăng 1,3%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
   }
  ],
  "posts": {
