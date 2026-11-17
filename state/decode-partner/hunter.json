@@ -1,7 +1,5 @@
 {
  "seen": [
-  "470774",
-  "470775",
   "470776",
   "470777",
   "470778",
@@ -599,9 +597,23 @@
   "471366",
   "471368",
   "471373",
-  "471372"
+  "471372",
+  "471375",
+  "471374"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471375",
+   "at": "2026-11-17T20:35:23+07:00",
+   "time": "20:35",
+   "text": "Thống đốc Cục Dự trữ Liên bang Lisa Cook từ chối tham dự phiên điều trần của Nhà Trắng vào ngày 14 tháng 12.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
