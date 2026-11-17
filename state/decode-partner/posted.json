@@ -1,12 +1,4 @@
 {
- "2026-10-10 cwg_wk_top5 14:15": {
-  "job": "cwg_wk_top5",
-  "link": "https://www.facebook.com/122099784345498398/posts/122106638007498398",
-  "post_id": "1379542878568858_122106638007498398",
-  "posted_at": "2026-10-10T14:15:07.823109+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-10 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/1375131807840705/",
@@ -2195,5 +2187,13 @@
     "Dầu Brent giảm mạnh 4,00% trong ngày, hiện ở mức 92,47 USD/thùng; dầu WTI giảm 3,9% trong ngày, hiện ở mức 85,6 USD/thùn"
    ]
   }
+ },
+ "2026-11-17 cwg_morning 07:45": {
+  "job": "cwg_morning",
+  "link": "https://www.facebook.com/122099784345498398/posts/122123901387498398",
+  "post_id": "1379542878568858_122123901387498398",
+  "posted_at": "2026-11-17T07:45:04.670313+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
