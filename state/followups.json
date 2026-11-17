@@ -1656,5 +1656,15 @@
  "2026-11-17 knowledge 12:00|examples": {
   "at": "2026-11-17T12:27:48.791772+07:00",
   "count": 3
+ },
+ "2026-11-17 morning 07:30|news|2026-11-17T20:30:00+07:00|USD": {
+  "at": "2026-11-17T21:00:48.448686+07:00",
+  "impact": "TĂNG",
+  "sources": [
+   "https://www.actionforex.com/live-comments/661220-us-retail-sales-slow-to-0-2-but-ex-auto-spending-shows-resilience/",
+   "https://en.bloomingbit.io/feed/news/124635",
+   "https://www.forexfactory.com/news/1437149-us-retail-sales-up-02-in-october",
+   "https://www.viewstorys.com/2026/11/october-retail-sales-november-2026-what.html"
+  ]
  }
 }
