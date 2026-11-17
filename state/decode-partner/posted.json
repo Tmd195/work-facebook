@@ -1,12 +1,4 @@
 {
- "2026-10-11 cwg_wk_macro 15:15": {
-  "job": "cwg_wk_macro",
-  "link": "https://www.facebook.com/122099784345498398/posts/122107758171498398",
-  "post_id": "1379542878568858_122107758171498398",
-  "posted_at": "2026-10-11T15:15:07.083624+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-11 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/2021086311942399/",
@@ -2166,6 +2158,20 @@
   "meta": {
    "news": [
     "Lực lượng Vệ binh Cách mạng Iran cho biết máy bay không người lái của lực lượng này đã tấn công hệ thống radar của quân "
+   ]
+  }
+ },
+ "2026-11-17 cwg_breaking 19:34": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124024213498398",
+  "post_id": "1379542878568858_122124024213498398",
+  "posted_at": "2026-11-17T19:35:25.475249+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Ngày 17 tháng 11, Chủ tịch Fed St. Louis của Mỹ Musalem cho biết hôm thứ Ba rằng Fed có thể cần tăng lãi suất nhiều lần ",
+    "Cục Dự trữ Liên bang Mỹ (Fed) - ông Musalem: Lãi suất chính sách thực tế cần tăng khoảng 1 điểm phần trăm.",
+    "Cục Dự trữ Liên bang Mỹ (Fed) - ông Musalem: Có thể cần \"vài lần\" tăng lãi suất trước mùa xuân."
    ]
   }
  },
