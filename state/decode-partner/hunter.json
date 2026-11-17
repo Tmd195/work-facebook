@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470627",
   "470631",
   "470632",
   "470633",
@@ -599,21 +598,10 @@
   "471224",
   "471225",
   "471228",
-  "471229"
+  "471229",
+  "471230"
  ],
- "pending": [
-  {
-   "id": "471229",
-   "at": "2026-11-17T14:10:21+07:00",
-   "time": "14:10",
-   "text": "Lực lượng Vệ binh Cách mạng Iran cho biết máy bay không người lái của lực lượng này đã tấn công hệ thống radar của quân đội Mỹ tại căn cứ không quân Sheikh Isa ở Bahrain vào sáng sớm thứ Ba.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
@@ -624,8 +612,8 @@
   "2026-11-06": 3,
   "2026-11-13": 3,
   "2026-11-16": 1,
-  "2026-11-17": 1
+  "2026-11-17": 2
  },
- "last_post": "2026-11-17T01:51:53.068249+07:00",
+ "last_post": "2026-11-17T14:16:52.548818+07:00",
  "fail": 0
 }
