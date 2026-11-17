@@ -1,14 +1,4 @@
 {
- "2026-10-06 morning 07:30": {
-  "job": "morning",
-  "link": "https://www.facebook.com/122129058266735108/posts/122129813534735108",
-  "post_id": "1121396124381014_122129813534735108",
-  "posted_at": "2026-10-06T07:30:04.862793+07:00",
-  "preview": false,
-  "meta": {
-   "events": []
-  }
- },
  "2026-10-06 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122129828408735108",
@@ -4904,6 +4894,17 @@
    ],
    "price": 3872.37,
    "title": "Ưu tiên SELL tại 3,899–3,901 theo xu hướng giảm, chờ Warsh"
+  }
+ },
+ "2026-11-17 knowledge 12:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136519824735108",
+  "post_id": "1121396124381014_122136519824735108",
+  "posted_at": "2026-11-17T12:00:13.829585+07:00",
+  "preview": false,
+  "meta": {
+   "series": "tam-ly-giao-dich",
+   "part": 4
   }
  },
  "2026-11-17 morning 07:30": {
