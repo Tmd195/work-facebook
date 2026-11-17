@@ -601,19 +601,7 @@
   "471178",
   "471177"
  ],
- "pending": [
-  {
-   "id": "471177",
-   "at": "2026-11-17T08:44:27+07:00",
-   "time": "08:44",
-   "text": "Vàng giao ngay tăng vọt hơn 20 USD trong ngắn hạn, vượt mốc 3.870 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-29": 2,
   "2026-10-30": 2,
