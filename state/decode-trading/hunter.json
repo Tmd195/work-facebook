@@ -1,7 +1,5 @@
 {
  "seen": [
-  "470713",
-  "470714",
   "470715",
   "470717",
   "470716",
@@ -599,9 +597,23 @@
   "471309",
   "471312",
   "471311",
-  "471310"
+  "471310",
+  "471314",
+  "471313"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471314",
+   "at": "2026-11-17T18:44:26+07:00",
+   "time": "18:44",
+   "text": "Bộ Chỉ huy Trung tâm Hoa Kỳ: Lực lượng Vệ binh Cách mạng Hồi giáo Iran tuyên bố rằng máy bay không người lái của họ đã tấn công hệ thống radar quân sự của Hoa Kỳ tại một căn cứ ở Bahrain vào sáng sớm hôm nay. Tuyên bố này là sai sự thật. Sự thật là hôm nay Lực lượng Vệ binh Cách mạng Hồi giáo Iran đã phóng nhiều máy bay không người lái tấn công một chiều về phía Bahrain, nhưng chúng đã bị đánh chặn, không gây ra bất kỳ thiệt hại nào đối với thiết bị của Hoa Kỳ và cũng không gây thương vong cho nhân viên Hoa Kỳ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
