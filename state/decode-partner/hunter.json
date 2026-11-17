@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470682",
   "470687",
   "470686",
   "470685",
@@ -599,21 +598,10 @@
   "471277",
   "471279",
   "471281",
-  "471280"
+  "471280",
+  "471282"
  ],
- "pending": [
-  {
-   "id": "471279",
-   "at": "2026-11-17T17:49:50+07:00",
-   "time": "17:49",
-   "text": "Tổng thống Mỹ Trump: (về Iran) Chúng tôi rất coi trọng điều này; đó là lý do tại sao họ không thể sở hữu vũ khí hạt nhân.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
