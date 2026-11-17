@@ -1,7 +1,5 @@
 {
  "seen": [
-  "470781",
-  "470782",
   "470783",
   "470784",
   "470785",
@@ -599,9 +597,23 @@
   "471378",
   "471377",
   "471379",
-  "471380"
+  "471380",
+  "471382",
+  "471381"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471381",
+   "at": "2026-11-17T20:47:14+07:00",
+   "time": "20:47",
+   "text": "Theo truyền thông nhà nước Iran: Hải quân Iran cho biết tàu chở dầu thứ ba đã bốc cháy sau khi trúng mìn ở phía đông eo biển Hormuz.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
