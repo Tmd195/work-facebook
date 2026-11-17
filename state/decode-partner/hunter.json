@@ -601,30 +601,7 @@
   "471520",
   "471519"
  ],
- "pending": [
-  {
-   "id": "471520",
-   "at": "2026-11-18T04:20:06+07:00",
-   "time": "04:20",
-   "text": "[Lưu ý] Sau 10 phút nữa API - Tồn kho dầu thô Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "471519",
-   "at": "2026-11-18T04:20:00+07:00",
-   "time": "04:20",
-   "text": "Dữ liệu tồn kho dầu thô API của Mỹ cho tuần kết thúc ngày 13 tháng 11 sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
