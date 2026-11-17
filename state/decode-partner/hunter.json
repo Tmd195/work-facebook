@@ -1,6 +1,5 @@
 {
  "seen": [
-  "470653",
   "470652",
   "470651",
   "470660",
@@ -599,21 +598,10 @@
   "471250",
   "471249",
   "471248",
-  "471251"
+  "471251",
+  "471252"
  ],
- "pending": [
-  {
-   "id": "471248",
-   "at": "2026-11-17T16:30:22+07:00",
-   "time": "16:30",
-   "text": "Tổng thống Ukraine Zelensky: Quân đội Ukraine đã tấn công cầu Crimea.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
