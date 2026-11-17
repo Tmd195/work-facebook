@@ -601,19 +601,7 @@
   "471422",
   "471421"
  ],
- "pending": [
-  {
-   "id": "471419",
-   "at": "2026-11-17T21:45:44+07:00",
-   "time": "21:45",
-   "text": "Anthropic được cho là đã nhận được nhiều đơn đặt hàng IPO với quy mô từ 10 tỷ USD trở lên.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
