@@ -601,19 +601,7 @@
   "471959",
   "471960"
  ],
- "pending": [
-  {
-   "id": "471960",
-   "at": "2026-11-19T03:40:16+07:00",
-   "time": "03:40",
-   "text": "Thông tin thị trường: Anthropic đang cân nhắc định giá phát hành IPO ở mức tối đa 85 USD mỗi cổ phiếu.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
