@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471144",
   "471146",
   "471152",
   "471151",
@@ -599,9 +598,22 @@
   "471741",
   "471742",
   "471743",
-  "471744"
+  "471744",
+  "471745"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471745",
+   "at": "2026-11-18T18:28:31+07:00",
+   "time": "18:28",
+   "text": "Thông tin thị trường: Thống đốc Ngân hàng Trung ương Nhật Bản Ueda Kazuo dự kiến tham dự phiên họp Quốc hội vào lúc 10 giờ sáng ngày 19 tháng 11.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
