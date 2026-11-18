@@ -601,19 +601,7 @@
   "471853",
   "471852"
  ],
- "pending": [
-  {
-   "id": "471851",
-   "at": "2026-11-18T22:08:47+07:00",
-   "time": "22:08",
-   "text": "Theo Interfax: Không có kế hoạch tổ chức cuộc hội đàm toàn diện giữa Tổng thống Nga Putin và Tổng thống Mỹ Trump vào ngày 19 tháng 11.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-31": 1,
   "2026-11-02": 2,
