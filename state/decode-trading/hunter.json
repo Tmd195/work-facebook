@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471155",
   "471156",
   "471157",
   "471158",
@@ -599,21 +598,10 @@
   "471753",
   "471752",
   "471751",
-  "471750"
+  "471750",
+  "471755"
  ],
- "pending": [
-  {
-   "id": "471752",
-   "at": "2026-11-18T19:01:57+07:00",
-   "time": "19:01",
-   "text": "Phó Chủ tịch Ngân hàng Trung ương châu Âu Vujčić: Theo tình hình hiện tại, khả năng tăng lãi suất vào tháng 12 là rất lớn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
