@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471110",
   "471109",
   "471115",
   "471114",
@@ -599,7 +598,8 @@
   "471708",
   "471709",
   "471711",
-  "471710"
+  "471710",
+  "471712"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-18T16:50:03+07:00",
    "time": "16:50",
    "text": "[Lưu ý] Sau 10 phút nữa CPI (y/y)  Eurozone,CPI (m/m) Eurozone sẽ được công bố.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "471712",
+   "at": "2026-11-18T16:50:00+07:00",
+   "time": "16:50",
+   "text": "Tỷ lệ lạm phát CPI cuối cùng của khu vực đồng euro cho tháng 10, theo năm và theo tháng, sẽ được công bố sau mười phút nữa.",
    "important": true,
    "star": 0,
    "actual": "null",
