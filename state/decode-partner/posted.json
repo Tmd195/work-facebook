@@ -1,16 +1,4 @@
 {
- "2026-10-11 reel_story 18:00": {
-  "job": "reel_story",
-  "link": "https://www.facebook.com/reel/3420430648130003/",
-  "post_id": "3420430648130003",
-  "posted_at": "2026-10-11T18:01:01.960139+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Vì sao minh bạch rủi ro lại giúp đại lý giữ khách lâu hơn",
-   "title": "SỰ THẬT KHÓ NÓI GIỮ KHÁCH Ở LẠI",
-   "duration": 53.9
-  }
- },
  "2026-10-12 cwg_breaking 20:57": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122109103737498398",
@@ -2198,5 +2186,13 @@
    "rr": 4.9,
    "duration": 9.9
   }
+ },
+ "2026-11-18 cwg_morning 07:45": {
+  "job": "cwg_morning",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124184665498398",
+  "post_id": "1379542878568858_122124184665498398",
+  "posted_at": "2026-11-18T07:45:02.826233+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
