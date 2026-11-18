@@ -1,10 +1,11 @@
 {
- "done": 5,
+ "done": 6,
  "titles": [
   "1 giá vàng là bao nhiêu tiền?",
   "Đòn bẩy & Margin",
   "Spread & phí qua đêm",
   "Lệnh thị trường & lệnh chờ",
-  "Stop Loss đặt ở đâu?"
+  "Stop Loss đặt ở đâu?",
+  "Take Profit & tỉ lệ RR"
  ]
 }

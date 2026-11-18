@@ -1,50 +1,4 @@
 {
- "2026-10-07 strategy_us 18:30": {
-  "job": "strategy_us",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130071534735108",
-  "post_id": "1121396124381014_122130071534735108",
-  "posted_at": "2026-10-07T18:35:22.914639+07:00",
-  "preview": false,
-  "meta": {
-   "session": "us",
-   "scenarios": [
-    {
-     "side": "SELL",
-     "role": "chính",
-     "entry": [
-      4135.87,
-      4146.53
-     ],
-     "sl": 4166.72,
-     "tp": [
-      4114.89,
-      4100,
-      4078.59
-     ],
-     "trigger": "Giá hồi về mây H1/Fibo 0.618 rồi có nến H1 từ chối (râu trên dài hoặc nhấn chìm giảm)",
-     "invalidation": "Nến H1 đóng trên 4156.83, phá vùng hợp lưu 13 yếu tố"
-    },
-    {
-     "side": "BUY",
-     "role": "phụ",
-     "entry": [
-      4107.79,
-      4114.89
-     ],
-     "sl": 4098.97,
-     "tp": [
-      4123.48,
-      4135.87,
-      4145.86
-     ],
-     "trigger": "Giá quét dưới 4107.79 rồi nến H1 đóng trở lại trên 4114.89, đáy H4 được giữ",
-     "invalidation": "Nến H1 đóng dưới 4100, mất mốc số tròn"
-    }
-   ],
-   "price": 4118.87,
-   "title": "Vàng thủng đáy phiên Á, ưu tiên bán khi hồi về 4135.87-4146.53 trước biên bản FOMC"
-  }
- },
  "2026-10-08 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122130232112735108",
@@ -4965,6 +4919,20 @@
      "previous": ""
     }
    ]
+  }
+ },
+ "2026-11-18 reel_edu 12:30": {
+  "job": "reel_edu",
+  "link": "https://www.facebook.com/reel/1864008461687597/",
+  "post_id": "1864008461687597",
+  "posted_at": "2026-11-18T12:30:39.158025+07:00",
+  "preview": false,
+  "meta": {
+   "episode": 6,
+   "topic": "Tập 06: Take Profit & tỉ lệ RR",
+   "title": "Take Profit & tỉ lệ RR",
+   "duration": 51.2,
+   "music": "take-this-higher.mp3"
   }
  },
  "2026-11-18 strategy_ae 10:00": {
