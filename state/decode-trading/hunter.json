@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471312",
   "471311",
   "471310",
   "471314",
@@ -599,21 +598,10 @@
   "471904",
   "471908",
   "471907",
-  "471909"
+  "471909",
+  "471910"
  ],
- "pending": [
-  {
-   "id": "471909",
-   "at": "2026-11-19T00:53:44+07:00",
-   "time": "00:53",
-   "text": "Tin ngày 19 tháng 11, vàng giao ngay mở rộng đà giảm trong ngày xuống 3%, hiện báo 3.730 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-31": 1,
   "2026-11-02": 2,
