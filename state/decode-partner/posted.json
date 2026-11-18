@@ -1,19 +1,4 @@
 {
- "2026-10-12 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "https://www.facebook.com/reel/1587638402487363/",
-  "post_id": "1587638402487363",
-  "posted_at": "2026-10-12T19:45:23.243543+07:00",
-  "preview": false,
-  "meta": {
-   "key": "EURUSD|1.11932",
-   "symbol": "EURUSD",
-   "system": "double",
-   "side": "buy",
-   "rr": 4.1,
-   "duration": 10.3
-  }
- },
  "2026-10-13 cwg_breaking 19:47": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122110178247498398",
@@ -2160,6 +2145,21 @@
   "meta": {
    "news": [
     "Vàng giao ngay giảm 2,00% trong ngày, hiện ở mức 3.772,18 USD/ounce."
+   ]
+  }
+ },
+ "2026-11-18 cwg_breaking 19:43": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124336195498398",
+  "post_id": "1379542878568858_122124336195498398",
+  "posted_at": "2026-11-18T19:43:53.191454+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Thống đốc Fed Waller: Rất lo ngại rằng lạm phát đang đi sai hướng và ngày càng lan rộng, nếu Fed muốn giảm lạm phát thì ",
+    "Thống đốc Fed Waller: Fed cần tích cực hơn trong việc tăng lãi suất.",
+    "Thống đốc Fed Waller: Fed sẽ cần sử dụng các biện pháp khác để phát tín hiệu về cách ứng phó quyết liệt hơn với lạm phát",
+    "Thống đốc Fed Waller: Nếu không phát tín hiệu tăng lãi suất vào tháng 1, nên tăng lãi suất 50 điểm cơ bản vào tháng 12."
    ]
   }
  },
