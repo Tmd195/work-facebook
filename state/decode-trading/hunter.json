@@ -1,8 +1,5 @@
 {
  "seen": [
-  "471094",
-  "471102",
-  "471101",
   "471100",
   "471099",
   "471104",
@@ -599,32 +596,12 @@
   "471693",
   "471697",
   "471696",
-  "471695"
+  "471695",
+  "471700",
+  "471699",
+  "471698"
  ],
- "pending": [
-  {
-   "id": "471693",
-   "at": "2026-11-18T16:03:01+07:00",
-   "time": "16:03",
-   "text": "UBS triển vọng năm 2027: dự báo giá vàng sẽ đạt 5.000 USD/ounce vào cuối năm 2027.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "471696",
-   "at": "2026-11-18T16:05:46+07:00",
-   "time": "16:05",
-   "text": "Tập Cận Bình đón Tổng thống Hoa Kỳ Donald Trump.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
