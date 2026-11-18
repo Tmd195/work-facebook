@@ -601,19 +601,7 @@
   "471705",
   "471707"
  ],
- "pending": [
-  {
-   "id": "471706",
-   "at": "2026-11-18T16:27:52+07:00",
-   "time": "16:27",
-   "text": "Điện Kremlin: Tổng thống Nga Putin và Tổng thống Mỹ Trump sẽ có cuộc đối thoại.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
