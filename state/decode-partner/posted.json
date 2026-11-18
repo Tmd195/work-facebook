@@ -1,16 +1,4 @@
 {
- "2026-10-12 cwg_breaking 20:57": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122109103737498398",
-  "post_id": "1379542878568858_122109103737498398",
-  "posted_at": "2026-10-12T20:58:07.035810+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Lực lượng Vệ binh Cách mạng Iran: Sáng thứ Hai, một siêu tàu chở dầu đã bị tấn công tại eo biển Hormuz."
-   ]
-  }
- },
  "2026-10-12 cwg_macro 10:15": {
   "job": "cwg_macro",
   "link": "https://www.facebook.com/122099784345498398/posts/122108636337498398",
@@ -2192,6 +2180,14 @@
   "link": "https://www.facebook.com/122099784345498398/posts/122124184665498398",
   "post_id": "1379542878568858_122124184665498398",
   "posted_at": "2026-11-18T07:45:02.826233+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-18 cwg_trend 08:45": {
+  "job": "cwg_trend",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124197163498398",
+  "post_id": "1379542878568858_122124197163498398",
+  "posted_at": "2026-11-18T08:45:02.937363+07:00",
   "preview": false,
   "meta": {}
  }
