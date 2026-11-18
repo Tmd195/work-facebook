@@ -1,12 +1,4 @@
 {
- "2026-10-12 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122108573919498398",
-  "post_id": "1379542878568858_122108573919498398",
-  "posted_at": "2026-10-12T08:45:04.285439+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-12 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/1587638402487363/",
@@ -2194,5 +2186,17 @@
   "posted_at": "2026-11-18T08:45:02.937363+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-18 reel_story 18:00": {
+  "job": "reel_story",
+  "link": "https://www.facebook.com/reel/1603563144414638/",
+  "post_id": "1603563144414638",
+  "posted_at": "2026-11-18T18:00:49.398353+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Đại lý mới: 90 ngày đầu nên làm gì để không bỏ cuộc",
+   "title": "90 NGÀY ĐẦU VÀ LÝ DO ANH SUÝT BỎ CUỘC",
+   "duration": 50.2
+  }
  }
 }
