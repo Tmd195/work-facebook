@@ -1716,5 +1716,15 @@
  "2026-11-18 knowledge 12:00|examples": {
   "at": "2026-11-18T12:27:37.973772+07:00",
   "count": 3
+ },
+ "2026-11-18 morning 07:30|news|2026-11-18T14:00:00+07:00|GBP": {
+  "at": "2026-11-18T14:06:06.247389+07:00",
+  "impact": "TRUNG LẬP",
+  "sources": [
+   "https://tradingeconomics.com/united-kingdom/inflation-cpi",
+   "https://moneyweek.com/economy/news/live/inflation-cpi-october-2026-report",
+   "https://www.forexfactory.com/calendar/82-uk-cpi-yy",
+   "https://www.investing.com/economic-calendar/united-kingdom-consumer-price-index-(cpi)-yoy-67"
+  ]
  }
 }
