@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471391",
   "471390",
   "471395",
   "471394",
@@ -599,9 +598,22 @@
   "471987",
   "471986",
   "471988",
-  "471989"
+  "471989",
+  "471990"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471990",
+   "at": "2026-11-19T06:18:00+07:00",
+   "time": "06:18",
+   "text": "Theo New York Times: Theo các quan chức Mỹ và Israel tham gia các cuộc thảo luận liên quan tiết lộ, Trump đang cân nhắc kế hoạch phát động một đợt tấn công quân sự quy mô lớn mới nhằm vào Iran, nhưng hiện vẫn chưa đưa ra quyết định.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
