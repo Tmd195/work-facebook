@@ -1,18 +1,4 @@
 {
- "2026-10-07 reel 19:15": {
-  "job": "reel",
-  "link": "https://www.facebook.com/reel/1081758901287093/",
-  "post_id": "1081758901287093",
-  "posted_at": "2026-10-07T19:16:04.307623+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Hệ thống đa khung thời gian cho XAUUSD: dùng H4 xác định xu hướng, xuống M15 tìm điểm vào theo vùng hỗ trợ và nến xác nhận, checklist 3 bước trước lệnh và kỷ luật backtest 100 lệnh cùng nhật ký giao dịch",
-   "pillar": "setup",
-   "system": null,
-   "duration": 43.8,
-   "music": "digital-clouds.mp3"
-  }
- },
  "2026-10-07 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122130004094735108",
@@ -5014,6 +5000,52 @@
      "previous": ""
     }
    ]
+  }
+ },
+ "2026-11-18 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136662642735108",
+  "post_id": "1121396124381014_122136662642735108",
+  "posted_at": "2026-11-18T10:00:10.716485+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3833.62,
+      3868.62
+     ],
+     "sl": 3891.96,
+     "tp": [
+      3791.95,
+      3751.67,
+      3701.67
+     ],
+     "trigger": "Giá hồi lên 3834-3869, xuất hiện nến đảo chiều giảm H1, RSI chưa vượt 50, Kijun giữ kháng cự.",
+     "invalidation": "H1 đóng cửa trên 3892 (vượt đỉnh ngày trước), phá cụm kháng cự hợp lưu."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3788.61,
+      3791.95
+     ],
+     "sl": 3748.33,
+     "tp": [
+      3823.6,
+      3833.62,
+      3850.0
+     ],
+     "trigger": "Giá giữ vùng 3789-3792 (không đóng H1 dưới 3788), nến bật tăng kèm phân kỳ RSI.",
+     "invalidation": "H1 đóng cửa dưới 3788, mở đường về 3750/3700."
+    }
+   ],
+   "price": 3808.8,
+   "title": "XAUUSD phiên Á-Âu: ưu tiên bán nhịp hồi, vàng sát đáy 1 năm"
   }
  }
 }
