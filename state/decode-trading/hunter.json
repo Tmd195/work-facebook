@@ -601,19 +601,7 @@
   "471685",
   "471684"
  ],
- "pending": [
-  {
-   "id": "471680",
-   "at": "2026-11-18T15:44:32+07:00",
-   "time": "15:44",
-   "text": "Dầu thô WTI giảm 2,00 USD trong ngày, hiện ở mức 83,73 USD/thùng, giảm 2,33%; dầu thô Brent giảm xuống chạm 91 USD/thùng, trong ngày giảm 2,18%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 2,
   "2026-10-31": 1,
