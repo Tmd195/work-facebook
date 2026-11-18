@@ -1845,6 +1845,21 @@
   "preview": false,
   "meta": {}
  },
+ "2026-11-18 reel_smc 12:00": {
+  "job": "reel_smc",
+  "link": "https://www.facebook.com/reel/1682563426790935/",
+  "post_id": "1682563426790935",
+  "posted_at": "2026-11-18T12:00:41.182905+07:00",
+  "preview": false,
+  "meta": {
+   "key": "supply|EURUSD|2026-11-17T06:00:00+00:00",
+   "system": "supply",
+   "symbol": "EURUSD",
+   "side": "sell",
+   "rr": 5.3,
+   "duration": 44.2
+  }
+ },
  "2026-11-18 td_bulletin 06:00": {
   "job": "td_bulletin",
   "link": "https://www.facebook.com/122103151269499355/posts/122129092971499355",
