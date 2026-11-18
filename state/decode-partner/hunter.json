@@ -1,9 +1,5 @@
 {
  "seen": [
-  "470956",
-  "470955",
-  "470954",
-  "470953",
   "470952",
   "470951",
   "470957",
@@ -599,21 +595,13 @@
   "471549",
   "471548",
   "471547",
-  "471550"
+  "471550",
+  "471554",
+  "471553",
+  "471552",
+  "471551"
  ],
- "pending": [
-  {
-   "id": "471548",
-   "at": "2026-11-18T08:08:06+07:00",
-   "time": "08:08",
-   "text": "Thống đốc Ngân hàng Trung ương Nhật Bản Ueda Kazuo: Sẽ tiếp tục tăng lãi suất chính sách dựa trên diễn biến kinh tế, giá cả và tình hình tài chính.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-30": 3,
   "2026-10-31": 1,
