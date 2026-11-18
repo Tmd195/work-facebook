@@ -1,12 +1,4 @@
 {
- "2026-10-13 cwg_morning 07:45": {
-  "job": "cwg_morning",
-  "link": "https://www.facebook.com/122099784345498398/posts/122109660873498398",
-  "post_id": "1379542878568858_122109660873498398",
-  "posted_at": "2026-10-13T07:45:03.745469+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-13 cwg_trend 08:45": {
   "job": "cwg_trend",
   "link": "https://www.facebook.com/122099784345498398/posts/122109704577498398",
@@ -2204,6 +2196,19 @@
    "topic": "Đại lý mới: 90 ngày đầu nên làm gì để không bỏ cuộc",
    "title": "90 NGÀY ĐẦU VÀ LÝ DO ANH SUÝT BỎ CUỘC",
    "duration": 50.2
+  }
+ },
+ "2026-11-19 cwg_breaking 02:08": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124399357498398",
+  "post_id": "1379542878568858_122124399357498398",
+  "posted_at": "2026-11-19T02:08:42.782542+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Biên bản cuộc họp Fed: Gần như tất cả những người tham gia đều cho rằng việc tăng lãi suất thêm nữa về tổng thể phù hợp ",
+    "Ngày 19/11, theo tin đưa, biên bản cuộc họp tháng 10 của Cục Dự trữ Liên bang cho thấy, mặc dù lúc đó đã đồng ý tạm thời"
+   ]
   }
  }
 }
