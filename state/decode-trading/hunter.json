@@ -601,19 +601,7 @@
   "471941",
   "471942"
  ],
- "pending": [
-  {
-   "id": "471942",
-   "at": "2026-11-19T02:07:56+07:00",
-   "time": "02:07",
-   "text": "Ngày 19/11, theo tin đưa, biên bản cuộc họp tháng 10 của Cục Dự trữ Liên bang cho thấy, mặc dù lúc đó đã đồng ý tạm thời giữ nguyên lãi suất, các quan chức ngày càng lo ngại rằng có thể cần tăng cường nỗ lực kiềm chế lạm phát. Biên bản cuộc họp cho biết, \"gần như tất cả\" các nhà hoạch định chính sách đều cho rằng, nếu kinh tế diễn biến đúng như dự kiến, Fed vẫn cần tiếp tục tăng lãi suất. Một số ít quan chức cho rằng, lạm phát có thể tỏ ra dai dẳng hơn, buộc Fed phải áp dụng \"lập trường chính sách thắt chặt hơn\" so với kỳ vọng hiện tại. Trong đó \"một số ít\" quan chức còn đề xuất thêm rằng, nếu dữ liệu lạm phát tiếp theo diễn biến không tốt, Fed có thể sẽ buộc phải tăng lãi suất 50 điểm cơ bản. Dữ liệu lạm phát công bố gần đây đã đạt đến điều kiện kích hoạt này, cho thấy mức tăng giá cao hơn dự kiến. Trong số các quan chức ủng hộ việc giữ nguyên lãi suất chính sách trong khoảng 3,75% đến 4,00% vào tháng 10, \"một số ít... cho biết họ cho rằng quyết định này là một quyết định khó khăn\", và cũng chủ trương Fed nên nói rõ rằng việc giữ nguyên khoảng mục tiêu lãi suất \"không có nghĩa là\" Fed đã làm suy yếu quyết tâm đạt được mục tiêu lạm phát 2%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
