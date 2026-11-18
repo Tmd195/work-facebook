@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471359",
   "471364",
   "471363",
   "471365",
@@ -599,9 +598,22 @@
   "471957",
   "471959",
   "471960",
-  "471961"
+  "471961",
+  "471962"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471962",
+   "at": "2026-11-19T04:05:00+07:00",
+   "time": "04:05",
+   "text": "Ủy viên bỏ phiếu FOMC năm 2026, Chủ tịch Fed Minneapolis Kashkari sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
