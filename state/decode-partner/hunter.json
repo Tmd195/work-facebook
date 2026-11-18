@@ -1,9 +1,5 @@
 {
  "seen": [
-  "471164",
-  "471170",
-  "471171",
-  "471172",
   "471173",
   "471174",
   "471175",
@@ -599,7 +595,11 @@
   "471766",
   "471765",
   "471768",
-  "471767"
+  "471767",
+  "471772",
+  "471771",
+  "471770",
+  "471769"
  ],
  "pending": [
   {
@@ -607,6 +607,28 @@
    "at": "2026-11-18T19:38:03+07:00",
    "time": "19:38",
    "text": "Thống đốc Fed Waller: Rất lo ngại rằng lạm phát đang đi sai hướng và ngày càng lan rộng, nếu Fed muốn giảm lạm phát thì cần áp dụng các biện pháp mạnh mẽ hơn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "471772",
+   "at": "2026-11-18T19:40:33+07:00",
+   "time": "19:40",
+   "text": "Thống đốc Fed Waller: Fed cần tích cực hơn trong việc tăng lãi suất.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "471771",
+   "at": "2026-11-18T19:40:10+07:00",
+   "time": "19:40",
+   "text": "Giá bạc giao ngay giảm mạnh 4,00% trong ngày, hiện ở mức 45,49 USD/ounce.",
    "important": true,
    "star": 0,
    "actual": "null",
