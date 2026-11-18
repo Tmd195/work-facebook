@@ -1,8 +1,5 @@
 {
  "seen": [
-  "471031",
-  "471035",
-  "471034",
   "471037",
   "471036",
   "471039",
@@ -599,7 +596,10 @@
   "471625",
   "471624",
   "471632",
-  "471631"
+  "471631",
+  "471635",
+  "471634",
+  "471633"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-18T14:04:16+07:00",
    "time": "14:04",
    "text": "Vàng giao ngay giảm 2,00% trong ngày, hiện ở mức 3.772,18 USD/ounce.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "471634",
+   "at": "2026-11-18T14:05:55+07:00",
+   "time": "14:05",
+   "text": "Các nhà giao dịch giảm đặt cược vào việc Ngân hàng Trung ương Anh tăng lãi suất, dự kiến đến cuối năm 2027, lãi suất sẽ đạt 91 điểm cơ bản.",
    "important": true,
    "star": 0,
    "actual": "null",
