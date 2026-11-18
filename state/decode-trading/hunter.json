@@ -1,7 +1,5 @@
 {
  "seen": [
-  "471234",
-  "471236",
   "471237",
   "471238",
   "471239",
@@ -599,9 +597,23 @@
   "471831",
   "471834",
   "471833",
-  "471832"
+  "471832",
+  "471836",
+  "471835"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471835",
+   "at": "2026-11-18T21:56:42+07:00",
+   "time": "21:56",
+   "text": "Theo Reuters: Các nguồn tin trong ngành cho biết, kể từ cuối tháng 10, do các cuộc tấn công bằng máy bay không người lái của Ukraine, sản lượng lọc dầu của Nga đã giảm 45%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-31": 1,
   "2026-11-02": 2,
