@@ -1,7 +1,5 @@
 {
  "seen": [
-  "471166",
-  "471165",
   "471164",
   "471170",
   "471171",
@@ -599,9 +597,23 @@
   "471763",
   "471764",
   "471766",
-  "471765"
+  "471765",
+  "471768",
+  "471767"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471767",
+   "at": "2026-11-18T19:38:03+07:00",
+   "time": "19:38",
+   "text": "Thống đốc Fed Waller: Rất lo ngại rằng lạm phát đang đi sai hướng và ngày càng lan rộng, nếu Fed muốn giảm lạm phát thì cần áp dụng các biện pháp mạnh mẽ hơn.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-31": 1,
   "2026-11-02": 3,
