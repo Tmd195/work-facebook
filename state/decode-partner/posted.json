@@ -1,12 +1,4 @@
 {
- "2026-10-12 cwg_morning 07:45": {
-  "job": "cwg_morning",
-  "link": "https://www.facebook.com/122099784345498398/posts/122108534883498398",
-  "post_id": "1379542878568858_122108534883498398",
-  "posted_at": "2026-10-12T07:45:04.575949+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-12 cwg_trend 08:45": {
   "job": "cwg_trend",
   "link": "https://www.facebook.com/122099784345498398/posts/122108573919498398",
@@ -2165,6 +2157,18 @@
    "side": "sell",
    "rr": 4.9,
    "duration": 9.9
+  }
+ },
+ "2026-11-18 cwg_breaking 14:09": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124252879498398",
+  "post_id": "1379542878568858_122124252879498398",
+  "posted_at": "2026-11-18T14:10:06.686306+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Vàng giao ngay giảm 2,00% trong ngày, hiện ở mức 3.772,18 USD/ounce."
+   ]
   }
  },
  "2026-11-18 cwg_macro 10:15": {
