@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471270",
   "471269",
   "471271",
   "471272",
@@ -599,21 +598,10 @@
   "471867",
   "471866",
   "471865",
-  "471868"
+  "471868",
+  "471869"
  ],
- "pending": [
-  {
-   "id": "471865",
-   "at": "2026-11-18T22:35:34+07:00",
-   "time": "22:35",
-   "text": "Theo Interfax: Cuộc gặp giữa Tổng thống Nga Putin và Tổng thống Mỹ Trump được sắp xếp diễn ra sau phiên họp toàn thể APEC, hy vọng cuộc hội đàm giữa Putin và Trump sẽ có tính thực chất.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-10-31": 1,
   "2026-11-02": 2,
