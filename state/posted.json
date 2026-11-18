@@ -1,26 +1,4 @@
 {
- "2026-10-08 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130232112735108",
-  "post_id": "1121396124381014_122130232112735108",
-  "posted_at": "2026-10-08T12:09:58.877056+07:00",
-  "preview": false,
-  "meta": {
-   "series": "price-action-nhap-mon",
-   "part": 15
-  }
- },
- "2026-10-08 knowledge 21:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130296924735108",
-  "post_id": "1121396124381014_122130296924735108",
-  "posted_at": "2026-10-08T21:00:08.277953+07:00",
-  "preview": false,
-  "meta": {
-   "series": "ho-tro-khang-cu-cung-cau",
-   "part": 1
-  }
- },
  "2026-10-08 morning 07:30": {
   "job": "morning",
   "link": "https://www.facebook.com/122129058266735108/posts/122130204074735108",
@@ -4921,6 +4899,20 @@
    ]
   }
  },
+ "2026-11-18 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1669230757896118/",
+  "post_id": "1669230757896118",
+  "posted_at": "2026-11-18T19:15:56.839209+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống One-shot-one-kill ICT cho XAUUSD: thiên hướng tuần, quét thanh khoản, chuyển cấu trúc và một Entry tại OTE 62-79%",
+   "pillar": "he-thong",
+   "system": "one-shot-one-kill",
+   "duration": 62.0,
+   "music": "uplifting-bass.mp3"
+  }
+ },
  "2026-11-18 reel_edu 12:30": {
   "job": "reel_edu",
   "link": "https://www.facebook.com/reel/1864008461687597/",
@@ -4979,6 +4971,52 @@
    ],
    "price": 3808.8,
    "title": "XAUUSD phiên Á-Âu: ưu tiên bán nhịp hồi, vàng sát đáy 1 năm"
+  }
+ },
+ "2026-11-18 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136711944735108",
+  "post_id": "1121396124381014_122136711944735108",
+  "posted_at": "2026-11-18T19:30:09.146760+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3824.68,
+      3843.64
+     ],
+     "sl": 3858.62,
+     "tp": [
+      3803.75,
+      3758.93,
+      3701.54
+     ],
+     "trigger": "Giá hồi lên vùng 3824-3843 (Kijun/EMA50 H1) và có nến từ chối giảm trên H1.",
+     "invalidation": "H1 đóng cửa trên 3858.6, cấu trúc giảm bị phá."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3755.85,
+      3758.93
+     ],
+     "sl": 3748.46,
+     "tp": [
+      3788.13,
+      3803.75,
+      3824.68
+     ],
+     "trigger": "Giá test 3755-3758 giữ được, có nến đảo chiều tăng H1 và RSI thoát quá bán.",
+     "invalidation": "H1 đóng cửa dưới 3748, xác nhận tiếp tục giảm."
+    }
+   ],
+   "price": 3766.92,
+   "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi, chờ biên bản FOMC"
   }
  }
 }
