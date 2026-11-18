@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471255",
   "471256",
   "471257",
   "471260",
@@ -599,9 +598,22 @@
   "471852",
   "471851",
   "471853",
-  "471854"
+  "471854",
+  "471855"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471855",
+   "at": "2026-11-18T22:18:28+07:00",
+   "time": "22:18",
+   "text": "Theo CNBC: Anthropic đang cân nhắc mở rộng quy mô IPO của mình; nhu cầu bán lẻ đối với Anthropic đang tiến gần 100 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-31": 1,
   "2026-11-02": 3,
