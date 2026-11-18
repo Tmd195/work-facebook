@@ -1,11 +1,5 @@
 {
  "seen": [
-  "471177",
-  "471181",
-  "471182",
-  "471183",
-  "471184",
-  "471186",
   "471185",
   "471187",
   "471189",
@@ -599,9 +593,27 @@
   "471776",
   "471775",
   "471774",
-  "471773"
+  "471773",
+  "471785",
+  "471784",
+  "471783",
+  "471782",
+  "471781",
+  "471780"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "471785",
+   "at": "2026-11-18T19:45:55+07:00",
+   "time": "19:45",
+   "text": "Ngày 18 tháng 11, Thống đốc Cục Dự trữ Liên bang Waller cho biết rất lo ngại lạm phát đang đi sai hướng và không ngừng mở rộng, nếu Fed muốn giảm lạm phát thì cần áp dụng các biện pháp mạnh mẽ hơn. Khoảng 70% các hạng mục trong rổ dịch vụ cốt lõi có mức tăng trên 3%, điều này không liên quan đến dầu mỏ. Lo ngại doanh nghiệp cho rằng người tiêu dùng có sức chống chịu, từ đó chuyển giao mức tăng giá 3% hoặc cao hơn. Fed có thể phải thông qua việc \"gây sốc\" thị trường để mọi người không còn cho rằng tỷ lệ lạm phát 3% là mục tiêu có thể chấp nhận được, Fed cần tích cực hơn trong việc tăng lãi suất. Nếu không phát tín hiệu tăng lãi suất vào tháng 1, thì nên tăng lãi suất 50 điểm cơ bản vào tháng 12, tỷ lệ lạm phát theo năm đang phát triển theo hướng 3,5%. Bản tóm tắt dự báo kinh tế sẽ được công bố vào tháng 12 sẽ không hữu ích lắm, vì đó là dữ liệu cuối năm, Fed sẽ cần sử dụng các biện pháp khác để phát tín hiệu về các biện pháp ứng phó quyết liệt hơn với lạm phát.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-10-31": 1,
   "2026-11-02": 2,
