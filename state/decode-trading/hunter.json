@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471365",
   "471367",
   "471366",
   "471368",
@@ -599,7 +598,8 @@
   "471961",
   "471962",
   "471963",
-  "471964"
+  "471964",
+  "471965"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-19T04:15:36+07:00",
    "time": "04:15",
    "text": "Ngày 19 tháng 11, theo dữ liệu của Bộ Tài chính Mỹ, trong tháng 9, ba quốc gia nắm giữ trái phiếu kho bạc Mỹ lớn nhất ở nước ngoài đều đã giảm nắm giữ. Trong tháng 9, lượng trái phiếu kho bạc Mỹ do Trung Quốc nắm giữ giảm xuống còn 563,9 tỷ USD, giảm 26,8 tỷ USD so với tháng 8; lượng trái phiếu kho bạc Mỹ do Nhật Bản nắm giữ giảm xuống còn 1.0631 nghìn tỷ USD, giảm 5,2 tỷ USD; lượng trái phiếu kho bạc Mỹ do Anh nắm giữ giảm xuống còn 994,5 tỷ USD, giảm 8,7 tỷ USD.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "471965",
+   "at": "2026-11-19T04:15:43+07:00",
+   "time": "04:15",
+   "text": "Theo các nguồn tin thân cận, Anthropic đã định giá IPO ở mức 83 USD/cổ phiếu, quy mô đợt phát hành đã được tăng lên.",
    "important": true,
    "star": 0,
    "actual": "null",
