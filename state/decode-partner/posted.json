@@ -1,16 +1,4 @@
 {
- "2026-10-13 cwg_breaking 19:47": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122110178247498398",
-  "post_id": "1379542878568858_122110178247498398",
-  "posted_at": "2026-10-13T19:47:41.422026+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Lực lượng Houthi ở Yemen cảnh báo nhân viên và dân thường sơ tán khỏi các khu vực gần cơ sở dầu khí của Saudi Aramco, gọ"
-   ]
-  }
- },
  "2026-10-13 cwg_macro 10:15": {
   "job": "cwg_macro",
   "link": "https://www.facebook.com/122099784345498398/posts/122109847065498398",
@@ -2186,6 +2174,21 @@
   "posted_at": "2026-11-18T08:45:02.937363+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-18 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1812285893149709/",
+  "post_id": "1812285893149709",
+  "posted_at": "2026-11-18T19:45:24.348718+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURJPY|177.22701",
+   "symbol": "EURJPY",
+   "system": "retest",
+   "side": "sell",
+   "rr": 10.5,
+   "duration": 9.9
+  }
  },
  "2026-11-18 reel_story 18:00": {
   "job": "reel_story",
