@@ -7,7 +7,7 @@
     "ma-ema": 10,
     "rsi-macd-phan-ky": 12,
     "quan-ly-von": 12,
-    "tam-ly-giao-dich": 6
+    "tam-ly-giao-dich": 7
   },
   "history": [
     {
@@ -443,6 +443,11 @@
     {
       "series": "tam-ly-giao-dich",
       "part": 6,
+      "date": "2026-11-18"
+    },
+    {
+      "series": "tam-ly-giao-dich",
+      "part": 7,
       "date": "2026-11-18"
     }
   ]
