@@ -1,12 +1,4 @@
 {
- "2026-10-14 cwg_macro 10:15": {
-  "job": "cwg_macro",
-  "link": "https://www.facebook.com/122099784345498398/posts/122110530555498398",
-  "post_id": "1379542878568858_122110530555498398",
-  "posted_at": "2026-10-14T10:15:08.181040+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-14 cwg_morning 07:45": {
   "job": "cwg_morning",
   "link": "https://www.facebook.com/122099784345498398/posts/122110485519498398",
@@ -2186,6 +2178,19 @@
   "meta": {
    "news": [
     "Ngày 20/11, Chủ tịch Fed Chicago Goolsbee cho biết trong ngày thứ Năm theo giờ địa phương rằng, đối mặt với dữ liệu lạm "
+   ]
+  }
+ },
+ "2026-11-20 cwg_breaking 04:32": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124718563498398",
+  "post_id": "1379542878568858_122124718563498398",
+  "posted_at": "2026-11-20T04:33:24.978568+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Bạc giao ngay giảm hơn 3%, hiện ở mức 43,63 USD/ounce; vàng giao ngay giảm gần 2%, hiện ở mức 3652,4 USD/ounce.",
+    "Bạc giao ngay mở rộng đà giảm lên 4%, hiện báo 43,18 USD/ounce."
    ]
   }
  }
