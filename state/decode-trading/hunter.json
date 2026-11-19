@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471706",
   "471705",
   "471707",
   "471708",
@@ -599,9 +598,22 @@
   "472300",
   "472299",
   "472304",
-  "472303"
+  "472303",
+  "472305"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472305",
+   "at": "2026-11-20T00:20:00+07:00",
+   "time": "00:20",
+   "text": "Chủ tịch Fed Chicago Goolsbee, thành viên có quyền bỏ phiếu tại FOMC năm 2027, sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
