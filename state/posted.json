@@ -1,50 +1,4 @@
 {
- "2026-10-08 strategy_ae 10:00": {
-  "job": "strategy_ae",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130219140735108",
-  "post_id": "1121396124381014_122130219140735108",
-  "posted_at": "2026-10-08T10:00:12.179589+07:00",
-  "preview": false,
-  "meta": {
-   "session": "ae",
-   "scenarios": [
-    {
-     "side": "SELL",
-     "role": "chính",
-     "entry": [
-      4168.9,
-      4183.93
-     ],
-     "sl": 4217.47,
-     "tp": [
-      4129.54,
-      4117.56,
-      4101.5
-     ],
-     "trigger": "Giá hồi lên 4168.9-4183.93 xuất hiện nến từ chối, không giữ được trên mây H4.",
-     "invalidation": "H4 đóng cửa trên 4183.93, lấy lại mây H4."
-    },
-    {
-     "side": "BUY",
-     "role": "phụ",
-     "entry": [
-      4105.45,
-      4117.56
-     ],
-     "sl": 4081.31,
-     "tp": [
-      4129.54,
-      4159.65,
-      4183.93
-     ],
-     "trigger": "Giá lùi về 4105.45-4117.56 và bật lên với cấu trúc tăng rõ trên H1.",
-     "invalidation": "H1 đóng cửa dưới 4098.88."
-    }
-   ],
-   "price": 4140.81,
-   "title": "Vàng hồi về cản hợp lưu, ưu tiên SELL thuận xu hướng giảm D1"
-  }
- },
  "2026-10-08 strategy_us 18:30": {
   "job": "strategy_us",
   "link": "https://www.facebook.com/122129058266735108/posts/122130271244735108",
@@ -5005,6 +4959,52 @@
      "previous": "200K"
     }
    ]
+  }
+ },
+ "2026-11-19 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136797078735108",
+  "post_id": "1121396124381014_122136797078735108",
+  "posted_at": "2026-11-19T10:00:14.875926+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3756.05,
+      3759.47
+     ],
+     "sl": 3776.67,
+     "tp": [
+      3725.09,
+      3719.19,
+      3701.71
+     ],
+     "trigger": "Giá hồi lên 3,756-3,759 (đỉnh Á) xuất hiện nến từ chối/đảo chiều H1",
+     "invalidation": "H1 đóng cửa vững trên 3,776 (Kijun H1)"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3719.19,
+      3725.09
+     ],
+     "sl": 3698.29,
+     "tp": [
+      3751.71,
+      3759.47,
+      3768.82
+     ],
+     "trigger": "Giá về 3,719-3,725 giữ được đáy, có nến đảo chiều tăng H1",
+     "invalidation": "H1 đóng cửa dưới 3,719 (đáy cũ)"
+    }
+   ],
+   "price": 3743.14,
+   "title": "XAUUSD nghiêng giảm, ưu tiên canh bán khi giá hồi dưới 3,760"
   }
  }
 }
