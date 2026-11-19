@@ -1,7 +1,5 @@
 {
  "seen": [
-  "471418",
-  "471417",
   "471416",
   "471420",
   "471419",
@@ -599,21 +597,11 @@
   "472012",
   "472011",
   "472014",
-  "472015"
+  "472015",
+  "472017",
+  "472016"
  ],
- "pending": [
-  {
-   "id": "472014",
-   "at": "2026-11-19T08:00:01+07:00",
-   "time": "08:00",
-   "text": "Phiên giao dịch buổi sáng mở cửa, các hợp đồng tương lai chủ lực trong nước phần lớn giảm, khí dầu mỏ hóa lỏng (LPG), dầu thô SC giảm gần 5%, dầu nhiên liệu, đồng Thượng Hải giảm hơn 4%, đồng quốc tế, polypropylene, ethylene glycol (EG) giảm hơn 3%. Về mức tăng, tuyến vận tải container châu Âu tăng gần 2%, kính tăng hơn 1%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
