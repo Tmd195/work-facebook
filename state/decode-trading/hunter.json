@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471663",
   "471666",
   "471668",
   "471667",
@@ -599,32 +598,10 @@
   "472264",
   "472261",
   "472263",
-  "472260"
+  "472260",
+  "472265"
  ],
- "pending": [
-  {
-   "id": "472264",
-   "at": "2026-11-19T23:00:38+07:00",
-   "time": "23:00",
-   "text": "FED Kansas - Chỉ số sản lượng nghiệp sản xuất Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "23",
-   "forecast": "-",
-   "previous": "16"
-  },
-  {
-   "id": "472263",
-   "at": "2026-11-19T23:00:30+07:00",
-   "time": "23:00",
-   "text": "FED Kansas - Chỉ số tổng hợp nghiệp sản xuất Mỹ",
-   "important": true,
-   "star": 2,
-   "actual": "18",
-   "forecast": "11",
-   "previous": "11"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
