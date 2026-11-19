@@ -1,44 +1,4 @@
 {
- "2026-10-09 knowledge 21:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130477686735108",
-  "post_id": "1121396124381014_122130477686735108",
-  "posted_at": "2026-10-09T21:00:13.034224+07:00",
-  "preview": false,
-  "meta": {
-   "series": "ho-tro-khang-cu-cung-cau",
-   "part": 3
-  }
- },
- "2026-10-09 morning 07:30": {
-  "job": "morning",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130379244735108",
-  "post_id": "1121396124381014_122130379244735108",
-  "posted_at": "2026-10-09T07:30:03.972985+07:00",
-  "preview": false,
-  "meta": {
-   "events": [
-    {
-     "time": "21:00",
-     "datetime": "2026-10-09T21:00:00+07:00",
-     "currency": "USD",
-     "impact": "Medium",
-     "title": "Prelim UoM Consumer Sentiment",
-     "forecast": "47.5",
-     "previous": "47.8"
-    },
-    {
-     "time": "21:00",
-     "datetime": "2026-10-09T21:00:00+07:00",
-     "currency": "USD",
-     "impact": "Medium",
-     "title": "Prelim UoM Inflation Expectations",
-     "forecast": "",
-     "previous": "4.6%"
-    }
-   ]
-  }
- },
  "2026-10-09 reel 19:15": {
   "job": "reel",
   "link": "https://www.facebook.com/reel/1632588361578196/",
@@ -4915,6 +4875,20 @@
    ]
   }
  },
+ "2026-11-19 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1496568742056093/",
+  "post_id": "1496568742056093",
+  "posted_at": "2026-11-19T19:15:24.075567+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Tính khối lượng lot chuẩn theo khoảng cách dừng lỗ và rủi ro cố định 1 phần trăm cho XAUUSD",
+   "pillar": "quan-ly-von",
+   "system": null,
+   "duration": 42.8,
+   "music": "digital-clouds.mp3"
+  }
+ },
  "2026-11-19 reel_edu 12:30": {
   "job": "reel_edu",
   "link": "https://www.facebook.com/reel/1419827926801762/",
@@ -4973,6 +4947,52 @@
    ],
    "price": 3743.14,
    "title": "XAUUSD nghiêng giảm, ưu tiên canh bán khi giá hồi dưới 3,760"
+  }
+ },
+ "2026-11-19 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136846998735108",
+  "post_id": "1121396124381014_122136846998735108",
+  "posted_at": "2026-11-19T19:30:13.113295+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3740.27,
+      3743.52
+     ],
+     "sl": 3770.66,
+     "tp": [
+      3700,
+      3677.44,
+      3651.63
+     ],
+     "trigger": "Giá hồi lên 3740-3743 (Kijun H1, đỉnh phiên Âu) và xuất hiện nến H1 từ chối giảm",
+     "invalidation": "H1 đóng cửa trên 3759 rồi vượt 3770 (Pivot/EMA50 H1)"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3695.08,
+      3700
+     ],
+     "sl": 3674.18,
+     "tp": [
+      3720.86,
+      3740.27,
+      3756.13
+     ],
+     "trigger": "Giá về 3695-3700 (hợp lưu 4) và có nến H1 đảo chiều tăng, không thủng 3695",
+     "invalidation": "H1 đóng cửa dưới 3695 (đáy sóng lớn), xu hướng giảm tiếp diễn"
+    }
+   ],
+   "price": 3719.35,
+   "title": "Vàng dưới áp lực diều hâu Fed, ưu tiên bán theo nhịp hồi"
   }
  }
 }

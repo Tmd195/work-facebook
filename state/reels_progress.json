@@ -1,5 +1,5 @@
 {
- "count": 43,
+ "count": 44,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -67,6 +67,7 @@
   "Chốt lời từng phần và dời SL về entry cho XAUUSD: chốt 50 phần trăm ở 1R, kéo dừng lỗ về hòa vốn, để phần còn lại chạy tới 2-3R nhằm biến lệnh thắng thành lệnh không thể thua",
   "Hệ thống Inversion Fair Value Gaps (IFVG) cho XAUUSD: FVG đảo vai khi giá đóng xuyên ngược hướng, vào lệnh khi test lại xác nhận, lọc thuận H4 và phiên lớn, SL ngoài vùng FVG đảo chiều và TP theo R:R 1:2",
   "Backtest 100 lệnh và forward test demo trước khi dựng hệ thống XAUUSD vào tiền thật",
-  "Hệ thống One-shot-one-kill ICT cho XAUUSD: thiên hướng tuần, quét thanh khoản, chuyển cấu trúc và một Entry tại OTE 62-79%"
+  "Hệ thống One-shot-one-kill ICT cho XAUUSD: thiên hướng tuần, quét thanh khoản, chuyển cấu trúc và một Entry tại OTE 62-79%",
+  "Tính khối lượng lot chuẩn theo khoảng cách dừng lỗ và rủi ro cố định 1 phần trăm cho XAUUSD"
  ]
 }
