@@ -1,12 +1,4 @@
 {
- "2026-10-13 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122109704577498398",
-  "post_id": "1379542878568858_122109704577498398",
-  "posted_at": "2026-10-13T08:45:02.823305+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-13 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/2600999867030614/",
@@ -2210,5 +2202,13 @@
     "Ngày 19/11, theo tin đưa, biên bản cuộc họp tháng 10 của Cục Dự trữ Liên bang cho thấy, mặc dù lúc đó đã đồng ý tạm thời"
    ]
   }
+ },
+ "2026-11-19 cwg_morning 07:45": {
+  "job": "cwg_morning",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124459489498398",
+  "post_id": "1379542878568858_122124459489498398",
+  "posted_at": "2026-11-19T07:45:02.830629+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
