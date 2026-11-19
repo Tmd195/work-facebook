@@ -1,15 +1,4 @@
 {
- "2026-10-09 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130409592735108",
-  "post_id": "1121396124381014_122130409592735108",
-  "posted_at": "2026-10-09T12:00:06.332678+07:00",
-  "preview": false,
-  "meta": {
-   "series": "ho-tro-khang-cu-cung-cau",
-   "part": 2
-  }
- },
  "2026-10-09 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122130477686735108",
@@ -4924,6 +4913,20 @@
      "previous": "200K"
     }
    ]
+  }
+ },
+ "2026-11-19 reel_edu 12:30": {
+  "job": "reel_edu",
+  "link": "https://www.facebook.com/reel/1419827926801762/",
+  "post_id": "1419827926801762",
+  "posted_at": "2026-11-19T12:30:45.921884+07:00",
+  "preview": false,
+  "meta": {
+   "episode": 7,
+   "topic": "Tập 07: Tính khối lượng theo % rủi ro",
+   "title": "Tính khối lượng theo % rủi ro",
+   "duration": 57.7,
+   "music": "digital-clouds.mp3"
   }
  },
  "2026-11-19 strategy_ae 10:00": {

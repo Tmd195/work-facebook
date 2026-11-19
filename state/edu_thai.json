@@ -1,11 +1,12 @@
 {
- "done": 6,
+ "done": 7,
  "titles": [
   "1 giá vàng là bao nhiêu tiền?",
   "Đòn bẩy & Margin",
   "Spread & phí qua đêm",
   "Lệnh thị trường & lệnh chờ",
   "Stop Loss đặt ở đâu?",
-  "Take Profit & tỉ lệ RR"
+  "Take Profit & tỉ lệ RR",
+  "Tính khối lượng theo % rủi ro"
  ]
 }
