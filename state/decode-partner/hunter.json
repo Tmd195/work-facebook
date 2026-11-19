@@ -1,9 +1,5 @@
 {
  "seen": [
-  "471785",
-  "471788",
-  "471791",
-  "471790",
   "471789",
   "471793",
   "471792",
@@ -599,23 +595,14 @@
   "472373",
   "472384",
   "472385",
-  "472386"
+  "472386",
+  "472388",
+  "472387",
+  "472390",
+  "472389"
  ],
- "pending": [
-  {
-   "id": "472386",
-   "at": "2026-11-20T03:55:38+07:00",
-   "time": "03:55",
-   "text": "Ngày 20/11, Chủ tịch Fed Chicago Goolsbee cho biết trong ngày thứ Năm theo giờ địa phương rằng, đối mặt với dữ liệu lạm phát cao hơn dự kiến trong nhiều tháng liên tiếp, cuộc họp chính sách của Fed vào tháng tới sẽ giữ mở tất cả các lựa chọn chính sách, không loại trừ khả năng tăng lãi suất mạnh, mức độ cụ thể phụ thuộc vào diễn biến lạm phát. Goolsbee nói: \"Trong nhiều tháng liên tiếp, tỷ lệ lạm phát của Mỹ luôn ở mức cao đáng lo ngại, và ở những lĩnh vực mà chúng tôi vốn kỳ vọng sẽ thấy sự cải thiện, lạm phát hầu như không đạt được bất kỳ tiến triển nào.\" Goolsbee cho biết, theo quan điểm của tôi, tất cả các lựa chọn chính sách luôn được đặt trên bàn. Quy mô và tốc độ thắt chặt chính sách tiền tệ trong tương lai sẽ phụ thuộc vào đánh giá của chúng tôi về diễn biến lạm phát.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
-  "2026-11-02": 3,
   "2026-11-03": 3,
   "2026-11-04": 3,
   "2026-11-05": 3,
@@ -624,8 +611,9 @@
   "2026-11-16": 1,
   "2026-11-17": 3,
   "2026-11-18": 3,
-  "2026-11-19": 2
+  "2026-11-19": 2,
+  "2026-11-20": 1
  },
- "last_post": "2026-11-19T17:03:36.325695+07:00",
+ "last_post": "2026-11-20T04:01:49.791996+07:00",
  "fail": 0
 }
