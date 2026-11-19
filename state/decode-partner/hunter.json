@@ -601,19 +601,7 @@
   "472195",
   "472194"
  ],
- "pending": [
-  {
-   "id": "472192",
-   "at": "2026-11-19T19:35:48+07:00",
-   "time": "19:35",
-   "text": "Theo Axios: Hai nguồn tin thân cận cho biết, Nhà Trắng Mỹ đã yêu cầu Lầu Năm Góc và các cơ quan tình báo Mỹ tiến hành phân tích đánh giá, nhằm xác định Iran có thể phản ứng như thế nào trước từng phương án tấn công quân sự do quân đội Mỹ xây dựng. Một trong những câu hỏi do Nhà Trắng đặt ra là: liệu có tồn tại một phương án hành động quân sự vừa có thể triển khai thực hiện, vừa không gây ra sự trả đũa hủy diệt của Iran nhằm vào các cơ sở dầu khí của các quốc gia vùng Vịnh hay không.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-02": 3,
   "2026-11-03": 3,
