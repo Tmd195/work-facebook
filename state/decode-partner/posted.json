@@ -1,16 +1,4 @@
 {
- "2026-10-14 cwg_breaking 15:48": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122110634739498398",
-  "post_id": "1379542878568858_122110634739498398",
-  "posted_at": "2026-10-14T15:49:03.881947+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Lực lượng Houthi ở Yemen cho biết đã tấn công cơ sở của Saudi Aramco tại Dhahran, sân bay Quốc tế King Khalid ở Riyadh v"
-   ]
-  }
- },
  "2026-10-14 cwg_breaking 19:33": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122110708251498398",
@@ -2198,5 +2186,20 @@
   "posted_at": "2026-11-19T08:45:03.085138+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-19 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1018585020526386/",
+  "post_id": "1018585020526386",
+  "posted_at": "2026-11-19T19:45:26.488292+07:00",
+  "preview": false,
+  "meta": {
+   "key": "USDCHF|0.82244",
+   "symbol": "USDCHF",
+   "system": "range",
+   "side": "sell",
+   "rr": 5.3,
+   "duration": 9.9
+  }
  }
 }
