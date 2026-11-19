@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471577",
   "471576",
   "471579",
   "471580",
@@ -599,32 +598,10 @@
   "472170",
   "472176",
   "472175",
-  "472174"
+  "472174",
+  "472177"
  ],
- "pending": [
-  {
-   "id": "472171",
-   "at": "2026-11-19T19:17:01+07:00",
-   "time": "19:17",
-   "text": "Tổng thống Nga Putin: Chúng tôi sẽ trả đũa vụ tấn công nhằm vào cầu Crimea.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "472176",
-   "at": "2026-11-19T19:19:19+07:00",
-   "time": "19:19",
-   "text": "Tổng thống Nga Putin: Vụ tấn công cầu đã chấm dứt các cuộc thảo luận về lệnh ngừng bắn một phần.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-02": 3,
   "2026-11-03": 3,
