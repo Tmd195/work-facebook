@@ -1,17 +1,4 @@
 {
- "2026-10-14 cwg_breaking 01:13": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122110319709498398",
-  "post_id": "1379542878568858_122110319709498398",
-  "posted_at": "2026-10-14T01:14:16.823259+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Chủ tịch Fed Williams: Tôi không thấy áp lực giá trên diện rộng nào ngoài lĩnh vực trí tuệ nhân tạo và năng lượng.",
-    "Fed Williams: Việc tăng lãi suất thêm một lần nữa trong năm nay là phù hợp."
-   ]
-  }
- },
  "2026-10-14 cwg_breaking 15:48": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122110634739498398",
@@ -2173,6 +2160,18 @@
    "news": [
     "Biên bản cuộc họp Fed: Gần như tất cả những người tham gia đều cho rằng việc tăng lãi suất thêm nữa về tổng thể phù hợp ",
     "Ngày 19/11, theo tin đưa, biên bản cuộc họp tháng 10 của Cục Dự trữ Liên bang cho thấy, mặc dù lúc đó đã đồng ý tạm thời"
+   ]
+  }
+ },
+ "2026-11-19 cwg_breaking 17:03": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124553041498398",
+  "post_id": "1379542878568858_122124553041498398",
+  "posted_at": "2026-11-19T17:04:33.757737+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Lực lượng Vệ binh Cách mạng Iran: Hai siêu tàu chở dầu vi phạm quy định đã trúng mìn và phát nổ khi di chuyển trên tuyến"
    ]
   }
  },
