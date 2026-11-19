@@ -1,7 +1,5 @@
 {
  "seen": [
-  "471468",
-  "471467",
   "471469",
   "471470",
   "471471",
@@ -599,9 +597,23 @@
   "472063",
   "472064",
   "472065",
-  "472066"
+  "472066",
+  "472068",
+  "472067"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472067",
+   "at": "2026-11-19T09:59:38+07:00",
+   "time": "09:59",
+   "text": "Vàng giao ngay mất mốc 3.710 USD/ounce, giảm 0,40% trong ngày. Bạc giao ngay giảm xuống dưới 45 USD/ounce, giảm 0,5% trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-02": 2,
   "2026-11-03": 2,
