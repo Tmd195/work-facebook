@@ -601,41 +601,7 @@
   "472395",
   "472396"
  ],
- "pending": [
-  {
-   "id": "472392",
-   "at": "2026-11-20T04:22:39+07:00",
-   "time": "04:22",
-   "text": "Bạc giao ngay giảm hơn 3%, hiện ở mức 43,63 USD/ounce; vàng giao ngay giảm gần 2%, hiện ở mức 3652,4 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "472391",
-   "at": "2026-11-20T04:21:00+07:00",
-   "time": "04:21",
-   "text": "Tổng thống Mỹ Trump ngày 19 cho biết, trước khi năm mới đến, ông sẽ không \"vội vàng\" đưa ra quyết định về hành động tiếp theo đối với vấn đề Iran. Trump trong cuộc phỏng vấn cùng ngày nói rằng, ông sẽ không \"vội vàng\" đưa ra bất kỳ quyết định nào về vấn đề Iran, \"chúng ta phải xem tình hình sẽ phát triển thế nào sau năm mới\". Theo phân tích liên quan của phía Mỹ, mốc thời gian mà Trump đề cập có thể có nghĩa là ông muốn dành thêm thời gian để các biện pháp phong tỏa trên biển và gây sức ép kinh tế của Mỹ đối với Iran phát huy tác dụng. Điều này cũng có thể cho thấy, nếu Iran không nhượng bộ trước cuối năm nay, Trump muốn dành đủ thời gian cho mình để tiến hành hành động quân sự trước khi Quốc hội khóa mới do đảng Dân chủ kiểm soát chính thức nhậm chức. Phân tích còn cho rằng, Trump hiện đang chịu áp lực to lớn từ Thủ tướng chính phủ lâm thời Israel Netanyahu, người đã thúc giục ông sớm phát động một chiến dịch ném bom mang tính quyết định đối với Iran. Theo tiết lộ của người am hiểu tình hình, Nhà Trắng đã yêu cầu Lầu Năm Góc và các chuyên gia tình báo đánh giá Iran sẽ phản ứng thế nào trước các phương án tấn công do quân đội Mỹ xây dựng.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "472394",
-   "at": "2026-11-20T04:30:12+07:00",
-   "time": "04:30",
-   "text": "Bạc giao ngay mở rộng đà giảm lên 4%, hiện báo 43,18 USD/ounce.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
@@ -646,8 +612,8 @@
   "2026-11-17": 2,
   "2026-11-18": 2,
   "2026-11-19": 2,
-  "2026-11-20": 1
+  "2026-11-20": 2
  },
- "last_post": "2026-11-20T03:56:13.443231+07:00",
+ "last_post": "2026-11-20T04:58:23.798907+07:00",
  "fail": 0
 }
