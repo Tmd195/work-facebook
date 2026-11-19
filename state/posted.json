@@ -1,18 +1,4 @@
 {
- "2026-10-08 reel 19:15": {
-  "job": "reel",
-  "link": "https://www.facebook.com/reel/1486584879948574/",
-  "post_id": "1486584879948574",
-  "posted_at": "2026-10-08T19:15:40.116457+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Hệ thống MA of MA (EMA 20 của EMA 20) cho XAUUSD: đo xu hướng, tín hiệu cắt, bộ lọc độ dốc và đặt SL/TP theo ATR",
-   "pillar": "he-thong",
-   "system": "ma-of-ma",
-   "duration": 56.0,
-   "music": "our-ups-and-downs.mp3"
-  }
- },
  "2026-10-08 strategy_ae 10:00": {
   "job": "strategy_ae",
   "link": "https://www.facebook.com/122129058266735108/posts/122130219140735108",
@@ -4972,6 +4958,53 @@
    ],
    "price": 3766.92,
    "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi, chờ biên bản FOMC"
+  }
+ },
+ "2026-11-19 morning 07:30": {
+  "job": "morning",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136787298735108",
+  "post_id": "1121396124381014_122136787298735108",
+  "posted_at": "2026-11-19T07:30:03.888077+07:00",
+  "preview": false,
+  "meta": {
+   "events": [
+    {
+     "time": "02:00",
+     "datetime": "2026-11-19T02:00:00+07:00",
+     "currency": "USD",
+     "impact": "High",
+     "title": "FOMC Meeting Minutes",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-19T20:30:00+07:00",
+     "currency": "EUR",
+     "impact": "Medium",
+     "title": "ECB President Lagarde Speaks",
+     "forecast": "",
+     "previous": ""
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-19T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Philly Fed Manufacturing Index",
+     "forecast": "20.6",
+     "previous": "20.9"
+    },
+    {
+     "time": "20:30",
+     "datetime": "2026-11-19T20:30:00+07:00",
+     "currency": "USD",
+     "impact": "Medium",
+     "title": "Unemployment Claims",
+     "forecast": "198K",
+     "previous": "200K"
+    }
+   ]
   }
  }
 }
