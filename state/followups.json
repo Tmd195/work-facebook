@@ -1776,5 +1776,9 @@
  "2026-11-19 morning 07:30|news|2026-11-19T02:00:00+07:00|USD": {
   "at": "2026-11-19T07:30:06.871779+07:00",
   "skipped": "quá 3 giờ không có số liệu"
+ },
+ "2026-11-19 knowledge 12:00|examples": {
+  "at": "2026-11-19T12:26:32.327733+07:00",
+  "skipped": "không có ví dụ phù hợp trên giá thật"
  }
 }
