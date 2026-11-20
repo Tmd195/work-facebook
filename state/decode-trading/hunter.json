@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471884",
   "471886",
   "471888",
   "471887",
@@ -599,21 +598,10 @@
   "472481",
   "472482",
   "472484",
-  "472483"
+  "472483",
+  "472485"
  ],
- "pending": [
-  {
-   "id": "472482",
-   "at": "2026-11-20T13:21:09+07:00",
-   "time": "13:21",
-   "text": "Tin ngày 20/11, giá vàng giao ngay hôm nay giảm xuống mức thấp nhất 3.514,62 USD, hiện đã phục hồi gần 50 USD so với mức thấp trong ngày, hiện giao dịch ở 3.561,3 USD/ounce, mức giảm trong ngày thu hẹp còn 1,7%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
