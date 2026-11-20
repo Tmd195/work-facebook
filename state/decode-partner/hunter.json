@@ -601,19 +601,7 @@
   "472583",
   "472585"
  ],
- "pending": [
-  {
-   "id": "472583",
-   "at": "2026-11-20T19:59:38+07:00",
-   "time": "19:59",
-   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ giảm 8 điểm cơ bản, xuống 4,9698%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
