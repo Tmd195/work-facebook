@@ -1,7 +1,5 @@
 {
  "seen": [
-  "472030",
-  "472033",
   "472032",
   "472034",
   "472037",
@@ -599,7 +597,9 @@
   "472627",
   "472630",
   "472629",
-  "472628"
+  "472628",
+  "472632",
+  "472631"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-20T20:53:46+07:00",
    "time": "20:53",
    "text": "Người phát ngôn của liên quân do Ả Rập Xê Út dẫn đầu: Rạng sáng nay, liên quân đã tiến hành một chiến dịch quân sự tại thủ đô Sanaa của Yemen, đánh trúng năng lực tác chiến tên lửa đạn đạo và máy bay không người lái. Chiến dịch quân sự này tập trung vào việc phá hủy và loại bỏ các nguồn đe dọa, ngăn chặn các cuộc tấn công nhằm vào dân thường tại Yemen và trong lãnh thổ Ả Rập Xê Út.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "472632",
+   "at": "2026-11-20T20:55:39+07:00",
+   "time": "20:55",
+   "text": "Theo New York Post: Tổng thống Mỹ Trump sẽ có bài phát biểu quan trọng vào tháng tới, đề cập đến cuộc chiến Iran.",
    "important": true,
    "star": 0,
    "actual": "null",
