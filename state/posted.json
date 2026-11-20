@@ -1,50 +1,4 @@
 {
- "2026-10-09 strategy_us 18:30": {
-  "job": "strategy_us",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130449516735108",
-  "post_id": "1121396124381014_122130449516735108",
-  "posted_at": "2026-10-09T18:30:14.041186+07:00",
-  "preview": false,
-  "meta": {
-   "session": "us",
-   "scenarios": [
-    {
-     "side": "BUY",
-     "role": "chính",
-     "entry": [
-      4142.51,
-      4156.37
-     ],
-     "sl": 4126.21,
-     "tp": [
-      4170.6,
-      4182.77,
-      4199.3
-     ],
-     "trigger": "Giá hồi về 4,142-4,156 và xuất hiện nến đảo chiều tăng trên H1",
-     "invalidation": "Đóng nến H1 dưới 4,133.85 (mất nền hợp lưu, hỏng cấu trúc tăng)"
-    },
-    {
-     "side": "SELL",
-     "role": "phụ",
-     "entry": [
-      4205.82,
-      4208.14
-     ],
-     "sl": 4226.81,
-     "tp": [
-      4199.3,
-      4182.77,
-      4170.6
-     ],
-     "trigger": "Giá quét đỉnh phiên Á 4,206.98 rồi bị từ chối, xuất hiện nến giảm H1",
-     "invalidation": "Đóng nến H1 trên 4,226.81"
-    }
-   ],
-   "price": 4179.31,
-   "title": "XAUUSD phiên Mỹ: giữ nền 4,142-4,156, ưu tiên mua hồi thử 4,200-4,225"
-  }
- },
  "2026-10-10 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122130587228735108",
@@ -4991,6 +4945,52 @@
      "previous": "4.3%"
     }
    ]
+  }
+ },
+ "2026-11-20 strategy_ae 10:00": {
+  "job": "strategy_ae",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136929420735108",
+  "post_id": "1121396124381014_122136929420735108",
+  "posted_at": "2026-11-20T10:00:07.207984+07:00",
+  "preview": false,
+  "meta": {
+   "session": "ae",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3635.75,
+      3640.43
+     ],
+     "sl": 3670.53,
+     "tp": [
+      3552.47,
+      3502.47,
+      3452.47
+     ],
+     "trigger": "Giá hồi lên 3636-3640 (Kijun H1 + đỉnh phiên Á) và xuất hiện nến từ chối giảm trở lại",
+     "invalidation": "Đóng nến H1 trên 3652, động lượng phá vỡ vùng kháng cự hợp lưu"
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3520.26,
+      3525.2
+     ],
+     "sl": 3497.53,
+     "tp": [
+      3547.53,
+      3600,
+      3635.75
+     ],
+     "trigger": "Giữ vùng đáy phiên Á 3520-3525 kèm nến đảo chiều tăng và phân kỳ RSI",
+     "invalidation": "Đóng nến H1 dưới 3520, xác nhận tiếp diễn giảm về 3500"
+    }
+   ],
+   "price": 3528.88,
+   "title": "Vàng thủng đáy 14 tháng, ưu tiên bán hồi theo xu hướng giảm"
   }
  }
 }
