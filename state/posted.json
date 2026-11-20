@@ -1,15 +1,4 @@
 {
- "2026-10-11 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130775574735108",
-  "post_id": "1121396124381014_122130775574735108",
-  "posted_at": "2026-10-11T12:00:13.447860+07:00",
-  "preview": false,
-  "meta": {
-   "series": "ho-tro-khang-cu-cung-cau",
-   "part": 6
-  }
- },
  "2026-10-11 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122130842300735108",
@@ -4920,6 +4909,20 @@
      "previous": "4.3%"
     }
    ]
+  }
+ },
+ "2026-11-20 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/1852607676075626/",
+  "post_id": "1852607676075626",
+  "posted_at": "2026-11-20T19:41:30.081361+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Hệ thống VWAP Mean-reversion vs Trend Regimes cho XAUUSD: chấm điểm phiên để biết ngày xu hướng hay đi ngang, ngày trend thì Buy khi hồi về VWAP, ngày ngang thì fade dải ngoài về VWAP, SL theo ATR",
+   "pillar": "he-thong",
+   "system": "vwap-mean-reversion-vs-trend-regimes",
+   "duration": 60.7,
+   "music": "feast-from-the-east.mp3"
   }
  },
  "2026-11-20 reel_edu 12:30": {

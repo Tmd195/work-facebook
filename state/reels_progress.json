@@ -1,5 +1,5 @@
 {
- "count": 44,
+ "count": 45,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -22,7 +22,8 @@
   "classic-bar-setups",
   "volume-signature-per-pattern",
   "inversion-fair-value-gaps-ifvg",
-  "one-shot-one-kill"
+  "one-shot-one-kill",
+  "vwap-mean-reversion-vs-trend-regimes"
  ],
  "topics": [
   "Hệ thống nến búa ngược (Inverted Hammer) cho XAUUSD: cách đo nến, mức kích hoạt sau 3 nến, lọc theo hỗ trợ khung lớn và khối lượng, đặt SL/TP theo R:R",
@@ -68,6 +69,7 @@
   "Hệ thống Inversion Fair Value Gaps (IFVG) cho XAUUSD: FVG đảo vai khi giá đóng xuyên ngược hướng, vào lệnh khi test lại xác nhận, lọc thuận H4 và phiên lớn, SL ngoài vùng FVG đảo chiều và TP theo R:R 1:2",
   "Backtest 100 lệnh và forward test demo trước khi dựng hệ thống XAUUSD vào tiền thật",
   "Hệ thống One-shot-one-kill ICT cho XAUUSD: thiên hướng tuần, quét thanh khoản, chuyển cấu trúc và một Entry tại OTE 62-79%",
-  "Tính khối lượng lot chuẩn theo khoảng cách dừng lỗ và rủi ro cố định 1 phần trăm cho XAUUSD"
+  "Tính khối lượng lot chuẩn theo khoảng cách dừng lỗ và rủi ro cố định 1 phần trăm cho XAUUSD",
+  "Hệ thống VWAP Mean-reversion vs Trend Regimes cho XAUUSD: chấm điểm phiên để biết ngày xu hướng hay đi ngang, ngày trend thì Buy khi hồi về VWAP, ngày ngang thì fade dải ngoài về VWAP, SL theo ATR"
  ]
 }
