@@ -1,8 +1,5 @@
 {
  "seen": [
-  "472022",
-  "472021",
-  "472025",
   "472024",
   "472023",
   "472026",
@@ -599,32 +596,12 @@
   "472615",
   "472620",
   "472619",
-  "472618"
+  "472618",
+  "472623",
+  "472622",
+  "472621"
  ],
- "pending": [
-  {
-   "id": "472614",
-   "at": "2026-11-20T20:34:32+07:00",
-   "time": "20:34",
-   "text": "Liên quân do Ả Rập Xê Út lãnh đạo: đã bắt đầu triển khai một chiến dịch chuyên biệt nhằm loại bỏ các nguồn đe dọa được sử dụng để tấn công dân thường tại Yemen và trong lãnh thổ Ả Rập Xê Út. Chiến dịch này sẽ nhắm vào các cơ sở và nguồn lực then chốt mà lực lượng Houthi sử dụng để hỗ trợ các hoạt động quân sự của họ.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "472618",
-   "at": "2026-11-20T20:37:00+07:00",
-   "time": "20:37",
-   "text": "Liên quân do Ả Rập Xê Út dẫn đầu: đã tấn công các mục tiêu năng lực tác chiến tại cảng Hodeidah của Yemen bị sử dụng cho hoạt động buôn lậu và vận chuyển vũ khí cùng tên lửa đạn đạo.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
