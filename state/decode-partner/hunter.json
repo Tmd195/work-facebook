@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471971",
   "471972",
   "471973",
   "471975",
@@ -599,9 +598,22 @@
   "472561",
   "472568",
   "472569",
-  "472570"
+  "472570",
+  "472571"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472571",
+   "at": "2026-11-20T19:04:08+07:00",
+   "time": "19:04",
+   "text": "Lực lượng Houthi tại Yemen: Khu tài chính King Abdullah ở Riyadh là mục tiêu tấn công, khuyến cáo toàn bộ nhân viên, người lao động và người dân tại trung tâm này ngay lập tức rời xa cơ sở đó.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
