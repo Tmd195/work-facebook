@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471969",
   "471971",
   "471972",
   "471973",
@@ -599,21 +598,10 @@
   "472562",
   "472561",
   "472568",
-  "472569"
+  "472569",
+  "472570"
  ],
- "pending": [
-  {
-   "id": "472569",
-   "at": "2026-11-20T18:52:19+07:00",
-   "time": "18:52",
-   "text": "Lực lượng Houthi tại Yemen ra tuyên bố rằng, để trả đũa việc các nhà máy điện tại cảng Saada và Mokha bị tấn công, nhà máy điện Shuqaiq của Ả Rập Xê Út sẽ trở thành mục tiêu tấn công trong vài giờ tới.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
