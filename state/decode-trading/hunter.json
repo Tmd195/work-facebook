@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471910",
   "471911",
   "471913",
   "471912",
@@ -599,9 +598,22 @@
   "472507",
   "472506",
   "472509",
-  "472508"
+  "472508",
+  "472510"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472510",
+   "at": "2026-11-20T15:05:00+07:00",
+   "time": "15:05",
+   "text": "Thống đốc Ngân hàng Trung ương Châu Âu Lagarde sẽ phát biểu sau mười phút nữa.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
