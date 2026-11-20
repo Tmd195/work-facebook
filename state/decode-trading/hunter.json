@@ -1,6 +1,5 @@
 {
  "seen": [
-  "471929",
   "471941",
   "471942",
   "471943",
@@ -599,9 +598,22 @@
   "472536",
   "472539",
   "472538",
-  "472537"
+  "472537",
+  "472540"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472540",
+   "at": "2026-11-20T17:24:02+07:00",
+   "time": "17:24",
+   "text": "Nhà giao dịch cắt giảm đặt cược vào việc ECB tăng lãi suất, nghiêng về khả năng chỉ tăng lãi suất hai lần cho đến cuối năm 2027.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
