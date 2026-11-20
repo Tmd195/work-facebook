@@ -1,6 +1,5 @@
 {
  "seen": [
-  "472187",
   "472189",
   "472188",
   "472191",
@@ -599,21 +598,10 @@
   "472783",
   "472782",
   "472786",
-  "472785"
+  "472785",
+  "472787"
  ],
- "pending": [
-  {
-   "id": "472782",
-   "at": "2026-11-21T01:18:36+07:00",
-   "time": "01:18",
-   "text": "Tổng thống Mỹ Trump: Mong Jensen Huang xin lỗi và quay trở lại.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
