@@ -1,18 +1,4 @@
 {
- "2026-10-10 reel 19:15": {
-  "job": "reel",
-  "link": "https://www.facebook.com/reel/1110728741433848/",
-  "post_id": "1110728741433848",
-  "posted_at": "2026-10-10T19:15:41.127231+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Hệ thống SuperTrend cho XAUUSD: bộ lọc xu hướng, điểm vào theo nhịp hồi, trailing SL và cách đặt SL/TP",
-   "pillar": "he-thong",
-   "system": "supertrend",
-   "duration": 57.7,
-   "music": "expressive-courage.mp3"
-  }
- },
  "2026-10-11 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122130775574735108",
@@ -4994,6 +4980,52 @@
    ],
    "price": 3528.88,
    "title": "Vàng thủng đáy 14 tháng, ưu tiên bán hồi theo xu hướng giảm"
+  }
+ },
+ "2026-11-20 strategy_us 19:30": {
+  "job": "strategy_us",
+  "link": "https://www.facebook.com/122129058266735108/posts/122136994280735108",
+  "post_id": "1121396124381014_122136994280735108",
+  "posted_at": "2026-11-20T19:30:06.953979+07:00",
+  "preview": false,
+  "meta": {
+   "session": "us",
+   "scenarios": [
+    {
+     "side": "SELL",
+     "role": "chính",
+     "entry": [
+      3595.51,
+      3604.64
+     ],
+     "sl": 3638.44,
+     "tp": [
+      3552.45,
+      3517.64,
+      3452.45
+     ],
+     "trigger": "Giá hồi lên 3595-3604, xuất hiện nến từ chối hoặc RSI H1 suy yếu trở lại.",
+     "invalidation": "H1 đóng cửa trên 3638 và giữ vững."
+    },
+    {
+     "side": "BUY",
+     "role": "phụ",
+     "entry": [
+      3512.74,
+      3517.64
+     ],
+     "sl": 3497.55,
+     "tp": [
+      3552.45,
+      3595.51,
+      3628.43
+     ],
+     "trigger": "Giá về vùng 3515 tạo phản ứng đảo chiều rõ (nến pin, phân kỳ RSI H1).",
+     "invalidation": "H1 đóng cửa dưới 3500."
+    }
+   ],
+   "price": 3572.89,
+   "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi, chú ý 3595-3604 và đáy 3515"
   }
  }
 }
