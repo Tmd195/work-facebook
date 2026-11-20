@@ -1,8 +1,5 @@
 {
  "seen": [
-  "472012",
-  "472011",
-  "472014",
   "472015",
   "472017",
   "472016",
@@ -599,9 +596,24 @@
   "472608",
   "472611",
   "472610",
-  "472607"
+  "472607",
+  "472614",
+  "472613",
+  "472612"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472614",
+   "at": "2026-11-20T20:34:32+07:00",
+   "time": "20:34",
+   "text": "Liên quân do Ả Rập Xê Út lãnh đạo: đã bắt đầu triển khai một chiến dịch chuyên biệt nhằm loại bỏ các nguồn đe dọa được sử dụng để tấn công dân thường tại Yemen và trong lãnh thổ Ả Rập Xê Út. Chiến dịch này sẽ nhắm vào các cơ sở và nguồn lực then chốt mà lực lượng Houthi sử dụng để hỗ trợ các hoạt động quân sự của họ.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
