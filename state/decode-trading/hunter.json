@@ -1,7 +1,5 @@
 {
  "seen": [
-  "471983",
-  "471985",
   "471984",
   "471987",
   "471986",
@@ -599,7 +597,9 @@
   "472579",
   "472580",
   "472581",
-  "472582"
+  "472582",
+  "472584",
+  "472583"
  ],
  "pending": [
   {
@@ -607,6 +607,17 @@
    "at": "2026-11-20T19:56:51+07:00",
    "time": "19:56",
    "text": "Lợi suất trái phiếu kho bạc kỳ hạn hai năm của Mỹ mở rộng đà giảm, mức giảm mới nhất là 8,7 điểm cơ bản, xuống 4,6938%.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "472583",
+   "at": "2026-11-20T19:59:38+07:00",
+   "time": "19:59",
+   "text": "Lợi suất trái phiếu kho bạc kỳ hạn 10 năm của Mỹ giảm 8 điểm cơ bản, xuống 4,9698%.",
    "important": true,
    "star": 0,
    "actual": "null",
