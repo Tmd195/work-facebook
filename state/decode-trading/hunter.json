@@ -601,19 +601,7 @@
   "472677",
   "472681"
  ],
- "pending": [
-  {
-   "id": "472679",
-   "at": "2026-11-20T22:32:28+07:00",
-   "time": "22:32",
-   "text": "Bộ trưởng Tài chính Mỹ Bessent: Lượng dầu thô đi qua eo biển Hormuz đêm qua là nhiều nhất kể từ khi xung đột nổ ra.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
