@@ -1,16 +1,4 @@
 {
- "2026-10-15 cwg_breaking 20:08": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122111423673498398",
-  "post_id": "1379542878568858_122111423673498398",
-  "posted_at": "2026-10-15T20:09:09.489656+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "PPI (y/y) Mỹ"
-   ]
-  }
- },
  "2026-10-15 cwg_macro 10:15": {
   "job": "cwg_macro",
   "link": "https://www.facebook.com/122099784345498398/posts/122111161137498398",
@@ -2172,6 +2160,21 @@
   "posted_at": "2026-11-20T08:45:03.848973+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-20 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1141064818571721/",
+  "post_id": "1141064818571721",
+  "posted_at": "2026-11-20T19:45:25.503479+07:00",
+  "preview": false,
+  "meta": {
+   "key": "EURUSD|1.12309",
+   "symbol": "EURUSD",
+   "system": "range",
+   "side": "buy",
+   "rr": 5.9,
+   "duration": 10.3
+  }
  },
  "2026-11-20 reel_story 18:00": {
   "job": "reel_story",
