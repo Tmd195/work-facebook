@@ -601,30 +601,7 @@
   "472754",
   "472753"
  ],
- "pending": [
-  {
-   "id": "472746",
-   "at": "2026-11-21T00:50:05+07:00",
-   "time": "00:50",
-   "text": "[Lưu ý] Sau 10 phút nữa Tổng số giếng dầu Mỹ sẽ được công bố.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "472745",
-   "at": "2026-11-21T00:50:00+07:00",
-   "time": "00:50",
-   "text": "Số lượng giàn khoan dầu của Mỹ trong tuần tính đến ngày 20 tháng 11 sẽ được công bố sau mười phút nữa.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
