@@ -1,8 +1,5 @@
 {
  "seen": [
-  "472029",
-  "472032",
-  "472031",
   "472030",
   "472033",
   "472034",
@@ -599,9 +596,24 @@
   "472625",
   "472624",
   "472627",
-  "472628"
+  "472628",
+  "472631",
+  "472630",
+  "472629"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472629",
+   "at": "2026-11-20T20:53:46+07:00",
+   "time": "20:53",
+   "text": "Người phát ngôn của liên quân do Ả Rập Xê Út dẫn đầu: Rạng sáng nay, liên quân đã tiến hành một chiến dịch quân sự tại thủ đô Sanaa của Yemen, đánh trúng năng lực tác chiến tên lửa đạn đạo và máy bay không người lái. Chiến dịch quân sự này tập trung vào việc phá hủy và loại bỏ các nguồn đe dọa, ngăn chặn các cuộc tấn công nhằm vào dân thường tại Yemen và trong lãnh thổ Ả Rập Xê Út.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
