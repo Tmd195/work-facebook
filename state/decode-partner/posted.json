@@ -1,16 +1,4 @@
 {
- "2026-10-15 cwg_breaking 19:31": {
-  "job": "cwg_breaking",
-  "link": "https://www.facebook.com/122099784345498398/posts/122111412117498398",
-  "post_id": "1379542878568858_122111412117498398",
-  "posted_at": "2026-10-15T19:31:48.349897+07:00",
-  "preview": false,
-  "meta": {
-   "news": [
-    "Bán lẻ (m/m) Mỹ"
-   ]
-  }
- },
  "2026-10-15 cwg_breaking 20:08": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122111423673498398",
@@ -2184,5 +2172,17 @@
   "posted_at": "2026-11-20T08:45:03.848973+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-20 reel_story 18:00": {
+  "job": "reel_story",
+  "link": "https://www.facebook.com/reel/1652902076329057/",
+  "post_id": "1652902076329057",
+  "posted_at": "2026-11-20T18:00:52.696338+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Đại lý chạy theo khách 'vào lệnh to' và bài học về khách hàng bền vững",
+   "title": "CHẠY THEO LỆNH TO VÀ DANH SÁCH TRỐNG RỖNG",
+   "duration": 57.8
+  }
  }
 }
