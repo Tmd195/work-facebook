@@ -1,6 +1,5 @@
 {
  "seen": [
-  "472125",
   "472126",
   "472127",
   "472129",
@@ -599,32 +598,10 @@
   "472710",
   "472709",
   "472708",
-  "472724"
+  "472724",
+  "472725"
  ],
- "pending": [
-  {
-   "id": "472714",
-   "at": "2026-11-21T00:15:54+07:00",
-   "time": "00:15",
-   "text": "Thống đốc Cục Dự trữ Liên bang Cook: Lạm phát nhúng sẽ đòi hỏi Cục Dự trữ Liên bang có biện pháp ứng phó quyết liệt hơn.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "472710",
-   "at": "2026-11-21T00:15:33+07:00",
-   "time": "00:15",
-   "text": "Thống đốc Cục Dự trữ Liên bang Cook: Việc tăng lãi suất vào tháng 9 là không đủ để kiềm chế lạm phát cao.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
