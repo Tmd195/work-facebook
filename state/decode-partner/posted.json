@@ -1,27 +1,4 @@
 {
- "2026-10-14 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122110513671498398",
-  "post_id": "1379542878568858_122110513671498398",
-  "posted_at": "2026-10-14T08:45:03.692558+07:00",
-  "preview": false,
-  "meta": {}
- },
- "2026-10-14 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "https://www.facebook.com/reel/2510710389448114/",
-  "post_id": "2510710389448114",
-  "posted_at": "2026-10-14T19:45:26.126293+07:00",
-  "preview": false,
-  "meta": {
-   "key": "USDCHF|0.81388",
-   "symbol": "USDCHF",
-   "system": "retest",
-   "side": "buy",
-   "rr": 6.8,
-   "duration": 10.3
-  }
- },
  "2026-10-15 cwg_breaking 03:35": {
   "job": "cwg_breaking",
   "link": "https://www.facebook.com/122099784345498398/posts/122111022441498398",
@@ -2186,11 +2163,31 @@
    ]
   }
  },
+ "2026-11-20 cwg_breaking 08:33": {
+  "job": "cwg_breaking",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124765687498398",
+  "post_id": "1379542878568858_122124765687498398",
+  "posted_at": "2026-11-20T08:34:22.302553+07:00",
+  "preview": false,
+  "meta": {
+   "news": [
+    "Vàng kỳ hạn New York giảm 3,00% trong ngày, hiện ở mức 3.574,70 USD/ounce."
+   ]
+  }
+ },
  "2026-11-20 cwg_morning 07:45": {
   "job": "cwg_morning",
   "link": "https://www.facebook.com/122099784345498398/posts/122124747837498398",
   "post_id": "1379542878568858_122124747837498398",
   "posted_at": "2026-11-20T07:45:03.553054+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-20 cwg_trend 08:45": {
+  "job": "cwg_trend",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124767613498398",
+  "post_id": "1379542878568858_122124767613498398",
+  "posted_at": "2026-11-20T08:45:03.848973+07:00",
   "preview": false,
   "meta": {}
  }
