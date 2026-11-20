@@ -1,7 +1,5 @@
 {
  "seen": [
-  "472046",
-  "472045",
   "472044",
   "472043",
   "472042",
@@ -599,9 +597,23 @@
   "472637",
   "472639",
   "472638",
-  "472640"
+  "472640",
+  "472642",
+  "472641"
  ],
- "pending": [],
+ "pending": [
+  {
+   "id": "472642",
+   "at": "2026-11-20T21:34:08+07:00",
+   "time": "21:34",
+   "text": "Dầu nhiên liệu 2701 giảm 4% trong ngày, báo giá mới nhất 3.684 nhân dân tệ/tấn, lượng mở vị thế tăng gần 5.700 hợp đồng trong ngày, giá giảm đồng thời vị thế nắm giữ tăng.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  }
+ ],
  "posts": {
   "2026-11-03": 2,
   "2026-11-04": 2,
