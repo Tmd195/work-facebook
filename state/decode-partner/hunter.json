@@ -601,30 +601,7 @@
   "472562",
   "472561"
  ],
- "pending": [
-  {
-   "id": "472565",
-   "at": "2026-11-20T18:43:13+07:00",
-   "time": "18:43",
-   "text": "Triển vọng năm 2027 của Société Générale: dự báo lãi suất cuối kỳ của Ngân hàng Trung ương châu Âu là 2,75%.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  },
-  {
-   "id": "472562",
-   "at": "2026-11-20T18:42:41+07:00",
-   "time": "18:42",
-   "text": "Triển vọng năm 2027 của Société Générale: dự kiến Fed sẽ tăng lãi suất thêm hai lần, mỗi lần 25 điểm cơ bản.",
-   "important": true,
-   "star": 0,
-   "actual": "null",
-   "forecast": "null",
-   "previous": "null"
-  }
- ],
+ "pending": [],
  "posts": {
   "2026-11-03": 3,
   "2026-11-04": 3,
