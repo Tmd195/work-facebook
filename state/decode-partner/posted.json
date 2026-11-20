@@ -1,12 +1,4 @@
 {
- "2026-10-14 cwg_morning 07:45": {
-  "job": "cwg_morning",
-  "link": "https://www.facebook.com/122099784345498398/posts/122110485519498398",
-  "post_id": "1379542878568858_122110485519498398",
-  "posted_at": "2026-10-14T07:45:04.627122+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-14 cwg_trend 08:45": {
   "job": "cwg_trend",
   "link": "https://www.facebook.com/122099784345498398/posts/122110513671498398",
@@ -2193,5 +2185,13 @@
     "Bạc giao ngay mở rộng đà giảm lên 4%, hiện báo 43,18 USD/ounce."
    ]
   }
+ },
+ "2026-11-20 cwg_morning 07:45": {
+  "job": "cwg_morning",
+  "link": "https://www.facebook.com/122099784345498398/posts/122124747837498398",
+  "post_id": "1379542878568858_122124747837498398",
+  "posted_at": "2026-11-20T07:45:03.553054+07:00",
+  "preview": false,
+  "meta": {}
  }
 }
