@@ -1,6 +1,5 @@
 {
  "seen": [
-  "472074",
   "472075",
   "472076",
   "472077",
@@ -599,7 +598,8 @@
   "472669",
   "472668",
   "472667",
-  "472666"
+  "472666",
+  "472674"
  ],
  "pending": [
   {
@@ -618,6 +618,17 @@
    "at": "2026-11-20T22:27:05+07:00",
    "time": "22:27",
    "text": "Lợi suất trái phiếu kho bạc Mỹ kỳ hạn 2 đến 7 năm giảm ít nhất 10 điểm cơ bản trong ngày.",
+   "important": true,
+   "star": 0,
+   "actual": "null",
+   "forecast": "null",
+   "previous": "null"
+  },
+  {
+   "id": "472674",
+   "at": "2026-11-20T22:29:26+07:00",
+   "time": "22:29",
+   "text": "Bộ trưởng Tài chính Mỹ Bessent: Fed nên hướng về phía trước, chứ không phải nhìn lại phía sau.",
    "important": true,
    "star": 0,
    "actual": "null",
