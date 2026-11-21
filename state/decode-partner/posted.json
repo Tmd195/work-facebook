@@ -1,12 +1,4 @@
 {
- "2026-10-15 cwg_trend 08:45": {
-  "job": "cwg_trend",
-  "link": "https://www.facebook.com/122099784345498398/posts/122111131743498398",
-  "post_id": "1379542878568858_122111131743498398",
-  "posted_at": "2026-10-15T08:45:04.143514+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-15 reel_quiz 19:45": {
   "job": "reel_quiz",
   "link": "https://www.facebook.com/reel/946168531517913/",
@@ -2187,5 +2179,20 @@
   "posted_at": "2026-11-21T14:15:04.092841+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-21 reel_quiz 19:45": {
+  "job": "reel_quiz",
+  "link": "https://www.facebook.com/reel/1786467949292508/",
+  "post_id": "1786467949292508",
+  "posted_at": "2026-11-21T19:45:08.558454+07:00",
+  "preview": false,
+  "meta": {
+   "key": "XAUUSD|4091.49990",
+   "symbol": "XAUUSD",
+   "system": "double",
+   "side": "sell",
+   "rr": 3.6,
+   "duration": 9.9
+  }
  }
 }
