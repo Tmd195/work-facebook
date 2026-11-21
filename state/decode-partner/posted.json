@@ -1,12 +1,4 @@
 {
- "2026-10-15 cwg_morning 07:45": {
-  "job": "cwg_morning",
-  "link": "https://www.facebook.com/122099784345498398/posts/122111109423498398",
-  "post_id": "1379542878568858_122111109423498398",
-  "posted_at": "2026-10-15T07:45:04.582202+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-15 cwg_trend 08:45": {
   "job": "cwg_trend",
   "link": "https://www.facebook.com/122099784345498398/posts/122111131743498398",
@@ -2185,6 +2177,14 @@
   "link": "https://www.facebook.com/122099784345498398/posts/122125017387498398",
   "post_id": "1379542878568858_122125017387498398",
   "posted_at": "2026-11-21T09:15:03.708908+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-21 cwg_wk_top5 14:15": {
+  "job": "cwg_wk_top5",
+  "link": "https://www.facebook.com/122099784345498398/posts/122125073943498398",
+  "post_id": "1379542878568858_122125073943498398",
+  "posted_at": "2026-11-21T14:15:04.092841+07:00",
   "preview": false,
   "meta": {}
  }
