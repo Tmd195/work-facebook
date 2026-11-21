@@ -1,19 +1,4 @@
 {
- "2026-10-15 reel_quiz 19:45": {
-  "job": "reel_quiz",
-  "link": "https://www.facebook.com/reel/946168531517913/",
-  "post_id": "946168531517913",
-  "posted_at": "2026-10-15T19:45:26.097207+07:00",
-  "preview": false,
-  "meta": {
-   "key": "AUDUSD|0.69281",
-   "symbol": "AUDUSD",
-   "system": "abcd",
-   "side": "sell",
-   "rr": 4.8,
-   "duration": 9.9
-  }
- },
  "2026-10-15 reel_story 18:00": {
   "job": "reel_story",
   "link": "https://www.facebook.com/reel/1092082017148290/",
@@ -2169,6 +2154,14 @@
   "link": "https://www.facebook.com/122099784345498398/posts/122125017387498398",
   "post_id": "1379542878568858_122125017387498398",
   "posted_at": "2026-11-21T09:15:03.708908+07:00",
+  "preview": false,
+  "meta": {}
+ },
+ "2026-11-21 cwg_wk_tech 20:15": {
+  "job": "cwg_wk_tech",
+  "link": "https://www.facebook.com/122099784345498398/posts/122125135899498398",
+  "post_id": "1379542878568858_122125135899498398",
+  "posted_at": "2026-11-21T20:15:09.443434+07:00",
   "preview": false,
   "meta": {}
  },
