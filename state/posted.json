@@ -1,12 +1,4 @@
 {
- "2026-10-11 weekly 22:00": {
-  "job": "weekly",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130852656735108",
-  "post_id": "1121396124381014_122130852656735108",
-  "posted_at": "2026-10-11T22:00:13.109528+07:00",
-  "preview": false,
-  "meta": {}
- },
  "2026-10-12 knowledge 12:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122130952148735108",
@@ -5026,6 +5018,20 @@
   "meta": {
    "series": "dow-cau-truc-thi-truong",
    "part": 2
+  }
+ },
+ "2026-11-21 reel_edu 12:30": {
+  "job": "reel_edu",
+  "link": "https://www.facebook.com/reel/1144262774890847/",
+  "post_id": "1144262774890847",
+  "posted_at": "2026-11-21T12:30:40.176939+07:00",
+  "preview": false,
+  "meta": {
+   "episode": 9,
+   "topic": "Tập 09: Khung thời gian",
+   "title": "Khung thời gian",
+   "duration": 67.7,
+   "music": "positive-energy.mp3"
   }
  }
 }

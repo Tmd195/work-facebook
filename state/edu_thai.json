@@ -1,5 +1,5 @@
 {
- "done": 8,
+ "done": 9,
  "titles": [
   "1 giá vàng là bao nhiêu tiền?",
   "Đòn bẩy & Margin",
@@ -8,6 +8,7 @@
   "Stop Loss đặt ở đâu?",
   "Take Profit & tỉ lệ RR",
   "Tính khối lượng theo % rủi ro",
-  "Cây nến kể chuyện gì?"
+  "Cây nến kể chuyện gì?",
+  "Khung thời gian"
  ]
 }
