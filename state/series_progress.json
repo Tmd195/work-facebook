@@ -8,7 +8,7 @@
     "rsi-macd-phan-ky": 12,
     "quan-ly-von": 12,
     "tam-ly-giao-dich": 10,
-    "dow-cau-truc-thi-truong": 2
+    "dow-cau-truc-thi-truong": 3
   },
   "history": [
     {
@@ -474,6 +474,11 @@
     {
       "series": "dow-cau-truc-thi-truong",
       "part": 2,
+      "date": "2026-11-21"
+    },
+    {
+      "series": "dow-cau-truc-thi-truong",
+      "part": 3,
       "date": "2026-11-21"
     }
   ]

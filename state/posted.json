@@ -1,15 +1,4 @@
 {
- "2026-10-12 knowledge 21:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122131025630735108",
-  "post_id": "1121396124381014_122131025630735108",
-  "posted_at": "2026-10-12T21:00:09.159127+07:00",
-  "preview": false,
-  "meta": {
-   "series": "ho-tro-khang-cu-cung-cau",
-   "part": 9
-  }
- },
  "2026-10-12 morning 07:30": {
   "job": "morning",
   "link": "https://www.facebook.com/122129058266735108/posts/122130920264735108",
@@ -5007,6 +4996,17 @@
   "meta": {
    "series": "dow-cau-truc-thi-truong",
    "part": 2
+  }
+ },
+ "2026-11-21 knowledge 21:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122137186376735108",
+  "post_id": "1121396124381014_122137186376735108",
+  "posted_at": "2026-11-21T21:00:12.690938+07:00",
+  "preview": false,
+  "meta": {
+   "series": "dow-cau-truc-thi-truong",
+   "part": 3
   }
  },
  "2026-11-21 reel 19:15": {
