@@ -1,18 +1,4 @@
 {
- "2026-10-11 reel 19:15": {
-  "job": "reel",
-  "link": "https://www.facebook.com/reel/1975132853147525/",
-  "post_id": "1975132853147525",
-  "posted_at": "2026-10-11T19:15:54.823158+07:00",
-  "preview": false,
-  "meta": {
-   "topic": "Đặt dừng lỗ chống bị quét cho XAUUSD: lùi SL xuống dưới đáy swing cộng đệm biến động theo ATR, tránh mức giá tròn, rồi chốt lời từng phần và kéo SL về entry theo R:R",
-   "pillar": "sl-tp",
-   "system": null,
-   "duration": 41.7,
-   "music": "super-strong.mp3"
-  }
- },
  "2026-10-11 weekly 22:00": {
   "job": "weekly",
   "link": "https://www.facebook.com/122129058266735108/posts/122130852656735108",
@@ -5029,6 +5015,17 @@
    ],
    "price": 3572.89,
    "title": "XAUUSD phiên Mỹ: ưu tiên bán hồi, chú ý 3595-3604 và đáy 3515"
+  }
+ },
+ "2026-11-21 knowledge 12:00": {
+  "job": "knowledge",
+  "link": "https://www.facebook.com/122129058266735108/posts/122137135838735108",
+  "post_id": "1121396124381014_122137135838735108",
+  "posted_at": "2026-11-21T12:00:14.972581+07:00",
+  "preview": false,
+  "meta": {
+   "series": "dow-cau-truc-thi-truong",
+   "part": 2
   }
  }
 }
