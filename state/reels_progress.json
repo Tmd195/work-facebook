@@ -1,5 +1,5 @@
 {
- "count": 45,
+ "count": 46,
  "used": [
   "inverted-hammer",
   "mlma",
@@ -70,6 +70,7 @@
   "Backtest 100 lệnh và forward test demo trước khi dựng hệ thống XAUUSD vào tiền thật",
   "Hệ thống One-shot-one-kill ICT cho XAUUSD: thiên hướng tuần, quét thanh khoản, chuyển cấu trúc và một Entry tại OTE 62-79%",
   "Tính khối lượng lot chuẩn theo khoảng cách dừng lỗ và rủi ro cố định 1 phần trăm cho XAUUSD",
-  "Hệ thống VWAP Mean-reversion vs Trend Regimes cho XAUUSD: chấm điểm phiên để biết ngày xu hướng hay đi ngang, ngày trend thì Buy khi hồi về VWAP, ngày ngang thì fade dải ngoài về VWAP, SL theo ATR"
+  "Hệ thống VWAP Mean-reversion vs Trend Regimes cho XAUUSD: chấm điểm phiên để biết ngày xu hướng hay đi ngang, ngày trend thì Buy khi hồi về VWAP, ngày ngang thì fade dải ngoài về VWAP, SL theo ATR",
+  "Dời dừng lỗ theo cấu trúc đáy swing cho lệnh Buy XAUUSD: chỉ dời khi có đáy mới cao hơn, đặt SL dưới đáy đó lùi thêm nửa ATR, bắt đầu dời sau khi lệnh lời 1R"
  ]
 }

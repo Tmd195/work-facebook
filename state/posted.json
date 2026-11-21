@@ -1,15 +1,4 @@
 {
- "2026-10-12 knowledge 12:00": {
-  "job": "knowledge",
-  "link": "https://www.facebook.com/122129058266735108/posts/122130952148735108",
-  "post_id": "1121396124381014_122130952148735108",
-  "posted_at": "2026-10-12T12:00:08.386860+07:00",
-  "preview": false,
-  "meta": {
-   "series": "ho-tro-khang-cu-cung-cau",
-   "part": 8
-  }
- },
  "2026-10-12 knowledge 21:00": {
   "job": "knowledge",
   "link": "https://www.facebook.com/122129058266735108/posts/122131025630735108",
@@ -5018,6 +5007,20 @@
   "meta": {
    "series": "dow-cau-truc-thi-truong",
    "part": 2
+  }
+ },
+ "2026-11-21 reel 19:15": {
+  "job": "reel",
+  "link": "https://www.facebook.com/reel/3037904413226563/",
+  "post_id": "3037904413226563",
+  "posted_at": "2026-11-21T19:15:47.048953+07:00",
+  "preview": false,
+  "meta": {
+   "topic": "Dời dừng lỗ theo cấu trúc đáy swing cho lệnh Buy XAUUSD: chỉ dời khi có đáy mới cao hơn, đặt SL dưới đáy đó lùi thêm nửa ATR, bắt đầu dời sau khi lệnh lời 1R",
+   "pillar": "sl-tp",
+   "system": null,
+   "duration": 40.2,
+   "music": "feast-from-the-east.mp3"
   }
  },
  "2026-11-21 reel_edu 12:30": {
