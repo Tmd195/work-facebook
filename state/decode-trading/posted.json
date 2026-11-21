@@ -2001,5 +2001,19 @@
   "posted_at": "2026-11-20T06:00:04.590054+07:00",
   "preview": false,
   "meta": {}
+ },
+ "2026-11-21 reel_indi 20:00": {
+  "job": "reel_indi",
+  "link": "https://www.facebook.com/reel/1295520186085467/",
+  "post_id": "1295520186085467",
+  "posted_at": "2026-11-21T20:00:30.150105+07:00",
+  "preview": false,
+  "meta": {
+   "key": "V4|2026-11-03T15:00:00+00:00",
+   "version": "V4",
+   "side": "SELL",
+   "pips": 150,
+   "duration": 13.8
+  }
  }
 }
